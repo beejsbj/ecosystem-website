@@ -9,6 +9,12 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    optimizeDeps: {
+      include: ["plotly.js-dist-min"],
+    },
+  },
+
   //global default head metadata
   app: {
     //  pageTransition: {
@@ -52,6 +58,7 @@ export default defineNuxtConfig({
     "@formkit/nuxt",
     //  "@nuxt/devtools",
     "@nuxt/content",
+    ["nuxt-plotly", { inject: true }],
 
     [
       "@pinia/nuxt",
