@@ -58,7 +58,6 @@ export default defineNuxtConfig({
     "@formkit/nuxt",
     //  "@nuxt/devtools",
     "@nuxt/content",
-    ["nuxt-plotly", { inject: true }],
 
     [
       "@pinia/nuxt",

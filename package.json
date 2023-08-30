@@ -17,8 +17,7 @@
     "@types/shelljs": "^0.8.12",
     "@types/slug": "^5.0.4",
     "@types/uuid": "^9.0.2",
-    "nuxt": "^3.5.3",
-    "nuxt-plotly": "^1.0.12"
+    "nuxt": "^3.5.3"
   },
   "dependencies": {
     "@api3/chains": "^2.1.0",
@@ -37,6 +36,7 @@
     "@web3modal/html": "^2.6.2",
     "aws-sdk": "^2.1398.0",
     "axios": "^1.4.0",
+    "chart.js": "^4.4.0",
     "ethers": "^6.6.4",
     "floating-vue": "^2.0.0-beta.22",
     "gsap": "^3.11.5",
@@ -55,6 +55,7 @@
     "slug": "^8.2.2",
     "uuid": "^9.0.0",
     "viem": "^1.4.2",
+    "vue-chartjs": "^5.2.0",
     "vue-easy-lightbox": "^1.16.0",
     "zod": "^3.21.4"
   }
