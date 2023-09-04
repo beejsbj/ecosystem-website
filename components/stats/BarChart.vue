@@ -9,6 +9,7 @@ import {
   BarElement,
   CategoryScale,
   LinearScale,
+  Colors,
 } from "chart.js";
 
 ChartJS.register(
@@ -18,7 +19,8 @@ ChartJS.register(
   Legend,
   BarElement,
   CategoryScale,
-  LinearScale
+  LinearScale,
+  Colors
 );
 
 const props = defineProps(["data", "options", "metadata"]);
@@ -28,18 +30,6 @@ const props = defineProps(["data", "options", "metadata"]);
 //
 
 //
-const data = computed(() => {
-  return {
-    labels: props.data.map((item) => item.x.toDateString().slice(4, 10)),
-
-    datasets: [
-      {
-        label: props.metadata.label,
-        data: props.data,
-      },
-    ],
-  };
-});
 
 const options = {
   plugins: {
@@ -96,7 +86,7 @@ const options = {
 
   hoverOffset: 5,
   hoverBackgroundColor: "hsla(160, 64%, 69%, 1)",
-  //   hoverBorderColor: "hsla(160, 0%, 94%, 1)",
+  pointHoverBorderWidth: 10,
 
   onClick: function (evt, item) {
     console.log("item", item);
