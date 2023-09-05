@@ -39,6 +39,62 @@ export const useStatsStore = defineStore("stats", () => {
     "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/116/card/122?parameters=%5B%5D"
   );
 
+  //dAPI ////////////////////////////////////////////////
+
+  // Open Orders |  number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/154/card/155?parameters=%5B%5D
+
+  const { data: dapiOpenOrders } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/154/card/155?parameters=%5B%5D"
+  );
+
+  ///Fulfilled Orders | number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/155/card/156?parameters=%5B%5D
+
+  const { data: dapiFulfilledOrders } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/155/card/156?parameters=%5B%5D"
+  );
+
+  //Fulfilled Orders per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/156/card/157?parameters=%5B%5D
+
+  const { data: dapiFulfilledOrdersPerChain } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/156/card/157?parameters=%5B%5D"
+  );
+
+  //Managed dAPIs per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/162/card/159?parameters=%5B%5D
+
+  const { data: dapiManagedPerChain } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/162/card/159?parameters=%5B%5D"
+  );
+
+  // Active Managed dAPIs |  number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/157/card/158?parameters=%5B%5D
+
+  const { data: dapiActiveManaged } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/157/card/158?parameters=%5B%5D"
+  );
+
+  // Active Self-funded dAPIs |  number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/160/card/161?parameters=%5B%5D
+
+  const { data: dapiActiveSelfFunded } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/160/card/161?parameters=%5B%5D"
+  );
+
+  //dAPI Transactions per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/159/card/160?parameters=%5B%5D
+
+  const { data: dapiTransactionsPerChain } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/159/card/160?parameters=%5B%5D"
+  );
+
+  //Self-funded dAPIs per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/161/card/162?parameters=%5B%5D
+
+  const { data: dapiSelfFundedPerChain } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/161/card/162?parameters=%5B%5D"
+  );
+
+  // dAPI Updates per Day per Chain | Bar chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/165/card/133?parameters=%5B%5D
+
+  const { data: dapiUpdatesPerDayPerChain } = useFetch(
+    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/165/card/133?parameters=%5B%5D"
+  );
+
   const backgroundColor = [
     "hsla(160, 65%, 69%, 1.00)",
     "hsla(200, 65%, 69%, 10)",
@@ -51,18 +107,6 @@ export const useStatsStore = defineStore("stats", () => {
     "hsla(120, 65%, 69%, 10)",
   ];
 
-  const backgroundColor2 = [
-    "hsla(0, 30%, 50%, 1.00)",
-    "hsla(40, 30%, 50%, 10)",
-    "hsla(80, 30%, 50%, 10)",
-    "hsla(120, 30%, 50%, 10)",
-    "hsla(160, 30%, 50%, 1.00)",
-    "hsla(200, 30%, 50%, 10)",
-    "hsla(240, 30%, 50%, 10)",
-    "hsla(280, 30%, 50%, 10)",
-    "hsla(320, 30%, 50%, 10)",
-  ];
-
   ////////////////////////////////////////////////
   const qrng = {
     totals: {
@@ -70,6 +114,7 @@ export const useStatsStore = defineStore("stats", () => {
 
       metadata: {
         title: "Total QRNG Fulfilments",
+        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -85,19 +130,13 @@ export const useStatsStore = defineStore("stats", () => {
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
         return {
-          labels: sorted.map((item) => item.key),
+          labels: sorted
+            .filter((item, index) => index <= 5)
+            .map((item) => item.key),
           datasets: [
             {
-              data: sorted.filter((item, index) => item.value >= 4000),
-            },
-            {
-              data: sorted.filter(
-                (item, index) => item.value < 4000 && item.value > 100
-              ),
+              data: sorted.filter((item, index) => index <= 5),
               backgroundColor,
-            },
-            {
-              data: sorted.filter((item, index) => item.value <= 100),
             },
           ],
         };
@@ -109,6 +148,7 @@ export const useStatsStore = defineStore("stats", () => {
 
       metadata: {
         title: "QRNG Fulfilments | Last 7 days",
+        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -123,10 +163,13 @@ export const useStatsStore = defineStore("stats", () => {
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
         return {
-          labels: sorted.map((item) => item.key),
+          labels: sorted
+            .filter((item, index) => index <= 5)
+            .map((item) => item.key),
           datasets: [
             {
-              data: sorted.filter((item, index) => item.value),
+              data: sorted.filter((item, index) => index <= 5),
+              backgroundColor,
             },
           ],
         };
@@ -137,6 +180,7 @@ export const useStatsStore = defineStore("stats", () => {
       chartType: "pie",
       metadata: {
         title: "QRNG Fulfilments | Last 30 days",
+        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -151,16 +195,12 @@ export const useStatsStore = defineStore("stats", () => {
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
         return {
-          labels: sorted.map((item) => item.key),
+          labels: sorted
+            .filter((item, index) => index <= 5)
+            .map((item) => item.key),
           datasets: [
             {
-              data: sorted.filter((item, index) => item.value >= 9000),
-              label: ">=9000",
-            },
-            {
-              data: sorted.filter((item, index) => item.value < 9000),
-              label: "<9000",
-              backgroundColor,
+              data: sorted.filter((item, index) => index <= 5),
             },
           ],
         };
@@ -318,7 +358,297 @@ export const useStatsStore = defineStore("stats", () => {
           }
         });
 
+        const datasets = parsed.map((item, index) => {
+          return {
+            label: item.label,
+            data: item.data,
+          };
+        });
+
+        const largestDataset = datasets.reduce((a, b) => {
+          return a.data.length > b.data.length ? a : b;
+        });
+
+        const labels = largestDataset.data.map((item) => {
+          // sort by date
+          //  return item.x.toDateString().slice(4, 10);
+          //  date and time Aug 5 00:00
+          return (
+            item.x.toDateString().slice(4, 10) +
+            " " +
+            item.x.toTimeString().slice(0, 5)
+          );
+        });
+
+        //   sort labels by date
+        const sortedLabels = labels.sort((a, b) => {
+          return new Date(a) - new Date(b);
+        });
+
+        return {
+          labels: labels,
+          datasets,
+        };
+      }),
+    },
+  };
+
+  //dAPI ////////////////////////////////////////////////
+
+  const dapi = {
+    openOrders: {
+      chartType: "number",
+
+      metadata: {
+        title: "Open Orders",
+        subtitle: "Total",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = dapiOpenOrders.value.data.rows[0][0];
         return parsed;
+      }),
+    },
+
+    fulfilledOrders: {
+      chartType: "number",
+
+      metadata: {
+        title: "Fulfilled Orders",
+        subtitle: "Total",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = dapiFulfilledOrders.value.data.rows[0][0];
+        return parsed;
+      }),
+    },
+
+    fulfilledOrdersPerChain: {
+      chartType: "pie",
+
+      metadata: {
+        title: "Fulfilled Orders per Chain",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = dapiFulfilledOrdersPerChain.value.data.rows.map(
+          (row) => {
+            return {
+              key: row[0],
+              value: row[1],
+            };
+          }
+        );
+        const sorted = parsed.sort((a, b) => b.value - a.value);
+
+        return {
+          labels: sorted.map((item) => item.key),
+
+          datasets: [
+            {
+              data: sorted,
+              backgroundColor,
+            },
+          ],
+        };
+      }),
+    },
+
+    managedPerChain: {
+      chartType: "pie",
+
+      metadata: {
+        title: "Managed dAPIs per Chain",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = dapiManagedPerChain.value.data.rows.map((row) => {
+          return {
+            key: row[0],
+            value: row[1],
+          };
+        });
+        const sorted = parsed.sort((a, b) => b.value - a.value);
+
+        return {
+          labels: sorted.map((item) => item.key),
+
+          datasets: [
+            {
+              data: sorted,
+              backgroundColor,
+            },
+          ],
+        };
+      }),
+    },
+
+    activeManaged: {
+      chartType: "number",
+
+      metadata: {
+        title: "Active Managed dAPIs",
+        subtitle: "Total",
+        chartColor: "blue",
+      },
+
+      options: {},
+      data: computed(() => {
+        const parsed = dapiActiveManaged.value.data.rows[0][0];
+        return parsed;
+      }),
+    },
+
+    activeSelfFunded: {
+      chartType: "number",
+
+      metadata: {
+        title: "Active Self-funded dAPIs",
+        subtitle: "Total",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = dapiActiveSelfFunded.value.data.rows[0][0];
+        return parsed;
+      }),
+    },
+
+    transactionsPerChain: {
+      chartType: "pie",
+
+      metadata: {
+        title: "dAPI Transactions per Chain",
+        subtitle: "Top 5 Chains",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = dapiTransactionsPerChain.value.data.rows.map((row) => {
+          return {
+            key: row[1],
+            value: row[0],
+          };
+        });
+        const sorted = parsed.sort((a, b) => b.value - a.value);
+
+        return {
+          labels: sorted.map((item) => item.key),
+
+          datasets: [
+            {
+              data: sorted,
+              backgroundColor,
+            },
+          ],
+        };
+      }),
+    },
+
+    selfFundedPerChain: {
+      chartType: "pie",
+
+      metadata: {
+        title: "Self-funded dAPIs per Chain",
+        subtitle: "Top 5 Chains",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = dapiSelfFundedPerChain.value.data.rows.map((row) => {
+          return {
+            key: row[0],
+            value: row[1],
+          };
+        });
+        const sorted = parsed.sort((a, b) => b.value - a.value);
+
+        return {
+          labels: sorted.map((item) => item.key),
+
+          datasets: [
+            {
+              data: sorted,
+              backgroundColor,
+            },
+          ],
+        };
+      }),
+    },
+
+    updatesPerDayPerChain: {
+      chartType: "line",
+
+      metadata: {
+        title: "dAPI Updates per Day per Chain",
+        label: "Updates",
+        x: {
+          title: "Days",
+        },
+        y: {
+          title: "Updates",
+        },
+      },
+
+      options: {},
+      data: computed(() => {
+        const parsed = [];
+        dapiUpdatesPerDayPerChain.value.data.rows.forEach((row) => {
+          const label = row[1];
+          const x = new Date(row[0]);
+          const y = row[2];
+
+          const found = parsed.find((item) => item.label === label);
+
+          if (found) {
+            found.data.push({ x, y });
+          } else {
+            parsed.push({ label, data: [{ x, y }] });
+          }
+        });
+
+        const datasets = parsed.map((item, index) => {
+          return {
+            label: item.label,
+            data: item.data,
+          };
+        });
+
+        const largestDataset = datasets.reduce((a, b) => {
+          return a.data.length > b.data.length ? a : b;
+        });
+
+        const labels = largestDataset.data.map((item) => {
+          return item.x.toDateString().slice(10);
+        });
+
+        const sortedLabels = labels.sort((a, b) => {
+          return new Date(a) - new Date(b);
+        });
+
+        return {
+          labels: labels,
+          datasets,
+        };
       }),
     },
   };
@@ -326,5 +656,6 @@ export const useStatsStore = defineStore("stats", () => {
   // returns
   return {
     qrng,
+    dapi,
   };
 });
