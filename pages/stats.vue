@@ -10,6 +10,47 @@ const stats = useStatsStore();
   <PageTitle heading="Stats" />
 
   <SectionColumn>
+    <h2 class="attention-voice">dAPI</h2>
+    <ul class="charts-list">
+      <li>
+        <PieChart
+          :data="stats.dapi.fulfilledOrdersPerChain.data"
+          :metadata="stats.dapi.fulfilledOrdersPerChain.metadata"
+          :options="stats.dapi.fulfilledOrdersPerChain.options"
+        />
+      </li>
+      <li>
+        <PieChart
+          :data="stats.dapi.managedPerChain.data"
+          :metadata="stats.dapi.managedPerChain.metadata"
+          :options="stats.dapi.managedPerChain.options"
+        />
+      </li>
+      <li>
+        <PieChart
+          :data="stats.dapi.transactionsPerChain.data"
+          :metadata="stats.dapi.transactionsPerChain.metadata"
+          :options="stats.dapi.transactionsPerChain.options"
+        />
+      </li>
+      <li>
+        <PieChart
+          :data="stats.dapi.selfFundedPerChain.data"
+          :metadata="stats.dapi.selfFundedPerChain.metadata"
+          :options="stats.dapi.selfFundedPerChain.options"
+        />
+      </li>
+      <li>
+        <LineChart
+          :data="stats.dapi.updatesPerDayPerChain.data"
+          :metadata="stats.dapi.updatesPerDayPerChain.metadata"
+          :options="stats.dapi.updatesPerDayPerChain.options"
+        />
+      </li>
+    </ul>
+  </SectionColumn>
+
+  <SectionColumn>
     <h2 class="attention-voice">QRNG</h2>
 
     <ul class="charts-list">
@@ -74,7 +115,7 @@ const stats = useStatsStore();
 ul {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   gap: 4rem;
 }
 </style>

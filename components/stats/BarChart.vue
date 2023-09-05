@@ -49,6 +49,26 @@ const options = {
       display: false,
       position: "right",
     },
+
+    datalabels: {
+      formatter: function (value, context) {
+        //   console.log(value);
+        return value.value;
+      },
+
+      display: false,
+
+      anchor: "end",
+      color: "white",
+      backgroundColor: "hsla(178, 12%, 3%, 1.00)",
+      borderRadius: 16,
+      padding: {
+        top: 4,
+        right: 8,
+        bottom: 4,
+        left: 8,
+      },
+    },
   },
 
   scales: {
@@ -78,7 +98,7 @@ const options = {
 
   responsive: true,
   maintainAspectRatio: true,
-  //   backgroundColor: "hsla(160, 64%, 69%, 1)",
+  //  backgroundColor: "hsla(160, 64%, 69%, 1)",
   barPercentage: 0.4,
   borderRadius: 16,
   borderColor: "hsla(160, 64%, 69%, 1)",

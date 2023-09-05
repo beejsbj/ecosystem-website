@@ -37,6 +37,7 @@
     "aws-sdk": "^2.1398.0",
     "axios": "^1.4.0",
     "chart.js": "^4.4.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "ethers": "^6.6.4",
     "floating-vue": "^2.0.0-beta.22",
     "gsap": "^3.11.5",

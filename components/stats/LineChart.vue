@@ -28,40 +28,6 @@ ChartJS.register(
 
 const props = defineProps(["data", "options", "metadata"]);
 
-const data = computed(() => {
-  const datasets = props.data.map((item, index) => {
-    return {
-      label: item.label,
-      data: item.data,
-    };
-  });
-
-  const largestDataset = datasets.reduce((a, b) => {
-    return a.data.length > b.data.length ? a : b;
-  });
-
-  const labels = largestDataset.data.map((item) => {
-    // sort by date
-    //  return item.x.toDateString().slice(4, 10);
-    //  date and time Aug 5 00:00
-    return (
-      item.x.toDateString().slice(4, 10) +
-      " " +
-      item.x.toTimeString().slice(0, 5)
-    );
-  });
-
-  //   sort labels by date
-  const sortedLabels = labels.sort((a, b) => {
-    return new Date(a) - new Date(b);
-  });
-
-  return {
-    labels: labels,
-    datasets,
-  };
-});
-
 const options = {
   plugins: {
     title: {
@@ -79,6 +45,26 @@ const options = {
     legend: {
       display: true,
       position: "top",
+    },
+
+    datalabels: {
+      formatter: function (value, context) {
+        //   console.log(value);
+        return value.value;
+      },
+
+      display: false,
+
+      anchor: "end",
+      color: "white",
+      backgroundColor: "hsla(178, 12%, 3%, 1.00)",
+      borderRadius: 16,
+      padding: {
+        top: 4,
+        right: 8,
+        bottom: 4,
+        left: 8,
+      },
     },
   },
 
