@@ -2,98 +2,7 @@ import { defineStore } from "pinia";
 import { useFetch } from "nuxt/app";
 
 export const useStatsStore = defineStore("stats", () => {
-  //QRNG ////////////////////////////////////////////////
-  // QRNG Totals per chain | Pie chart
-  const { data: qrngTotals } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/115/card/120?parameters=%5B%5D"
-  );
-
-  //QRNG fulfilments last 7 days | Pie chart
-  const { data: qrngFullfillments7Days } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/114/card/121?parameters=%5B%5D"
-  );
-
-  // QRNG fulfilments last 30 days | Pie chart
-  const { data: qrngFullfillments30Days } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/117/card/123?parameters=%5B%5D"
-  );
-
-  // Total QRNG Fulfilments per Day | Last 45 days | Bar chart
-  const { data: qrngFullfillments45Days } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/122/card/124?parameters=%5B%5D"
-  );
-
-  // Total QRNG Fulfilments per Week | Last 52 Weeks | Bar chart
-  const { data: qrngFullfillments52Weeks } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/123/card/125?parameters=%5B%5D"
-  );
-
-  // Total QRNG Fulfilments per Month | Last 12 Months | Bar chart
-  const { data: qrngFullfillments12Months } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/124/card/126?parameters=%5B%5D"
-  );
-
-  // QRNG Last 2000 requests Chart | Line chart
-
-  const { data: qrngLast2000Requests } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/416e2a82-e22d-4091-a127-7b06150a4ca3/dashcard/116/card/122?parameters=%5B%5D"
-  );
-
-  //dAPI ////////////////////////////////////////////////
-
-  // Open Orders |  number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/154/card/155?parameters=%5B%5D
-
-  const { data: dapiOpenOrders } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/154/card/155?parameters=%5B%5D"
-  );
-
-  ///Fulfilled Orders | number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/155/card/156?parameters=%5B%5D
-
-  const { data: dapiFulfilledOrders } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/155/card/156?parameters=%5B%5D"
-  );
-
-  //Fulfilled Orders per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/156/card/157?parameters=%5B%5D
-
-  const { data: dapiFulfilledOrdersPerChain } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/156/card/157?parameters=%5B%5D"
-  );
-
-  //Managed dAPIs per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/162/card/159?parameters=%5B%5D
-
-  const { data: dapiManagedPerChain } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/162/card/159?parameters=%5B%5D"
-  );
-
-  // Active Managed dAPIs |  number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/157/card/158?parameters=%5B%5D
-
-  const { data: dapiActiveManaged } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/157/card/158?parameters=%5B%5D"
-  );
-
-  // Active Self-funded dAPIs |  number | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/160/card/161?parameters=%5B%5D
-
-  const { data: dapiActiveSelfFunded } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/160/card/161?parameters=%5B%5D"
-  );
-
-  //dAPI Transactions per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/159/card/160?parameters=%5B%5D
-
-  const { data: dapiTransactionsPerChain } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/159/card/160?parameters=%5B%5D"
-  );
-
-  //Self-funded dAPIs per Chain | Pie chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/161/card/162?parameters=%5B%5D
-
-  const { data: dapiSelfFundedPerChain } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/161/card/162?parameters=%5B%5D"
-  );
-
-  // dAPI Updates per Day per Chain | Bar chart | https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/165/card/133?parameters=%5B%5D
-
-  const { data: dapiUpdatesPerDayPerChain } = useFetch(
-    "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/165/card/133?parameters=%5B%5D"
-  );
+  const { data: chartsData } = useFetch("/api/charts");
 
   const backgroundColor = [
     "hsla(160, 65%, 69%, 1.00)",
@@ -107,7 +16,6 @@ export const useStatsStore = defineStore("stats", () => {
     "hsla(120, 65%, 69%, 10)",
   ];
 
-  ////////////////////////////////////////////////
   const qrng = {
     totals: {
       chartType: "pie",
@@ -121,7 +29,7 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = qrngTotals.value.data.rows.map((row) => {
+        const parsed = chartsData?.value?.qrngTotals?.data?.rows?.map((row) => {
           return {
             key: row[1],
             value: row[0],
@@ -155,12 +63,13 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = qrngFullfillments7Days.value.data.rows.map((row) => {
-          return {
-            key: row[1],
-            value: row[0],
-          };
-        });
+        const parsed =
+          chartsData?.value?.qrngFullfillments7Days?.data?.rows?.map((row) => {
+            return {
+              key: row[1],
+              value: row[0],
+            };
+          });
         const sorted = parsed.sort((a, b) => b.value - a.value);
         return {
           labels: sorted
@@ -187,12 +96,13 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = qrngFullfillments30Days.value.data.rows.map((row) => {
-          return {
-            key: row[1],
-            value: row[0],
-          };
-        });
+        const parsed =
+          chartsData?.value?.qrngFullfillments30Days?.data?.rows?.map((row) => {
+            return {
+              key: row[1],
+              value: row[0],
+            };
+          });
         const sorted = parsed.sort((a, b) => b.value - a.value);
         return {
           labels: sorted
@@ -225,12 +135,13 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = qrngFullfillments45Days.value.data.rows.map((row) => {
-          return {
-            x: new Date(row[0]),
-            y: row[1],
-          };
-        });
+        const parsed =
+          chartsData?.value?.qrngFullfillments45Days.data?.rows?.map((row) => {
+            return {
+              x: new Date(row[0]),
+              y: row[1],
+            };
+          });
 
         return {
           labels: parsed.map((item) => item.x.toDateString().slice(4, 10)),
@@ -261,13 +172,16 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = qrngFullfillments52Weeks.value.data.rows.map((row) => {
-          return {
-            x: new Date(row[0]),
-            y: row[1],
-            // row[1]: row[0]
-          };
-        });
+        const parsed =
+          chartsData?.value?.qrngFullfillments52Weeks?.data?.rows?.map(
+            (row) => {
+              return {
+                x: new Date(row[0]),
+                y: row[1],
+                // row[1]: row[0]
+              };
+            }
+          );
         return {
           labels: parsed.map((item) => item.x.toDateString().slice(4, 10)),
           datasets: [
@@ -297,13 +211,16 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = qrngFullfillments12Months.value.data.rows.map((row) => {
-          return {
-            x: new Date(row[0]),
-            y: row[1],
-            // row[1]: row[0]
-          };
-        });
+        const parsed =
+          chartsData?.value?.qrngFullfillments12Months?.data?.rows?.map(
+            (row) => {
+              return {
+                x: new Date(row[0]),
+                y: row[1],
+                // row[1]: row[0]
+              };
+            }
+          );
         return {
           labels: parsed.map((item) => item.x.toDateString().slice(4, 10)),
           datasets: [
@@ -344,7 +261,7 @@ export const useStatsStore = defineStore("stats", () => {
 
         const parsed = [];
 
-        qrngLast2000Requests.value.data.rows.forEach((row) => {
+        chartsData?.value?.qrngLast2000Requests?.data?.rows?.forEach((row) => {
           const label = row[1];
           const x = new Date(row[0]);
           const y = row[2];
@@ -408,7 +325,7 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = dapiOpenOrders.value.data.rows[0][0];
+        const parsed = chartsData?.value?.dapiOpenOrders?.data?.rows?.[0]?.[0];
         return parsed;
       }),
     },
@@ -425,7 +342,8 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = dapiFulfilledOrders.value.data.rows[0][0];
+        const parsed =
+          chartsData?.value?.dapiFulfilledOrders?.data?.rows?.[0]?.[0];
         return parsed;
       }),
     },
@@ -441,14 +359,15 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = dapiFulfilledOrdersPerChain.value.data.rows.map(
-          (row) => {
-            return {
-              key: row[0],
-              value: row[1],
-            };
-          }
-        );
+        const parsed =
+          chartsData?.value?.dapiFulfilledOrdersPerChain?.data?.rows?.map(
+            (row) => {
+              return {
+                key: row[0],
+                value: row[1],
+              };
+            }
+          );
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
         return {
@@ -475,12 +394,14 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = dapiManagedPerChain.value.data.rows.map((row) => {
-          return {
-            key: row[0],
-            value: row[1],
-          };
-        });
+        const parsed = chartsData?.value?.dapiManagedPerChain?.data?.rows?.map(
+          (row) => {
+            return {
+              key: row[0],
+              value: row[1],
+            };
+          }
+        );
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
         return {
@@ -507,7 +428,8 @@ export const useStatsStore = defineStore("stats", () => {
 
       options: {},
       data: computed(() => {
-        const parsed = dapiActiveManaged.value.data.rows[0][0];
+        const parsed =
+          chartsData?.value?.dapiActiveManaged?.data?.rows?.[0]?.[0];
         return parsed;
       }),
     },
@@ -524,7 +446,8 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = dapiActiveSelfFunded.value.data.rows[0][0];
+        const parsed =
+          chartsData?.value?.dapiActiveSelfFunded?.data?.rows?.[0]?.[0];
         return parsed;
       }),
     },
@@ -541,12 +464,15 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = dapiTransactionsPerChain.value.data.rows.map((row) => {
-          return {
-            key: row[1],
-            value: row[0],
-          };
-        });
+        const parsed =
+          chartsData?.value?.dapiTransactionsPerChain?.data?.rows?.map(
+            (row) => {
+              return {
+                key: row[1],
+                value: row[0],
+              };
+            }
+          );
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
         return {
@@ -574,12 +500,13 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
 
       data: computed(() => {
-        const parsed = dapiSelfFundedPerChain.value.data.rows.map((row) => {
-          return {
-            key: row[0],
-            value: row[1],
-          };
-        });
+        const parsed =
+          chartsData?.value?.dapiSelfFundedPerChain?.data?.rows?.map((row) => {
+            return {
+              key: row[0],
+              value: row[1],
+            };
+          });
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
         return {
@@ -612,19 +539,21 @@ export const useStatsStore = defineStore("stats", () => {
       options: {},
       data: computed(() => {
         const parsed = [];
-        dapiUpdatesPerDayPerChain.value.data.rows.forEach((row) => {
-          const label = row[1];
-          const x = new Date(row[0]);
-          const y = row[2];
+        chartsData?.value?.dapiUpdatesPerDayPerChain?.data?.rows?.forEach(
+          (row) => {
+            const label = row[1];
+            const x = new Date(row[0]);
+            const y = row[2];
 
-          const found = parsed.find((item) => item.label === label);
+            const found = parsed.find((item) => item.label === label);
 
-          if (found) {
-            found.data.push({ x, y });
-          } else {
-            parsed.push({ label, data: [{ x, y }] });
+            if (found) {
+              found.data.push({ x, y });
+            } else {
+              parsed.push({ label, data: [{ x, y }] });
+            }
           }
-        });
+        );
 
         const datasets = parsed.map((item, index) => {
           return {
