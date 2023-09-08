@@ -8,48 +8,6 @@ const stats = useStatsStore();
 
 <template>
   <PageTitle heading="Stats" />
-
-  <SectionColumn>
-    <h2 class="attention-voice">dAPI</h2>
-    <ul class="charts-list">
-      <li>
-        <PieChart
-          :data="stats.dapi.fulfilledOrdersPerChain.data"
-          :metadata="stats.dapi.fulfilledOrdersPerChain.metadata"
-          :options="stats.dapi.fulfilledOrdersPerChain.options"
-        />
-      </li>
-      <li>
-        <PieChart
-          :data="stats.dapi.managedPerChain.data"
-          :metadata="stats.dapi.managedPerChain.metadata"
-          :options="stats.dapi.managedPerChain.options"
-        />
-      </li>
-      <li>
-        <PieChart
-          :data="stats.dapi.transactionsPerChain.data"
-          :metadata="stats.dapi.transactionsPerChain.metadata"
-          :options="stats.dapi.transactionsPerChain.options"
-        />
-      </li>
-      <li>
-        <PieChart
-          :data="stats.dapi.selfFundedPerChain.data"
-          :metadata="stats.dapi.selfFundedPerChain.metadata"
-          :options="stats.dapi.selfFundedPerChain.options"
-        />
-      </li>
-      <li>
-        <LineChart
-          :data="stats.dapi.updatesPerDayPerChain.data"
-          :metadata="stats.dapi.updatesPerDayPerChain.metadata"
-          :options="stats.dapi.updatesPerDayPerChain.options"
-        />
-      </li>
-    </ul>
-  </SectionColumn>
-
   <SectionColumn>
     <h2 class="attention-voice">QRNG</h2>
 
@@ -109,13 +67,109 @@ const stats = useStatsStore();
       </li>
     </ul>
   </SectionColumn>
+
+  <SectionColumn>
+    <h2 class="attention-voice">dAPI</h2>
+    <ul class="charts-list">
+      <li>
+        <BoxChart
+          :data="stats.dapi.openOrders.data"
+          :metadata="stats.dapi.openOrders.metadata"
+          :options="stats.dapi.openOrders.options"
+        />
+      </li>
+      <li>
+        <BoxChart
+          :data="stats.dapi.fulfilledOrders.data"
+          :metadata="stats.dapi.fulfilledOrders.metadata"
+          :options="stats.dapi.fulfilledOrders.options"
+        />
+      </li>
+      <li>
+        <PieChart
+          :data="stats.dapi.fulfilledOrdersPerChain.data"
+          :metadata="stats.dapi.fulfilledOrdersPerChain.metadata"
+          :options="stats.dapi.fulfilledOrdersPerChain.options"
+        />
+      </li>
+      <li>
+        <BoxChart
+          :data="stats.dapi.managedPerChain.data"
+          :metadata="stats.dapi.managedPerChain.metadata"
+          :options="stats.dapi.managedPerChain.options"
+        />
+      </li>
+      <li>
+        <BoxChart
+          :data="stats.dapi.activeManaged.data"
+          :metadata="stats.dapi.activeManaged.metadata"
+          :options="stats.dapi.activeManaged.options"
+        />
+      </li>
+      <li>
+        <BoxChart
+          :data="stats.dapi.activeSelfFunded.data"
+          :metadata="stats.dapi.activeSelfFunded.metadata"
+          :options="stats.dapi.activeSelfFunded.options"
+        />
+      </li>
+      <li>
+        <PieChart
+          :data="stats.dapi.transactionsPerChain.data"
+          :metadata="stats.dapi.transactionsPerChain.metadata"
+          :options="stats.dapi.transactionsPerChain.options"
+        />
+      </li>
+      <li>
+        <PieChart
+          :data="stats.dapi.selfFundedPerChain.data"
+          :metadata="stats.dapi.selfFundedPerChain.metadata"
+          :options="stats.dapi.selfFundedPerChain.options"
+        />
+      </li>
+      <li>
+        <LineChart
+          :data="stats.dapi.updatesPerDayPerChain.data"
+          :metadata="stats.dapi.updatesPerDayPerChain.metadata"
+          :options="stats.dapi.updatesPerDayPerChain.options"
+        />
+      </li>
+      <!-- <li v-for="dapiStat in stats.dapi">
+        <PieChart
+          v-if="dapiStat.chartType === 'pie'"
+          :data="dapiStat.data"
+          :metadata="dapiStat.metadata"
+          :options="dapiStat.options"
+        />
+        <BarChart
+          v-if="dapiStat.chartType === 'bar'"
+          :data="dapiStat.data"
+          :metadata="dapiStat.metadata"
+          :options="dapiStat.options"
+        />
+        <LineChart
+          v-if="dapiStat.chartType === 'line'"
+          :data="dapiStat.data"
+          :metadata="dapiStat.metadata"
+          :options="dapiStat.options"
+        />
+        <BoxChart
+          v-if="dapiStat.chartType === 'box'"
+          :data="dapiStat.data"
+          :metadata="dapiStat.metadata"
+          :options="dapiStat.options"
+        />
+      </li> -->
+    </ul>
+  </SectionColumn>
 </template>
 
 <style scoped>
 ul {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
-  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  align-items: center;
 }
 </style>

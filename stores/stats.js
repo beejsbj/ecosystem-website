@@ -95,16 +95,41 @@ export const useStatsStore = defineStore("stats", () => {
     "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/165/card/133?parameters=%5B%5D"
   );
 
-  const backgroundColor = [
+  const gradientColors = [
+    // give me 7 colors from "hsla(160, 65%, 69%, 1.00)" to "hsla(256, 34%, 54%, 1)", by gradually increasing the hue, saturation, and lightness only, but keeping the alpha at 1
     "hsla(160, 65%, 69%, 1.00)",
-    "hsla(200, 65%, 69%, 10)",
-    "hsla(240, 65%, 69%, 10)",
-    "hsla(280, 65%, 69%, 10)",
-    "hsla(320, 65%, 69%, 10)",
-    "hsla(0, 65%, 69%, 1.00)",
-    "hsla(40, 65%, 69%, 10)",
-    "hsla(80, 65%, 69%, 10)",
-    "hsla(120, 65%, 69%, 10)",
+    "hsla(180, 59%, 66%, 1.00)",
+    "hsla(200, 53%, 63%, 1.00)",
+    "hsla(220, 47%, 60%, 1.00)",
+    "hsla(240, 41%, 57%, 1.00)",
+    "hsla(260, 35%, 54%, 1.00)",
+  ];
+
+  const allColors = [
+    "hsla(160, 65%, 69%, 1.00)",
+    "hsla(190, 65%, 69%, 1.00)",
+    "hsla(220, 65%, 69%, 1.00)",
+    "hsla(250, 65%, 69%, 1.00)",
+    "hsla(280, 65%, 69%, 1.00)",
+    "hsla(310, 65%, 69%, 1.00)",
+    "hsla(340, 65%, 69%, 1.00)",
+    "hsla(10, 65%, 69%, 1.00)",
+    "hsla(40, 65%, 69%, 1.00)",
+    "hsla(70, 65%, 69%, 1.00)",
+    "hsla(100, 65%, 69%, 1.00)",
+    "hsla(130, 65%, 69%, 1.00)",
+    "hsla(160, 35%, 54%, 1.00)",
+    "hsla(190, 35%, 54%, 1.00)",
+    "hsla(220, 35%, 54%, 1.00)",
+    "hsla(250, 35%, 54%, 1.00)",
+    "hsla(280, 35%, 54%, 1.00)",
+    "hsla(310, 35%, 54%, 1.00)",
+    "hsla(340, 35%, 54%, 1.00)",
+    "hsla(10, 35%, 54%, 1.00)",
+    "hsla(40, 35%, 54%, 1.00)",
+    "hsla(70, 35%, 54%, 1.00)",
+    "hsla(100, 35%, 54%, 1.00)",
+    "hsla(130, 35%, 54%, 1.00)",
   ];
 
   ////////////////////////////////////////////////
@@ -114,7 +139,6 @@ export const useStatsStore = defineStore("stats", () => {
 
       metadata: {
         title: "Total QRNG Fulfilments",
-        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -130,13 +154,12 @@ export const useStatsStore = defineStore("stats", () => {
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
         return {
-          labels: sorted
-            .filter((item, index) => index <= 5)
-            .map((item) => item.key),
+          labels: sorted.map((item) => item.key),
           datasets: [
             {
-              data: sorted.filter((item, index) => index <= 5),
-              backgroundColor,
+              data: sorted,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
             },
           ],
         };
@@ -148,7 +171,6 @@ export const useStatsStore = defineStore("stats", () => {
 
       metadata: {
         title: "QRNG Fulfilments | Last 7 days",
-        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -163,13 +185,12 @@ export const useStatsStore = defineStore("stats", () => {
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
         return {
-          labels: sorted
-            .filter((item, index) => index <= 5)
-            .map((item) => item.key),
+          labels: sorted.map((item) => item.key),
           datasets: [
             {
-              data: sorted.filter((item, index) => index <= 5),
-              backgroundColor,
+              data: sorted,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
             },
           ],
         };
@@ -180,7 +201,6 @@ export const useStatsStore = defineStore("stats", () => {
       chartType: "pie",
       metadata: {
         title: "QRNG Fulfilments | Last 30 days",
-        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -195,12 +215,12 @@ export const useStatsStore = defineStore("stats", () => {
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
         return {
-          labels: sorted
-            .filter((item, index) => index <= 5)
-            .map((item) => item.key),
+          labels: sorted.map((item) => item.key),
           datasets: [
             {
-              data: sorted.filter((item, index) => index <= 5),
+              data: sorted,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
             },
           ],
         };
@@ -397,36 +417,57 @@ export const useStatsStore = defineStore("stats", () => {
 
   const dapi = {
     openOrders: {
-      chartType: "number",
+      chartType: "box",
 
       metadata: {
         title: "Open Orders",
-        subtitle: "Total",
         chartColor: "blue",
       },
 
       options: {},
 
       data: computed(() => {
-        const parsed = dapiOpenOrders.value.data.rows[0][0];
-        return parsed;
+        const parsed = [
+          { key: null, value: dapiOpenOrders.value.data.rows[0][0] },
+        ];
+        return {
+          datasets: [
+            {
+              data: parsed,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
+            },
+          ],
+        };
       }),
     },
 
     fulfilledOrders: {
-      chartType: "number",
+      chartType: "box",
 
       metadata: {
         title: "Fulfilled Orders",
-        subtitle: "Total",
         chartColor: "blue",
       },
 
       options: {},
 
       data: computed(() => {
-        const parsed = dapiFulfilledOrders.value.data.rows[0][0];
-        return parsed;
+        const parsed = [
+          {
+            key: null,
+            value: dapiFulfilledOrders.value.data.rows[0][0],
+          },
+        ];
+        return {
+          datasets: [
+            {
+              data: parsed,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
+            },
+          ],
+        };
       }),
     },
 
@@ -457,7 +498,8 @@ export const useStatsStore = defineStore("stats", () => {
           datasets: [
             {
               data: sorted,
-              backgroundColor,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
             },
           ],
         };
@@ -465,7 +507,7 @@ export const useStatsStore = defineStore("stats", () => {
     },
 
     managedPerChain: {
-      chartType: "pie",
+      chartType: "box",
 
       metadata: {
         title: "Managed dAPIs per Chain",
@@ -489,7 +531,8 @@ export const useStatsStore = defineStore("stats", () => {
           datasets: [
             {
               data: sorted,
-              backgroundColor,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
             },
           ],
         };
@@ -497,35 +540,59 @@ export const useStatsStore = defineStore("stats", () => {
     },
 
     activeManaged: {
-      chartType: "number",
+      chartType: "box",
 
       metadata: {
         title: "Active Managed dAPIs",
-        subtitle: "Total",
         chartColor: "blue",
       },
 
       options: {},
       data: computed(() => {
-        const parsed = dapiActiveManaged.value.data.rows[0][0];
-        return parsed;
+        const parsed = [
+          {
+            key: null,
+            value: dapiActiveManaged.value.data.rows[0][0],
+          },
+        ];
+        return {
+          datasets: [
+            {
+              data: parsed,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
+            },
+          ],
+        };
       }),
     },
 
     activeSelfFunded: {
-      chartType: "number",
+      chartType: "box",
 
       metadata: {
         title: "Active Self-funded dAPIs",
-        subtitle: "Total",
         chartColor: "blue",
       },
 
       options: {},
 
       data: computed(() => {
-        const parsed = dapiActiveSelfFunded.value.data.rows[0][0];
-        return parsed;
+        const parsed = [
+          {
+            key: null,
+            value: dapiActiveSelfFunded.value.data.rows[0][0],
+          },
+        ];
+        return {
+          datasets: [
+            {
+              data: parsed,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
+            },
+          ],
+        };
       }),
     },
 
@@ -534,7 +601,6 @@ export const useStatsStore = defineStore("stats", () => {
 
       metadata: {
         title: "dAPI Transactions per Chain",
-        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -555,7 +621,8 @@ export const useStatsStore = defineStore("stats", () => {
           datasets: [
             {
               data: sorted,
-              backgroundColor,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
             },
           ],
         };
@@ -567,7 +634,6 @@ export const useStatsStore = defineStore("stats", () => {
 
       metadata: {
         title: "Self-funded dAPIs per Chain",
-        subtitle: "Top 5 Chains",
         chartColor: "blue",
       },
 
@@ -588,7 +654,8 @@ export const useStatsStore = defineStore("stats", () => {
           datasets: [
             {
               data: sorted,
-              backgroundColor,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
             },
           ],
         };

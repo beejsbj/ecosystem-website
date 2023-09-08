@@ -25,6 +25,17 @@ ChartJS.register(
 const props = defineProps(["data", "options", "metadata"]);
 
 //
+function hoverState(chart, datasetIndex, dataIndex) {
+  const tooltip = chart.tooltip;
+  const item = {
+    datasetIndex,
+    index: dataIndex,
+  };
+  chart.setActiveElements([item]);
+  tooltip.setActiveElements([item]);
+
+  chart.update();
+}
 
 const options = {
   plugins: {
@@ -48,25 +59,42 @@ const options = {
       labels: {
         color: "hsla(160, 64%, 69%, 1)",
       },
+
+      onHover: (event, legendItem, legend) => {
+        //  get dataset index and index of hovered element by searching for legendItem in legend.chart.data.datasets
+        const datasetIndex = legend.chart.data.datasets.findIndex((dataset) => {
+          return dataset.data.some((item, index) => {
+            return item.key === legendItem.text;
+          });
+        });
+        console.log("datasetIndex", datasetIndex);
+
+        hoverState(legend.chart, datasetIndex, legendItem.index);
+      },
     },
 
     datalabels: {
       display: "auto",
+
+      anchor: "end",
+      // align: "start",
+      color: "white",
+      backgroundColor: "hsla(178, 12%, 3%, 1.00)",
+      borderRadius: 16,
+      padding: 4,
 
       formatter: function (value, context) {
         //   console.log(value);
         return value.value;
       },
 
-      anchor: "end",
-      color: "white",
-      backgroundColor: "hsla(178, 12%, 3%, 1.00)",
-      borderRadius: 16,
-      padding: {
-        top: 4,
-        right: 8,
-        bottom: 4,
-        left: 8,
+      listeners: {
+        enter: function (context, event) {
+          const chart = context.chart;
+          const datasetIndex = context.datasetIndex;
+          const dataIndex = context.dataIndex;
+          //  hoverState(chart, datasetIndex, dataIndex);
+        },
       },
     },
   },
@@ -77,17 +105,26 @@ const options = {
   responsive: true,
   maintainAspectRatio: false,
   //   cutout: "25%",
-  //   borderColor: "hsla(160, 65%, 69%, 1.00)",
+  borderColor: "hsla(160, 65%, 69%, 1.00)",
+  backgroundColor: "hsla(160, 65%, 69%, 0.00)",
   borderWidth: 1,
-  //   offset: 50,
+  spacing: 5,
+  //   offset: 10,
 
   //hover
-  hoverBorderColor: "hsla(160, 60%, 60%, 1)",
-  hoverBackgroundColor: "hsla(160, 60%, 60%, 1)",
+  //   hoverBorderColor: "hsla(160, 60%, 60%, 0)",
+  //   hoverBackgroundColor: "hsla(160, 60%, 60%, 1)",
   hoverOffset: 20,
 
-  onClick: function (evt, item) {
+  onClick: function (evt, item, chart) {
+    // hide item in chart
     console.log("item", item);
+    console.log("chart", chart);
+    chart.toggleDataVisibility(item[0].index);
+    chart.update();
+  },
+  onHover: function (evt, item) {
+    //  console.log("item", item);
   },
 };
 </script>
