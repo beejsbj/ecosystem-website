@@ -7,12 +7,7 @@ const props = defineProps(["data", "options", "metadata", "isChains"]);
     {{ metadata.title }}
   </h4>
   <ul class="box-chart" v-for="dataset in data.datasets">
-    <li
-      v-for="(dataPoint, index) in dataset.data"
-      :style="`border-color: ${
-        dataset.borderColor[index % dataset.borderColor.length]
-      }`"
-    >
+    <li v-for="(dataPoint, index) in dataset.data">
       <picture v-if="isChains">
         <ChainIcon :chain="dataPoint.key" />
       </picture>
@@ -51,11 +46,10 @@ const props = defineProps(["data", "options", "metadata", "isChains"]);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border: var(--border);
+  border-radius: var(--corners);
+  padding: 1.5rem;
   text-align: center;
-
   position: relative;
 }
 

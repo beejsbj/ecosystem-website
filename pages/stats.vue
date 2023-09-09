@@ -180,7 +180,7 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .line-chart {
