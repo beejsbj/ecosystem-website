@@ -96,13 +96,13 @@ const stats = useStatsStore();
         />
       </li>
       <li>
-        <BoxChart
-          :data="stats.dapi.managedPerChain.data"
-          :metadata="stats.dapi.managedPerChain.metadata"
-          :options="stats.dapi.managedPerChain.options"
-          :isChains="true"
+        <PieChart
+          :data="stats.dapi.transactionsPerChain.data"
+          :metadata="stats.dapi.transactionsPerChain.metadata"
+          :options="stats.dapi.transactionsPerChain.options"
         />
       </li>
+
       <li>
         <BoxChart
           :data="stats.dapi.activeManaged.data"
@@ -118,19 +118,23 @@ const stats = useStatsStore();
         />
       </li>
       <li>
-        <PieChart
-          :data="stats.dapi.transactionsPerChain.data"
-          :metadata="stats.dapi.transactionsPerChain.metadata"
-          :options="stats.dapi.transactionsPerChain.options"
+        <BoxChart
+          :data="stats.dapi.managedPerChain.data"
+          :metadata="stats.dapi.managedPerChain.metadata"
+          :options="stats.dapi.managedPerChain.options"
+          :isChains="true"
         />
       </li>
+
       <li>
-        <PieChart
+        <BoxChart
           :data="stats.dapi.selfFundedPerChain.data"
           :metadata="stats.dapi.selfFundedPerChain.metadata"
           :options="stats.dapi.selfFundedPerChain.options"
+          :isChains="true"
         />
       </li>
+
       <li class="line-chart">
         <LineChart
           class="line-chart"
@@ -181,5 +185,9 @@ ul {
 
 .line-chart {
   grid-column: 1/-1;
+}
+
+h2 {
+  margin: 2rem 0;
 }
 </style>
