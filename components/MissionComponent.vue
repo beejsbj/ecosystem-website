@@ -128,6 +128,10 @@ span.highlight {
   color: var(--highlight);
 }
 
+h3.teaser-voice {
+  text-transform: unset;
+}
+
 mission-section {
   display: grid;
   align-content: center;
