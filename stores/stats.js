@@ -354,6 +354,7 @@ export const useStatsStore = defineStore("stats", () => {
           return {
             label: item.label,
             data: item.data,
+            borderColor: allColors[index],
           };
         });
 
@@ -582,7 +583,7 @@ export const useStatsStore = defineStore("stats", () => {
     },
 
     selfFundedPerChain: {
-      chartType: "pie",
+      chartType: "box",
 
       metadata: {
         title: "Self-funded dAPIs per Chain",
@@ -600,7 +601,17 @@ export const useStatsStore = defineStore("stats", () => {
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
-        return sorted;
+        return {
+          labels: sorted.map((item) => item.key),
+
+          datasets: [
+            {
+              data: sorted,
+              borderColor: gradientColors,
+              //   hoverBackgroundColor: gradientColors,
+            },
+          ],
+        };
       }),
     },
 
@@ -608,10 +619,10 @@ export const useStatsStore = defineStore("stats", () => {
       chartType: "line",
 
       metadata: {
-        title: "dAPI Updates per Day per Chain",
+        title: "dAPI Updates per Week per Chain",
         label: "Updates",
         x: {
-          title: "Days",
+          title: "Weeks",
         },
         y: {
           title: "Updates",
@@ -678,6 +689,7 @@ export const useStatsStore = defineStore("stats", () => {
           return {
             label: item.label,
             data: item.data,
+            borderColor: allColors[index],
           };
         });
 
