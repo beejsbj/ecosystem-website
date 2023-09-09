@@ -72,9 +72,11 @@ const data = computed(() => {
 const options = {
   plugins: {
     title: {
-      display: false,
+      display: true,
+
       text: props.metadata.title,
       color: "hsla(160, 64%, 69%, 1)",
+      align: "start",
       // position: "left",
     },
 
