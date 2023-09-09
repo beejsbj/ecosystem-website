@@ -4,9 +4,11 @@ slug.extend({ "/": "-" });
 
 const props = defineProps(["chain", "fill", "stroke", "strokeWidth"]);
 
-const dynamicComponent = defineAsyncComponent(() =>
-  import(`@/components/icons/chains/${slug(props.chain)}.vue`)
-);
+const dynamicComponent = defineAsyncComponent(() => {
+  const chain = props.chain === "gnosis" ? "gnosis-chain" : props.chain;
+
+  return import(`@/components/icons/chains/${slug(chain)}.vue`);
+});
 </script>
 
 <template>

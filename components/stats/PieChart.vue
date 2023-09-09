@@ -24,6 +24,16 @@ ChartJS.register(
 //
 const props = defineProps(["data", "options", "metadata"]);
 
+const gradientColors = [
+  // give me 7 colors from "hsla(160, 65%, 69%, 1.00)" to "hsla(256, 34%, 54%, 1)", by gradually increasing the hue, saturation, and lightness only, but keeping the alpha at 1
+  "hsla(160, 65%, 69%, 1.00)",
+  "hsla(180, 59%, 66%, 1.00)",
+  "hsla(200, 53%, 63%, 1.00)",
+  "hsla(220, 47%, 60%, 1.00)",
+  "hsla(240, 41%, 57%, 1.00)",
+  "hsla(260, 35%, 54%, 1.00)",
+];
+
 //
 function hoverState(chart, datasetIndex, dataIndex) {
   const tooltip = chart.tooltip;
@@ -37,12 +47,35 @@ function hoverState(chart, datasetIndex, dataIndex) {
   chart.update();
 }
 
+const data = computed(() => {
+  var total = props.data.reduce((a, v) => a + v.value, 0);
+  var inPercent = props.data.map((v) => {
+    return {
+      value: Math.max((v.value / total) * 100, 0.5).toFixed(2),
+      key: v.key,
+      rawValue: v.value,
+    };
+  });
+
+  return {
+    labels: props.data.map((item) => item.key),
+    datasets: [
+      {
+        data: inPercent,
+        borderColor: gradientColors,
+        //   hoverBackgroundColor: gradientColors,
+      },
+    ],
+  };
+});
+
 const options = {
   plugins: {
     title: {
-      display: true,
+      display: false,
       text: props.metadata.title,
       color: "hsla(160, 64%, 69%, 1)",
+      // position: "left",
     },
 
     subtitle: {
@@ -67,9 +100,16 @@ const options = {
             return item.key === legendItem.text;
           });
         });
-        console.log("datasetIndex", datasetIndex);
 
         hoverState(legend.chart, datasetIndex, legendItem.index);
+      },
+    },
+
+    tooltip: {
+      callbacks: {
+        label: function (context) {
+          return context.raw.rawValue;
+        },
       },
     },
 
@@ -84,8 +124,7 @@ const options = {
       padding: 4,
 
       formatter: function (value, context) {
-        //   console.log(value);
-        return value.value;
+        return value.rawValue;
       },
 
       listeners: {
@@ -113,19 +152,15 @@ const options = {
 
   //hover
   //   hoverBorderColor: "hsla(160, 60%, 60%, 0)",
-  //   hoverBackgroundColor: "hsla(160, 60%, 60%, 1)",
+  hoverBackgroundColor: "hsla(160, 60%, 60%, 1)",
   hoverOffset: 20,
 
   onClick: function (evt, item, chart) {
     // hide item in chart
-    console.log("item", item);
-    console.log("chart", chart);
     chart.toggleDataVisibility(item[0].index);
     chart.update();
   },
-  onHover: function (evt, item) {
-    //  console.log("item", item);
-  },
+  onHover: function (evt, item) {},
 };
 </script>
 

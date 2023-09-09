@@ -1,14 +1,20 @@
 <script setup>
-const props = defineProps(["data", "options", "metadata"]);
+const props = defineProps(["data", "options", "metadata", "isChains"]);
 </script>
 
 <template>
+  <h4 class="solid-voice group-heading" v-if="isChains">
+    {{ metadata.title }}
+  </h4>
   <ul class="box-chart" v-for="dataset in data.datasets">
     <li
       v-for="(dataPoint, index) in dataset.data"
       :style="`border-color: ${dataset.borderColor[index]}`"
     >
-      <h4 class="solid-voice">
+      <picture v-if="isChains">
+        <ChainIcon :chain="dataPoint.key" />
+      </picture>
+      <h4 class="solid-voice" v-if="!isChains">
         {{ dataPoint.key ?? metadata.title }}
       </h4>
       <h5 class="solid-voice">
@@ -19,6 +25,10 @@ const props = defineProps(["data", "options", "metadata"]);
 </template>
 
 <style scoped>
+.group-heading {
+  margin: 2rem 0;
+}
+
 .box-chart {
   display: grid;
   gap: 2rem;

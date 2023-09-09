@@ -152,17 +152,7 @@ export const useStatsStore = defineStore("stats", () => {
           };
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
-
-        return {
-          labels: sorted.map((item) => item.key),
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return sorted;
       }),
     },
 
@@ -184,16 +174,7 @@ export const useStatsStore = defineStore("stats", () => {
           };
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
-        return {
-          labels: sorted.map((item) => item.key),
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return sorted;
       }),
     },
 
@@ -214,16 +195,7 @@ export const useStatsStore = defineStore("stats", () => {
           };
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
-        return {
-          labels: sorted.map((item) => item.key),
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return sorted;
       }),
     },
 
@@ -492,17 +464,7 @@ export const useStatsStore = defineStore("stats", () => {
         );
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
-        return {
-          labels: sorted.map((item) => item.key),
-
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return sorted;
       }),
     },
 
@@ -615,17 +577,7 @@ export const useStatsStore = defineStore("stats", () => {
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
-        return {
-          labels: sorted.map((item) => item.key),
-
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return sorted;
       }),
     },
 
@@ -648,17 +600,7 @@ export const useStatsStore = defineStore("stats", () => {
         });
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
-        return {
-          labels: sorted.map((item) => item.key),
-
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return sorted;
       }),
     },
 
@@ -685,7 +627,6 @@ export const useStatsStore = defineStore("stats", () => {
           const y = row[2];
 
           const found = parsed.find((item) => item.label === label);
-
           if (found) {
             found.data.push({ x, y });
           } else {
@@ -693,7 +634,47 @@ export const useStatsStore = defineStore("stats", () => {
           }
         });
 
-        const datasets = parsed.map((item, index) => {
+        //parsed = [{
+        //  label: "Ethereum",
+        //  data: [{x:  Date(), y: 1}, {x:  Date(), y: 2}]
+        // }]
+
+        function getWeekNumber(d) {
+          const date = new Date(d);
+          const start = new Date(date.getFullYear(), 0, 0);
+          const diff =
+            date -
+            start +
+            (start.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000;
+          const oneDay = 1000 * 60 * 60 * 24;
+          const day = Math.floor(diff / oneDay);
+          return Math.ceil(day / 7);
+        }
+
+        const newParsed = parsed.map((chain) => {
+          const weeklyData = chain.data.reduce((acc, curr) => {
+            const weekNo = getWeekNumber(curr.x);
+            const lastWeek = acc.length ? acc[acc.length - 1] : null;
+
+            if (lastWeek && lastWeek.weekNo === weekNo) {
+              // Continue the current week
+              lastWeek.y += curr.y;
+              lastWeek.count += 1;
+            } else {
+              // Start of a new week
+              acc.push({ x: new Date(curr.x), y: curr.y, count: 1, weekNo });
+            }
+
+            return acc;
+          }, []);
+
+          return {
+            ...chain,
+            data: weeklyData,
+          };
+        });
+
+        const datasets = newParsed.map((item, index) => {
           return {
             label: item.label,
             data: item.data,
@@ -705,7 +686,7 @@ export const useStatsStore = defineStore("stats", () => {
         });
 
         const labels = largestDataset.data.map((item) => {
-          return item.x.toDateString().slice(10);
+          return item.x.toDateString();
         });
 
         const sortedLabels = labels.sort((a, b) => {

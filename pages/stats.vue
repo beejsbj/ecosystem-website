@@ -58,8 +58,9 @@ const stats = useStatsStore();
         />
       </li>
 
-      <li>
+      <li class="line-chart">
         <LineChart
+          class="line-chart"
           :data="stats.qrng.last2000Requests.data"
           :metadata="stats.qrng.last2000Requests.metadata"
           :options="stats.qrng.last2000Requests.options"
@@ -78,6 +79,7 @@ const stats = useStatsStore();
           :options="stats.dapi.openOrders.options"
         />
       </li>
+
       <li>
         <BoxChart
           :data="stats.dapi.fulfilledOrders.data"
@@ -85,6 +87,7 @@ const stats = useStatsStore();
           :options="stats.dapi.fulfilledOrders.options"
         />
       </li>
+
       <li>
         <PieChart
           :data="stats.dapi.fulfilledOrdersPerChain.data"
@@ -97,6 +100,7 @@ const stats = useStatsStore();
           :data="stats.dapi.managedPerChain.data"
           :metadata="stats.dapi.managedPerChain.metadata"
           :options="stats.dapi.managedPerChain.options"
+          :isChains="true"
         />
       </li>
       <li>
@@ -127,8 +131,9 @@ const stats = useStatsStore();
           :options="stats.dapi.selfFundedPerChain.options"
         />
       </li>
-      <li>
+      <li class="line-chart">
         <LineChart
+          class="line-chart"
           :data="stats.dapi.updatesPerDayPerChain.data"
           :metadata="stats.dapi.updatesPerDayPerChain.metadata"
           :options="stats.dapi.updatesPerDayPerChain.options"
@@ -148,6 +153,7 @@ const stats = useStatsStore();
           :options="dapiStat.options"
         />
         <LineChart
+		  class="line-chart"
           v-if="dapiStat.chartType === 'line'"
           :data="dapiStat.data"
           :metadata="dapiStat.metadata"
@@ -171,5 +177,9 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+}
+
+.line-chart {
+  grid-column: 1/-1;
 }
 </style>
