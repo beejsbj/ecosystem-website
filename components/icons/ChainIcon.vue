@@ -3,9 +3,18 @@ import slug from "slug";
 slug.extend({ "/": "-" });
 
 const props = defineProps(["chain", "fill", "stroke", "strokeWidth"]);
+const isTestnet = computed(() => props.chain?.includes("-testnet"));
 
 const dynamicComponent = defineAsyncComponent(() => {
-  const chain = props.chain === "gnosis" ? "gnosis-chain" : props.chain;
+  let chain = props.chain;
+  chain = chain.replace("-testnet", "");
+  chain = chain.replace("-goerli", "");
+  chain = chain.replace("-chain", "");
+
+  chain = chain === "sepolia" ? "ethereum" : chain;
+  chain = chain === "goerli" ? "ethereum" : chain;
+
+  console.log(chain);
 
   return import(`@/components/icons/chains/${slug(chain)}.vue`);
 });
