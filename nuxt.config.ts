@@ -102,6 +102,9 @@ export default defineNuxtConfig({
         dir: "assets",
       },
     ],
+    storage: {
+      data: { driver: "vercelKV" },
+    },
   },
   runtimeConfig: {
     mongodbUri: process.env.NUXT_MONGODB_URI,
