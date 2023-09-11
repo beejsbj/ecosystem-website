@@ -35,6 +35,7 @@ const STATS_ENDPOINTS: { [name: string]: string } = {
   dapiUpdatesPerDayPerChain:
     "https://metabase.api3.org/api/public/dashboard/d0f00529-e482-4682-b840-6956222e581e/dashcard/165/card/133?parameters=%5B%5D",
 };
+
 const CACHE_EXPIRY_SECONDS: number = 30 * 60;
 export default defineEventHandler(async (event) => {
   try {
