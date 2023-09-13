@@ -3,7 +3,11 @@ export default defineNuxtConfig({
 
   routeRules: {
     // Homepage pre-rendered at build time
-    "/": { prerender: true },
+    "/": { prerender: true, cache: { maxAge: 30 } },
+    ecosystem: { cache: { maxAge: 60 * 60 } },
+    "/ecosystem/**": { cache: { maxAge: 60 * 60 } },
+    articles: { cache: { maxAge: 60 * 60 } },
+    "/articles/**": { cache: { maxAge: 60 * 60 } },
     "add-dapp": {
       ssr: false,
     },
@@ -103,7 +107,10 @@ export default defineNuxtConfig({
       },
     ],
     storage: {
-      data: { driver: "vercelKV" },
+      data: { driver: "vercelKV" }, // vercel redis key-value cache driver for api calls
+      cache: {
+        driver: "memory", //  memory cache driver for caching ssr requests
+      },
     },
   },
   runtimeConfig: {
