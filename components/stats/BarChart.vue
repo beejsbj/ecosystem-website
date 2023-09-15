@@ -26,6 +26,9 @@ ChartJS.register(
 const props = defineProps(["data", "options", "metadata"]);
 
 //
+const color = computed(() => {
+  return props.options.color ? props.options.color : "hsla(160, 64%, 69%, 1)";
+});
 
 //
 
@@ -36,13 +39,13 @@ const options = {
     title: {
       display: true,
       text: props.metadata.title,
-      color: "hsla(160, 64%, 69%, 1)",
+      color: color.value,
     },
 
     subtitle: {
       display: true,
       text: props.metadata.subtitle,
-      color: "hsla(160, 64%, 69%, 1)",
+      color: color.value,
     },
 
     legend: {
@@ -76,7 +79,7 @@ const options = {
       title: {
         display: true,
         text: props.metadata.x.title,
-        color: "hsla(160, 64%, 69%, 1)",
+        color: color.value,
       },
       ticks: {
         autoSkip: true,
@@ -87,7 +90,7 @@ const options = {
       title: {
         display: true,
         text: props.metadata.y.title,
-        color: "hsla(160, 64%, 69%, 1)",
+        color: color.value,
       },
       ticks: {
         autoSkip: true,
@@ -98,14 +101,15 @@ const options = {
 
   responsive: true,
   maintainAspectRatio: true,
-  //  backgroundColor: "hsla(160, 64%, 69%, 1)",
+
+  //  backgroundColor: color.value,
   barPercentage: 0.4,
   borderRadius: 16,
-  borderColor: "hsla(160, 64%, 69%, 1)",
+  borderColor: color.value,
   borderWidth: 1,
 
   hoverOffset: 5,
-  hoverBackgroundColor: "hsla(160, 64%, 69%, 1)",
+  hoverBackgroundColor: color.value,
   pointHoverBorderWidth: 10,
 
   onClick: function (evt, item) {

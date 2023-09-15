@@ -1,4 +1,5 @@
 <script setup>
+import { useInterfaceStore } from "@/stores/interface";
 import { Line } from "vue-chartjs";
 
 import {
@@ -27,6 +28,8 @@ ChartJS.register(
 );
 
 const props = defineProps(["data", "options", "metadata"]);
+
+const ui = useInterfaceStore();
 
 const options = {
   plugins: {
@@ -81,13 +84,14 @@ const options = {
       },
     },
     y: {
+      alignToPixels: true,
       title: {
         display: true,
         text: props.metadata.y.title,
         color: "hsla(160, 64%, 69%, 1)",
       },
       ticks: {
-        autoSkip: true,
+        //   autoSkip: true,
         maxTicksLimit: 10,
       },
     },
@@ -95,6 +99,7 @@ const options = {
 
   responsive: true,
   maintainAspectRatio: true,
+  aspectRatio: ui.isMobile ? 1.25 : 1.75,
   //   borderColor: "hsla(160, 64%, 69%, 1)",
   borderWidth: 1,
 
@@ -105,9 +110,26 @@ const options = {
   onClick: function (evt, item) {
     console.log("item", item);
   },
+
+  onResize: function (chart, size) {
+    console.log("chart", chart);
+    console.log("size", size);
+
+    console.log("chart.canvas.parentNode", chart.canvas.parentNode);
+  },
 };
 </script>
 
 <template>
-  <Line :data="data" :options="options" />
+  <div class="chart-container">
+    <Line :data="data" :options="options" />
+  </div>
 </template>
+
+<style scoped>
+.chart-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+</style>

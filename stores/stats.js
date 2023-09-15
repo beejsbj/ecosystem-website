@@ -2,9 +2,6 @@ import { defineStore } from "pinia";
 import { useFetch } from "nuxt/app";
 
 export const useStatsStore = defineStore("stats", () => {
-  //QRNG ////////////////////////////////////////////////
-  // QRNG Totals per chain | Pie chart
-
   const { data: chartsData } = useFetch("/api/charts");
 
   const gradientColors = [
@@ -44,8 +41,9 @@ export const useStatsStore = defineStore("stats", () => {
     "hsla(130, 35%, 54%, 1.00)",
   ];
 
-  ////////////////////////////////////////////////
+  //QRNG ////////////////////////////////////////////////
   const qrng = {
+    // QRNG Totals per chain
     totals: {
       chartType: "pie",
 
@@ -68,6 +66,7 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
+    // QRNG fulfilments last 7 days
     last7Days: {
       chartType: "pie",
 
@@ -92,6 +91,7 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
+    //QRNG fulfilments last 30 days
     last30Days: {
       chartType: "pie",
       metadata: {
@@ -114,6 +114,7 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
+    //Total QRNG Fulfilments per Day | Last 45 days
     last45Days: {
       chartType: "bar",
 
@@ -151,6 +152,7 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
+    //Total QRNG Fulfilments per Week | Last 52 weeks
     last52Weeks: {
       chartType: "bar",
 
@@ -166,7 +168,9 @@ export const useStatsStore = defineStore("stats", () => {
         },
       },
 
-      options: {},
+      options: {
+        color: "hsla(256, 34%, 54%, 1)",
+      },
 
       data: computed(() => {
         const parsed =
@@ -188,6 +192,7 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
+    //Total QRNG Fulfilments per Month | Last 12 months
     last12Months: {
       chartType: "bar",
 
@@ -225,6 +230,7 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
+    //  QRNG Last 2000 requests Chart
     last2000Requests: {
       chartType: "line",
 
@@ -307,6 +313,7 @@ export const useStatsStore = defineStore("stats", () => {
   //dAPI ////////////////////////////////////////////////
 
   const dapi = {
+    // Open Orders
     openOrders: {
       chartType: "box",
 
@@ -324,18 +331,11 @@ export const useStatsStore = defineStore("stats", () => {
             value: chartsData?.value?.dapiOpenOrders?.data.rows[0][0],
           },
         ];
-        return {
-          datasets: [
-            {
-              data: parsed,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return parsed;
       }),
     },
 
+    // Fulfilled Orders
     fulfilledOrders: {
       chartType: "box",
 
@@ -353,20 +353,13 @@ export const useStatsStore = defineStore("stats", () => {
             value: chartsData?.value?.dapiFulfilledOrders?.data.rows[0][0],
           },
         ];
-        return {
-          datasets: [
-            {
-              data: parsed,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return parsed;
       }),
     },
 
+    // Fulfilled Orders per Chain
     fulfilledOrdersPerChain: {
-      chartType: "pie",
+      chartType: "box",
 
       metadata: {
         title: "Fulfilled Orders per Chain",
@@ -391,6 +384,28 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
+    //  Active Managed dAPIs
+    activeManaged: {
+      chartType: "box",
+
+      metadata: {
+        title: "Active Managed dAPIs",
+        chartColor: "blue",
+      },
+
+      options: {},
+      data: computed(() => {
+        const parsed = [
+          {
+            key: null,
+            value: chartsData?.value?.dapiActiveManaged?.data.rows[0][0],
+          },
+        ];
+        return parsed;
+      }),
+    },
+
+    //  Managed dAPIs per Chain
     managedPerChain: {
       chartType: "box",
 
@@ -412,48 +427,11 @@ export const useStatsStore = defineStore("stats", () => {
         );
         const sorted = parsed.sort((a, b) => b.value - a.value);
 
-        return {
-          labels: sorted.map((item) => item.key),
-
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return sorted;
       }),
     },
 
-    activeManaged: {
-      chartType: "box",
-
-      metadata: {
-        title: "Active Managed dAPIs",
-        chartColor: "blue",
-      },
-
-      options: {},
-      data: computed(() => {
-        const parsed = [
-          {
-            key: null,
-            value: chartsData?.value?.dapiActiveManaged?.data.rows[0][0],
-          },
-        ];
-        return {
-          datasets: [
-            {
-              data: parsed,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
-      }),
-    },
-
+    //  Active Self-funded dAPIs
     activeSelfFunded: {
       chartType: "box",
 
@@ -471,18 +449,37 @@ export const useStatsStore = defineStore("stats", () => {
             value: chartsData?.value?.dapiActiveSelfFunded?.data.rows[0][0],
           },
         ];
-        return {
-          datasets: [
-            {
-              data: parsed,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
+        return parsed;
       }),
     },
 
+    //  Self-funded dAPIs per Chain
+    selfFundedPerChain: {
+      chartType: "box",
+
+      metadata: {
+        title: "Self-funded dAPIs per Chain",
+        chartColor: "blue",
+      },
+
+      options: {},
+
+      data: computed(() => {
+        const parsed = chartsData?.value?.dapiSelfFundedPerChain?.data.rows.map(
+          (row) => {
+            return {
+              key: row[0],
+              value: row[1],
+            };
+          }
+        );
+        const sorted = parsed.sort((a, b) => b.value - a.value);
+
+        return sorted;
+      }),
+    },
+
+    // transactions per chain
     transactionsPerChain: {
       chartType: "pie",
 
@@ -507,41 +504,7 @@ export const useStatsStore = defineStore("stats", () => {
       }),
     },
 
-    selfFundedPerChain: {
-      chartType: "box",
-
-      metadata: {
-        title: "Self-funded dAPIs per Chain",
-        chartColor: "blue",
-      },
-
-      options: {},
-
-      data: computed(() => {
-        const parsed = chartsData?.value?.dapiSelfFundedPerChain?.data.rows.map(
-          (row) => {
-            return {
-              key: row[0],
-              value: row[1],
-            };
-          }
-        );
-        const sorted = parsed.sort((a, b) => b.value - a.value);
-
-        return {
-          labels: sorted.map((item) => item.key),
-
-          datasets: [
-            {
-              data: sorted,
-              borderColor: gradientColors,
-              //   hoverBackgroundColor: gradientColors,
-            },
-          ],
-        };
-      }),
-    },
-
+    //  dAPI Updates per day per Chain || transformed to weekly
     updatesPerDayPerChain: {
       chartType: "line",
 

@@ -13,6 +13,7 @@ const dynamicComponent = defineAsyncComponent(() => {
 
   chain = chain === "sepolia" ? "ethereum" : chain;
   chain = chain === "goerli" ? "ethereum" : chain;
+  chain = chain === "mainnet" ? "ethereum" : chain;
 
   console.log(chain);
 

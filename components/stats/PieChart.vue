@@ -44,6 +44,7 @@ function hoverState(chart, datasetIndex, dataIndex) {
   chart.setActiveElements([item]);
   tooltip.setActiveElements([item]);
 
+  console.log(chart);
   chart.update();
 }
 
@@ -76,7 +77,7 @@ const options = {
 
       text: props.metadata.title,
       color: "hsla(160, 64%, 69%, 1)",
-      align: "start",
+      // align: "start",
       // position: "left",
     },
 
@@ -89,7 +90,7 @@ const options = {
 
     legend: {
       // display: false,
-      position: "right",
+      position: "bottom",
 
       labels: {
         color: "hsla(160, 64%, 69%, 1)",
@@ -144,7 +145,7 @@ const options = {
     padding: 20,
   },
   responsive: true,
-  maintainAspectRatio: false,
+  //   maintainAspectRatio: true,
   //   cutout: "25%",
   borderColor: "hsla(160, 65%, 69%, 1.00)",
   backgroundColor: "hsla(160, 65%, 69%, 0.00)",

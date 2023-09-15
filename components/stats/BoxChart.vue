@@ -1,5 +1,29 @@
 <script setup>
 const props = defineProps(["data", "options", "metadata", "isChains"]);
+
+const gradientColors = [
+  // give me 7 colors from "hsla(160, 65%, 69%, 1.00)" to "hsla(256, 34%, 54%, 1)", by gradually increasing the hue, saturation, and lightness only, but keeping the alpha at 1
+  "hsla(160, 65%, 69%, 1.00)",
+  "hsla(180, 59%, 66%, 1.00)",
+  "hsla(200, 53%, 63%, 1.00)",
+  "hsla(220, 47%, 60%, 1.00)",
+  "hsla(240, 41%, 57%, 1.00)",
+  "hsla(260, 35%, 54%, 1.00)",
+];
+
+const data = computed(() => {
+  return {
+    //  labels: props.data.map((item) => item.key),
+
+    datasets: [
+      {
+        data: props.data,
+        borderColor: gradientColors,
+        //   hoverBackgroundColor: gradientColors,
+      },
+    ],
+  };
+});
 </script>
 
 <template>
@@ -30,7 +54,7 @@ const props = defineProps(["data", "options", "metadata", "isChains"]);
 
 <style scoped>
 .group-heading {
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
 }
 
 .box-chart {
