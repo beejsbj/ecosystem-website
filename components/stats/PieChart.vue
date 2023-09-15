@@ -11,6 +11,8 @@ import {
   SubTitle,
 } from "chart.js";
 
+import { useInterfaceStore } from "@/stores/interface";
+
 ChartJS.register(
   ArcElement,
   Tooltip,
@@ -23,6 +25,8 @@ ChartJS.register(
 
 //
 const props = defineProps(["data", "options", "metadata"]);
+
+const ui = useInterfaceStore();
 
 const gradientColors = [
   // give me 7 colors from "hsla(160, 65%, 69%, 1.00)" to "hsla(256, 34%, 54%, 1)", by gradually increasing the hue, saturation, and lightness only, but keeping the alpha at 1
@@ -90,7 +94,7 @@ const options = {
 
     legend: {
       // display: false,
-      position: "bottom",
+      position: ui.isMobile ? "bottom" : "right",
 
       labels: {
         color: "hsla(160, 64%, 69%, 1)",
@@ -145,7 +149,7 @@ const options = {
     padding: 20,
   },
   responsive: true,
-  //   maintainAspectRatio: true,
+  maintainAspectRatio: true,
   //   cutout: "25%",
   borderColor: "hsla(160, 65%, 69%, 1.00)",
   backgroundColor: "hsla(160, 65%, 69%, 0.00)",
