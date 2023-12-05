@@ -59,7 +59,7 @@ onMounted(() => {
         </p>
       </stats-card>
       <picture class="graph">
-        <NuxtImg :src="graph" alt="stats" />
+        <NuxtImg loading="lazy" :src="graph" alt="stats" />
         <!-- #todo -->
       </picture>
     </scrolling-stats>

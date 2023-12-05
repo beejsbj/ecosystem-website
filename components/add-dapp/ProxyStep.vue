@@ -133,7 +133,11 @@ async function handleUpdateProxy() {
           <LoadingSpinner v-if="loading" />
           <button v-else class="text green" @click.prevent="handleUpdateProxy">
             <picture>
-              <img src="@/assets/images/interface/plus.svg" alt="plus icon" />
+              <img
+                loading="lazy"
+                src="@/assets/images/interface/plus.svg"
+                alt="plus icon"
+              />
             </picture>
             <span class="whisper-voice"> Fetch Proxy </span>
           </button>

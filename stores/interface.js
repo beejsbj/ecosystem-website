@@ -39,22 +39,6 @@ export const useInterfaceStore = defineStore("interface", function () {
   //hero image
   const heroImage = ref(null);
 
-  function changeHeroImage(card) {
-    heroImage.value = card.image;
-    setTimeout(() => {}, 100);
-    gsap.fromTo(
-      "hero-landing .hero-graphic",
-      { duration: 0, opacity: 0 },
-      { duration: 1, opacity: 0.25 }
-    );
-    gsap.to("hero-landing .line-decoration", { duration: 0, scale: 0.6 });
-    gsap.fromTo(
-      "hero-landing .line-decoration path",
-      { duration: 0, scale: 0 },
-      { duration: 0.25, scale: 1, stagger: 0.05 }
-    );
-  }
-
   //
   //page transition
   const transitionState = reactive({
@@ -111,10 +95,8 @@ export const useInterfaceStore = defineStore("interface", function () {
     showModal,
     toggleModal,
 
-    changeHeroImage,
-
     transitionState,
     toggleTransitionComplete,
-    pageTransitionConfig,
+    //  pageTransitionConfig,
   };
 });

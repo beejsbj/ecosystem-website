@@ -1,16 +1,5 @@
 <script setup>
-import { gsap } from "gsap";
-
 // const content = await queryContent("/home").findOne().heroLanding; #todo
-
-onMounted(() => {
-  //hero landing on load animations
-  const pageLoad = gsap.timeline({
-    //  scrollTrigger: {
-    //    trigger: "hero-landing",
-    //  },
-  });
-});
 </script>
 
 <template>
@@ -19,7 +8,6 @@ onMounted(() => {
       <text-content>
         <h1 class="page-title loud-voice">
           Connecting the <span>First-Party</span> Oracle Ecosystem
-          <!-- {{ content.title }} -->
         </h1>
 
         <p class="calm-voice">
@@ -47,21 +35,30 @@ onMounted(() => {
 
   picture.curves-decoration-2 {
     position: absolute;
-    top: 12.5%;
+    top: 270px;
     left: 50%;
     transform: translate(-50%, -50%) scaleY(2);
 
-    width: 200vw;
+    width: 1000px;
     z-index: -10;
 
     @media (min-width: 768px) {
-      top: 45%;
-      width: 150vw;
+      top: 200px;
+      width: 1600px;
       transform: translate(-50%, -50%) scaleY(0.9);
     }
 
     @media (min-width: 1600px) {
-      width: 100vw;
+      top: 250px;
+
+      width: 90vw;
+      transform: translate(-50%, -50%) scaleX(2);
+    }
+
+    @media (min-width: 2000px) {
+      top: 400px;
+
+      width: 90vw;
       transform: translate(-50%, -50%) scaleX(2);
     }
 

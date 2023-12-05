@@ -4,7 +4,7 @@ const props = defineProps(["error"]);
 const router = useRouter();
 
 useHead({
-  title: error.statusCode,
+  title: props?.error?.statusCode ?? "Error",
 });
 </script>
 
@@ -22,7 +22,7 @@ useHead({
         Go Back
       </button>
       <!-- button to go home -->
-      <a class="button firm-voice" href="/"> Go Home </a>
+      <NuxtLink class="button firm-voice" to="/"> Go Home </NuxtLink>
     </div>
 
     <details v-auto-animate>

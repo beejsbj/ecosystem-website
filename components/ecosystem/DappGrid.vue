@@ -83,9 +83,7 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-l);
-  align-items: start;
   position: relative;
-  /* overflow: auto; */
 }
 
 .show-more {

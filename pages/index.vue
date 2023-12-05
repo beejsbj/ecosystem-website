@@ -17,17 +17,10 @@ useSeoMeta({
 
 onMounted(() => {
   //   document.body.scrollTop = document.documentElement.scrollTop = 0;
-  window.scroll({
-    top: 0,
-    left: 0,
-  });
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  ScrollTrigger.defaults({
-    // toggleActions: "restart reset restart none",
-    // markers: "true",
-  });
+  //   window.scroll({
+  //     top: 0,
+  //     left: 0,
+  //   });
 });
 </script>
 
@@ -100,7 +93,7 @@ main.index {
 
   picture.curves-decoration-3 {
     position: absolute;
-    top: 50%;
+    top: 100vh;
     left: 50%;
     transform: translate(-50%, -50%) rotate(10deg) scaleY(1.8);
 

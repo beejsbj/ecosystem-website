@@ -4,7 +4,7 @@ const props = defineProps(["image", "alt", "caption"]);
 
 <template>
   <figure>
-    <NuxtImg :src="image" :alt="alt" />
+    <NuxtImg loading="lazy" :src="image" :alt="alt" />
     <figcaption class="whisper-voice" v-if="caption">
       {{ caption }}
     </figcaption>

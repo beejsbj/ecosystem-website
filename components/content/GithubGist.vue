@@ -52,6 +52,7 @@ onMounted(() => {
   <template v-if="gistErr">
     <picture>
       <NuxtImg
+        loading="lazy"
         id="notFound"
         height="100%"
         width="100%"

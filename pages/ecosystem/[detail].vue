@@ -87,22 +87,21 @@ const formattedProxies = computed(() => {
 
       <SectionColumn class="detail-main">
         <article class="main">
-          <ClientOnly>
-            <PageTitle
-              class="dapp-title"
-              :heading="dapp?.name"
-              innerClass="none"
-              :voice="ui.isMobile ? 'attention-voice' : 'loud-voice'"
-            >
-              <picture class="logo">
-                <NuxtImg
-                  :src="dapp?.images?.logo"
-                  src="/images/square.jpg"
-                  :alt="`Logo of ${dapp?.name}`"
-                />
-              </picture>
-            </PageTitle>
-          </ClientOnly>
+          <PageTitle
+            class="dapp-title"
+            :heading="dapp?.name"
+            innerClass="none"
+            :voice="ui.isMobile ? 'attention-voice' : 'loud-voice'"
+          >
+            <picture class="logo">
+              <NuxtImg
+                loading="lazy"
+                :src="dapp?.images?.logo"
+                src="/images/square.jpg"
+                :alt="`Logo of ${dapp?.name}`"
+              />
+            </picture>
+          </PageTitle>
           <div class="launch-button">
             <NuxtLink
               :to="dapp?.links?.dapp"
@@ -130,9 +129,9 @@ const formattedProxies = computed(() => {
 
               <ul class="socials">
                 <li v-for="social in dapp?.links?.socials" :key="social.id">
-                  <a :href="social.url" :target="social.name">
+                  <a :href="social.url" :target="social.label">
                     <picture>
-                      <SocialIcon :social="social.label" />
+                      <DynamicIcon :icon="social?.label" />
                     </picture>
                   </a>
                 </li>

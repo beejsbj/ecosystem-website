@@ -109,20 +109,19 @@ function indexTimer() {
 }
 
 function animateBackground() {
-  gsap.fromTo(
-    ".decoration-guide :not(#curve-decoration) path",
-    {
-      strokeDashoffset: "900",
-      strokeDasharray: "900",
-    },
-    {
-      duration: 1,
-      strokeDashoffset: 0,
-      ease: "power2.in",
-      stagger: { each: 0.05, repeat: "-1" },
-    }
-  );
-
+  //   gsap.fromTo(
+  //     ".decoration-guide :not(#curve-decoration) path",
+  //     {
+  //       strokeDashoffset: "900",
+  //       strokeDasharray: "900",
+  //     },
+  //     {
+  //       duration: 1,
+  //       strokeDashoffset: 0,
+  //       ease: "power2.in",
+  //       stagger: { each: 0.05, repeat: "-1" },
+  //     }
+  //   );
   //   indexTimer();
 }
 

@@ -10,7 +10,7 @@ const ui = useInterfaceStore();
   <graphic-text>
     <text-content>
       <picture v-if="!ui.isDesktop">
-        <NuxtImg :src="image" :alt="heading" />
+        <NuxtImg loading="lazy" :src="image" :alt="heading" />
       </picture>
       <h3 class="attention-voice">
         {{ heading }}
@@ -25,7 +25,7 @@ const ui = useInterfaceStore();
     </text-content>
 
     <picture v-if="ui.isDesktop">
-      <NuxtImg :src="image" :alt="heading" />
+      <NuxtImg loading="lazy" :src="image" :alt="heading" />
     </picture>
   </graphic-text>
 </template>

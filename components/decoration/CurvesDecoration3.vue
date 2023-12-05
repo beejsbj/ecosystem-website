@@ -47,7 +47,7 @@ function animateCurvesWaves() {
 }
 
 onMounted(() => {
-  animateCurvesWaves();
+  //   animateCurvesWaves();
 });
 </script>
 

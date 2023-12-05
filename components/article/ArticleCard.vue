@@ -36,6 +36,7 @@ onMounted(() => {
   <article-card class="background-radial-violet">
     <picture>
       <NuxtImg
+        loading="lazy"
         :src="article?.cover ?? '/images/article-placeholder.jpg'"
         alt="Article Cover"
       />

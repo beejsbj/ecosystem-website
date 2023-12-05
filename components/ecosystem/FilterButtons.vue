@@ -14,7 +14,11 @@ const ecosystem = useEcosystemStore();
       :class="!ui.isMobile ? 'whisper-voice' : ''"
     >
       <picture>
-        <img src="@/assets/images/interface/filter.svg" alt="filter icon" />
+        <img
+          loading="lazy"
+          src="@/assets/images/interface/filter.svg"
+          alt="filter icon"
+        />
       </picture>
       <span v-if="!ecosystem.isFilterApplied"> Filters </span>
       <span v-else> Showing {{ ecosystem?.list?.length }} dApps </span>

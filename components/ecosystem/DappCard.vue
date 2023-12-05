@@ -36,7 +36,7 @@ function filterBy(event) {
       <ul class="chain-list">
         <li
           class="chain"
-          v-for="chain in dapp.chains"
+          v-for="chain in dapp?.chains"
           :data-chain="chain"
           @click="filterBy"
         >
@@ -56,12 +56,17 @@ function filterBy(event) {
     <text-content>
       <picture class="logo">
         <NuxtImg
+          loading="lazy"
           :src="dapp?.images?.logo"
           src="/images/square.jpg"
           :alt="`Logo of ${dapp?.name}`"
         />
       </picture>
-      <h2 class="firm-voice">{{ dapp?.name ?? "Dapp Name" }}</h2>
+      <h2
+        :class="dapp?.name.length <= 16 ? 'firm-voice' : 'firm-voice-smaller'"
+      >
+        {{ dapp?.name ?? "Dapp Name" }}
+      </h2>
 
       <p class="whisper-voice">
         {{ dapp?.tagline ?? "This is the Dapp Tagline" }}
@@ -82,7 +87,7 @@ function filterBy(event) {
       </ul>
       <NuxtLink
         :to="`/ecosystem/${slug(dapp?.name ?? '#')}`"
-        class="text card-link"
+        class="card-link"
       />
     </footer>
   </dapp-card>
@@ -115,6 +120,7 @@ dapp-card {
 
     .chain-list {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-2xs);
     }
 
@@ -142,13 +148,12 @@ dapp-card {
     }
 
     h2 {
-      white-space: nowrap;
+      text-wrap: balance;
       // z-index: 2;
     }
 
     p {
       grid-column: 1/-1;
-      // z-index: 2;
     }
   }
   footer {

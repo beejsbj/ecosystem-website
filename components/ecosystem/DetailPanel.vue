@@ -58,7 +58,7 @@ onMounted(() => {
       <div class="row chain">
         <p>Chains</p>
         <ul>
-          <li v-for="chain in dapp.chains" :key="chain.id">
+          <li v-for="chain in dapp?.chains" :key="chain.id">
             <!-- {{ chain }} -->
             <ChainIcon
               :chain="ecosystem.chainNames(chain)"
@@ -173,6 +173,7 @@ aside {
 
     picture.chain-icon {
       aspect-ratio: 1/1;
+      width: 16px;
     }
   }
 }

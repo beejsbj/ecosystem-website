@@ -45,7 +45,11 @@ export default {
     </p>
     <div class="icon copy">
       <picture>
-        <img src="@/assets/images/interface/copy.svg" alt="Copy icon" />
+        <img
+          loading="lazy"
+          src="@/assets/images/interface/copy.svg"
+          alt="Copy icon"
+        />
       </picture>
     </div>
   </button>

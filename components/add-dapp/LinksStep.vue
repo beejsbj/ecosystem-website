@@ -30,7 +30,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     <div class="form-socials">
       <h2 class="calm-voice">Enter the socials you'd like to share.</h2>
       <form-field>
-        <SocialIcon social="twitter" />
+        <DynamicIcon icon="twitter" />
 
         <FormKit
           type="url"
@@ -44,7 +44,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
       </form-field>
 
       <form-field>
-        <SocialIcon social="discord" />
+        <DynamicIcon icon="discord" />
 
         <FormKit
           type="url"
@@ -58,7 +58,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
       </form-field>
 
       <form-field>
-        <SocialIcon social="github" />
+        <DynamicIcon icon="github" />
 
         <FormKit
           type="url"
@@ -72,7 +72,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
       </form-field>
 
       <form-field>
-        <SocialIcon social="reddit" />
+        <DynamicIcon icon="reddit" />
         <FormKit
           type="url"
           id="reddit"
@@ -85,7 +85,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
       </form-field>
 
       <form-field>
-        <SocialIcon social="telegram" />
+        <DynamicIcon icon="telegram" />
         <FormKit
           type="url"
           validation="url"
@@ -97,7 +97,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
         />
       </form-field>
       <form-field>
-        <SocialIcon social="facebook" />
+        <DynamicIcon icon="facebook" />
         <FormKit
           type="url"
           validation="url"
@@ -110,7 +110,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
       </form-field>
 
       <form-field>
-        <SocialIcon social="youtube" />
+        <DynamicIcon icon="youtube" />
         <FormKit
           type="url"
           validation="url"
@@ -123,7 +123,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
       </form-field>
 
       <form-field>
-        <SocialIcon social="blog" />
+        <DynamicIcon icon="medium" />
         <FormKit
           type="url"
           validation="url"
@@ -167,7 +167,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     grid-template-columns: 0.2fr 1fr;
   }
 
-  :deep(.social-icon) {
+  :deep(picture) {
     max-width: 20px;
   }
 

@@ -44,7 +44,11 @@ useSeoMeta({
         <ArticleHeader :article="article" />
 
         <picture class="cover" v-if="article?.cover">
-          <NuxtImg :src="article?.cover" :alt="`Cover of ${article?.title}`" />
+          <NuxtImg
+            loading="lazy"
+            :src="article?.cover"
+            :alt="`Cover of ${article?.title}`"
+          />
         </picture>
 
         <ContentRendererMarkdown

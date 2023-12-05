@@ -8,15 +8,14 @@ const showcaseCards = ref([
     paragraph: "Discover and explore API3's Ecosystem partners.",
     cta: "Explore Ecosystem",
     link: "/ecosystem",
-    image: "/images/icons/dapp.svg",
+    image: "/images/icons/docs.svg",
   },
   {
     heading: "Developers",
-    paragraph:
-      "Learn to use oracles while building your blockchain applications.",
+    paragraph: "Learn to use oracles for your blockchain applications.",
     cta: "Get Started",
     link: "http://docs.api3.org",
-    image: "/images/icons/datafeed.svg",
+    image: "/images/icons/developers.svg",
   },
 
   {
@@ -36,7 +35,7 @@ const showcaseCards = ref([
     >
       <!-- @mouseover="ui.changeHeroImage(card)" -->
       <picture class="">
-        <NuxtImg :src="card.image" :alt="card.heading" />
+        <NuxtImg loading="lazy" :src="card.image" :alt="card.heading" />
       </picture>
       <text-content>
         <h2 class="firm-voice">

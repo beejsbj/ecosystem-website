@@ -154,7 +154,7 @@ const miscLinks = [
     <section class="footer-navigation">
       <inner-column>
         <picture class="site-logo">
-          <NuxtImg src="/images/logo-icon.svg" alt="API3 logo" />
+          <NuxtImg loading="lazy" src="/images/logo-full.svg" alt="API3 logo" />
         </picture>
 
         <section
@@ -202,7 +202,7 @@ const miscLinks = [
             :to="social.link"
             class="calm-voice"
           >
-            <SocialIcon :social="social.icon" fill="var(--gray)" />
+            <DynamicIcon :icon="social?.icon" />
           </NuxtLink>
         </nav>
         <p class="calm-voice">© 2023 API3 Ecosystem Foundation</p>
@@ -215,6 +215,15 @@ const miscLinks = [
 footer {
   padding: var(--space-2xl) 0;
   position: relative;
+  background: url("@/assets/images/background/footer-pattern.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    background: url("@/assets/images/background/footer-pattern-mobile.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
 
   inner-column {
     padding-left: var(--space-l);
@@ -234,14 +243,6 @@ nav {
 .footer-link {
   justify-self: start;
   position: relative;
-
-  .external-link {
-    position: absolute;
-    right: -11px;
-    top: 14px;
-    max-width: 8px;
-    opacity: 0.5;
-  }
 }
 
 .footer-navigation inner-column {
@@ -262,12 +263,11 @@ nav {
   }
 
   .site-logo {
-    width: 50px;
+    width: 200px;
+
     grid-column: 1/ -1;
-    //  align-self: end;
 
     @media (min-width: 768px) {
-      width: 100px;
       grid-column: unset;
       grid-row: 1/ -1;
     }
@@ -275,7 +275,6 @@ nav {
 
   h5 {
     font-size: var(--step-0);
-    //  font-weight: 700;
     margin-bottom: var(--space-s);
     text-transform: uppercase;
     @media (min-width: 1024px) {
@@ -320,7 +319,7 @@ section.other inner-column {
       gap: var(--space-xl);
     }
 
-    :deep(.social-icon) {
+    :deep(picture) {
       max-width: 25px;
     }
   }
@@ -328,7 +327,6 @@ section.other inner-column {
   p {
     color: var(--gray);
     @media (min-width: 1024px) {
-      // order: 1;
       grid-column: 1/-1;
     }
   }

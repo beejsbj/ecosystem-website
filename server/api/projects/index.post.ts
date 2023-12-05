@@ -2,7 +2,7 @@ import { Project } from "~/server/models/Project";
 import { imageUploadHandler } from "../../utils/imageUpload";
 import { authenticated } from "../../utils/authenticated";
 import { checkBuildStatus } from "~/server/services/build";
-import { ProjectType } from "~/server/types";
+import { type ProjectType } from "~/server/types";
 import slug from "slug";
 
 export default authenticated(
@@ -122,21 +122,21 @@ export default authenticated(
           slug: slug(payload.name),
         }).save();
 
-        // // project json will be stored with active status in pull request for review
-        // payload.status = "active";
-        // // verify build and create pr
-        // const buildResult = await checkBuildStatus(payload, createdProject.id);
+        // project json will be stored with active status in pull request for review
+        payload.status = "active";
+        // verify build and create pr
+        const buildResult = await checkBuildStatus(payload, createdProject.id);
 
-        // if (!buildResult.success) {
-        //   // remove project data from db when build failed
-        //   await Project.findByIdAndDelete(createdProject.id);
+        if (!buildResult.success) {
+          // remove project data from db when build failed
+          await Project.findByIdAndDelete(createdProject.id);
 
-        //   event.res.statusCode = 400;
-        //   return {
-        //     code: "BUILD_FAILED",
-        //     message: "Failed to build project!",
-        //   };
-        // }
+          event.res.statusCode = 400;
+          return {
+            code: "BUILD_FAILED",
+            message: "Failed to build project!",
+          };
+        }
 
         event.node.res.statusCode = 201;
         return {

@@ -45,24 +45,24 @@ const years = computed(() => {
 onMounted(() => {
   const pageLoad = gsap.timeline();
 
-  pageLoad.fromTo(
-    "dapp-filter",
-    {
-      delay: "0.5",
-      y: "10vw",
-      opacity: 0,
-      duration: 0,
-    },
-    {
-      y: "0vw",
-      opacity: 1,
-      duration: 0.5,
-      stagger: {
-        each: 0.15,
-        from: "start",
-      },
-    }
-  );
+  //   pageLoad.fromTo(
+  //     "dapp-filter",
+  //     {
+  //       delay: "0.5",
+  //       y: "10vw",
+  //       opacity: 0,
+  //       duration: 0,
+  //     },
+  //     {
+  //       y: "0vw",
+  //       opacity: 1,
+  //       duration: 0.5,
+  //       stagger: {
+  //         each: 0.15,
+  //         from: "start",
+  //       },
+  //     }
+  //   );
 });
 
 const handleFilter = (event) => {
@@ -95,6 +95,7 @@ const handleFilter = (event) => {
           v-if="ecosystem.stats?.chains?.length > defaultPillCount"
         >
           <img
+            loading="lazy"
             class="caret"
             :class="{ down: showAll.chains }"
             src="@/assets/images/interface/caret.svg"
@@ -131,11 +132,12 @@ const handleFilter = (event) => {
         <h4 class="calm-voice">Product</h4>
 
         <button
-          class="icon"
+          class="icon caret"
           @click="showAll.productTypes = !showAll.productTypes"
           v-if="productTypes?.length > defaultPillCount"
         >
           <img
+            loading="lazy"
             class="caret"
             :class="{ down: showAll.productTypes }"
             src="@/assets/images/interface/caret.svg"
@@ -171,11 +173,12 @@ const handleFilter = (event) => {
         <h4 class="calm-voice">Category</h4>
 
         <button
-          class="icon"
+          class="icon caret"
           @click="showAll.categories = !showAll.categories"
           v-if="categories?.length > defaultPillCount"
         >
           <img
+            loading="lazy"
             class="caret"
             :class="{ down: showAll.categories }"
             src="@/assets/images/interface/caret.svg"
@@ -211,11 +214,12 @@ const handleFilter = (event) => {
       <div class="filter-header">
         <h4 class="calm-voice">Year</h4>
         <button
-          class="icon"
+          class="icon caret"
           @click="showAll.years = !showAll.years"
           v-if="years?.length > defaultPillCount"
         >
           <img
+            loading="lazy"
             class="caret"
             :class="{ down: showAll.years }"
             src="@/assets/images/interface/caret.svg"

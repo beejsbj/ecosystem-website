@@ -22,7 +22,11 @@ const datePublished = computed(() => {
     <article-meta>
       <div class="author">
         <picture>
-          <img src="@/assets/images/icons/author.svg" alt="author icon" />
+          <img
+            loading="lazy"
+            src="@/assets/images/icons/author.svg"
+            alt="author icon"
+          />
         </picture>
         <p class="solid-voice">
           {{ article?.author?.name }}
@@ -31,6 +35,7 @@ const datePublished = computed(() => {
       <div class="date">
         <picture>
           <img
+            loading="lazy"
             src="@/assets/images/icons/calendar-icon.svg"
             alt="calendar icon"
           />
@@ -42,6 +47,7 @@ const datePublished = computed(() => {
       <div class="tag">
         <picture>
           <img
+            loading="lazy"
             src="@/assets/images/icons/bookmark-icon.svg"
             alt="bookmark icon"
           />

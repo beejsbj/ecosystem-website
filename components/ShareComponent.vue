@@ -43,7 +43,7 @@ const socialsToShare = ref([
       <li v-for="social in socialsToShare" :key="social.label">
         <a :href="social.url" :target="social.label">
           <picture>
-            <SocialIcon :social="social.label" fill="var(--green)" />
+            <DynamicIcon :icon="social.label" />
           </picture>
         </a>
       </li>
@@ -93,7 +93,7 @@ share-box {
     border-top: var(--border);
     border-bottom: var(--border);
 
-    picture {
+    :deep(picture) {
       max-width: 2rem;
     }
   }

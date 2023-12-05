@@ -8,6 +8,7 @@ const props = defineProps(["dapp"]);
   <SectionColumn v-if="dapp" class="banner">
     <picture>
       <NuxtImg
+        loading="lazy"
         :src="dapp.images.cover"
         src="/images/landscape.jpg"
         :alt="`Cover Image of ${dapp.name}`"

@@ -7,14 +7,14 @@ export default defineNuxtConfig({
       ssr: false,
       prerender: false,
     },
-    "/ecosystem":{
+    "/ecosystem": {
       ssr: false,
       prerender: false,
     },
-    "/articles":{
+    "/articles": {
       ssr: false,
       prerender: false,
-    }
+    },
   },
 
   //global default head metadata
@@ -43,6 +43,15 @@ export default defineNuxtConfig({
     "@formkit/themes/genesis",
     "floating-vue/dist/style.css",
   ],
+
+  postcss: {
+    plugins: {
+      "postcss-import": {},
+      "postcss-url": {},
+      cssnano: {},
+      autoprefixer: {},
+    },
+  },
 
   build: {
     transpile: ["gsap"],
@@ -81,6 +90,7 @@ export default defineNuxtConfig({
       "@nuxt/image",
       {
         format: ["webp"],
+        quality: 80,
       },
     ],
 

@@ -1,25 +1,5 @@
 <script setup>
-import { gsap } from "gsap";
 const props = defineProps(["heading", "voice", "innerClass"]);
-
-onMounted(() => {
-  const pageLoad = gsap.timeline();
-
-  pageLoad.fromTo(
-    ".page-title",
-    {
-      y: 50,
-      duration: 0,
-      delay: "0.5",
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power4.out",
-    }
-  );
-});
 </script>
 
 <template>
