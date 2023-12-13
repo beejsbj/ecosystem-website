@@ -23,6 +23,10 @@ inner-column.none {
   padding: unset;
 }
 
+inner-column.wide {
+  max-width: 1400px;
+}
+
 body.index main inner-column {
   /* max-width: 1600px; */
 }
