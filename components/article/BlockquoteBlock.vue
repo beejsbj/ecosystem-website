@@ -7,7 +7,7 @@ const props = defineProps(["quote", "source"]);
     <p>
       {{ quote }}
     </p>
-    <figcaption>—{{ source }}</figcaption>
+    <figcaption v-if="props.source">—{{ source }}</figcaption>
   </blockquote>
 </template>
 
