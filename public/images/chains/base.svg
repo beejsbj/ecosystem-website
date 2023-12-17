@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 401 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-11866.8,-17794.6)">
-        <g transform="matrix(0.237713,0,0,0.237713,25076.4,12855.9)">
-            <g transform="matrix(0.67308,0,0,0.67308,-55567.6,20778.1)">
-                <path d="M1247.8,2500C1939.4,2500 2500,1940.4 2500,1250C2500,559.6 1939.4,0 1247.8,0C591.7,0 53.5,503.8 0,1144.9L1655.1,1144.9L1655.1,1355.1L0,1355.1C53.5,1996.2 591.7,2500 1247.8,2500Z" style="fill:none;fill-rule:nonzero;stroke:rgb(74,231,191);stroke-width:6.25px;"/>
-            </g>
-        </g>
-    </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="11.9998" r="11.1111" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 23.1109C18.1365 23.1109 23.1111 18.1363 23.1111 11.9998C23.1111 5.86329 18.1365 0.888672 12 0.888672C5.8635 0.888672 0.888889 5.86329 0.888889 11.9998C0.888889 18.1363 5.8635 23.1109 12 23.1109ZM20.0219 12C20.0219 16.4183 16.4402 20 12.0219 20C7.82755 20 4.3871 16.7721 4.04916 12.6649H15.7997V11.3316H4.04944C4.38904 7.22607 7.82873 4 12.0219 4C16.4402 4 20.0219 7.58172 20.0219 12Z" fill="#0052FF"/>
 </svg>

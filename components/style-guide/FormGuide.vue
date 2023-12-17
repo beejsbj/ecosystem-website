@@ -96,7 +96,7 @@ const inputs = ref([
 <style scoped>
 ul {
   display: grid;
-  --gap: 3rem;
+  --gap: var(--space-xl);
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   @media (min-width: 768px) {

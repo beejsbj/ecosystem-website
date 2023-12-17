@@ -154,14 +154,16 @@ const miscLinks = [
     <section class="footer-navigation">
       <inner-column>
         <picture class="site-logo">
-          <LogoIcon />
+          <NuxtImg loading="lazy" src="/images/logo-full.svg" alt="API3 logo" />
         </picture>
+
         <section
           v-for="(footerMenu, index) in footerLinks"
           :key="index"
           class="footer-menu"
         >
           <h5 class="notice-voice">{{ footerMenu.title }}</h5>
+
           <nav>
             <NuxtLink
               v-for="(link, linkIndex) in footerMenu.links"
@@ -170,12 +172,7 @@ const miscLinks = [
               class="calm-voice text footer-link"
             >
               <span>{{ link.label }}</span>
-              <picture class="external-link" v-if="link.external">
-                <img
-                  src="@/assets/images/interface/diagonal-arrow.svg"
-                  alt=""
-                />
-              </picture>
+              <ExternalLink v-if="link.external" />
             </NuxtLink>
           </nav>
         </section>
@@ -194,9 +191,8 @@ const miscLinks = [
             <span>
               {{ link.label }}
             </span>
-            <picture class="external-link" v-if="link.external">
-              <img src="@/assets/images/interface/diagonal-arrow.svg" alt="" />
-            </picture>
+
+            <ExternalLink v-if="link.external" />
           </NuxtLink>
         </nav>
         <nav class="social-icons">
@@ -204,9 +200,9 @@ const miscLinks = [
             v-for="social in socials"
             :key="social.name"
             :to="social.link"
-            class="calm-voice social-icon"
+            class="calm-voice"
           >
-            <SocialIcon :social="social.icon" />
+            <DynamicIcon :icon="social?.icon" />
           </NuxtLink>
         </nav>
         <p class="calm-voice">© 2023 API3 Ecosystem Foundation</p>
@@ -217,28 +213,26 @@ const miscLinks = [
 
 <style scoped lang="scss">
 footer {
-  padding: 4rem 0;
+  padding: var(--space-2xl) 0;
   position: relative;
+  background: url("@/assets/images/background/footer-pattern.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
 
-  inner-column {
-    padding-left: 30px;
-    padding-right: 30px;
+  @media (max-width: 768px) {
+    background: url("@/assets/images/background/footer-pattern-mobile.svg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
   }
 
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     inset: 0;
-  //     background: var(--pattern-four);
-  //     background-repeat: no-repeat;
-  //     background-position: right;
-  //     z-index: -1;
-  //     opacity: 0.1;
-  //   }
+  inner-column {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+  }
 }
 .calm-voice {
   font-size: var(--step-0);
-  padding: 0.5rem 0;
+  padding: var(--space-2xs) 0;
   color: var(--ink);
 }
 
@@ -249,20 +243,12 @@ nav {
 .footer-link {
   justify-self: start;
   position: relative;
-
-  picture {
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 8px;
-  }
 }
 
 .footer-navigation inner-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: var(--space-xl);
   justify-content: space-between;
 
   @media (min-width: 768px) {
@@ -277,12 +263,11 @@ nav {
   }
 
   .site-logo {
-    width: 50px;
+    width: 200px;
+
     grid-column: 1/ -1;
-    //  align-self: end;
 
     @media (min-width: 768px) {
-      width: 100px;
       grid-column: unset;
       grid-row: 1/ -1;
     }
@@ -290,8 +275,7 @@ nav {
 
   h5 {
     font-size: var(--step-0);
-    //  font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-s);
     text-transform: uppercase;
     @media (min-width: 1024px) {
       font-size: var(--step--1);
@@ -300,51 +284,42 @@ nav {
 }
 
 section.other inner-column {
-  display: grid;
-  justify-items: center;
   text-align: center;
-  gap: 3rem;
+  gap: var(--space-l);
   border-top: var(--border);
 
-  @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
+  display: grid;
+
+  @media (min-width: 1264px) {
+    display: flex;
     justify-content: space-between;
-    text-align: left;
-    align-items: center;
+    flex-wrap: wrap;
   }
 
   .misc-links {
-    gap: 2rem;
+    column-gap: var(--space-l);
+    row-gap: var(--space-2xs);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-    @media (min-width: 768px) {
-      gap: 2rem;
-    }
-
-    @media (min-width: 1024px) {
-      // order: 2;
-    }
   }
 
   .social-icons {
-    justify-self: stretch;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
-    gap: 1rem;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-s);
     fill: var(--gray);
-    @media (min-width: 1024px) {
-      // order: 3;
-      justify-content: center;
-      gap: 3rem;
+    @media (min-width: 1264px) {
+      order: 3;
+      gap: var(--space-l);
+      flex-grow: 1;
+    }
+    @media (min-width: 1380px) {
+      gap: var(--space-xl);
     }
 
-    .social-icon {
+    :deep(picture) {
       max-width: 25px;
     }
   }
@@ -352,29 +327,7 @@ section.other inner-column {
   p {
     color: var(--gray);
     @media (min-width: 1024px) {
-      // order: 1;
       grid-column: 1/-1;
-    }
-  }
-}
-
-main.index {
-  footer {
-    .footer-navigation inner-column {
-      @media (min-width: 1024px) {
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 1fr;
-        picture {
-          grid-column: 1 / -1;
-        }
-      }
-    }
-    .other inner-column {
-      grid-template-columns: unset;
-      grid-template-rows: unset;
-      text-align: center;
-      justify-content: center;
-      align-content: center;
     }
   }
 }

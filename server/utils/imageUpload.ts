@@ -70,7 +70,7 @@ export const imageUploadHandler = (
       return { response };
     } catch (err) {
       console.log("upload error ", err);
-      event.res.statusCode = 500;
+      event.node.res.statusCode = 500;
       return {
         error: "Something went wrong at server!",
       };

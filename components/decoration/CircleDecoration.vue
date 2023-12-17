@@ -22,7 +22,7 @@
             cx="5878.2"
             cy="24436.1"
             r="16.842"
-            style="fill: none; stroke: var(--color-darker)"
+            style="fill: none; stroke: var(--green-darker)"
           />
         </g>
         <g transform="matrix(3.17662,4.83408e-34,0,3.17662,-23574.5,-52965.9)">
@@ -30,7 +30,7 @@
             cx="5878.2"
             cy="24436.1"
             r="16.842"
-            style="fill: none; stroke: var(--color-dark)"
+            style="fill: none; stroke: var(--green-dark)"
           />
         </g>
         <g transform="matrix(1.55862,2.37186e-34,0,1.55862,-14063.6,-13428.3)">
@@ -38,7 +38,7 @@
             cx="5878.2"
             cy="24436.1"
             r="16.842"
-            style="fill: none; stroke: var(--color)"
+            style="fill: none; stroke: var(--green)"
           />
         </g>
       </g>

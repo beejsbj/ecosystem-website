@@ -1,5 +1,5 @@
 # official Node runtime as a parent image
-FROM node:18.16.0 AS BUILD_IMAGE
+FROM --platform=linux/amd64 node:18 AS BUILD_IMAGE
 
 # base image
 ARG APP_PATH=/ecosystem-app
@@ -9,7 +9,7 @@ COPY package.json ./
 RUN yarn
 
 # # final image 
-FROM node:18.16.0 AS APP_IMAGE
+FROM --platform=linux/amd64 node:18 AS APP_IMAGE
 ARG APP_PATH=/ecosystem-app
 WORKDIR ${APP_PATH}
 RUN mkdir -p $APP_PATH/node_modules
@@ -28,7 +28,7 @@ RUN git config --global user.email "aamiralam1991@gmail.com" && \
 
 ## clone dapp registory repo
 
-RUN git clone "https://github.com/AamirAlam/dapp-registry.git"
+RUN git clone "https://github.com/api3dao/dapp-registry.git"
 ARG APP_PATH=/ecosystem-app/dapp-registry
 WORKDIR ${APP_PATH}
 RUN yarn

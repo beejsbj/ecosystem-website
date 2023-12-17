@@ -1,26 +1,36 @@
 <script setup>
+import { CHAINS } from "@api3/chains";
+
 const ecosystem = useEcosystemStore();
 </script>
 
 <template>
-  <PageTitle heading="test ground" />
-  <SectionColumn>
-    <GithubGist
-      gistUrl="https://gist.github.com/vanshwassan/0b50c7b36b1e7ebed85549754578ed79"
-    />
-  </SectionColumn>
+  <main>
+    <PageTitle heading="test ground" />
+    <SectionColumn>
+      <ul>
+        <li v-for="chain in CHAINS">
+          <ChainIcon :chain="chain.name" />
+          <p class="micro-voice">
+            {{ chain.name }}
+          </p>
+        </li>
+      </ul>
+    </SectionColumn>
+  </main>
 </template>
 
 <style scoped>
 ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: var(--space-m);
 }
 
-.pallete {
-  width: 100%;
-  aspect-ratio: 1 /1;
+div {
+  background: var(--green);
+  aspect-ratio: 1;
+  width: var(--space);
 }
 </style>
 

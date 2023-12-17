@@ -13,9 +13,9 @@ const props = defineProps(["quote", "source"]);
 
 <style scoped lang="scss">
 blockquote {
-  margin: 2rem 0;
+  margin: var(--space-l) 0;
 
-  padding: 4rem;
+  padding: var(--space-2xl);
   background: var(--gradient-dark);
   display: block;
   max-width: 70ch;
@@ -31,8 +31,8 @@ blockquote {
     font-style: italic;
   }
   figcaption {
-    margin-top: 1rem;
-    color: var(--color);
+    margin-top: var(--space-s);
+    color: var(--green);
     text-align: right;
     font-style: normal;
   }
@@ -43,7 +43,7 @@ blockquote {
     top: 1rem;
     left: 1rem;
     font-size: 10rem;
-    color: var(--highlight);
+    color: var(--violet);
     z-index: 1;
     opacity: 0.5;
   }

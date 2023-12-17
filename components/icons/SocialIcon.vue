@@ -10,10 +10,11 @@ const dynamicComponent = defineAsyncComponent(() =>
 </script>
 
 <template>
-  <Component
-    :is="dynamicComponent"
-    :style="`
-   ${fill ? `fill: ${fill};` : 'fill: var(--gray);'}
+  <picture class="social-icon" :class="social">
+    <Component
+      :is="dynamicComponent"
+      :style="`
+   ${fill ? `fill: ${fill};` : 'fill: var(--ink);'}
 	${
     stroke
       ? `stroke: ${stroke}; stroke-width: var(--line-width);`
@@ -21,5 +22,6 @@ const dynamicComponent = defineAsyncComponent(() =>
   }
 
   `"
-  />
+    />
+  </picture>
 </template>

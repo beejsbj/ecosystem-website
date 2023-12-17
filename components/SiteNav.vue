@@ -2,66 +2,48 @@
 
 <template>
   <nav>
-    <NuxtLink to="mailto:ecosystem@api3.org" class="icon social-icon">
-      <SocialIcon social="Email" />
-    </NuxtLink>
-
-    <NuxtLink
-      to="https://discord.com/invite/qnRrcfnm5W"
-      class="icon social-icon"
-    >
-      <SocialIcon social="Discord" />
-    </NuxtLink>
-
-    <NuxtLink class="text" to="/">Home</NuxtLink>
-    <NuxtLink class="text" to="/ecosystem">Ecosystem</NuxtLink>
-    <NuxtLink class="text" to="/articles">Articles</NuxtLink>
-    <!-- <NuxtLink class="text" to="/guild">Guild</NuxtLink> -->
+    <NuxtLink class="text hover-underline" to="/ecosystem">Ecosystem</NuxtLink>
+    <NuxtLink class="text hover-underline" to="/articles">Articles</NuxtLink>
+    <NuxtLink class="text" to="/guild">Guild</NuxtLink>
     <div class="actions">
-      <!-- <ConnectButton /> -->
+      <NuxtLink to="https://discord.com/invite/qnRrcfnm5W" class="icon">
+        <DynamicIcon icon="Discord-stroke" />
+      </NuxtLink>
     </div>
   </nav>
 </template>
 
 <style lang="scss" scoped>
-.social-icon {
-  width: 35px;
-  padding: 0.5rem;
+.icon :deep(picture) {
+  max-width: 24px;
   border: unset;
-  margin-right: 1rem;
 }
 
-:deep(.loud-button) {
-  padding: 0.5rem 2rem;
-  @media (min-width: 768px) {
-    margin-left: 2rem;
-  }
-  @media (max-width: 768px) {
-    margin-top: 2rem;
-  }
+:deep(.button) {
+  padding: var(--space-2xs) var(--space-l);
+
+  margin-left: var(--space-l);
 }
 nav:not(.panel-menu) {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 1rem;
+  gap: var(--space-s);
 
   a {
     color: var(--ink);
   }
 
   .button {
-    margin-left: 2rem;
+    margin-left: var(--space-l);
   }
 }
 
 nav.panel-menu {
   display: grid;
 
-  //   align-items: end;
-  //   justify-content: start;
-  gap: 1.5em;
-  padding: 2rem;
+  gap: var(--space-m);
+  padding: var(--space-l);
 
   a {
     color: var(--ink);
@@ -69,7 +51,6 @@ nav.panel-menu {
 
     &.button {
       justify-self: center;
-      // align-self: center;
       min-width: 200px;
     }
   }

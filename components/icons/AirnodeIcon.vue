@@ -24,7 +24,7 @@
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: var(--color);
+                stroke: var(--green);
                 stroke-linejoin: miter;
                 stroke-miterlimit: 10;
               "
@@ -37,7 +37,7 @@
               cx="5878.2"
               cy="24436.1"
               r="16.842"
-              style="fill: none; stroke: var(--color-darker)"
+              style="fill: none; stroke: var(--green-darker)"
             />
           </g>
           <g
@@ -47,7 +47,7 @@
               cx="5878.2"
               cy="24436.1"
               r="16.842"
-              style="fill: none; stroke: var(--color-dark)"
+              style="fill: none; stroke: var(--green-dark)"
             />
           </g>
           <g
@@ -57,7 +57,7 @@
               cx="5878.2"
               cy="24436.1"
               r="16.842"
-              style="fill: none; stroke: var(--color)"
+              style="fill: none; stroke: var(--green)"
             />
           </g>
         </g>

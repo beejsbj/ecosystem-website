@@ -153,7 +153,7 @@ export async function fetchProxyInformation(address, chainId, feedName) {
       if (dapiInfo.dapi.beaconSetId) {
         possibleDatafeedIds.push(dapiInfo.dapi.beaconSetId);
         const beaconIds = dapiInfo.dapi.beaconSet.beacons.map(
-          (beacon) => beacon.beaconId
+          (beacon) => beacon.id
         );
         possibleDatafeedIds = possibleDatafeedIds.concat(beaconIds);
       }

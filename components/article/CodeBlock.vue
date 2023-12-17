@@ -17,8 +17,8 @@ function copyCode(text) {
 
 <style scoped lang="scss">
 code {
-  margin: 2rem 0;
-  padding: 2rem;
+  margin: var(--space-l) 0;
+  padding: var(--space-l);
   background: var(--gradient-dark);
   border-radius: var(--corners);
   display: block;

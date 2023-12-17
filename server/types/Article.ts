@@ -13,6 +13,8 @@ const ArticleSchema = z.object({
   author: AuthorSchema,
   content: z.string().nonempty("Content is required"),
   cover: z.string().optional(),
+  views: z.number().optional(),
+  upvotes: z.number().optional(),
   category: z.string().nonempty("Category is required"),
   created_at: z.date().default(() => new Date()),
 });

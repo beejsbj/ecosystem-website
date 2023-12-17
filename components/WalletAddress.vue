@@ -1,13 +1,3 @@
-<template>
-  <div
-    @click="copyToClipboard"
-    class="short-wallet"
-    v-tooltip="showCopyTooltip ? 'Copied!' : 'Copy'"
-  >
-    {{ shortWallet }}
-  </div>
-</template>
-
 <script>
 export default {
   props: {
@@ -44,10 +34,43 @@ export default {
 };
 </script>
 
-<style>
+<template>
+  <button
+    class="short-wallet"
+    v-tooltip="showCopyTooltip ? 'Copied!' : 'Copy'"
+    @click="copyToClipboard"
+  >
+    <p class="whisper-voice">
+      {{ shortWallet }}
+    </p>
+    <div class="icon copy">
+      <picture>
+        <img
+          loading="lazy"
+          src="@/assets/images/interface/copy.svg"
+          alt="Copy icon"
+        />
+      </picture>
+    </div>
+  </button>
+</template>
+
+<style scoped>
 .short-wallet {
   /* Add your desired styles for the short wallet address here */
   position: relative; /* Make sure the container is relative for positioning the tooltip */
   cursor: pointer; /* Show pointer cursor when hovering */
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+.whisper-voice {
+  padding: 0;
+  color: var(--green);
+}
+
+.copy picture {
+  max-width: var(--space-s);
 }
 </style>

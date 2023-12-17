@@ -48,17 +48,14 @@ export const useSiwe = () => {
         };
       }
 
-      const signatureVerification = await $fetch("/api/auth", {
-        method: "POST",
-        body: {
-          signature: signature,
-          address: web3Store.state.account,
-          message: JSON.stringify(messageToSign),
-          nonce: nonce,
-        },
-      });
+      const verificationPayload = {
+        signature: signature,
+        address: web3Store.state.account,
+        message: JSON.stringify(messageToSign),
+        nonce: nonce,
+      };
 
-      return { success: true, data: signatureVerification };
+      return { success: true, data: verificationPayload };
     } catch (error) {
       console.log("verificationStatus test: signature error", {
         error,

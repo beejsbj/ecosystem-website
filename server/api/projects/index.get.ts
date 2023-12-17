@@ -104,7 +104,7 @@ export default defineEventHandler(async (event) => {
 
     return { projects, total: totalProjects };
   } catch (err: any) {
-    event.res.statusCode = 500;
+    event.node.res.statusCode = 500;
     return {
       code: "ERROR",
       message: "Something went wrong.",

@@ -1,9 +1,40 @@
 <script setup>
-import { useBlogStore } from "@/stores/blog";
-const props = defineProps(["layout", "cardCount"]);
+import { useBlogStore } from "~/stores/blog";
+const props = defineProps([
+  "layout",
+  "cardCount",
+  "isRecentSort",
+  "isPopularSort",
+  "isTrendingSort",
+  "isFeaturedSort",
+]);
 
 const blog = useBlogStore();
 const ui = useInterfaceStore();
+
+const sorted = computed(() => {
+  if (blog.list && props.isRecentSort) {
+    return blog.list.sort((a, b) => {
+      return new Date(b.created_at) - new Date(a.created_at);
+    });
+  }
+  if (blog.list && props.isPopularSort) {
+    return blog.list.sort((a, b) => {
+      return b.views ?? 0 - a?.views ?? 0;
+    });
+  }
+  if (blog.list && props.isTrendingSort) {
+    return blog.list.sort((a, b) => {
+      return b.upvotes ?? 0 - a.upvotes ?? 0;
+    });
+  }
+  if (blog.list && props.isFeaturedSort) {
+    return blog.list.sort((a, b) => {
+      return b.isFeatured ?? false - a.isFeatured ?? false;
+    });
+  }
+  return blog.list;
+});
 
 const layouts = [
   ["big-card"],
@@ -31,22 +62,17 @@ function cardType(index, layout = layoutIndex.value, article) {
 function handleLoadMore() {
   if (blog.list.length < blog.totalArticles) {
     blog.filterQuery.page += 1;
-    blog.loadArticles(blog.filterQuery.page);
   }
 }
-
-onMounted(() => {
-  blog.loadArticles(1);
-});
 </script>
 
 <template>
   <ul class="article-grid" v-auto-animate>
-    <template v-for="(article, index) in blog.list">
+    <template v-for="(article, index) in sorted">
       <ArticleCard
         :article="article"
         :class="cardType(index, layouts[layoutIndex], article)"
-        v-if="index < (props.cardCount ?? blog.list.length)"
+        v-if="index < (props.cardCount ?? sorted.length)"
       />
     </template>
     <button
@@ -64,7 +90,7 @@ onMounted(() => {
 .article-grid {
   display: grid;
 
-  gap: 2rem;
+  gap: var(--space-l);
   align-items: start;
   position: relative;
 

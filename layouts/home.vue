@@ -10,5 +10,5 @@ const route = useRoute();
     </main>
   </Transition>
 
-  <BlobAnimation />
+  <!-- <BlobAnimation /> -->
 </template>

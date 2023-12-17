@@ -20,7 +20,7 @@ const route = useRoute();
 <style lang="scss" scoped>
 :deep(inner-column) {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-s);
   height: 100vh;
   align-content: center;
 

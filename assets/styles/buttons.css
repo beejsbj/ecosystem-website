@@ -1,6 +1,6 @@
 div.actions {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-s);
 }
 
 a {
@@ -13,42 +13,48 @@ button,
 a {
   background: none;
   cursor: pointer;
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: var(--weight-medium);
 }
 
 .button {
+  padding: 1em 2em;
   position: relative;
 
-  padding: 0.5em 2em;
+  user-select: none;
   text-align: center;
-  border: var(--border);
+  white-space: nowrap;
+
+  background: var(--blue);
+
+  outline: unset;
   border-radius: var(--corners);
 }
 
-.button::before {
-  content: "";
-  position: absolute;
-  bottom: -0.5em;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: var(--line-width);
-  background-color: var(--gray);
-  transition: 0.2s;
-}
-
 .button:is(:hover, :focus-visible) {
-  outline-color: var(--highlight);
-  /* border-color: var(--highlight); */
-  /* box-shadow: var(--shadow-lines); */
-}
-
-.button:is(:hover, :focus-visible)::before {
-  width: 100%;
-  background: var(--gradient-color);
+  background: var(--blue-light);
 }
 
 .button:active {
-  outline: unset;
+  background: var(--blue-dark);
+}
+
+/* outline button / seconadry button */
+
+.button.outline {
+  background: none;
+  border: var(--border-light);
+}
+
+.button.outline:is(:hover, :focus-visible) {
+  color: var(--blue-lighter);
+  border-color: var(--blue-lighter);
+  filter: saturate(2);
+}
+.button.outline:active {
+  color: var(--blue-light);
+  border-color: var(--blue-light);
 }
 
 /* Text buttons and acnhors  */
@@ -56,8 +62,31 @@ a {
   padding: 0.5em 1em;
   background: none;
   border: none;
+  color: var(--white);
+  --link-hover: var(--green-lighter);
+  --link-active: var(--green);
+}
+.text:is(:hover, :focus-visible) {
+  color: var(--link-hover) !important;
+}
+.text:active {
+  color: var(--link-active) !important;
+}
 
-  color: var(--color);
+.text.green {
+  color: var(--green);
+  --link-hover: var(--green-lighter);
+  --link-active: var(--green-dark);
+}
+.text.violet {
+  color: var(--violet);
+  --link-hover: var(--violet-light);
+  --link-active: var(--violet-dark);
+}
+.text.blue {
+  color: var(--blue-lighter);
+  --link-hover: var(--blue-light);
+  --link-active: var(--blue);
 }
 
 /* Icons */
@@ -65,64 +94,34 @@ a {
 :is(button, a).icon {
   padding: 0.5em;
   background: none;
-  border: var(--border);
+  /* border: var(--border); */
   border-radius: 50%;
   aspect-ratio: 1 / 1;
+  max-width: var(--space-l);
 }
 
-:is(button, a).icon:active::before {
-  display: none;
+img.caret {
+  transition: 0.2s ease-in-out;
 }
 
-:is(button, a).icon:active {
-  box-shadow: var(--shadow-lines);
+img.caret.up {
+  transform: rotate(0deg);
 }
-
-/* filled button */
-
-.button.filled {
-  background: var(--gradient-color);
-  color: var(--paper);
-  padding: 1em 2em;
-  white-space: nowrap;
-  border: unset;
+img.caret.down {
+  transform: rotate(180deg);
 }
-
-/* Loud button */
-
-.loud-button {
-  position: relative;
-  padding: 1em 2em;
-  cursor: pointer;
-  text-align: center;
-  background: var(--paper);
-  white-space: nowrap;
+img.caret.left {
+  transform: rotate(90deg);
 }
-
-.loud-button::before {
-  content: "";
-  position: absolute;
-  inset: calc(-1 * var(--line-width));
-  background: var(--gradient-color);
-  z-index: -1;
-  transition: 0.1s;
-}
-
-.loud-button:is(:hover, :focus-visible)::before {
-  box-shadow: var(--shadow-lines);
-}
-html:has(.loud-button:active) {
-  --shadow-line-gap: 10px;
-}
-.loud-button:active::before {
-  transition: 0.1s;
+img.caret.right {
+  transform: rotate(-90deg);
 }
 
 /* diabled buttons */
 
 button:disabled,
-a.button.disabled,
-button.button.disabled {
+a.disabled,
+button.disabled {
   filter: saturate(0) brightness(0.4);
   cursor: not-allowed;
   pointer-events: none;

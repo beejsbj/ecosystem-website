@@ -25,7 +25,7 @@ const props = defineProps(["toc", "title"]);
 aside {
   grid-row: 2 / 10;
   grid-column: 1 / -1;
-  margin-bottom: 4rem;
+  margin-bottom: var(--space-2xl);
 
   @media (min-width: 768px) {
     grid-column: 1 / 3;
@@ -35,12 +35,12 @@ aside {
 }
 
 h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-m);
 }
 
 .toc-list {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-s);
   justify-content: start;
 
   a {

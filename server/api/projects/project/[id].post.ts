@@ -9,7 +9,7 @@ export default authenticated(
       const projectId = event.context?.params?.id;
 
       if (!mongoose.isValidObjectId(projectId)) {
-        event.res.statusCode = 400;
+        event.node.res.statusCode = 400;
         return {
           code: "INVALID_ID",
           message: "Invalid project Id",
@@ -23,7 +23,7 @@ export default authenticated(
       });
 
       if (existingUpvote?.id) {
-        event.res.statusCode = 400;
+        event.node.res.statusCode = 400;
         return {
           code: "INVALID_REQ",
           message: "Already upvoted",
@@ -37,20 +37,20 @@ export default authenticated(
       });
 
       if (!update?.id) {
-        event.res.statusCode = 400;
+        event.node.res.statusCode = 400;
         return {
           code: "ERROR",
           message: "Failed to update upvote!",
         };
       }
-      event.res.statusCode = 201;
+      event.node.res.statusCode = 201;
       return {
         code: "OK",
         message: "Upvote success!",
       };
     } catch (err: any) {
       console.log("upvote error ", err);
-      event.res.statusCode = 500;
+      event.node.res.statusCode = 500;
       return {
         code: "ERROR",
         message: "Failed to perform upvote",

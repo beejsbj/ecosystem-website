@@ -17,43 +17,48 @@ export const useBlogStore = defineStore("blog", () => {
   const articlesList = ref([]);
   const totalArticles = ref(0);
 
-  async function loadArticles(page) {
-    let url = baseServerUrl.value + `?page=${page}`;
-    const response = await fetch(url);
-    const data = await response.json();
+  const serverURL = computed(() => {
+    let url = baseServerUrl.value + `?page=${filterQuery.value.page}`;
 
-    totalArticles.value = data?.total;
+    return url;
+  });
 
-    if (page === 1) {
-      articlesList.value = data.articles;
+  const { data, error: listError } = useFetch(() => serverURL.value, {
+    // key: `ecosystem-list-${filterQuery.value.page}`,
+    onRequestError({ request, options, error }) {
+      console.log("fetch articles error", error);
+    },
+    onRequest({ request, options }) {
+      console.log("fetch articles");
+    },
+  });
+
+  console.log("blog data  ", data);
+
+  watch([filterQuery, data], ([newQuery, newData], [oldQuery, prevData]) => {
+    console.log("blog store ", { newQuery, newData });
+    if (!newData) return;
+    totalArticles.value = newData.total;
+    if (newQuery.page === 1) {
+      articlesList.value = newData.articles;
     } else {
-      articlesList.value = [...articlesList.value, ...data.articles];
+      articlesList.value = [...articlesList.value, ...newData.articles];
     }
 
     if (
-      data.articles?.length < 10 ||
-      data?.articles?.length === totalArticles.value
+      newData.articles?.length < 10 ||
+      newData.articles?.length === totalArticles.value
     ) {
       hasMoreItems.value = false;
     } else {
       hasMoreItems.value = true;
-    }
-  }
-
-  const currentArticle = computed(() => {
-    if (route.params.detail) {
-      return list.value.find(
-        (article) => slug(article.title) === route.params.detail
-      );
     }
   });
 
   return {
     list: articlesList,
     totalArticles,
-    currentArticle,
     hasMoreItems: hasMoreItems,
     filterQuery,
-    loadArticles,
   };
 });

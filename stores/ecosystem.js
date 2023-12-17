@@ -8,10 +8,10 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
   const baseServerUrl = ref("/api/projects/");
   const filterQuery = ref({
     searchKey: "",
-    chains: [],
-    categories: [],
-    productTypes: [],
-    years: [],
+    chains: {},
+    categories: {},
+    productTypes: {},
+    years: {},
     page: 1,
   });
   const hasMoreItems = ref(true);
@@ -21,25 +21,30 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
   const serverURL = computed(() => {
     let url = baseServerUrl.value + `?page=${filterQuery.value.page}`;
 
-    if (filterQuery.value.chains.length > 0) {
-      url += `&chains=${filterQuery.value.chains.join(",")}`;
-    }
+    const chainsString = Object.keys(filterQuery.value.chains)
+      .filter((key) => filterQuery.value.chains[key])
+      .join(",");
 
-    if (filterQuery.value.categories.length > 0) {
-      url += `&categories=${filterQuery.value.categories.join(",")}`;
-    }
+    const categoriesString = Object.keys(filterQuery.value.categories)
+      .filter((key) => filterQuery.value.categories[key])
+      .join(",");
 
-    if (filterQuery.value.productTypes.length > 0) {
-      url += `&productTypes=${filterQuery.value.productTypes.join(",")}`;
-    }
+    const productTypesString = Object.keys(filterQuery.value.productTypes)
+      .filter((key) => filterQuery.value.productTypes[key])
+      .join(",");
 
-    if (filterQuery.value.searchKey !== "") {
-      url += `&searchKey=${filterQuery.value.searchKey}`;
-    }
+    const yearsString = Object.keys(filterQuery.value.years)
+      .filter((key) => filterQuery.value.years[key])
+      .join(",");
 
-    if (filterQuery.value.years.length > 0) {
-      url += `&years=${filterQuery.value.years.join(",")}`;
-    }
+    url += filterQuery.value.searchKey
+      ? `&search=${filterQuery.value.searchKey}`
+      : "";
+
+    url += chainsString ? `&chains=${chainsString}` : "";
+    url += categoriesString ? `&categories=${categoriesString}` : "";
+    url += productTypesString ? `&productTypes=${productTypesString}` : "";
+    url += yearsString ? `&years=${yearsString}` : "";
 
     return url;
   });
@@ -57,11 +62,19 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
   const { data, error: listError } = useFetch(
     () => debouncedSearchQuery.value,
     {
-      key: `ecosystem-list-${filterQuery.value.page}`,
+      // key: `ecosystem-list-${filterQuery.value.page}`,
+      onRequestError({ request, options, error }) {
+        console.log("fetch test error", error);
+      },
+      onRequest({ request, options }) {
+        console.log("fetch test request");
+      },
     }
   );
 
   watch([filterQuery, data], ([newQuery, newData], [oldQuery, prevData]) => {
+    if (!newData) return;
+
     totalProjects.value = newData.total;
     if (newQuery.page === 1) {
       projectList.value = newData.projects;
@@ -77,6 +90,24 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
     } else {
       hasMoreItems.value = true;
     }
+  });
+
+  const isFilterApplied = computed(() => {
+    return (
+      Object.keys(filterQuery.value.chains).some(
+        (key) => filterQuery.value.chains[key]
+      ) ||
+      Object.keys(filterQuery.value.categories).some(
+        (key) => filterQuery.value.categories[key]
+      ) ||
+      Object.keys(filterQuery.value.productTypes).some(
+        (key) => filterQuery.value.productTypes[key]
+      ) ||
+      Object.keys(filterQuery.value.years).some(
+        (key) => filterQuery.value.years[key]
+      ) ||
+      filterQuery.value.searchKey
+    );
   });
 
   //stats
@@ -132,6 +163,17 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
     return chain ? chain.name : chainId;
   };
 
+  function clearFilters() {
+    filterQuery.value = {
+      searchKey: "",
+      chains: {},
+      categories: {},
+      productTypes: {},
+      years: {},
+      page: 1,
+    };
+  }
+
   return {
     list: projectList,
     totalProjects,
@@ -144,5 +186,7 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
     productTypeToLabel,
     filterQuery,
     chainNames,
+    clearFilters,
+    isFilterApplied,
   };
 });

@@ -43,7 +43,6 @@ onMounted(() => {
       "dapp-card",
       {
         y: "10vw",
-        opacity: 0,
         duration: 0,
         delay: "0.5",
       },
@@ -82,12 +81,9 @@ onMounted(() => {
 <style scoped>
 .dapp-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-l);
   position: relative;
-  opacity: 0;
-  /* overflow: auto; */
 }
 
 .show-more {

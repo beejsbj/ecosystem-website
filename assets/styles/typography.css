@@ -4,20 +4,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .booming-voice {
+  --font-size: var(--step-4);
   font-family: var(--font);
 
-  font-size: var(--step-4);
-  font-weight: var(--weight-semibold);
-  /* line-height: 2.875rem; */
+  font-size: var(--font-size);
+  font-weight: var(--weight-heavy);
+  line-height: calc(var(--font-size) * 1.2);
   letter-spacing: -0.03em;
 }
 
 .loud-voice {
+  --font-size: var(--step-3);
   font-family: var(--font);
 
-  font-size: var(--step-3);
-  font-weight: var(--weight-semibold);
+  font-size: var(--font-size);
+  font-weight: var(--weight-heavy);
   letter-spacing: -0.02em;
+  line-height: calc(var(--font-size) * 1.2);
 }
 
 @media (min-width: 600px) {
@@ -29,10 +32,11 @@
 
 .attention-voice,
 article.body :is(h2, h3) a {
+  --font-size: var(--step-2);
   font-family: var(--font);
-  font-size: var(--step-2);
+  font-size: var(--font-size);
   font-weight: var(--weight-medium);
-  line-height: 1.1;
+  line-height: calc(var(--font-size) * 1.2);
 }
 article.body h2 a {
   font-size: var(--step-2);
@@ -48,15 +52,21 @@ article.body h2 a {
 .firm-voice {
   font-family: var(--font);
   font-size: var(--step-1);
-  line-height: 1.6;
-  font-weight: var(--weight-semibold);
+  line-height: 1.2;
+  font-weight: var(--weight-heavy);
+}
+.firm-voice-smaller {
+  font-family: var(--font);
+  font-size: calc((var(--step-1) + var(--step-0)) / 2);
+  line-height: 1.2;
+  font-weight: var(--weight-heavy);
 }
 
 .teaser-voice {
   font-family: var(--font);
   font-size: var(--step-0);
   line-height: 1.6;
-  color: var(--color);
+  color: var(--green);
   font-weight: var(--weight-light);
   text-transform: uppercase;
 }
@@ -64,8 +74,9 @@ article.body h2 a {
 .solid-voice {
   font-family: var(--font);
   font-size: var(--step-0);
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-heavy);
   line-height: 1.6;
+  letter-spacing: 0em;
 }
 
 .calm-voice,
@@ -82,7 +93,7 @@ button {
 }
 
 :is(li, p) a {
-  color: var(--color);
+  color: var(--green);
   /* text-decoration: underline; */
   display: inline;
   font-size: inherit;
@@ -93,7 +104,7 @@ em {
 }
 
 strong {
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-heavy);
 }
 
 .whisper-voice {
@@ -102,7 +113,7 @@ strong {
   font-size: var(--step--1);
   /* opacity: 0.8; */
   font-weight: var(--weight-light);
-  color: var(--gray-light);
+  color: var(--gray-lighter);
   letter-spacing: 0.08em;
 }
 
@@ -121,8 +132,12 @@ p + p {
   margin-top: 0.5em;
 }
 
-h2 + p {
-  margin-top: 1px;
+:is(h1, h2) + p {
+  margin-top: 1em;
+}
+
+h3 + p {
+  margin-top: 0.75em;
 }
 
 code {
@@ -132,11 +147,19 @@ code {
   border: unset;
 }
 
+.color-success {
+  color: var(--success);
+}
+
+.color-error {
+  color: var(--warning);
+}
+
 .validation-warn {
   color: var(--warning);
 }
 
 .highlight {
-  background-color: var(--highlight);
+  background-color: var(--violet);
   color: var(--ink);
 }

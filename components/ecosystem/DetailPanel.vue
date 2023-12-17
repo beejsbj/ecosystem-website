@@ -23,7 +23,7 @@ const handleUpvote = async () => {
   }
 
   loading.value = true;
-  const { success: verificationSuccess, data: verificationData } =
+  const { success: verificationSuccess, data: verificationPayload } =
     await verifyWallet();
 
   if (!verificationSuccess) {
@@ -38,7 +38,7 @@ const handleUpvote = async () => {
   const submitResult = await submitUpvote(
     props.dapp?._id,
     payload,
-    verificationData?.token
+    verificationPayload
   );
   if (submitResult.success) {
     upvotes.value += 1;
@@ -54,37 +54,40 @@ onMounted(() => {
 
 <template>
   <aside class="panel">
-    <header class="panel-header">
-      <picture class="logo">
-        <img
-          :src="dapp?.images?.logo"
-          src="@/assets/images/background/square.jpg"
-          alt=""
-        />
-      </picture>
-      <h2 class="teaser-voice">
-        {{ dapp.tagline }}
-      </h2>
-    </header>
     <article class="rows">
-      <!-- <div class="row status">
-        <p>Status</p>
-        <p>{{ dapp.status ? "Live" : "Beta" }}</p>
-      </div> -->
-
       <div class="row chain">
-        <p>Chain</p>
+        <p>Chains</p>
         <ul>
-          <li v-for="chain in dapp.chains" :key="chain.id">
+          <li v-for="chain in dapp?.chains" :key="chain.id">
             <!-- {{ chain }} -->
-            <picture class="chain">
-              <ChainIcon
-                :chain="ecosystem.chainNames(chain)"
-                fill="var(--color)"
-                stroke="var(--paper)"
-                strokeWidth="var(--line-width)"
-              />
-            </picture>
+            <ChainIcon
+              :chain="ecosystem.chainNames(chain)"
+              fill="var(--green)"
+              stroke="var(--paper)"
+              strokeWidth="var(--line-width)"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="row product-list">
+        <p>Product</p>
+        <ul>
+          <li>
+            <DynamicIcon :icon="dapp?.productType" />
+            {{ ecosystem?.productTypeToLabel?.[dapp?.productType] }}
+          </li>
+        </ul>
+      </div>
+      <div class="row category-list">
+        <p>Category</p>
+        <ul>
+          <li
+            v-for="category in dapp?.categories"
+            :key="category"
+            class="whisper-voice"
+          >
+            <!-- <DynamicIcon :icon="category" /> -->
+            {{ ecosystem.categoryToLabel?.[category] }}
           </li>
         </ul>
       </div>
@@ -93,82 +96,21 @@ onMounted(() => {
         <p>Year</p>
         <p>{{ dapp.year }}</p>
       </div>
-
-      <div class="row category-list">
-        <p>Category</p>
-        <ul>
-          <li v-for="category in dapp.categories" :key="category">
-            <DynamicIcon :icon="category" />
-            {{ ecosystem.categoryToLabel?.[category] }}
-          </li>
-        </ul>
-      </div>
-
-      <div class="row product-list">
-        <p>Product</p>
-        <ul>
-          <li>
-            <DynamicIcon :icon="dapp.productType" />
-            {{ ecosystem?.productTypeToLabel?.[dapp.productType] }}
-          </li>
-        </ul>
-      </div>
-
-      <div class="row socials">
-        <p>Socials</p>
-        <ul>
-          <li v-for="social in dapp.links.socials" :key="social.id">
-            <a :href="social.url" :target="social.name">
-              <picture>
-                <SocialIcon :social="social.label" />
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </div>
     </article>
-
-    <div class="actions">
-      <NuxtLink
-        :to="dapp.links?.website"
-        :target="`${dapp.name}-website`"
-        class="button"
-      >
-        Website
-      </NuxtLink>
-      <!-- Launch dapp -->
-      <NuxtLink
-        :to="dapp.links.dapp"
-        :target="`${dapp?.name}-app`"
-        class="button"
-        >Launch</NuxtLink
-      >
-      <button class="button" :disabled="loading" @click="handleUpvote">
-        <span v-if="!loading"> Upvote ({{ upvotes }}) </span>
-        <span v-else> Upvoting... </span>
-      </button>
-
-      <button class="button share-button" @click="handleShare">Share</button>
-
-      <ModalSlot
-        :showModal="showShareBox"
-        @toggle="showShareBox = !showShareBox"
-      >
-        <ShareComponent :dappLinks="dapp.links" />
-      </ModalSlot>
-    </div>
   </aside>
 </template>
 <style lang="scss" scoped>
 aside {
   display: grid;
-  grid-column: 1 / 1;
-  gap: 3rem;
-
+  gap: var(--space-2xl);
+  @media (min-width: 768px) {
+    grid-row: 2 / span 1;
+    grid-column: 2;
+  }
   .panel-header {
     display: grid;
     justify-items: center;
-    gap: 1rem;
+    gap: var(--space-s);
 
     h2 {
       text-align: center;
@@ -178,19 +120,46 @@ aside {
   div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 1rem 0;
-    align-items: center;
+    gap: var(--space-l);
+    padding: var(--space-s) 0;
   }
   div.row {
     border-bottom: var(--border-dark);
     li {
       display: flex;
-      align-items: center;
-      gap: 0.25rem;
+      gap: var(--space-3xs);
 
       :deep(picture) {
-        max-width: 1.25rem;
+        max-width: 2rem;
+      }
+    }
+  }
+
+  .row.product-list {
+    li {
+      align-items: center;
+    }
+  }
+
+  .row.category-list {
+    ul {
+      display: flex;
+      gap: var(--space-2xs);
+      justify-content: start;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3xs);
+        white-space: nowrap;
+        padding: calc(var(--space-2xs) / 5) var(--space-xs);
+
+        border-radius: calc(var(--corners) * 3);
+        background: var(--gray-darker);
+
+        :deep(picture) {
+          max-width: var(--step-0);
+        }
       }
     }
   }
@@ -200,20 +169,12 @@ aside {
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: var(--space-s);
 
-    picture.chain {
+    picture.chain-icon {
       aspect-ratio: 1/1;
+      width: 16px;
     }
-  }
-}
-.socials {
-  ul {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    align-items: center;
   }
 }
 

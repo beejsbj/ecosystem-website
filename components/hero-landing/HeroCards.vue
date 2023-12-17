@@ -8,32 +8,34 @@ const showcaseCards = ref([
     paragraph: "Discover and explore API3's Ecosystem partners.",
     cta: "Explore Ecosystem",
     link: "/ecosystem",
-    image: "/images/icons/dao.svg",
+    image: "/images/icons/docs.svg",
   },
   {
     heading: "Developers",
-    paragraph:
-      "Learn how to utilize oracles while building your own blockchain applications.",
+    paragraph: "Learn to use oracles for your blockchain applications.",
     cta: "Get Started",
     link: "http://docs.api3.org",
-    image: "/images/icons/developer-tool.svg",
+    image: "/images/icons/developers.svg",
   },
 
   {
     heading: "Updates",
-    paragraph: "Stay upto date with the API3 Ecosystem and our partners",
+    paragraph: "Stay up to date with the API3 Ecosystem and our partners",
     cta: "Discover Updates",
     link: "/articles",
-    image: "/images/hero-ecosystem-articles.svg",
+    image: "/images/icons/article.svg",
   },
 ]);
 </script>
 <template>
   <div class="items">
-    <hero-card class="item" v-for="card in showcaseCards">
+    <hero-card
+      class="item border-gradient-green background-radial-green"
+      v-for="card in showcaseCards"
+    >
       <!-- @mouseover="ui.changeHeroImage(card)" -->
-      <picture class="hide">
-        <img :src="card.image" alt="" />
+      <picture class="">
+        <NuxtImg loading="lazy" :src="card.image" :alt="card.heading" />
       </picture>
       <text-content>
         <h2 class="firm-voice">
@@ -49,83 +51,31 @@ const showcaseCards = ref([
     </hero-card>
   </div>
 </template>
+
 <style scoped lang="scss">
 div.items {
-  grid-column: 1 / -1;
-
-  grid-row: 3 / span 1;
   display: grid;
-  position: relative;
-  align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 0.25rem;
+  gap: var(--space-2xl);
+}
 
-  @media (min-width: 625px) {
-    grid-column: 2 / -2;
+hero-card {
+  display: grid;
+  gap: var(--space-m);
+  justify-items: center;
+  //   align-content: space-between;
+  padding: var(--space-xl) var(--space-l);
+  text-align: center;
 
-    .item:nth-of-type(1) {
-      grid-column: 1 / -1;
-    }
+  picture {
+    max-width: 80px;
+    aspect-ratio: 1;
+    //  gap: var(--space-m);
   }
-  @media (min-width: 1120px) {
-    padding: 0 2rem;
-    .item:nth-of-type(1) {
-      grid-column: unset;
-    }
-  }
 
-  .item {
-    --heroCard-corners: var(--corners);
-    border-radius: var(--heroCard-corners);
-    border-right: var(--border-highlight);
-    /* box-shadow: var(--shadow); */
-    min-height: 250px;
-    box-shadow: var(--shadow);
-    position: relative;
-    padding: 1.5rem 0;
+  text-content {
+    //  max-width: 80%;
     display: grid;
-    align-items: center;
-    //  grid-template-columns: 0.1fr 1fr;
-    gap: 1.5rem;
-
-    text-content {
-      padding: 0 1rem;
-    }
-
-    @media (min-width: 768px) {
-      box-shadow: unset;
-      border-right: unset;
-      border-left: var(--border-color);
-    }
-
-    picture {
-      // aspect-ratio: 1 / 1;
-
-      position: absolute;
-      top: 50%;
-      right: 2rem;
-      transform: translateY(-50%);
-      width: 150px;
-      opacity: 0.5;
-    }
-
-    a {
-      align-self: end;
-    }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--before-width);
-    height: var(--line-width);
-    background: var(--gradient-color);
-    display: none;
-    @media (min-width: 768px) {
-      display: block;
-    }
   }
 }
 </style>

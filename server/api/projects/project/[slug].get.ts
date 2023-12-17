@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     if (!projectSlug) {
-      event.res.statusCode = 400;
+      event.node.res.statusCode = 400;
       return {
         code: "INVALID_ID",
         message: "Invalid project name slug",
@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
     });
 
     if (!project) {
-      event.res.statusCode = 404;
+      event.node.res.statusCode = 404;
       return {
         code: "PROJECT_NOT_FOUND",
         message: `Project not found `,
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
     return project;
   } catch (err) {
     console.dir(err);
-    event.res.statusCode = 500;
+    event.node.res.statusCode = 500;
     return {
       code: "ERROR",
       message: "Something went wrong.",

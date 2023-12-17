@@ -7,23 +7,28 @@ body {
 inner-column {
   display: block;
   width: 100%;
-  max-width: 1400px; /* could be a variable in settings */
+  max-width: 1200px; /* could be a variable in settings */
   margin-right: auto;
   margin-left: auto;
-  padding: 30px 15px; /* a loose default */
+  /* padding: var(--space-l) var(--space-s); a loose default */
+  padding: var(--space-xl) var(--space-s);
 }
 
 inner-column.none {
   width: unset;
   padding: 0;
+  max-width: unset;
+  margin-right: unset;
+  margin-left: unset;
+  padding: unset;
 }
 
-html:has(main.index) main inner-column {
-  max-width: 1600px;
+body.index main inner-column {
+  /* max-width: 1600px; */
 }
 @media (min-width: 1700px) {
-  html:has(main.index) inner-column {
-    max-width: 1750px;
+  body.index inner-column {
+    /* max-width: 1750px; */
   }
 }
 /*.site-header {

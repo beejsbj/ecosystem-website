@@ -1,245 +1,102 @@
 <script setup>
-import { useInterfaceStore } from "@/stores/interface";
-import { gsap } from "gsap";
-
-const ui = useInterfaceStore();
-
 // const content = await queryContent("/home").findOne().heroLanding; #todo
-
-onMounted(() => {
-  //
-
-  //hero landing on load animations
-  const pageLoad = gsap.timeline({
-    //  scrollTrigger: {
-    //    trigger: "hero-landing",
-    //  },
-  });
-
-  pageLoad.fromTo(
-    "hero-landing .page-title",
-    {
-      delay: "0.5",
-      duration: 0.5,
-      y: 50,
-      opacity: 0,
-      ease: "power4.out",
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power4.out",
-    }
-  );
-
-  pageLoad.from("hero-landing .intro-paragraph", {
-    duration: 0.5,
-    y: 50,
-    opacity: 0,
-    ease: "power4.out",
-  });
-
-  pageLoad
-    .to(
-      "hero-landing",
-      {
-        duration: 0.5,
-        "--before-width": "100%",
-        opacity: 1,
-        ease: "power4.inOut",
-      },
-      "-=1"
-    )
-    .fromTo(
-      "hero-landing",
-      {
-        "--after-height": "0",
-      },
-
-      {
-        duration: 0.5,
-        "--after-height": ui.isMobile ? "25%" : "50%",
-        ease: "power4.in",
-      },
-      "-=0.5"
-    );
-  pageLoad.from("hero-landing hero-card", {
-    duration: 0.5,
-    x: 50,
-    opacity: 0,
-    ease: "power4.out",
-    stagger: 0.2,
-  });
-
-  pageLoad.from(
-    "hero-landing .line-decoration path",
-    {
-      duration: 0.5,
-      scale: 0,
-      transformOrigin: "bottom right",
-      stagger: { each: 0.1, from: "random" },
-      ease: "power4.out",
-    },
-    "-=1"
-  );
-});
 </script>
 
 <template>
-  <SectionColumn>
+  <SectionColumn class="hero-landing-section">
     <hero-landing>
-      <picture class="line-decoration decoration">
-        <LineDecoration />
-      </picture>
-      <ClientOnly>
-        <h1
-          class="page-title gradient-text-color-light"
-          :class="{ 'booming-voice': !ui.isMobile, 'loud-voice': ui.isMobile }"
-        >
-          Connecting the First-Party Oracle Ecosystem
-
-          <!-- {{ content.title }} -->
+      <text-content>
+        <h1 class="page-title loud-voice">
+          Connecting the <span>First-Party</span> Oracle Ecosystem
         </h1>
-      </ClientOnly>
 
-      <div class="intro-paragraph">
-        <!-- <picture>
-          <LogoWithLines />
-        </picture> -->
-        <p class="notice-voice">
+        <p class="calm-voice">
           Welcome to the API3 ecosystem a space for blockchain enthusiasts,
           developers, and visionaries from across the globe using API3 data
           feeds.
         </p>
-      </div>
+
+        <button class="button" @click="navigateTo('/ecosystem')">
+          Join The Ecosystem
+        </button>
+      </text-content>
       <HeroCards />
-      <picture class="hero-graphic" v-if="ui.heroImage && ui.isDesktop">
-        <img :src="ui.heroImage" alt="" />
-      </picture>
     </hero-landing>
+    <picture class="curves-decoration-2">
+      <CurvesDecoration2 />
+    </picture>
   </SectionColumn>
 </template>
 
 <style scoped lang="scss">
-.hero-graphic {
-  position: absolute;
-  top: 6rem;
-  right: 150px;
-  width: 400px;
-  z-index: -1;
-  //   filter: hue-rotate(96deg);
-  opacity: 0.25;
-}
-hero-landing {
-  display: grid;
-  row-gap: 3rem;
+.hero-landing-section {
   position: relative;
-  //   overflow-x: hidden;
+  overflow-x: hidden;
 
-  @media (min-width: 768px) {
-    row-gap: 5rem;
-
-    grid-template-columns: repeat(12, 1fr);
-    //  min-height: calc(100vh - 100px);
-  }
-
-  .line-decoration {
+  picture.curves-decoration-2 {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    scale: 0.6;
-    transform-origin: top right;
+    top: 270px;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(2);
 
-    opacity: 0.5;
-    @media (min-width: 768px) {
-      scale: 1;
-    }
-  }
-
-  .page-title {
-    grid-column: 1 / -1;
-
-    text-wrap: balance;
-
-    @media (min-width: 1194px) {
-      grid-column: 2 / -5;
-    }
-    grid-row: 1 / span 1;
-    padding: 15px 0;
-    align-self: center;
-  }
-
-  .intro-paragraph {
-    grid-row: 2 / span 1;
-    grid-column: 1 / -1;
-
-    display: grid;
-    gap: 0.5rem;
-    align-content: start;
+    width: 1000px;
+    z-index: -10;
 
     @media (min-width: 768px) {
-      /* grid-column: 1 / -7;
-     grid-template-columns: 0.1fr 1fr; */
-
-      gap: 2rem;
-    }
-    @media (min-width: 1194px) {
-      grid-template-columns: inherit;
-      p {
-        grid-column: 2 / -1;
-      }
+      top: 200px;
+      width: 1600px;
+      transform: translate(-50%, -50%) scaleY(0.9);
     }
 
-    picture {
-      max-width: 50px;
-      height: 100%;
-      display: grid;
-      justify-content: center;
+    @media (min-width: 1600px) {
+      top: 250px;
 
-      @media (min-width: 768px) {
-        max-width: 200px;
-      }
-
-      svg {
-        width: 105px;
-      }
+      width: 90vw;
+      transform: translate(-50%, -50%) scaleX(2);
     }
 
-    .notice-voice {
-      font-size: var(--step-0);
+    @media (min-width: 2000px) {
+      top: 400px;
+
+      width: 90vw;
+      transform: translate(-50%, -50%) scaleX(2);
     }
-  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-
-    width: var(--before-width);
-    height: var(--line-width);
-
-    background: var(--color);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: var(--line-width);
-    background: var(--gradient-color);
-
-    height: var(--after-height);
-    @media (min-width: 768px) {
-      height: var(--after-height);
-    }
+    //  display: none;
   }
 }
 
 hero-landing {
-  opacity: 0;
+  //   opacity: 0;
+  //   height: 80vh;
+  display: grid;
+  align-content: center;
+  padding: var(--space-m) 0;
+
+  gap: var(--space-2xl);
+
+  text-content {
+    display: grid;
+    gap: var(--space-s);
+    padding: var(--space-s);
+    text-align: center;
+    justify-items: center;
+
+    .page-title {
+      text-wrap: balance;
+
+      @media (max-width: 768px) {
+        --font-size: var(--step-2);
+      }
+
+      span {
+        white-space: nowrap;
+      }
+    }
+
+    .button {
+      margin-top: var(--space-m);
+    }
+  }
 }
 </style>

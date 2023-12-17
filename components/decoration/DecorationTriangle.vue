@@ -80,7 +80,7 @@ const props = defineProps(["strokeWidth"]);
 <style scoped>
 .decoration-triangle {
   fill: none;
-  stroke: var(--color);
+  stroke: var(--green);
   stroke-width: 0.5;
 }
 </style>

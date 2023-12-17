@@ -36,71 +36,103 @@ const colors = ref([
   [
     {
       name: "Primary",
-      variable: "--color",
-    },
-    {
-      name: "Secondary",
-      variable: "--highlight",
-    },
-    {
-      name: "Tertiary",
-      variable: "--tertiary-color",
+      variable: "--green",
     },
   ],
   [
     {
       name: "Primary Light",
-      variable: "--color-light",
+      variable: "--green-light",
     },
     {
       name: "Primary Lighter",
-      variable: "--color-lighter",
+      variable: "--green-lighter",
     },
     {
       name: "Primary Lightest",
-      variable: "--color-lightest",
+      variable: "--green-lightest",
     },
   ],
   [
     {
       name: "Primary Dark",
-      variable: "--color-dark",
+      variable: "--green-dark",
     },
     {
       name: "Primary Darker",
-      variable: "--color-darker",
+      variable: "--green-darker",
     },
     {
       name: "Primary Darkest",
-      variable: "--color-darkest",
+      variable: "--green-darkest",
+    },
+  ],
+  [
+    {
+      name: "Secondary",
+      variable: "--violet",
     },
   ],
   [
     {
       name: "Secondary Light",
-      variable: "--highlight-light",
+      variable: "--violet-light",
     },
     {
       name: "Secondary Lighter",
-      variable: "--highlight-lighter",
+      variable: "--violet-lighter",
     },
     {
       name: "Secondary Lightest",
-      variable: "--highlight-lightest",
+      variable: "--violet-lightest",
     },
   ],
   [
     {
       name: "Secondary Dark",
-      variable: "--highlight-dark",
+      variable: "--violet-dark",
     },
     {
       name: "Secondary Darker",
-      variable: "--highlight-darker",
+      variable: "--violet-darker",
     },
     {
       name: "Secondary Darkest",
-      variable: "--highlight-darkest",
+      variable: "--violet-darkest",
+    },
+  ],
+  [
+    {
+      name: "Tertiary",
+      variable: "--blue",
+    },
+  ],
+  [
+    {
+      name: "Tertiary Light",
+      variable: "--blue-light",
+    },
+    {
+      name: "Tertiary Lighter",
+      variable: "--blue-lighter",
+    },
+    {
+      name: "Tertiary Lightest",
+      variable: "--blue-lightest",
+    },
+  ],
+  [
+    {
+      name: "Tertiary Dark",
+      variable: "--blue-dark",
+    },
+    {
+      name: "Tertiary Darker",
+      variable: "--blue-darker",
+    },
+    {
+      name: "Tertiary Darkest",
+      variable: "--blue-darkest",
     },
   ],
 
@@ -112,6 +144,10 @@ const colors = ref([
     {
       name: "Warning",
       variable: "--warning",
+    },
+    {
+      name: "Error",
+      variable: "--error",
     },
   ],
   [
@@ -128,12 +164,29 @@ const colors = ref([
       variable: "--gradient-color",
     },
     {
-      name: "Gradient Color Lighter",
-      variable: "--gradient-color-light",
+      name: "Gradient Stroke",
+      variable: "--gradient-green",
     },
     {
-      name: "Gradient Color Darker",
-      variable: "--gradient-color-dark",
+      name: "Gradient Stroke",
+      variable: "--gradient-violet",
+    },
+    {
+      name: "Gradient Stroke",
+      variable: "--gradient-blue",
+    },
+
+    {
+      name: "Gradient Radial",
+      variable: "--gradient-radial-green",
+    },
+    {
+      name: "Gradient Radial",
+      variable: "--gradient-radial-blue",
+    },
+    {
+      name: "Gradient Radial",
+      variable: "--gradient-radial-violet",
     },
   ],
   [
@@ -242,7 +295,7 @@ div.pallete {
   width: 100%;
   height: 100px;
   border-radius: var(--corners);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2xs);
   //   text-align: center;
 }
 form-field {

@@ -53,7 +53,7 @@ export default defineEventHandler(async (event) => {
     const statsObject = stats?.[0];
 
     if (!statsObject) {
-      event.res.statusCode = 400;
+      event.node.res.statusCode = 400;
       return {
         code: "REQ_FAILED",
         message: "Failed to fetch stats",
@@ -85,10 +85,11 @@ export default defineEventHandler(async (event) => {
     });
     const finalPayload = { chains, categories, productTypes, years };
 
+    event.node.res.statusCode = 200;
     return finalPayload;
   } catch (err) {
     console.log(err);
-    event.res.statusCode = 500;
+    event.node.res.statusCode = 500;
     return {
       code: "ERROR",
       message: "Something went wrong.",

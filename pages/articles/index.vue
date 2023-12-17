@@ -1,30 +1,49 @@
 <script setup>
 //random number between 0 and 5
-const random = Math.floor(Math.random() * 6);
 
 useSeoMeta({
+  ogUrl: "https://ecosystem.api3.org/articles",
+
   title: "Blog",
+  ogTitle: "Blog",
+  twitterTitle: "Blog",
+
   description:
-    "Unlock the potential of blockchain oracles for your dApps. Learn more about oracles, understand how to leverage real-world data feeds, and create smarter, more responsive decentralized applications. Dive into our comprehensive developer materials now.",
+    "Unlock the potential of blockchain oracles. Learn more about oracles, understand how to leverage real-world data feeds, and create smarter, more responsive dApps.",
   ogDescription:
-    "Unlock the potential of blockchain oracles for your dApps. Learn more about oracles, understand how to leverage real-world data feeds, and create smarter, more responsive decentralized applications. Dive into our comprehensive developer materials now.",
+    "Unlock the potential of blockchain oracles. Learn more about oracles, understand how to leverage real-world data feeds, and create smarter, more responsive dApps.",
+  twitterDescription:
+    "Unlock the potential of blockchain oracles. Learn more about oracles, understand how to leverage real-world data feeds, and create smarter, more responsive dApps.",
 });
 </script>
 
 <template>
-  <PageTitle heading="Articles" />
-  <SectionColumn>
-    <h2 class="attention-voice">Featured</h2>
-    <ArticleGrid :layout="0" cardCount="4" />
-  </SectionColumn>
+  <main>
+    <PageTitle heading="Articles" />
+    <SectionColumn>
+      <h2 class="attention-voice">Featured</h2>
+      <ArticleGrid layout="0" cardCount="2" isFeaturedSort="true" />
+    </SectionColumn>
 
-  <SectionColumn>
-    <h2 class="attention-voice">Recent</h2>
-    <ArticleGrid :layout="1" cardCount="3" />
-  </SectionColumn>
+    <SectionColumn>
+      <h2 class="attention-voice">Popular</h2>
+      <ArticleGrid layout="1" cardCount="3" isPopularSort="true" />
+    </SectionColumn>
 
-  <SectionColumn>
-    <h2 class="attention-voice">Popular</h2>
-    <ArticleGrid :layout="3" cardCount="4" />
-  </SectionColumn>
+    <SectionColumn>
+      <h2 class="attention-voice">Trending</h2>
+      <ArticleGrid layout="2" cardCount="4" isTrendingSort="true" />
+    </SectionColumn>
+
+    <SectionColumn>
+      <h2 class="attention-voice">All</h2>
+      <ArticleGrid layout="3" isRecentSort="true" />
+    </SectionColumn>
+  </main>
 </template>
+
+<style lang="scss" scoped>
+h2 {
+  margin-bottom: var(--space-l);
+}
+</style>

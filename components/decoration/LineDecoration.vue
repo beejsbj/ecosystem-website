@@ -52,9 +52,9 @@
 
 <style scoped>
 path {
-  stroke: var(--color);
+  stroke: var(--green);
 }
 path:hover {
-  stroke: var(--highlight);
+  stroke: var(--violet);
 }
 </style>

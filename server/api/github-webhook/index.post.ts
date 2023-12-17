@@ -18,7 +18,7 @@ export default handleWebhookAuth(
         const projectId = match ? match[1] : null;
 
         if (!projectId) {
-          event.res.statusCode = 400;
+          event.node.res.statusCode = 400;
           return {
             code: "ERROR",
             message: "Failed to extract project id from branch name",
@@ -34,22 +34,22 @@ export default handleWebhookAuth(
 
         // The pull request was merged
         console.log("Pull request was merged!");
-        event.res.statusCode = 201;
+        event.node.res.statusCode = 201;
         return { code: "OK", message: "Project published to live" };
       } else if (
         payload?.action === "closed" &&
         payload?.pull_request?.merged === false
       ) {
         // The pull request was merged
-        event.res.statusCode = 201;
+        event.node.res.statusCode = 201;
         return { code: "OK", message: "Project rejected" };
       }
 
-      event.res.statusCode = 201;
+      event.node.res.statusCode = 201;
       return { code: "OK", message: "This event has no action yet" };
     } catch (err: any) {
       console.log("webhook req ", err);
-      event.res.statusCode = 500;
+      event.node.res.statusCode = 500;
       return {
         code: "ERROR",
         message: "Failed to update project status!",

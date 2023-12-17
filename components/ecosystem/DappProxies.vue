@@ -12,12 +12,12 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
     <ul v-auto-animate>
       <!-- Table heading, first row -->
       <li class="table-row table-head">
-        <div class="solid-voice chain">Chain</div>
-        <div class="solid-voice feedname">Feed Name</div>
-        <div class="solid-voice type">Type</div>
-        <div class="solid-voice proxy-address">Proxy Address</div>
-        <div class="solid-voice address">ID / dAPI</div>
-        <div class="solid-voice is-oev">is OEV?</div>
+        <div class="whisper-voice chain">Network</div>
+        <div class="whisper-voice feedname">Feed Name</div>
+        <div class="whisper-voice type">Type</div>
+        <div class="whisper-voice proxy-address">Proxy Address</div>
+        <div class="whisper-voice address">dAPI ID</div>
+        <div class="whisper-voice is-oev">is OEV?</div>
         <div class="" v-if="isForm"></div>
       </li>
 
@@ -25,14 +25,13 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
       <li class="table-row" v-for="(proxy, index) in proxies">
         <!-- chain -->
         <div class="chain">
-          <picture>
-            <ChainIcon
-              :chain="ecosystem.chainNames(proxy.chainId)"
-              fill="var(--color)"
-              stroke="var(--paper)"
-              strokeWidth="15%"
-            />
-          </picture>
+          <ChainIcon
+            :chain="ecosystem.chainNames(proxy.chainId)"
+            fill="var(--green)"
+            stroke="var(--paper)"
+            strokeWidth="15%"
+          />
+          {{ ecosystem.chainNames(proxy.chainId) }}
         </div>
 
         <!-- feed name -->
@@ -64,7 +63,11 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
         <!-- is oev -->
         <div class="is-oev">
           <picture v-if="isForm ? proxy.isOEV : proxy?.oev?.enabled">
-            <img src="/images/icons/oev.svg" alt="" />
+            <NuxtImg
+              loading="lazy"
+              src="/images/icons/oev.svg"
+              alt="OEV icon"
+            />
           </picture>
         </div>
 
@@ -74,8 +77,12 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
             class="icon"
             @click.prevent="dappForm?.proxies?.splice(index, 1)"
           >
-            <picture>
-              <img src="@/assets/images/interface/cross.svg" />
+            <picture class="cross">
+              <img
+                loading="lazy"
+                src="@/assets/images/interface/cross.svg"
+                alt="cross icon"
+              />
             </picture>
           </button>
         </div>
@@ -88,7 +95,7 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
 section.proxy-table {
   display: grid;
   ul {
-    margin-top: 0.5rem;
+    margin-top: var(--space-2xs);
     max-height: 400px;
 
     overflow-y: scroll;
@@ -100,35 +107,49 @@ section.proxy-table {
       top: 0;
       background-color: var(--paper);
       z-index: 1;
+      border-bottom: none;
+
+      // box-shadow: var(--shadow);
     }
   }
   .table-row {
     display: grid;
-    grid-template-columns: 0.75fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0.5rem;
-    padding: 1rem;
-    border-bottom: var(--border);
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    gap: var(--space-s);
+    padding: var(--space-s);
+    border-bottom: var(--border-dark);
     align-items: center;
+    min-width: fit-content;
 
     div {
-      min-width: 115px;
+      min-width: 130px;
     }
 
-    .chain picture {
-      max-width: 50px;
+    .chain {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2xs);
+    }
+
+    .chain picture.chain-icon {
+      max-width: 20px;
     }
 
     & + .table-row {
       // border-top: var(--border-light);
     }
 
-    .is-oev picture {
-      max-width: 20px;
+    .is-oev {
+      display: flex;
+      align-items: center;
+
+      picture {
+        max-width: 20px;
+      }
     }
 
-    .cross {
-      width: 30px;
-      height: 30px;
+    picture.cross {
+      width: 10px;
     }
   }
 }

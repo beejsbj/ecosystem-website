@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-
+/**
+ * Projects upvote schema
+ */
 const UpvoteSchema = new Schema({
   project: {
     type: mongoose.Types.ObjectId,

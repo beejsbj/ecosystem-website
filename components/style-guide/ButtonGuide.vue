@@ -9,17 +9,29 @@ const buttons = ref([
     class: "text",
   },
   {
+    name: "Text Green",
+    class: "text green",
+  },
+  {
+    name: "Text Blue",
+    class: "text blue",
+  },
+  {
+    name: "Text Violet",
+    class: "text violet",
+  },
+  {
     name: "Icon",
     class: "icon button",
   },
   {
-    name: "Filled",
-    class: "button filled",
+    name: "outline",
+    class: "button outline",
   },
 
   {
     name: "Loud",
-    class: "loud-button",
+    class: "button",
   },
   {
     name: "Loading",
@@ -29,7 +41,7 @@ const buttons = ref([
 
   {
     name: "Loading",
-    class: "button filled",
+    class: "button outline",
     isLoading: true,
   },
 
@@ -50,13 +62,13 @@ const buttons = ref([
   },
   {
     name: "Disabled",
-    class: "button filled",
+    class: "button outline",
     disabled: true,
   },
 
   {
     name: "Disabled",
-    class: "loud-button",
+    class: "button",
     disabled: true,
   },
 ]);
@@ -74,7 +86,7 @@ const buttons = ref([
           v-tooltip="button.class"
           v-if="!button.isLoading"
         >
-          {{ button.class }}
+          Button
         </button>
         <div data-loading v-else>
           <div data-type="submit">
@@ -83,7 +95,7 @@ const buttons = ref([
               :disabled="button.disabled"
               v-tooltip="button.class"
             >
-              {{ button.class }}
+              Button
             </button>
           </div>
         </div>
@@ -98,7 +110,7 @@ ul {
   align-items: center;
   justify-items: center;
 
-  --gap: 3rem;
+  --gap: var(--space-xl);
 
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }

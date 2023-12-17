@@ -1,52 +1,52 @@
-<script setup>
-import gsap from "gsap";
-
-const props = defineProps(["duration"]);
-onMounted(() => {
-  gsap.fromTo(
-    ".loading-triangle path",
-    {
-      scale: 0,
-      transformOrigin: "center",
-      opacity: 1,
-    },
-    {
-      duration: props.duration ?? 1.5,
-      scale: 2,
-      transformOrigin: "center",
-      ease: "power2.inOut",
-      stagger: {
-        each: 0.1,
-        repeat: -1,
-      },
-    }
-  );
-});
-</script>
+<script setup></script>
 
 <template>
-  <div class="loading-spinner">
-    <picture class="loading-triangle">
-      <LogoIcon />
-    </picture>
+  <div class="mask">
+    <div class="loader"></div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.loading-spinner {
-  position: relative;
-  width: 50px;
-  aspect-ratio: 1 / 1;
+.mask {
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  z-index: 1031;
 }
 
-.spinner {
-  border-top: 2px solid var(--color);
+.loader {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-right: solid 2px var(--green);
   border-radius: 50%;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  animation: spin 2s ease-out infinite;
+  --size: 50px;
+  width: var(--size);
+  height: var(--size);
+  -webkit-animation: loader 400ms linear infinite;
+  animation: loader 400ms linear infinite;
 }
-.loading-triangle {
-  width: 100%;
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 </style>

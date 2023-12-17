@@ -38,17 +38,12 @@ const socialsToShare = ref([
   <share-box>
     <header>
       <h4 class="solid-voice">Share</h4>
-      <!-- <button class="icon close" @click="$emit('toggle')">
-        <picture>
-          <img src="@/assets/images/interface/cross.svg" alt="close" />
-        </picture>
-      </button> -->
     </header>
     <ul class="social-list">
       <li v-for="social in socialsToShare" :key="social.label">
         <a :href="social.url" :target="social.label">
           <picture>
-            <SocialIcon :social="social.label" fill="var(--color)" />
+            <DynamicIcon :icon="social.label" />
           </picture>
         </a>
       </li>
@@ -66,7 +61,7 @@ const socialsToShare = ref([
 
 <style lang="scss" scoped>
 share-box {
-  padding: 2rem;
+  padding: var(--space-);
   border-radius: var(--corners);
   background: var(--paper);
 
@@ -83,22 +78,22 @@ share-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: var(--space-s) 0;
   }
 
   .social-list {
     display: flex;
-    gap: 2rem;
+    gap: var(--space-);
     justify-content: center;
     align-items: center;
 
-    padding: 1rem 0;
-    margin: 1rem 0;
+    padding: var(--space-s) 0;
+    margin: var(--space-s) 0;
 
     border-top: var(--border);
     border-bottom: var(--border);
 
-    picture {
+    :deep(picture) {
       max-width: 2rem;
     }
   }
@@ -107,7 +102,7 @@ share-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: var(--space-s);
     background: var(--gradient-color);
     background: var(--gradient-dark);
 

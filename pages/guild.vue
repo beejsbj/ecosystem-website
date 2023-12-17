@@ -3,6 +3,7 @@ import { watchNetwork } from "@wagmi/core";
 import { gsap } from "gsap";
 
 const web3Store = useWeb3Store();
+const ui = useInterfaceStore();
 
 const selected = ref("");
 const selectedProductId = ref(null);
@@ -14,8 +15,8 @@ const chainId = ref(null);
 const isMinted = ref(false);
 
 const content = reactive({
-  buttons: ["Developers", "DAO Members", "Testers"],
-  unselectedHeading: "Select The NFT type to Mint",
+  buttons: ["Developers", "DAO", "Testers"],
+  unselectedHeading: "Select The NFT to Mint",
   paragraph: ``,
 });
 
@@ -38,19 +39,35 @@ function buttonHandle(event, text, index) {
 }
 
 function animateHeading() {
-  gsap.fromTo(
-    "div.panel h2",
-    {
-      y: 50,
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power4.out",
-    }
-  );
+  if (!selected.value) {
+    gsap.fromTo(
+      "div.panel",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: "power4.out",
+      }
+    );
+  } else {
+    gsap.fromTo(
+      "div.panel h2",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: "power4.out",
+      }
+    );
+  }
 }
 
 watch(selectedProductId, async (productId, prevProductId) => {
@@ -132,85 +149,129 @@ onMounted(() => {
 </script>
 
 <template>
-  <SectionColumn>
-    <aside>
-      <button
-        class="text"
-        v-for="(buttonText, index) in content.buttons"
-        @click="buttonHandle($event, buttonText, index)"
-      >
-        {{ buttonText }}
-      </button>
-    </aside>
-    <div class="panel" v-auto-animate>
-      <h2 class="loud-voice">
-        <template v-if="selected">
-          Join the
-          <span class="gradient-text-color">{{ selected }}</span> by minting
-          this NFT
-        </template>
-        <template v-else>
-          {{ content.unselectedHeading }}
-        </template>
-      </h2>
+  <main>
+    <section>
+      <inner-column v-auto-animate>
+        <aside>
+          <h1 class="loud-voice">
+            {{ content.unselectedHeading }}
+          </h1>
+          <div class="actions">
+            <button
+              class="text green hover-underline"
+              v-for="(buttonText, index) in content.buttons"
+              @click="buttonHandle($event, buttonText, index)"
+            >
+              {{ buttonText }}
+            </button>
+          </div>
+        </aside>
+        <div class="panel" v-if="selected">
+          <h2 class="loud-voice" v-show="selected">
+            Join the
+            <span class="gradient-text-color">{{ selected }}</span> by minting
+            this NFT
+          </h2>
 
-      <p>
-        {{ content.paragraph }}
-      </p>
+          <p v-if="content.paragraph">
+            {{ content.paragraph }}
+          </p>
 
-      <Transition name="fade" mode="out-in" v-if="selected && !isMinted">
-        <button class="loud-button" :disabled="loading" @click="handleAction">
-          {{ buttonText }}
-        </button>
-      </Transition>
+          <Transition name="fade" mode="out-in" v-if="selected && !isMinted">
+            <button class="button" :disabled="loading" @click="handleAction">
+              {{ buttonText }}
+            </button>
+          </Transition>
 
-      <Transition name="fade" mode="out-in" v-if="selected && isMinted">
-        <button class="loud-button" :disabled="loading">
-          <a
-            href="https://opensea.io/collection/api3-guild"
-            target="_blank"
-            class="group"
-          >
-            <span>
-              {{ isMintChecking ? "Fetching NFT..." : "Visit OpenSea" }}
-            </span>
-            <picture class="external-link" v-if="!isMintChecking">
-              <img src="@/assets/images/interface/diagonal-arrow.svg" alt="" />
-            </picture>
-          </a>
-        </button>
-      </Transition>
-    </div>
-  </SectionColumn>
+          <Transition name="fade" mode="out-in" v-if="selected && isMinted">
+            <button class="button" :disabled="loading">
+              <a
+                href="https://opensea.io/collection/api3-guild"
+                target="_blank"
+                class="group"
+              >
+                <span>
+                  {{ isMintChecking ? "Fetching NFT..." : "Visit OpenSea" }}
+                </span>
+                <ExternalLink v-if="!isMintChecking" />
+              </a>
+            </button>
+          </Transition>
+        </div>
+      </inner-column>
+    </section>
+  </main>
 </template>
 
 <style scoped lang="scss">
-section {
-  :deep(inner-column) {
+section:not(.heading) {
+  inner-column {
+    gap: var(--space-xl);
+
+    @media (min-width: 1024px) {
+      min-height: 80vh;
+    }
+  }
+
+  inner-column:has(.panel) {
     display: grid;
-    gap: 3rem;
+    @media (min-width: 1024px) {
+      grid-template-columns: 0.6fr 1fr;
+    }
 
-    height: 80vh;
-    align-content: center;
+    h1 {
+      font-size: var(--step-1);
+      transition: 0.2s;
+    }
 
-    @media (min-width: 768px) {
-      grid-template-columns: 0.3fr 1fr;
+    div.actions {
+      @media (min-width: 1024px) {
+        display: grid;
+      }
     }
   }
 
   aside {
     display: grid;
+    gap: var(--space-m);
+    order: 2;
     align-content: center;
-    gap: 3rem;
-    text-align: left;
+
+    justify-items: center;
+
+    @media (min-width: 1024px) {
+      justify-items: unset;
+      order: unset;
+    }
+
+    h1 {
+      // text-wrap: balance;
+    }
+
+    button.text {
+      text-align: left;
+    }
   }
 
   .panel {
     display: grid;
-    gap: 3rem;
+    gap: var(--space-xl);
 
     place-content: center;
     text-align: center;
+
+    h2 {
+      // opacity: 0;
+      text-wrap: balance;
+
+      span {
+        white-space: nowrap;
+      }
+
+      @media (max-width: 420px) {
+        --font-size: var(--step-2);
+      }
+    }
 
     button {
       justify-self: center;
@@ -220,7 +281,7 @@ section {
 
 .external-link {
   max-width: 10px;
-  margin-left: 10px;
+  margin-left: var(--space-2xs);
 }
 .group {
   display: flex;

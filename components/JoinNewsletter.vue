@@ -42,14 +42,14 @@ function submitHandler(event) {
   //   box-shadow: var(--shadow);
 
   text-content {
-    padding: 2rem;
+    padding: var(--space-l);
   }
 }
 p {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2xs);
 }
 form {
-  margin-top: 2rem;
+  margin-top: var(--space-l);
   justify-items: start;
 }
 

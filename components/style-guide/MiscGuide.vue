@@ -21,6 +21,18 @@ const settings = ref([
       name: "border-gradient",
       variable: ".border-gradient",
     },
+    {
+      name: "border-gradient-green",
+      variable: ".border-gradient-green",
+    },
+    {
+      name: "border-gradient-violet",
+      variable: ".border-gradient-violet",
+    },
+    {
+      name: "border-gradient-blue",
+      variable: ".border-gradient-blue",
+    },
   ],
   [
     {

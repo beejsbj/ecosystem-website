@@ -1,53 +1,147 @@
+:root {
+  --fk-color-primary: var(--green) !important;
+  --fk-color-border-focus: var(--green) !important;
+  --fk-color-checked: var(--green) !important;
+  --fk-color-border: var(--gray) !important;
+  --fk-border-radius: var(--corners) !important;
+  --fk-border-box-shadow-focus: 0 0 0 2px var(--green) !important;
+  --fk-border-box-shadow-decorator-checked: 0 0 0 2px var(--green) !important;
+  --fk-font-family: var(--font) !important;
+  --fk-font-size: var(--step-0) !important;
+
+  --fk-padding-input: var(--space-xs) !important;
+
+  --fk-font-weight: var(--weight-light) !important;
+  --fk-line-height: 1.4 !important;
+  --fk-color-input: var(--ink) !important;
+  --multistep-radius: var(--corners) !important;
+  --multistep-color-success: var(--green) !important;
+  --fk-color-help: var(--gray-light) !important;
+
+  --fk-margin-outer: 0 !important;
+
+  --fk-margin-decorator: 0 !important;
+
+  /* vueform/multistep */
+
+  --ms-bg: var(--gradient-dark) !important;
+  --ms-border-color: var(--ink) !important;
+  --ms-radius: var(--corners) !important;
+
+  --ms-tag-bg: var(--green) !important;
+  --ms-tag-color: var(--paper) !important;
+  --ms-tag-radius: var(--corners) !important;
+
+  --ms-dropdown-bg: var(--paper) !important;
+  --ms-dropdown-border-color: transparent !important;
+
+  --ms-dropdown-color: var(--ink) !important;
+  --ms-dropdown-radius: var(--corners) !important;
+}
+
+/* Form */
 form,
 .formkit-step-inner,
 .step-transition-wrapper {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--space-l);
 }
 
 input-field,
-form :is(form-field),
-.formkit-wrapper {
+form :is(form-field) {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-s);
 }
-
-/* 
-.formkit-inner,
-.formkit-outer {
-  display: contents;
-}
-
-form form-field .formkit-outer {
-  display: grid;
-  gap: 0.1rem;
-}
-
-form-field .formkit-messages {
-  color: var(--warning);
-} 
-*/
 
 :is(form-field, input-field) input {
-  padding: 0.5rem;
+  padding: var(--space-xs);
 }
 
-.radio-group {
-  display: grid;
-  gap: 1rem;
+.formkit-fieldset {
+  border: unset !important;
+  /* box-shadow: 0 0 0 1px var(--green) !important; */
 }
 
-input.multiselect-tags-search {
-  color: var(--ink);
-  background-color: var(--paper);
-  border-radius: var(--corners);
+.formkit-wrapper {
+  max-width: 736px !important;
+  margin: 0 auto !important;
+
+  display: grid !important;
+  align-items: center !important;
+  gap: var(--space-2xs) !important;
 }
+
+.formkit-tabs {
+  order: 2;
+  justify-self: center;
+}
+.formkit-tabs .formkit-tab {
+}
+.formkit-tabs .formkit-tab::after {
+  display: none !important;
+}
+
+.formkit-tabs .formkit-tab::before {
+  border: var(--border) !important;
+  background: none !important;
+}
+.formkit-tab[data-active="true"]::before {
+  background: var(--gray) !important;
+}
+
+.formkit-inner {
+  box-shadow: unset !important;
+  position: relative !important;
+}
+
+.formkit-steps {
+  border: none !important;
+  padding: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .formkit-steps {
+    padding: var(--space-l);
+  }
+}
+
+.formkit-step-actions {
+  margin-top: var(--space-2xl);
+  margin-bottom: unset !important;
+  display: grid !important;
+  gap: var(--space-s) !important;
+  justify-content: unset !important;
+}
+
+/*  */
+
+.not-valid {
+  color: var(--warning);
+}
+.valid {
+  color: var(--success);
+}
+
+.formkit-inner svg * {
+  fill: var(--ink) !important;
+}
+/* Label */
+label {
+  cursor: pointer;
+  color: var(--gray-light) !important;
+}
+
+.file-upload .formkit-no-files {
+  color: var(--green) !important;
+}
+
+/* text input */
 
 input:not(.multiselect input, .formkit-inner input, input[type="file"]),
 textarea,
-.formkit-inner {
-  background: var(--gradient-dark) !important;
+.formkit-inner:not(.file-upload .formkit-inner) {
   position: relative;
+  background: var(--gray-darkest);
 }
 
 :is(
@@ -61,105 +155,70 @@ textarea,
   box-shadow: var(--shadow) !important;
 }
 
-.formkit-fieldset {
-  border: unset !important;
-  /* box-shadow: 0 0 0 1px var(--color) !important; */
+/* Radio/checkbox */
+.radio-group {
+  display: grid;
+  gap: var(--space-s);
+}
+
+:is([data-type="checkbox"], [data-type="radio"]) .formkit-wrapper {
+  display: flex !important;
+}
+:is([data-type="checkbox"], [data-type="radio"]) .formkit-decorator {
+  width: var(--step-0) !important;
+  height: var(--step-0) !important;
+  border-radius: (var(--corners) / 8) !important;
+}
+
+:is([data-type="checkbox"], [data-type="radio"]) .formkit-inner {
+  background: var(--gray-darkest) !important;
+  border-radius: (var(--corners) / 8) !important;
+}
+
+/* Multiselect */
+input.multiselect-tags-search {
+  color: var(--ink);
+  background: var(--paper);
+  border-radius: var(--corners);
 }
 
 .multiselect input {
   background: unset;
 }
 
-/* :is(input, textarea)::after {
-	content: "";
-
-
-  color: var(--paper);
-  border: 1px solid var(--ink);
-  border-radius: var(--corners);
-
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 1px;
-  width: 0%;
-  background: var(--gradient-color);
-}
-:is(input, textarea):focus-visible::after {
-  width: 100%;
-} */
-
-label {
-  cursor: pointer;
-}
-
-.formkit-wrapper {
-  max-width: unset !important;
-
-  display: grid !important;
-  align-items: center !important;
-  gap: 1rem !important;
-}
-
-:is([data-type="checkbox"], [data-type="radio"]) .formkit-wrapper {
-  display: flex !important;
-}
-
-.formkit-inner {
-  box-shadow: unset !important;
-  position: relative !important;
-}
-
-:root {
-  --fk-color-primary: var(--color) !important;
-  --fk-color-border-focus: var(--color) !important;
-  --fk-color-checked: var(--color) !important;
-  --fk-color-border: var(--highlight) !important;
-  --fk-border-radius: var(--corners) !important;
-  --fk-border-box-shadow-focus: 0 0 0 2px var(--color) !important;
-  --fk-border-box-shadow-decorator-checked: 0 0 0 2px var(--color) !important;
-  --fk-font-family: var(--font) !important;
-  --fk-font-size: var(--step-0) !important;
-
-  --fk-font-weight: var(--weight-light) !important;
-  --fk-line-height: 1.4 !important;
-  --fk-color-input: var(--ink) !important;
-  --multistep-radius: var(--corners) !important;
-  --multistep-color-success: var(--color) !important;
-  --fk-color-help: var(--gray-light) !important;
-
-  --fk-margin-outer: 0 !important;
-
-  /* vueform/multistep */
-
-  --ms-bg: var(--gradient-dark) !important;
-  --ms-border-color: var(--ink) !important;
-  --ms-radius: var(--corners) !important;
-
-  --ms-tag-bg: var(--color) !important;
-  --ms-tag-color: var(--paper) !important;
-  --ms-tag-radius: var(--corners) !important;
-
-  --ms-dropdown-bg: var(--paper) !important;
-  --ms-dropdown-border-color: transparent !important;
-
-  --ms-dropdown-color: var(--ink) !important;
-  --ms-dropdown-radius: var(--corners) !important;
-}
-
-.formkit-inner svg * {
-  fill: var(--color) !important;
-}
-
 .multiselect.is-active {
-  border: unset !important;
-  box-shadow: 0 0 0 2px var(--color) !important;
+  box-shadow: var(--shadow) !important;
 }
 
 .multiselect {
-  border: unset !important;
-  padding: 0.5rem !important;
+  border: var(--border-dark) !important;
+  padding: var(--space-2xs) !important;
+  background: unset !important;
 }
+
+.multiselect.tags {
+  background: var(--gray-darkest) !important;
+  border: var(--border-light) !important;
+}
+
+.multiselect-caret {
+  mask-image: unset !important;
+  webkit-mask-image: unset !important;
+  background: url("/assets/images/interface/caret.svg") no-repeat center center !important;
+  background-size: 10px !important;
+
+  transform: rotate(180deg) !important;
+}
+.multiselect.tags .multiselect-caret {
+  background-size: 20px !important;
+
+  transform: rotate(90deg) !important;
+}
+
+.multiselect .multiselect-caret.is-open {
+  transform: rotate(0deg) !important;
+}
+/* File */
 
 [data-type="file"] input.formkit-input:not(input[type="file"]) {
   color: var(--ink) !important;
@@ -175,14 +234,14 @@ input.formkit-input ul li.formkit-file-item {
 form-field.file-upload {
   display: grid;
   justify-content: start;
-  background: var(--gradient-dark);
   --ink: hsla(180, 0%, 95%, 1);
   border-radius: var(--corners);
-  gap: 10px;
-  padding: 1rem;
+  gap: var(--space-xxs);
+  /* padding: var(--space-s); */
   align-items: start;
 }
 
+/* range */
 input[type="range"] {
   display: block;
   width: 100%;
@@ -195,11 +254,4 @@ input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
   border-radius: var(--corners);
   background: var(--gradient-color);
-}
-
-.not-valid {
-  color: var(--warning);
-}
-.valid {
-  color: var(--success);
 }

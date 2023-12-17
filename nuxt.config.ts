@@ -2,41 +2,38 @@ export default defineNuxtConfig({
   spaLoadingTemplate: "./app-loading.html",
 
   routeRules: {
-    // Homepage pre-rendered at build time
-    "/": { prerender: true, cache: { maxAge: 30 } },
-    ecosystem: { cache: { maxAge: 60 * 60 } },
-    "/ecosystem/**": { cache: { maxAge: 60 * 60 } },
-    articles: { cache: { maxAge: 60 * 60 } },
-    "/articles/**": { cache: { maxAge: 60 * 60 } },
-    "add-dapp": {
+    "/": { prerender: false },
+    "/add-dapp": {
       ssr: false,
+      prerender: false,
     },
-  },
-
-  vite: {
-    optimizeDeps: {
-      include: ["plotly.js-dist-min"],
+    "/ecosystem": {
+      ssr: false,
+      prerender: false,
+    },
+    "/articles": {
+      ssr: false,
+      prerender: false,
     },
   },
 
   //global default head metadata
   app: {
-    //  pageTransition: {
-    //    name: "page",
-    //    mode: "out-in",
-    //  },
+    pageTransition: {
+      name: "page",
+      mode: "out-in",
+    },
 
     head: {
       title: "API3 Ecosystem",
 
       meta: [
-        // <meta name="viewport" content="width=device-width, initial-scale=1">
         { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
 
       link: [
-        // favicon icon in assets/images
         { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+        { rel: "canonical", href: "https://ecosystem.api3.org" },
       ],
     },
   },
@@ -46,6 +43,15 @@ export default defineNuxtConfig({
     "@formkit/themes/genesis",
     "floating-vue/dist/style.css",
   ],
+
+  postcss: {
+    plugins: {
+      "postcss-import": {},
+      "postcss-url": {},
+      cssnano: {},
+      autoprefixer: {},
+    },
+  },
 
   build: {
     transpile: ["gsap"],
@@ -60,23 +66,52 @@ export default defineNuxtConfig({
 
   modules: [
     "@formkit/nuxt",
-    //  "@nuxt/devtools",
-    "@nuxt/content",
+    [
+      "@nuxt/content",
+      {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: "github-dark",
+          preload: ["c", "shell", "solidity"],
+        },
+      },
+    ],
 
+    //devtools
+    [
+      "@nuxt/devtools",
+      {
+        enabled: false, // Enable only in development
+      },
+    ],
+
+    //image
+    [
+      "@nuxt/image",
+      {
+        format: ["webp"],
+        quality: 80,
+      },
+    ],
+
+    //robots
+    [
+      "@nuxtjs/robots",
+      {
+        UserAgent: "*",
+        Disallow: "/testing-ground",
+      },
+    ],
+
+    //pinia
     [
       "@pinia/nuxt",
       {
         autoImports: ["defineStore", "storeToRefs"],
       },
     ],
-    //  [
-    //    "@nuxt/content",
-    //    {
-    //      content: null,
-    //      // https://content.nuxtjs.org/api/configuration
-    //    },
-    //  ],
   ],
+
   plugins: ["~/plugins/gsap.ts", "~/plugins/floating-vue.ts"],
 
   components: [
@@ -90,14 +125,6 @@ export default defineNuxtConfig({
     dirs: ["stores"],
   },
 
-  content: {
-    highlight: {
-      // Theme used in all color schemes.
-      theme: "github-dark",
-      preload: ["c", "shell", "solidity"],
-    },
-  },
-
   nitro: {
     plugins: ["~/server/index.ts"],
     serverAssets: [
@@ -106,12 +133,6 @@ export default defineNuxtConfig({
         dir: "assets",
       },
     ],
-    storage: {
-      data: { driver: "vercelKV" }, // vercel redis key-value cache driver for api calls
-      cache: {
-        driver: "memory", //  memory cache driver for caching ssr requests
-      },
-    },
   },
   runtimeConfig: {
     mongodbUri: process.env.NUXT_MONGODB_URI,
@@ -120,12 +141,15 @@ export default defineNuxtConfig({
     awsSecretAccessKey: process.env.NUXT_AWS_SECRET_ACCESS_KEY,
     rootBucket: process.env.NUXT_ROOT_BUCKET,
     imageUploadSizeLimit: process.env.NUXT_IMAGE_UPLOAD_SIZE_LIMIT,
-    gitAccessToken: process.env.NUXT_GIT_ACCESS_TOKEN,
-    jwtSecret: process.env.NUXT_JWT_SECRET,
     githubWebhookSecret: process.env.NUXT_GITHUB_WEBHOOK_SECRET,
     nodeEnv: process.env.NUXT_NODE_ENV,
     dappRegistryProd: process.env.NUXT_DAPP_REGISTRY_PROD,
     dappRegistryDev: process.env.NUXT_DAPP_REGISTRY_DEV,
+    gitAppPrivateKey: process.env.NUXT_GIT_APP_PRIVATE_KEY,
+    gitAppId: process.env.NUXT_GIT_APP_ID,
+    gitAppInstallationId: process.env.NUXT_GIT_APP_INSTALLATION_ID,
+    gitAppClientId: process.env.NUXT_GIT_APP_CLIENT_ID,
+    gitAppClientSecret: process.env.NUXT_GIT_APP_CLIENT_SECRET,
     public: {
       walletConnectProjectId: "8ea05c2c45ce1000d51a7364ce317dc5",
     },

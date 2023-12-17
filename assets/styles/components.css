@@ -68,6 +68,34 @@
   opacity: 0.15;
 }
 
+:is(
+    .background-radial-green,
+    .background-radial-blue,
+    .background-radial-violet
+  ) {
+  background: var(--background-gradient);
+}
+:is(
+    .background-radial-green,
+    .background-radial-blue,
+    .background-radial-violet
+  ):hover {
+  background: var(--background-gradient-hover);
+}
+
+.background-radial-green {
+  --background-gradient: var(--gradient-radial-green);
+  --background-gradient-hover: var(--gradient-radial-green-hover);
+}
+.background-radial-blue {
+  --background-gradient: var(--gradient-radial-blue);
+  --background-gradient-hover: var(--gradient-radial-blue-hover);
+}
+.background-radial-violet {
+  --background-gradient: var(--gradient-radial-violet);
+  --background-gradient-hover: var(--gradient-radial-violet-hover);
+}
+
 /* borders */
 .border {
   border: var(--border);
@@ -93,6 +121,39 @@
   z-index: -1;
   transition: 0.1s;
   border-radius: inherit;
+}
+
+.border-gradient-green,
+.border-gradient-blue,
+.border-gradient-violet {
+  position: relative;
+  background-color: var(--paper);
+  border-radius: var(--corners);
+}
+
+:is(
+    .border-gradient-green,
+    .border-gradient-blue,
+    .border-gradient-violet
+  )::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: calc(-1 * var(--line-width));
+  background: var(--border-gradient-color);
+  transition: 0.2s;
+  border-radius: inherit;
+}
+
+.border-gradient-green {
+  --border-gradient-color: var(--gradient-green);
+}
+
+.border-gradient-blue {
+  --border-gradient-color: var(--gradient-blue);
+}
+.border-gradient-violet {
+  --border-gradient-color: var(--gradient-violet);
 }
 
 /* Shadows  */
@@ -137,16 +198,15 @@
 }
 
 /* Hover underline */
-:is(button, a).text,
+
 .hover-underline,
-.router-link-exact-active {
+.router-link-exact-active:not(.site-logo) {
   --underline-width: 0;
   position: relative;
 }
 
-:is(button, a).text::after,
 .hover-underline::after,
-.router-link-exact-active::after {
+.router-link-exact-active:not(.site-logo)::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -158,9 +218,8 @@
   border-radius: var(--corners);
 }
 
-:is(button, a).text:is(:hover, :focus-visible)::after,
 .hover-underline:is(:hover, :focus-visible)::after,
-a.router-link-exact-active::after {
+a.router-link-exact-active:not(.site-logo)::after {
   --underline-width: 100%;
 }
 
@@ -169,13 +228,13 @@ a.router-link-exact-active::after {
   background: var(--gradient-color-dark) !important;
   font-family: var(--font);
   color: var(--ink);
-  padding: 12px;
+  padding: var(--space-xs);
   border-radius: var(--corners);
   box-shadow: var(--shadow);
 }
 
 .v-popper--theme-tooltip .v-popper__arrow-outer {
-  border-color: var(--color) !important;
+  border-color: var(--green) !important;
 }
 
 .v-popper--theme-tooltip .v-popper__arrow-inner {
@@ -191,7 +250,7 @@ a.router-link-exact-active::after {
 /* This part is for the scrollbar track / */
 *::-webkit-scrollbar {
   width: var(--line-width);
-  height: var(--line-width);
+  height: calc(var(--line-width) * 4);
 }
 
 /* / This part is for the track (the part that the thumb slides across) / */
@@ -209,4 +268,6 @@ a.router-link-exact-active::after {
 /* / This part is for the thumb when it's being hovered over  */
 ::-webkit-scrollbar-thumb:hover {
   filter: brightness(1.2);
+  width: calc(var(--line-width) * 4);
+  height: calc(var(--line-width) * 4);
 }

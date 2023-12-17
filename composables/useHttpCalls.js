@@ -5,7 +5,7 @@ const FEED_NAME_API_ENDPOINT =
   "https://db-api-prod.api3.org/api/dapis-grouped?take=300&currentPage=1&sort=&sortDirection=&search=&categories=&chains=&sources=&statuses=";
 
 export const useHttpCalls = () => {
-  const submitProject = async (dappForm, images, token) => {
+  const submitProject = async (dappForm, images, verificationPayload) => {
     try {
       const body = new FormData();
 
@@ -65,34 +65,6 @@ export const useHttpCalls = () => {
         });
       }
 
-      if (dappForm?.value?.links?.socials?.facebook) {
-        links.socials.push({
-          label: "facebook",
-          url: dappForm?.value?.links.socials.facebook,
-        });
-      }
-
-      if (dappForm?.value?.links?.socials?.instagram) {
-        links.socials.push({
-          label: "instagram",
-          url: dappForm?.value?.links.socials.instagram,
-        });
-      }
-
-      if (dappForm?.value?.links?.socials?.youtube) {
-        links.socials.push({
-          label: "youtube",
-          url: dappForm?.value?.links.socials.youtube,
-        });
-      }
-
-      if (dappForm?.value?.links?.socials?.blog) {
-        links.socials.push({
-          label: "blog",
-          url: dappForm?.value?.links.socials.blog,
-        });
-      }
-
       body.append("links", JSON.stringify(links));
 
       const proxies = dappForm.value.proxies;
@@ -133,9 +105,7 @@ export const useHttpCalls = () => {
       });
 
       const response = await axios.post("/api/projects", body, {
-        headers: {
-          Authorization: token,
-        },
+        headers: verificationPayload,
       });
 
       if (response.status === 201) {
@@ -156,12 +126,10 @@ export const useHttpCalls = () => {
     }
   };
 
-  const submitArticle = async (articleForm, token) => {
+  const submitArticle = async (articleForm, verificationPayload) => {
     try {
       const res = await axios.post("/api/articles", articleForm, {
-        headers: {
-          Authorization: token,
-        },
+        headers: verificationPayload,
       });
 
       if (res.status === 201) {
@@ -178,15 +146,13 @@ export const useHttpCalls = () => {
     }
   };
 
-  const submitUpvote = async (projectId, payload, token) => {
+  const submitUpvote = async (projectId, payload, verificationPayload) => {
     try {
       const res = await axios.post(
         `/api/projects/project/${projectId}`,
         payload,
         {
-          headers: {
-            Authorization: token,
-          },
+          headers: verificationPayload,
         }
       );
 
@@ -217,5 +183,29 @@ export const useHttpCalls = () => {
     }
   };
 
-  return { submitProject, submitArticle, submitUpvote, fetchFeedNames };
+  const subscribeNewsletter = async (body) => {
+    try {
+      const res = await axios.post("/api/newsletter", body, {});
+
+      if (res.status === 201) {
+        return { success: true, message: "Subscription success!" };
+      }
+
+      return { success: false, message: "Failed to subscribe" };
+    } catch (error) {
+      console.log("submit response error ", {
+        error: error,
+      });
+      const errorMessage = error?.response?.data?.response?.response?.message;
+      return { success: false, message: errorMessage };
+    }
+  };
+
+  return {
+    submitProject,
+    submitArticle,
+    submitUpvote,
+    fetchFeedNames,
+    subscribeNewsletter,
+  };
 };

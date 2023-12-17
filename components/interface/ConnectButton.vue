@@ -7,7 +7,7 @@ async function buttonHandle() {
 </script>
 
 <template>
-  <button class="button filled firm-voice" @click.prevent="buttonHandle">
+  <button class="button" @click.prevent="buttonHandle">
     <Transition name="fade" mode="out-in">
       <span class="" v-if="!web3Store?.state?.isConnected"> Connect </span>
       <span v-else class=""> Connected </span>

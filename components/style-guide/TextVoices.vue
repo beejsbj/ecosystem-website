@@ -99,15 +99,15 @@ onMounted(() => {
 <style scoped lang="scss">
 ul {
   display: grid;
-  margin-top: 1rem;
+  margin-top: var(--space-s);
 
   li + li {
-    padding-top: 1rem;
+    padding-top: var(--space-s);
     border-top: var(--border-highlight);
   }
 
   P + p {
-    margin-top: 0.5rem;
+    margin-top: var(--space-2xs);
   }
 
   p.wrap {

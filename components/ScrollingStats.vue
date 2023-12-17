@@ -23,26 +23,6 @@ const cards = [
 
 const changeImage = (card, index) => {
   const triggerElement = ref(document.querySelector(card.triggerClass));
-
-  gsap.to("scrolling-stats .graph", {
-    scrollTrigger: {
-      scroller: ui.isMobile ? "" : "main.index",
-      trigger: triggerElement.value,
-      toggleActions: "play reset play reset",
-      start: "top 30%",
-      end: "bottom 70%",
-    },
-
-    onStart: () => {
-      graph.value = card.imagePath;
-      gsap.to("scrolling-stats", {
-        "--after-height":
-          index === 0 ? "5%" : index === 1 ? "50%" : index === 2 ? "95%" : "0%",
-        duration: 1,
-        ease: "power2.out",
-      });
-    },
-  });
 };
 
 onMounted(() => {
@@ -79,7 +59,8 @@ onMounted(() => {
         </p>
       </stats-card>
       <picture class="graph">
-        <img :src="graph" alt="" />
+        <NuxtImg loading="lazy" :src="graph" alt="stats" />
+        <!-- #todo -->
       </picture>
     </scrolling-stats>
   </SectionColumn>
@@ -90,13 +71,13 @@ onMounted(() => {
 scrolling-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: var(--space-s);
   position: relative;
   align-items: center;
   justify-items: center;
 
   @media (min-width: 768px) {
-    gap: 5rem;
+    gap: var(--space-2xl);
   }
 
   stats-card {

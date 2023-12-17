@@ -119,6 +119,6 @@ function onLeave(el, done) {
 .panel-content {
   display: grid;
   align-items: end;
-  padding: 8rem 2rem;
+  padding: calc(var(--space-s) * 8) var(--space-l);
 }
 </style>

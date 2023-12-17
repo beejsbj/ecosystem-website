@@ -1,8 +1,8 @@
 <script setup>
-const props = defineProps(["showModal"]);
+const ui = useInterfaceStore();
 
 watch(
-  () => props.showModal,
+  () => ui.showModal,
   (newVal) => {
     if (newVal) {
       document.body.style.overflow = "hidden";
@@ -16,9 +16,9 @@ watch(
 <template>
   <Teleport to="body">
     <Transition name="modal">
-      <div v-if="showModal" class="modal-mask" @click.self="$emit('toggle')">
+      <div v-if="ui.showModal" class="modal-mask" @click.self="ui.toggleModal">
         <div class="modal-content">
-          <slot @toggle="$emit('toggle')" />
+          <slot />
         </div>
       </div>
     </Transition>

@@ -148,13 +148,13 @@ button {
 
 .button:hover,
 .button:focus {
-  filter: brightness(1.2);
+  /* filter: brightness(1.2); */
   transition: 0.1s;
 }
 
 .button:focus {
-  outline: var(--line-width) solid #fff;
-  outline-offset: -4px;
+  /* outline: var(--line-width) solid #fff; */
+  /* outline-offset: -4px; */
 }
 
 .button:active {
