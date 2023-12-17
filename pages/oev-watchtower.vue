@@ -1,6 +1,23 @@
 <script setup>
 import { useStorage } from "@vueuse/core";
 
+const aaveV2Eth = await queryContent("/aave-v2-eth").findOne();
+const aaveV3Eth = await queryContent("/aave-v3-eth").findOne();
+const maker = await queryContent("/maker").findOne();
+const compoundV3Mainnet = await queryContent("/compound-v3-mainnet").findOne();
+const inverseFinanceEth = await queryContent("/inverse-finance-eth").findOne();
+
+// data
+
+const fakeData = {
+  metadata: {
+    title: "Total QRNG Fulfilments",
+    chartColor: "blue",
+  },
+
+  options: {},
+};
+
 const userTvl = ref(0);
 const barCount = ref(5);
 const showOutput = ref(false);
@@ -101,7 +118,18 @@ function buttonHandle(event) {
       </form>
     </SectionColumn>
 
-    <SectionColumn class="single-chart"> </SectionColumn>
+    <SectionColumn class="single-chart">
+      <BarChart
+        :data="aaveV2Eth.body"
+        :options="fakeData.options"
+        :metadata="fakeData.metadata"
+      />
+
+      <pre
+        >{{ aaveV2Eth.body }}
+</pre
+      >
+    </SectionColumn>
   </main>
 </template>
 

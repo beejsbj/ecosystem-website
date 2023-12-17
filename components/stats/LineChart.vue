@@ -122,7 +122,7 @@ const options = {
 
 <template>
   <div class="chart-container">
-    <Line :data="data" :options="options" />
+    <Line :data="props.data" :options="options" :metadata="props.metadata" />
   </div>
 </template>
 
