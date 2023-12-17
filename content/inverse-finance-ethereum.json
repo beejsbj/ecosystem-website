@@ -1,0 +1,2579 @@
+[
+  {
+    "date": "12/18/2021",
+    "totalLiquidated": "870.876295559737919623042108202531",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x8dd1475f249259d57b310bafb64e07ef58fe64b4c2610285b469da34c9b8bc7d",
+        "liquidatedCollateral": "870.876295559737919623042108202531",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "12/22/2021",
+    "totalLiquidated": "6619.390647747948883273531590791395",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x4982e95a6ebc684ef9aab8bd6d40d91dbd587d517c74dbd85ed1044f9f1bd528",
+        "liquidatedCollateral": "6619.390647747948883273531590791395",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "12/23/2021",
+    "totalLiquidated": "13010.28226251767876309935579189301",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xb81b872bb430424746daf33a6d1b49b1f3ce5fb6ff6c2bf3a49e6cba7cf3323f",
+        "liquidatedCollateral": "13010.28226251767876309935579189301",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "12/25/2021",
+    "totalLiquidated": "5173.062106602207223823166965449575",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x7b2b232cca2a8424f7105ab663f473fe9b9052b3e20401abc4d9dc892574bc12",
+        "liquidatedCollateral": "2356.358034206879837155734080780856",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x94f79127242e59761c0937ce3b426eeadb0f40d6be082c862925fe1904abd3da",
+        "liquidatedCollateral": "2816.704072395327386667432884668719",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "12/29/2021",
+    "totalLiquidated": "3638.435107052278982711575132138322",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x8a6d305ddb6080c21515ef23c6b9c8c32133342efeaca23364887d0914056fcb",
+        "liquidatedCollateral": "3638.435107052278982711575132138322",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/3/2022",
+    "totalLiquidated": "17592.088812922085284598179069040666",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x4bdc106e323020777ba6e6479788f2b4eeef1dce5b446514a372e28c00c318cd",
+        "liquidatedCollateral": "6305.990917576820443093353711377836",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xfb872757bd9ff8eab6b1fd3a88098d994c3cb6d72dfcb5883e3eaa8ab443fe95",
+        "liquidatedCollateral": "11286.09789534526484150482535766283",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/4/2022",
+    "totalLiquidated": "19941.459381218737073042562319972769",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5342144862870abdec21adb75eac39c535815dec0c8f5e272f98279cb452e313",
+        "liquidatedCollateral": "8446.317991446875976876025051427259",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf9bcef9c22448885e6141f9b86afc6d8a7aabca6ac7abcaca0ef2505aede0dae",
+        "liquidatedCollateral": "11495.14138977186109616653726854551",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/6/2022",
+    "totalLiquidated": "425694.925423571968825048701782059299",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0388834096bd4f9acd28eca9549d99b5eb24c5c544040be65b6cc117719e51a7",
+        "liquidatedCollateral": "115259.0635017329648016595980443394",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x0d7de1f95d06a923bfeaf00b41ff621ac5418014029ba7d3978138d982ee4aad",
+        "liquidatedCollateral": "12445.01541336809735575834082239222",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1d3dcc184622d4b091e0c7a95d1b5ec73e29f846aa120ae8c9adce984e789349",
+        "liquidatedCollateral": "12278.92677718495243023341837291636",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1e9fc2ac5e44ff88ed3712b73baf532fcb83e9fd0002adf0761b9135378923a2",
+        "liquidatedCollateral": "5952.946721565340323160020096495547",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2162f5416c0d905875e8b4e8abfe5549af07b1a3d7afddaf441f234cc4332916",
+        "liquidatedCollateral": "12058.58810156366916297953671710373",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2dc6cefa9d144ec155116f0e614354154769aa17e75bf951479acb150d36bb39",
+        "liquidatedCollateral": "6672.421154835936843833547740956427",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x340f49b29a666f04b08013e9ff147578d00d9cba8a9dc7851ed16ba5c66d013a",
+        "liquidatedCollateral": "12271.06694620780793424485024641346",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x3fba5e2c942067adb23ee6b7001259b843841b4d46351abd2a098ca0e49f6f3c",
+        "liquidatedCollateral": "138311.1259360922145291752871423701",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x448c69157b38b60e8d8610ccca0e5912e3aded08928ecb0dbd892a5cb7bcd2e6",
+        "liquidatedCollateral": "9111.461464694472035121597361314102",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x570da9abb5bfd8c127dcc9747cfb95175d1a966c0039bed03c142401d6633366",
+        "liquidatedCollateral": "13193.92410189295033437596829601593",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5ea72724a0b88058cb3f97492a6a88dab892b71c83c83342b1933c7e424d97a1",
+        "liquidatedCollateral": "8953.545862447590817134243836410498",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x687a765d014265078f1dfb1a20cb11dc6e981c57e6dfeadbfc34c2ff300da563",
+        "liquidatedCollateral": "12841.70913358119415351976000538822",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x846b6613f6f4abfa320de37043a0179f1a0734bf4df14e6c41f852e22a54dba7",
+        "liquidatedCollateral": "16893.87852939228786959433842010115",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8c15d5a8f7c95e6127c8a2557cd6c3637bce44d577d6a8dc722d41ff1eb29a6a",
+        "liquidatedCollateral": "8836.614567509025852296423633401301",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9ef1cf711e25cdb728d3d1230c670d85f3e23a36144af1554ee7bfcdfcffad8a",
+        "liquidatedCollateral": "6535.672862023480797362639592614945",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xafde47357d08a975778f122eccee23d60585cc2a2301eeea8f2e16ff400f43c8",
+        "liquidatedCollateral": "12115.21589835486919792006242933438",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb7352d050bcc2b62a6f66b7b677744d6ad914a61072c2d67327a94b13bcee99c",
+        "liquidatedCollateral": "8770.326450966949847750952687394949",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd7bf83a47800d95350a0bbe16253d7631c70e3507f87cfc20e6d655acfd1dd21",
+        "liquidatedCollateral": "13193.42200015816453892811633709658",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/7/2022",
+    "totalLiquidated": "269137.175065598614192464980845206616",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x042a66c9f647a03f06852a5b9acf4609cf6c186be9c85deffcef9b67349f9a8e",
+        "liquidatedCollateral": "115036.2823657303552542341969620634",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5200786477cea57530b4251f5e11df5f8890c2b95bc2163da8d04f6c9b7e9b52",
+        "liquidatedCollateral": "36682.08682597604983601025768405953",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5fc6cfcfbd189ea6f0cbffceddf36f494ce96f4dfa626e02d082a88d3959b24b",
+        "liquidatedCollateral": "8719.997124692156127839151883317586",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x6a180a9720c5185160ae48052f25c28f237d5e63fd44d7338b6855d6fdf68122",
+        "liquidatedCollateral": "108698.8087492000529743813743157661",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/8/2022",
+    "totalLiquidated": "230857.17820169805863779259288358839",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0767a92fcdb4b9e3f32c5c259af5562b4466d47d8d3a6c0a3a4fcf5d1327c28b",
+        "liquidatedCollateral": "156063.0580407542804322409435470106",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd601de7eb2d18c73cf3d312d3b205e0b7a681072c30b25724fe3691964e1ca7c",
+        "liquidatedCollateral": "74794.12016094377820555164933657779",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/9/2022",
+    "totalLiquidated": "115348.08744241746209097935565506901",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xb7f3c818629e9d75b529cc25dfc2e63d650123f53a6a3ee38d0bec7289ebbd2d",
+        "liquidatedCollateral": "47996.43405088901270388067757285716",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf4edf408d56cdb1633247d2fc6ffb4f3c975acf57f3b623e0db28764f7e7579a",
+        "liquidatedCollateral": "67351.65339152844938709867808221185",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/10/2022",
+    "totalLiquidated": "331196.42659871997146121253451371044",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1202372fe7e175412441a3d6589ea86da4636cb77d9ac727aa881edfe8cb54bd",
+        "liquidatedCollateral": "14453.10554863948534344872261453133",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x31b0828b247c21876797ce17c840757b62637a27729f6f83423e463167b0ce1b",
+        "liquidatedCollateral": "88279.20120382100808515348352485301",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x500a24e3d64c2b0b729ac143749a0d2fcec92080b5f8c879e32c4918ac255d8f",
+        "liquidatedCollateral": "120631.092684867967633297116853033",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb206af014e97fe0fe919a9159fe7d69200a50021ce9896b3f42c84aacfa2bf59",
+        "liquidatedCollateral": "107833.0271613915103993132115212931",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/12/2022",
+    "totalLiquidated": "7696.317783219115222999894133554984",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x156776b800381c10520be1532f46cbe4430e8a92a390da59db71ea7b7b5ad099",
+        "liquidatedCollateral": "7696.317783219115222999894133554984",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/14/2022",
+    "totalLiquidated": "14291.64864528596338098112057126191",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xc3db827ba422a241e872150fd0f3ffebacd81978182132b5387712a97eb0cdf2",
+        "liquidatedCollateral": "14291.64864528596338098112057126191",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/17/2022",
+    "totalLiquidated": "343642.695511029361737152606846625765",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0e722b63ab953f66649dfe82a6d2fcb8855b89e7338bfb90c08914296cbf5065",
+        "liquidatedCollateral": "5409.517402418486875519985076798468",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1f5938e70bde0d1b93f8e0c0e45624c14877146706fa13f709615a6a02de685c",
+        "liquidatedCollateral": "82234.277604293676841060549018087",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5e1eb1e1cad086331ae5295357f8f2779e1d111857d8db9e14b2f9f6c1682bdc",
+        "liquidatedCollateral": "73982.1266846752012618725419787431",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x88450cad9bf72b5596336254a01911253ccf3759dd468efb0aa6d26804f034cb",
+        "liquidatedCollateral": "9149.887338047855395500520646894184",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa832d7ac66524de712e99fea3fac775e83ed2f2a2eebdad0279b8baaed3ac569",
+        "liquidatedCollateral": "16517.42469609934587575029092923493",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb713ff67a5bb133b81cfcdf22ec41511d0bb03ebc6a07e2a54a55d5c554a8c69",
+        "liquidatedCollateral": "8485.907657518130909152552619666885",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdf3216e6cd6a466401c50fdb88526aa0d890b72efedd9ee8912004c258466e38",
+        "liquidatedCollateral": "54002.70840674515042380982994195616",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xee6a154f1b7d04332ad14b54f4d9a4542469667557da8142635919ccaf994862",
+        "liquidatedCollateral": "4902.015978482568423578535004002488",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf3e1b2e7df5394a4a642037f0749344a475336754c028c119c32c766d9d16416",
+        "liquidatedCollateral": "88958.82974274894573090780163124255",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/18/2022",
+    "totalLiquidated": "669769.683242750515445210044096678342",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x03d484a08392c287e9110527b48df044b05b218b1a0954aae30736ebc266af30",
+        "liquidatedCollateral": "65849.52141314409772756290532015425",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x069b611c283bbb2afce89eeda6ea3fd00dc6d3c326dfe8b1a10894aac91e013f",
+        "liquidatedCollateral": "37325.58711830292728586841746897608",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x219cb7ae49741bce416b33a76551f310b9b54a51466485697ddcfbf22ad6f82d",
+        "liquidatedCollateral": "87708.77145812413506390745043959723",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x3ffb1a78df66888e451e02b926abf62722560e192af284094c532b72f3ba27ac",
+        "liquidatedCollateral": "127054.0881261843452343423526423471",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8e46da092e2874730054841a8e5ff990ae1e806fe0800d303478245448cb1766",
+        "liquidatedCollateral": "19963.92020759632895751277207169117",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8eac2e2580a83251f9359a55ada1471fd007296bced2f664a877628eea09305a",
+        "liquidatedCollateral": "10540.794385595744290047425025721",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa6480d30f62a000a5573007c99847687e8e61e8fb81293d4e1779df57e978e22",
+        "liquidatedCollateral": "64235.4613723516500815399679931836",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xbd6b81dd808109abdd802267c29e51128369eda38e72b825cde2aef586af2174",
+        "liquidatedCollateral": "17393.04717697775966005480986460849",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xbfb393bf2092b1893ead17efc95199f1c50f74449b06af254f319376ca87372f",
+        "liquidatedCollateral": "41151.44242176387491089497619143182",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdd3a9a9ce3fbc86457686a3e4e2b558b01d3910dc4b14828b035276875b847fa",
+        "liquidatedCollateral": "26569.82833238755269950672066515986",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xddef49444958581e57bfc0330715a04bce6a69ad83099477c89626723ad12751",
+        "liquidatedCollateral": "64138.32624930385690698537583977319",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdebc81e43fac7998030d0d6c93befef46446e961014e361a93e5aa64ecdec3ee",
+        "liquidatedCollateral": "26584.4634344545410645612257814461",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe5627a4c9a76dd016d66697bcb95963bd2be738bd410b01d0fb819e61a8beee1",
+        "liquidatedCollateral": "55588.3844345135215983568829454578",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xead38d98a66301e28a577ebe3adb8284214232a776fca57ba48c115bd4d3e358",
+        "liquidatedCollateral": "18750.73186431114085627407622702535",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xfcd9a26ff8578bf71cf81d8e16aa158778bbd042ae60fc8ada034336442f2e62",
+        "liquidatedCollateral": "6915.315247739039107794685620105302",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/19/2022",
+    "totalLiquidated": "44286.582693846750030531414236439033",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x661102742c88c52a4f1613f5c51faef628771e225d807ca75bff9990f7bf8fa2",
+        "liquidatedCollateral": "21364.86453897898898800717154813481",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x7cc2107005ee70b8d3888c262a91898b58043dd9abf2cee72fad94618119179b",
+        "liquidatedCollateral": "3458.202169764494423367138056799443",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x7d4d670b873d5b6bf1cf140a536afc4cbcaf4707788143bdd9373bb71304506a",
+        "liquidatedCollateral": "19463.51598510326661915710463150478",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/21/2022",
+    "totalLiquidated": "32798.487864435773895036058701252326",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5a8f1a872ae7404f91f1db95d0b414582144860dd32b5f7f5a24f2d7035d3b62",
+        "liquidatedCollateral": "28633.39806500767968582876822625632",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x74f50247abbd6d69a97b4837e3a48f8f4b92eebcb2b109920e500a13fca38b37",
+        "liquidatedCollateral": "4165.089799428094209207290474996006",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/22/2022",
+    "totalLiquidated": "410448.5954178697993051094960587919",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0fafbf65473b80da9c9340bc22dd1853ac7eec5f5fa3d8609ff01afc89ec7956",
+        "liquidatedCollateral": "6230.514623196568514884079038872015",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x17617f144f3e1d4819c71738e112f4b48e96218b6f97197aecb533ada6d6027c",
+        "liquidatedCollateral": "76153.6083738085523505307152298147",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2c3677e2e0553f8429fcc6761f12e837900c740524b3ae5e8a0e808622a7078b",
+        "liquidatedCollateral": "64194.44846236883613924362847621765",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4bf1f78ee42641dc89ba112f4bb02368da448c4dcd1413c43fc7a5a45ee2610e",
+        "liquidatedCollateral": "34410.341180298844816110069841349",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5d34f9542eadd7a3183fb3b0734a6519ccef8e6c5323267cc6bcbec6cdc11915",
+        "liquidatedCollateral": "5509.694774526074055724621062765995",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x627ae0ac38bf5f98b20d32c3a322dfe9cce05351be78317aa94062ff2319c42c",
+        "liquidatedCollateral": "21291.16102438843690110539871365022",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xac7460dafdb250fcb93644764cd4413579400d4284ac92aa666a709d917752a7",
+        "liquidatedCollateral": "94815.48207808611389151076400361914",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd4094948e5db9b52908bfb9969162a4b9589bc9df2a1a2bf0034a3087eb0a590",
+        "liquidatedCollateral": "40594.68948311201268262126852151521",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd6806c56dc58af7ddf3582c075177fe352b9cdb5a97b3bd0d5a4d7f63193fa3c",
+        "liquidatedCollateral": "23248.72740064285398570272545093061",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xeadcb15f775aac934443f119909341799ca350d6ebb348e8709492eb10a2dfaa",
+        "liquidatedCollateral": "43999.92801744150596767622572005736",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/24/2022",
+    "totalLiquidated": "398756.168052893593480178060097766152",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1b5ba7c241c4393689eb32db3d96064203e21369d225c89375d4f4bb99ef115e",
+        "liquidatedCollateral": "2769.923809690029126994445888949588",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1ea957ce3bbee525dc2a0704e737829532830d856f32c5f45c5eba3216b22c12",
+        "liquidatedCollateral": "60691.9798680724093829979726542911",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2385efb087bbab103632444e05967052b806f1eb61408664d8aa659e619586a8",
+        "liquidatedCollateral": "7938.274080387528997360221989675286",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2524ec76aec92867e58f9afe95422dae212e6d82a071fc4fd0d6dde9a38c2a3f",
+        "liquidatedCollateral": "3669.169627426878059373699363632599",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2c1111bc0eaaf10108a774e1907f60f419224b54d79079be5a5a39c84f929ac4",
+        "liquidatedCollateral": "31184.93743950709087251767666106174",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x3076a63e0ddf6d045d7afde1b1f2d56057b0a529873132ea59cb754bdbf3525a",
+        "liquidatedCollateral": "11347.89888449569459727332902741109",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x58b9f7a8df7cff3623308b69fdb0c53a1e465ff600031721855ab90eb6af161d",
+        "liquidatedCollateral": "10549.51147258667574497559606371222",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5cddc30cb0846d57fb2067c52f6826d51a594c9cbe07909666a2563f9693a66f",
+        "liquidatedCollateral": "9623.801058573553058425318841930055",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x6aca5d5e2344d55e9b79e6d47422b56befa93c1baac6223e1395f31d40fcdbf2",
+        "liquidatedCollateral": "7212.074074089198841077008354337534",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x846b8157ac21be915f7a0b075a36984f69fb30d88905f2ebe0d1a80e076b6afd",
+        "liquidatedCollateral": "3652.189918693768651048606399012629",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x89df13842dede868441c6d2e3d359caab0ed8dd9bb3e0bc062c770e1fcb646ad",
+        "liquidatedCollateral": "60820.90437284342437853423969318047",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x938cbf1bbc227581be2b3529c5f8c9d3aac0d3a41cc352de421be0b9ba301bf2",
+        "liquidatedCollateral": "2756.070302839848663652218554718221",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x971bc29cb7808663a47f1ce8cb99bac2003849edb937c0823c71fb892dd79c89",
+        "liquidatedCollateral": "36865.19224939251000428437345999068",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x991a7a8491be89d2f12d6c68aac2fb2821d4acdd96ad6cfb2eb6f7643ae91dee",
+        "liquidatedCollateral": "124067.2512989206326365490715771929",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xedb7d514e5b5df6fddd510791a2d79bb1e999bb78474b64f7db21d40d0e61e8c",
+        "liquidatedCollateral": "25606.98959537435046511428156867004",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/25/2022",
+    "totalLiquidated": "2064.177156840424927744561422803302",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x773cc8bc60399b7e5fb550531cab60e577df8160cf57911aead337288abe9a43",
+        "liquidatedCollateral": "2064.177156840424927744561422803302",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/1/2022",
+    "totalLiquidated": "182671.3100703426993090432307380054",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xe3940ecf00116c246006b84d07329831e29431b5154119d90a7f975bf718857a",
+        "liquidatedCollateral": "182671.3100703426993090432307380054",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/10/2022",
+    "totalLiquidated": "25794.1880579821610754617437398379",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd2098d500df0c3b40990396bf68f417ae7d51d068af00a8456c74ed68f2cf638",
+        "liquidatedCollateral": "25794.1880579821610754617437398379",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/12/2022",
+    "totalLiquidated": "63873.623050653836201420016905659238",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xaa8fdd0d468b6e2e1fe93c38bf0191390002cfe54f847f4ad4b425c3c2923add",
+        "liquidatedCollateral": "62647.10915226682006737982485634852",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xcba5c985b5358348acb060b38046eed0859976246f28589f6529b5c574692898",
+        "liquidatedCollateral": "1226.513898387016134040192049310718",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/21/2022",
+    "totalLiquidated": "21.99999999999999796164300523562396",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5d1991fe730a4a6ffbc32f6eca915fe9c8db6459814ceb5a5278c1edd3b68822",
+        "liquidatedCollateral": "21.99999999999999796164300523562396",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/22/2022",
+    "totalLiquidated": "12.0801367093734213091220034229188",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xe2c4c9dfbe78ac1ffc03303c484550a00e3f86f5735dd209d3f97727a8a2493e",
+        "liquidatedCollateral": "12.0801367093734213091220034229188",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/23/2022",
+    "totalLiquidated": "7402.60972650736923688817573422646",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x219e46c827aaa28a9b0cc497b48d9d64a0562ee046110d619b7233d75de2943f",
+        "liquidatedCollateral": "7402.60972650736923688817573422646",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/24/2022",
+    "totalLiquidated": "75162.458278271597305592280924981987",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x538bd127c4d9e86861af61a2d9236dd622b776c4df1f5ebe826fd2d6f9282266",
+        "liquidatedCollateral": "6543.242514718723694687729753494177",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa94ea83c2a91e7c9a175ef7baca1b0917797ad1a65d94eb37e130a86bbbbed26",
+        "liquidatedCollateral": "22019.51303025802021626052440800254",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe84ca1c50dbebea5e60175a5af582df7db24fc8d27961975e9fe6bd2efa1363a",
+        "liquidatedCollateral": "17313.40381320331493863567076844733",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xee378b87e10d600701206e32d4dfbee639db5c6eba46da0771d6808df2e49a56",
+        "liquidatedCollateral": "29286.29892009153845600835599503794",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/1/2022",
+    "totalLiquidated": "11579.66640371500365735546912053129",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xc27139d94ab89216822cd74831d5bb16cb98dea7731aa7c6001b5fdac17f8ef2",
+        "liquidatedCollateral": "11579.66640371500365735546912053129",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/4/2022",
+    "totalLiquidated": "11974.197417846246289266721369697031",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1b2d3bfead846a4c186fa6ff98e9cf90d5c97e4ffb14d08e210c00cab03399af",
+        "liquidatedCollateral": "5619.718268396366724280169236543608",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc82ee80dd176831b4ecd1a7439fa51292366b156043f2951c5f1a1e48ae0e23d",
+        "liquidatedCollateral": "6354.479149449879564986552133153423",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/5/2022",
+    "totalLiquidated": "42172.0232340839991481245309228949678",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5d87406d45f5ab61accf5668d3db2aa7cd48bcd45b7fbc1d27641ae48acf619a",
+        "liquidatedCollateral": "662.0218838148701890207242751898478",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa1c6865a0a5d0a3780c32fa93019971cb733187d72e4af7f35ea98ed72703f9d",
+        "liquidatedCollateral": "41510.00135026912895910380664770512",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/6/2022",
+    "totalLiquidated": "6293.918225354237870442300277406796",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xdf19d582bce7a3c54058e7a00420ddd390be9f8737a3ef1dbf2b62dc65123818",
+        "liquidatedCollateral": "6293.918225354237870442300277406796",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/7/2022",
+    "totalLiquidated": "2163788.5615419128256466189633338",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x7bf04e6c4451a1ee4065af1c0c80bda4340f958f2eea9ae91271e6ff30907e06",
+        "liquidatedCollateral": "2163788.5615419128256466189633338",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/11/2022",
+    "totalLiquidated": "296.3378610155238806280225825623624",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x54468209e69efc5bc09b980bb050c72d152f46a6211a9066791d77bb6423a131",
+        "liquidatedCollateral": "296.3378610155238806280225825623624",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/14/2022",
+    "totalLiquidated": "30123.50836376905503958389823481896",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd8edf2ab0d670958be9ae4f9a899be07d6f534ee0e5b7e77b9f3631d9f3ac212",
+        "liquidatedCollateral": "30123.50836376905503958389823481896",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/17/2022",
+    "totalLiquidated": "6601.59223026682588538621444844786",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x942864f2eee1009bd83565c3bbb62ef2cf34d605e4f349585082652b21c9f309",
+        "liquidatedCollateral": "6601.59223026682588538621444844786",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "3/27/2022",
+    "totalLiquidated": "220.266691942145993004780038210483",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xe051ead3b0db6d8f7c4967e287ea8beb2f9f0d51eb9005ccdb61d7f4bf0888f3",
+        "liquidatedCollateral": "220.266691942145993004780038210483",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/2/2022",
+    "totalLiquidated": "1885822.856094291551837406652993930316",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x06320c555648baffb1e6f03d76c980d1bd27848ec015ae45f41bff1bf77a7a93",
+        "liquidatedCollateral": "18815.48164580779605771634969167703",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x0732ed9f06a932ab24bd6588e51a9a11c3b7860459af2ba8a3d48f5545aa5f13",
+        "liquidatedCollateral": "13175.28811252963838321099923071996",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x085568dc4e0bbd765e80c15e917ff59ea57526126687d78044672a6c0c59f953",
+        "liquidatedCollateral": "116588.2115043925097637323665016859",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x087a123d9cd1c74cdc69b4facc522bd39134ea99c3caacba9d0662bde0f13dd9",
+        "liquidatedCollateral": "99687.95109894634540906612090625293",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x08b424d29d73ede68fc0293c72980b6f44e4c3ee0ef9ec425bb5794ab01e6702",
+        "liquidatedCollateral": "25942.61615436180373398998376612034",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x0ddd650b5ea637f6c3d49b1c11139378634415d3cd12b18bd74a5f2dc7bab41e",
+        "liquidatedCollateral": "13301.83235071000183641019544494339",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x115b2831b5f402b658efaf52729a3e5c5b798b2efe23aac52f8735b31982c4b7",
+        "liquidatedCollateral": "29488.88887500841077795034799758908",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x15c62a4a644b13858b92bf9ea1daeec68b2fcdcfda51f52541ad6f1e668a7ac6",
+        "liquidatedCollateral": "54740.10755836025804337971636578548",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x197f761cf95761f645bf481deb4a1c926bd4c262d0001e4f9e0749a991230964",
+        "liquidatedCollateral": "89862.68385848387945866309739256438",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1cb23165801dae76dcfa08ead1bb6f0780992eebb738a0378befbcdd1c8d6c2f",
+        "liquidatedCollateral": "12694.09807109607366612621430858663",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1dd5bf1bd7d5f788d1ddbf2de1b4e026f0955968643c8c761f7397e1ef2ca14c",
+        "liquidatedCollateral": "6597.496358629298734096911880325482",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x244f5cbf30705552453b388b45ba86637a0fa9a049e0bc802e28cb665dd42cca",
+        "liquidatedCollateral": "13205.68985099921338571868516411358",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x286c74460fbd5c87b2d6e859277fb7378c5767e39873df96ae79702b5fe4b7df",
+        "liquidatedCollateral": "15150.11750102221138852690735317314",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x294359b56601a48cb3334bd5734fba282fd9e95b02d25dfc395204e53e21b28e",
+        "liquidatedCollateral": "13601.44042798735574357566977579941",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2d776b7082f51d002a63e1cc6378c35acce257dca82e11b1032868e01cd11c9f",
+        "liquidatedCollateral": "13389.31811783973901189121322518636",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2f0aaf1cf7002b3b8bc10332fca1a10320ec8a24430da7f2d1b854bf7b92dfab",
+        "liquidatedCollateral": "13515.31006179650982566461197548609",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x302b64cc87fa7fa72a0c7834db28f4cf9ae4cecc7693a2b135f69742ee04a762",
+        "liquidatedCollateral": "13175.28854332816929333138544284379",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x36dd08a8047403121bf86a16ca8b540129d2d17418001be1a603bd0725ecbd59",
+        "liquidatedCollateral": "13515.3105072221838233975841541569",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x37fb20c42bfefe34d6a4f2fecd300cb0f4340f5f02791889f20fc7f715b84f82",
+        "liquidatedCollateral": "13960.30986814844913000531099374343",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x3e9d7b40af596bc152c810f2c348d01e24c20123e6613bff219edfb53cca0820",
+        "liquidatedCollateral": "78261.17993867003860121941656767481",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4470c7128d484a4ddde719a0f4776deae26447db584fccbe8e7335fcf42ed6dc",
+        "liquidatedCollateral": "13777.02736381810369614379302261486",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4700899466ed96edc124ee31a4dd5aee4ac03699c0ef68ff0c2d1f18fa804053",
+        "liquidatedCollateral": "6327.782324653420353222080654681777",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4a0511f281f77bc3c8bd6f1417820b43e13d2474c3277061136a708a38058a20",
+        "liquidatedCollateral": "47488.97757325463869168766077311409",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4af9cf792b6223fd92e7f98d7d258b9d3948b3f2dff2e22480d3f3cc2c3aee97",
+        "liquidatedCollateral": "71217.74045526757951510644162076345",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4bd11aac3518291aeded536dde5fd563c7297c2abc1c8a7d9c1fed9f3257a326",
+        "liquidatedCollateral": "13789.70691875943074224230463079561",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5344a9a6a7b8f4bffd37fa78002b750fdb49fafd00b01a5e7302e910cbe442dd",
+        "liquidatedCollateral": "13133.50927540164870503999269751603",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x56f60db0a6f5f51f65f03596fafb48ceef074113f9aa64997509f3d0c7703040",
+        "liquidatedCollateral": "22101.02252488078882081814197517384",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x589c58709e8d2d5491dd7727e591207ac575a1ae43c68ba9ade5c3ef8a6e70a9",
+        "liquidatedCollateral": "13386.73604777900980089865020375411",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5b0fe3f5698cb81718ecb5e8e658012798dec2d8481c819362d98bf05e4c2502",
+        "liquidatedCollateral": "13524.60682788556217998410123225826",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5ea8f9a1183b297495f42d681510474d23bdef5933affdf13ce85aa5f3d1cf0a",
+        "liquidatedCollateral": "68922.56031245618130446333980666164",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x64ffa31b25cf96dc520e305f471d3eba1387185750dc230912286fa7fb787343",
+        "liquidatedCollateral": "26414.52317059491357309583968986187",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x6c534d0b78af340648f13bc266505259deb7b39a1af3292f9d86d9beba19d728",
+        "liquidatedCollateral": "91077.28143725717283463985051333208",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x6cda5ba9271f1b5da565c3cf386191baa22c4aeb052507618e6f6da6cd9b7a62",
+        "liquidatedCollateral": "13953.30212354454274473681857160817",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x6e749828a8965b6e16fd675615c0a290b5ab7c4dfd35b2d49f406647bbf24940",
+        "liquidatedCollateral": "53161.57291800978675035817156681355",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x701e4ccafee2565ae9fd396e2611c23313d3c1df66865bf8d72270d785eafa4f",
+        "liquidatedCollateral": "13303.27416386370551318825050186017",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x73540449f354e92e8c04c4f960d4cdfa1df0c51a382cbc0a72720544f90c340b",
+        "liquidatedCollateral": "1200.118178777549846933307246166515",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x7a746e69a79ed19b2f02bb05b0763260d9544048fee23d937e7467ecccf6b5cd",
+        "liquidatedCollateral": "13195.43668389821061214055090767252",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x7c07c40c89dc334dcb9c3144746562337e91d35f274ba2e83cd68a808b8ed3a2",
+        "liquidatedCollateral": "13777.02759222042339348193870969516",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x7c30041e75567535734f406cbf748cdd62c03483f075bd7f099a4b94017a1eb9",
+        "liquidatedCollateral": "7548.067814583952083542867819454541",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x826c2b4c46ebc72d0fab5fcfc0f3959465586eba739fc2a86b764af83f5a9d14",
+        "liquidatedCollateral": "83642.21300204140388427762010570708",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8daef795e109a79215d187420258f37e8f7e11bf75b4097fb58d9ba28098bcce",
+        "liquidatedCollateral": "12802.1750572364461070605621541795",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8e5529355e35f401fa56f376fd2d9a39d1085b02cb126262ee883e412d8f6a50",
+        "liquidatedCollateral": "13805.36742024479670158084994971004",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9603e383e96f544054a40f61a8642a9bac0b469f3eea7309639c3c03fca3e88d",
+        "liquidatedCollateral": "13301.83235071000183641019544494339",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x98e352863448d1102cc9c0d7194b6416725a809cf8529059de22ce0c3f1bbfe9",
+        "liquidatedCollateral": "13995.10857197136693380117895092035",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9e119e507e5ac233719d0417f0af774a0bde5e701b495f6f637fcbb531fb6d56",
+        "liquidatedCollateral": "12842.90241304259832218260962783667",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa0754627ef5933657ff0954cecfd8b4edbe82a138545ceb2e47b743dbde18144",
+        "liquidatedCollateral": "7217.718482459372886509607337448613",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xaba15bcf45ce414b78059dcfc9a3e2719d87f45e0ab116c12d3f5a3fea7da67d",
+        "liquidatedCollateral": "80403.50089381029532382969876911279",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb39f7c0895ec5c5fd6bf826c02dda6b99c5f9ce983daf640d155d99d645b6c40",
+        "liquidatedCollateral": "47031.238325110728037278149974561",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb4dd314f8b9e149ff89053a6c15c56915493f6374281043bd0a47f00870dafce",
+        "liquidatedCollateral": "70839.3635718299227990038756750071",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb91f5e8cb78a1eb7ec92a9d620d113a6b8c7f2619a201659ec7998578e8326b4",
+        "liquidatedCollateral": "13870.1097262159660802367750398377",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb9b5e89235f694d8a5fd27d3a752adebfc7dad6079656b8dfd07edb1efff784c",
+        "liquidatedCollateral": "6380.491177919349748257666116079567",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc95fc1a3b80a044f4ade210d1694e8a6e0bc99fb1dacd7152e45cfbf6ec3cd98",
+        "liquidatedCollateral": "4210.00708737923864412324515793642",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xca83dcca74a7f9641e09cc495533dad731e097e79d43da504dafb0bbea44c171",
+        "liquidatedCollateral": "6817.205735448077338553194010073529",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd0090ba019947a8b58bc5a71f1014630b4dd6bfe0ace970e229f870a7405ac33",
+        "liquidatedCollateral": "18055.68713313709277159914824475406",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd23eea92d7b46d984e7ddc117a6e728b1e316ba8e518646f9e637f42a9e4d7f2",
+        "liquidatedCollateral": "13133.50927540164870503999269751603",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd7908042ea56e059b326ff4239adf65eee8aac6fdfd035b35927e2cb79b4f3eb",
+        "liquidatedCollateral": "12933.76824078863350451056707285146",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdbd0ada1219505c98ac78dd477d48b91930bd505e6ce18b1fc1b31be721898d4",
+        "liquidatedCollateral": "9586.749480411763490434587334509749",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdf585371b7458b6650d8b7ecd595ba83a4b5ac235edd821e24d3e7b446b4e8ea",
+        "liquidatedCollateral": "64384.68906927526511986550304932874",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe080b0e247c46e548fcd30cecf9772c427cf2dfc8cc1193acc6db2c22369db90",
+        "liquidatedCollateral": "7025.78991124980777998517082998155",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe2aa992036a09afe9c25dfcdb678dee39148f7f30493301f4cae3d18d22507fa",
+        "liquidatedCollateral": "12924.874312534781354491971623423",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe5f593c9e82979781380c6cdaab49f117059f6e8c5ed2c113ad71a97b21bc309",
+        "liquidatedCollateral": "12464.34723222195200727220044833368",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xec5aa5552e0fcd8f7f25cc5e091ae7068f481cc7b18c20e45ca0eefe34d3789c",
+        "liquidatedCollateral": "12847.97199414337292530668003706795",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xee25d4d248f18bb8eb6db5d8b735deacac4a087b8c179b2c84941194a4954730",
+        "liquidatedCollateral": "62597.95227326005277375558125036811",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xef220c47003e063a2294e35ead224ec07097fb686751908e7dde41d7d44beb89",
+        "liquidatedCollateral": "13645.96046150478705651974816760364",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf24af982a181e723ec6d72bab1923da3991499fd2e7de6caf42cc13dc32ff2fa",
+        "liquidatedCollateral": "25543.29117661406669478557943541814",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf3fecbb2fc67ba2f2e36663663138736fb2944be07b8e8c7f31bdbb6b243d0b0",
+        "liquidatedCollateral": "7642.738230775410616076820531114163",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf789314a028290d4ded829312818b0320287540cf56df8cde77493d18f2126d7",
+        "liquidatedCollateral": "13777.02782062274325780625926434643",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xfa56db4f93c37de94c07764a4512984797a66ae939a0de9806171b358c2684bb",
+        "liquidatedCollateral": "7637.217959749950968917413624105756",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xfad1206f138c9c9747aaab2126510a530560d9f0212ab3775db94fdaeb5c833f",
+        "liquidatedCollateral": "12802.1750572364461070605621541795",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xfbb1d6281294bbb3f7c4359d1d805fb845d9c584e5911d84d670439aba1c3077",
+        "liquidatedCollateral": "5690.978537697704831476448633448254",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/3/2022",
+    "totalLiquidated": "33701.57450288227303912899150470833",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x9f2235d7bab7ddc2e6886ed63e3f597e6c04219a0be2f7f4ecbf70ce7b72e79a",
+        "liquidatedCollateral": "33701.57450288227303912899150470833",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/6/2022",
+    "totalLiquidated": "7277.190290777727616792086337763045",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xec2bf03228a327edd5f072454273b19f07059157a0d33ec2b7145d8081c6811d",
+        "liquidatedCollateral": "7277.190290777727616792086337763045",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/7/2022",
+    "totalLiquidated": "27806.24886708299522730784289365587",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x4e133e854e63cf9cf35e504f17e2b5da2abcfdccbd44f4e12a89efa95d5f385a",
+        "liquidatedCollateral": "27806.24886708299522730784289365587",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/8/2022",
+    "totalLiquidated": "16114.4588258024893403718060830076",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x40c629301d2a842f6a742cb8ee3ddf67f9acdd9b5bfd6b7d7fdccf11f01eedfb",
+        "liquidatedCollateral": "12579.5157221444488624221504495396",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x86f09716f7583bd68a6104ca33479fe1f13345c0a0f4a44c30846a2ad8217e7e",
+        "liquidatedCollateral": "3534.943103658040477949655633468",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/11/2022",
+    "totalLiquidated": "707.3976780747120119759816954078785",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x65025b5b11364c10ab9f1fd58c64d62663bb9f9bbb4c27da24656f284f2186a5",
+        "liquidatedCollateral": "707.3976780747120119759816954078785",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/12/2022",
+    "totalLiquidated": "10979.85888005480713874304",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xae977bc13f5ef1cc6e6313ece04ca167b8f0196074ea85c20a7563babf8a57c7",
+        "liquidatedCollateral": "10979.85888005480713874304",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/17/2022",
+    "totalLiquidated": "7753.513643310553051622945330503203",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x50dacbec018935d1d5e6282f85a5e1527ae75accfe3dcf6ba1114fe7f423ef5b",
+        "liquidatedCollateral": "2885.494412280611721226618173489177",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa0c1d6d4a3ab407d4d153997bbed0e4c9f5929b379131e1e994c971d6568f1c7",
+        "liquidatedCollateral": "2549.914836095546553967578130726971",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdb1754ad2f1106c264c584e59d74f27fab3cc742340ba70202e69123f9050e4d",
+        "liquidatedCollateral": "2318.104394934394776428749026287055",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/18/2022",
+    "totalLiquidated": "5949.476122990490807834713838070705",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xa8654ffbe76d8a23530a7db43154328df1f62d4d98839de146687a1f777c9156",
+        "liquidatedCollateral": "3109.947670235609866126980148108768",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xbd2f8224b77262f6cbffa0ba705fdcc019ffad2e51531458cd561ab31c8d1e86",
+        "liquidatedCollateral": "2839.528452754880941707733689961937",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/22/2022",
+    "totalLiquidated": "35497.7762158384427895579726620489",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd40c9a5f78d858a2f39fd73aa191b89138327d0f4b67f6fb57335e4e9279dd1d",
+        "liquidatedCollateral": "35497.7762158384427895579726620489",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/28/2022",
+    "totalLiquidated": "24827.16765525311014703550099940563",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x934c98ea8a87594634091a54798a175037ad0a5c528133e3abd2e1c569dce39f",
+        "liquidatedCollateral": "24827.16765525311014703550099940563",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "4/29/2022",
+    "totalLiquidated": "15540.556654143105246597914019310134",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x17c9a86d04b26bff7625f4480c31ef98c0d2cdaa264d9ddfee67cceba324d308",
+        "liquidatedCollateral": "5043.842042482632588464318027405473",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2167fcf4c3efbbfbc2198a8cef8ae359af3463f64a146da337e6cd2d4e6da2c0",
+        "liquidatedCollateral": "5548.226243505837219269991981978126",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xfcec6e03fc46a2e5017e3f08659d973a314c6144d4f2d0e40505ef15cc7ce06e",
+        "liquidatedCollateral": "4948.488368154635438863604009926535",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/6/2022",
+    "totalLiquidated": "19582.6992215473917387029715647125",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x127beb1a70cc37077cbd6399665d53707422d53cbe2f479cb91fcab627657aa0",
+        "liquidatedCollateral": "19582.6992215473917387029715647125",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/7/2022",
+    "totalLiquidated": "110457.2503541002424130224129582142",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xaaea6dff0c03968dfe04068c09ae687cf0856a8ca5bc0886bb27d5928951a049",
+        "liquidatedCollateral": "110457.2503541002424130224129582142",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/9/2022",
+    "totalLiquidated": "31794.843884271880114593266101983935",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3fd5564446bdbd80170350c1fd10f9e53f8226ec159f7c092e6578e2023b7a86",
+        "liquidatedCollateral": "5296.378765005061379344357083005914",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa10ad4567d572761f93279103bfe1514c556dcb70f45e33b13e0c022d2deaf71",
+        "liquidatedCollateral": "3065.532236228755498870845807658811",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc7ab2b9ae470645db53a2246517881bc63bf5f70dc6a26190a9ab6a0089ab15d",
+        "liquidatedCollateral": "23432.93288303806323637806321131921",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/10/2022",
+    "totalLiquidated": "6270.353915888072305298147814276051",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xe444ea37dfd737c6157f1915dc36eaf321f2526eb7cf1ae676593436abf3517f",
+        "liquidatedCollateral": "6270.353915888072305298147814276051",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/12/2022",
+    "totalLiquidated": "498762.705079641358034664547738605905",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x11e5274df77d03db3ba9682e82f801c482b0ad2f04fa8a0937b797c54f7695e3",
+        "liquidatedCollateral": "10889.98701267858390919059315890736",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x15a52b254a4a2b101c4fc78c952f85b4ef2bd0936b173e484b1a4470965c0198",
+        "liquidatedCollateral": "7185.810185748025542139306627378758",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1736723ac230f8fc6dba200c6bebc066540991e2a1f31fc61388f0071c191684",
+        "liquidatedCollateral": "8825.488341697784549454390436270296",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1c5252a959a1fd31d426a25a1a494d34ce25d80cef9b5fbe8587f2aec63bcb78",
+        "liquidatedCollateral": "16638.03140214746870696538728003498",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x29e8ed850c822b2faa164583fcde801289b4e419e77c70f7c851261383d7fea5",
+        "liquidatedCollateral": "10446.76992077505477844511319129321",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x388fda492958feeb06156e15ce7557776a598f6e643f9aa0dcef2afa5b7f190f",
+        "liquidatedCollateral": "151495.5088892393547825461778086172",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x3f37cdd9e9859d3f7c69de8fa31e545c04ead96ecb833b6454cf89e1d55ab108",
+        "liquidatedCollateral": "11608.84328651728098147761491969736",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x56c7edc3ab019da1554f1018181b590b4ec6e134e1b4e3312fffe3020538ab92",
+        "liquidatedCollateral": "4771.299668985650368051778435246771",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x671c917c72d2f9cd5f82101198ed1b7c76880a7d5aef29ce2017da1c3af3c524",
+        "liquidatedCollateral": "21029.80262873745548895130947338371",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x702cb489751ef5df03c88796be34dfe69ee33479c60ee280b36e11f4a50dca66",
+        "liquidatedCollateral": "23013.8330594694148937029613550028",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x852f6bee66a1ad51989bf880fd339cf58d60f62ee06d5904288c5e2f5f32e463",
+        "liquidatedCollateral": "11028.67175422865655997005199321514",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8fb4901fdca0eada40a4e4a10364835ec4c28d21f902fcc655c54427d4916cea",
+        "liquidatedCollateral": "29648.42041897918511661556024233838",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x938414e449d925033c08669db1457a2c592a510ef16edae260a0a713e746183f",
+        "liquidatedCollateral": "24413.48182820439881374246177588354",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa2b27878052d24d9900d83a26a03d0e5bdcc06f7dfa7dae8c889b4e88c5b83ed",
+        "liquidatedCollateral": "11544.41313680896951732294860275036",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb22f7d251d97e5258c51a0d93b8f96ed6472b42522dfc7a1a2e11ae23be2d8cd",
+        "liquidatedCollateral": "11105.7429215206151006319742377403",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb3ea8d966512031c793663d8ff40a23fd208f02f03f8d9c5a644cb67d75deb58",
+        "liquidatedCollateral": "4190.300798710235699286873328383399",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc5002813a8ea99f2b4455a37d3aef1cb044b5dff70bfd82077272bf0e3422059",
+        "liquidatedCollateral": "106999.5683210418923172317822332201",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe3c5c501104c5e0d27dfd146b6d485c44cf9531682145eda47f19d644f2e410a",
+        "liquidatedCollateral": "4430.732704187253005701844876635656",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf00b2c1da4c12b520381377c732cb84d9c0af239550312e5132bd7b9b5e838b3",
+        "liquidatedCollateral": "22015.54804953040368420835520671149",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf55bc9a0fdaad5e3a239d892815cef8ce5f24687305398f9ae011d8c6152125f",
+        "liquidatedCollateral": "1904.80165865607491714989501414184",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf93e8f8440c4bc3a1194f7755482bf328fdf443a01a166ce2c9ee3fc9a53b160",
+        "liquidatedCollateral": "5575.649091777599301878167541753255",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/13/2022",
+    "totalLiquidated": "1575.242537274063519447041649225598",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd5ae073bee387bb2f8c6e0373a8ca2f437845e34f5c3bbc7a33691209496fa49",
+        "liquidatedCollateral": "1575.242537274063519447041649225598",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/21/2022",
+    "totalLiquidated": "1501.4999999999998527231961931533467",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xb597bcaf6a0b6eb77e65ed582e11eae885a1d4634b528e9b6598c7b45e732bf7",
+        "liquidatedCollateral": "640.1999999999999003801429108714646",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xeed25e0118a2d347ff897bd5dfcc54f60e47212a2a9f825b4b502a839d4aa190",
+        "liquidatedCollateral": "410.2999999999999569788163850313854",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf8778d6e2d2c1f4b730a2163966751ddf5c4477e534e56f06fb8a96165120ac7",
+        "liquidatedCollateral": "450.9999999999999953642368972504967",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/22/2022",
+    "totalLiquidated": "345.9499999792363940271402991502429",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6783561c79504eadd0a652e2093c07478c8483a81615b1563b3c098df0d6d31e",
+        "liquidatedCollateral": "345.9499999792363940271402991502429",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "5/23/2022",
+    "totalLiquidated": "9966.354690886120483368073629025776",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6db06766cdc64658903cf6d8d27b9c45d943b1dc1936b8578b718f61be66b694",
+        "liquidatedCollateral": "2575.065184296171629758191766646276",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8b746451898b62d1caf70672e79bee7ecc8b5dbcb7abe28c635b0c42fffc5234",
+        "liquidatedCollateral": "2170.589943080103594940942855029517",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa243ca0db7e5629f63fc014ed884206127c65e6c836aa38c6a6e12b441005003",
+        "liquidatedCollateral": "2832.571703228171198301655323680034",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc8f1c5579a34bb5c2adc0c890db6e3ab5301422826d817a68425a83ab01e2b79",
+        "liquidatedCollateral": "2388.127860281674060367283683669949",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/2/2022",
+    "totalLiquidated": "267849.478929553881312409668177162534",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x65e6d148ffd8b672590d20c69aa9a9f7400466c0a29ab4dec870bde19209f5c8",
+        "liquidatedCollateral": "1099.99412282691442064983384407276",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xae2744dcc0a925b3c6aaa8a8273637d124e00f212197ae0971ca7ecc75d0b726",
+        "liquidatedCollateral": "1099.999933639931776490992968272994",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc2e9da25950d3e6d51d77edc4f89672d8784a4cca1705468c6898e34a83cefa4",
+        "liquidatedCollateral": "137499.510278432753754931782",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc2e9da25950d3e6d51d77edc4f89672d8784a4cca1705468c6898e34a83cefa4",
+        "liquidatedCollateral": "16499.99362242859427661487281778066",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc2e9da25950d3e6d51d77edc4f89672d8784a4cca1705468c6898e34a83cefa4",
+        "liquidatedCollateral": "95479.98372797231171297621470229296",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc2e9da25950d3e6d51d77edc4f89672d8784a4cca1705468c6898e34a83cefa4",
+        "liquidatedCollateral": "16169.99724425337537074597184474316",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/8/2022",
+    "totalLiquidated": "16463.04490875613957620108330518",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x8a962a272737b5e437cc9c3689146da0d11ec17e941e72a33414c8abe371735a",
+        "liquidatedCollateral": "16463.04490875613957620108330518",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/11/2022",
+    "totalLiquidated": "4405.2907766743152492527674744903546",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x29e71e051c767fce3da986e946408b54d1f9b3a33d05ac7d31e077a2a0213230",
+        "liquidatedCollateral": "4060.848326674315257465720966280467",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf8886bc547f11b4f99ca9f74e2606a75fd95477487cdcdaaf3dd72c16b1a1e72",
+        "liquidatedCollateral": "344.4424499999999917870465082098876",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/12/2022",
+    "totalLiquidated": "5590.060297741030786012150231114696",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x65be5d8af3a7a8ab1f655f8fdfdf1ebc8c2e2a769f919e0a8b0a781e963f5585",
+        "liquidatedCollateral": "2136.396034491292128967475722074385",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc0004d87077d5b1bd495007190b9073f6cbed8d7d00488cb1ed800259b44a70b",
+        "liquidatedCollateral": "3453.664263249738657044674509040311",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/13/2022",
+    "totalLiquidated": "100319.344774014701296315001744790504",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0eef349ec65882a8d9a9772698cc0acb191850754ddc970ea041d81af21cab66",
+        "liquidatedCollateral": "5937.494041701138507461969830226498",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2799049a4cba4f9171ae66870b2228af01ca1090a90a365b35c22450985a7ab9",
+        "liquidatedCollateral": "7377.302786925478852033607225343582",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2853c0df4a5bbb46e370280f88eebe06e39af6cd1b37bea4e7b62c9a67bdf9c5",
+        "liquidatedCollateral": "9976.96264335472",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2f8f02f0198b615e15f9747bc3c6075ac1229e6d023dedd04389439776fe1ab1",
+        "liquidatedCollateral": "13325.3957075478373829345494752792",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x3b0be518fd561cbac7bd683bc3866890d9a2e995147a1168a3bfbf485a313def",
+        "liquidatedCollateral": "4150.012776544195150100699619563867",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x513aa4facaf6484f85b261203e513ba835b1e6a77f005938f01df170add30e99",
+        "liquidatedCollateral": "12638.99999999999951784386806553894",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x5ffa59d036602b9d06bcb6a0b0d4a0ed44e126611d9f3602f8d832bc9b5b1b6b",
+        "liquidatedCollateral": "6988.949862886801338216247049659633",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x74e2fcc6ac2634186a4be195e0d36ce44bda30b68466d866a11a4b5099caed26",
+        "liquidatedCollateral": "4879.779498659000993222534427466489",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x7f60efb3c4af2eee466e6198997c317e75be2f14a43da061d2068e2c70cf5717",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa8b918fe16c4b13ad3824dac358f1391302356dc920bd74bc558a5e90a4b5981",
+        "liquidatedCollateral": "5439.478895414680415179523672936799",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xaa010395bde8db4a03f9453ffcf1062033e3ac996eb461528b6cf73b0633a041",
+        "liquidatedCollateral": "12253.22435729642421522456625038268",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdff969f10b0e9fd4d92b552e83da6a3602d5738cbe5f141bcde393e169f39a74",
+        "liquidatedCollateral": "13651.67073264112504337467909748904",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe3cb322f2ba43319353af048a24aa59544e841022dbe7ad9e302d9513f7e8e8b",
+        "liquidatedCollateral": "3700.073471043299880722757030903776",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/14/2022",
+    "totalLiquidated": "107076.41669918106243689340788683693",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x42b05e21310462b8b8931925bbf7b38da467b80abcb1317a3b1b952229383546",
+        "liquidatedCollateral": "15412.07068568786116378879545362337",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x479451542cb81152809f213652f3db6787adeeab7a682440b57748a1bdad4d98",
+        "liquidatedCollateral": "10522.23651197421658372849049819773",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x54d8dd5458d872f47177b6bd132e0a4667db014e36620379ee2ddc2237c4933a",
+        "liquidatedCollateral": "18203.10606587050105305392694377763",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8499f4786e3fddd7aaecec348a88b2df9ff2a7bc6de851971d49dc872e23dad2",
+        "liquidatedCollateral": "17842.69675276489425061544366410492",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x93c5323013ec4e6cc70e4fe34f46c245258649ecf6dc6a0ed2ea17c3dc4bcc75",
+        "liquidatedCollateral": "16749.19364360542709252684035813878",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xcd46075c1dbf138a3e65980d2dfd5b943c55a2da2a4f7ff7d610c0c248e26643",
+        "liquidatedCollateral": "11109.19427495475368368641043591042",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdc20330f96897bf79344d3d93f9dd021778a3e3b056c5fa9e57b0990b41d96fe",
+        "liquidatedCollateral": "17237.91876432340860949350053308408",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/15/2022",
+    "totalLiquidated": "7928.385682555892877003034402660019",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xc85cfbb4a44daa4bff989633c6b1290ede4841ece0133eb8a2ce736c8113766a",
+        "liquidatedCollateral": "7928.385682555892877003034402660019",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/16/2022",
+    "totalLiquidated": "4737180.5744176041734369660693481684263",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x01814af63f93627a566ed20dcf8b0ee0a73e8906b15e2bd0f011f4a59f63aa6e",
+        "liquidatedCollateral": "33976.79450512444937250688746423141",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x050a9497cc1fe4949cf07bd2178fd4ba762bd37d3ded5ef9fcf09458d1c1e6ac",
+        "liquidatedCollateral": "63799.99166269112398222666588646968",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x05d6ae2f3be6f34cc2799928e50ba537eeaf70b942f54ba521010d856a699c98",
+        "liquidatedCollateral": "614169.3807106976302669917846071806",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x0b4e9021a01528a703e98daf6af0df39b711e857b3ff5ce4f2f0b283f84c0a97",
+        "liquidatedCollateral": "189233.063463632652689098884497677",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x15c1efd808aa7d0283dec885629811f82ee0994f489bf210b690102b11b507e7",
+        "liquidatedCollateral": "49499.99968100668941816347429934408",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1862458e1513315f5e69d24cd1ea5970ba7ab9aefd8fcafa455e1ee9e3086e4d",
+        "liquidatedCollateral": "614466.5790726218613777758288762065",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x1de366e6315a37664e16132886f8fc2e1f07ff8dd2ccec6dac87489e89d39e4f",
+        "liquidatedCollateral": "25295.5985788587320162605392227543",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x21304aa6ba5abb75b62638a894fc22ff52f4635c8def1d10c575c8fe81fed197",
+        "liquidatedCollateral": "1728.338043877181767512699186912258",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x2441ca48683febd1ba65b61ce8af6377041d6ac8e60ec56b2c1f948ef5e16a40",
+        "liquidatedCollateral": "9502.89895519564269590532821366536",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x25398d13eb25e826ba2256e329297984fe1cdd69130f806dc89a1146481d5f06",
+        "liquidatedCollateral": "20475.39673850202648301931619100691",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x305232443e764fd6f1c839961ecfa8264e84337121087402c6269c961ff1f14f",
+        "liquidatedCollateral": "22719.39903916862402151259481200317",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x338d9b313b9db94e6a7203c24f51b5afa30eea1529eb6ba45377938affd2fe0c",
+        "liquidatedCollateral": "54999.99276819652249956249402478384",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x437e4e0bab76b91ebb628f36ee482a010f878cb06f9ad9b41055b90a45737670",
+        "liquidatedCollateral": "613884.6131260585944214953145287776",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4ae69b362e8308cd83135e51dae1be71933b55506b56dcde3e46b5511139d586",
+        "liquidatedCollateral": "61266.65559364726832998381857183571",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4b6e9ce30df32e0acbbc4af9bb15a7ad2cf1e931faf028c1c6134ad9fa75ed61",
+        "liquidatedCollateral": "65999.98926070758681212819281700397",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x6168333eae590e04e29cb9420fbcc7f03661f86bcd6452bade2f2d6e64be7a7e",
+        "liquidatedCollateral": "37919.1963736483690162561659805994",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x7bf22f29b3119c71b804987992e64d782732e090e0f3928d6c717b8b7e45d363",
+        "liquidatedCollateral": "614809.3254455508285242820078443874",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8317061ee52d0c8f550142c9172a50f568ef9edbb03682ad9989e4e7e2016050",
+        "liquidatedCollateral": "65999.9998555909628002522555354376",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x850adb7312cbae7f74ac4d182b29a0ab024bfaabcb31991ab58874acace1a644",
+        "liquidatedCollateral": "8563.498486643754938006968539766317",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x88cf9a9a261f65d4c0d7b05bf5e5c1ea1f72cd05f184f48b78a59d5b3493d25d",
+        "liquidatedCollateral": "26509.9998216311919488842538867999",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x956cc02421ff99b5b626ea4decebaddc7246aed8a5201b94f595719cd3c73a2b",
+        "liquidatedCollateral": "85799.99613868365259532043637690529",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9b1ee3a1f2a806cfddd0409e9b338746c3331c91f5ff8b3937ab92b138c457f9",
+        "liquidatedCollateral": "43999.99286835326009956281207849609",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa4a503d79d1d1dc99c656fd0e858b4f40ac91138ca6038fa9652d29e8d0600f7",
+        "liquidatedCollateral": "70399.99751621287599818614319719329",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa5ebbe66b2ed0b43b303e727fb3e083c829270b0f357381cb2bd09938399e1bb",
+        "liquidatedCollateral": "43999.99958173717006866110815086659",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa85ec15dc9b38eb3fe30eaf3910ad04443ddb26e7777b2d209aa0a1027b7c958",
+        "liquidatedCollateral": "30618.49790395991067537739541667506",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xad71aefe2625c7a6a7e79c20e3aef41bec28a7ac9379beded270768497cfb04b",
+        "liquidatedCollateral": "46301.19249536813560276994715020144",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb0eef0e91f63bfa8a0c97e1e61e4bff15565326cd5576bd27969c2e70ccaf9f7",
+        "liquidatedCollateral": "18428.29841015514572903788402797619",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb38c9319878789f7067516489a9056e4c6963b5e16de8c1f746bbd33acc06594",
+        "liquidatedCollateral": "1901.743784230023663479186351185599",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb9f0cb1d5538d4be9a975887597fda9bd4975785031d700b32f647065db7b36a",
+        "liquidatedCollateral": "42024.39318010916579213093700095229",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xcd709b5d9575aa1889d291c525bbcb680807828010c9a584f4556e586a0eb215",
+        "liquidatedCollateral": "50709.99689656448412651600748552103",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xd4929af42b730f6b1b34df85ada601d2bec36811fe8908c13663d56e36f96fa6",
+        "liquidatedCollateral": "989.9998300466296244184805285337523",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe267741b8f84f81c5360a427258a81371c843a420b1c9efe2da72ed3579b9bc5",
+        "liquidatedCollateral": "67968.99173555130564708468125830662",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe49c32312217f1fdc6566c63be7c7400004054e657117711e686dae3f7cb75dc",
+        "liquidatedCollateral": "27845.39842881929605401215527463826",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xe6e9cc0c281f607bffcdc68a4e3fb0c2d1f1cfe6a6bef6ac7b35dd1528f76977",
+        "liquidatedCollateral": "43999.99777811236061504086682329484",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xebd05f33f977e0da90cb830f05020314a03bd0b180784e2e9df2b6779e62df79",
+        "liquidatedCollateral": "171443.2530228095659339349285950644",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xecbd441de884f71aa3681271ba856cad38b62f0a9410d7b714d2f4444b15a33b",
+        "liquidatedCollateral": "70399.99152660868829374587881500066",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf1367a7974b5d758151f89a12ef68742e3f693c0e01098388e2bae68548120cd",
+        "liquidatedCollateral": "55929.21675951704773203613949265756",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf24a1ed5f5bae7637f5055be6c0032d7f85a4f58694c18b2a7e6647f18fed09e",
+        "liquidatedCollateral": "60499.94279505396794846639065580243",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf4c89296f2f0f5a228eeb5dc63c57753d17d57b48d654cd9006524065d43baa8",
+        "liquidatedCollateral": "554098.9682876481670944663001678027",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xffc43a2edd87b526a6845d18df7f40f92697654ace3264234eb25451caa781f2",
+        "liquidatedCollateral": "54999.99429501162676089291551425133",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/18/2022",
+    "totalLiquidated": "92705.5037541736663210043792457789988",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1abdeaa30141629e3455a6b271f5568bb7eeafe80d0f1c674d2ba2ad65e42abc",
+        "liquidatedCollateral": "15328.11112699097946151785965331625",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x3d818f11e8478956bfe4e25aaea986f895819c5eef80ecbfbc33821f26178b3e",
+        "liquidatedCollateral": "5306.049013003972110103858746478212",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x58437425cd47cf3549519eb179df0aeecd80db99f53eddb1c1d2c2df736be9b3",
+        "liquidatedCollateral": "728.6351930918163056364253541534928",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x8075f2e0b4053d2ee88ffea28da32e09e06e754957dd42113e740acd9fc800ed",
+        "liquidatedCollateral": "13088.67169758161499437393886189722",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x834daaf4620a4c37e3b908b727b6ad358492426b6f93f2ee5891d4b8edcd4b04",
+        "liquidatedCollateral": "9671.111648330149936348086742531227",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9bc640d9581ba8e59841f0a53c742ddb6c03b2ff3f29e7883882345b0afc6b54",
+        "liquidatedCollateral": "7973.334684617758841111748285052879",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa67d960dafa7a1beda5b69c0e01b323164ac5d273e23c1f3ca5d1fe5dde724b0",
+        "liquidatedCollateral": "18282.17621621666935322820629624139",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf545eb88bd3328bee3c1b0a9450ad5531ccae8a703b3f592b504ada992019e1c",
+        "liquidatedCollateral": "8947.956220768814281618541693967038",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf6b676e483e2abc9ad9caadf037d541d56576b9d07d9b340d8b813bee5849c67",
+        "liquidatedCollateral": "2021.25568428",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xfefa9010429843842969ea688b0ebe8c4400a44b3418d66b137088b72d00e0dc",
+        "liquidatedCollateral": "11358.20226929189103706571361214129",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/19/2022",
+    "totalLiquidated": "40805.607200644062946606900630376894",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6832af568807f149d6fb7ef1d715164a90e83034e3bb71b8010f55d9a21423d0",
+        "liquidatedCollateral": "9361.467654929508663302457362210643",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9e33a37190ec17c9b296f6a104146091de7c4443dd23e41bf660f5474b5dbf48",
+        "liquidatedCollateral": "10300.06424491350483516929134792534",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb3e416edf524bbf8e1cdc5648dc6ccec318e54f5d04287996df4bfa5cb02b375",
+        "liquidatedCollateral": "11324.53320272110735286093147134971",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xf32a3fb9c1c46cf084df9ef991b3b99f7a3ce68f754fc531c30894a208b869d2",
+        "liquidatedCollateral": "9819.542098079942095274220448891201",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/29/2022",
+    "totalLiquidated": "3698.507957638029693059981513548625",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x64c2e361fa1b53ea009df59222fada866f5f9d40cf8179fbcfec43fcac07e95b",
+        "liquidatedCollateral": "1760.917009961169764141761530888647",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xbec6f11fe9569888e1dfbc5b0e79b9943740c9850cf6793430e6d9f765f906ca",
+        "liquidatedCollateral": "1937.590947676859928918219982659978",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "7/3/2022",
+    "totalLiquidated": "146.3599222023210285165756622868245",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x927894eeb8eda71dd70fc99b07e86b71137f8f4ebda4b69abc81a6c88e0163e7",
+        "liquidatedCollateral": "146.3599222023210285165756622868245",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "7/4/2022",
+    "totalLiquidated": "12638.293161527365476174737183795953",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x56fb718fbf08f0f105346815388af66b1ae8d8854ca8e32a73e92447bd8b90f9",
+        "liquidatedCollateral": "1011.428163531414996270273553642253",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x88e74911e9fdd4f040e2e4cde0a71589a2174da61b9685558b5692a226db8e46",
+        "liquidatedCollateral": "11626.8649979959504799044636301537",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "8/5/2022",
+    "totalLiquidated": "19933.71944552124860836433412958436",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x4e5acfdb401fb58f914372b79f92ca04af54fdda475e22c8adfa15921b36065a",
+        "liquidatedCollateral": "5561.581527818204359413869414539871",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4e5acfdb401fb58f914372b79f92ca04af54fdda475e22c8adfa15921b36065a",
+        "liquidatedCollateral": "7699.988781175119540206808699534858",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x4e5acfdb401fb58f914372b79f92ca04af54fdda475e22c8adfa15921b36065a",
+        "liquidatedCollateral": "6672.149136527924708743656015509631",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "8/9/2022",
+    "totalLiquidated": "20015.838141149854488018545255112708",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x31cfb44bcb155ea2997bd2f7534a90150c36d039ae5f7c3dadd315c6efd79155",
+        "liquidatedCollateral": "5380.0851269274392786103808002768",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x31cfb44bcb155ea2997bd2f7534a90150c36d039ae5f7c3dadd315c6efd79155",
+        "liquidatedCollateral": "7819.897044701582974221636615966367",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x31cfb44bcb155ea2997bd2f7534a90150c36d039ae5f7c3dadd315c6efd79155",
+        "liquidatedCollateral": "6815.855969520832235186527838869541",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "8/18/2022",
+    "totalLiquidated": "21317.602362335884849680129070651179",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xc10811b7d4596daf535da7187e1f0543253e4889b564ae6d06585542ba5e9fb2",
+        "liquidatedCollateral": "5296.485732462000859607351156890247",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc10811b7d4596daf535da7187e1f0543253e4889b564ae6d06585542ba5e9fb2",
+        "liquidatedCollateral": "8511.783607338732428973911449799133",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc10811b7d4596daf535da7187e1f0543253e4889b564ae6d06585542ba5e9fb2",
+        "liquidatedCollateral": "7509.333022535151561098866463961799",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "8/26/2022",
+    "totalLiquidated": "6291.9814650849944061075905824032788",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x59b94468597f8d621c3261f5a2282aefc81a1cb26bf3013affa3fc59f20ce6cd",
+        "liquidatedCollateral": "5353.681575072910827614647420502527",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x59b94468597f8d621c3261f5a2282aefc81a1cb26bf3013affa3fc59f20ce6cd",
+        "liquidatedCollateral": "938.2998900120835784929431619007518",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "9/6/2022",
+    "totalLiquidated": "293.7717268388366732955484345178987",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xc0ce0324f41430503167976d1170ce19dbe520c7f59a6ea7321ccc6f3a9c9250",
+        "liquidatedCollateral": "293.7717268388366732955484345178987",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "9/22/2022",
+    "totalLiquidated": "13610.11149602553782841429550031114",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x9bcaa8be8eb3eebc45c21a033b78733491eca466cae96e05f666894f72fff05b",
+        "liquidatedCollateral": "13610.11149602553782841429550031114",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "10/2/2022",
+    "totalLiquidated": "120.6613907705317205585357424105428",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x7d96fe0b7f570942f0d4c225b59e7a9793be4332de3e2530a790dc62069c3135",
+        "liquidatedCollateral": "21.99999774966053423711578331671744",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x923b8046b16e969572e683de1e53814df9ead46571481631aa15e77840c8ba3c",
+        "liquidatedCollateral": "59.3948168118392786793017058797895",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xb73eb1f74d31fdda5cf9ce4bbed65bdb7da0e62350ec177910a1982ffc36ee1c",
+        "liquidatedCollateral": "39.26657620903190764211825321403586",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "11/1/2022",
+    "totalLiquidated": "1576.818121058012791377858976121862",
+    "totalSentToBuilder": "55972895602469099",
+    "liquidations": [
+      {
+        "hash": "0x724223367ad7bd1908a9f11cc99adab7dac22430824824e7e34367304bb45976",
+        "liquidatedCollateral": "1576.818121058012791377858976121862",
+        "sentToBuilder": "55972895602469099"
+      }
+    ]
+  },
+  {
+    "date": "11/9/2022",
+    "totalLiquidated": "22576.70574705809954389181515133927",
+    "totalSentToBuilder": "631977415206199479",
+    "liquidations": [
+      {
+        "hash": "0x052a261bc1b8bb971b2775fe1798ea4d19fb1b6674fbd7b07da82510c5def79f",
+        "liquidatedCollateral": "22576.70574705809954389181515133927",
+        "sentToBuilder": "631977415206199479"
+      }
+    ]
+  },
+  {
+    "date": "11/11/2022",
+    "totalLiquidated": "6704.142033210270617570394863710724",
+    "totalSentToBuilder": "221648255836441298",
+    "liquidations": [
+      {
+        "hash": "0x0ad3b4631480fc41bccc32421c4ba87db2709025d2285808aa2f31131f5729db",
+        "liquidatedCollateral": "3898.89924378357084897511472192515",
+        "sentToBuilder": "63703836480069968"
+      },
+      {
+        "hash": "0xad9b0daba74e7fb725785371f250ac9cfea796478a13026cd9feefd05cd8474a",
+        "liquidatedCollateral": "2805.242789426699768595280141785574",
+        "sentToBuilder": "157944419356371330"
+      }
+    ]
+  },
+  {
+    "date": "11/23/2022",
+    "totalLiquidated": "3298.222503185235101491406431345879",
+    "totalSentToBuilder": "157792972298550309",
+    "liquidations": [
+      {
+        "hash": "0x3ab273f2d3eae17561acaff956df26f78cc9b11afdd2f1c2ab3086af3ab186ee",
+        "liquidatedCollateral": "3298.222503185235101491406431345879",
+        "sentToBuilder": "157792972298550309"
+      }
+    ]
+  },
+  {
+    "date": "12/24/2022",
+    "totalLiquidated": "9275.653165961637989582718496135258",
+    "totalSentToBuilder": "170212693379462459",
+    "liquidations": [
+      {
+        "hash": "0x9ba6a04a41490e70c389be3c517e3a7c57bb428062b655fcbb1f85f51164bcb2",
+        "liquidatedCollateral": "9275.653165961637989582718496135258",
+        "sentToBuilder": "170212693379462459"
+      }
+    ]
+  },
+  {
+    "date": "1/4/2023",
+    "totalLiquidated": "57.20669107821844388569672541665027",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5d614468ad4446ce5130e1c150a1f8d0cb872595026024e49bb1373759caf3f3",
+        "liquidatedCollateral": "57.20669107821844388569672541665027",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "1/14/2023",
+    "totalLiquidated": "71920.367809836703555946088497395898",
+    "totalSentToBuilder": "2933099359983350189",
+    "liquidations": [
+      {
+        "hash": "0x1bb70c8b8a226399f8e6455045ca01b2b93ff113450574c2605519036bdcc523",
+        "liquidatedCollateral": "37779.61755576853919720239175831786",
+        "sentToBuilder": "2177238884869371239"
+      },
+      {
+        "hash": "0x947ed05d6ef4b03c2d1e0881449179889886d3265a6509c5d1a259d8aa6c47b4",
+        "liquidatedCollateral": "3915.453746294561652349225445507178",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xc6e57ee680eea9980461f5ebb3e36ce8848e11b21b9e9f3e28e845de08bc48e9",
+        "liquidatedCollateral": "30225.29650777360270639447129357086",
+        "sentToBuilder": "755860475113978950"
+      }
+    ]
+  },
+  {
+    "date": "1/18/2023",
+    "totalLiquidated": "8300.038808901345214085216341019396",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x04807a57370437e20947f96221b1a3da47574b309395bedc0cbffe84c472c175",
+        "liquidatedCollateral": "8300.038808901345214085216341019396",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "2/13/2023",
+    "totalLiquidated": "750.7104876793781019326402334986683",
+    "totalSentToBuilder": "3650857742759129",
+    "liquidations": [
+      {
+        "hash": "0x7c8626113ba9f14c2261814dd26e02b148c8ee75625e03263ca37bb02678d5cb",
+        "liquidatedCollateral": "750.7104876793781019326402334986683",
+        "sentToBuilder": "3650857742759129"
+      }
+    ]
+  },
+  {
+    "date": "6/22/2023",
+    "totalLiquidated": "1664.0704988936797725808324530535698",
+    "totalSentToBuilder": "2815456673160942",
+    "liquidations": [
+      {
+        "hash": "0x21dc687fec4ff10c3eb5c3dde6661134a5d4a10f15778a6d166b37ebfb594adc",
+        "liquidatedCollateral": "950.6691782059634081685587431875791",
+        "sentToBuilder": "2815456673160942"
+      },
+      {
+        "hash": "0xdc9408a184fd99ffef3f4a44940493f1efac74994cbcd6cb1a0e680b8d185264",
+        "liquidatedCollateral": "713.4013206877163644122737098659907",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "6/30/2023",
+    "totalLiquidated": "101749.466491999949113205377878",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1699f46e7425091892f47782158744b484635f376116c0b0b4a439c8aca06372",
+        "liquidatedCollateral": "101749.466491999949113205377878",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "7/4/2023",
+    "totalLiquidated": "5502.2271159692442247177994406129406",
+    "totalSentToBuilder": "20468687247807696",
+    "liquidations": [
+      {
+        "hash": "0x285199e95bb1b2e992739304ebf447e2c58e9ecd9c88678e8fa6e54ca2f0758b",
+        "liquidatedCollateral": "1859.104982443504318258904874259972",
+        "sentToBuilder": "16164191921349105"
+      },
+      {
+        "hash": "0x3abfa37c9315d9fa88f1b9aba0ed561ee7f30c06aea320b8c2f6b1b63269337d",
+        "liquidatedCollateral": "2406.54553395580811703811306439904",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x590a524712eedc3ef689986a1d54c1dc7adad262d538046e117fdb45a5c5a396",
+        "liquidatedCollateral": "475.50681103379252786712260652336",
+        "sentToBuilder": "4304495326458591"
+      },
+      {
+        "hash": "0xca331a20cfde3d8c2f705ab6f0188e91f57ea5e9d4f1f9120fc393968ccc4254",
+        "liquidatedCollateral": "761.0697885361392615536588954305686",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "9/1/2023",
+    "totalLiquidated": "300052.53422231502727352477883885241",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x9e127ac4e451f479eccae54ac9b69e43da826819f2eaad2dac510588a1793633",
+        "liquidatedCollateral": "142999.505402951104534098744363",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9e127ac4e451f479eccae54ac9b69e43da826819f2eaad2dac510588a1793633",
+        "liquidatedCollateral": "41799.98059265474120422432429933831",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9e127ac4e451f479eccae54ac9b69e43da826819f2eaad2dac510588a1793633",
+        "liquidatedCollateral": "93499.6766096218760415261020835",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0x9e127ac4e451f479eccae54ac9b69e43da826819f2eaad2dac510588a1793633",
+        "liquidatedCollateral": "21753.3716170873054936756080930141",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "9/16/2023",
+    "totalLiquidated": "1434.5503254421110893975909848312662",
+    "totalSentToBuilder": "5222644804172423",
+    "liquidations": [
+      {
+        "hash": "0x540405877e40e4961bc975e19572e8aa3bae0befc09a1c72f2455dffc35e5942",
+        "liquidatedCollateral": "370.73415423840854146988684058144",
+        "sentToBuilder": "5222644804172423"
+      },
+      {
+        "hash": "0x97aaf49de8da5414442c5fef081bf04ccb23b1cb5ef345eb51f7ce7a0c6afe1e",
+        "liquidatedCollateral": "337.3317528969051824246149758640128",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xa2ad15a6c695f5a2bb297d82ffd2d29aa2d222f8731c1404bbeeaad454bb7195",
+        "liquidatedCollateral": "306.6663666897013655310945926531013",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xcf84fa3cf67d4d4960f99c491f7a65da176732a7342ab0dc245ea94d573c2588",
+        "liquidatedCollateral": "419.8180516170959999719945757327121",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "9/22/2023",
+    "totalLiquidated": "566.4261534509710493284631229833139",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xdac5e82ed4266a3e71564838800b38cdc240b412ecbc76de701e4d80f1263baa",
+        "liquidatedCollateral": "566.4261534509710493284631229833139",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "10/4/2023",
+    "totalLiquidated": "97.05481436248975125565658176646537",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd08f43cead02f5057aacae516f1e31ee5666b570be50d42f7ec023703f78d08b",
+        "liquidatedCollateral": "97.05481436248975125565658176646537",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "10/10/2023",
+    "totalLiquidated": "5279.993622516736981061783149704017",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xdd99d58b18f18f3bcd09f7c9e5c4f1b235ed925af9705bb96390a2d6faee8096",
+        "liquidatedCollateral": "1539.999214871547147587190384264017",
+        "sentToBuilder": "0"
+      },
+      {
+        "hash": "0xdd99d58b18f18f3bcd09f7c9e5c4f1b235ed925af9705bb96390a2d6faee8096",
+        "liquidatedCollateral": "3739.99440764518983347459276544",
+        "sentToBuilder": "0"
+      }
+    ]
+  },
+  {
+    "date": "12/5/2023",
+    "totalLiquidated": "22700.53413188133023957124021429341",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xe20118927f9817dd4eb6fed80586145c64b07226c037c64b883c434bda316c81",
+        "liquidatedCollateral": "22700.53413188133023957124021429341",
+        "sentToBuilder": "0"
+      }
+    ]
+  }
+]

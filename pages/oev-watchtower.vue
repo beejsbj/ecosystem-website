@@ -100,6 +100,8 @@ function buttonHandle(event) {
         </div>
       </form>
     </SectionColumn>
+
+    <SectionColumn class="single-chart"> </SectionColumn>
   </main>
 </template>
 
