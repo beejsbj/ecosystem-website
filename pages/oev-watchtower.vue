@@ -1,29 +1,55 @@
 <script setup>
 import { useStorage } from "@vueuse/core";
 
+// get data from jsons
 const aaveV2Eth = await queryContent("/aave-v2-eth").findOne();
 const aaveV3Eth = await queryContent("/aave-v3-eth").findOne();
 const maker = await queryContent("/maker").findOne();
 const compoundV3Mainnet = await queryContent("/compound-v3-mainnet").findOne();
 const inverseFinanceEth = await queryContent("/inverse-finance-eth").findOne();
 
-// data
+// variables
+const userTvl = ref(0);
+const barCount = ref(5);
+const showOutput = ref(false);
+const selectedDataset = ref(aaveV2Eth);
 
+// data manipulate
+const parsed = computed(() => {
+  const data = selectedDataset.value.body.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint.date),
+      y: dataPoint.totalLiquidated,
+    };
+  });
+
+  return {
+    labels: data.map((item) => item.x.toDateString().slice(4, 10)),
+    datasets: [
+      {
+        data,
+      },
+    ],
+  };
+});
+
+//
 const fakeData = {
   metadata: {
     title: "Total QRNG Fulfilments",
     chartColor: "blue",
+    x: {
+      title: "Date",
+    },
+    y: {
+      title: "totalLiquidated",
+    },
   },
 
   options: {},
 };
 
-const userTvl = ref(0);
-const barCount = ref(5);
-const showOutput = ref(false);
-
 const data = new Array(barCount.value).fill({}).map((bar) => {
-  console.log(bar);
   const tvl = Math.floor(Math.random() * 100);
 
   return {
@@ -119,16 +145,41 @@ function buttonHandle(event) {
     </SectionColumn>
 
     <SectionColumn class="single-chart">
-      <BarChart
-        :data="aaveV2Eth.body"
+      <FormKit
+        type="select"
+        v-model="selectedDataset"
+        :options="[
+          {
+            label: 'aaveV2Eth',
+            value: aaveV2Eth,
+          },
+          {
+            label: 'aaveV3Eth',
+            value: aaveV3Eth,
+          },
+          {
+            label: 'maker',
+            value: maker,
+          },
+          {
+            label: 'compoundV3Mainnet',
+            value: compoundV3Mainnet,
+          },
+          {
+            label: 'inverseFinanceEth',
+            value: inverseFinanceEth,
+          },
+        ]"
+      />
+      <LineChart
+        :data="parsed"
         :options="fakeData.options"
         :metadata="fakeData.metadata"
       />
 
-      <pre
-        >{{ aaveV2Eth.body }}
-</pre
-      >
+      <pre>
+			<!-- {{ parsed }} -->
+		</pre>
     </SectionColumn>
   </main>
 </template>
