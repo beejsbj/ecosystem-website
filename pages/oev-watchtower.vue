@@ -8,11 +8,16 @@ const maker = await queryContent("/maker").findOne();
 const compoundV3Mainnet = await queryContent("/compound-v3-mainnet").findOne();
 const inverseFinanceEth = await queryContent("/inverse-finance-eth").findOne();
 
+const totalLiquidated = aaveV2Eth.value.body.reduce;
+
 // variables
 const userTvl = ref(0);
 const barCount = ref(5);
 const showOutput = ref(false);
 const selectedDataset = ref(aaveV2Eth);
+const oevRatio = ref(0);
+
+// average of sent to builder
 
 // data manipulate
 const parsed = computed(() => {
@@ -143,7 +148,10 @@ function buttonHandle(event) {
         </div>
       </form>
     </SectionColumn>
+    <pre>
+	<!-- {{ aaveV2Eth.body }} -->
 
+</pre>
     <SectionColumn class="single-chart">
       <FormKit
         type="select"
