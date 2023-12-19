@@ -32,15 +32,12 @@ const data = computed(() => {
   </h4>
   <ul class="box-chart" v-for="dataset in data.datasets">
     <li v-for="(dataPoint, index) in dataset.data">
-      <picture v-if="isChains">
-        <ChainIcon :chain="dataPoint.key" />
-      </picture>
-      <h4 class="teaser-voice" v-if="!isChains">
-        {{ dataPoint.key ?? metadata.title }}
-      </h4>
-      <h5 class="solid-voice">
-        {{ dataPoint.value }}
-      </h5>
+      <BoxCard
+        :teaser="dataPoint.key ?? metadata.title"
+        :solid="dataPoint.value"
+      >
+        <ChainIcon :chain="dataPoint.key" v-if="isChains" />
+      </BoxCard>
 
       <div
         class="is-testnet solid-voice"
@@ -65,16 +62,8 @@ const data = computed(() => {
 }
 
 .box-chart li {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: var(--border);
-  border-radius: var(--corners);
-  padding: 1.5rem;
-  text-align: center;
   position: relative;
+  display: grid;
 }
 
 .box-chart .is-testnet {
