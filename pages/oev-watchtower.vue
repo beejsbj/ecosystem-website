@@ -2,65 +2,181 @@
 import { useStorage } from "@vueuse/core";
 
 // get data from jsons for each protocols
-const aaveV2Eth = await queryContent("/aave-v2-eth").findOne();
-const aaveV3Eth = await queryContent("/aave-v3-eth").findOne();
-const maker = await queryContent("/maker").findOne();
-const compoundV3Mainnet = await queryContent("/compound-v3-mainnet").findOne();
-const inverseFinanceEth = await queryContent("/inverse-finance-eth").findOne();
+const aaveV2Eth = (await queryContent("/aave-v2-eth").findOne()).body;
+const aaveV3Eth = (await queryContent("/aave-v3-eth").findOne()).body;
+const maker = (await queryContent("/maker").findOne()).body;
+const compoundV3Mainnet = (await queryContent("/compound-v3-mainnet").findOne())
+  .body;
+const inverseFinanceEth = (await queryContent("/inverse-finance-eth").findOne())
+  .body;
+
+const protocols = ref({
+  // Aave V2 Ethereum
+  aaveV2Eth: {
+    id: "aaveV2Eth",
+    name: "Aave V2 Etherum",
+    dataMonthly: dataToMonthly(aaveV2Eth),
+    data: aaveV2Eth,
+  },
+
+  //   Aave V3 Ethereum
+  aaveV3Eth: {
+    id: "aaveV3Eth",
+    name: "Aave V3 Etherum",
+    dataMonthly: dataToMonthly(aaveV3Eth),
+    data: aaveV3Eth,
+  },
+
+  // Maker
+  maker: {
+    id: "maker",
+    name: "Maker",
+    dataMonthly: dataToMonthly(maker),
+    data: maker,
+  },
+
+  // Compound V3 Mainnet
+  compoundV3Mainnet: {
+    id: "compoundV3Mainnet",
+    name: "Compound V3 Mainnet",
+    dataMonthly: dataToMonthly(compoundV3Mainnet),
+    data: compoundV3Mainnet,
+  },
+
+  // Inverse Finance Ethereum
+  inverseFinanceEth: {
+    id: "inverseFinanceEth",
+    name: "Inverse Finance Etherum",
+    dataMonthly: dataToMonthly(inverseFinanceEth),
+    data: inverseFinanceEth,
+  },
+
+  //   totals
+  total: {
+    id: "total",
+    name: "Total",
+    dataMonthly: dataToMonthly([
+      ...aaveV2Eth,
+      ...aaveV3Eth,
+      ...maker,
+      ...compoundV3Mainnet,
+      ...inverseFinanceEth,
+    ]),
+    data: [
+      ...aaveV2Eth,
+      ...aaveV3Eth,
+      ...maker,
+      ...compoundV3Mainnet,
+      ...inverseFinanceEth,
+    ],
+  },
+});
+
+// set totals for each protocol, protocols is an object
+protocols.value.aaveV2Eth.totalLiquidated = getTotalLiquidated(
+  protocols.value.aaveV2Eth
+);
+protocols.value.aaveV2Eth.totalSentToBuilder = getTotalSentToBuilder(
+  protocols.value.aaveV2Eth
+);
+
+protocols.value.aaveV3Eth.totalLiquidated = getTotalLiquidated(
+  protocols.value.aaveV3Eth
+);
+protocols.value.aaveV3Eth.totalSentToBuilder = getTotalSentToBuilder(
+  protocols.value.aaveV3Eth
+);
+
+protocols.value.maker.totalLiquidated = getTotalLiquidated(
+  protocols.value.maker
+);
+protocols.value.maker.totalSentToBuilder = getTotalSentToBuilder(
+  protocols.value.maker
+);
+
+protocols.value.compoundV3Mainnet.totalLiquidated = getTotalLiquidated(
+  protocols.value.compoundV3Mainnet
+);
+protocols.value.compoundV3Mainnet.totalSentToBuilder = getTotalSentToBuilder(
+  protocols.value.compoundV3Mainnet
+);
+
+protocols.value.inverseFinanceEth.totalLiquidated = getTotalLiquidated(
+  protocols.value.inverseFinanceEth
+);
+protocols.value.inverseFinanceEth.totalSentToBuilder = getTotalSentToBuilder(
+  protocols.value.inverseFinanceEth
+);
+
+protocols.value.total.totalLiquidated = getTotalLiquidated(
+  protocols.value.total
+);
+protocols.value.total.totalSentToBuilder = getTotalSentToBuilder(
+  protocols.value.total
+);
+
+// set oev rates for each protocol, protocols is an object
+protocols.value.aaveV2Eth.oevRate = getOEVRate(protocols.value.aaveV2Eth);
+protocols.value.aaveV3Eth.oevRate = getOEVRate(protocols.value.aaveV3Eth);
+protocols.value.maker.oevRate = getOEVRate(protocols.value.maker);
+protocols.value.compoundV3Mainnet.oevRate = getOEVRate(
+  protocols.value.compoundV3Mainnet
+);
+protocols.value.inverseFinanceEth.oevRate = getOEVRate(
+  protocols.value.inverseFinanceEth
+);
+protocols.value.total.oevRate = getOEVRate(protocols.value.total);
+
+//
 
 // variables
 const userTvl = ref(0);
 const barCount = ref(5);
 const showOutput = ref(false);
-const selectedDataset = ref(aaveV2Eth);
+const selectedDataset = ref("aaveV2Eth");
 const oevRatio = ref(0);
 
 // average of sent to builder
 
 // data manipulate
-const totalLiquidated = computed(() => {
-  const allProtocols = [
-    ...aaveV2Eth.body,
-    ...aaveV3Eth.body,
-    ...maker.body,
-    ...compoundV3Mainnet.body,
-    ...inverseFinanceEth.body,
-  ];
-
-  return allProtocols.reduce(
-    (total, dataPoint) => Number(total) + Number(dataPoint.totalLiquidated),
-    0
-  );
-});
-
-const totalSentToBuilder = computed(() => {
-  const allProtocols = [
-    ...aaveV2Eth.body,
-    ...aaveV3Eth.body,
-    ...maker.body,
-    ...compoundV3Mainnet.body,
-    ...inverseFinanceEth.body,
-  ];
-
-  return allProtocols.reduce(
-    (total, dataPoint) => Number(total) + Number(dataPoint.sentToBuilder),
-    0
-  );
-});
-
 const parsed = computed(() => {
-  const data = selectedDataset.value.body.map((dataPoint) => {
+  const protocol = protocols.value[selectedDataset.value];
+
+  const dataLiquidated = protocol.data.map((dataPoint) => {
     return {
       x: new Date(dataPoint.date),
       y: dataPoint.totalLiquidated,
     };
   });
 
+  const dataSentToBuilder = protocol.data.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint.date),
+      y: dataPoint.totalSentToBuilder,
+    };
+  });
+
+  const dataOEV = protocol.data.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint.date),
+      y: withOEV(dataPoint),
+    };
+  });
+
   return {
-    labels: data.map((item) => item.x.toDateString().slice(4, 10)),
+    labels: dataLiquidated.map((item) => item.x.toDateString().slice(4, 10)),
     datasets: [
       {
-        data,
+        data: dataLiquidated,
+        label: "Total Liquidated",
+      },
+      {
+        data: dataSentToBuilder,
+        label: "Total Sent to Builder",
+      },
+      {
+        data: dataOEV,
+        label: "With OEV",
       },
     ],
   };
@@ -93,11 +209,81 @@ const data = new Array(barCount.value).fill({}).map((bar) => {
 
 const bars = ref(data);
 
+const inputOptions = [
+  {
+    label: "Aave V2 Ethereum",
+    value: "aaveV2Eth",
+  },
+  {
+    label: "Aave V3 Ethereum",
+    value: "aaveV3Eth",
+  },
+  {
+    label: "Maker",
+    value: "maker",
+  },
+  {
+    label: "Compound V3 Mainnet",
+    value: "compoundV3Mainnet",
+  },
+  {
+    label: "Inverse Finance Ethereum",
+    value: "inverseFinanceEth",
+  },
+];
+
+// helpers
 function getOEV(tvl) {
-  const oevRate = 0.31;
-  return Number(tvl + tvl * oevRate).toFixed(0);
+  return Number(tvl + tvl * oevRatio.value).toFixed(0);
 }
 
+function getOEVRate(protocol) {
+  return Number(protocol.totalSentToBuilder) / Number(protocol.totalLiquidated);
+}
+function withOEV(protocol) {
+  return Number(protocol.totalLiquidated) - Number(protocol.totalSentToBuilder);
+}
+
+function getTotalLiquidated(protocol) {
+  return protocol.data.reduce(
+    (total, dataPoint) => Number(total) + Number(dataPoint.totalLiquidated),
+    0
+  );
+}
+function getTotalSentToBuilder(protocol) {
+  return protocol.data.reduce(
+    (total, dataPoint) => Number(total) + Number(dataPoint.totalSentToBuilder),
+    0
+  );
+}
+function dataToMonthly(array) {
+  const monthly = {};
+
+  array.forEach((dataPoint, i) => {
+    const date = new Date(dataPoint.date);
+    const month = date.getMonth();
+    const year = date.getFullYear();
+
+    const key = `${month}-${year}`;
+
+    if (monthly[key]) {
+      monthly[key].totalLiquidated += Number(dataPoint.totalLiquidated);
+      monthly[key].totalSentToBuilder += Number(dataPoint.totalSentToBuilder);
+    } else {
+      monthly[key] = {
+        totalLiquidated: Number(dataPoint.totalLiquidated),
+        totalSentToBuilder: Number(dataPoint.totalSentToBuilder),
+        month: month,
+        year: year,
+        id: key,
+      };
+    }
+  });
+
+  return Object.values(monthly);
+}
+
+//
 function addToChart(tvl) {
   const addedProtocol = {
     tvl: tvl.value,
@@ -116,10 +302,9 @@ function buttonHandle(event) {
 <template>
   <main>
     <pre>
-		{{ totalLiquidated }}
+		<!-- {{ protocols }} -->
 
-	 </pre
-    >
+	 </pre>
     <PageTitle heading="Watch Tower" />
 
     <SectionColumn class="chart-section" inner-class="wide">
@@ -185,28 +370,7 @@ function buttonHandle(event) {
       <FormKit
         type="select"
         v-model="selectedDataset"
-        :options="[
-          {
-            label: 'aaveV2Eth',
-            value: aaveV2Eth,
-          },
-          {
-            label: 'aaveV3Eth',
-            value: aaveV3Eth,
-          },
-          {
-            label: 'maker',
-            value: maker,
-          },
-          {
-            label: 'compoundV3Mainnet',
-            value: compoundV3Mainnet,
-          },
-          {
-            label: 'inverseFinanceEth',
-            value: inverseFinanceEth,
-          },
-        ]"
+        :options="inputOptions"
       />
       <LineChart
         :data="parsed"
