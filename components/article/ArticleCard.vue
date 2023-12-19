@@ -1,5 +1,4 @@
 <script setup>
-import slug from "slug";
 import { gsap } from "gsap";
 
 const props = defineProps({
@@ -49,7 +48,7 @@ onMounted(() => {
         {{ article?.author.name ?? "Author Name" }}
       </h4>
     </text-content>
-    <NuxtLink :to="`/articles/${slug(article?.title ?? '#')}`" class="text">
+    <NuxtLink :to="`/articles/${article?.slug ?? '#'}`" class="text">
       Read more
     </NuxtLink>
   </article-card>
