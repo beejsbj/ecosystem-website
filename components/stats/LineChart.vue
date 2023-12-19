@@ -108,14 +108,13 @@ const options = {
   //   hoverBorderColor: "hsla(160, 0%, 94%, 1)",
 
   onClick: function (evt, item) {
-    console.log("item", item);
+    //  console.log("item", item);
   },
 
   onResize: function (chart, size) {
-    console.log("chart", chart);
-    console.log("size", size);
-
-    console.log("chart.canvas.parentNode", chart.canvas.parentNode);
+    //  console.log("chart", chart);
+    //  console.log("size", size);
+    //  console.log("chart.canvas.parentNode", chart.canvas.parentNode);
   },
 };
 </script>

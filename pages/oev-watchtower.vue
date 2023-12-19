@@ -1,14 +1,12 @@
 <script setup>
 import { useStorage } from "@vueuse/core";
 
-// get data from jsons
+// get data from jsons for each protocols
 const aaveV2Eth = await queryContent("/aave-v2-eth").findOne();
 const aaveV3Eth = await queryContent("/aave-v3-eth").findOne();
 const maker = await queryContent("/maker").findOne();
 const compoundV3Mainnet = await queryContent("/compound-v3-mainnet").findOne();
 const inverseFinanceEth = await queryContent("/inverse-finance-eth").findOne();
-
-const totalLiquidated = aaveV2Eth.value.body.reduce;
 
 // variables
 const userTvl = ref(0);
@@ -20,6 +18,36 @@ const oevRatio = ref(0);
 // average of sent to builder
 
 // data manipulate
+const totalLiquidated = computed(() => {
+  const allProtocols = [
+    ...aaveV2Eth.body,
+    ...aaveV3Eth.body,
+    ...maker.body,
+    ...compoundV3Mainnet.body,
+    ...inverseFinanceEth.body,
+  ];
+
+  return allProtocols.reduce(
+    (total, dataPoint) => Number(total) + Number(dataPoint.totalLiquidated),
+    0
+  );
+});
+
+const totalSentToBuilder = computed(() => {
+  const allProtocols = [
+    ...aaveV2Eth.body,
+    ...aaveV3Eth.body,
+    ...maker.body,
+    ...compoundV3Mainnet.body,
+    ...inverseFinanceEth.body,
+  ];
+
+  return allProtocols.reduce(
+    (total, dataPoint) => Number(total) + Number(dataPoint.sentToBuilder),
+    0
+  );
+});
+
 const parsed = computed(() => {
   const data = selectedDataset.value.body.map((dataPoint) => {
     return {
@@ -87,6 +115,11 @@ function buttonHandle(event) {
 
 <template>
   <main>
+    <pre>
+		{{ totalLiquidated }}
+
+	 </pre
+    >
     <PageTitle heading="Watch Tower" />
 
     <SectionColumn class="chart-section" inner-class="wide">
@@ -148,10 +181,6 @@ function buttonHandle(event) {
         </div>
       </form>
     </SectionColumn>
-    <pre>
-	<!-- {{ aaveV2Eth.body }} -->
-
-</pre>
     <SectionColumn class="single-chart">
       <FormKit
         type="select"
@@ -184,10 +213,6 @@ function buttonHandle(event) {
         :options="fakeData.options"
         :metadata="fakeData.metadata"
       />
-
-      <pre>
-			<!-- {{ parsed }} -->
-		</pre>
     </SectionColumn>
   </main>
 </template>
