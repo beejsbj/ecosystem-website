@@ -149,7 +149,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
     <section>
       <inner-column v-auto-animate>
         <aside>
@@ -200,7 +199,6 @@ onMounted(() => {
         </div>
       </inner-column>
     </section>
-  </main>
 </template>
 
 <style scoped lang="scss">

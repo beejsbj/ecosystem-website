@@ -18,28 +18,26 @@ useSeoMeta({
 </script>
 
 <template>
-  <main>
-    <PageTitle heading="Articles" />
-    <SectionColumn>
-      <h2 class="attention-voice">Featured</h2>
-      <ArticleGrid layout="0" cardCount="2" isFeaturedSort="true" />
-    </SectionColumn>
+  <PageTitle heading="Articles" />
+  <SectionColumn>
+    <h2 class="attention-voice">Featured</h2>
+    <LazyArticleGrid layout="0" cardCount="2" isFeaturedSort="true" />
+  </SectionColumn>
 
-    <SectionColumn>
-      <h2 class="attention-voice">Popular</h2>
-      <ArticleGrid layout="1" cardCount="3" isPopularSort="true" />
-    </SectionColumn>
+  <SectionColumn>
+    <h2 class="attention-voice">Popular</h2>
+    <LazyArticleGrid layout="1" cardCount="3" isPopularSort="true" />
+  </SectionColumn>
 
-    <SectionColumn>
-      <h2 class="attention-voice">Trending</h2>
-      <ArticleGrid layout="2" cardCount="4" isTrendingSort="true" />
-    </SectionColumn>
+  <SectionColumn>
+    <h2 class="attention-voice">Trending</h2>
+    <LazyArticleGrid layout="2" cardCount="4" isTrendingSort="true" />
+  </SectionColumn>
 
-    <SectionColumn>
-      <h2 class="attention-voice">All</h2>
-      <ArticleGrid layout="3" isRecentSort="true" />
-    </SectionColumn>
-  </main>
+  <SectionColumn>
+    <h2 class="attention-voice">All</h2>
+    <LazyArticleGrid layout="3" isRecentSort="true" />
+  </SectionColumn>
 </template>
 
 <style lang="scss" scoped>

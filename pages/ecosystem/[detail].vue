@@ -81,7 +81,6 @@ const formattedProxies = computed(() => {
 </script>
 
 <template>
-  <main>
     <article class="detail-page">
       <DetailBanner :dapp="dapp" />
 
@@ -148,7 +147,6 @@ const formattedProxies = computed(() => {
         </article>
       </SectionColumn>
     </article>
-  </main>
 </template>
 
 <style lang="scss" scoped>
@@ -199,6 +197,10 @@ article.main {
   .about {
     grid-column: 1;
     color: var(--gray-light);
+
+    .actions {
+      flex-wrap: wrap;
+    }
 
     .text.green {
       padding: 0;

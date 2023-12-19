@@ -55,54 +55,48 @@ async function submitHandler(event) {
 </script>
 
 <template>
-  <main>
-    <PageTitle heading="Add Article" />
-    <SectionColumn>
-      <FormKit type="form" :actions="false" @submit="submitHandler">
-        <FormKit
-          v-auto-animate
-          id="article-form"
-          type="file"
-          label="Upload article as markdown"
-          label-class="$reset calm-voice"
-          name="article"
-          fileName="article"
-          no-files-icon="fileDocument"
-          accept=".md"
-          validation="required"
-        />
+  <PageTitle heading="Add Article" />
+  <SectionColumn>
+    <FormKit type="form" :actions="false" @submit="submitHandler">
+      <FormKit
+        v-auto-animate
+        id="article-form"
+        type="file"
+        label="Upload article as markdown"
+        label-class="$reset calm-voice"
+        name="article"
+        fileName="article"
+        no-files-icon="fileDocument"
+        accept=".md"
+        validation="required"
+      />
 
-        <FormKit
-          v-auto-animate
-          id="article-form"
-          type="file"
-          label="Upload cover image"
-          label-class="$reset calm-voice"
-          no-files-icon="fileImage"
-          fileName="cover"
-          name="image"
-          validation="optional"
-          accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP, .gif, .GIF"
-        />
+      <FormKit
+        v-auto-animate
+        id="article-form"
+        type="file"
+        label="Upload cover image"
+        label-class="$reset calm-voice"
+        no-files-icon="fileImage"
+        fileName="cover"
+        name="image"
+        validation="optional"
+        accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP, .gif, .GIF"
+      />
 
-        <FormKit
-          type="submit"
-          label="Add Article"
-          input-class="$reset button"
-        />
+      <FormKit type="submit" label="Add Article" input-class="$reset button" />
 
-        <p v-if="status.loading">Uploading...</p>
-        <p
-          :class="{
-            'color-success': status.success,
-            'color-warning': !status.success,
-          }"
-        >
-          {{ status.message }}
-        </p>
-      </FormKit>
-    </SectionColumn>
-  </main>
+      <p v-if="status.loading">Uploading...</p>
+      <p
+        :class="{
+          'color-success': status.success,
+          'color-warning': !status.success,
+        }"
+      >
+        {{ status.message }}
+      </p>
+    </FormKit>
+  </SectionColumn>
 </template>
 
 <style scoped lang="scss">

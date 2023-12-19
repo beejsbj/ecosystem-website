@@ -81,6 +81,7 @@ onMounted(() => {
 <style scoped>
 .dapp-grid {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-l);
   position: relative;
