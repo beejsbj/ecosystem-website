@@ -12,6 +12,8 @@ const compoundV3Mainnet = (await queryContent("/compound-v3-mainnet").findOne())
 const inverseFinanceEth = (await queryContent("/inverse-finance-eth").findOne())
   .body;
 
+//   apply withOEV to each data point
+
 const protocols = ref({
   // Aave V2 Ethereum
   aaveV2Eth: {
@@ -80,6 +82,15 @@ Object.values(protocols.value).forEach((protocol) => {
   protocol.totalSentToBuilder = getTotalSentToBuilder(protocol);
   protocol.oevRate = getOEVRate(protocol);
   protocol.withOEV = getOEV(protocol);
+
+  if (protocol.id !== "total") {
+    protocol.data.forEach((dataPoint) => {
+      dataPoint.withOEV = getOEV(dataPoint);
+    });
+    protocol.dataMonthly.forEach((dataPoint) => {
+      dataPoint.withOEV = getOEV(dataPoint);
+    });
+  }
 });
 
 // variables
@@ -127,6 +138,7 @@ function dataToMonthly(array) {
         month: month,
         year: year,
         id: key,
+        date: dataPoint.date,
       };
     }
   });
@@ -144,5 +156,5 @@ function dataToMonthly(array) {
 
   <OEVInterfaceChart :protocols="protocols" />
 
-  <OevProtocolChart :protocols="protocols" />
+  <OEVProtocolChart :protocols="protocols" />
 </template>

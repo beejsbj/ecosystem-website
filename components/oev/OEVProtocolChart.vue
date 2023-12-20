@@ -2,6 +2,7 @@
 const props = defineProps(["protocols"]);
 
 const selectedDataset = ref("aaveV2Eth");
+const selectedPeriod = ref("daily");
 
 //
 const metadata = {
@@ -17,31 +18,50 @@ const metadata = {
 
 // data manipulation
 const parsed = computed(() => {
+  console.log(props.protocols);
   const protocol = props.protocols[selectedDataset.value];
 
-  const dataLiquidated = protocol.data.map((dataPoint) => {
+  const rawData =
+    selectedPeriod.value === "daily"
+      ? protocol.data
+      : selectedPeriod.value === "weekly"
+      ? protocol.dataWeekly
+      : protocol.dataMonthly;
+
+  const dataLiquidated = rawData.map((dataPoint) => {
     return {
       x: new Date(dataPoint.date),
       y: dataPoint.totalLiquidated,
     };
   });
 
-  const dataSentToBuilder = protocol.data.map((dataPoint) => {
+  const dataSentToBuilder = rawData.map((dataPoint) => {
     return {
       x: new Date(dataPoint.date),
       y: dataPoint.totalSentToBuilder,
     };
   });
 
-  const dataOEV = protocol.data.map((dataPoint) => {
+  const dataOEV = rawData.map((dataPoint) => {
     return {
       x: new Date(dataPoint.date),
       y: dataPoint.withOEV,
     };
   });
 
+  const labels =
+    selectedPeriod.value === "daily"
+      ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 10))
+      : selectedPeriod.value === "weekly"
+      ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 15)) //weekly
+      : dataLiquidated.map(
+          (item) =>
+            item.x.toDateString().slice(4, 8) +
+            item.x.toDateString().slice(10, 15)
+        ); //monthly
+
   return {
-    labels: dataLiquidated.map((item) => item.x.toDateString().slice(4, 10)),
+    labels,
     datasets: [
       {
         data: dataLiquidated,
@@ -77,7 +97,19 @@ const parsed = computed(() => {
         </li>
       </template>
     </ul>
-    <LineChart :data="parsed" :options="{}" :metadata="metadata" />
+    <div class="chart">
+      <div class="actions">
+        <button class="icon" @click="selectedPeriod = 'daily'">
+          <span>D</span>
+        </button>
+        <!-- <button class="icon">W</button> -->
+        <button class="icon" @click="selectedPeriod = 'monthly'">
+          <span>M</span>
+        </button>
+      </div>
+      <pre></pre>
+      <LineChart :data="parsed" :options="{}" :metadata="metadata" />
+    </div>
   </SectionColumn>
 </template>
 
@@ -102,7 +134,7 @@ ul {
   }
 }
 
-:deep(.chart-container) {
+.chart {
   grid-column: span 2;
 }
 

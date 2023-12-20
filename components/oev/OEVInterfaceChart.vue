@@ -7,31 +7,41 @@ const barCount = ref(2);
 const showOutput = ref(false);
 const userAdded = ref(0);
 
+// Calculate the relative heights
+let maxLiquidated = props.protocols.total.totalLiquidated;
+let maxWithOEV = props.protocols.total.withOEV;
+let maxOverall = Math.max(maxLiquidated, maxWithOEV);
 //
 
 function addToChart(totalLiquidated) {
-  protocols[`userAdded-${userAdded.value}`] = {
+  props.protocols[`userAdded-${userAdded.value}`] = {
     totalLiquidated,
-    withOEV: totalLiquidated * protocols.total.oevRate,
+    withOEV: totalLiquidated * props.protocols.total.oevRate,
+    name: `User Added ${userAdded.value}`,
   };
+
+  userAdded.value++;
 }
 
 function buttonHandle(event) {
-  addToChart(userTvl);
+  const tvl = userTvl.value;
+  addToChart(tvl);
   userTvl.value = 0;
   showOutput.value = true;
 }
+
+//
 </script>
 
 <template>
   <SectionColumn class="chart-section" inner-class="wide">
     <div class="legend">
       <div>
-        <div class="negative"></div>
+        <div class="liquidated"></div>
         <p class="whisper-voice">Protocol TVL</p>
       </div>
       <div>
-        <div class="positive"></div>
+        <div class="withOEV"></div>
         <p class="whisper-voice">With OEV</p>
       </div>
     </div>
@@ -41,26 +51,25 @@ function buttonHandle(event) {
           <div
             class="bar"
             :style="`
-					--bar-negative-height: ${
-            (protocol.totalLiquidated / protocols.total.totalLiquidated) * 100
-          };
-					--bar-positive-height: ${(protocol.withOEV / protocols.total.withOEV) * 100};
+					--bar-liquidated-height: ${(protocol.totalLiquidated / maxOverall) * 200};
+					--bar-withOEV-height: ${(protocol.withOEV / maxOverall) * 200};
 				`"
           >
-            <span class="negative">
+            <span class="liquidated">
               <span class="number whisper-voice">
-                {{ protocol.totalLiquidated.toFixed(2) }}</span
-              >
+                <!-- {{ protocol.totalLiquidated.toFixed(2) }} -->
+              </span>
             </span>
-            <span class="positive">
+            <span class="withOEV">
               <span class="number whisper-voice">
-                {{ protocol.withOEV.toFixed(2) }}</span
-              >
+                <!-- {{ protocol.withOEV.toFixed(2) }} -->
+              </span>
             </span>
           </div>
           <picture class="protocol-logo">
             <img src="@/assets/images/background/square.jpg" alt="" />
           </picture>
+          <p class="whisper-voice">{{ protocol.name }}</p>
         </li>
       </template>
     </ul>
@@ -82,6 +91,10 @@ function buttonHandle(event) {
           placeholder="tvl"
           id="tvl"
           v-model.number="userTvl"
+          :max="maxLiquidated"
+          :validation="`max: ${maxLiquidated}`"
+          validation-label="TVL"
+          :show-validation="showOutput"
         />
       </form-field>
       <div class="actions">
@@ -144,7 +157,7 @@ form {
   }
 }
 
-.positive {
+.withOEV {
   --background: linear-gradient(
     to bottom,
     hsla(160, 69%, 69%, 0.3),
@@ -158,7 +171,7 @@ form {
   );
 }
 
-.negative {
+.liquidated {
   --background: linear-gradient(
     to bottom,
     hsla(255, 34%, 54%, 0.5),
@@ -209,7 +222,7 @@ li {
       background: var(--gray);
     }
 
-    //  positive and negative halves of the bar
+    //  withOEV and liquidated halves of the bar
     & > span {
       transition: 0.2s ease-in-out;
       border-radius: var(--corners);
@@ -251,16 +264,16 @@ li {
       }
     }
 
-    .positive {
+    .withOEV {
       grid-column: 2 / span 1;
 
-      height: calc(var(--bar-positive-height) * 2px);
+      height: calc(var(--bar-withOEV-height) * 2px);
     }
 
-    .negative {
+    .liquidated {
       grid-column: 1 / span 1;
 
-      height: calc(var(--bar-negative-height) * 2px);
+      height: calc(var(--bar-liquidated-height) * 2px);
     }
   }
 }
