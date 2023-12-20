@@ -98,6 +98,7 @@ a {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   max-width: var(--space-l);
+  line-height: 0;
 }
 
 img.caret {

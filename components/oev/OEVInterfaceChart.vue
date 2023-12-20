@@ -18,6 +18,7 @@ function addToChart(totalLiquidated) {
     totalLiquidated,
     withOEV: totalLiquidated * props.protocols.total.oevRate,
     name: `User Added ${userAdded.value}`,
+    hide: true,
   };
 
   userAdded.value++;
@@ -110,6 +111,7 @@ function buttonHandle(event) {
 :deep(inner-column) {
   display: grid;
   gap: var(--space-m);
+  padding: var(--space-3xl) var(--space-s);
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;

@@ -59,6 +59,7 @@ const protocols = ref({
   total: {
     id: "total",
     name: "Total",
+    hide: true,
     dataMonthly: dataToMonthly([
       ...aaveV2Eth,
       ...aaveV3Eth,

@@ -84,30 +84,31 @@ const parsed = computed(() => {
   <SectionColumn class="single-chart" inner-class="wide">
     <ul>
       <template v-for="protocol in protocols">
-        <li v-if="protocol.id != 'total'">
+        <li v-if="!protocol.hide">
           <button @click="selectedDataset = protocol.id">
             <BoxCard
               :teaser="protocol.name"
-              class="border-gradient-green"
               :class="{
-                selected: selectedDataset === protocol.id,
+                'border-gradient-green': selectedDataset === protocol.id,
+                'border-gradient-blue': selectedDataset !== protocol.id,
               }"
             />
           </button>
         </li>
       </template>
-    </ul>
-    <div class="chart">
       <div class="actions">
-        <button class="icon" @click="selectedPeriod = 'daily'">
-          <span>D</span>
+        <button class="button outline" @click="selectedPeriod = 'daily'">
+          <span>Daily</span>
         </button>
-        <!-- <button class="icon">W</button> -->
-        <button class="icon" @click="selectedPeriod = 'monthly'">
-          <span>M</span>
+        <button class="button outline" @click="selectedPeriod = 'daily'">
+          <span>Weekly</span>
+        </button>
+        <button class="button outline" @click="selectedPeriod = 'monthly'">
+          <span>Montlhy</span>
         </button>
       </div>
-      <pre></pre>
+    </ul>
+    <div class="chart">
       <LineChart :data="parsed" :options="{}" :metadata="metadata" />
     </div>
   </SectionColumn>
@@ -117,6 +118,7 @@ const parsed = computed(() => {
 :deep(inner-column) {
   display: grid;
   gap: var(--space-m);
+  padding: var(--space-3xl) var(--space-s);
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -141,8 +143,20 @@ ul {
 :deep(.box-card) {
   cursor: pointer;
 
-  &.selected {
-    filter: hue-rotate(90deg);
+  &.border-gradient-blue > * {
+    filter: hue-rotate(70deg);
+  }
+}
+
+div.actions {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: center;
+
+  button {
+    display: grid;
+    place-items: center;
   }
 }
 </style>
