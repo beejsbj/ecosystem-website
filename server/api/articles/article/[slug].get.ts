@@ -14,9 +14,12 @@ export default defineEventHandler(async (event) => {
       };
     }
 
+    const repoOwner = "api3-ecosystem";
+    const repoName = "ecosystem-markdown-articles";
     let article = queryCache.get(`article-${articleSlug}`);
+
     if (article === undefined) {
-      const downloadUrl = `https://raw.githubusercontent.com/AamirAlam/ecosystem-articles/master/${articleSlug}/index.md`;
+      const downloadUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/master/${articleSlug}/index.md`;
       const articleMd = (await axios.get(downloadUrl)).data;
 
       if (!articleMd) {

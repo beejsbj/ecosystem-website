@@ -4,8 +4,8 @@ import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   try {
-    const repoOwner = "AamirAlam";
-    const repoName = "ecosystem-articles";
+    const repoOwner = "api3-ecosystem";
+    const repoName = "ecosystem-markdown-articles";
     const fileListEndpoint = `https://api.github.com/repos/${repoOwner}/${repoName}/contents`;
 
     const { page }: any = getQuery(event);
