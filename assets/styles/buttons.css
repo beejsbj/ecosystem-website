@@ -47,7 +47,7 @@ a {
   border: var(--border-light);
 }
 
-.button.outline:is(:hover, :focus-visible) {
+.button.outline:is(:hover, :focus-visible, .hover) {
   color: var(--blue-lighter);
   border-color: var(--blue-lighter);
   filter: saturate(2);

@@ -18,7 +18,7 @@ function addToChart(totalLiquidated) {
     totalLiquidated,
     withOEV: totalLiquidated * props.protocols.total.oevRate,
     name: `User Added ${userAdded.value}`,
-    hide: true,
+    //  hide: true,
   };
 
   userAdded.value++;
@@ -48,7 +48,7 @@ function buttonHandle(event) {
     </div>
     <ul class="bars" v-auto-animate>
       <template v-for="(protocol, i) in protocols">
-        <li v-if="i != 'total'">
+        <li v-if="!protocol.hide">
           <div
             class="bar"
             :style="`
@@ -58,12 +58,12 @@ function buttonHandle(event) {
           >
             <span class="liquidated">
               <span class="number whisper-voice">
-                <!-- {{ protocol.totalLiquidated.toFixed(2) }} -->
+                {{ protocol.totalLiquidated.toFixed(2) }}
               </span>
             </span>
             <span class="withOEV">
               <span class="number whisper-voice">
-                <!-- {{ protocol.withOEV.toFixed(2) }} -->
+                {{ protocol.withOEV.toFixed(2) }}
               </span>
             </span>
           </div>
@@ -77,7 +77,7 @@ function buttonHandle(event) {
     <form v-auto-animate>
       <output v-auto-animate v-if="userTvl">
         <p class="loud-voice" v-if="true">
-          ${{ userTvl * protocols.total.oevRate }}
+          ${{ (userTvl * protocols.total.oevRate).toFixed(2) }}
         </p>
         <p class="whisper-voice" v-if="true">
           Money Earned if OEV Network is integrated

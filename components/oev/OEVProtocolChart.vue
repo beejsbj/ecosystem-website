@@ -4,6 +4,8 @@ const props = defineProps(["protocols"]);
 const selectedDataset = ref("aaveV2Eth");
 const selectedPeriod = ref("daily");
 
+const periods = ["daily", "monthly"];
+
 //
 const metadata = {
   title: "Total Liquidation",
@@ -97,15 +99,17 @@ const parsed = computed(() => {
         </li>
       </template>
       <div class="actions">
-        <button class="button outline" @click="selectedPeriod = 'daily'">
-          <span>Daily</span>
-        </button>
-        <button class="button outline" @click="selectedPeriod = 'daily'">
-          <span>Weekly</span>
-        </button>
-        <button class="button outline" @click="selectedPeriod = 'monthly'">
-          <span>Montlhy</span>
-        </button>
+        <template v-for="period in periods">
+          <button
+            class="button outline"
+            @click="selectedPeriod = period"
+            :class="{
+              hover: selectedPeriod === period,
+            }"
+          >
+            <span>{{ period }}</span>
+          </button>
+        </template>
       </div>
     </ul>
     <div class="chart">
@@ -157,6 +161,10 @@ div.actions {
   button {
     display: grid;
     place-items: center;
+
+    span {
+      text-transform: capitalize;
+    }
   }
 }
 </style>

@@ -5,12 +5,13 @@ import { useStorage } from "@vueuse/core";
 
 // get data from jsons for each protocols
 const aaveV2Eth = (await queryContent("/aave-v2-eth").findOne()).body;
-const aaveV3Eth = (await queryContent("/aave-v3-eth").findOne()).body;
 const maker = (await queryContent("/maker").findOne()).body;
-const compoundV3Mainnet = (await queryContent("/compound-v3-mainnet").findOne())
+const aaveV3Eth = (await queryContent("/aave-v3-eth").findOne()).body;
+const compoundV3Mainnet = (await queryContent("/compund-v3-mainnet").findOne())
   .body;
-const inverseFinanceEth = (await queryContent("/inverse-finance-eth").findOne())
-  .body;
+const inverseFinanceEth = (
+  await queryContent("/inverse-finance-ethereum").findOne()
+).body;
 
 //   apply withOEV to each data point
 
@@ -21,6 +22,8 @@ const protocols = ref({
     name: "Aave V2 Etherum",
     dataMonthly: dataToMonthly(aaveV2Eth),
     data: aaveV2Eth,
+
+    hide: true,
   },
 
   //   Aave V3 Ethereum
@@ -37,6 +40,8 @@ const protocols = ref({
     name: "Maker",
     dataMonthly: dataToMonthly(maker),
     data: maker,
+
+    hide: true,
   },
 
   // Compound V3 Mainnet
@@ -61,16 +66,16 @@ const protocols = ref({
     name: "Total",
     hide: true,
     dataMonthly: dataToMonthly([
-      ...aaveV2Eth,
+      // ...aaveV2Eth,
       ...aaveV3Eth,
-      ...maker,
+      // ...maker,
       ...compoundV3Mainnet,
       ...inverseFinanceEth,
     ]),
     data: [
-      ...aaveV2Eth,
+      // ...aaveV2Eth,
       ...aaveV3Eth,
-      ...maker,
+      // ...maker,
       ...compoundV3Mainnet,
       ...inverseFinanceEth,
     ],
