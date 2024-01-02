@@ -3,23 +3,25 @@ const props = defineProps(["protocols"]);
 
 // variables
 const userTvl = ref(0);
-const barCount = ref(2);
 const showOutput = ref(false);
 const userAdded = ref(0);
 
 // Calculate the relative heights
-let maxLiquidated = props.protocols.total.totalLiquidated;
-let maxWithOEV = props.protocols.total.withOEV;
+let maxLiquidated = props.protocols[props.protocols.length - 1].totalLiquidated;
+let maxWithOEV = props.protocols[props.protocols.length - 1].withOEV;
 let maxOverall = Math.max(maxLiquidated, maxWithOEV);
+const oevRate = props.protocols[props.protocols.length - 1].oevRate;
+console.log(oevRate);
 //
 
 function addToChart(totalLiquidated) {
-  props.protocols[`userAdded-${userAdded.value}`] = {
+  props.protocols.push({
+    id: `userAdded${userAdded.value}`,
     totalLiquidated,
-    withOEV: totalLiquidated * props.protocols.total.oevRate,
+    withOEV: totalLiquidated + totalLiquidated * oevRate,
     name: `User Added ${userAdded.value}`,
     //  hide: true,
-  };
+  });
 
   userAdded.value++;
 }
@@ -43,7 +45,7 @@ function buttonHandle(event) {
       </div>
       <div>
         <div class="withOEV"></div>
-        <p class="whisper-voice">With OEV</p>
+        <p class="whisper-voice">Saving with OEV</p>
       </div>
     </div>
     <ul class="bars" v-auto-animate>
@@ -77,7 +79,7 @@ function buttonHandle(event) {
     <form v-auto-animate>
       <output v-auto-animate v-if="userTvl">
         <p class="loud-voice" v-if="true">
-          ${{ (userTvl * protocols.total.oevRate).toFixed(2) }}
+          ${{ (userTvl * oevRate).toFixed(2) }}
         </p>
         <p class="whisper-voice" v-if="true">
           Money Earned if OEV Network is integrated
@@ -138,6 +140,7 @@ form {
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
+  justify-self: center;
 }
 
 .legend {
@@ -148,7 +151,7 @@ form {
 
   & > div {
     display: grid;
-    grid-template-columns: 50px 100px;
+    grid-template-columns: 50px 1fr;
     align-items: center;
 
     & > div {
@@ -260,9 +263,14 @@ li {
         text-align: center;
         position: absolute;
         --gap: -1.1rem;
-        left: 50%;
+        left: 100%;
         top: var(--gap);
         transform: translateX(-50%);
+      }
+      &.liquidated {
+        .number {
+          left: -0%;
+        }
       }
     }
 

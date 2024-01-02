@@ -4,7 +4,7 @@ const props = defineProps(["protocols"]);
 const selectedDataset = ref("aaveV2Eth");
 const selectedPeriod = ref("daily");
 
-const periods = ["daily", "monthly"];
+const periods = ["daily", "weekly", "monthly"];
 
 //
 const metadata = {
@@ -20,8 +20,14 @@ const metadata = {
 
 // data manipulation
 const parsed = computed(() => {
-  console.log(props.protocols);
-  const protocol = props.protocols[selectedDataset.value];
+  //   console.log(props.protocols);
+  const index = props.protocols.findIndex(
+    (protocol) => protocol.id === selectedDataset.value
+  );
+
+  const protocol = props.protocols[index];
+  //   console.log(index);
+  //   console.log(props.protocols);
 
   const rawData =
     selectedPeriod.value === "daily"
