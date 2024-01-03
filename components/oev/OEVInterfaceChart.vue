@@ -1,43 +1,23 @@
 <script setup>
-const props = defineProps(["protocols"]);
-
-// variables
-const userTvl = ref(0);
-const showOutput = ref(false);
-const userAdded = ref(0);
+const oev = useOEVStore();
 
 // Calculate the relative heights
-let maxLiquidated = props.protocols[props.protocols.length - 1].totalLiquidated;
-let maxWithOEV = props.protocols[props.protocols.length - 1].withOEV;
-let maxOverall = Math.max(maxLiquidated, maxWithOEV);
-const oevRate = props.protocols[props.protocols.length - 1].oevRate;
-console.log(oevRate);
-//
+const maxLiquidated = oev.getTotals().totalLiquidated;
 
-function addToChart(totalLiquidated) {
-  props.protocols.push({
-    id: `userAdded${userAdded.value}`,
-    totalLiquidated,
-    withOEV: totalLiquidated + totalLiquidated * oevRate,
-    name: `User Added ${userAdded.value}`,
-    //  hide: true,
-  });
+const maxHeight = computed(() => {
+  //check if protocols have hide, use the protocol with the highest value
+  const protocols = oev.protocols.filter((protocol) => !protocol.hide);
+  const max = Math.max(
+    ...protocols.map((protocol) => protocol.totalLiquidated)
+  );
 
-  userAdded.value++;
-}
-
-function buttonHandle(event) {
-  const tvl = userTvl.value;
-  addToChart(tvl);
-  userTvl.value = 0;
-  showOutput.value = true;
-}
-
-//
+  console.log(max);
+  return max;
+});
 </script>
 
 <template>
-  <SectionColumn class="chart-section" inner-class="wide">
+  <div class="chart-container bars">
     <div class="legend">
       <div>
         <div class="liquidated"></div>
@@ -49,14 +29,14 @@ function buttonHandle(event) {
       </div>
     </div>
     <ul class="bars" v-auto-animate>
-      <template v-for="(protocol, i) in protocols">
-        <li v-if="!protocol.hide">
+      <template v-for="(protocol, i) in oev.protocols">
+        <li v-if="!protocol.hide" :key="protocol.id">
           <div
             class="bar"
             :style="`
-					--bar-liquidated-height: ${(protocol.totalLiquidated / maxOverall) * 200};
-					--bar-withOEV-height: ${(protocol.withOEV / maxOverall) * 200};
-				`"
+					  --bar-liquidated-height: ${(protocol.totalLiquidated / maxHeight) * 150};
+					  --bar-withOEV-height: ${(protocol.withOEV / maxHeight) * 150};
+				  `"
           >
             <span class="liquidated">
               <span class="number whisper-voice">
@@ -76,64 +56,32 @@ function buttonHandle(event) {
         </li>
       </template>
     </ul>
-    <form v-auto-animate>
-      <output v-auto-animate v-if="userTvl">
-        <p class="loud-voice" v-if="true">
-          ${{ (userTvl * oevRate).toFixed(2) }}
-        </p>
-        <p class="whisper-voice" v-if="true">
-          Money Earned if OEV Network is integrated
-        </p>
-      </output>
-      <form-field>
-        <FormKit
-          type="number"
-          label="How much TVL is in Protocol?"
-          label-class="$reset calm-voice"
-          name="tvl"
-          placeholder="tvl"
-          id="tvl"
-          v-model.number="userTvl"
-          :max="maxLiquidated"
-          :validation="`max: ${maxLiquidated}`"
-          validation-label="TVL"
-          :show-validation="showOutput"
-        />
-      </form-field>
-      <div class="actions">
-        <button class="button whisper-voice" @click.prevent="buttonHandle">
-          Add
-        </button>
-      </div>
-    </form>
-  </SectionColumn>
+
+    <text-content>
+      <p class="firm-voice">
+        To date X billion has been sent builder from over X dollars in
+        liquidation in 2023 Alone
+      </p>
+    </text-content>
+  </div>
 </template>
 
 <style scoped lang="scss">
-:deep(inner-column) {
+.chart-container {
   display: grid;
   gap: var(--space-m);
-  padding: var(--space-3xl) var(--space-s);
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-form {
+text-content {
+  grid-column: 1 / span 3;
   display: grid;
-  grid-template-columns: 1fr 0.1fr;
-  align-content: center;
-  align-items: end;
-  align-self: end;
-
-  output {
-    grid-column: span 2;
-  }
-
-  :deep(.formkit-wrapper) {
-    max-width: unset !important;
-  }
+  place-items: center;
+  text-align: center;
+  padding: var(--space-3xl);
 }
 
 .protocol-logo {
@@ -189,19 +137,18 @@ form {
     hsla(255, 34%, 0%, 0)
   );
 }
-.bars {
+ul.bars {
   display: grid;
   gap: var(--space-s);
   grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
 
   @media (min-width: 1000px) {
-    grid-column: 1 / span 2;
+    grid-column: 1 / -1;
   }
 }
 
 li {
   display: grid;
-  //   grid-template-rows: 0.8fr 0.2fr;
   gap: var(--space-s);
 
   justify-content: center;
@@ -212,11 +159,10 @@ li {
     display: grid;
     gap: var(--space-3xs);
     grid-template-columns: 1fr 1fr;
-    //  overflow: hidden;
 
     transition: 0.2s ease-in-out;
 
-    //  center seperator line
+    /*  center seperator line */
     &:after {
       content: "";
       position: absolute;
@@ -227,7 +173,7 @@ li {
       background: var(--gray);
     }
 
-    //  withOEV and liquidated halves of the bar
+    /*  withOEV and liquidated halves of the bar*/
     & > span {
       transition: 0.2s ease-in-out;
       border-radius: var(--corners);
@@ -237,7 +183,7 @@ li {
       background: var(--background);
       bottom: 0%;
 
-      //styling to make the gradient border
+      /*styling to make the gradient border*/
       &::before {
         content: "";
         border-radius: inherit;
@@ -247,7 +193,7 @@ li {
         z-index: -1;
       }
 
-      //creates the gradient border
+      /*creates the gradient border*/
       &::after {
         content: "";
         border-radius: inherit;
@@ -258,7 +204,7 @@ li {
         z-index: -2;
       }
 
-      //hovering number value
+      /*hovering number value*/
       .number {
         text-align: center;
         position: absolute;
