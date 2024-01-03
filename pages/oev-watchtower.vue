@@ -1,154 +1,83 @@
 <script setup>
-import { useStorage } from "@vueuse/core";
-
-const protocolCount = ref(3);
-
-const oevRaw = await queryContent("oev-data").find();
-
-const protocols = computed(() => {
-  const parsed = oevRaw.map((protocol, i) => {
-    return {
-      id: protocol.title[0].toLowerCase() + protocol.title.slice(1),
-      name: protocol.body[0].name,
-      data: protocol.body,
-      dataMonthly: dataToMonthly(protocol.body),
-      dataWeekly: dataToWeekly(protocol.body),
-      hide: i > protocolCount.value,
-    };
-  });
-
-  parsed.push({
-    id: "total",
-    name: "Total",
-    hide: true,
-
-    data: parsed.reduce((total, protocol) => {
-      return total.concat(protocol.data);
-    }, []),
-
-    dataMonthly: parsed.reduce((total, protocol) => {
-      return total.concat(protocol.dataMonthly);
-    }, []),
-
-    dataWeekly: parsed.reduce((total, protocol) => {
-      return total.concat(protocol.dataWeekly);
-    }, []),
-  });
-
-  parsed.forEach((protocol) => {
-    protocol.totalLiquidated = getTotalLiquidated(protocol);
-    protocol.totalSentToBuilder = getTotalSentToBuilder(protocol);
-    protocol.oevRate = getOEVRate(protocol);
-    protocol.withOEV = getOEV(protocol);
-
-    if (protocol.id !== "total") {
-      protocol.data.forEach((dataPoint) => {
-        dataPoint.withOEV = getOEV(dataPoint);
-      });
-      protocol.dataMonthly.forEach((dataPoint) => {
-        dataPoint.withOEV = getOEV(dataPoint);
-      });
-    }
-  });
-
-  return parsed;
+definePageMeta({
+  title: "OEV WatchTower",
+  layout: "footer-less",
 });
 
-// helper functions
-function getOEVRate(protocol) {
-  return Number(protocol.totalSentToBuilder) / Number(protocol.totalLiquidated);
-}
+// Fetch data from the content/oev-data which contains the json files
+const oevRaw = await queryContent("oev-data").find();
 
-function getOEV(protocol) {
-  return Number(protocol.totalLiquidated) - Number(protocol.totalSentToBuilder);
-}
+const oev = useOEVStore();
 
-function getTotalLiquidated(protocol) {
-  return protocol.data.reduce(
-    (total, dataPoint) => Number(total) + Number(dataPoint.totalLiquidated),
-    0
-  );
-}
-
-function getTotalSentToBuilder(protocol) {
-  return protocol.data.reduce(
-    (total, dataPoint) => Number(total) + Number(dataPoint.totalSentToBuilder),
-    0
-  );
-}
-
-function dataToMonthly(array) {
-  const monthly = {};
-
-  array.forEach((dataPoint, i) => {
-    const date = new Date(dataPoint.date);
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    const key = `${month}-${year}`;
-
-    if (monthly[key]) {
-      monthly[key].totalLiquidated += Number(dataPoint.totalLiquidated);
-      monthly[key].totalSentToBuilder += Number(dataPoint.totalSentToBuilder);
-    } else {
-      monthly[key] = {
-        totalLiquidated: Number(dataPoint.totalLiquidated),
-        totalSentToBuilder: Number(dataPoint.totalSentToBuilder),
-        month: month,
-        year: year,
-        id: key,
-        date: dataPoint.date,
-      };
-    }
-  });
-
-  const sorted = Object.values(monthly).sort((a, b) => {
-    return new Date(a.year, a.month) - new Date(b.year, b.month);
-  });
-
-  return sorted;
-}
-
-function dataToWeekly(array) {
-  const weekly = {};
-
-  array.forEach((dataPoint, i) => {
-    const date = new Date(dataPoint.date);
-    const week = Math.ceil(
-      (date - new Date(date.getFullYear(), 0, 1)) / 604800000
-    );
-
-    const year = date.getFullYear();
-
-    const key = `${week}-${year}`;
-
-    if (weekly[key]) {
-      weekly[key].totalLiquidated += Number(dataPoint.totalLiquidated);
-      weekly[key].totalSentToBuilder += Number(dataPoint.totalSentToBuilder);
-    } else {
-      weekly[key] = {
-        totalLiquidated: Number(dataPoint.totalLiquidated),
-        totalSentToBuilder: Number(dataPoint.totalSentToBuilder),
-        week: week,
-        year: year,
-        id: key,
-        date: dataPoint.date,
-      };
-    }
-  });
-
-  const sorted = Object.values(weekly).sort((a, b) => {
-    return new Date(a.year, a.week) - new Date(b.year, b.week);
-  });
-
-  return sorted;
-}
+oev.setProtocols(oevRaw);
 </script>
 
 <template>
-  <PageTitle heading="WatchTower" />
+  <PageTitle heading="WatchTower"
+    ><p class="notice-voice">
+      The OEV WatchTower is a tool to help you visualize the impact of OEV on
+      your protocol. The WatchTower is a tool to help you visualize the impact
+      of OEV on your protocol.
+    </p></PageTitle
+  >
+  <SectionColumn inner-class="wide">
+    <div class="oev-grid">
+      <OEVSummaryCards class="summary-cards" />
 
-  <OEVInterfaceChart :protocols="protocols" />
+      <OEVInputForm />
+      <OEVProtocolList />
 
-  <OEVProtocolChart :protocols="protocols" />
+      <OEVInterfaceChart />
+
+      <OEVProtocolChart />
+
+      <text-content>
+        <p class="firm-voice">
+          As with our datafeeds you don't need to trust our data and can verify
+          it yourselves. Verify our data github link
+        </p>
+      </text-content>
+    </div>
+  </SectionColumn>
 </template>
+
+<style scoped lang="scss">
+.oev-grid {
+  display: grid;
+  gap: var(--space-m);
+
+  grid-template-columns: repeat(12, 1fr);
+}
+
+:deep(.summary-cards) {
+  grid-column: 1 / 10;
+  align-self: start;
+}
+
+:deep(form) {
+  grid-column: 10 / -1;
+}
+
+:deep(.protocol-list) {
+  grid-column: 10 / -1;
+}
+
+:deep(.chart-container.bars) {
+  grid-column: 1 / 10;
+  grid-row: 2 / 3;
+  align-self: start;
+}
+
+:deep(.chart-container.lines) {
+  grid-column: 1 / 12;
+  grid-row: 3 / 4;
+}
+
+text-content {
+  grid-column: 1 / -1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: var(--space-3xl);
+}
+</style>
