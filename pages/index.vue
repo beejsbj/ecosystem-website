@@ -2,7 +2,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 definePageMeta({
-  //   layout: "home",
+  layout: "home",
   meta: [
     {
       hid: "home",
