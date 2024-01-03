@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(["protocols"]);
+const oev = useOEVStore();
 
 const selectedDataset = ref("aaveV2Eth");
 const selectedPeriod = ref("daily");
@@ -20,14 +20,14 @@ const metadata = {
 
 // data manipulation
 const parsed = computed(() => {
-  //   console.log(props.protocols);
-  const index = props.protocols.findIndex(
+  //   console.log(oev.protocols);
+  const index = oev.protocols.findIndex(
     (protocol) => protocol.id === selectedDataset.value
   );
 
-  const protocol = props.protocols[index];
+  const protocol = oev.protocols[index];
   //   console.log(index);
-  //   console.log(props.protocols);
+  //   console.log(oev.protocols);
 
   const rawData =
     selectedPeriod.value === "daily"
@@ -46,7 +46,7 @@ const parsed = computed(() => {
   const dataSentToBuilder = rawData.map((dataPoint) => {
     return {
       x: new Date(dataPoint.date),
-      y: dataPoint.totalSentToBuilder,
+      y: dataPoint.totalSentToBuilderUSD,
     };
   });
 
@@ -89,9 +89,10 @@ const parsed = computed(() => {
 </script>
 
 <template>
-  <SectionColumn class="single-chart" inner-class="wide">
-    <ul>
-      <template v-for="protocol in protocols">
+  <div class="chart-container lines">
+    <!-- <ul> -->
+
+    <!-- <template v-for="protocol in oev.protocols">
         <li v-if="!protocol.hide">
           <button @click="selectedDataset = protocol.id">
             <BoxCard
@@ -103,32 +104,43 @@ const parsed = computed(() => {
             />
           </button>
         </li>
-      </template>
-      <div class="actions">
-        <template v-for="period in periods">
-          <button
-            class="button outline"
-            @click="selectedPeriod = period"
-            :class="{
-              hover: selectedPeriod === period,
-            }"
-          >
-            <span>{{ period }}</span>
-          </button>
-        </template>
-      </div>
-    </ul>
+      </template> -->
+
+    <!-- </ul> -->
     <div class="chart">
       <LineChart :data="parsed" :options="{}" :metadata="metadata" />
     </div>
-  </SectionColumn>
+    <div class="actions">
+      <FormKit type="select" v-model="selectedDataset">
+        <template v-for="protocol in oev.protocols">
+          <option
+            :key="protocol.id"
+            :value="protocol.id"
+            v-if="!protocol.trueHide"
+          >
+            {{ protocol.name }}
+          </option>
+        </template>
+      </FormKit>
+      <template v-for="period in periods">
+        <button
+          class="button outline"
+          @click="selectedPeriod = period"
+          :class="{
+            hover: selectedPeriod === period,
+          }"
+        >
+          <span>{{ period }}</span>
+        </button>
+      </template>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
-:deep(inner-column) {
+.chart-container {
   display: grid;
   gap: var(--space-m);
-  padding: var(--space-3xl) var(--space-s);
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -138,6 +150,7 @@ const parsed = computed(() => {
 ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
   gap: var(--space-xs);
 
   li,
@@ -147,21 +160,13 @@ ul {
 }
 
 .chart {
-  grid-column: span 2;
-}
-
-:deep(.box-card) {
-  cursor: pointer;
-
-  &.border-gradient-blue > * {
-    filter: hue-rotate(70deg);
-  }
+  grid-column: span 3;
 }
 
 div.actions {
   grid-column: span 3;
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
 
   button {
