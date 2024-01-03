@@ -12,7 +12,7 @@ useHead({
 </script>
 
 <template>
-  <div class="curves-wrapper" v-if="route.name != 'index'">
+  <div class="curves-wrapper">
     <picture class="curves-decoration-3">
       <CurvesDecoration3 />
     </picture>
@@ -24,7 +24,7 @@ useHead({
     <slot />
   </main>
 
-  <SiteFooter v-if="route.name != 'add-dapp' || route.name !== 'add-dapp-2'" />
+  <SiteFooter />
 </template>
 
 <style scoped lang="scss">

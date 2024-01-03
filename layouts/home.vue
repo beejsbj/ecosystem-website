@@ -1,14 +1,22 @@
 <script setup>
 const route = useRoute();
+
+useHead({
+  htmlAttrs: {
+    lang: "en",
+  },
+  bodyAttrs: {
+    class: route.name,
+  },
+});
 </script>
 
 <template>
   <SiteHeader />
-  <Transition name="fade" mode="out-in">
-    <main :class="route.name">
-      <slot />
-    </main>
-  </Transition>
 
-  <!-- <BlobAnimation /> -->
+  <main>
+    <slot />
+  </main>
+
+  <SiteFooter />
 </template>
