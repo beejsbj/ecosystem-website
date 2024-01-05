@@ -42,15 +42,16 @@ const imageRatio = async function (node) {
       await new Promise((resolve) => (image.onload = resolve));
 
       // Calculate the aspect ratio of the image.
-      const ratio = (image.naturalWidth / image.naturalHeight).toFixed(2);
+      const ratio = image.naturalWidth / image.naturalHeight;
 
       // Return the aspect ratio.
       return ratio;
     })
   );
 
-  // Check if all aspect ratios are equal to 2.66.
-  return imageRatios.every((ratio) => ratio === "2.66");
+  // Check if all aspect ratios are equal to 16/6.
+  console.log(imageRatios);
+  return imageRatios.every((ratio) => ratio === 16 / 6);
 };
 </script>
 
@@ -121,7 +122,6 @@ const imageRatio = async function (node) {
 
       <p class="whisper-voice">Minimum width: 1024px. Ratio: 16:6</p>
       <p class="whisper-voice">Accepted file size: 6MB</p>
-
     </form-field>
     <form-field class="file-upload">
       <FormKit

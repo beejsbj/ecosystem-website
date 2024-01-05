@@ -48,6 +48,10 @@ main {
   display: none;
 }
 
+.display-contents {
+  display: contents;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;
