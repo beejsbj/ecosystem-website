@@ -38,6 +38,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-m);
+  padding-top: var(--space-m);
 }
 
 li {

@@ -33,6 +33,7 @@ const maxHeight = computed(() => {
         <li v-if="!protocol.hide" :key="protocol.id">
           <div
             class="bar"
+            :class="{ userAdded: protocol.id === 'userAdded' }"
             :style="`
 					  --bar-liquidated-height: ${(protocol.totalLiquidated / maxHeight) * 150};
 					  --bar-withOEV-height: ${(protocol.withOEV / maxHeight) * 150};
@@ -56,13 +57,6 @@ const maxHeight = computed(() => {
         </li>
       </template>
     </ul>
-
-    <text-content>
-      <p class="firm-voice">
-        To date X billion has been sent builder from over X dollars in
-        liquidation in 2023 Alone
-      </p>
-    </text-content>
   </div>
 </template>
 
@@ -70,6 +64,7 @@ const maxHeight = computed(() => {
 .chart-container {
   display: grid;
   gap: var(--space-m);
+  grid-template-rows: 120px 1fr;
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -162,7 +157,12 @@ li {
 
     transition: 0.2s ease-in-out;
 
-    /*  center seperator line */
+    &.userAdded {
+      filter: brightness(3) saturate(3);
+      width: 100px;
+    }
+
+    /*   seperator line */
     &:after {
       content: "";
       position: absolute;
@@ -214,22 +214,19 @@ li {
         transform: translateX(-50%);
       }
       &.liquidated {
+        grid-column: 1 / span 1;
+
+        height: calc(var(--bar-liquidated-height) * 2px);
         .number {
           left: -0%;
         }
       }
-    }
 
-    .withOEV {
-      grid-column: 2 / span 1;
+      &.withOEV {
+        grid-column: 2 / span 1;
 
-      height: calc(var(--bar-withOEV-height) * 2px);
-    }
-
-    .liquidated {
-      grid-column: 1 / span 1;
-
-      height: calc(var(--bar-liquidated-height) * 2px);
+        height: calc(var(--bar-withOEV-height) * 2px);
+      }
     }
   }
 }

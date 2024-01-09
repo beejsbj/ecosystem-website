@@ -8,6 +8,7 @@ function buttonHandle(protocol) {
 
 <template>
   <ul class="protocol-list">
+    <h3 class="solid-voice">Select Protocols to Compare</h3>
     <template v-for="(protocol, i) in oev.protocols">
       <li v-if="!protocol.trueHide" :key="protocol.id">
         <button @click="buttonHandle(protocol)">
@@ -30,8 +31,17 @@ function buttonHandle(protocol) {
   display: grid;
 
   gap: var(--space-s);
+  max-height: 600px;
+  overflow-y: scroll;
+  position: relative;
 }
-
+h3 {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--paper);
+}
 li {
   display: grid;
 }

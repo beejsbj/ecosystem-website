@@ -1,12 +1,14 @@
 import { defineStore } from "pinia";
 
 export const useOEVStore = defineStore("oev", function () {
+  const userTvl = ref(0);
+
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
   const protocols = ref([]);
 
   // this variable defines the number of protocols to show in the chart
-  const protocolCount = ref(3);
+  const protocolCount = ref(0);
 
   function setProtocols(raw) {
     // Map over the oevRaw data and transform it into a new array of objects
@@ -20,9 +22,10 @@ export const useOEVStore = defineStore("oev", function () {
         dataWeekly: dataToWeekly(protocol.body),
 
         // Set the hide property to true for protocols with an index greater than protocolCount value
-        hide: i > protocolCount.value,
+        hide: true,
       };
     });
+    console.log(parsed);
 
     // Add a "total" protocol object to the parsed array
     parsed.push({
@@ -191,6 +194,7 @@ export const useOEVStore = defineStore("oev", function () {
 
   return {
     // variables
+    userTvl,
     oevRaw,
     protocols,
 

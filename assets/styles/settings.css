@@ -130,7 +130,7 @@ html {
   --checkers: url("@/assets/images/background/pattern-one.svg");
 
   --diagnol: url("@/assets/images/background/pattern-diagnol.svg");
-  --points: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='hsla(256, 58%, 54%, 1.00)' fill-opacity='0.2' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  /* --points: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='hsla(256, 58%, 54%, 1.00)' fill-opacity='0.2' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
 
   --pattern-one: url("@/assets/images/background/pattern-one.svg");
   --pattern-two: url("@/assets/images/background/pattern-two.svg");
