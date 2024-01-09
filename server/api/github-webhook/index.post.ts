@@ -1,5 +1,7 @@
 import { Project } from "~/server/models/Project";
 import { handleWebhookAuth } from "../../utils/handleWebhookAuth";
+import type { ProjectType } from "~/server/types";
+import { updateProjectsInRepo } from "~/server/services/github";
 
 export default handleWebhookAuth(
   defineEventHandler(async (event: any) => {
@@ -24,6 +26,50 @@ export default handleWebhookAuth(
             message: "Failed to extract project id from branch name",
           };
         }
+
+        const project: any = await Project.findById(projectId);
+
+        if (!project) {
+          event.node.res.statusCode = 400;
+          return {
+            code: "ERROR",
+            message: "Project not found in the database",
+          };
+        }
+
+        const productType = !project?.proxies ? "qrng" : "datafeed";
+
+        const projectData: ProjectType =
+          productType === "qrng"
+            ? {
+                name: project?.name,
+                tagline: project?.tagline,
+                description: project.description,
+                status: project.status,
+                images: project?.images,
+                categories: project.categories,
+                productType: project.productType,
+                chains: project.chains,
+                links: project.links,
+                year: project.year,
+              }
+            : {
+                name: project?.name,
+                tagline: project?.tagline,
+                description: project.description,
+                status: project.status,
+                images: project.images,
+                categories: project.categories,
+                productType: project.productType,
+                chains: project.chains,
+                proxies: project.proxies,
+                links: project.links,
+                year: project.year,
+              };
+
+        const commitRes = await updateProjectsInRepo(projectData);
+
+        console.log("commit response ", commitRes);
 
         // update project status to active
         await Project.findOneAndUpdate(

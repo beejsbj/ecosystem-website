@@ -3,11 +3,9 @@ import { createAppAuth } from "@octokit/auth-app";
 import fs from "fs";
 import { prepareMarkdown } from "./helper";
 
-interface PrStatus {
-  success: boolean;
-  message: string;
-  data?: any | undefined;
-}
+import type { ProjectType } from "../types";
+import prettier from "prettier";
+import type { Status } from "./helper";
 
 const config = useRuntimeConfig();
 const octokit = new Octokit({
@@ -25,26 +23,17 @@ const owner = config.nodeEnv === "production" ? "api3dao" : "AamirAlam";
 const repo = "dapp-registry";
 
 export async function createPR(
-  projectData: any,
+  projectData: ProjectType,
   projectId: string
-): Promise<PrStatus> {
+): Promise<Status> {
   const title = projectData.name?.split(" ")?.join("-");
   const branch = `${title}-${projectId}`;
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
-  const projectTsPath = "src/generated/projects.ts";
 
   let branchCreated = false;
   try {
-    // Read local files
-    const projectJsonData: string = fs.readFileSync(
-      `dapp-registry/${projectJsonPath}`,
-      "utf-8"
-    );
-    const projectTsData: string = fs.readFileSync(
-      `dapp-registry/${projectTsPath}`,
-      "utf-8"
-    );
+    const projectJsonData: string = JSON.stringify(projectData, null, 2);
 
     // get the SHA of the latest commit on the base branch
     const { data: refData } = await octokit.git.getRef({
@@ -73,13 +62,6 @@ export async function createPR(
       encoding: "utf-8",
     });
 
-    const { data: tsBlob } = await octokit.git.createBlob({
-      owner,
-      repo,
-      content: projectTsData,
-      encoding: "utf-8",
-    });
-
     // create new tree
     const { data: newTree } = await octokit.git.createTree({
       owner,
@@ -91,12 +73,6 @@ export async function createPR(
           mode: "100644",
           type: "blob",
           sha: jsonBlob.sha,
-        },
-        {
-          path: projectTsPath,
-          mode: "100644",
-          type: "blob",
-          sha: tsBlob.sha,
         },
       ],
     });
@@ -151,5 +127,115 @@ export async function createPR(
     }
 
     return { success: false, message: "Failed to create pull request" };
+  }
+}
+
+export async function updateProjectsInRepo(
+  projectData: ProjectType
+): Promise<Status> {
+  const branch = "temp";
+  const projectTsPath = "src/generated/projects.ts";
+
+  try {
+    const { data: projectTs }: { data: any } = await octokit.repos.getContent({
+      owner,
+      repo,
+      path: projectTsPath,
+      ref: branch,
+    });
+
+    const projectTsData = Buffer.from(projectTs?.content, "base64").toString(
+      "utf-8"
+    );
+
+    const projectsArrayRegex =
+      /export const PROJECTS: Project\[\] = (\[[\s\S]*?\]);/;
+
+    const projectsArrayMatch = projectTsData.match(projectsArrayRegex);
+
+    const projects = projectsArrayMatch
+      ? eval("(" + projectsArrayMatch[1] + ")")
+      : [];
+
+    const updatedProjects = [...projects, projectData];
+
+    const updatedProjectsString = JSON.stringify(updatedProjects);
+
+    const updatedTsFileContent = projectTsData.replace(
+      projectsArrayRegex,
+      `\nexport const PROJECTS: Project[] = ${updatedProjectsString};\n\n`
+    );
+
+    const formattedContent = prettier.format(updatedTsFileContent, {
+      parser: "typescript",
+      bracketSpacing: true,
+      printWidth: 120,
+      singleQuote: true,
+      trailingComma: "es5",
+      useTabs: false,
+    });
+
+    // get the SHA of the latest commit on the base branch
+    const { data: refData } = await octokit.git.getRef({
+      owner,
+      repo,
+      ref: `heads/${branch}`,
+    });
+
+    const baseSha = refData.object.sha;
+
+    const { data: tsBlob } = await octokit.git.createBlob({
+      owner,
+      repo,
+      content: formattedContent,
+      encoding: "utf-8",
+    });
+
+    // create new tree
+    const { data: newTree } = await octokit.git.createTree({
+      owner,
+      repo,
+      base_tree: baseSha,
+      tree: [
+        {
+          path: projectTsPath,
+          mode: "100644",
+          type: "blob",
+          sha: tsBlob.sha,
+        },
+      ],
+    });
+
+    // create new commit
+    const { data: newCommit } = await octokit.git.createCommit({
+      owner,
+      repo,
+      message: `update projects ts for   ${projectData.name}`,
+      tree: newTree.sha,
+      parents: [baseSha],
+    });
+
+    // update reference to new commit
+    await octokit.git.updateRef({
+      owner,
+      repo,
+      ref: `heads/${branch}`,
+      sha: newCommit.sha,
+    });
+
+    return {
+      success: true,
+      message: "Projects ts file updated!",
+      data: newCommit?.html_url,
+    };
+  } catch (err) {
+    // delete created branch if something went wrong
+
+    console.error("Something went wrong while updating projects.ts: ", err);
+
+    return {
+      success: false,
+      message: "Failed to create update projects.ts file",
+    };
   }
 }

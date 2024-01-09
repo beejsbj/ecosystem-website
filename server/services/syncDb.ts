@@ -1,7 +1,7 @@
 import slug from "slug";
 import { Project } from "../models/Project";
-import { ProjectType } from "../types";
 import axios from "axios";
+import type { ProjectType } from "../types";
 
 // Replace these variables with the appropriate values
 const owner = "api3dao";

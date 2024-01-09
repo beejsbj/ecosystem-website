@@ -159,3 +159,8 @@ ${year}
 
   return markdownContent;
 };
+export interface Status {
+  success: boolean;
+  message: string;
+  data?: any | undefined;
+}
