@@ -1,14 +1,18 @@
 <script setup>
+// Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
 
+// Get the oevRate and maxLiquidated values from the OEV store
 const oevRate = oev.getTotals().oevRate;
 const maxLiquidated = oev.getTotals().totalLiquidated;
 
-// variables
-const showOutput = ref(false);
-const userAdded = ref(0);
+// Define reactive variables
+const showOutput = ref(false); // Controls the visibility of the output section
+const userAdded = ref(0); // Keeps track of the number of user-added protocols
 
+// Function to add the user's input to the chart
 function addToChart(totalLiquidated) {
+  // Create a new protocol object and push it to the protocols array in the OEV store
   oev.protocols.push({
     id: `userAdded`,
     totalLiquidated,
@@ -18,18 +22,20 @@ function addToChart(totalLiquidated) {
     trueHide: true,
   });
 
+  // Increment the userAdded value
   userAdded.value++;
 
-  //scroll to next section
+  // Scroll to the next section
   const section = document.querySelector(".chart-grid");
   section.scrollIntoView({ behavior: "smooth" });
 }
 
+// Function to handle the button click event
 function buttonHandle(event) {
   const tvl = oev.userTvl;
-  addToChart(tvl);
-  oev.userTvl = 0;
-  showOutput.value = true;
+  addToChart(tvl); // Add the user's input to the chart
+  oev.userTvl = 0; // Reset the user's input value
+  showOutput.value = true; // Show the output section
 }
 </script>
 
@@ -73,19 +79,5 @@ form {
   :deep(.formkit-wrapper) {
     max-width: unset !important;
   }
-
-  //   @media (min-width: 768px) {
-  //     grid-template-columns: repeat(2, 1fr);
-
-  //     output {
-  //       grid-column: 2;
-  //       grid-row: 1 / span 2;
-  //     }
-
-  //     form-field,
-  //     button {
-  //       grid-column: 1;
-  //     }
-  //   }
 }
 </style>
