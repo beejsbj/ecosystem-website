@@ -25,7 +25,6 @@ export const useOEVStore = defineStore("oev", function () {
         hide: true,
       };
     });
-    console.log(parsed);
 
     // Add a "total" protocol object to the parsed array
     parsed.push({
