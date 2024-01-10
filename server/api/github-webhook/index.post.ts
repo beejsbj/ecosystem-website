@@ -16,7 +16,7 @@ export default handleWebhookAuth(
         // reg ex to extract correct mongoId from branch name
         const branchRef = payload?.pull_request?.head?.ref;
         const regex = /.*-([a-f0-9]{24})/;
-        const match = branchRef.match(regex);
+        const match = branchRef?.match(regex);
         const projectId = match ? match[1] : null;
 
         if (!projectId) {

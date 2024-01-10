@@ -151,7 +151,7 @@ export async function updateProjectsInRepo(
     const projectsArrayRegex =
       /export const PROJECTS: Project\[\] = (\[[\s\S]*?\]);/;
 
-    const projectsArrayMatch = projectTsData.match(projectsArrayRegex);
+    const projectsArrayMatch = projectTsData?.match(projectsArrayRegex);
 
     const projects = projectsArrayMatch
       ? eval("(" + projectsArrayMatch[1] + ")")

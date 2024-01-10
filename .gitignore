@@ -11,3 +11,5 @@ dist
 .vscode
 
 dapp-registry
+
+.firebase

@@ -128,6 +128,14 @@ export default defineNuxtConfig({
         dir: "assets",
       },
     ],
+    firebase: {
+      gen: 2,
+      httpsOptions: {
+        region: "us-central1",
+        maxInstances: 10,
+      },
+    },
+    preset: "firebase",
   },
   runtimeConfig: {
     mongodbUri: process.env.NUXT_MONGODB_URI,
