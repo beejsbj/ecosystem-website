@@ -61,8 +61,9 @@ oev.setProtocols(oevRaw);
       <p class="loud-voice">
         With your liquidation of
         <span class="gradient-text-color"> ${{ userTvl.toFixed(2) }} </span>
-        while using OEV share, you would save
+        you would save
         <span class="gradient-text-color"> ${{ userSaving.toFixed(2) }} </span>
+        while using OEV share
       </p>
     </text-content>
   </SectionColumn>
