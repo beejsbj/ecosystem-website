@@ -12,11 +12,13 @@ export const useOEVStore = defineStore("oev", function () {
 
   function setProtocols(raw) {
     // Map over the oevRaw data and transform it into a new array of objects
+
     const parsed = raw.map((protocol, i) => {
       return {
         // Generate an id for each protocol by converting the first letter of the title to lowercase and concatenating the rest of the title
         id: protocol.title[0].toLowerCase() + protocol.title.slice(1),
         name: protocol.body[0].name,
+        icon: protocol.body[0].icon,
         data: protocol.body,
         dataMonthly: dataToMonthly(protocol.body),
         dataWeekly: dataToWeekly(protocol.body),

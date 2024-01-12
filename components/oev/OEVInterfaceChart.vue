@@ -10,8 +10,6 @@ const maxHeight = computed(() => {
   const max = Math.max(
     ...protocols.map((protocol) => protocol.totalLiquidated)
   );
-
-  console.log(max);
   return max;
 });
 </script>
@@ -51,7 +49,7 @@ const maxHeight = computed(() => {
             </span>
           </div>
           <picture class="protocol-logo">
-            <img src="@/assets/images/background/square.jpg" alt="" />
+            <NuxtImg :src="protocol.icon" :alt="protocol.name" loading="lazy" />
           </picture>
           <p class="whisper-voice">{{ protocol.name }}</p>
         </li>
