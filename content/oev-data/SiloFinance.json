@@ -1,1 +1,603 @@
-[{"name":"Silo Finance Ethereum","date":"8/24/2022","totalLiquidated":"106.3343214003934583621297591088724","totalSentToBuilder":"0","liquidations":[{"hash":"0x89782706d64eeb016d613736b412fac2fd1e8bf7c86d20ca3be78a316822a04f","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x89782706d64eeb016d613736b412fac2fd1e8bf7c86d20ca3be78a316822a04f","liquidatedCollateral":"106.3343214003934583621297591088724","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1665.7919073919315","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"10/11/2022","totalLiquidated":"109.974925","totalSentToBuilder":"0","liquidations":[{"hash":"0xf100455f0263fb185ce0a98dab7f2d8576dca51054466d9d11802fe04db3ec00","liquidatedCollateral":"109.974925","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0xf100455f0263fb185ce0a98dab7f2d8576dca51054466d9d11802fe04db3ec00","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1291.0816596695552","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"11/21/2022","totalLiquidated":"1.02912269110378754462896344637544","totalSentToBuilder":"0","liquidations":[{"hash":"0x291b9e587bca12b49458bbdfebf964783225e011f56f314b01501cac0ef02c0b","liquidatedCollateral":"1.02912269110378754462896344637544","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x291b9e587bca12b49458bbdfebf964783225e011f56f314b01501cac0ef02c0b","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1144.2531525085535","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"12/2/2022","totalLiquidated":"9.27842333616570539842047966706909","totalSentToBuilder":"0","liquidations":[{"hash":"0x8fcb927477a7c1766e327be2cd051e5e8ddadc3d933b1ef5e55d45eeeb3711b0","liquidatedCollateral":"9.27842333616570539842047966706909","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x8fcb927477a7c1766e327be2cd051e5e8ddadc3d933b1ef5e55d45eeeb3711b0","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1276.6393714030964","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"12/13/2022","totalLiquidated":"8959.264947565349618576427547050235","totalSentToBuilder":"0","liquidations":[{"hash":"0xac85daf58ce9191cc2b0ba30d23354690a362842c49dbc30754be4817affb71f","liquidatedCollateral":"8959.264947565349618576427547050235","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0xac85daf58ce9191cc2b0ba30d23354690a362842c49dbc30754be4817affb71f","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1275.332421155143","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"12/23/2022","totalLiquidated":"2865.8098698549525179196132268302573","totalSentToBuilder":"0.455281171721251843","liquidations":[{"hash":"0x22ed8b5d77b31197932e4a4ee21691dca84e58485734936e60ea2c0e28b27bcf","liquidatedCollateral":"0","sentToBuilder":"0.059008205495605417","sentToBuilderUSD":"71.8632935166829364023509860589392"},{"hash":"0x22ed8b5d77b31197932e4a4ee21691dca84e58485734936e60ea2c0e28b27bcf","liquidatedCollateral":"700.557356612970009569370868504992","sentToBuilder":"0.059008205495605417","sentToBuilderUSD":"71.8632935166829364023509860589392"},{"hash":"0x22ed8b5d77b31197932e4a4ee21691dca84e58485734936e60ea2c0e28b27bcf","liquidatedCollateral":"0","sentToBuilder":"0.059008205495605417","sentToBuilderUSD":"71.8632935166829364023509860589392"},{"hash":"0x769540c6e7969b9bea0f027b95b2d4433cd402c6512cde6383dbc48ee39a6bbf","liquidatedCollateral":"0","sentToBuilder":"0.060680566045326192","sentToBuilderUSD":"73.8999820761961667866436630145792"},{"hash":"0x769540c6e7969b9bea0f027b95b2d4433cd402c6512cde6383dbc48ee39a6bbf","liquidatedCollateral":"566.8567130119722745180618285016853","sentToBuilder":"0.060680566045326192","sentToBuilderUSD":"73.8999820761961667866436630145792"},{"hash":"0x769540c6e7969b9bea0f027b95b2d4433cd402c6512cde6383dbc48ee39a6bbf","liquidatedCollateral":"511.706098488852184760148096522938","sentToBuilder":"0.060680566045326192","sentToBuilderUSD":"73.8999820761961667866436630145792"},{"hash":"0xf16e999dfb37a3bb1dbe851a0bc41fee1a34ed1e9ace1471febbaa378f697397","liquidatedCollateral":"1086.689701741158049072032433300642","sentToBuilder":"0.048107428549228508","sentToBuilderUSD":"58.5877545187089173548009819081408"},{"hash":"0xf16e999dfb37a3bb1dbe851a0bc41fee1a34ed1e9ace1471febbaa378f697397","liquidatedCollateral":"0","sentToBuilder":"0.048107428549228508","sentToBuilderUSD":"58.5877545187089173548009819081408"}],"ethPrice":"1217.8525497108176","totalSentToBuilderUSD":"554.4653358160551442765859110368368"},{"name":"Silo Finance Ethereum","date":"1/1/2023","totalLiquidated":"1225.0111874172022805065487320406112","totalSentToBuilder":"0","liquidations":[{"hash":"0x03cd1067a9fffa3c2544959b9ded920999245239355c28b201b703667bc86dea","liquidatedCollateral":"603.9491261900310578710639081488772","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x03cd1067a9fffa3c2544959b9ded920999245239355c28b201b703667bc86dea","liquidatedCollateral":"621.062061227171222635484823891734","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x03cd1067a9fffa3c2544959b9ded920999245239355c28b201b703667bc86dea","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1196.6130648084502","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"1/3/2023","totalLiquidated":"968.2984173483055317108192230380597","totalSentToBuilder":"0","liquidations":[{"hash":"0x2e0158d4b7cc5a4e48489676b3d41e8ef4baf4dbe7d89408549b6bdaaba2a553","liquidatedCollateral":"524.4425244495574759720594628084992","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x2e0158d4b7cc5a4e48489676b3d41e8ef4baf4dbe7d89408549b6bdaaba2a553","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x2e0158d4b7cc5a4e48489676b3d41e8ef4baf4dbe7d89408549b6bdaaba2a553","liquidatedCollateral":"443.8558928987480557387597602295605","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1214.3789459253508","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"2/2/2023","totalLiquidated":"14065.62202318154806685987443070275","totalSentToBuilder":"0","liquidations":[{"hash":"0x6ca421dd892cc031479712feb07e621c255bfabdcc6ea3cfc112507c57cfbe5c","liquidatedCollateral":"14065.62202318154806685987443070275","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x6ca421dd892cc031479712feb07e621c255bfabdcc6ea3cfc112507c57cfbe5c","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1642.857168158598","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"3/7/2023","totalLiquidated":"71.36650218443597978072659694250714","totalSentToBuilder":"0","liquidations":[{"hash":"0xd45848d8df439dca5c70e3388da74ead7b9a3e29ccdefc27f9c76c13b96f20ba","liquidatedCollateral":"71.36650218443597978072659694250714","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0xd45848d8df439dca5c70e3388da74ead7b9a3e29ccdefc27f9c76c13b96f20ba","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1567.3501465252189","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"3/29/2023","totalLiquidated":"0.1636044058754766454208836802962981","totalSentToBuilder":"0","liquidations":[{"hash":"0x5fad135163aa4dfda083dd064aa7a71c06b07a7ade5e4d6cdfab488108155418","liquidatedCollateral":"0.1636044058754766454208836802962981","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x5fad135163aa4dfda083dd064aa7a71c06b07a7ade5e4d6cdfab488108155418","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1776.0436393298319","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"5/17/2023","totalLiquidated":"78.86931583206635930672648156674942","totalSentToBuilder":"0","liquidations":[{"hash":"0x7df4a3cd0481b1d2446d6d348b5711bd8b6b484e2f75d0596447e0ef56f14e42","liquidatedCollateral":"78.86931583206635930672648156674942","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x7df4a3cd0481b1d2446d6d348b5711bd8b6b484e2f75d0596447e0ef56f14e42","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1823.6630183475188","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"6/5/2023","totalLiquidated":"2926.483267391338207175","totalSentToBuilder":"0","liquidations":[{"hash":"0x303d0d6a4d9707f5fae9dd576ff9dff48663d6fde848106ec39b6f31239f8fde","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x303d0d6a4d9707f5fae9dd576ff9dff48663d6fde848106ec39b6f31239f8fde","liquidatedCollateral":"2926.483267391338207175","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1893.178280382087","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"6/10/2023","totalLiquidated":"376.1943770417546699673582729856963","totalSentToBuilder":"0.14141110776350216","liquidations":[{"hash":"0x6ee4e6979fd957975d76a449e25e4afa7c0d3dff02fa44e11ad68cdc88f1cd7b","liquidatedCollateral":"0","sentToBuilder":"0.07070555388175108","sentToBuilderUSD":"130.042221238752166340078184073116"},{"hash":"0x6ee4e6979fd957975d76a449e25e4afa7c0d3dff02fa44e11ad68cdc88f1cd7b","liquidatedCollateral":"376.1943770417546699673582729856963","sentToBuilder":"0.07070555388175108","sentToBuilderUSD":"130.042221238752166340078184073116"}],"ethPrice":"1839.2080126581927","totalSentToBuilderUSD":"260.084442477504332680156368146232"},{"name":"Silo Finance Ethereum","date":"8/2/2023","totalLiquidated":"224365.4703152679183360680592245124","totalSentToBuilder":"61.004740279187499786","liquidations":[{"hash":"0xc602cb9e4ecfa823898f8043a0b989a27e0ebbc911666775197ed084649de2d2","liquidatedCollateral":"0","sentToBuilder":"30.502370139593749893","sentToBuilderUSD":"57031.6573712860393548108235006498239"},{"hash":"0xc602cb9e4ecfa823898f8043a0b989a27e0ebbc911666775197ed084649de2d2","liquidatedCollateral":"224365.4703152679183360680592245124","sentToBuilder":"30.502370139593749893","sentToBuilderUSD":"57031.6573712860393548108235006498239"}],"ethPrice":"1869.7451086679923","totalSentToBuilderUSD":"114063.3147425720787096216470012996478"},{"name":"Silo Finance Ethereum","date":"8/4/2023","totalLiquidated":"53.75564993199780712186954341892523","totalSentToBuilder":"0","liquidations":[{"hash":"0xdde7b3e000caa5c5627f04365837ac58d062719f1ef635aa0c8b75956b875a81","liquidatedCollateral":"53.75564993199780712186954341892523","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0xdde7b3e000caa5c5627f04365837ac58d062719f1ef635aa0c8b75956b875a81","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1835.7013026752861","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"8/17/2023","totalLiquidated":"1494.752034809128431260617899288997743","totalSentToBuilder":"0","liquidations":[{"hash":"0x1939ccb436a7a20f59be363670810e33b0050e36c420faf5a0e86213d9c0f475","liquidatedCollateral":"1.313676808634892212351488365511743","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x1939ccb436a7a20f59be363670810e33b0050e36c420faf5a0e86213d9c0f475","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x319a2394cf2b41e35583315dd6239e70347aac3f591c18cdef21773860e6127a","liquidatedCollateral":"1493.438358000493539048266410923486","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x319a2394cf2b41e35583315dd6239e70347aac3f591c18cdef21773860e6127a","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1809.4604742643007","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"8/27/2023","totalLiquidated":"10582.603549472300489482","totalSentToBuilder":"0","liquidations":[{"hash":"0x3f135d637305b7595106cc6e9c283c094fe7bef4581105a56baf54315841d0de","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x3f135d637305b7595106cc6e9c283c094fe7bef4581105a56baf54315841d0de","liquidatedCollateral":"10582.603549472300489482","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1645.9049996794286","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"9/11/2023","totalLiquidated":"6707.831727140688617729","totalSentToBuilder":"0","liquidations":[{"hash":"0x5c0da40a538ed381b9d8fe76ed6b7464acc6ce6981f97a6a975189c613de8c5a","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x5c0da40a538ed381b9d8fe76ed6b7464acc6ce6981f97a6a975189c613de8c5a","liquidatedCollateral":"6707.831727140688617729","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1617.486179584741","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"10/12/2023","totalLiquidated":"508.939253","totalSentToBuilder":"0","liquidations":[{"hash":"0x66cda5c1dc95c96027537de4f2ae96ba0a1d69053001fdc87683e30cec67eebc","liquidatedCollateral":"508.939253","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x66cda5c1dc95c96027537de4f2ae96ba0a1d69053001fdc87683e30cec67eebc","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1564.9162030441025","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"10/13/2023","totalLiquidated":"6354.0438339965741020996518204319182","totalSentToBuilder":"0","liquidations":[{"hash":"0xac53a1f31337848fe1d2e9f89fd11533200efe41bfa5a0bc52528cc01651c014","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0xac53a1f31337848fe1d2e9f89fd11533200efe41bfa5a0bc52528cc01651c014","liquidatedCollateral":"941.8328419635412212256518204319182","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0xac53a1f31337848fe1d2e9f89fd11533200efe41bfa5a0bc52528cc01651c014","liquidatedCollateral":"5412.210992033032880874","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1536.812804708381","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"10/17/2023","totalLiquidated":"13.715114422447915411","totalSentToBuilder":"0","liquidations":[{"hash":"0x97de56831b0c2dd4c9c8c29a562047ff3ea545353573993ff194f8c80f1acd45","liquidatedCollateral":"13.715114422447915411","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x97de56831b0c2dd4c9c8c29a562047ff3ea545353573993ff194f8c80f1acd45","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"1601.2321896426622","totalSentToBuilderUSD":"0"},{"name":"Silo Finance Ethereum","date":"11/27/2023","totalLiquidated":"46655.754860704580929702363943500861592","totalSentToBuilder":"0","liquidations":[{"hash":"0x52d347079892f5e6bd152997ce9bd8dd16d7175e9aada95e45017f420ecb2f72","liquidatedCollateral":"0","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x52d347079892f5e6bd152997ce9bd8dd16d7175e9aada95e45017f420ecb2f72","liquidatedCollateral":"2.062153949022445402363943500861592","sentToBuilder":"0","sentToBuilderUSD":"0"},{"hash":"0x52d347079892f5e6bd152997ce9bd8dd16d7175e9aada95e45017f420ecb2f72","liquidatedCollateral":"46653.6927067555584843","sentToBuilder":"0","sentToBuilderUSD":"0"}],"ethPrice":"2064.0742181655314","totalSentToBuilderUSD":"0"}]
+[
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "8/24/2022",
+    "totalLiquidated": "106.3343214003934583621297591088724",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x89782706d64eeb016d613736b412fac2fd1e8bf7c86d20ca3be78a316822a04f",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x89782706d64eeb016d613736b412fac2fd1e8bf7c86d20ca3be78a316822a04f",
+        "liquidatedCollateral": "106.3343214003934583621297591088724",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1665.7919073919315",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "10/11/2022",
+    "totalLiquidated": "109.974925",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xf100455f0263fb185ce0a98dab7f2d8576dca51054466d9d11802fe04db3ec00",
+        "liquidatedCollateral": "109.974925",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xf100455f0263fb185ce0a98dab7f2d8576dca51054466d9d11802fe04db3ec00",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1291.0816596695552",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "11/21/2022",
+    "totalLiquidated": "1.02912269110378754462896344637544",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x291b9e587bca12b49458bbdfebf964783225e011f56f314b01501cac0ef02c0b",
+        "liquidatedCollateral": "1.02912269110378754462896344637544",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x291b9e587bca12b49458bbdfebf964783225e011f56f314b01501cac0ef02c0b",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1144.2531525085535",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "12/2/2022",
+    "totalLiquidated": "9.27842333616570539842047966706909",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x8fcb927477a7c1766e327be2cd051e5e8ddadc3d933b1ef5e55d45eeeb3711b0",
+        "liquidatedCollateral": "9.27842333616570539842047966706909",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x8fcb927477a7c1766e327be2cd051e5e8ddadc3d933b1ef5e55d45eeeb3711b0",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1276.6393714030964",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "12/13/2022",
+    "totalLiquidated": "8959.264947565349618576427547050235",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xac85daf58ce9191cc2b0ba30d23354690a362842c49dbc30754be4817affb71f",
+        "liquidatedCollateral": "8959.264947565349618576427547050235",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xac85daf58ce9191cc2b0ba30d23354690a362842c49dbc30754be4817affb71f",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1275.332421155143",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "12/23/2022",
+    "totalLiquidated": "2865.8098698549525179196132268302573",
+    "totalSentToBuilder": "0.455281171721251843",
+    "liquidations": [
+      {
+        "hash": "0x22ed8b5d77b31197932e4a4ee21691dca84e58485734936e60ea2c0e28b27bcf",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0.059008205495605417",
+        "sentToBuilderUSD": "71.8632935166829364023509860589392"
+      },
+      {
+        "hash": "0x22ed8b5d77b31197932e4a4ee21691dca84e58485734936e60ea2c0e28b27bcf",
+        "liquidatedCollateral": "700.557356612970009569370868504992",
+        "sentToBuilder": "0.059008205495605417",
+        "sentToBuilderUSD": "71.8632935166829364023509860589392"
+      },
+      {
+        "hash": "0x22ed8b5d77b31197932e4a4ee21691dca84e58485734936e60ea2c0e28b27bcf",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0.059008205495605417",
+        "sentToBuilderUSD": "71.8632935166829364023509860589392"
+      },
+      {
+        "hash": "0x769540c6e7969b9bea0f027b95b2d4433cd402c6512cde6383dbc48ee39a6bbf",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0.060680566045326192",
+        "sentToBuilderUSD": "73.8999820761961667866436630145792"
+      },
+      {
+        "hash": "0x769540c6e7969b9bea0f027b95b2d4433cd402c6512cde6383dbc48ee39a6bbf",
+        "liquidatedCollateral": "566.8567130119722745180618285016853",
+        "sentToBuilder": "0.060680566045326192",
+        "sentToBuilderUSD": "73.8999820761961667866436630145792"
+      },
+      {
+        "hash": "0x769540c6e7969b9bea0f027b95b2d4433cd402c6512cde6383dbc48ee39a6bbf",
+        "liquidatedCollateral": "511.706098488852184760148096522938",
+        "sentToBuilder": "0.060680566045326192",
+        "sentToBuilderUSD": "73.8999820761961667866436630145792"
+      },
+      {
+        "hash": "0xf16e999dfb37a3bb1dbe851a0bc41fee1a34ed1e9ace1471febbaa378f697397",
+        "liquidatedCollateral": "1086.689701741158049072032433300642",
+        "sentToBuilder": "0.048107428549228508",
+        "sentToBuilderUSD": "58.5877545187089173548009819081408"
+      },
+      {
+        "hash": "0xf16e999dfb37a3bb1dbe851a0bc41fee1a34ed1e9ace1471febbaa378f697397",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0.048107428549228508",
+        "sentToBuilderUSD": "58.5877545187089173548009819081408"
+      }
+    ],
+    "ethPrice": "1217.8525497108176",
+    "totalSentToBuilderUSD": "554.4653358160551442765859110368368",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "1/1/2023",
+    "totalLiquidated": "1225.0111874172022805065487320406112",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x03cd1067a9fffa3c2544959b9ded920999245239355c28b201b703667bc86dea",
+        "liquidatedCollateral": "603.9491261900310578710639081488772",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x03cd1067a9fffa3c2544959b9ded920999245239355c28b201b703667bc86dea",
+        "liquidatedCollateral": "621.062061227171222635484823891734",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x03cd1067a9fffa3c2544959b9ded920999245239355c28b201b703667bc86dea",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1196.6130648084502",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "1/3/2023",
+    "totalLiquidated": "968.2984173483055317108192230380597",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x2e0158d4b7cc5a4e48489676b3d41e8ef4baf4dbe7d89408549b6bdaaba2a553",
+        "liquidatedCollateral": "524.4425244495574759720594628084992",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x2e0158d4b7cc5a4e48489676b3d41e8ef4baf4dbe7d89408549b6bdaaba2a553",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x2e0158d4b7cc5a4e48489676b3d41e8ef4baf4dbe7d89408549b6bdaaba2a553",
+        "liquidatedCollateral": "443.8558928987480557387597602295605",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1214.3789459253508",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "2/2/2023",
+    "totalLiquidated": "14065.62202318154806685987443070275",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6ca421dd892cc031479712feb07e621c255bfabdcc6ea3cfc112507c57cfbe5c",
+        "liquidatedCollateral": "14065.62202318154806685987443070275",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x6ca421dd892cc031479712feb07e621c255bfabdcc6ea3cfc112507c57cfbe5c",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1642.857168158598",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "3/7/2023",
+    "totalLiquidated": "71.36650218443597978072659694250714",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd45848d8df439dca5c70e3388da74ead7b9a3e29ccdefc27f9c76c13b96f20ba",
+        "liquidatedCollateral": "71.36650218443597978072659694250714",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xd45848d8df439dca5c70e3388da74ead7b9a3e29ccdefc27f9c76c13b96f20ba",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1567.3501465252189",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "3/29/2023",
+    "totalLiquidated": "0.1636044058754766454208836802962981",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5fad135163aa4dfda083dd064aa7a71c06b07a7ade5e4d6cdfab488108155418",
+        "liquidatedCollateral": "0.1636044058754766454208836802962981",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5fad135163aa4dfda083dd064aa7a71c06b07a7ade5e4d6cdfab488108155418",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1776.0436393298319",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "5/17/2023",
+    "totalLiquidated": "78.86931583206635930672648156674942",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x7df4a3cd0481b1d2446d6d348b5711bd8b6b484e2f75d0596447e0ef56f14e42",
+        "liquidatedCollateral": "78.86931583206635930672648156674942",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x7df4a3cd0481b1d2446d6d348b5711bd8b6b484e2f75d0596447e0ef56f14e42",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1823.6630183475188",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "6/5/2023",
+    "totalLiquidated": "2926.483267391338207175",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x303d0d6a4d9707f5fae9dd576ff9dff48663d6fde848106ec39b6f31239f8fde",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x303d0d6a4d9707f5fae9dd576ff9dff48663d6fde848106ec39b6f31239f8fde",
+        "liquidatedCollateral": "2926.483267391338207175",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1893.178280382087",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "6/10/2023",
+    "totalLiquidated": "376.1943770417546699673582729856963",
+    "totalSentToBuilder": "0.14141110776350216",
+    "liquidations": [
+      {
+        "hash": "0x6ee4e6979fd957975d76a449e25e4afa7c0d3dff02fa44e11ad68cdc88f1cd7b",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0.07070555388175108",
+        "sentToBuilderUSD": "130.042221238752166340078184073116"
+      },
+      {
+        "hash": "0x6ee4e6979fd957975d76a449e25e4afa7c0d3dff02fa44e11ad68cdc88f1cd7b",
+        "liquidatedCollateral": "376.1943770417546699673582729856963",
+        "sentToBuilder": "0.07070555388175108",
+        "sentToBuilderUSD": "130.042221238752166340078184073116"
+      }
+    ],
+    "ethPrice": "1839.2080126581927",
+    "totalSentToBuilderUSD": "260.084442477504332680156368146232",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "8/2/2023",
+    "totalLiquidated": "224365.4703152679183360680592245124",
+    "totalSentToBuilder": "61.004740279187499786",
+    "liquidations": [
+      {
+        "hash": "0xc602cb9e4ecfa823898f8043a0b989a27e0ebbc911666775197ed084649de2d2",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "30.502370139593749893",
+        "sentToBuilderUSD": "57031.6573712860393548108235006498239"
+      },
+      {
+        "hash": "0xc602cb9e4ecfa823898f8043a0b989a27e0ebbc911666775197ed084649de2d2",
+        "liquidatedCollateral": "224365.4703152679183360680592245124",
+        "sentToBuilder": "30.502370139593749893",
+        "sentToBuilderUSD": "57031.6573712860393548108235006498239"
+      }
+    ],
+    "ethPrice": "1869.7451086679923",
+    "totalSentToBuilderUSD": "114063.3147425720787096216470012996478",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "8/4/2023",
+    "totalLiquidated": "53.75564993199780712186954341892523",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xdde7b3e000caa5c5627f04365837ac58d062719f1ef635aa0c8b75956b875a81",
+        "liquidatedCollateral": "53.75564993199780712186954341892523",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xdde7b3e000caa5c5627f04365837ac58d062719f1ef635aa0c8b75956b875a81",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1835.7013026752861",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "8/17/2023",
+    "totalLiquidated": "1494.752034809128431260617899288997743",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1939ccb436a7a20f59be363670810e33b0050e36c420faf5a0e86213d9c0f475",
+        "liquidatedCollateral": "1.313676808634892212351488365511743",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x1939ccb436a7a20f59be363670810e33b0050e36c420faf5a0e86213d9c0f475",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x319a2394cf2b41e35583315dd6239e70347aac3f591c18cdef21773860e6127a",
+        "liquidatedCollateral": "1493.438358000493539048266410923486",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x319a2394cf2b41e35583315dd6239e70347aac3f591c18cdef21773860e6127a",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1809.4604742643007",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "8/27/2023",
+    "totalLiquidated": "10582.603549472300489482",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3f135d637305b7595106cc6e9c283c094fe7bef4581105a56baf54315841d0de",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x3f135d637305b7595106cc6e9c283c094fe7bef4581105a56baf54315841d0de",
+        "liquidatedCollateral": "10582.603549472300489482",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1645.9049996794286",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "9/11/2023",
+    "totalLiquidated": "6707.831727140688617729",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5c0da40a538ed381b9d8fe76ed6b7464acc6ce6981f97a6a975189c613de8c5a",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5c0da40a538ed381b9d8fe76ed6b7464acc6ce6981f97a6a975189c613de8c5a",
+        "liquidatedCollateral": "6707.831727140688617729",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1617.486179584741",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "10/12/2023",
+    "totalLiquidated": "508.939253",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x66cda5c1dc95c96027537de4f2ae96ba0a1d69053001fdc87683e30cec67eebc",
+        "liquidatedCollateral": "508.939253",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x66cda5c1dc95c96027537de4f2ae96ba0a1d69053001fdc87683e30cec67eebc",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1564.9162030441025",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "10/13/2023",
+    "totalLiquidated": "6354.0438339965741020996518204319182",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xac53a1f31337848fe1d2e9f89fd11533200efe41bfa5a0bc52528cc01651c014",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xac53a1f31337848fe1d2e9f89fd11533200efe41bfa5a0bc52528cc01651c014",
+        "liquidatedCollateral": "941.8328419635412212256518204319182",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xac53a1f31337848fe1d2e9f89fd11533200efe41bfa5a0bc52528cc01651c014",
+        "liquidatedCollateral": "5412.210992033032880874",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1536.812804708381",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "10/17/2023",
+    "totalLiquidated": "13.715114422447915411",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x97de56831b0c2dd4c9c8c29a562047ff3ea545353573993ff194f8c80f1acd45",
+        "liquidatedCollateral": "13.715114422447915411",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x97de56831b0c2dd4c9c8c29a562047ff3ea545353573993ff194f8c80f1acd45",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "1601.2321896426622",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  },
+  {
+    "name": "Silo Finance Ethereum",
+    "date": "11/27/2023",
+    "totalLiquidated": "46655.754860704580929702363943500861592",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x52d347079892f5e6bd152997ce9bd8dd16d7175e9aada95e45017f420ecb2f72",
+        "liquidatedCollateral": "0",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x52d347079892f5e6bd152997ce9bd8dd16d7175e9aada95e45017f420ecb2f72",
+        "liquidatedCollateral": "2.062153949022445402363943500861592",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x52d347079892f5e6bd152997ce9bd8dd16d7175e9aada95e45017f420ecb2f72",
+        "liquidatedCollateral": "46653.6927067555584843",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "ethPrice": "2064.0742181655314",
+    "totalSentToBuilderUSD": "0",
+    "icon": "https://icons.llamao.fi/icons/protocols/silo-finance?w=48&h=48"
+  }
+]
