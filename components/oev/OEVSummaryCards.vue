@@ -41,9 +41,13 @@ const totalSaving = computed(() =>
 /* Style the summary cards container */
 ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+
   gap: var(--space-m);
   padding-top: var(--space-m);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Style each summary card */

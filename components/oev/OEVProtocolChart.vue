@@ -166,9 +166,11 @@ ul {
 div.actions {
   grid-column: span 3;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
 
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   button {
     display: grid;
     place-items: center;

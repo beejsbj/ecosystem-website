@@ -9,39 +9,56 @@ function buttonHandle(protocol) {
 </script>
 
 <template>
-  <!-- Render an unordered list with the class "protocol-list" -->
-  <ul class="protocol-list">
+  <div class="wrapper">
+    <!-- Render an unordered list with the class "protocol-list" -->
     <!-- Render a heading with the class "solid-voice" -->
-    <h3 class="solid-voice">Select Protocols to Compare</h3>
-    <!-- Loop through each protocol in the oev.protocols array -->
-    <template v-for="(protocol, i) in oev.protocols">
-      <!-- Render a list item if the protocol's "trueHide" property is false -->
-      <li v-if="!protocol.trueHide" :key="protocol.id">
-        <!-- Render a button with an event listener that calls the buttonHandle function and passes the protocol as an argument -->
-        <button @click="buttonHandle(protocol)">
-          <!-- Render a BoxCard component with the following props -->
-          <BoxCard
-            :teaser="protocol.name"
-            hideImage="true"
-            :class="{
-              'border-gradient-green': !protocol.hide,
-              'border-gradient-blue': protocol.hide,
-            }"
-          />
-        </button>
-      </li>
-    </template>
-  </ul>
+    <h3 class="solid-voice" :class="{ hideOpacity: oev.isAllHidden }">
+      Select Protocols to Compare
+    </h3>
+    <h3 class="solid-voice large" :class="{ hide: !oev.isAllHidden }">
+      Select Protocols to Compare
+    </h3>
+    <ul class="protocol-list">
+      <!-- Loop through each protocol in the oev.protocols array -->
+      <template v-for="(protocol, i) in oev.protocols">
+        <!-- Render a list item if the protocol's "trueHide" property is false -->
+        <li v-if="!protocol.trueHide" :key="protocol.id">
+          <!-- Render a button with an event listener that calls the buttonHandle function and passes the protocol as an argument -->
+          <button @click="buttonHandle(protocol)">
+            <!-- Render a BoxCard component with the following props -->
+            <BoxCard
+              :teaser="protocol.name"
+              hideImage="true"
+              :class="{
+                'border-gradient-green': !protocol.hide,
+                'border-gradient-blue': protocol.hide,
+              }"
+            />
+          </button>
+        </li>
+      </template>
+    </ul>
+  </div>
 </template>
 
 <style scoped>
 /* Apply styles only to this component */
+
+.wrapper {
+  display: grid;
+  gap: var(--space-l);
+}
 .protocol-list {
   display: grid;
-  gap: var(--space-s);
-  max-height: 600px;
+  gap: var(--space-l);
   overflow-y: scroll;
   position: relative;
+  max-height: 300px;
+
+  @media (min-width: 768px) {
+    max-height: 600px;
+    gap: var(--space-s);
+  }
 }
 
 h3 {
@@ -50,6 +67,17 @@ h3 {
   top: 0;
   z-index: 1;
   background: var(--paper);
+  transition: all 0.3s ease-in-out, scale 0.2s 0.3s ease-in-out;
+
+  &.large {
+    scale: 3;
+    position: absolute;
+    transform: translate(-12cqw, 10cqh);
+
+    &::after {
+      content: "       --->";
+    }
+  }
 }
 
 li {

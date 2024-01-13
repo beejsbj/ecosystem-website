@@ -90,14 +90,17 @@ oev.setProtocols(oevRaw);
 
 .chart-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: var(--space-s);
+  position: relative;
 
-  .chart-container {
-    grid-column: 1 / 4;
-  }
-  .protocol-list {
-    grid-column: 4 / 5;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .chart-container {
+      grid-column: 1 / 4;
+    }
+    .protocol-list {
+      grid-column: 4 / 5;
+    }
   }
 }
 
@@ -106,6 +109,10 @@ text-content {
   display: grid;
   place-items: center;
   text-align: center;
-  padding: var(--space-3xl);
+  //   padding: var(--space-s);
+
+  @media (min-width: 768px) {
+    padding: var(--space-3xl);
+  }
 }
 </style>

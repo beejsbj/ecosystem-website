@@ -74,6 +74,12 @@ export const useOEVStore = defineStore("oev", function () {
     //  return parsed;
   }
 
+  //computed
+
+  const isAllHidden = computed(() => {
+    return protocols.value.every((protocol) => protocol.hide);
+  });
+
   // Helper functions
 
   // Calculate the OEV rate for a protocol
@@ -198,6 +204,9 @@ export const useOEVStore = defineStore("oev", function () {
     userTvl,
     oevRaw,
     protocols,
+
+    // computed
+    isAllHidden,
 
     // helpers
     setProtocols,
