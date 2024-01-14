@@ -48,9 +48,11 @@ const maxHeight = computed(() => {
               </span>
             </span>
           </div>
-          <picture class="protocol-logo">
+          <picture class="protocol-logo" v-if="protocol.icon">
             <NuxtImg :src="protocol.icon" :alt="protocol.name" loading="lazy" />
           </picture>
+
+          <DynamicIcon v-else icon="oev" />
           <p class="whisper-voice">{{ protocol.name }}</p>
         </li>
       </template>
@@ -142,12 +144,17 @@ ul.bars {
 
 li {
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-3xs);
+  //   align-items: center;
 
   justify-content: center;
 
+  & > :is(p, picture) {
+    justify-self: center;
+  }
+
   .bar {
-    height: 350px;
+    height: 400px;
     position: relative;
     display: grid;
     gap: var(--space-3xs);

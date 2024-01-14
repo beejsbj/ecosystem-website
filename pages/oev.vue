@@ -1,9 +1,9 @@
 <script setup>
 definePageMeta({
   layout: "footer-less",
-  title: "OEV WatchTower",
+  title: "OEV",
   description:
-    "The OEV WatchTower is a tool to help you visualize the impact of OEV on your protocol.",
+    "The OEV is a tool to help you visualize the impact of OEV on your protocol.",
 });
 
 // Fetch data from the content/oev-data which contains the json files
@@ -30,11 +30,11 @@ oev.setProtocols(oevRaw);
 
 <template>
   <!-- Page Title component with heading and notice voice -->
-  <PageTitle heading="WatchTower"
-    ><p class="notice-voice">
-      The OEV WatchTower is a tool to help you visualize the impact of OEV on
-      your protocol. The WatchTower is a tool to help you visualize the impact
-      of OEV on your protocol.
+  <PageTitle heading="OEV">
+    <p class="notice-voice">
+      The OEV is a tool to help you visualize the impact of OEV on your
+      protocol. The is a tool to help you visualize the impact of OEV on your
+      protocol.
     </p>
 
     <!-- OEV Summary Cards component -->
@@ -69,7 +69,7 @@ oev.setProtocols(oevRaw);
   </SectionColumn>
 
   <SectionColumn inner-class="wide">
-    <OEVProtocolChart />
+    <!-- <OEVProtocolChart /> -->
   </SectionColumn>
 
   <!--  displaying a message about data verification -->
@@ -113,6 +113,12 @@ text-content {
 
   @media (min-width: 768px) {
     padding: var(--space-3xl);
+  }
+
+  .loud-voice {
+    @media (max-width: 400px) {
+      // --font-size: var(--step-2);
+    }
   }
 }
 </style>

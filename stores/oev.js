@@ -199,6 +199,10 @@ export const useOEVStore = defineStore("oev", function () {
     protocol.hide = !protocol.hide;
   }
 
+  function addProtocol(protocol) {
+    protocols.value.push(protocol);
+  }
+
   return {
     // variables
     userTvl,
@@ -213,5 +217,6 @@ export const useOEVStore = defineStore("oev", function () {
     getProtocolById,
     getTotals,
     toggleHide,
+    addProtocol,
   };
 });

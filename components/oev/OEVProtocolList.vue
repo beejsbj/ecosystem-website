@@ -12,12 +12,12 @@ function buttonHandle(protocol) {
   <div class="wrapper">
     <!-- Render an unordered list with the class "protocol-list" -->
     <!-- Render a heading with the class "solid-voice" -->
-    <h3 class="solid-voice" :class="{ hideOpacity: oev.isAllHidden }">
+    <h3 class="solid-voice" :class="{ hideOpacity: oev.isAllHidden && false }">
       Select Protocols to Compare
     </h3>
-    <h3 class="solid-voice large" :class="{ hide: !oev.isAllHidden }">
+    <!-- <h3 class="solid-voice large" :class="{ hide: !oev.isAllHidden }">
       Select Protocols to Compare
-    </h3>
+    </h3> -->
     <ul class="protocol-list">
       <!-- Loop through each protocol in the oev.protocols array -->
       <template v-for="(protocol, i) in oev.protocols">
@@ -74,9 +74,9 @@ h3 {
     position: absolute;
     transform: translate(-12cqw, 10cqh);
 
-    &::after {
+    /* &::after {
       content: "       --->";
-    }
+    } */
   }
 }
 

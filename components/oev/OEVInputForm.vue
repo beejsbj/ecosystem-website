@@ -8,22 +8,19 @@ const maxLiquidated = oev.getTotals().totalLiquidated;
 
 // Define reactive variables
 const showOutput = ref(false); // Controls the visibility of the output section
-const userAdded = ref(0); // Keeps track of the number of user-added protocols
 
 // Function to add the user's input to the chart
 function addToChart(totalLiquidated) {
   // Create a new protocol object and push it to the protocols array in the OEV store
-  oev.protocols.push({
+  const userProtocol = {
     id: `userAdded`,
     totalLiquidated,
     withOEV: totalLiquidated + totalLiquidated * oevRate,
     totalSentToBuilderUSD: totalLiquidated * oevRate,
     name: `You`,
     trueHide: true,
-  });
-
-  // Increment the userAdded value
-  userAdded.value++;
+  };
+  oev.addProtocol(userProtocol);
 
   // Scroll to the next section
   const section = document.querySelector(".chart-grid");
