@@ -90,23 +90,6 @@ const parsed = computed(() => {
 
 <template>
   <div class="chart-container lines">
-    <!-- <ul> -->
-
-    <!-- <template v-for="protocol in oev.protocols">
-        <li v-if="!protocol.hide">
-          <button @click="selectedDataset = protocol.id">
-            <BoxCard
-              :teaser="protocol.name"
-              :class="{
-                'border-gradient-green': selectedDataset === protocol.id,
-                'border-gradient-blue': selectedDataset !== protocol.id,
-              }"
-            />
-          </button>
-        </li>
-      </template> -->
-
-    <!-- </ul> -->
     <div class="chart">
       <LineChart :data="parsed" :options="{}" :metadata="metadata" />
     </div>
