@@ -8,7 +8,7 @@ export const useOEVStore = defineStore("oev", function () {
   const protocols = ref([]);
 
   // this variable defines the number of protocols to show in the chart
-  const protocolCount = ref(0);
+  const protocolCount = ref(4);
 
   function setProtocols(raw) {
     // Map over the oevRaw data and transform it into a new array of objects
@@ -17,14 +17,14 @@ export const useOEVStore = defineStore("oev", function () {
       return {
         // Generate an id for each protocol by converting the first letter of the title to lowercase and concatenating the rest of the title
         id: protocol.title[0].toLowerCase() + protocol.title.slice(1),
-        name: protocol.body[0].name,
+        name: protocol.body[0].name.slice(0, -8),
         icon: protocol.body[0].icon,
         data: protocol.body,
         dataMonthly: dataToMonthly(protocol.body),
         dataWeekly: dataToWeekly(protocol.body),
 
-        // Set the hide property to true for protocols with an index greater than protocolCount value
-        hide: true,
+        // Set the default hide value to false for protocolCount amount of protocols and not first one
+        hide: i >= protocolCount.value || i === 0,
       };
     });
 
@@ -195,8 +195,17 @@ export const useOEVStore = defineStore("oev", function () {
   }
 
   function toggleHide(protocol) {
-    console.log("hide");
+    checkHideCount();
     protocol.hide = !protocol.hide;
+  }
+
+  function checkHideCount() {
+    const count = protocols.value.filter((protocol) => !protocol.hide).length;
+
+    if (count > protocolCount.value) {
+      console.log(count, "count > protocolCount.value");
+      protocols.value.find((protocol) => !protocol.hide).hide = true;
+    }
   }
 
   function addProtocol(protocol) {

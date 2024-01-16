@@ -135,7 +135,7 @@ text-content {
 ul.bars {
   display: grid;
   gap: var(--space-s);
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
   @media (min-width: 1000px) {
     grid-column: 1 / -1;
@@ -146,8 +146,6 @@ li {
   display: grid;
   gap: var(--space-3xs);
   //   align-items: center;
-
-  justify-content: center;
 
   & > :is(p, picture) {
     justify-self: center;
@@ -164,7 +162,7 @@ li {
 
     &.userAdded {
       filter: brightness(3) saturate(3);
-      width: 100px;
+      // width: 100px;
     }
 
     /*   seperator line */
