@@ -4,6 +4,8 @@ definePageMeta({
   title: "OEV",
   description:
     "The OEV is a tool to help you visualize the impact of OEV on your protocol.",
+
+  aliases: ["/watchtower", "/oev-watchtower"],
 });
 
 // Fetch data from the content/oev-data which contains the json files
@@ -30,9 +32,9 @@ oev.setProtocols(oevRaw);
 
 <template>
   <!-- Page Title component with heading and notice voice -->
-  <PageTitle heading="OEV">
+  <PageTitle heading="OEV Watchtower">
     <p class="notice-voice">
-      The OEV is a tool to help you visualize the impact of OEV on your
+      The Watchtower is a tool to help you visualize the impact of OEV on your
       protocol. The is a tool to help you visualize the impact of OEV on your
       protocol.
     </p>
@@ -69,7 +71,7 @@ oev.setProtocols(oevRaw);
   </SectionColumn>
 
   <SectionColumn inner-class="wide">
-    <!-- <OEVProtocolChart /> -->
+    <OEVProtocolChart />
   </SectionColumn>
 
   <!--  displaying a message about data verification -->
