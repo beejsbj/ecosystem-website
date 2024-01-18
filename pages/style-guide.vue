@@ -1,5 +1,5 @@
 <script setup>
-//
+// #todo update this
 useSeoMeta({
   title: "Style Guide",
   description:
