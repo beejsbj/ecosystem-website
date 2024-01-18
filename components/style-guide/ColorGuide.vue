@@ -226,6 +226,10 @@ const colors = ref([
       name: "Pattern Six",
       class: "pattern-six",
     },
+    {
+      name: "Pattern Seven",
+      class: "pattern-seven",
+    },
   ],
 ]);
 
