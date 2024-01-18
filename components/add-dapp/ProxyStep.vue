@@ -75,7 +75,7 @@ async function handleUpdateProxy() {
     <text-content>
       <h2 class="attention-voice">Enter Proxy information</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
     <div class="proxy-form grid-item" v-auto-animate>

@@ -10,7 +10,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     <text-content>
       <h2 class="attention-voice">How can your users contact you?</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
 
