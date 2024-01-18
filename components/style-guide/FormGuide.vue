@@ -8,6 +8,23 @@ const inputs = ref([
     type: "text",
   },
   {
+    label: "Email",
+    type: "email",
+  },
+  {
+    label: "Password",
+    type: "password",
+  },
+  {
+    label: "Number",
+    type: "number",
+  },
+  {
+    label: "URL",
+    type: "url",
+  },
+
+  {
     label: "Textarea",
     type: "textarea",
   },
