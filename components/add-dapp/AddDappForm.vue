@@ -169,10 +169,16 @@ onMounted(async () => {
       </FormKit>
 
       <!-- Step 5 -->
-      <FormKit type="step" v-auto-animate name="links">
+      <FormKit
+        type="step"
+        v-auto-animate
+        name="links"
+        :previous-attrs="prevClasses"
+        :next-attrs="nextClasses"
+      >
         <LinksStep :dappForm="dappForm" />
         <template #stepNext>
-          <FormStepButtons :isLastStep="true" />
+          <FormSubmit :isLastStep="true" />
           <div class="messages">
             <ul class="validation-errors" v-auto-animate>
               <FormKitMessages v-auto-animate />
@@ -224,11 +230,9 @@ div.actions {
   gap: var(--space-m);
 
   button {
-    padding-left: var(--space-xl);
-    padding-right: var(--space-xl);
+    padding: 1em var(--space-xl);
     @media (min-width: 768px) {
-      padding-left: var(--space-3xl);
-      padding-right: var(--space-3xl);
+      padding: 1em var(--space-3xl);
     }
   }
 }
@@ -240,11 +244,6 @@ div.messages {
 
   .success-indicator {
     color: var(--success);
-  }
-}
-form {
-  :deep(.formkit-step-previous, .formkit-step-next) {
-    display: none;
   }
 }
 </style>
