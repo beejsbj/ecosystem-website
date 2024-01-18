@@ -212,9 +212,9 @@ li {
         text-align: center;
         position: absolute;
         --gap: -1.1rem;
-        left: 100%;
+        //   left: 100%;
         top: var(--gap);
-        transform: translateX(-50%);
+        //   transform: translateX(-50%);
       }
       &.liquidated {
         grid-column: 1 / span 1;

@@ -86,7 +86,7 @@ oev.setProtocols(oevRaw);
 </template>
 
 <style scoped lang="scss">
-:deep(inner-column) {
+:deep(inner-column:not(.page-title)) {
   padding: var(--space-3xl) var(--space-s);
 }
 
