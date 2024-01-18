@@ -108,9 +108,7 @@ form :is(form-field) {
 .formkit-step-actions {
   margin-top: var(--space-2xl);
   margin-bottom: unset !important;
-  display: grid !important;
-  gap: var(--space-s) !important;
-  justify-content: unset !important;
+  display: flex !important;
 }
 
 /*  */

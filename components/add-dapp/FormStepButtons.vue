@@ -1,11 +1,13 @@
 <script setup>
-const props = defineProps(["next", "previous", "isLastStep"]);
+const props = defineProps(["next", "previous", "isLastStep", "isFirstStep"]);
 const web3Store = useWeb3Store();
 </script>
 
 <template>
   <div class="actions">
-    <button class="text" @click.prevent="previous()">Previous</button>
+    <button class="text" @click.prevent="previous()" v-if="!isFirstStep">
+      Previous
+    </button>
     <button class="button outline" @click.prevent="next()" v-if="!isLastStep">
       Next
     </button>
