@@ -41,9 +41,9 @@ html {
   --blue-darker: hsla(calc(60 + var(--hue)), 100%, 35%, 1);
   --blue-darkest: hsla(calc(60 + var(--hue)), 100%, 25%, 1);
 
-  --success: hsla(122, 85%, 65%, 1);
-  --warning: hsla(44, 85%, 65%, 1);
-  --error: hsla(0, 85%, 65%, 1);
+  --success: hsla(148, 76%, 41%, 1);
+  --warning: hsla(40, 100%, 55%, 1);
+  --error: hsla(15, 99%, 55%, 1);
 
   --paper: var(--black);
   --ink: var(--white);
