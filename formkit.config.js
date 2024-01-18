@@ -1,9 +1,10 @@
 // formkit.config.js
-import { defaultConfig } from "@formkit/vue";
+import { defaultConfig, defineFormKitConfig } from "@formkit/vue";
 import {
   createMultiStepPlugin,
   createFloatingLabelsPlugin,
   createAutoHeightTextareaPlugin,
+  createAutoAnimatePlugin,
 } from "@formkit/addons";
 
 //icons
@@ -14,53 +15,53 @@ import { createProPlugin, inputs } from "@formkit/pro";
 
 //css
 import "@formkit/addons/css/multistep";
+import "@formkit/themes/genesis";
 
-const proPlugin = createProPlugin("fk-2fbe2621a", inputs);
+//////////////////////////////
 
+//icons
 const icons = {
   ...applicationIcons,
   ...cryptoIcons,
 };
 
-const config = defaultConfig({
-  plugins: [
-    createMultiStepPlugin(),
-    createAutoHeightTextareaPlugin(),
-    createFloatingLabelsPlugin(),
-    //  addAsteriskPlugin,
-    proPlugin,
-  ],
-  icons,
+//auto animate
+const autoAnimate = {
+  config: {
+    /* optional AutoAnimate config */
+    // default:
+    duration: 250,
+    easing: "ease-in-out",
+    delay: 0,
+  },
+  targets: {
+    /* optional animation targets object */
+    // default:
+    global: ["outer", "inner"],
+    form: ["form"],
+    repeater: ["items"],
+  },
+};
+
+//plugins
+const plugins = [
+  createMultiStepPlugin(),
+  createFloatingLabelsPlugin(),
+  createAutoHeightTextareaPlugin(),
+  createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
+  //  proPlugin,
+];
+
+//config
+export default defineFormKitConfig(() => {
+  const config = useRuntimeConfig();
+  // pro
+  // const proPlugin = createProPlugin("config.FORMKIT_PRO_KEY", inputs);
+
+  return {
+    plugins,
+    icons,
+  };
 });
 
-export default config;
-
 // plugins
-const isCheckboxAndRadioMultiple = (node) =>
-  (node.props.type === "checkbox" || node.props.type === "radio") &&
-  node.props.options;
-
-function addAsteriskPlugin(node) {
-  node.on("created", () => {
-    const schemaFn = node.props.definition.schema;
-    node.props.definition.schema = (sectionsSchema = {}) => {
-      const isRequired = node.props.parsedRules.some((rule) => {
-        return rule.name === "required";
-      });
-      // console.log(node.props.id, node.props, isRequired);
-
-      if (isRequired) {
-        if (isCheckboxAndRadioMultiple(node)) {
-          sectionsSchema.legend = {
-            children: ["$label", "*"],
-          };
-        } else {
-          sectionsSchema.label = {
-            children: ["$label", "*"],
-          };
-        }
-      }
-      return schemaFn(sectionsSchema);
-    };
-  });
-}
