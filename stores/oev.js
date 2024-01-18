@@ -195,21 +195,37 @@ export const useOEVStore = defineStore("oev", function () {
   }
 
   function toggleHide(protocol) {
-    checkHideCount();
     protocol.hide = !protocol.hide;
+    checkHideCount(protocol);
   }
 
-  function checkHideCount() {
+  function checkHideCount(protocol) {
     const count = protocols.value.filter((protocol) => !protocol.hide).length;
 
     if (count > protocolCount.value) {
-      console.log(count, "count > protocolCount.value");
-      protocols.value.find((protocol) => !protocol.hide).hide = true;
+      const excessCount = count - protocolCount.value;
+      hideExcessProtocols(excessCount, protocol.id);
+    }
+  }
+
+  function hideExcessProtocols(excessCount, exemptedProtocolId) {
+    // Hide the excess protocols, starting from the first visible one, but skip the exempted protocol
+    let hiddenCount = 0;
+    for (const protocol of protocols.value) {
+      if (
+        protocol.id !== exemptedProtocolId &&
+        !protocol.hide &&
+        hiddenCount < excessCount
+      ) {
+        protocol.hide = true;
+        hiddenCount++;
+      }
     }
   }
 
   function addProtocol(protocol) {
     protocols.value.push(protocol);
+    checkHideCount(protocol);
   }
 
   return {
