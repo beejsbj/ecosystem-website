@@ -15,7 +15,7 @@ function addToChart(totalLiquidated) {
   const userProtocol = {
     id: `userAdded`,
     totalLiquidated,
-    withOEV: totalLiquidated + totalLiquidated * oevRate,
+    withOEV: totalLiquidated - totalLiquidated * oevRate,
     totalSentToBuilderUSD: totalLiquidated * oevRate,
     name: `You`,
     trueHide: true,

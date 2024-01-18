@@ -52,7 +52,7 @@ const maxHeight = computed(() => {
             <NuxtImg :src="protocol.icon" :alt="protocol.name" loading="lazy" />
           </picture>
 
-          <DynamicIcon v-else icon="oev" />
+          <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
           <p class="whisper-voice">{{ protocol.name }}</p>
         </li>
       </template>
@@ -84,6 +84,10 @@ text-content {
   aspect-ratio: 1;
   border-radius: 50%;
   justify-self: center;
+
+  &.user {
+    border-radius: unset;
+  }
 }
 
 .legend {
