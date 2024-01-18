@@ -9,6 +9,15 @@ const web3Store = useWeb3Store();
 
 const dappForm = useStorage("dapp-form", {});
 
+const nextClasses = {
+  inputClass: "$reset button outline",
+  wrapperClass: "$reset",
+};
+const prevClasses = {
+  inputClass: "$reset text",
+  wrapperClass: "$reset",
+};
+
 const loading = ref(false);
 const messages = ref([]);
 const successData = ref({ message: "", pr_url: "" });
@@ -111,57 +120,59 @@ onMounted(async () => {
     <FormKit
       type="multi-step"
       tab-style="progress"
+      :allow-incomplete="true"
       :hide-progress-labels="true"
+      :hide-progress-numbers="true"
     >
-      <FormKit type="step" v-auto-animate name="content">
+      <!-- Step 1 -->
+      <FormKit
+        type="step"
+        v-auto-animate
+        name="content"
+        :next-attrs="nextClasses"
+      >
         <ContentStep :dappForm="dappForm" />
-        <template #stepNext="{ handlers }" #stepPrevious>
-          <FormStepButtons
-            :next="handlers.next"
-            :previous="handlers.previous"
-          />
-        </template>
       </FormKit>
 
-      <FormKit type="step" v-auto-animate name="images">
+      <!-- Step 2 -->
+      <FormKit
+        type="step"
+        v-auto-animate
+        name="images"
+        :next-attrs="nextClasses"
+        :previous-attrs="prevClasses"
+      >
         <ImageStep :dappForm="dappForm" />
-        <template #stepNext="{ handlers }" #stepPrevious>
-          <FormStepButtons
-            :next="handlers.next"
-            :previous="handlers.previous"
-          />
-        </template>
       </FormKit>
 
-      <FormKit type="step" v-auto-animate name="tags">
+      <!-- Step 3 -->
+      <FormKit
+        type="step"
+        v-auto-animate
+        name="tags"
+        :next-attrs="nextClasses"
+        :previous-attrs="prevClasses"
+      >
         <TagStep :dappForm="dappForm" />
-        <template #stepNext="{ handlers }" #stepPrevious>
-          <FormStepButtons
-            :next="handlers.next"
-            :previous="handlers.previous"
-          />
-        </template>
       </FormKit>
 
+      <!-- Step 4 -->
       <FormKit
         type="step"
         v-auto-animate
         name="proxy"
         v-if="dappForm.productType === 'datafeed'"
+        :next-attrs="nextClasses"
+        :previous-attrs="prevClasses"
       >
         <ProxyStep :dappForm="dappForm" :feedNameOptions="feedNameOptions" />
-        <template #stepNext="{ handlers }" #stepPrevious>
-          <FormStepButtons
-            :next="handlers.next"
-            :previous="handlers.previous"
-          />
-        </template>
       </FormKit>
 
+      <!-- Step 5 -->
       <FormKit type="step" v-auto-animate name="links">
         <LinksStep :dappForm="dappForm" />
-        <template #stepNext="{ handlers }">
-          <FormStepButtons :isLastStep="true" :previous="handlers.previous" />
+        <template #stepNext>
+          <FormStepButtons :isLastStep="true" />
           <div class="messages">
             <ul class="validation-errors" v-auto-animate>
               <FormKitMessages v-auto-animate />
@@ -202,9 +213,24 @@ form {
   }
 }
 
+:deep(.formkit-step-next) {
+  margin-left: unset !important;
+}
+
+:deep(.formkit-step-actions),
 div.actions {
+  display: flex !important;
   justify-content: center;
   gap: var(--space-m);
+
+  button {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+    @media (min-width: 768px) {
+      padding-left: var(--space-3xl);
+      padding-right: var(--space-3xl);
+    }
+  }
 }
 
 div.messages {
