@@ -38,11 +38,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: [
-    "@/assets/styles/site.css",
-    "@formkit/themes/genesis",
-    //  "floating-vue/dist/style.css",
-  ],
+  css: ["@/assets/styles/site.css"],
 
   postcss: {
     plugins: {
