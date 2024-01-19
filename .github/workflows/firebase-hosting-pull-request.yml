@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci && npm run build
+      - run: npm ci --legacy-peer-deps  && NITRO_PRESET=firebase npm run build
         env:
           NUXT_MONGODB_URI: "${{secrets.NUXT_MONGODB_URI}}"
           NUXT_MONGODB_URI_DEV: "${{secrets.NUXT_MONGODB_URI_DEV}}"
@@ -36,7 +36,7 @@ jobs:
           NUXT_BREVO_MAIL_API: "${{secrets.NUXT_BREVO_MAIL_API}}"
           NUXT_EMAIL_RECIEVER: "${{secrets.NUXT_EMAIL_RECIEVER}}"
           NUXT_EMAIL_SENDER: "${{secrets.NUXT_EMAIL_SENDER}}"
-      - uses: FirebaseExtended/action-deploy@v0
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_API3_ECOSYSTEM }}"
