@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
+        env:
+          NUXT_MONGODB_URI: "${{secrets.NUXT_MONGODB_URI}}"
+          NUXT_MONGODB_URI_DEV: "${{secrets.NUXT_MONGODB_URI_DEV}}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
