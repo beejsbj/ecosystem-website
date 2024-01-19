@@ -36,7 +36,7 @@ jobs:
           NUXT_BREVO_MAIL_API: "${{secrets.NUXT_BREVO_MAIL_API}}"
           NUXT_EMAIL_RECIEVER: "${{secrets.NUXT_EMAIL_RECIEVER}}"
           NUXT_EMAIL_SENDER: "${{secrets.NUXT_EMAIL_SENDER}}"
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: FirebaseExtended/action-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_API3_ECOSYSTEM }}"
