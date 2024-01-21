@@ -13,6 +13,7 @@ import {
   Tooltip,
   Legend,
   Colors,
+  Filler,
 } from "chart.js";
 
 ChartJS.register(
@@ -24,7 +25,8 @@ ChartJS.register(
   SubTitle,
   Tooltip,
   Legend,
-  Colors
+  Colors,
+  Filler
 );
 
 const props = defineProps(["data", "options", "metadata"]);
@@ -89,33 +91,58 @@ const options = {
         display: true,
         text: props.metadata.y.title,
         color: "hsla(160, 64%, 69%, 1)",
+        position: "left",
       },
       ticks: {
         //   autoSkip: true,
         maxTicksLimit: 10,
+        callback: function (value, index, values) {
+          if (value >= 1e9) {
+            return (value / 1e9).toFixed(1) + "B";
+          } else if (value >= 1e6) {
+            return (value / 1e6).toFixed(1) + "M";
+          } else if (value >= 1e3) {
+            return (value / 1e3).toFixed(1) + "K";
+          }
+          return value;
+        },
       },
     },
   },
 
   responsive: true,
   maintainAspectRatio: true,
-  aspectRatio: ui.isMobile ? 1.25 : 1.75,
-  //   borderColor: "hsla(160, 64%, 69%, 1)",
-  borderWidth: 1,
+  aspectRatio: ui.isMobile ? 0.9 : 1.75,
+  borderWidth: 1.1,
+  borderColor: function (context, options) {
+    const datasetIndex = context.datasetIndex;
+
+    return context.dataset.color
+      ? ui.api3Colors[context.dataset.color]
+      : Object.values(ui.api3Colors)[datasetIndex];
+  },
 
   hoverOffset: 5,
-  hoverBackgroundColor: "hsla(160, 64%, 69%, 1)",
-  //   hoverBorderColor: "hsla(160, 0%, 94%, 1)",
 
-  onClick: function (evt, item) {
-    //  console.log("item", item);
+  fill: "origin",
+
+  backgroundColor: function (context, options) {
+    const { datasetIndex, chart, dataset } = context;
+    const { width, height, ctx } = chart;
+    const gradient = ctx.createLinearGradient(0, 0, 0, height);
+    const color = dataset.color
+      ? ui.api3Colors[dataset.color]
+      : Object.values(ui.api3Colors)[datasetIndex];
+    const [startColor, endColor] = [
+      color.replace("1)", "0.5)"),
+      color.replace("1)", "0)"),
+    ];
+    gradient.addColorStop(0, startColor);
+    gradient.addColorStop(1, endColor);
+    return gradient;
   },
 
-  onResize: function (chart, size) {
-    //  console.log("chart", chart);
-    //  console.log("size", size);
-    //  console.log("chart.canvas.parentNode", chart.canvas.parentNode);
-  },
+  ...props.options,
 };
 </script>
 

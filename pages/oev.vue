@@ -45,7 +45,7 @@ oev.setProtocols(oevRaw);
 
   <!--  -->
   <SectionColumn>
-    <OEVInputForm />
+    <LazyOEVInputForm />
   </SectionColumn>
 
   <SectionColumn inner-class="wide">
@@ -53,7 +53,7 @@ oev.setProtocols(oevRaw);
       <!-- OEV Interface Chart component -->
       <OEVInterfaceChart />
       <!-- OEV Protocol List component -->
-      <OEVProtocolList />
+      <LazyOEVProtocolList />
     </div>
   </SectionColumn>
 

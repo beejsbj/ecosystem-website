@@ -2,7 +2,7 @@
 const oev = useOEVStore();
 
 const selectedDataset = ref("aaveV2Eth");
-const selectedPeriod = ref("daily");
+const selectedPeriod = ref("monthly");
 
 const periods = ["daily", "weekly", "monthly"];
 
@@ -72,17 +72,17 @@ const parsed = computed(() => {
     labels,
     datasets: [
       {
-        data: dataLiquidated,
-        label: "Total Liquidated",
-      },
-      {
         data: dataSentToBuilder,
         label: "Total Sent to Builder",
       },
       {
-        data: dataOEV,
-        label: "With OEV",
+        data: dataLiquidated,
+        label: "Total Liquidated",
       },
+      // {
+      //   data: dataOEV,
+      //   label: "With OEV",
+      // },
     ],
   };
 });
