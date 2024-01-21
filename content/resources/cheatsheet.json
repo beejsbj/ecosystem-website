@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "API3 x LightLink QRNG Hackathon Cheatsheet",
+    "type": "website",
+    "url": "https://ecosystem.api3.org/resources/qrng-cheatsheet",
+    "description": "API3 QRNG is a free-to-use service to provide quantum randomness on-chain. It is powered by Airnode, the serverless first-part oracle that is operated directly by the QRNG API providers."
+  },
+  "header": {
+    "title": "API3 x LightLink Gasless Hackathon",
+    "subtitle": "Access Quantum Random Numbers",
+    "tag": "Hacker Cheatsheet"
+  },
+  "introPara": "API3 QRNG is a free-to-use service to provide quantum randomness on-chain. It is powered by Airnode, the serverless first-part oracle that is operated directly by the QRNG API providers.",
+  "left": {
+    "qrCards": [
+      {
+        "title": "Explore",
+        "description": "Start by spending time understanding Quantum Randomness and understanding an overview of how API3 QRNG works.",
+        "image": "/images/QRNG_EXPLORE.png",
+        "link": "https://docs.api3.org/explore/qrng/"
+      },
+      {
+        "title": "QRNG Guides",
+        "description": "If you're a developer looking to get started, follow our simple guide on how to request random numbers to your LightLink smart contracts. These have been designed to take you from 0-1 and action your learning through building your own demo projects.",
+        "image": "/images/QRNG_Guides.png",
+        "link": "https://docs.api3.org/guides/qrng/",
+        "reverse": true
+      },
+      {
+        "title": "Hackathon References",
+        "description": "The API3 Ecosystem has a range of resources available for developers to utilize within hackathons, alongside the API3 guides.",
+        "image": "/images/Ecosystem_github.png",
+        "link": "https://github.com/api3-ecosystem/References-For-Hackathon"
+      }
+    ],
+
+    "gettingStarted": {
+      "heading": "Hacker getting started list",
+      "list": [
+        "Start by reading the QRNG explore materials",
+        "Follow the quickstart guide to call QRNG using the Lightlink ChainID",
+        "Explore the QRNG Demo Projects to utilize QRNG in a dApp",
+        "Build and utilize QRNG within your hackathon project to win the bounty"
+      ]
+    }
+  }
+}

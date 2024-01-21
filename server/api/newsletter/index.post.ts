@@ -1,11 +1,11 @@
-import { validateEmail } from "../../services/helper";
+import { isValidEmail } from "../../services/helper";
 import { Subscriber } from "../../models/Subscriber";
 
 export default defineEventHandler(async (event: any) => {
   try {
     const { email } = await (event.node?.req?.body || readBody(event));
 
-    if (!email || !validateEmail(email)) {
+    if (!isValidEmail(email)) {
       event.node.res.statusCode = 400;
       return {
         code: "INVALID_ID",

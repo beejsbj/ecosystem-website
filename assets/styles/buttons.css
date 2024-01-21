@@ -133,11 +133,13 @@ button.disabled {
 [data-loading] [data-type="submit"] :is(.button) {
   filter: brightness(1.1);
   pointer-events: none;
+  position: relative;
 }
 [data-loading] [data-type="submit"] :is(.button)::before {
   content: "";
+  position: absolute;
   width: 20px;
-  height: 20px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: transparent;
   border-left: var(--ink) 2px solid;

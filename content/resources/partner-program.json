@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "API3 DAO Referral Scheme",
+    "type": "article",
+    "url": "https://ecosystem.api3.org/resources/partner-program",
+    "description": "The API3 referral scheme has been created to harness the potential of our robust ecosystem and community partners to support the growth objectives of the DAO."
+  },
+
+  "hero": {
+    "title": "Become an API3 Affiliate",
+    "image": "/images/icons/dao.svg",
+    "description": "Join our mission of enabling DeFi to flourish by becoming an API3 referral partner"
+  },
+
+  "about": {
+    "title": "About the Program",
+    "description": "At the heart of API3's success is a collaborative network of contributors, clients, and influencers, each playing a pivotal role in expanding the reach and impact of our Oracle Stack. The API3 DAO well situated to work with friends and contributors across our community that operate outside of core team proposals to reach the global DeFi ecosystem. This programme provides a structure that rewards the introduction and onboarding of a DeFi protocol."
+  },
+
+  "getStarted": {
+    "title": "How can I get started?",
+    "description": "The programme has been designed to be simple to engage with, so mutually beneficial value can be realized as quickly as possible",
+    "cards": [
+      {
+        "title": "Understanding the programme",
+        "image": "/images/icons/dao.svg",
+        "description": "Read the partner guideance to understand what it means to be an API3 affiliate."
+      },
+      {
+        "title": "Identification of a qualified dApp",
+        "image": "/images/icons/dao.svg",
+        "description": "dAPIs are utilized within the DeFi sector, API3 has some requirements for an introduction to qualify"
+      },
+      {
+        "title": "Engage and Utilize Affiliate Materials",
+        "image": "/images/icons/dao.svg",
+        "description": "Access to a wealth of resources designed to aid you in your referral efforts."
+      },
+      {
+        "title": "Deliver Promotional Activities",
+        "image": "/images/icons/dao.svg",
+        "description": "Strategies and tips for efficiently spreading the word and making impactful referrals, and the API3 team is on hand to collaborate."
+      },
+      {
+        "title": "Onboard dApps For Rewards",
+        "image": "/images/icons/dao.svg",
+        "description": "You will need to report and validate your activity to recieve payments."
+      }
+    ]
+  },
+
+  "rewards": {
+    "title": "How does the referral scheme work?",
+    "cards": [
+      {
+        "title": "Introduction to a qualified dApp",
+        "description": "$500 API3"
+      },
+      {
+        "title": "Integration of qualified dApp",
+        "description": "$2500 API3"
+      }
+    ]
+  },
+
+  "qualifications": {
+    "title": "What does a qualified dApp look like?",
+    "description": "An integration is defined as a DeFi protocol that is reading a dAPI within their contracts and can be verified on-chain.",
+    "cards": [
+      {
+        "title": "A DeFi protocol requiring oracles with over $500k TVL",
+        "description": "A DeFi protocol requiring price oracles with over $500k TVL"
+      },
+      {
+        "title": "Actively building and have a team",
+        "description": "Active team with plans to continue development"
+      },
+      {
+        "title": "Open to basic ecosystem marketing such as adding API3 into docs and listing on ecosystem.api3.org",
+        "description": "Keen to collaborate on ecosystem marketing"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Questions?",
+    "description": "We look forward to hearing from you, please share any questions.",
+
+    "email": "ecosystem@api3.org"
+  }
+}

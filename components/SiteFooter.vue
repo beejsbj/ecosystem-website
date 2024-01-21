@@ -73,6 +73,10 @@ const footerLinks = [
     title: "Resources",
     links: [
       {
+        label: "Affiliate Program",
+        path: "/affiliate-program",
+      },
+      {
         label: "Guides",
         path: "https://docs.api3.org/guides/",
         external: true,
@@ -81,6 +85,10 @@ const footerLinks = [
         label: "Articles",
         path: "https://api3.org/goto/medium?source=ao-menu",
         external: true,
+      },
+      {
+        label: "QRNG Cheatsheet",
+        path: "/resources/hacker-cheatsheet",
       },
       // Add more links here
     ],
@@ -150,7 +158,7 @@ const miscLinks = [
 </script>
 
 <template>
-  <footer class="">
+  <footer class="pattern-seven">
     <section class="footer-navigation">
       <inner-column>
         <picture class="site-logo">
@@ -169,7 +177,7 @@ const miscLinks = [
               v-for="(link, linkIndex) in footerMenu.links"
               :key="linkIndex"
               :to="link.path"
-              class="calm-voice text footer-link"
+              class="calm-voice text footer-link hover-underline"
             >
               <span>{{ link.label }}</span>
               <ExternalLink v-if="link.external" />
@@ -215,15 +223,6 @@ const miscLinks = [
 footer {
   padding: var(--space-2xl) 0;
   position: relative;
-  background: url("@/assets/images/background/footer-pattern.svg");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-
-  @media (max-width: 768px) {
-    background: url("@/assets/images/background/footer-pattern-mobile.svg");
-    background-position: bottom right;
-    background-repeat: no-repeat;
-  }
 
   inner-column {
     padding-left: var(--space-l);

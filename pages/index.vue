@@ -28,6 +28,7 @@ onMounted(() => {
   <HeroLanding />
 
   <MissionComponent />
+
   <section class="curves-wrapper">
     <picture class="curves-decoration-3">
       <CurvesDecoration3 />

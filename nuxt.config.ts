@@ -112,7 +112,7 @@ export default defineNuxtConfig({
     ],
   ],
 
-  plugins: ["~/plugins/gsap.ts", "~/plugins/floating-vue.ts"],
+  //   plugins: ["~/plugins/gsap.ts", "~/plugins/floating-vue.ts"],
 
   components: [
     {
@@ -150,6 +150,9 @@ export default defineNuxtConfig({
     gitAppInstallationId: process.env.NUXT_GIT_APP_INSTALLATION_ID,
     gitAppClientId: process.env.NUXT_GIT_APP_CLIENT_ID,
     gitAppClientSecret: process.env.NUXT_GIT_APP_CLIENT_SECRET,
+    brevoMailApi: process.env.NUXT_BREVO_MAIL_API,
+    emailReceiver: process.env.NUXT_EMAIL_RECIEVER,
+    emailSender: process.env.NUXT_EMAIL_SENDER,
     public: {
       walletConnectProjectId: "8ea05c2c45ce1000d51a7364ce317dc5",
     },

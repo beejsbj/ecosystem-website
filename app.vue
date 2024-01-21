@@ -1,5 +1,23 @@
 <script setup>
 const {} = useWeb3Store();
+const route = useRoute();
+
+//default metadata
+const meta = {
+  title: "API3 Ecosystem",
+  url: "https://ecosystem.api3.org",
+  type: "website",
+  description:
+    "Discover the API3 ecosystem and learn more about utilizing real-world data in your smart contracts",
+  image: {
+    url: "/images/api3-ecosystem-meta.jpg",
+    width: 1200,
+    height: 630,
+    alt: "API3 Ecosystem Logo",
+  },
+  twitterCard: "summary_large_image",
+  themeColor: "#7de2cb",
+};
 
 //client app versioning
 function getClientAppVersion() {
@@ -17,36 +35,32 @@ useHead({
 });
 
 useSeoMeta({
-  ogUrl: "https://ecosystem.api3.org",
-  ogType: "website",
+  ogUrl: () => route.meta.url ?? meta.url,
+  ogType: () => route.meta.type ?? meta.type,
 
-  title: "API3 Ecosystem Site",
-  ogTitle: "API3 Ecosystem Site",
-  twitterTitle: "API3 Ecosystem Site",
+  title: () => route.meta.title ?? meta.title,
+  ogTitle: () => route.meta.title ?? meta.title,
+  twitterTitle: () => route.meta.title ?? meta.title,
 
-  description:
-    "Discover the API3 ecosystem and learn more about utilizing real-world data in your smart contracts",
-  ogDescription:
-    "Discover the API3 ecosystem and learn more about utilizing real-world data in your smart contracts",
-  twitterDescription:
-    "Discover the API3 ecosystem and learn more about utilizing real-world data in your smart contracts",
+  description: () => route.meta.description ?? meta.description,
+  ogDescription: () => route.meta.description ?? meta.description,
+  twitterDescription: () => route.meta.description ?? meta.description,
 
-  ogImage: {
-    url: "/images/api3-ecosystem-meta.jpg",
-    width: 1200,
-    height: 630,
-    alt: "API3 Ecosystem Logo",
+  ogImage: () => {
+    return {
+      ...meta.image,
+      url: route.meta.image ?? meta.image.url,
+    };
   },
 
-  twitterImage: {
-    url: "/images/api3-ecosystem-meta.jpg",
-    width: 1200,
-    height: 630,
-    alt: "API3 Ecosystem Logo",
+  twitterImage: () => {
+    return {
+      ...meta.image,
+      url: route.meta.image ?? meta.image.url,
+    };
   },
 
   twitterCard: "summary_large_image",
-
   themeColor: "#7de2cb",
 });
 
