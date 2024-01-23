@@ -186,6 +186,13 @@ async function submitForm() {
           <a href="mailto:ecosystem@api3.org"> ecosystem@api3.org </a> to get
           started.
         </p>
+        <p>
+          Check out the
+          <a
+            href="https://api3-ecosystem.gitbook.io/eco/referrers/referral-program"
+            >Gitbook.</a
+          >
+        </p>
       </text-content>
 
       <FormKit

@@ -38,11 +38,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: [
-    "@/assets/styles/site.css",
-    "@formkit/themes/genesis",
-    "floating-vue/dist/style.css",
-  ],
+  css: ["@/assets/styles/site.css", "@formkit/themes/genesis"],
 
   postcss: {
     plugins: {
@@ -66,6 +62,7 @@ export default defineNuxtConfig({
 
   modules: [
     "@formkit/nuxt",
+    "floating-vue/nuxt",
     [
       "@nuxt/content",
       {
@@ -111,8 +108,6 @@ export default defineNuxtConfig({
       },
     ],
   ],
-
-  //   plugins: ["~/plugins/gsap.ts", "~/plugins/floating-vue.ts"],
 
   components: [
     {
