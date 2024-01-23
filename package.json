@@ -46,7 +46,7 @@
     "aws-sdk": "^2.1398.0",
     "axios": "^1.4.0",
     "ethers": "^6.6.4",
-    "floating-vue": "^2.0.0-beta.22",
+    "floating-vue": "^5.2.0",
     "gsap": "^3.11.5",
     "h3-formidable": "^0.3.4",
     "howler": "^2.2.3",

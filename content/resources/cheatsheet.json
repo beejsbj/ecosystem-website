@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "API3 x LightLink QRNG Hackathon Cheatsheet",
+    "title": "API3 Hackathon Cheatsheet",
     "type": "website",
     "url": "https://ecosystem.api3.org/resources/qrng-cheatsheet",
     "description": "API3 QRNG is a free-to-use service to provide quantum randomness on-chain. It is powered by Airnode, the serverless first-part oracle that is operated directly by the QRNG API providers."
   },
   "header": {
-    "title": "API3 x LightLink Gasless Hackathon",
+    "title": "API3 Hackathon Cheatsheet",
     "subtitle": "Access Quantum Random Numbers",
     "tag": "Hacker Cheatsheet"
   },

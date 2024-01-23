@@ -32,11 +32,11 @@ useSeoMeta({
     <SectionColumn>
       <article class="infographic">
         <header>
-          <div>
-            <h1 class="loud-voice gradient-text-color">
-              {{ content.header.title }}
-            </h1>
+          <h1 class="loud-voice gradient-text-color">
+            {{ content.header.title }}
+          </h1>
 
+          <div>
             <div class="card">
               <p class="solid-voice gradient-text">
                 {{ content.header.subtitle }}
