@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: yarn  && NITRO_PRESET=firebase yarn build && cd .output/server && yarn
+      - run: yarn && NITRO_PRESET=firebase yarn build && cd .output/server && yarn
         env:
           NUXT_MONGODB_URI: "${{secrets.NUXT_MONGODB_URI}}"
           NUXT_MONGODB_URI_DEV: "${{secrets.NUXT_MONGODB_URI_DEV}}"
