@@ -45,6 +45,8 @@ const submitHandler = async (event) => {
   );
   const images = { logo, cover, screenshots };
 
+  console.log("form images ", images);
+
   // check correct proxy info for datafeed service
   if (
     dappForm?.value.productType === "datafeed" &&
@@ -75,6 +77,8 @@ const submitHandler = async (event) => {
     images,
     verificationPayload
   );
+
+  console.log("submit result ", submitResult);
   if (submitResult.success) {
     successData.value.message = submitResult.message;
     successData.value.pr_url = submitResult.data;

@@ -32,6 +32,9 @@ export const authenticated = (
         };
       }
 
+      console.log("fields ", fields);
+      // console.log("event.node.req.headers  ", event.node.req.headers);
+
       // check for request origin and domain
       // if (fields.domain !== event.node.req.headers.host) {
       //   event.node.res.statusCode = 401;

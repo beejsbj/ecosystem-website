@@ -107,7 +107,7 @@ export const useHttpCalls = () => {
       const response = await axios.post("/api/projects", body, {
         headers: {
           ...verificationPayload,
-          "Content-Type": "multipart/form-data; boundary=XXX",
+          "Content-Type": "multipart/form-data",
         },
       });
 
