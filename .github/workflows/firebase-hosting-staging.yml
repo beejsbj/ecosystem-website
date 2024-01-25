@@ -39,11 +39,10 @@ jobs:
           NUXT_EMAIL_RECIEVER: "${{secrets.NUXT_EMAIL_RECIEVER}}"
           NUXT_EMAIL_SENDER: "${{secrets.NUXT_EMAIL_SENDER}}"
 
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          args: npx firebase deploy
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_API3_ECOSYSTEM }}"
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          projectId: api3-ecosystem
+          channelId: staging
+          args: npx firebase deploy
