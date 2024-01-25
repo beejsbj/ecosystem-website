@@ -43,4 +43,5 @@ jobs:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_API3_ECOSYSTEM }}"
           projectId: api3-ecosystem
-      - run: "/usr/local/bin/npx firebase-tools@latest hosting:channel:deploy ecosystem-preview --expires 7d"
+          channelId: staging
+      # - run: "/usr/local/bin/npx firebase-tools@latest hosting:channel:deploy ecosystem-preview --expires 7d"
