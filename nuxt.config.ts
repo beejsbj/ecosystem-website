@@ -138,7 +138,7 @@ export default defineNuxtConfig({
         maxInstances: 10,
       },
     },
-    preset: "firebase",
+    preset: "aws-amplify",
   },
   hooks: {
     close: async (go: Nuxt) => {
