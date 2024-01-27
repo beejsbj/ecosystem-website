@@ -41,13 +41,13 @@ function buttonHandle(event) {
     <form-field>
       <FormKit
         type="number"
-        label="How much TVL is in Protocol?"
+        label="How much value does your Protocol secure?"
         :classes="{
           label: '$reset notice-voice',
           input: 'notice-voice',
         }"
         name="tvl"
-        placeholder="tvl"
+        placeholder="Enter amount of TVL"
         id="tvl"
         v-model.number="oev.userTvl"
         :max="maxLiquidated"

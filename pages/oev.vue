@@ -3,7 +3,7 @@ definePageMeta({
   layout: "footer-less",
   title: "OEV",
   description:
-    "The OEV is a tool to help you visualize the impact of OEV on your protocol.",
+    "The OEV Watchtower helps you understand the impact of the OEV Network on your protocol.",
 
   aliases: ["/watchtower", "/oev-watchtower"],
 });
@@ -34,9 +34,8 @@ oev.setProtocols(oevRaw);
   <!-- Page Title component with heading and notice voice -->
   <PageTitle heading="OEV Watchtower">
     <p class="notice-voice">
-      The Watchtower is a tool to help you visualize the impact of OEV on your
-      protocol. The is a tool to help you visualize the impact of OEV on your
-      protocol.
+      Understand how much you
+      can capture with the OEV Network. 
     </p>
 
     <!-- OEV Summary Cards component -->
@@ -61,11 +60,11 @@ oev.setProtocols(oevRaw);
   <SectionColumn>
     <text-content>
       <p class="loud-voice">
-        With your liquidation of
+        With your TVL of
         <span class="gradient-text-color"> ${{ userTvl.toFixed(2) }} </span>
-        you would save
+        you would capture
         <span class="gradient-text-color"> ${{ userSaving.toFixed(2) }} </span>
-        while using OEV share
+        through the OEV Network
       </p>
     </text-content>
   </SectionColumn>
@@ -78,8 +77,8 @@ oev.setProtocols(oevRaw);
   <SectionColumn>
     <text-content>
       <p class="firm-voice">
-        As with our data feeds, you don't need to trust our data and can verify
-        it yourselves. Verify our data on GitHub using the provided link.
+        You can verify this data yourself by heading to our GitHub. 
+        
       </p>
     </text-content>
   </SectionColumn>

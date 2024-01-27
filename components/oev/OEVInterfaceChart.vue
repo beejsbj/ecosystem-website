@@ -23,7 +23,7 @@ const maxHeight = computed(() => {
       </div>
       <div>
         <div class="withOEV"></div>
-        <p class="whisper-voice">Saving with OEV</p>
+        <p class="whisper-voice">OEV Recaptured</p>
       </div>
     </div>
     <ul class="bars" v-auto-animate>

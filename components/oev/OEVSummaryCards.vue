@@ -21,17 +21,17 @@ const totalSaving = computed(() =>
   <ul class="summary-cards">
     <!-- Display the OEV Saving Rate -->
     <li class="summary-card">
-      <h3 class="teaser-voice">OEV Saving Rate</h3>
+      <h3 class="teaser-voice">Amount of Protocol TVL Recaptured</h3>
       <p class="firm-voice">{{ oevRate * 100 ?? 0.21 }}%</p>
     </li>
     <!-- Display the Average Savings -->
     <li class="summary-card">
-      <h3 class="teaser-voice">Average Savings</h3>
+      <h3 class="teaser-voice">Average Value Recaptured</h3>
       <p class="firm-voice">${{ averageSavings ?? 21500 }}</p>
     </li>
     <!-- Display the Total Savings -->
     <li class="summary-card">
-      <h3 class="teaser-voice">Total Savings</h3>
+      <h3 class="teaser-voice">Total OEV Captured</h3>
       <p class="firm-voice">${{ totalSaving ?? 21500 }}</p>
     </li>
   </ul>
