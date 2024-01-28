@@ -12,7 +12,7 @@ const octokit = new Octokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.gitAppId,
-    privateKey: config.gitAppPrivateKey,
+    privateKey: config.gitAppPrivateKey?.replace(/\\n/g, "\n"),
     installationId: config.gitAppInstallationId,
     clientId: config.gitAppClientId,
     clientSecret: config.gitAppClientSecret,
