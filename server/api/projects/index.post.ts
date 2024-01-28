@@ -134,7 +134,7 @@ export default authenticated(
           event.res.statusCode = 400;
           return {
             code: "BUILD_FAILED",
-            message: "Failed to build project!",
+            message: prStatus.message,
           };
         }
 
