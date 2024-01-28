@@ -36,21 +36,21 @@ export const authenticated = (
       // console.log("event.node.req.headers  ", event.node.req.headers);
 
       // check for request origin and domain
-      // if (fields.domain !== event.node.req.headers.host) {
-      //   event.node.res.statusCode = 401;
-      //   return {
-      //     code: "AuthorizationFailed",
-      //     message: "Wrong domain!",
-      //   };
-      // }
+      if (fields.domain !== event.node.req.headers.host) {
+        event.node.res.statusCode = 401;
+        return {
+          code: "AuthorizationFailed",
+          message: "Wrong domain!",
+        };
+      }
 
-      // if (fields.uri !== event.node.req.headers.origin) {
-      //   event.node.res.statusCode = 401;
-      //   return {
-      //     code: "AuthorizationFailed",
-      //     message: "Wrong uri!",
-      //   };
-      // }
+      if (fields.uri !== event.node.req.headers.origin) {
+        event.node.res.statusCode = 401;
+        return {
+          code: "AuthorizationFailed",
+          message: "Wrong uri!",
+        };
+      }
 
       // verify wallet role
       let user = await User.findOne({ address: fields.address });
