@@ -8,11 +8,24 @@ import prettier from "prettier";
 import type { Status } from "./helper";
 
 const config = useRuntimeConfig();
+
+function parsePrivateKey() {
+  const key = config.gitAppPrivateKey;
+  const parsedKey =
+    "-----BEGIN RSA PRIVATE KEY-----" +
+    "\n" +
+    key.replace(" ", "\n") +
+    "\n" +
+    "-----END RSA PRIVATE KEY-----";
+
+  return parsedKey;
+}
+
 const octokit = new Octokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.gitAppId,
-    privateKey: config.gitAppPrivateKey,
+    privateKey: parsePrivateKey(),
     installationId: config.gitAppInstallationId,
     clientId: config.gitAppClientId,
     clientSecret: config.gitAppClientSecret,
@@ -32,6 +45,7 @@ export async function createPR(
   const projectJsonPath = `projects/${title}.json`;
 
   console.log("github config  ", config.gitAppPrivateKey);
+  console.log("parsed github key ", parsePrivateKey());
   let branchCreated = false;
   try {
     const projectJsonData: string = JSON.stringify(projectData, null, 2);
