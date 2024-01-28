@@ -31,7 +31,7 @@ export async function createPR(
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
 
-  console.log("github config ", config);
+  console.log("github config  ", config.gitAppPrivateKey);
   let branchCreated = false;
   try {
     const projectJsonData: string = JSON.stringify(projectData, null, 2);
