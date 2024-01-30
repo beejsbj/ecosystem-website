@@ -66,9 +66,16 @@ article.body h2 a {
   font-family: var(--font);
   font-size: var(--step-0);
   line-height: 1.6;
-  color: var(--green);
   font-weight: var(--weight-light);
   text-transform: uppercase;
+  color: var(--green);
+
+  &.blue {
+    color: var(--blue);
+  }
+  &.violet {
+    color: var(--violet);
+  }
 }
 
 .solid-voice {
