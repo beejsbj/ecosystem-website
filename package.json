@@ -20,6 +20,7 @@
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "nuxt": "^3.5.3",
+    "nuxt-lodash": "^2.5.3",
     "postcss": "^8.4.31",
     "postcss-url": "^10.1.3"
   },
