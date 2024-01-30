@@ -9,7 +9,7 @@ const periods = ["daily", "weekly", "monthly"];
 
 //
 const metadata = {
-  title: "Total Liquidation",
+  title: "Historic Liquidation Data",
   chartColor: "blue",
   x: {
     title: "Date",

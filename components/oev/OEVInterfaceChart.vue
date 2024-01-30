@@ -1,4 +1,6 @@
 <script setup>
+import formatNumber from "@/utils/formatNumber";
+
 const oev = useOEVStore();
 
 // Calculate the relative heights
@@ -38,13 +40,13 @@ const maxHeight = computed(() => {
 				  `"
           >
             <span class="liquidated">
-              <span class="number whisper-voice">
-                {{ protocol.totalLiquidated.toFixed(2) }}
+              <span class="number firm-voice">
+                {{ formatNumber(protocol.totalLiquidated) }}
               </span>
             </span>
             <span class="withOEV">
-              <span class="number whisper-voice">
-                {{ protocol.withOEV.toFixed(2) }}
+              <span class="number firm-voice">
+                {{ formatNumber(protocol.withOEV) }}
               </span>
             </span>
           </div>
@@ -53,7 +55,7 @@ const maxHeight = computed(() => {
           </picture>
 
           <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-          <p class="whisper-voice">{{ protocol.name }}</p>
+          <p class="solid-voice">{{ protocol.name }}</p>
         </li>
       </template>
     </ul>
@@ -165,8 +167,7 @@ li {
     transition: 0.2s ease-in-out;
 
     &.userAdded {
-      filter: brightness(3) saturate(3);
-      // width: 100px;
+      filter: brightness(2) saturate(3);
     }
 
     /*   seperator line */
@@ -215,18 +216,15 @@ li {
       .number {
         text-align: center;
         position: absolute;
-        --gap: -1.1rem;
-        //   left: 100%;
-        top: var(--gap);
-        //   transform: translateX(-50%);
+
+        left: 50%;
+        top: calc(var(--space-l) * -1);
+        transform: translateX(-50%);
       }
       &.liquidated {
         grid-column: 1 / span 1;
 
         height: calc(var(--bar-liquidated-height) * 2px);
-        .number {
-          left: -0%;
-        }
       }
 
       &.withOEV {

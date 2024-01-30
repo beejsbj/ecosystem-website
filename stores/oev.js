@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 
 export const useOEVStore = defineStore("oev", function () {
   const userTvl = ref(0);
+  const userIncentive = ref(0);
 
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
@@ -231,6 +232,7 @@ export const useOEVStore = defineStore("oev", function () {
   return {
     // variables
     userTvl,
+    userIncentive,
     oevRaw,
     protocols,
 

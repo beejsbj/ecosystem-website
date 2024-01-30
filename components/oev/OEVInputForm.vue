@@ -30,6 +30,7 @@ function addToChart(totalLiquidated) {
 // Function to handle the button click event
 function buttonHandle(event) {
   const tvl = oev.userTvl;
+  const incentive = oev.userIncentive / 100;
   addToChart(tvl); // Add the user's input to the chart
   oev.userTvl = 0; // Reset the user's input value
   showOutput.value = true; // Show the output section
@@ -58,6 +59,22 @@ function buttonHandle(event) {
         :show-validation="showOutput"
       />
     </form-field>
+    <!-- <form-field>
+      <FormKit
+        type="number"
+        label="What is the user incentive rate?"
+        :classes="{
+          label: '$reset notice-voice',
+          input: 'notice-voice',
+        }"
+        name="incentive"
+        placeholder="Enter the percentage"
+        id="incentive"
+        v-model.number="oev.userIncentive"
+        :show-validation="showOutput"
+      />
+    </form-field> -->
+
     <button class="button" @click.prevent="buttonHandle" :disabled="showOutput">
       Add
     </button>

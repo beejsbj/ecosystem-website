@@ -1,4 +1,6 @@
 <script setup>
+import formatNumber from "@/utils/formatNumber";
+
 definePageMeta({
   layout: "footer-less",
   title: "OEV",
@@ -60,9 +62,11 @@ oev.setProtocols(oevRaw);
     <text-content>
       <p class="loud-voice">
         With your TVL of
-        <span class="gradient-text-color"> ${{ userTvl.toFixed(2) }} </span>
+        <span class="gradient-text-color"> ${{ formatNumber(userTvl) }} </span>
         you would capture
-        <span class="gradient-text-color"> ${{ userSaving.toFixed(2) }} </span>
+        <span class="gradient-text-color">
+          ${{ formatNumber(userSaving) }}
+        </span>
         through the OEV Network
       </p>
     </text-content>
