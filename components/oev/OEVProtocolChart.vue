@@ -3,6 +3,7 @@ const oev = useOEVStore();
 
 const selectedDataset = ref("aaveV2Eth");
 const selectedPeriod = ref("monthly");
+const isLogarithmic = ref(false);
 
 const periods = ["daily", "weekly", "monthly"];
 
@@ -86,12 +87,22 @@ const parsed = computed(() => {
     ],
   };
 });
+
+const options = computed(() => {
+  return {
+    scales: {
+      y: {
+        type: isLogarithmic.value ? "logarithmic" : "linear",
+      },
+    },
+  };
+});
 </script>
 
 <template>
   <div class="chart-container lines">
     <div class="chart">
-      <LineChart :data="parsed" :options="{}" :metadata="metadata" />
+      <LineChart :data="parsed" :options="options" :metadata="metadata" />
     </div>
     <div class="actions">
       <FormKit type="select" v-model="selectedDataset">
@@ -116,6 +127,15 @@ const parsed = computed(() => {
           <span>{{ period }}</span>
         </button>
       </template>
+      <button
+        class="button outline log"
+        @click="isLogarithmic = !isLogarithmic"
+        :class="{
+          hover: isLogarithmic,
+        }"
+      >
+        <span>Logarithmic</span>
+      </button>
     </div>
   </div>
 </template>
@@ -152,7 +172,7 @@ div.actions {
   align-items: center;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
   button {
     display: grid;
@@ -160,6 +180,21 @@ div.actions {
 
     span {
       text-transform: capitalize;
+    }
+  }
+  .log {
+    @media (min-width: 768px) {
+      margin-left: var(--space-xs);
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: calc((var(--space-s) + var(--space-xs)) * -1 / 2);
+        top: 0;
+        width: var(--line-width);
+        height: 100%;
+        background: var(--ink);
+      }
     }
   }
 }
