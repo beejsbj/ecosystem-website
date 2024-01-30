@@ -1,4 +1,6 @@
 <script setup>
+import formatNumber from "@/utils/formatNumber";
+
 // Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
 
@@ -21,18 +23,18 @@ const totalSaving = computed(() =>
   <ul class="summary-cards">
     <!-- Display the OEV Saving Rate -->
     <li class="summary-card">
-      <h3 class="teaser-voice">Amount of Protocol TVL Recaptured</h3>
+      <h3 class="teaser-voice">Protocol TVL Recaptured</h3>
       <p class="firm-voice">{{ oevRate * 100 ?? 0.21 }}%</p>
     </li>
     <!-- Display the Average Savings -->
     <li class="summary-card">
       <h3 class="teaser-voice">Average Value Recaptured</h3>
-      <p class="firm-voice">${{ averageSavings ?? 21500 }}</p>
+      <p class="firm-voice">${{ formatNumber(averageSavings) ?? 21500 }}</p>
     </li>
     <!-- Display the Total Savings -->
     <li class="summary-card">
       <h3 class="teaser-voice">Total OEV Captured</h3>
-      <p class="firm-voice">${{ totalSaving ?? 21500 }}</p>
+      <p class="firm-voice">${{ formatNumber(totalSaving) ?? 21500 }}</p>
     </li>
   </ul>
 </template>
