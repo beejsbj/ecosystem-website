@@ -5,7 +5,7 @@ definePageMeta({
   description:
     "The OEV Watchtower helps you understand the impact of the OEV Network on your protocol.",
 
-  aliases: ["/watchtower", "/oev-watchtower"],
+  alias: ["/watchtower", "/oev-watchtower"],
 });
 
 // Fetch data from the content/oev-data which contains the json files
@@ -34,8 +34,7 @@ oev.setProtocols(oevRaw);
   <!-- Page Title component with heading and notice voice -->
   <PageTitle heading="OEV Watchtower">
     <p class="notice-voice">
-      Understand how much you
-      can capture with the OEV Network. 
+      Understand how much you can capture with the OEV Network.
     </p>
 
     <!-- OEV Summary Cards component -->
@@ -77,8 +76,7 @@ oev.setProtocols(oevRaw);
   <SectionColumn>
     <text-content>
       <p class="firm-voice">
-        You can verify this data yourself by heading to our GitHub. 
-        
+        You can verify this data yourself by heading to our GitHub.
       </p>
     </text-content>
   </SectionColumn>
