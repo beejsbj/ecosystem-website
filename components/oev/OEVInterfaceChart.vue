@@ -6,63 +6,132 @@ const oev = useOEVStore();
 // Calculate the relative heights
 const maxLiquidated = oev.getTotals().totalLiquidated;
 
+const showLiquidatedBar = ref(false);
+const showSentToBuilderBar = ref(true);
+
+function toggleLiquidated() {
+  showLiquidatedBar.value = !showLiquidatedBar.value;
+}
+function toggleSentToBuilder() {
+  showSentToBuilderBar.value = !showSentToBuilderBar.value;
+}
+
 const maxHeight = computed(() => {
   //check if protocols have hide, use the protocol with the highest value
   const protocols = oev.protocols.filter((protocol) => !protocol.hide);
-  const max = Math.max(
-    ...protocols.map((protocol) => protocol.totalLiquidated)
-  );
-  return max;
+
+  if (showLiquidatedBar.value) {
+    const max = Math.max(
+      ...protocols.map((protocol) => protocol.totalLiquidated)
+    );
+    return max;
+  } else {
+    const max = Math.max(
+      ...protocols.map((protocol) => protocol.totalSentToBuilderUSD)
+    );
+    return max;
+  }
 });
 </script>
 
 <template>
-  <div class="chart-container bars">
-    <div class="legend">
-      <div>
-        <div class="liquidated"></div>
-        <p class="whisper-voice">Protocol TVL</p>
+  <div class="chart-grid">
+    <h2 class="attention-voice">Protocol Performance Comparison</h2>
+    <!-- OEV Protocol List component -->
+    <LazyOEVProtocolList />
+    <!-- OEV Interface Chart component -->
+    <div class="chart-container bars">
+      <div class="legend">
+        <button
+          @click="toggleLiquidated"
+          :class="{
+            dimmed: !showLiquidatedBar,
+          }"
+        >
+          <div class="liquidated"></div>
+          <p class="whisper-voice">Total Liquidated</p>
+        </button>
+        <button
+          @click="toggleSentToBuilder"
+          :class="{
+            dimmed: !showSentToBuilderBar,
+          }"
+        >
+          <div class="totalSentToBuilderUSD"></div>
+          <p class="whisper-voice">OEV Recaptured</p>
+        </button>
       </div>
-      <div>
-        <div class="withOEV"></div>
-        <p class="whisper-voice">OEV Recaptured</p>
-      </div>
-    </div>
-    <ul class="bars" v-auto-animate>
-      <template v-for="(protocol, i) in oev.protocols">
-        <li v-if="!protocol.hide" :key="protocol.id">
-          <div
-            class="bar"
-            :class="{ userAdded: protocol.id === 'userAdded' }"
-            :style="`
+      <ul class="bars" v-auto-animate>
+        <template v-for="(protocol, i) in oev.protocols">
+          <li v-if="!protocol.hide" :key="protocol.id">
+            <div
+              class="bar"
+              :class="{ userAdded: protocol.id === 'userAdded' }"
+              :style="`
 					  --bar-liquidated-height: ${(protocol.totalLiquidated / maxHeight) * 150};
-					  --bar-withOEV-height: ${(protocol.withOEV / maxHeight) * 150};
+					  --bar-totalSentToBuilderUSD-height: ${
+              (protocol.totalSentToBuilderUSD / maxHeight) * 150
+            };
 				  `"
-          >
-            <span class="liquidated">
-              <span class="number firm-voice">
-                {{ formatNumber(protocol.totalLiquidated) }}
+            >
+              <span
+                class="liquidated"
+                :class="{ hide: !showLiquidatedBar }"
+                v-tooltip="protocol.totalLiquidated"
+              >
+                <span class="number firm-voice">
+                  {{ formatNumber(protocol.totalLiquidated) }}
+                </span>
               </span>
-            </span>
-            <span class="withOEV">
-              <span class="number firm-voice">
-                {{ formatNumber(protocol.withOEV) }}
+              <span
+                class="totalSentToBuilderUSD"
+                :class="{ hide: !showSentToBuilderBar }"
+                v-tooltip="protocol.totalSentToBuilderUSD"
+              >
+                <span class="number firm-voice">
+                  {{ formatNumber(protocol.totalSentToBuilderUSD) }}
+                </span>
               </span>
-            </span>
-          </div>
-          <picture class="protocol-logo" v-if="protocol.icon">
-            <NuxtImg :src="protocol.icon" :alt="protocol.name" loading="lazy" />
-          </picture>
+            </div>
+            <picture class="protocol-logo" v-if="protocol.icon">
+              <NuxtImg
+                :src="protocol.icon"
+                :alt="protocol.name"
+                loading="lazy"
+              />
+            </picture>
 
-          <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-          <p class="solid-voice">{{ protocol.name }}</p>
-        </li>
-      </template>
-    </ul>
+            <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
+            <p class="solid-voice protocol-name">{{ protocol.name }}</p>
+          </li>
+        </template>
+      </ul>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+.chart-grid {
+  display: grid;
+  gap: var(--space-xl);
+  position: relative;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .chart-container {
+      grid-column: 2 / -1;
+    }
+    .protocol-list {
+      grid-column: 1 / 2;
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+  grid-column: 1 / -1;
+}
 .chart-container {
   display: grid;
   gap: var(--space-m);
@@ -96,22 +165,27 @@ text-content {
   display: grid;
   gap: var(--space-2xs);
   padding: var(--space-m);
-  background: var(--paper);
+  grid-column: 2/-1;
+  justify-content: end;
 
-  & > div {
-    display: grid;
-    grid-template-columns: 50px 1fr;
+  & > button {
+    display: flex;
+    gap: var(--space-xs);
     align-items: center;
+
+    &.dimmed {
+      filter: brightness(0.5) saturate(0.5);
+    }
 
     & > div {
       aspect-ratio: 1/1;
-      width: 20px;
+      width: 25px;
       background: var(--background);
     }
   }
 }
 
-.withOEV {
+.totalSentToBuilderUSD {
   --background: linear-gradient(
     to bottom,
     hsla(160, 69%, 69%, 0.3),
@@ -141,7 +215,7 @@ text-content {
 ul.bars {
   display: grid;
   gap: var(--space-s);
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
 
   @media (min-width: 1000px) {
     grid-column: 1 / -1;
@@ -150,11 +224,25 @@ ul.bars {
 
 li {
   display: grid;
-  gap: var(--space-3xs);
+  gap: var(--space-2xs);
   //   align-items: center;
 
   & > :is(p, picture) {
     justify-self: center;
+  }
+
+  & > picture {
+    @media (max-width: 768px) {
+      max-width: 30px;
+    }
+  }
+
+  & > p {
+    text-align: center;
+    white-space: nowrap;
+    @media (max-width: 768px) {
+      font-size: var(--step--2);
+    }
   }
 
   .bar {
@@ -165,6 +253,10 @@ li {
     grid-template-columns: 1fr 1fr;
 
     transition: 0.2s ease-in-out;
+
+    &:has(> .hide) {
+      grid-template-columns: unset;
+    }
 
     &.userAdded {
       filter: brightness(2) saturate(3);
@@ -181,7 +273,7 @@ li {
       background: var(--gray);
     }
 
-    /*  withOEV and liquidated halves of the bar*/
+    /*  totalSentToBuilderUSD and liquidated halves of the bar*/
     & > span {
       transition: 0.2s ease-in-out;
       border-radius: var(--corners);
@@ -220,6 +312,10 @@ li {
         left: 50%;
         top: calc(var(--space-l) * -1);
         transform: translateX(-50%);
+
+        @media (max-width: 768px) {
+          font-size: var(--step--1);
+        }
       }
       &.liquidated {
         grid-column: 1 / span 1;
@@ -227,10 +323,10 @@ li {
         height: calc(var(--bar-liquidated-height) * 2px);
       }
 
-      &.withOEV {
+      &.totalSentToBuilderUSD {
         grid-column: 2 / span 1;
 
-        height: calc(var(--bar-withOEV-height) * 2px);
+        height: calc(var(--bar-totalSentToBuilderUSD-height) * 2px);
       }
     }
   }
