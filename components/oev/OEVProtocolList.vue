@@ -12,7 +12,10 @@ function buttonHandle(protocol) {
   <div class="wrapper">
     <!-- Render an unordered list with the class "protocol-list" -->
     <!-- Render a heading with the class "solid-voice" -->
-    <h3 class="solid-voice" :class="{ hideOpacity: oev.isAllHidden && false }">
+    <h3
+      class="whisper-voice"
+      :class="{ hideOpacity: oev.isAllHidden && false }"
+    >
       Select Protocols to Compare
     </h3>
     <!-- <h3 class="solid-voice large" :class="{ hide: !oev.isAllHidden }">
@@ -46,7 +49,7 @@ function buttonHandle(protocol) {
 
 .wrapper {
   display: grid;
-  gap: var(--space-l);
+  gap: var(--space-xs);
 }
 .protocol-list {
   display: grid;
