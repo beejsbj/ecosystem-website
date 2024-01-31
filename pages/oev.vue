@@ -133,15 +133,23 @@ text-content {
       background-size: 0 100%;
       animation: scroll-reveal linear forwards;
       animation-timeline: view() !important;
-      animation-range-start: contain 37vh !important;
-      animation-range-end: contain 52vh !important;
+
+      animation-range-start: contain 10vh !important;
+      animation-range-end: contain 40vh !important;
+
+      &.gradient-text-color:nth-child(1) {
+        animation-range-start: contain 28vh !important;
+        animation-range-end: contain 31vh !important;
+      }
+      &.gradient-text-color:nth-child(2) {
+        animation-range-start: contain 37vh !important;
+        animation-range-end: contain 40vh !important;
+      }
 
       &:not(.gradient-text-color) {
         color: hsla(0, 0%, 100%, 0.1) !important;
         background-image: var(--gradient-light);
         background-clip: text;
-        animation-range-start: contain 10vh !important;
-        animation-range-end: contain 55vh !important;
       }
     }
   }
