@@ -57,6 +57,7 @@ function buttonHandle(protocol) {
   overflow-y: scroll;
   position: relative;
   max-height: 300px;
+  direction: rtl;
 
   @media (min-width: 768px) {
     max-height: 600px;
