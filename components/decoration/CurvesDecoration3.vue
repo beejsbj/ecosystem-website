@@ -1401,8 +1401,27 @@ onMounted(() => {
   </svg>
 </template>
 
-<style scoped>
-#curve-decoration-3 path {
-  /* opacity: 0; */
+<style lang="scss">
+picture:has(#curve-decoration-3) {
+  &::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    width: 800px;
+    aspect-ratio: 1;
+    z-index: 1;
+    background: linear-gradient(
+      135deg,
+      hsla(0, 0%, 0%, 0.8) 20%,
+      transparent 50% 100%
+    );
+
+    @media (min-width: 768px) {
+      top: 50px;
+      left: 500px;
+    }
+  }
 }
 </style>
