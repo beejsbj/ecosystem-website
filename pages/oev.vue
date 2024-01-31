@@ -85,7 +85,10 @@ oev.setProtocols(oevRaw);
     <text-content>
       <p class="firm-voice">
         You can verify this data yourself by
-        <NuxtLink class="text green" to="https://github.com/">
+        <NuxtLink
+          class="text green"
+          to="https://github.com/AamirAlam/aave-extract-mev-funds"
+        >
           heading to our GitHub.
         </NuxtLink>
       </p>
