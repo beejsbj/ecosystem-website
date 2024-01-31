@@ -1,5 +1,6 @@
 <script setup>
 const oev = useOEVStore();
+const ui = useInterfaceStore();
 
 const selectedDataset = ref("aaveV2Eth");
 const selectedPeriod = ref("monthly");
@@ -25,10 +26,10 @@ const options = computed(() => {
       title: {
         display: false,
       },
-      legend: {
-        position: "right",
-        align: "start",
-      },
+      // legend: {
+      //   position: "right",
+      //   align: "start",
+      // },
     },
     scales: {
       y: {
@@ -123,26 +124,30 @@ const parsed = computed(() => {
           </option>
         </template>
       </FormKit>
-      <template v-for="period in periods">
+      <div class="buttons-content">
+        <template v-for="period in periods">
+          <button
+            class="button outline"
+            @click="selectedPeriod = period"
+            :class="{
+              hover: selectedPeriod === period,
+            }"
+          >
+            <span>{{ ui.isMobile ? period.slice(0, 1) : period }}</span>
+          </button>
+        </template>
         <button
-          class="button outline"
-          @click="selectedPeriod = period"
+          class="button outline log"
+          @click="isLogarithmic = !isLogarithmic"
           :class="{
-            hover: selectedPeriod === period,
+            hover: isLogarithmic,
           }"
         >
-          <span>{{ period }}</span>
+          <span>
+            {{ ui.isMobile ? "log" : "logarithmic" }}
+          </span>
         </button>
-      </template>
-      <button
-        class="button outline log"
-        @click="isLogarithmic = !isLogarithmic"
-        :class="{
-          hover: isLogarithmic,
-        }"
-      >
-        <span>Logarithmic</span>
-      </button>
+      </div>
     </div>
     <div class="chart-container lines">
       <LineChart :data="parsed" :options="options" :metadata="metadata" />
@@ -179,9 +184,22 @@ div.actions {
   @media (min-width: 768px) {
     //  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
   }
+
+  .buttons-content {
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      display: contents;
+    }
+  }
+
   button {
     display: grid;
     place-items: center;
+
+    @media (max-width: 768px) {
+      padding: 0.5em 1.5em;
+    }
 
     span {
       text-transform: capitalize;
