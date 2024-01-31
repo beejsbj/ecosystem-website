@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 
 export const useOEVStore = defineStore("oev", function () {
   const userTvl = ref(0);
-  const userIncentive = ref(0);
+  const userIncentive = ref(0.5);
 
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
@@ -15,60 +15,68 @@ export const useOEVStore = defineStore("oev", function () {
     // Map over the oevRaw data and transform it into a new array of objects
 
     const parsed = raw.map((protocol, i) => {
-      return {
+      const newProtocol = {
         // Generate an id for each protocol by converting the first letter of the title to lowercase and concatenating the rest of the title
         id: protocol.title[0].toLowerCase() + protocol.title.slice(1),
         name: protocol.body[0].name.slice(0, -8),
         icon: protocol.body[0].icon,
         data: protocol.body,
-        dataMonthly: dataToMonthly(protocol.body),
         dataWeekly: dataToWeekly(protocol.body),
+        dataMonthly: dataToMonthly(protocol.body),
+        dataCumulative: dataToCumulative(protocol.body),
 
         // Set the default hide value to false for protocolCount amount of protocols and not first one
         hide: i >= protocolCount.value || i === 0,
       };
+
+      // Calculate additional properties for each protocol
+      newProtocol.totalLiquidated = getTotalLiquidated(newProtocol);
+      newProtocol.totalSentToBuilderUSD = getTotalSentToBuilder(newProtocol);
+      newProtocol.oevRate = getOEVRate(newProtocol);
+      // newProtocol.withOEV = getOEV(newProtocol);
+
+      newProtocol.data.forEach((dataPoint) => {
+        dataPoint.withOEV = getOEV(dataPoint);
+      });
+
+      newProtocol.dataWeekly.forEach((dataPoint) => {
+        dataPoint.withOEV = getOEV(dataPoint);
+      });
+
+      newProtocol.dataMonthly.forEach((dataPoint) => {
+        dataPoint.withOEV = getOEV(dataPoint);
+      });
+
+      return newProtocol;
     });
 
     // Add a "total" protocol object to the parsed array
+    // Create the "total" protocol object
+    const totalData = parsed.reduce(
+      (acc, protocol) => ({
+        data: acc.data.concat(protocol.data),
+        dataMonthly: acc.dataMonthly.concat(protocol.dataMonthly),
+        dataWeekly: acc.dataWeekly.concat(protocol.dataWeekly),
+        dataCumulative: acc.dataCumulative.concat(protocol.dataCumulative),
+      }),
+      {
+        data: [],
+        dataMonthly: [],
+        dataWeekly: [],
+        dataCumulative: [],
+      }
+    );
+
     parsed.push({
       id: "total",
       name: "Total",
       hide: true,
-      trueHide: true,
-      // Concatenate the data arrays of all protocols into a single data array
-      data: parsed.reduce((total, protocol) => {
-        return total.concat(protocol.data);
-      }, []),
-      // Concatenate the dataMonthly arrays
-      dataMonthly: parsed.reduce((total, protocol) => {
-        return total.concat(protocol.dataMonthly);
-      }, []),
-      // Concatenate the dataWeekly arrays
-      dataWeekly: parsed.reduce((total, protocol) => {
-        return total.concat(protocol.dataWeekly);
-      }, []),
-    });
-
-    // Calculate additional properties for each protocol and the "total" protocol
-    parsed.forEach((protocol) => {
-      protocol.totalLiquidated = getTotalLiquidated(protocol);
-      protocol.totalSentToBuilderUSD = getTotalSentToBuilder(protocol);
-      protocol.oevRate = getOEVRate(protocol);
-      protocol.withOEV = getOEV(protocol);
-
-      if (protocol.id !== "total") {
-        protocol.data.forEach((dataPoint) => {
-          dataPoint.withOEV = getOEV(dataPoint);
-        });
-
-        protocol.dataWeekly.forEach((dataPoint) => {
-          dataPoint.withOEV = getOEV(dataPoint);
-        });
-
-        protocol.dataMonthly.forEach((dataPoint) => {
-          dataPoint.withOEV = getOEV(dataPoint);
-        });
-      }
+      // trueHide: true,
+      ...totalData,
+      totalLiquidated: getTotalLiquidated(totalData),
+      totalSentToBuilderUSD: getTotalSentToBuilder(totalData),
+      oevRate: getOEVRate(totalData),
+      // withOEV: getOEV(totalData),
     });
 
     protocols.value = parsed;
@@ -185,6 +193,25 @@ export const useOEVStore = defineStore("oev", function () {
     });
 
     return sorted;
+  }
+
+  function dataToCumulative(array) {
+    const cumulative = [];
+    let totalLiquidated = 0;
+    let totalSentToBuilderUSD = 0;
+
+    array.forEach((dataPoint, i) => {
+      totalLiquidated += Number(dataPoint.totalLiquidated);
+      totalSentToBuilderUSD += Number(dataPoint.totalSentToBuilderUSD);
+
+      cumulative.push({
+        totalLiquidated: totalLiquidated,
+        totalSentToBuilderUSD: totalSentToBuilderUSD,
+        date: dataPoint.date,
+      });
+    });
+
+    return cumulative;
   }
 
   function getProtocolById(id) {
