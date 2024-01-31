@@ -134,16 +134,16 @@ text-content {
       animation: scroll-reveal linear forwards;
       animation-timeline: view() !important;
 
-      animation-range-start: contain 10vh !important;
-      animation-range-end: contain 40vh !important;
+      animation-range-start: contain 10px !important;
+      animation-range-end: contain 230px !important;
 
       &.gradient-text-color:nth-child(1) {
-        animation-range-start: contain 28vh !important;
-        animation-range-end: contain 31vh !important;
+        animation-range-start: contain 170px !important;
+        animation-range-end: contain 180px !important;
       }
       &.gradient-text-color:nth-child(2) {
-        animation-range-start: contain 37vh !important;
-        animation-range-end: contain 40vh !important;
+        animation-range-start: contain 230px !important;
+        animation-range-end: contain 240px !important;
       }
 
       &:not(.gradient-text-color) {
