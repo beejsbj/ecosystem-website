@@ -32,9 +32,6 @@ export const authenticated = (
         };
       }
 
-      console.log("fields ", fields);
-      // console.log("event.node.req.headers  ", event.node.req.headers);
-
       // check for request origin and domain
       if (fields.domain !== event.node.req.headers.host) {
         event.node.res.statusCode = 401;
@@ -66,7 +63,6 @@ export const authenticated = (
 
       if (!user) {
         // for user role routes create new user if not found db
-        console.log("creating new user");
 
         const userPayload: UserType = {
           address: fields.address,

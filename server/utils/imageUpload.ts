@@ -45,7 +45,6 @@ export const imageUploadHandler = (
 ) =>
   defineEventHandler(async (event) => {
     try {
-      console.log("request data ", event.node.req);
       if (uploadType === UPLOAD_TYPE.project) {
         await callNodeListener(
           // @ts-expect-error: Nuxt 3
