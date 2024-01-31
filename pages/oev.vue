@@ -17,11 +17,6 @@ const oevRaw = await queryContent("oev-data").find();
 const oev = useOEVStore();
 
 // Compute the user's total liquidated value (tvl) and total savings using OEV
-const userTvl = computed(() =>
-  oev.getProtocolById("userAdded") === undefined
-    ? 0
-    : oev.getProtocolById("userAdded").totalLiquidated
-);
 const userSaving = computed(() =>
   oev.getProtocolById("userAdded") === undefined
     ? 0
@@ -36,11 +31,17 @@ oev.setProtocols(oevRaw);
   <!-- Page Title component with heading and notice voice -->
   <PageTitle heading="OEV Watchtower">
     <p class="notice-voice">
-      Understand how much you can capture with the OEV Network.
+      OEV Watchtower helps you understand how much you can capture with the OEV
+      Network.
     </p>
 
     <!-- OEV Summary Cards component -->
     <OEVSummaryCards class="summary-cards" />
+
+    <p class="whisper-voice disclamer">
+      <!-- data starts frpm 2021 -->
+      *All data is based on records from 2021 onwards.
+    </p>
   </PageTitle>
 
   <!--  -->
@@ -49,12 +50,7 @@ oev.setProtocols(oevRaw);
   </SectionColumn>
 
   <SectionColumn inner-class="wide">
-    <div class="chart-grid">
-      <!-- OEV Interface Chart component -->
-      <OEVInterfaceChart />
-      <!-- OEV Protocol List component -->
-      <LazyOEVProtocolList />
-    </div>
+    <OEVInterfaceChart />
   </SectionColumn>
 
   <!-- displaying user's TVL and savings -->
@@ -62,12 +58,18 @@ oev.setProtocols(oevRaw);
     <text-content>
       <p class="loud-voice">
         With your TVL of
-        <span class="gradient-text-color"> ${{ formatNumber(userTvl) }} </span>
+        <span class="gradient-text-color">
+          ${{ formatNumber(oev.userTvl) }}
+        </span>
         you would capture
         <span class="gradient-text-color">
           ${{ formatNumber(userSaving) }}
         </span>
-        through the OEV Network
+        per year through the OEV Network**
+      </p>
+      <p class="whisper-voice">
+        **This is an estimate based on the current Liquidation rate of 5% of
+        TVL.
       </p>
     </text-content>
   </SectionColumn>
@@ -80,7 +82,10 @@ oev.setProtocols(oevRaw);
   <SectionColumn>
     <text-content>
       <p class="firm-voice">
-        You can verify this data yourself by heading to our GitHub.
+        You can verify this data yourself by
+        <NuxtLink class="text green" to="https://github.com/">
+          heading to our GitHub.
+        </NuxtLink>
       </p>
     </text-content>
   </SectionColumn>
@@ -88,23 +93,17 @@ oev.setProtocols(oevRaw);
 
 <style scoped lang="scss">
 :deep(inner-column:not(.page-title)) {
-  padding: var(--space-3xl) var(--space-s);
+  @media (min-width: 768px) {
+    padding: var(--space-3xl) var(--space-s);
+  }
 }
 
-.chart-grid {
-  display: grid;
-  gap: var(--space-s);
-  position: relative;
+:deep(h1) {
+  text-align: center;
+}
 
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    .chart-container {
-      grid-column: 1 / 4;
-    }
-    .protocol-list {
-      grid-column: 4 / 5;
-    }
-  }
+.page-title p {
+  text-align: center;
 }
 
 text-content {
@@ -120,8 +119,12 @@ text-content {
 
   .loud-voice {
     @media (max-width: 400px) {
-      // --font-size: var(--step-2);
+      --font-size: var(--step-2);
     }
   }
+}
+
+.disclamer {
+  margin-top: var(--space-2xs);
 }
 </style>
