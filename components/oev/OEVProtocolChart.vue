@@ -5,7 +5,7 @@ const selectedDataset = ref("aaveV2Eth");
 const selectedPeriod = ref("monthly");
 const isLogarithmic = ref(false);
 
-const periods = ["daily", "weekly", "monthly"];
+const periods = ["daily", "weekly", "monthly", "cumulative"];
 
 //
 const metadata = {
@@ -18,6 +18,30 @@ const metadata = {
     title: "Liquidation",
   },
 };
+
+const options = computed(() => {
+  return {
+    plugins: {
+      title: {
+        display: false,
+      },
+      legend: {
+        position: "right",
+        align: "start",
+      },
+    },
+    scales: {
+      y: {
+        type: isLogarithmic.value ? "logarithmic" : "linear",
+      },
+    },
+    //  elements: {
+    //    line: {
+    //      tension: 0,
+    //    },
+    //  },
+  };
+});
 
 // data manipulation
 const parsed = computed(() => {
@@ -35,7 +59,9 @@ const parsed = computed(() => {
       ? protocol.data
       : selectedPeriod.value === "weekly"
       ? protocol.dataWeekly
-      : protocol.dataMonthly;
+      : selectedPeriod.value === "monthly"
+      ? protocol.dataMonthly
+      : protocol.dataCumulative;
 
   const dataLiquidated = rawData.map((dataPoint) => {
     return {
@@ -48,13 +74,6 @@ const parsed = computed(() => {
     return {
       x: new Date(dataPoint.date),
       y: dataPoint.totalSentToBuilderUSD,
-    };
-  });
-
-  const dataOEV = rawData.map((dataPoint) => {
-    return {
-      x: new Date(dataPoint.date),
-      y: dataPoint.withOEV,
     };
   });
 
@@ -87,23 +106,11 @@ const parsed = computed(() => {
     ],
   };
 });
-
-const options = computed(() => {
-  return {
-    scales: {
-      y: {
-        type: isLogarithmic.value ? "logarithmic" : "linear",
-      },
-    },
-  };
-});
 </script>
 
 <template>
-  <div class="chart-container lines">
-    <div class="chart">
-      <LineChart :data="parsed" :options="options" :metadata="metadata" />
-    </div>
+  <div class="chart-grid">
+    <h2 class="attention-voice">Historic Liquidation Data</h2>
     <div class="actions">
       <FormKit type="select" v-model="selectedDataset">
         <template v-for="protocol in oev.protocols">
@@ -137,42 +144,40 @@ const options = computed(() => {
         <span>Logarithmic</span>
       </button>
     </div>
+    <div class="chart-container lines">
+      <LineChart :data="parsed" :options="options" :metadata="metadata" />
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.chart-container {
+.chart-grid {
   display: grid;
-  gap: var(--space-m);
-
-  @media (min-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  gap: var(--space-xs);
-
-  li,
-  button {
-    display: grid;
-  }
-}
-
-.chart {
-  grid-column: span 3;
-}
-
-div.actions {
-  grid-column: span 3;
-  display: grid;
-  align-items: center;
+  gap: var(--space-xl);
+  position: relative;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .chart-container {
+      grid-column: 2 / -1;
+    }
+    .actions {
+      grid-column: 1 / 2;
+    }
+  }
+}
+h2 {
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+div.actions {
+  display: grid;
+  align-content: center;
+
+  @media (min-width: 768px) {
+    //  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
   }
   button {
     display: grid;
@@ -180,21 +185,6 @@ div.actions {
 
     span {
       text-transform: capitalize;
-    }
-  }
-  .log {
-    @media (min-width: 768px) {
-      margin-left: var(--space-xs);
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        left: calc((var(--space-s) + var(--space-xs)) * -1 / 2);
-        top: 0;
-        width: var(--line-width);
-        height: 100%;
-        background: var(--ink);
-      }
     }
   }
 }
