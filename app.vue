@@ -31,6 +31,7 @@ function setClientAppVersion(version) {
 useHead({
   htmlAttrs: {
     lang: "en",
+    class: "dark",
   },
 });
 

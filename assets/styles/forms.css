@@ -1,27 +1,4 @@
 :root {
-  --fk-color-primary: var(--green) !important;
-  --fk-color-border-focus: var(--green) !important;
-  --fk-color-checked: var(--green) !important;
-  --fk-color-border: var(--gray) !important;
-  --fk-border-radius: var(--corners) !important;
-  --fk-border-box-shadow-focus: 0 0 0 2px var(--green) !important;
-  --fk-border-box-shadow-decorator-checked: 0 0 0 2px var(--green) !important;
-  --fk-font-family: var(--font) !important;
-  --fk-font-size: var(--step-0) !important;
-
-  --fk-padding-input: var(--space-xs) !important;
-
-  --fk-font-weight: var(--weight-light) !important;
-  --fk-line-height: 1.4 !important;
-  --fk-color-input: var(--ink) !important;
-  --multistep-radius: var(--corners) !important;
-  --multistep-color-success: var(--green) !important;
-  --fk-color-help: var(--gray-light) !important;
-
-  --fk-margin-outer: 0 !important;
-
-  --fk-margin-decorator: 0 !important;
-
   /* vueform/multistep */
 
   --ms-bg: var(--gradient-dark) !important;

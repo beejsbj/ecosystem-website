@@ -2,6 +2,21 @@
 import Multiselect from "@vueform/multiselect";
 import "@vueform/multiselect/themes/default.css";
 
+const options = ref([
+  {
+    label: "option1",
+    value: "option1",
+  },
+  {
+    label: "option2",
+    value: "option2",
+  },
+  {
+    label: "option3",
+    value: "option3",
+  },
+]);
+
 const inputs = ref([
   {
     label: "Text",
@@ -30,6 +45,45 @@ const inputs = ref([
   },
 
   {
+    label: "Checkbox",
+    type: "checkbox",
+    options: options.value,
+  },
+  {
+    label: "Radio",
+    type: "radio",
+    options: options.value,
+  },
+  {
+    label: "File",
+    type: "file",
+    formFieldClass: "file-upload",
+  },
+  {
+    label: "Autocomplete",
+    type: "autocomplete",
+    options: options.value,
+  },
+  {
+    label: "Taglist",
+    type: "taglist",
+    options: options.value,
+  },
+  {
+    label: "Dropdown",
+    type: "dropdown",
+    options: options.value,
+  },
+
+  {
+    label: "Repeater",
+    type: "repeater",
+    options: options.value,
+    isRepeater: true,
+  },
+
+  //
+  {
     label: "Single Select",
     type: "single",
     isMultiselect: true,
@@ -38,21 +92,6 @@ const inputs = ref([
     label: "Multi Select",
     type: "tags",
     isMultiselect: true,
-  },
-  {
-    label: "Checkbox",
-    type: "checkbox",
-    options: ["option1", "option2", "option3"],
-  },
-  {
-    label: "Radio",
-    type: "radio",
-    options: ["option1", "option2", "option3"],
-  },
-  {
-    label: "File",
-    type: "file",
-    formFieldClass: "file-upload",
   },
 ]);
 </script>
@@ -73,7 +112,7 @@ const inputs = ref([
           :class="input.formFieldClass"
         >
           <FormKit
-            v-if="!input.isMultiselect"
+            v-if="!input.isMultiselect && !input.isRepeater"
             :type="input.type"
             :label="input.label"
             label-class="$reset notice-voice"
@@ -83,7 +122,25 @@ const inputs = ref([
             help="This is a help message"
           />
 
-          <template v-else>
+          <FormKit
+            v-if="input.isRepeater"
+            id="repeater"
+            name="users"
+            type="repeater"
+            label="Users"
+            #default="{ index }"
+          >
+            <FormKit
+              type="email"
+              :label="`${index + 1}. Email`"
+              name="email"
+              validation="email"
+              placeholder="Add email address..."
+            />
+            <FormKit type="toggle" name="toggle" label="Airplane mode" />
+          </FormKit>
+
+          <template v-if="input.isMultiselect">
             <label class="notice-voice" :for="input.label">
               {{ input.label }}
             </label>

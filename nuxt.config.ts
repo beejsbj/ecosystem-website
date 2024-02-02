@@ -64,6 +64,9 @@ export default defineNuxtConfig({
     // tooltip
     "floating-vue/nuxt",
 
+    //tailwind
+    "@nuxtjs/tailwindcss",
+
     //formkit
     [
       "@formkit/nuxt",
