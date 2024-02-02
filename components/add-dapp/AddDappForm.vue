@@ -223,6 +223,10 @@ form {
   margin-left: unset !important;
 }
 
+:deep(.formkit-outer[data-type="multi-step"] .formkit-badge) {
+  color: transparent;
+}
+
 :deep(.formkit-step-actions),
 div.actions {
   display: flex !important;
