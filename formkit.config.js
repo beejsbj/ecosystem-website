@@ -48,14 +48,17 @@ const plugins = [
   createAutoHeightTextareaPlugin(),
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   //   addAsteriskPlugin(),
-  //  proPlugin,
 ];
 
 //config
 export default defineFormKitConfig(() => {
   const config = useRuntimeConfig();
+
   // pro
-  // const proPlugin = createProPlugin("config.FORMKIT_PRO_KEY", inputs);
+  if (config.public.nodeEnv === "development") {
+    const proPlugin = createProPlugin(config.public.FORMKIT_PRO_KEY, inputs);
+    plugins.push(proPlugin);
+  }
 
   return {
     plugins,

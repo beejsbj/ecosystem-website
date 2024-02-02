@@ -161,6 +161,7 @@ export default defineNuxtConfig({
     public: {
       FORMKIT_PRO_KEY: process.env.NUXT_FORMKIT_PRO_KEY,
       walletConnectProjectId: process.env.NUXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
+      nodeEnv: process.env.NUXT_NODE_ENV,
     },
   },
 });
