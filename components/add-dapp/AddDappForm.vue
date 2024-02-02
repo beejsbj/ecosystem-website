@@ -120,9 +120,9 @@ onMounted(async () => {
     <FormKit
       type="multi-step"
       tab-style="progress"
-      :allow-incomplete="true"
+      :allow-incomplete="false"
       :hide-progress-labels="true"
-      :hide-progress-numbers="true"
+      valid-step-icon=""
     >
       <!-- Step 1 -->
       <FormKit
