@@ -95,6 +95,7 @@ onMounted(() => {
     <form-field>
       <FormKit
         type="textarea"
+        auto-height
         rows="5"
         label="Tell us about your dApp.*"
         label-class="$reset calm-voice"
