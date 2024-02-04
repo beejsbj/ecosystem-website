@@ -1,4 +1,26 @@
 /** @type {import('tailwindcss').Config} */
+
+// --step--2: clamp(0.39rem, calc(0.36rem + 0.15vw), 0.5rem);
+// --step--1: clamp(0.58rem, calc(0.54rem + 0.23vw), 0.75rem);
+// --step-0: clamp(0.95rem, calc(0.81rem + 0.34vw), 1.05rem);
+// --step-1: clamp(1.31rem, calc(1.21rem + 0.51vw), 1.69rem);
+// --step-2: clamp(1.97rem, calc(1.82rem + 0.76vw), 2.53rem);
+// --step-3: clamp(2.95rem, calc(2.72rem + 1.14vw), 3.8rem);
+// --step-4: clamp(4.43rem, calc(4.09rem + 1.72vw), 5.7rem);
+// --step-5: clamp(6.64rem, calc(6.13rem + 2.57vw), 8.54rem);
+
+const fontSizes = {
+  "step--2": "clamp(0.39rem, calc(0.36rem + 0.15vw), 0.5rem)",
+  "step--1": "clamp(0.58rem, calc(0.54rem + 0.23vw), 0.75rem)",
+  "step-0": "clamp(0.95rem, calc(0.81rem + 0.34vw), 1.05rem)",
+  "step-1": "clamp(1.31rem, calc(1.21rem + 0.51vw), 1.69rem)",
+  "step-2": "clamp(1.97rem, calc(1.82rem + 0.76vw), 2.53rem)",
+  "step-3": "clamp(2.95rem, calc(2.72rem + 1.14vw), 3.8rem)",
+  "step-4": "clamp(4.43rem, calc(4.09rem + 1.72vw), 5.7rem)",
+  "step-5": "clamp(6.64rem, calc(6.13rem + 2.57vw), 8.54rem)",
+};
+
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   darkMode: "class",
   content: [
@@ -224,32 +246,34 @@ module.exports = {
         },
       },
       fontFamily: {
-        DEFAULT: "Inter",
+        DEFAULT: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        62: 10,
-        75: 12,
-        87: 14,
-        100: 16,
-        112: 18,
-        125: 20,
-        137: 22,
-        200: 32,
-        225: 36,
-        250: 40,
-        300: 48,
-        350: 56,
-        400: 64,
-        base: 0.16,
+        xs: "var(--step--2)",
+        sm: "var(--step--1)",
+        base: "var(--step-0)",
+        lg: "var(--step-1)",
+        xl: "var(--step-2)",
+        "2xl": "var(--step-3)",
+        "3xl": "var(--step-4)",
+        "4xl": "var(--step-5)",
+        "5xl": "var(--step-6)",
+        "6xl": "var(--step-7)",
+        "7xl": "var(--step-8)",
+        "8xl": "var(--step-9)",
+        "9xl": "var(--step-10)",
       },
       fontWeight: {
-        300: "light",
-        400: "regular",
-        500: "medium",
-        600: "semi-bold",
-        700: "bold",
-        800: "extra-bold",
-        900: "black",
+        100: "100",
+        200: "200",
+        300: "300",
+        400: "400",
+        500: "500",
+        600: "600",
+        700: "700",
+        800: "800",
+        900: "900",
       },
       lineHeight: {
         "3xs": "100%",

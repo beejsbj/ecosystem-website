@@ -1,4 +1,4 @@
-html {
+:root {
   /* Black and white */
   --hue: 166;
   --black: hsla(0, 0%, 1%, 1);

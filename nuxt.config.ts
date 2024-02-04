@@ -65,7 +65,12 @@ export default defineNuxtConfig({
     "floating-vue/nuxt",
 
     //tailwind
-    "@nuxtjs/tailwindcss",
+    [
+      "@nuxtjs/tailwindcss",
+      {
+        cssPath: "~/assets/styles/site.css",
+      },
+    ],
 
     //formkit
     [

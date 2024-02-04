@@ -16,8 +16,8 @@ import { createProPlugin, inputs } from "@formkit/pro";
 import { rootClasses } from "./formkit.theme";
 
 //css
-// import "@formkit/addons/css/multistep";
-// import "@formkit/themes/genesis";
+import "@formkit/addons/css/multistep";
+import "@formkit/themes/genesis";
 
 //////////////////////////////
 
@@ -66,9 +66,9 @@ export default defineFormKitConfig(() => {
   return {
     plugins,
     icons,
-    config: {
-      rootClasses,
-    },
+    //  config: {
+    //    rootClasses,
+    //  },
   };
 });
 
