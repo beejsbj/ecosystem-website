@@ -45,14 +45,19 @@ nav.panel-menu {
   gap: var(--space-m);
   padding: var(--space-l);
 
-  a {
+  a.text {
     color: var(--ink);
     font-size: var(--step-1);
+    padding: unset;
 
     &.button {
       justify-self: center;
       min-width: 200px;
     }
+  }
+
+  a.icon {
+    padding: unset;
   }
 }
 </style>
