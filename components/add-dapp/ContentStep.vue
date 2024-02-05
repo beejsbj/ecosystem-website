@@ -41,13 +41,14 @@ onMounted(() => {
     <form-field>
       <FormKit
         type="text"
-        label="What is the name of your dApp?*"
+        label="What is the name of your dApp?"
         label-class="$reset calm-voice"
         name="dappName"
         placeholder="dApp Name"
         validation="required|length:0,30"
         validation-label="Name"
         id="dappName"
+        suffix-icon="help"
         v-model="dappForm.name"
       />
     </form-field>
@@ -57,7 +58,7 @@ onMounted(() => {
         v-auto-animate
         id="logoForm"
         type="file"
-        label="Upload your dApp’s logo.*"
+        label="Upload your dApp’s logo."
         label-class="$reset calm-voice"
         name="logo"
         no-files-icon="fileImage"
@@ -69,6 +70,9 @@ onMounted(() => {
         :validation-messages="{
           fileSize: 'File size must be below 3MB',
         }"
+        file-item-icon="fileImage"
+        suffix-icon="help"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
       <p class="whisper-voice">Minimum width: 512px</p>
@@ -79,7 +83,7 @@ onMounted(() => {
     <form-field>
       <FormKit
         type="text"
-        label="Enter your  dApp’s slogan.*"
+        label="Enter your  dApp’s slogan."
         label-class="$reset calm-voice"
         name="shortDescription"
         placeholder="dApp slogan"
@@ -88,6 +92,7 @@ onMounted(() => {
         validation-label="Slogan"
         id="shortDescription"
         v-model="dappForm.tagline"
+        suffix-icon="help"
       />
     </form-field>
 
@@ -97,7 +102,7 @@ onMounted(() => {
         type="textarea"
         auto-height
         rows="5"
-        label="Tell us about your dApp.*"
+        label="Tell us about your dApp."
         label-class="$reset calm-voice"
         name="longDescription"
         placeholder="dApp description"
@@ -105,6 +110,7 @@ onMounted(() => {
         validation="required"
         validation-label="Description"
         id="longDescription"
+        suffix-icon="help"
         v-model="dappForm.description"
       />
     </form-field>
