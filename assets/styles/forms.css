@@ -253,3 +253,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: var(--corners);
   background: var(--gradient-color);
 }
+
+/*  */
+
+.text-action-error-500 {
+  color: var(--error);
+}
