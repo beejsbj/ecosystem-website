@@ -7,7 +7,12 @@ import {
 } from "@formkit/addons";
 
 //icons
-import { applicationIcons, cryptoIcons } from "@formkit/icons";
+import {
+  applicationIcons,
+  cryptoIcons,
+  inputIcons,
+  fileIcons,
+} from "@formkit/icons";
 
 //pro
 import { createProPlugin, inputs } from "@formkit/pro";
@@ -22,6 +27,8 @@ import "@formkit/themes/genesis";
 const icons = {
   ...applicationIcons,
   ...cryptoIcons,
+  ...inputIcons,
+  ...fileIcons,
 };
 
 //auto animate
@@ -47,7 +54,7 @@ const plugins = [
   createMultiStepPlugin(),
   createAutoHeightTextareaPlugin(),
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
-  //   addAsteriskPlugin(),
+  addAsteriskPlugin,
   //  proPlugin,
 ];
 
@@ -56,8 +63,13 @@ export default defineFormKitConfig(() => {
   const config = useRuntimeConfig();
   // pro
   // const proPlugin = createProPlugin("config.FORMKIT_PRO_KEY", inputs);
+  //   console.log(config);
+  //   const props = {
+  //     prefixIcon: "email",
+  //   };
 
   return {
+    //  props,
     plugins,
     icons,
   };
@@ -65,10 +77,19 @@ export default defineFormKitConfig(() => {
 
 // plugins
 function addAsteriskPlugin(node) {
+  const legends = ["checkbox_multi", "radio_multi", "repeater", "transferlist"];
   if (
-    ["button", "submit", "hidden", "group", "list", "meta"].includes(
-      node.props.type
-    )
+    [
+      "button",
+      "submit",
+      "hidden",
+      "group",
+      "list",
+      "meta",
+      "form",
+      "multi-step",
+      "step",
+    ].includes(node.props.type)
   )
     return;
 
@@ -94,7 +115,7 @@ function addAsteriskPlugin(node) {
             $el: "span",
             if: "$state.required",
             attrs: {
-              class: "$classes.asterisk",
+              class: "text-action-error-500",
             },
             children: ["*"],
           },
@@ -104,4 +125,41 @@ function addAsteriskPlugin(node) {
       return schemaFn(sectionsSchema);
     };
   });
+}
+
+function addPrefixIconPlugin(node) {
+  node.on("created", () => {
+    console.log(node.type);
+
+    if (node.type !== "input") {
+      //  node.props.prefixIcon = 'email'
+      return;
+    }
+
+    if (node.props.type === "email") {
+      node.props.prefixIcon = "email";
+    }
+  });
+
+  //   email
+  //   if (node.props.type === "email") {
+  //     node.props.prefixIcon = "email";
+  //   }
+
+  //   //   password
+  //   if (node.props.type === "password") {
+  //     node.props.prefixIcon = "lock";
+  //   }
+
+  //   text
+
+  //   number
+  //   if (node.props.type === "number") {
+  //     node.props.prefixIcon = "number";
+  //   }
+
+  //   //   url
+  //   if (node.props.type === "url") {
+  //     node.props.prefixIcon = "url";
+  //   }
 }
