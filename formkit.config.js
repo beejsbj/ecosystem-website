@@ -17,6 +17,9 @@ import {
 //pro
 import { createProPlugin, inputs } from "@formkit/pro";
 
+//
+import { generateClasses } from "@formkit/themes";
+
 //css
 import "@formkit/addons/css/multistep";
 import "@formkit/themes/genesis";
@@ -30,6 +33,18 @@ const icons = {
   ...inputIcons,
   ...fileIcons,
 };
+
+//classes
+
+const classes = generateClasses({
+  text: {
+    // applies to all input types
+    outer: "SHAZAM",
+    label: "calm-voice",
+  },
+});
+
+console.log(classes);
 
 //auto animate
 const autoAnimate = {
@@ -60,18 +75,15 @@ const plugins = [
 
 //config
 export default defineFormKitConfig(() => {
-  const config = useRuntimeConfig();
+  //   const config = useRuntimeConfig();
   // pro
   // const proPlugin = createProPlugin("config.FORMKIT_PRO_KEY", inputs);
-  //   console.log(config);
-  //   const props = {
-  //     prefixIcon: "email",
-  //   };
 
   return {
-    //  props,
     plugins,
     icons,
+
+    classes,
   };
 });
 

@@ -89,6 +89,7 @@ async function handleUpdateProxy() {
           id="proxyAddress"
           help="You can get proxy address from market.api3.org"
           v-model="dappForm.proxyAddress"
+          placeholder="0x..."
         />
       </form-field>
 
