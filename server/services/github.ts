@@ -1,10 +1,8 @@
 import { Octokit } from "@octokit/rest";
 import { createAppAuth } from "@octokit/auth-app";
-import fs from "fs";
 import { prepareMarkdown } from "./helper";
 
 import type { ProjectType } from "../types";
-import prettier from "prettier";
 import type { Status } from "./helper";
 
 const config = useRuntimeConfig();
@@ -139,6 +137,6 @@ export async function createPR(
       }
     }
 
-    return { success: false, message: "Failed to create pull request" };
+    return { success: false, message: JSON.stringify(err) };
   }
 }
