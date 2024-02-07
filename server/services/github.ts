@@ -1,6 +1,7 @@
 import { Octokit } from "@octokit/rest";
 import { createAppAuth } from "@octokit/auth-app";
 import fs from "fs";
+import { prepareMarkdown } from "./helper";
 
 interface PrStatus {
   success: boolean;
@@ -124,6 +125,7 @@ export async function createPR(
       title,
       head: branch,
       base,
+      body: prepareMarkdown(projectData),
     });
     return {
       success: true,

@@ -17,6 +17,7 @@ let s3 = new S3Client({
 const awsStorage = multerS3({
   s3: s3,
   bucket: config.rootBucket,
+  contentType: multerS3.AUTO_CONTENT_TYPE,
   key: function (request, file, cb) {
     const fullPath = Date.now() + "_" + file.originalname;
     cb(null, fullPath);

@@ -2,7 +2,7 @@ import { Article } from "~/server/models/Article";
 import { authenticated } from "../../utils/authenticated";
 import { imageUploadHandler } from "../../utils/imageUpload";
 import { ROLE, UPLOAD_TYPE } from "~/server/types";
-import { ArticleType } from "server/types/Article";
+import type { ArticleType } from "~/server/types/Article";
 import slug from "slug";
 
 export default authenticated(
