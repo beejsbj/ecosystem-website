@@ -137,6 +137,6 @@ export async function createPR(
       }
     }
 
-    return { success: false, message: JSON.stringify(err) };
+    return { success: false, message: "Failed to create pull request" };
   }
 }
