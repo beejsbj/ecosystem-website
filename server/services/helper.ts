@@ -121,20 +121,24 @@ ${chains.map((chain: any) => `- ${chain}`).join("\n")}
 
 | Chain | Proxy Type | Feed Name | Proxy Address | OEV Enabled | OEV Beneficiary |
 |-------|------------|-----------|---------------|-------------|-----------------|
-${Object.entries(proxies)
-  .map(([chain, proxyArray]: [any, any]) =>
-    proxyArray
-      .map(
-        (proxy: any) =>
-          `| ${chain} | ${proxy.proxyType} | ${proxy.feedName} |   \`${
-            proxy.proxyAddress
-          }\` | ${proxy.oev.enabled} | \`${
-            proxy.oev.enabled ? proxy.oev.beneficiary : ""
-          }\` |`
-      )
-      .join("\n")
-  )
-  .join("\n")}
+${
+  productType === "qrng"
+    ? ""
+    : Object.entries(proxies)
+        .map(([chain, proxyArray]: [any, any]) =>
+          proxyArray
+            .map(
+              (proxy: any) =>
+                `| ${chain} | ${proxy.proxyType} | ${proxy.feedName} |   \`${
+                  proxy.proxyAddress
+                }\` | ${proxy.oev.enabled} | \`${
+                  proxy.oev.enabled ? proxy.oev.beneficiary : ""
+                }\` |`
+            )
+            .join("\n")
+        )
+        .join("\n")
+}
 
 ## Links
 
@@ -159,3 +163,8 @@ ${year}
 
   return markdownContent;
 };
+export interface Status {
+  success: boolean;
+  message: string;
+  data?: any | undefined;
+}

@@ -1,20 +1,29 @@
 import { Octokit } from "@octokit/rest";
 import { createAppAuth } from "@octokit/auth-app";
-import fs from "fs";
 import { prepareMarkdown } from "./helper";
 
-interface PrStatus {
-  success: boolean;
-  message: string;
-  data?: any | undefined;
-}
+import type { ProjectType } from "../types";
+import type { Status } from "./helper";
 
 const config = useRuntimeConfig();
+
+function parsePrivateKey() {
+  const key = config.gitAppPrivateKey;
+  const parsedKey =
+    "-----BEGIN RSA PRIVATE KEY-----" +
+    "\n" +
+    key.replace(" ", "\n") +
+    "\n" +
+    "-----END RSA PRIVATE KEY-----";
+
+  return parsedKey;
+}
+
 const octokit = new Octokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.gitAppId,
-    privateKey: config.gitAppPrivateKey,
+    privateKey: parsePrivateKey(),
     installationId: config.gitAppInstallationId,
     clientId: config.gitAppClientId,
     clientSecret: config.gitAppClientSecret,
@@ -25,26 +34,17 @@ const owner = config.nodeEnv === "production" ? "api3dao" : "AamirAlam";
 const repo = "dapp-registry";
 
 export async function createPR(
-  projectData: any,
+  projectData: ProjectType,
   projectId: string
-): Promise<PrStatus> {
+): Promise<Status> {
   const title = projectData.name?.split(" ")?.join("-");
   const branch = `${title}-${projectId}`;
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
-  const projectTsPath = "src/generated/projects.ts";
 
   let branchCreated = false;
   try {
-    // Read local files
-    const projectJsonData: string = fs.readFileSync(
-      `dapp-registry/${projectJsonPath}`,
-      "utf-8"
-    );
-    const projectTsData: string = fs.readFileSync(
-      `dapp-registry/${projectTsPath}`,
-      "utf-8"
-    );
+    const projectJsonData: string = JSON.stringify(projectData, null, 2);
 
     // get the SHA of the latest commit on the base branch
     const { data: refData } = await octokit.git.getRef({
@@ -73,13 +73,6 @@ export async function createPR(
       encoding: "utf-8",
     });
 
-    const { data: tsBlob } = await octokit.git.createBlob({
-      owner,
-      repo,
-      content: projectTsData,
-      encoding: "utf-8",
-    });
-
     // create new tree
     const { data: newTree } = await octokit.git.createTree({
       owner,
@@ -91,12 +84,6 @@ export async function createPR(
           mode: "100644",
           type: "blob",
           sha: jsonBlob.sha,
-        },
-        {
-          path: projectTsPath,
-          mode: "100644",
-          type: "blob",
-          sha: tsBlob.sha,
         },
       ],
     });

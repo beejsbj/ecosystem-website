@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Nitro } from "nitropack";
+import type { Nitro } from "nitropack";
 import { syncProjectsToMongodb } from "./services/syncDb";
 
 export default async (_nitroApp: Nitro) => {
