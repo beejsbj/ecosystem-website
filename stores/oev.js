@@ -18,7 +18,7 @@ export const useOEVStore = defineStore("oev", function () {
       const newProtocol = {
         // Generate an id for each protocol by converting the first letter of the title to lowercase and concatenating the rest of the title
         id: protocol.title[0].toLowerCase() + protocol.title.slice(1),
-        name: protocol.body[0].name.slice(0, -8),
+        name: protocol.body[0].name,
         icon: protocol.body[0].icon,
         data: protocol.body,
         dataWeekly: dataToWeekly(protocol.body),
