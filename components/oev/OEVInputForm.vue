@@ -43,7 +43,7 @@ function buttonHandle(event) {
 
 <template>
   <form v-auto-animate>
-    <h2 class="firm-voice">Calculate Your Protocol's Potential</h2>
+    <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
     <form-field>
       <FormKit
         type="number"
@@ -53,8 +53,8 @@ function buttonHandle(event) {
         }"
         name="incentive"
         min="0.5"
-		  max="100"
-		  step="0.5"
+        max="100"
+        step="0.5"
         placeholder="Enter the percentage"
         id="incentive"
         v-model.number="form.incentive"
@@ -73,7 +73,8 @@ function buttonHandle(event) {
         help="Large numbers work best."
         id="tvl"
         v-model.number="form.tvl"
-        step="1000"
+        step="100000"
+        min="0"
         validation-label="TVL"
         :show-validation="formSubmitted"
       />
@@ -92,6 +93,7 @@ function buttonHandle(event) {
 <style scoped lang="scss">
 form {
   display: grid;
+  gap: var(--space-s);
   justify-content: center;
 
   --fk-font-size-input: var(--step-0);
@@ -99,5 +101,9 @@ form {
   :deep(.formkit-wrapper) {
     max-width: unset !important;
   }
+}
+
+h2 {
+  text-align: center;
 }
 </style>
