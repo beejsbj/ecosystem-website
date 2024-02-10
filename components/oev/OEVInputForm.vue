@@ -53,6 +53,8 @@ function buttonHandle(event) {
         }"
         name="incentive"
         min="0.5"
+		  max="100"
+		  step="0.5"
         placeholder="Enter the percentage"
         id="incentive"
         v-model.number="form.incentive"
