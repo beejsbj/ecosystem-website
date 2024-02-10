@@ -62,3 +62,109 @@ export const emailMarkup = (formData: any): string => {
 
   return content;
 };
+
+// prepare markdwon for pull requests
+export const prepareMarkdown = (project: any) => {
+  const {
+    name,
+    tagline,
+    description,
+    status,
+    images,
+    categories,
+    productType,
+    chains,
+    proxies,
+    links,
+    year,
+  } = project;
+
+  const markdownContent = `
+# ${name}
+
+**Tagline:** ${tagline}
+
+## Description
+
+${description}
+
+## Status
+
+${status}
+
+## Images
+
+- Logo: ![${name} Logo](${images.logo})
+- Cover: ![${name} Cover](${images.cover})
+- Screenshots:
+${images.screenshots
+  .map(
+    (screenshot: any, index: number) =>
+      `  - ![Screenshot ${index + 1}](${screenshot})`
+  )
+  .join("\n")}
+
+## Categories
+
+${categories.map((category: any) => `- ${category}`).join("\n")}
+
+## Product Type
+
+${productType}
+
+## Chains
+
+${chains.map((chain: any) => `- ${chain}`).join("\n")}
+
+## Proxies
+
+
+| Chain | Proxy Type | Feed Name | Proxy Address | OEV Enabled | OEV Beneficiary |
+|-------|------------|-----------|---------------|-------------|-----------------|
+${
+  productType === "qrng"
+    ? ""
+    : Object.entries(proxies)
+        .map(([chain, proxyArray]: [any, any]) =>
+          proxyArray
+            .map(
+              (proxy: any) =>
+                `| ${chain} | ${proxy.proxyType} | ${proxy.feedName} |   \`${
+                  proxy.proxyAddress
+                }\` | ${proxy.oev.enabled} | \`${
+                  proxy.oev.enabled ? proxy.oev.beneficiary : ""
+                }\` |`
+            )
+            .join("\n")
+        )
+        .join("\n")
+}
+
+## Links
+
+- Website: [${links.website}](${links.website})
+- DApp: [${links.dapp}](${links.dapp})
+- Docs: [${links.docs}](${links.docs})
+- Explorer: [${links.explorer}](${links.explorer})
+
+## Socials
+
+${links.socials
+  .map(
+    (social: { label: string; url: string }) =>
+      `- ${social.label}: [${social.label}](${social.url})`
+  )
+  .join("\n")}
+
+## Year
+
+${year}
+`;
+
+  return markdownContent;
+};
+export interface Status {
+  success: boolean;
+  message: string;
+  data?: any | undefined;
+}

@@ -17,6 +17,7 @@ let s3 = new S3Client({
 const awsStorage = multerS3({
   s3: s3,
   bucket: config.rootBucket,
+  contentType: multerS3.AUTO_CONTENT_TYPE,
   key: function (request, file, cb) {
     const fullPath = Date.now() + "_" + file.originalname;
     cb(null, fullPath);
@@ -29,7 +30,9 @@ const upload = multer({
     fileSize: parseInt(config.imageUploadSizeLimit),
   },
   fileFilter(req, file, cb) {
-    if (!file.originalname.match(/\.(jpeg|JPEG|png|PNG|webp|WEBP|jpg|JPG)$/)) {
+    if (
+      !file?.originalname?.match(/\.(jpeg|JPEG|png|PNG|webp|WEBP|jpg|JPG)$/)
+    ) {
       return cb(new Error("Please upload image file only"));
     }
     cb(null, true);
