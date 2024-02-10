@@ -39,7 +39,7 @@ const visibleRef = ref(false);
 const indexRef = ref(0); // default 0
 
 const onHide = () => (visibleRef.value = false);
-const onShow = (index) => {
+const onShow = (index: number) => {
   indexRef.value = index;
   console.log(indexRef.value);
 
@@ -49,7 +49,13 @@ const onShow = (index) => {
 
 <template>
   <picture @click="onShow(0)">
-    <img :src="refinedSrc" :alt="alt" :width="width" :height="height" />
+    <NuxtImg
+      loading="lazy"
+      :src="refinedSrc"
+      :alt="alt"
+      :width="width"
+      :height="height"
+    />
   </picture>
   <VueEasyLightbox
     :visible="visibleRef"
