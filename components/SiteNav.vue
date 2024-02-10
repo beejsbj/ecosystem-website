@@ -3,6 +3,7 @@
 <template>
   <nav>
     <NuxtLink class="text hover-underline" to="/ecosystem">Ecosystem</NuxtLink>
+    <NuxtLink class="text hover-underline" to="/oev">OEV</NuxtLink>
     <NuxtLink class="text hover-underline" to="/articles">Articles</NuxtLink>
     <NuxtLink class="text" to="/guild">Guild</NuxtLink>
     <div class="actions">

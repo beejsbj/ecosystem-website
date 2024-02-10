@@ -2,10 +2,6 @@
 // Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
 
-// Get the oevRate and maxLiquidated values from the OEV store
-const oevRate = oev.getTotals().oevRate;
-const maxLiquidated = oev.getTotals().totalLiquidated;
-
 // Define reactive variables
 const formSubmitted = ref(false); // Controls the visibility of the output section
 const form = ref({}); // Reference to the form element

@@ -99,7 +99,7 @@ oev.setProtocols(oevRaw);
 <style scoped lang="scss">
 :deep(inner-column:not(.page-title)) {
   @media (min-width: 768px) {
-    padding: var(--space-3xl) var(--space-s);
+    padding: var(--space-2xl) var(--space-s);
   }
 }
 
