@@ -34,6 +34,44 @@ useSeoMeta({
 
   twitterCard: "summary_large_image",
 });
+
+// navigate article.body with up down keys, settings the hover state
+
+onMounted(() => {
+  const article = document.querySelector("article.body");
+
+  const children = article.querySelectorAll("article.body > *");
+
+  let index = 0;
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      if (e.key === "ArrowDown") {
+        index++;
+      }
+      if (e.key === "ArrowUp") {
+        index--;
+      }
+
+      if (index < 0) {
+        index = 0;
+      }
+      if (index > children.length - 1) {
+        index = children.length - 1;
+      }
+
+      children.forEach((child, i) => {
+        if (i === index) {
+          child.style.setProperty("--height", "100%");
+          child.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          child.style.removeProperty("--height");
+        }
+      });
+    }
+  });
+});
 </script>
 
 <template>
