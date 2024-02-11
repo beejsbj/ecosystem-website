@@ -27,15 +27,15 @@ const author = computed(() => {
       {{ article?.subtitle }}
     </h2>
     <article-meta>
+      <picture>
+        <img
+          loading="lazy"
+          src="@/assets/images/icons/logo-icon.svg"
+          :src="author?.image"
+          alt="author icon"
+        />
+      </picture>
       <div class="author">
-        <picture>
-          <img
-            loading="lazy"
-            src="@/assets/images/icons/logo-icon.svg"
-            :src="author?.image"
-            alt="author icon"
-          />
-        </picture>
         <p class="firm-voice">
           {{ author?.name }}
         </p>
@@ -100,7 +100,7 @@ header {
     display: grid;
     row-gap: var(--space-3xs);
     column-gap: var(--space-s);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 40px 1fr 1fr;
     margin-top: var(--space-2xs);
     justify-self: start;
 
@@ -111,24 +111,31 @@ header {
       display: flex;
       gap: var(--space-2xs);
       align-items: center;
-      picture {
-        max-width: 15px;
-      }
     }
 
     div.author {
-      grid-column: 1 / -1;
-      picture {
-        aspect-ratio: 1/1;
-        max-width: 30px;
-        border-radius: 50%;
-        //   background: var(--gray);
+      grid-column: 2 / -1;
+    }
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+    div.date {
+      grid-column: 2;
+    }
+    div.tag {
+      grid-column: 3;
+    }
+
+    picture {
+      grid-row: span 2;
+      align-self: center;
+      aspect-ratio: 1/1;
+      max-width: 40px;
+      border-radius: 50%;
+      //   background: var(--gray);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
