@@ -77,7 +77,7 @@ inner-column.article {
     & > :not(aside, header) {
       grid-column: 1 / -1;
       @media (min-width: 768px) {
-        grid-column: 4 / 11;
+        grid-column: 4 / 12;
         //     padding: var(--space-l);
         //     gap: var(--space-l);
       }
@@ -115,30 +115,24 @@ inner-column.article {
 
       li {
         position: relative;
-        --space: 1.25rem;
-        left: var(--space);
         &::before {
           content: "";
+          display: inline-block;
           width: 8px;
           height: 8px;
 
-          position: absolute;
-          left: calc(-1 * var(--space));
-          top: 50%;
-          transform: translateY(-50%);
+          position: relative;
+          margin-right: var(--space-xs);
 
           background-size: cover;
           background-position: center;
+          background: var(--gradient-color);
         }
       }
     }
 
     p {
       margin-top: var(--space-s);
-
-      &:has(img) {
-        margin-top: var(--space-l);
-      }
 
       &:has(> :is(a, code)) {
         overflow: auto;
