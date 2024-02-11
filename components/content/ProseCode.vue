@@ -37,10 +37,10 @@ const { copy, copied, text } = useClipboard();
 div {
   position: relative;
   border-radius: var(--corners);
-  margin: var(--space-l) 0;
+  margin: var(--space-s) 0;
   padding: var(--space-l) var(--space-s);
   background: var(--gradient-dark);
-  overflow: scroll;
+  //   overflow: scroll;
 
   span {
     position: absolute;
@@ -55,7 +55,8 @@ div {
   }
 
   :deep(pre) {
-    white-space: pre;
+    white-space: pre-wrap;
+    //  overflow-x: scroll;
   }
 }
 

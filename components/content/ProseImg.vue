@@ -41,7 +41,6 @@ const indexRef = ref(0); // default 0
 const onHide = () => (visibleRef.value = false);
 const onShow = (index: number) => {
   indexRef.value = index;
-  console.log(indexRef.value);
 
   visibleRef.value = true;
 };
@@ -56,21 +55,24 @@ const onShow = (index: number) => {
       :width="width"
       :height="height"
     />
+    <VueEasyLightbox
+      :visible="visibleRef"
+      :imgs="refinedSrc"
+      :index="indexRef"
+      @hide="onHide"
+      teleport="body"
+    />
   </picture>
-  <VueEasyLightbox
-    :visible="visibleRef"
-    :imgs="refinedSrc"
-    :index="indexRef"
-    @hide="onHide"
-    teleport="body"
-  />
 </template>
 
 <style scoped>
 picture {
   margin-top: var(--space-l);
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+
+  @media (min-width: 768px) {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>
