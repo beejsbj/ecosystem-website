@@ -75,27 +75,27 @@ onMounted(() => {
 </script>
 
 <template>
-    <SectionColumn innerClass="article">
-      <div class="article-wrapper">
-        <ArticleSide :toc="article?.content?.toc" :title="article?.title" />
-        <ArticleHeader :article="article" />
+  <SectionColumn innerClass="article">
+    <div class="article-wrapper">
+      <ArticleSide :toc="article?.content?.toc" :title="article?.title" />
+      <ArticleHeader :article="article" />
 
-        <picture class="cover" v-if="article?.cover">
-          <NuxtImg
-            loading="lazy"
-            :src="article?.cover"
-            :alt="`Cover of ${article?.title}`"
-          />
-        </picture>
-
-        <ContentRendererMarkdown
-          v-if="article?.content"
-          :value="article?.content"
-          tag="article"
-          class="body"
+      <picture class="cover" v-if="article?.cover">
+        <NuxtImg
+          loading="lazy"
+          :src="article?.cover"
+          :alt="`Cover of ${article?.title}`"
         />
-      </div>
-    </SectionColumn>
+      </picture>
+
+      <ContentRendererMarkdown
+        v-if="article?.content"
+        :value="article?.content"
+        tag="article"
+        class="body"
+      />
+    </div>
+  </SectionColumn>
 </template>
 
 <style lang="scss">
