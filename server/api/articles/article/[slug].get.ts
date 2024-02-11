@@ -1,10 +1,9 @@
-import updateArticleView from "~/server/services/updateView";
-import { View } from "../../../models/View";
-import { Article } from "~/server/models/Article";
+import axios from "axios";
+import { parseMarkdown } from "@/utils/parseMarkdown";
+import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   const articleSlug = event.context?.params?.slug;
-  const clientIp = event.node.req.headers?.["x-forwarded-for"];
 
   try {
     if (!articleSlug) {
@@ -14,7 +13,41 @@ export default defineEventHandler(async (event) => {
         message: "Invalid article slug",
       };
     }
-    const article = await Article.findOne({ slug: articleSlug });
+
+    const repoOwner = "api3-ecosystem";
+    const repoName = "ecosystem-markdown-articles";
+    let article = queryCache.get(`article-${articleSlug}`);
+
+    if (article === undefined) {
+      const downloadUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/master/${articleSlug}/index.md`;
+      const articleMd = (await axios.get(downloadUrl)).data;
+
+      if (!articleMd) {
+        event.node.res.statusCode = 404;
+        return {
+          code: "ARTICLE_NOT_FOUND",
+          message: `Article not found `,
+        };
+      }
+      const parsedMd = await parseMarkdown({ content: articleMd });
+
+      article = {
+        author: {
+          name: parsedMd?.author,
+          bio: parsedMd?.bio,
+        },
+        title: parsedMd?.title,
+        slug: articleSlug,
+        subtitle: parsedMd?.subtitle,
+        description: parsedMd?.description,
+        content: parsedMd?.body,
+        cover: parsedMd?.image,
+        category: parsedMd?.category,
+        created_at: parsedMd?.date_published,
+      };
+
+      queryCache.set(`article-${articleSlug}`, article, cacheInterval);
+    }
 
     if (!article) {
       event.node.res.statusCode = 404;
@@ -22,10 +55,6 @@ export default defineEventHandler(async (event) => {
         code: "ARTICLE_NOT_FOUND",
         message: `Article not found `,
       };
-    }
-
-    if (clientIp !== undefined) {
-      await updateArticleView(clientIp, article.id);
     }
 
     event.node.res.statusCode = 200;

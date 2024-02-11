@@ -1,13 +1,7 @@
-import { ProjectType } from "server/types";
+import type { ProjectType } from "../types";
 import shelljs from "shelljs";
 import { createPR } from "./github";
-import fs from "fs";
-
-interface BuildStatus {
-  success: boolean;
-  message: string;
-  data?: any | undefined;
-}
+import type { Status } from "./helper";
 
 const config = useRuntimeConfig();
 
@@ -19,7 +13,7 @@ const DAPP_REPO_URL =
 async function verifyBuild(
   projectData: ProjectType,
   projectId: string
-): Promise<BuildStatus> {
+): Promise<Status> {
   // chenge dir to dapp-registry
   return new Promise(async (resolve, reject) => {
     const isProjectDirExists = shelljs.exec(`cd dapp-registry`).code === 0;
@@ -125,7 +119,7 @@ async function verifyBuild(
 export async function checkBuildStatus(
   projectData: ProjectType,
   projectId: string
-): Promise<BuildStatus> {
+): Promise<Status> {
   try {
     const buildStatus = await verifyBuild(projectData, projectId);
 
