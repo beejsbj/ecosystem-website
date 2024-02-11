@@ -5,7 +5,7 @@ const datePublished = computed(() => {
   const date = new Date(props.article?.created_at);
   return date.toLocaleDateString("en-US", {
     year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
   });
 });
