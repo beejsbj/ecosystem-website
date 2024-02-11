@@ -121,7 +121,6 @@ inner-column.article {
       }
 
       &.cover {
-        height: 100%;
         aspect-ratio: 16/10;
         img {
           width: 100%;
@@ -138,13 +137,13 @@ inner-column.article {
 
   article.body {
     h2 {
-      margin-bottom: var(--space-m);
       margin-top: var(--space-2xl);
+      margin-bottom: var(--space-m);
     }
 
     h3 {
-      margin-bottom: var(--space-m);
       margin-top: var(--space-l);
+      margin-bottom: var(--space-m);
     }
     ul {
       margin-top: var(--space-s);
@@ -153,6 +152,8 @@ inner-column.article {
 
       li {
         position: relative;
+        letter-spacing: 0.02em;
+
         &::before {
           content: "";
           display: inline-block;
@@ -165,82 +166,17 @@ inner-column.article {
           background-size: cover;
           background-position: center;
           background: var(--gradient-color);
+          border-radius: 50%;
         }
       }
     }
 
     p {
       margin-top: var(--space-s);
+      letter-spacing: 0.02em;
 
       &:has(> :is(a, code)) {
-        overflow: auto;
-      }
-    }
-
-    li,
-    p {
-      letter-spacing: 0.02em;
-    }
-
-    figure {
-      margin: var(--space-l) 0;
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: var(--space-s);
-      justify-items: start;
-
-      position: relative;
-
-      &::after {
-        position: absolute;
-        inset: 0;
-
-        content: "";
-        z-index: 1;
-      }
-    }
-
-    & > blockquote {
-      margin: var(--space-l) 0;
-      padding: var(--space-2xl);
-      background: var(--gradient-dark);
-      display: block;
-      // max-width: 70ch;
-      color: var(--ink);
-      position: relative;
-      border-radius: var(--corners);
-      //   overflow: hidden;
-      z-index: 1;
-
-      p {
-        margin: 0;
-        padding: 0;
-        font-style: italic;
-      }
-      blockquote {
-        margin-top: var(--space-s);
-        color: var(--green);
-        text-align: right;
-        font-style: normal;
-      }
-
-      &::before {
-        content: "“";
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        font-size: 10rem;
-        color: var(--violet);
-        z-index: -1;
-        opacity: 0.5;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        inset: calc(-1 * var(--line-width));
-        z-index: -2;
-        border-radius: calc(var(--corners) + 3rem);
+        //   overflow: auto;
       }
     }
 
@@ -263,9 +199,10 @@ inner-column.article {
 
         transition: 0.1s;
       }
-    }
-    .highlight {
-      --height: 100%;
+
+      &:is(:hover, :focus-visible)::before {
+        --height: 100%;
+      }
     }
   }
 }
