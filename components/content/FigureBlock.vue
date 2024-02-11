@@ -23,7 +23,6 @@ figure {
   }
 
   position: relative;
-  //   left: -10%;
 
   &::after {
     position: absolute;
