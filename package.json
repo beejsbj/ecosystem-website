@@ -71,7 +71,7 @@
     "uuid": "^9.0.0",
     "viem": "^1.4.2",
     "vue-chartjs": "^5.2.0",
-    "vue-easy-lightbox": "^1.16.0",
+    "vue-easy-lightbox": "^1.7.0",
     "zod": "^3.21.4"
   },
   "browserslist": [
