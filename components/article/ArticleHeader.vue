@@ -9,6 +9,13 @@ const datePublished = computed(() => {
     day: "numeric",
   });
 });
+
+const author = computed(() => {
+  return {
+    name: props.article?.author?.name,
+    image: null,
+  };
+});
 </script>
 
 <template>
@@ -24,34 +31,21 @@ const datePublished = computed(() => {
         <picture>
           <img
             loading="lazy"
-            src="@/assets/images/icons/author.svg"
+            src="@/assets/images/icons/logo-icon.svg"
+            :src="author?.image"
             alt="author icon"
           />
         </picture>
-        <p class="solid-voice">
-          {{ article?.author?.name }}
+        <p class="firm-voice">
+          {{ author?.name }}
         </p>
       </div>
       <div class="date">
-        <picture>
-          <img
-            loading="lazy"
-            src="@/assets/images/icons/calendar-icon.svg"
-            alt="calendar icon"
-          />
-        </picture>
         <p class="solid-voice">
           {{ datePublished }}
         </p>
       </div>
       <div class="tag">
-        <picture>
-          <img
-            loading="lazy"
-            src="@/assets/images/icons/bookmark-icon.svg"
-            alt="bookmark icon"
-          />
-        </picture>
         <p class="solid-voice">
           {{ article?.category }}
         </p>
@@ -104,10 +98,12 @@ header {
 
   article-meta {
     display: grid;
-    gap: var(--space-s);
+    row-gap: var(--space-3xs);
+    column-gap: var(--space-s);
     grid-template-columns: repeat(3, 1fr);
     margin-top: var(--space-2xs);
     justify-self: start;
+
     .solid-voice {
       font-size: var(--step--1);
     }
@@ -117,6 +113,22 @@ header {
       align-items: center;
       picture {
         max-width: 15px;
+      }
+    }
+
+    div.author {
+      grid-column: 1 / -1;
+      picture {
+        aspect-ratio: 1/1;
+        max-width: 30px;
+        border-radius: 50%;
+        //   background: var(--gray);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }

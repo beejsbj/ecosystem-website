@@ -9,7 +9,7 @@
 
   font-size: var(--font-size);
   font-weight: var(--weight-heavy);
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
@@ -20,7 +20,7 @@
   font-size: var(--font-size);
   font-weight: var(--weight-heavy);
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 @media (min-width: 600px) {
