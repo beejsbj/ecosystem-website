@@ -1,3 +1,6 @@
+import mongoose from "mongoose";
+import type { HookResult, Nuxt } from "nuxt/schema";
+
 export default defineNuxtConfig({
   spaLoadingTemplate: "./app-loading.html",
 
@@ -146,6 +149,17 @@ export default defineNuxtConfig({
         dir: "assets",
       },
     ],
+    preset: "aws-amplify",
+    awsAmplify: {
+      imageSettings: {
+        dangerouslyAllowSVG: true,
+      },
+    },
+  },
+  hooks: {
+    close: async (go: Nuxt) => {
+      await mongoose.disconnect();
+    },
   },
   runtimeConfig: {
     mongodbUri: process.env.NUXT_MONGODB_URI,

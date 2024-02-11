@@ -84,6 +84,7 @@ const submitHandler = async (event) => {
     images,
     verificationPayload
   );
+
   if (submitResult.success) {
     successData.value.message = submitResult.message;
     successData.value.pr_url = submitResult.data;
@@ -120,7 +121,7 @@ onMounted(async () => {
     <FormKit
       type="multi-step"
       tab-style="progress"
-      :allow-incomplete="false"
+      :allow-incomplete="true"
       :hide-progress-labels="true"
       :valid-step-icon="false"
     >

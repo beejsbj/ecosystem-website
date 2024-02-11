@@ -115,7 +115,6 @@ const inputs = ref([
             v-if="!input.isMultiselect && !input.isRepeater"
             :type="input.type"
             :label="input.label"
-            label-class="$reset notice-voice"
             :name="input.label"
             :id="input.label"
             :options="input.options"

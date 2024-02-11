@@ -24,6 +24,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
         validation="url"
         validation-label="Website"
         placeholder="https://yourwebsite.com"
+        prefix-icon="url"
       />
     </form-field>
 
@@ -40,6 +41,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label-class="$reset calm-voice"
           placeholder="https://twitter.com/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -54,6 +56,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label-class="$reset calm-voice"
           placeholder="https://discord.gg/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -68,6 +71,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label-class="$reset calm-voice"
           placeholder="github.com/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -81,6 +85,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label-class="$reset calm-voice"
           placeholder="https://reddit.com/r/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -94,6 +99,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Telegram"
           label-class="$reset calm-voice"
           placeholder="https://t.me/yourdapp"
+          prefix-icon="url"
         />
       </form-field>
       <form-field>
@@ -106,6 +112,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Facebook"
           label-class="$reset calm-voice"
           placeholder="https://facebook.com/yourdapp"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -119,6 +126,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Youtube"
           label-class="$reset calm-voice"
           placeholder="https://youtube.com/yourdapp"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -132,6 +140,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Blog"
           label-class="$reset calm-voice"
           placeholder="https://yourdapp.com/blog"
+          prefix-icon="url"
         />
       </form-field>
     </div>

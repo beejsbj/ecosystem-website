@@ -4,8 +4,6 @@
   --fk-color-checked: var(--green) !important;
   --fk-color-border: var(--gray) !important;
   --fk-border-radius: var(--corners) !important;
-  --fk-border-box-shadow-focus: 0 0 0 2px var(--green) !important;
-  --fk-border-box-shadow-decorator-checked: 0 0 0 2px var(--green) !important;
   --fk-font-family: var(--font) !important;
   --fk-font-size: var(--step-0) !important;
 
@@ -24,7 +22,7 @@
 
   /* vueform/multistep */
 
-  --ms-bg: var(--gradient-dark) !important;
+  /* --ms-bg: var(--gradient-dark) !important;
   --ms-border-color: var(--ink) !important;
   --ms-radius: var(--corners) !important;
 
@@ -36,7 +34,7 @@
   --ms-dropdown-border-color: transparent !important;
 
   --ms-dropdown-color: var(--ink) !important;
-  --ms-dropdown-radius: var(--corners) !important;
+  --ms-dropdown-radius: var(--corners) !important; */
 }
 
 /* Form */
@@ -150,7 +148,7 @@ textarea,
     .multiselect.is-active,
     form-field.file-upload
   ):is(:focus-visible, :focus-visible, :focus-within, :active) {
-  box-shadow: var(--shadow) !important;
+  /* box-shadow: var(--shadow) !important; */
 }
 
 /* Radio/checkbox */
@@ -175,20 +173,20 @@ textarea,
 
 /* Multiselect */
 input.multiselect-tags-search {
-  color: var(--ink);
+  /* color: var(--ink);
   background: var(--paper);
-  border-radius: var(--corners);
+  border-radius: var(--corners); */
 }
 
 .multiselect input {
-  background: unset;
+  /* background: unset; */
 }
 
 .multiselect.is-active {
-  box-shadow: var(--shadow) !important;
+  /* box-shadow: var(--shadow) !important; */
 }
 
-.multiselect {
+/* .multiselect {
   border: var(--border-dark) !important;
   padding: var(--space-2xs) !important;
   background: unset !important;
@@ -197,9 +195,9 @@ input.multiselect-tags-search {
 .multiselect.tags {
   background: var(--gray-darkest) !important;
   border: var(--border-light) !important;
-}
+} */
 
-.multiselect-caret {
+/* .multiselect-caret {
   mask-image: unset !important;
   webkit-mask-image: unset !important;
   background: url("/assets/images/interface/caret.svg") no-repeat center center !important;
@@ -215,7 +213,19 @@ input.multiselect-tags-search {
 
 .multiselect .multiselect-caret.is-open {
   transform: rotate(0deg) !important;
+} */
+/* 
+.multiselect .multiselect-dropdown {
+  background: var(--gray-darkest) !important;
 }
+
+.multiselect .multiselect-dropdown ul {
+  padding: 0 var(--space-xs) !important;
+}
+
+.multiselect .multiselect-dropdown li + li {
+  border-top: var(--border-dark) !important;
+} */
 /* File */
 
 [data-type="file"] input.formkit-input:not(input[type="file"]) {
@@ -252,4 +262,96 @@ input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
   border-radius: var(--corners);
   background: var(--gradient-color);
+}
+
+/*  */
+
+.text-action-error-500 {
+  color: var(--error);
+}
+
+/* vueform/multiselect */
+
+html {
+  --ms-font-size: var(--step-0);
+  --ms-line-height: 1.1;
+  --ms-bg: var(--paper);
+  --ms-bg-disabled: #f3f4f6;
+  --ms-border-color: var(--gray-dark);
+  --ms-border-width: var(--line-width);
+  --ms-border-color-active: var(--green);
+  --ms-border-width-active: var(--line-width);
+  --ms-radius: var(--corners);
+  --ms-py: var(--space-2xs);
+  --ms-px: var(--space-xs);
+  --ms-ring-width: 3px;
+  --ms-ring-color: #10b98130;
+  --ms-placeholder-color: #9ca3af;
+  --ms-max-height: 10rem;
+
+  --ms-spinner-color: var(--green);
+  --ms-caret-color: #999999;
+  --ms-clear-color: #999999;
+  --ms-clear-color-hover: #000000;
+
+  --ms-tag-font-size: var(--step--1);
+  --ms-tag-line-height: 1.2;
+  --ms-tag-font-weight: var(--weight-heavy);
+  --ms-tag-bg: var(--gray-dark);
+  --ms-tag-bg-disabled: #9ca3af;
+  --ms-tag-color: #ffffff;
+  --ms-tag-color-disabled: #ffffff;
+  --ms-tag-radius: var(--corners);
+  --ms-tag-py: calc(var(--space-3xs) / 2);
+  --ms-tag-px: var(--space-2xs);
+  --ms-tag-my: var(--space-3xs);
+  --ms-tag-mx: var(--space-3xs);
+
+  --ms-tag-remove-radius: var(--corners);
+  --ms-tag-remove-py: var(--space-3xs);
+  --ms-tag-remove-px: var(--space-3xs);
+  --ms-tag-remove-my: 0rem;
+  --ms-tag-remove-mx: calc(var(--space-3xs) / 2);
+
+  --ms-dropdown-bg: var(--gray-darkest);
+  --ms-dropdown-border-color: #d1d5db;
+  --ms-dropdown-border-width: var(--line-width);
+  --ms-dropdown-radius: var(--corners);
+
+  --ms-group-label-py: var(--space-3xs);
+  --ms-group-label-px: var(--space-xs);
+  --ms-group-label-line-height: 1.375;
+  --ms-group-label-bg: #e5e7eb;
+  --ms-group-label-color: #374151;
+  --ms-group-label-bg-pointed: #d1d5db;
+  --ms-group-label-color-pointed: #374151;
+  --ms-group-label-bg-disabled: #f3f4f6;
+  --ms-group-label-color-disabled: #d1d5db;
+  --ms-group-label-bg-selected: #059669;
+  --ms-group-label-color-selected: #ffffff;
+  --ms-group-label-bg-selected-pointed: #0c9e70;
+  --ms-group-label-color-selected-pointed: #ffffff;
+  --ms-group-label-bg-selected-disabled: #75cfb1;
+  --ms-group-label-color-selected-disabled: #d1fae5;
+
+  --ms-option-font-size: var(--step-0);
+  --ms-option-line-height: 1.2;
+  --ms-option-bg-pointed: var(--gray-dark);
+  --ms-option-color-pointed: var(--ink);
+  --ms-option-bg-selected: var(--green);
+  --ms-option-color-selected: var(--paper);
+  --ms-option-bg-disabled: #ffffff;
+  --ms-option-color-disabled: #d1d5db;
+  --ms-option-bg-selected-pointed: var(--green-dark);
+  --ms-option-color-selected-pointed: #ffffff;
+  --ms-option-bg-selected-disabled: #ffffff;
+  --ms-option-color-selected-disabled: #d1fae5;
+  --ms-option-py: var(--space-2xs);
+  --ms-option-px: var(--space-xs);
+
+  --ms-empty-color: #4b5563;
+}
+
+.multiselect-tags-search {
+  background: var(--ms-bg);
 }

@@ -63,7 +63,6 @@ export const authenticated = (
 
       if (!user) {
         // for user role routes create new user if not found db
-        console.log("creating new user");
 
         const userPayload: UserType = {
           address: fields.address,

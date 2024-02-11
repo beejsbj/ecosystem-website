@@ -73,6 +73,7 @@ const imageRatio = async function (node) {
         label="Where can someone find your dApp?*"
         label-class="$reset calm-voice"
         placeholder="https://yourdapp.com"
+        prefix-icon="url"
       />
     </form-field>
 
@@ -86,6 +87,7 @@ const imageRatio = async function (node) {
         label="Where can someone find your dApp’s documentation?"
         label-class="$reset calm-voice"
         placeholder="https://docs.api3.org/"
+        prefix-icon="url"
       />
     </form-field>
 
@@ -99,6 +101,7 @@ const imageRatio = async function (node) {
         label="Explorer"
         label-class="$reset calm-voice"
         placeholder="https://etherscan.io/"
+        prefix-icon="url"
       />
     </form-field>
     <form-field class="file-upload">
@@ -117,6 +120,8 @@ const imageRatio = async function (node) {
           fileSize: 'File size must be below 3MB',
           imageRatio: 'Image ratio must be 16:6',
         }"
+        file-item-icon="fileImage"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
 
@@ -139,6 +144,8 @@ const imageRatio = async function (node) {
         :validation-messages="{
           fileSize: 'Each file must be below 3MB',
         }"
+        file-item-icon="fileImage"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
       <p class="whisper-voice">Accepted file size: 6MB</p>
