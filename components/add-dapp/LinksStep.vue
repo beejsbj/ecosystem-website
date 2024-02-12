@@ -163,6 +163,14 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     }
   }
 
+  :deep(.formkit-outer) {
+    margin: unset;
+  }
+
+  :deep(.formkit-label) {
+    padding: unset;
+  }
+
   :deep(.formkit-wrapper) {
     grid-template-columns: 0.2fr 1fr;
   }

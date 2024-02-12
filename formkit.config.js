@@ -12,6 +12,7 @@ import {
   cryptoIcons,
   inputIcons,
   fileIcons,
+  brandIcons,
 } from "@formkit/icons";
 
 //pro
@@ -28,6 +29,7 @@ const icons = {
   ...cryptoIcons,
   ...inputIcons,
   ...fileIcons,
+  ...brandIcons,
 };
 
 //classes
