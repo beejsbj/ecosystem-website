@@ -87,34 +87,28 @@ const inputs = ref([
   },
 
   //   pro
-  {
-    label: "Autocomplete",
-    type: "autocomplete",
-    options: options.value,
-  },
-  {
-    label: "Taglist",
-    type: "taglist",
-    options: options.value,
-  },
-  {
-    label: "Dropdown",
-    type: "dropdown",
-    options: options.value,
-  },
+  //   {
+  //     label: "Autocomplete",
+  //     type: "autocomplete",
+  //     options: options.value,
+  //   },
+  //   {
+  //     label: "Taglist",
+  //     type: "taglist",
+  //     options: options.value,
+  //   },
+  //   {
+  //     label: "Dropdown",
+  //     type: "dropdown",
+  //     options: options.value,
+  //   },
 
-  {
-    label: "Repeater",
-    type: "repeater",
-    options: options.value,
-    isRepeater: true,
-  },
-
-  {
-    label: "Multi Select",
-    type: "tags",
-    isMultiselect: true,
-  },
+  //   {
+  //     label: "Repeater",
+  //     type: "repeater",
+  //     options: options.value,
+  //     isRepeater: true,
+  //   },
 ]);
 </script>
 
@@ -236,11 +230,6 @@ const inputs = ref([
           />
         </li>
       </template>
-      <li>
-        <form-field label="Submit">
-          <FormKit type="submit" label="Submit" />
-        </form-field>
-      </li>
     </ul>
   </form>
 </template>
@@ -250,10 +239,10 @@ ul {
   display: grid;
   --gap: var(--space-xl);
   gap: var(--gap);
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   @media (min-width: 768px) {
-    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 
   li.grid {
