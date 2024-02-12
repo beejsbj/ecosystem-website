@@ -42,7 +42,6 @@ onMounted(() => {
       <FormKit
         type="text"
         label="What is the name of your dApp?"
-        label-class="$reset calm-voice"
         name="dappName"
         placeholder="dApp Name"
         validation="required|length:0,30"
@@ -59,7 +58,6 @@ onMounted(() => {
         id="logoForm"
         type="file"
         label="Upload your dApp’s logo."
-        label-class="$reset calm-voice"
         name="logo"
         no-files-icon="fileImage"
         fileName="logo"
@@ -84,7 +82,6 @@ onMounted(() => {
       <FormKit
         type="text"
         label="Enter your  dApp’s slogan."
-        label-class="$reset calm-voice"
         name="shortDescription"
         placeholder="dApp slogan"
         help="Insert a quater-tweet sized description of your dApp"
@@ -103,7 +100,6 @@ onMounted(() => {
         auto-height
         rows="5"
         label="Tell us about your dApp."
-        label-class="$reset calm-voice"
         name="longDescription"
         placeholder="dApp description"
         help="This is going to be your 'About', it can be a paragraph or two."

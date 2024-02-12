@@ -83,7 +83,6 @@ async function handleUpdateProxy() {
         <FormKit
           type="text"
           label="Proxy address"
-          label-class="$reset calm-voice"
           name="proxyAddress"
           validation-label="Proxy address"
           id="proxyAddress"

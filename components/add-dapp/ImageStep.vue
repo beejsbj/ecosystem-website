@@ -71,7 +71,6 @@ const imageRatio = async function (node) {
         id="dapp"
         v-model="dappForm.links.dapp"
         label="Where can someone find your dApp?*"
-        label-class="$reset calm-voice"
         placeholder="https://yourdapp.com"
         prefix-icon="url"
       />
@@ -85,7 +84,6 @@ const imageRatio = async function (node) {
         id="docs"
         v-model="dappForm.links.docs"
         label="Where can someone find your dApp’s documentation?"
-        label-class="$reset calm-voice"
         placeholder="https://docs.api3.org/"
         prefix-icon="url"
       />
@@ -99,7 +97,6 @@ const imageRatio = async function (node) {
         id="explorer"
         v-model="dappForm.links.explorer"
         label="Explorer"
-        label-class="$reset calm-voice"
         placeholder="https://etherscan.io/"
         prefix-icon="url"
       />
@@ -109,7 +106,6 @@ const imageRatio = async function (node) {
         id="coverForm"
         type="file"
         label="Upload a branded cover*"
-        label-class="$reset calm-voice"
         name="cover"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
         v-auto-animate
@@ -135,7 +131,6 @@ const imageRatio = async function (node) {
         type="file"
         multiple="true"
         label="Upload your screenshots"
-        label-class="$reset calm-voice"
         name="screenshots"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
         validation="fileSize"
