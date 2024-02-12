@@ -1,3 +1,5 @@
+@import "api3-design-tokens";
+
 html {
   /* Black and white */
   --hue: 166;
@@ -31,15 +33,15 @@ html {
   --violet-darker: hsla(calc(90 + var(--hue)), 34%, 34%, 1);
   --violet-darkest: hsla(calc(90 + var(--hue)), 34%, 10%, 1);
 
-  --blue: hsla(calc(60 + var(--hue)), 100%, 55%, 1);
+  --indigo: hsla(calc(60 + var(--hue)), 100%, 55%, 1);
 
-  --blue-light: hsla(calc(60 + var(--hue)), 100%, 65%, 1);
-  --blue-lighter: hsla(calc(60 + var(--hue)), 100%, 75%, 1);
-  --blue-lightest: hsla(calc(60 + var(--hue)), 100%, 85%, 1);
+  --indigo-light: hsla(calc(60 + var(--hue)), 100%, 65%, 1);
+  --indigo-lighter: hsla(calc(60 + var(--hue)), 100%, 75%, 1);
+  --indigo-lightest: hsla(calc(60 + var(--hue)), 100%, 85%, 1);
 
-  --blue-dark: hsla(calc(60 + var(--hue)), 100%, 45%, 1);
-  --blue-darker: hsla(calc(60 + var(--hue)), 100%, 35%, 1);
-  --blue-darkest: hsla(calc(60 + var(--hue)), 100%, 25%, 1);
+  --indigo-dark: hsla(calc(60 + var(--hue)), 100%, 45%, 1);
+  --indigo-darker: hsla(calc(60 + var(--hue)), 100%, 35%, 1);
+  --indigo-darkest: hsla(calc(60 + var(--hue)), 100%, 25%, 1);
 
   --success: hsla(148, 76%, 41%, 1);
   --warning: hsla(40, 100%, 55%, 1);
