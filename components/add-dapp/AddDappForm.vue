@@ -121,7 +121,7 @@ onMounted(async () => {
     <FormKit
       type="multi-step"
       tab-style="progress"
-      :allow-incomplete="true"
+      :allow-incomplete="false"
       :hide-progress-labels="true"
       valid-step-icon=""
     >
@@ -234,10 +234,14 @@ div.actions {
   justify-content: center;
   gap: var(--space-m);
 
+  .formkit-outer {
+    margin: unset;
+  }
+
   button {
-    padding: 1em var(--space-xl);
+    padding: 1em 2em;
     @media (min-width: 768px) {
-      padding: 1em var(--space-3xl);
+      padding: 1em 3em;
     }
   }
 }

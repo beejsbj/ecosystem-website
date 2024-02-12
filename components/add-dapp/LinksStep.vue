@@ -172,7 +172,11 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
   }
 
   :deep(.formkit-wrapper) {
-    grid-template-columns: 0.2fr 1fr;
+    //  grid-template-columns: 0.2fr 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 0.2fr 1fr;
+    }
   }
 
   :deep(picture) {
