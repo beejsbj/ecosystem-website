@@ -1,9 +1,11 @@
 [
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "4/4/2023",
     "totalLiquidated": "0.418094464793208955518267",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x4f43a2ca779a5c8101da319ae44566d848594272ec05c219578e971b944a5e6f",
@@ -12,14 +14,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1810.466255484756",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/17/2023",
     "totalLiquidated": "5274.83181870375970515228",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xcc275a0043b7f49d9bbf4f726d9bcb8b26ddf154c9d23c3e2603879958a17737",
@@ -28,46 +31,49 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1823.6630183475188",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/19/2023",
     "totalLiquidated": "4229.02897199122972864626156057",
     "totalSentToBuilder": "0.013647229033437868",
+    "totalSentToBuilderUSD": "24.57858286003057751437118",
     "liquidations": [
       {
         "hash": "0x2c49c6b19068d34cb5743846a4fa12991036d197151e836eaef504cd1e7a5529",
         "liquidatedCollateral": "4229.02897199122972864626156057",
         "sentToBuilder": "0.013647229033437868",
-        "sentToBuilderUSD": "24.5976421772795491608391538780924"
+        "sentToBuilderUSD": "24.57858286003057751437118"
       }
     ],
-    "ethPrice": "1802.3909554834493",
-    "totalSentToBuilderUSD": "24.5976421772795491608391538780924"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/23/2023",
     "totalLiquidated": "4534.50447347461207969076783248",
     "totalSentToBuilder": "0.0033035181329251",
+    "totalSentToBuilderUSD": "6.0050729180370422175128",
     "liquidations": [
       {
         "hash": "0xf0467b2d75a3d7ba8465fdea6194353027398d287513af5558b949ec16283bed",
         "liquidatedCollateral": "4534.50447347461207969076783248",
         "sentToBuilder": "0.0033035181329251",
-        "sentToBuilderUSD": "6.00712221090698292334346489605"
+        "sentToBuilderUSD": "6.0050729180370422175128"
       }
     ],
-    "ethPrice": "1818.4014644980855",
-    "totalSentToBuilderUSD": "6.00712221090698292334346489605"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/24/2023",
     "totalLiquidated": "6619.04344226841786050739131088",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x8fe3935c9dffb44e059c1112661fb5ecb0da95bbcd8361180cfdb44a1bc88421",
@@ -76,14 +82,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1854.1931182731782",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/2/2023",
     "totalLiquidated": "2353.2323406195644986634595045",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xacf4d8ae0a6199de95cae16bfade08ab9300699e9aeb08f4dc2ce1d17be13913",
@@ -92,14 +99,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1924.5672408676514",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/3/2023",
     "totalLiquidated": "0.1445616659987665838654712",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xc6b34ddc5b88d0a514007881631ea1341744528e7e049fe9c437cce1b68b398c",
@@ -108,14 +116,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1933.9598813832074",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/4/2023",
     "totalLiquidated": "1176.63866939454930899305116924",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x711cf696b9072df0f38ab30394e0dd96277fc0db253eff07e492793d42a926dc",
@@ -124,14 +133,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1953.7811276489165",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/25/2023",
     "totalLiquidated": "64.46517188649999932417466148",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x33f9bfcbb0c43627b9c8ee753cb8a3bfb8e0a186ee9d05a04f9d552aea9a57d5",
@@ -140,14 +150,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1850.431150587501",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "8/17/2023",
     "totalLiquidated": "7308.8081833582675187220068",
     "totalSentToBuilder": "0.021790346424907806",
+    "totalSentToBuilderUSD": "39.343938769084193295691698",
     "liquidations": [
       {
         "hash": "0x8b167794a1e2ee54203c1c627738fc846ffad83a83fd2ad15a5c5f5c9accb10c",
@@ -159,17 +170,18 @@
         "hash": "0x8c3cb7d732961cd6f14798ffac42fd1bf3220ed174385715408da2a19ff837fb",
         "liquidatedCollateral": "2803.4084303427023382669368",
         "sentToBuilder": "0.021790346424907806",
-        "sentToBuilderUSD": "39.4287705763970878644056745612642"
+        "sentToBuilderUSD": "39.343938769084193295691698"
       }
     ],
-    "ethPrice": "1809.4604742643007",
-    "totalSentToBuilderUSD": "39.4287705763970878644056745612642"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "8/18/2023",
     "totalLiquidated": "230559.82464903916484455617332577",
     "totalSentToBuilder": "0.796420006259473872",
+    "totalSentToBuilderUSD": "1339.609074470515741993326144",
     "liquidations": [
       {
         "hash": "0x0f0a5cfc2221b96823ca5d6c219290d6229e0389ce0bf22348e58642b92df9ea",
@@ -187,71 +199,75 @@
         "hash": "0x3d72c3c95868b63c745756d569df8229f09c5fb046ef71481aa1c1b36d5e841d",
         "liquidatedCollateral": "167821.16249118799327979340603428",
         "sentToBuilder": "0.655576538942675837",
-        "sentToBuilderUSD": "1098.6559217735959695510921195536243"
+        "sentToBuilderUSD": "1102.704946730656181605284324"
       },
       {
         "hash": "0xf1dc2d47ffe24be1406cef6ecdc73c543c2a975cf941b3e22b0d8406f658dc38",
         "liquidatedCollateral": "62488.01880185952075394876729149",
         "sentToBuilder": "0.140843467316798035",
-        "sentToBuilderUSD": "236.0342389010607161952397310546365"
+        "sentToBuilderUSD": "236.90412773985956038804182"
       }
     ],
-    "ethPrice": "1675.8621709457839",
-    "totalSentToBuilderUSD": "1334.6901606746566857463318506082608"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "9/11/2023",
     "totalLiquidated": "2487.3589446980192717211666417",
     "totalSentToBuilder": "0.03747229650333999",
+    "totalSentToBuilderUSD": "60.58407638643828238080225",
     "liquidations": [
       {
         "hash": "0x0030c6db90aeb3c313fb5ca7a9c0592d123683a574baae48a77b6db58ff48563",
         "liquidatedCollateral": "2487.3589446980192717211666417",
         "sentToBuilder": "0.03747229650333999",
-        "sentToBuilderUSD": "60.61092171145404929265773909259"
+        "sentToBuilderUSD": "60.58407638643828238080225"
       }
     ],
-    "ethPrice": "1617.486179584741",
-    "totalSentToBuilderUSD": "60.61092171145404929265773909259"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "9/12/2023",
     "totalLiquidated": "2259.456456687556520511",
     "totalSentToBuilder": "0.021137477798582751",
+    "totalSentToBuilderUSD": "32.794750365462414690196053",
     "liquidations": [
       {
         "hash": "0x5a660e43dd6b43640debc7380aeced2625a5f547d0ae5ce0a483c72607cfc1d6",
         "liquidatedCollateral": "2259.456456687556520511",
         "sentToBuilder": "0.021137477798582751",
-        "sentToBuilderUSD": "32.7608378221989915433507741629687"
+        "sentToBuilderUSD": "32.794750365462414690196053"
       }
     ],
-    "ethPrice": "1549.8934231592937",
-    "totalSentToBuilderUSD": "32.7608378221989915433507741629687"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/8/2023",
     "totalLiquidated": "3337.76328222575967689544187772",
     "totalSentToBuilder": "0.038753200754762841",
+    "totalSentToBuilderUSD": "63.348204411045424792768509",
     "liquidations": [
       {
         "hash": "0xbc76609b32bf4e35ed194432bd4cb086153bc3a75164fbfcd9488af5d015bfe1",
         "liquidatedCollateral": "3337.76328222575967689544187772",
         "sentToBuilder": "0.038753200754762841",
-        "sentToBuilderUSD": "63.3646941401346148392331147727256"
+        "sentToBuilderUSD": "63.348204411045424792768509"
       }
     ],
-    "ethPrice": "1635.0828552489816",
-    "totalSentToBuilderUSD": "63.3646941401346148392331147727256"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/9/2023",
     "totalLiquidated": "3001.75990121985996461880882",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x65e863ef997c139ebe5fdb5cbbb3311fee5fc6eff2e8e9a6a5847e1763894a25",
@@ -266,36 +282,38 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1634.2216551482747",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/10/2023",
     "totalLiquidated": "552.6646096894959663945147",
     "totalSentToBuilder": "0.005417600814351076",
+    "totalSentToBuilderUSD": "8.560416388439557075927636",
     "liquidations": [
       {
         "hash": "0x9020393a6c4accd9b7bb0f63a45e4f277dcac31f740e311b02681b975797838a",
         "liquidatedCollateral": "552.6646096894959663945147",
         "sentToBuilder": "0.005417600814351076",
-        "sentToBuilderUSD": "8.5607723220248710956319602025112"
+        "sentToBuilderUSD": "8.560416388439557075927636"
       }
     ],
-    "ethPrice": "1580.1777604853462",
-    "totalSentToBuilderUSD": "8.5607723220248710956319602025112"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/11/2023",
     "totalLiquidated": "945.2002663415076965439230988",
     "totalSentToBuilder": "0.006702300496502835",
+    "totalSentToBuilderUSD": "10.50706771036575462402831",
     "liquidations": [
       {
         "hash": "0x04438bf7075440922444ff3987367a1d2aaf2b71c342dea44d73e7bb2dcd307c",
         "liquidatedCollateral": "597.8385729061199234101910988",
         "sentToBuilder": "0.006702300496502835",
-        "sentToBuilderUSD": "10.505576049646656414967163951892"
+        "sentToBuilderUSD": "10.50706771036575462402831"
       },
       {
         "hash": "0x08e37a31fa047fcc7cd105862f146dbb4f9140bb1e269a1bd1a775760d7a10e5",
@@ -304,30 +322,32 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1567.4582264892952",
-    "totalSentToBuilderUSD": "10.505576049646656414967163951892"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/12/2023",
     "totalLiquidated": "276.42896359740673451790235275",
     "totalSentToBuilder": "0.002848609498597602",
+    "totalSentToBuilderUSD": "4.461936457295137038615114",
     "liquidations": [
       {
         "hash": "0x3d3d96e3db90ede6295f6e72ecce22995376c0f322874383fc772cfffad9a4c0",
         "liquidatedCollateral": "276.42896359740673451790235275",
         "sentToBuilder": "0.002848609498597602",
-        "sentToBuilderUSD": "4.457835160500723947157106742205"
+        "sentToBuilderUSD": "4.461936457295137038615114"
       }
     ],
-    "ethPrice": "1564.9162030441025",
-    "totalSentToBuilderUSD": "4.457835160500723947157106742205"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/31/2023",
     "totalLiquidated": "0.00243479022811449962430418",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x58aacd9a9e024eacd5014728377f556f557487dc2a1a5a31ff4b45b016a49c50",
@@ -336,46 +356,49 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1809.639301345049",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "11/12/2023",
     "totalLiquidated": "3167.40390355097506840811134398",
     "totalSentToBuilder": "0.022560357209513972",
+    "totalSentToBuilderUSD": "46.319090182635807767805744",
     "liquidations": [
       {
         "hash": "0xd2a88cf39a566718ec13c1e30807b87ccd6181dd0234f41a70494012fc9f6af6",
         "liquidatedCollateral": "3167.40390355097506840811134398",
         "sentToBuilder": "0.022560357209513972",
-        "sentToBuilderUSD": "46.31629121079658778124815528486"
+        "sentToBuilderUSD": "46.319090182635807767805744"
       }
     ],
-    "ethPrice": "2052.994586063755",
-    "totalSentToBuilderUSD": "46.31629121079658778124815528486"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "11/22/2023",
     "totalLiquidated": "3211.74450530010403898304",
     "totalSentToBuilder": "0.015284157197650178",
+    "totalSentToBuilderUSD": "29.55318851364445982229714",
     "liquidations": [
       {
         "hash": "0x70572251580949c214d16d5a6219cf34778a274d4568ff3c66b9aaae662f1247",
         "liquidatedCollateral": "3211.74450530010403898304",
         "sentToBuilder": "0.015284157197650178",
-        "sentToBuilderUSD": "29.6580635149877347199777900234"
+        "sentToBuilderUSD": "29.55318851364445982229714"
       }
     ],
-    "ethPrice": "1940.4448103653",
-    "totalSentToBuilderUSD": "29.6580635149877347199777900234"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "11/29/2023",
     "totalLiquidated": "523.51122473493316336199",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x2a1dd48bbcb819b80b1791e86be61ee941f2d15370c7f3d4572f6b6547045dce",
@@ -384,14 +407,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2048.535256652576",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/6/2023",
     "totalLiquidated": "1206.0820658828743032467318",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x52b77187e7071300f0e56917eeee107196ec01111bae986a5d819c68b192730c",
@@ -400,14 +424,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2294.0951698534136",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/11/2023",
     "totalLiquidated": "3386.72180021411222626314119702",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x14e06208c73a25f6eaa6b81b5e85144bde2d7ded23f7c580d2858a5d542838d8",
@@ -416,14 +441,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2352.0987284889175",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/12/2023",
     "totalLiquidated": "1907.263797029159039727",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x55091048ccdd37385cea6db489efc81f96b7d06f81e0395c75616c0539746e3a",
@@ -432,14 +458,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2222.3468384000316",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/15/2023",
     "totalLiquidated": "1112.98832823005300732137129",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x3192fabda10d1efe37816a326002c0374c2f89c0a0b9a2982692df9c69fa6793",
@@ -448,14 +475,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2317.4650743736975",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
   },
   {
     "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/17/2023",
     "totalLiquidated": "611.9030904263269640097464112",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x5a34711286b113d031d64b03b2b7c309598086b97fb7d8cb28d0dbca435d6ae9",
@@ -464,7 +492,145 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2227.936447135476",
-    "totalSentToBuilderUSD": "0"
+    "chainId": 1
+  },
+  {
+    "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
+    "date": "1/3/2024",
+    "totalLiquidated": "130614.824833574508814",
+    "totalSentToBuilder": "3.533250218988544995",
+    "totalSentToBuilderUSD": "8324.271956479198675767617775",
+    "liquidations": [
+      {
+        "hash": "0x5128f82e07664319ad3b94d8ceaabce3b8bb3ebbb0f6d54db0bb07c3af2b5ce5",
+        "liquidatedCollateral": "130614.824833574508814",
+        "sentToBuilder": "3.533250218988544995",
+        "sentToBuilderUSD": "8324.271956479198675767617775"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
+    "date": "1/19/2024",
+    "totalLiquidated": "8585.1136993909572434384670012",
+    "totalSentToBuilder": "0.035676012800015507",
+    "totalSentToBuilderUSD": "88.072979114597033959780255",
+    "liquidations": [
+      {
+        "hash": "0x1f50420eca499139ab05db9f0b7aa6af60b9de8139ac094d645b53ec5d71d651",
+        "liquidatedCollateral": "8585.1136993909572434384670012",
+        "sentToBuilder": "0.035676012800015507",
+        "sentToBuilderUSD": "88.072979114597033959780255"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
+    "date": "1/22/2024",
+    "totalLiquidated": "515.2517771314644470333",
+    "totalSentToBuilder": "0.000562838567975865",
+    "totalSentToBuilderUSD": "1.381761539145128121393825",
+    "liquidations": [
+      {
+        "hash": "0x5c35b871f0918d7c5b80367c29dfa825d120e17bb35e60e5ab397b70d4648582",
+        "liquidatedCollateral": "515.2517771314644470333",
+        "sentToBuilder": "0.000562838567975865",
+        "sentToBuilderUSD": "1.381761539145128121393825"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
+    "date": "1/23/2024",
+    "totalLiquidated": "7299.97092807198393505100931967",
+    "totalSentToBuilder": "0.040323008047707642",
+    "totalSentToBuilderUSD": "93.18452238404333447458572",
+    "liquidations": [
+      {
+        "hash": "0x3c2016ce8b29251e7e41a2576f9b0e42f0a0c8c0fe12811918d8a8fc5697f460",
+        "liquidatedCollateral": "129.82097140795254461287798509",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x40c7c7b6c4cd477ce73c9077ae620341dfece6ba44ae4fd1ce52e261981c2caa",
+        "liquidatedCollateral": "144.17826139433921312954824869",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x4dbf37bc389cdfe5fae652e9bde4cf3e4aa4010d0a3d55fd9289d4c0d327c747",
+        "liquidatedCollateral": "606.61981235674600564585261698",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x72ece5f18a2f913c31ddfca9a6c11dca26bbfac7d35bf26d2a38b6e59c78671a",
+        "liquidatedCollateral": "89.77522098751649031840038445",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x8a92d75385cd113bde77b60aac6c723f62fd505c68647641021d7ccfe2ab909f",
+        "liquidatedCollateral": "54.39733470571804071366719004",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xa01c63ff074cdd42cc7e609383b3d0793c67654c300885ccb533f806cc15ba14",
+        "liquidatedCollateral": "177.13683031513549678307340765",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xa4d797297f6ec614fc16eb48c01be6f73c8e66957d0d0b97da8fb965db5827d3",
+        "liquidatedCollateral": "5570.1758822228585524074515899",
+        "sentToBuilder": "0.040323008047707642",
+        "sentToBuilderUSD": "93.18452238404333447458572"
+      },
+      {
+        "hash": "0xbada0fdad80ce991aea8b4f12bd020a70f19b9fdb134d34fd6a3a32c8fcbb448",
+        "liquidatedCollateral": "0.00003622705410483334604496",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xeef43e6b8f2185547cec373fb82b05b5c924d6c8e39754581ec2fead0084eed0",
+        "liquidatedCollateral": "527.86657845466093167835232883",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xf5d1866404f617769fc327eb280b2b9e3ce74626a4e89d98d11473c83868b6c7",
+        "liquidatedCollateral": "0.00000000000255492843952308",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "SparkLend Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
+    "date": "1/24/2024",
+    "totalLiquidated": "382.50206503869920923528143216",
+    "totalSentToBuilder": "0.000739518817776989",
+    "totalSentToBuilderUSD": "1.657816129308973553164684",
+    "liquidations": [
+      {
+        "hash": "0x75653aadd5844b903078e94a7ca2016781d97714eff5dc09883db0facb1252d5",
+        "liquidatedCollateral": "382.50206503869920923528143216",
+        "sentToBuilder": "0.000739518817776989",
+        "sentToBuilderUSD": "1.657816129308973553164684"
+      }
+    ],
+    "chainId": 1
   }
 ]

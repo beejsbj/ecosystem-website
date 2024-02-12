@@ -1,9 +1,62 @@
 [
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
+    "date": "11/6/2021",
+    "totalLiquidated": "373224.36329327979453",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x682028d3bf0463e19e9a8a2670b3547414ea5eb73daadfb6a7a90a16b3759e43",
+        "liquidatedCollateral": "373224.36329327979453",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
+    "date": "11/16/2021",
+    "totalLiquidated": "7047.09287458361712",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0xde82f6e33e0d04ccbc99240378f7eaf84cb59d1e96410f6e8c2216acd039a770",
+        "liquidatedCollateral": "7047.09287458361712",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
+    "date": "11/18/2021",
+    "totalLiquidated": "3380.3644729019616",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x73a1b71f4b7f4c071e9aa145700659c7362a8b220652c91bf1cf70700b9493ec",
+        "liquidatedCollateral": "3380.3644729019616",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "1/8/2022",
     "totalLiquidated": "37966.6853361917058",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xbe3037870a8894f5f5304317cbe00f13cc77037b92de6ee1c1c4cb5a005f34a2",
@@ -12,15 +65,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "3201.79457434796",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "1/22/2022",
     "totalLiquidated": "548904.54525142893534",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xa125495be791a9b5f002624ce2658e9a0a68264065b1eb3826516062c2c7026c",
@@ -41,15 +94,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2564.3433423740635",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "4/7/2022",
     "totalLiquidated": "2177.7975546982025",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x21fb5cfd2f5d265780e26972f88aeed0363a5ca2c4ae22cae716554db4ae3686",
@@ -58,15 +111,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "3171.371104498954",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "4/30/2022",
     "totalLiquidated": "552.69949395323855",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x44f08c7cd449fb9ba7da4403814c574c6d3e2cc29d46b99ff4c8f40cfad813aa",
@@ -75,15 +128,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2817.4898821916195",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "5/9/2022",
     "totalLiquidated": "240.3344938017576",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x7aca49ce3ff6fc4fd3d7bffc3b521ca53f73fbc5c4a847373222b69e6c40ad3b",
@@ -92,15 +145,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2517.8299224886478",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "5/12/2022",
     "totalLiquidated": "339805.317856083121",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xe216cafe9ab67e57b6bfe380844fbe51ec68a741e323a1acdf98933404456fcf",
@@ -109,15 +162,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2080.910243657776",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "5/13/2022",
     "totalLiquidated": "128.6278937780711",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xc63bb593f608b458e136b024f15026d1da3bbf3d50e7a461c71925f9a966efb3",
@@ -126,15 +179,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1966.6991711336661",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "5/24/2022",
     "totalLiquidated": "57.63878729804286",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xc08a0d80f7315cbbc98a4caf65537e306df3073c0db018c3b7d8c1465e2e40cb",
@@ -143,15 +196,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1974.5811944790914",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "5/25/2022",
     "totalLiquidated": "604.89243806303988",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x04417c927ebf84ac73ad31e53482ae29a0e1d96343bd5f5060a93920c9e3e74b",
@@ -160,32 +213,32 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1979.770545006472",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "5/26/2022",
     "totalLiquidated": "4448.92555539333706",
     "totalSentToBuilder": "0.054881",
+    "totalSentToBuilderUSD": "106.745373909325",
     "liquidations": [
       {
         "hash": "0x89cb027d86a142cb00e8ade041090586a78aeb199e4fabee2edbf9b39e13b5ff",
         "liquidatedCollateral": "4448.92555539333706",
         "sentToBuilder": "0.054881",
-        "sentToBuilderUSD": "106.7349201494021018688"
+        "sentToBuilderUSD": "106.745373909325"
       }
     ],
-    "ethPrice": "1944.8428445072448",
-    "totalSentToBuilderUSD": "106.7349201494021018688",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "6/10/2022",
     "totalLiquidated": "8157.55882796546708",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xa25fa3bf4f7390a2b17e16020a6246e02faaa0961b578a3ceb4cb206ff81a519",
@@ -200,15 +253,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1788.4182866616045",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "6/12/2022",
     "totalLiquidated": "2455.30541683036672",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xc227461251f0c82df6b5cd1062935a5919681978a1710ba20d219736468880a2",
@@ -217,15 +270,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1530.0386174317211",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "6/13/2022",
     "totalLiquidated": "434894.52179931686364",
     "totalSentToBuilder": "0.002439822764847198",
+    "totalSentToBuilderUSD": "3.522702597163575540721902",
     "liquidations": [
       {
         "hash": "0x8b9df9eda34ea28a053eb1a9ad7bda04a9d0eb7ef12bddfbb7948e805a02a2ef",
@@ -249,24 +302,24 @@
         "hash": "0xed21d18e3d9773816fb5a0fa77a9856f080980ffefae6e0a94e269f028088cfc",
         "liquidatedCollateral": "990.75200104691974",
         "sentToBuilder": "0.002439822764847198",
-        "sentToBuilderUSD": "3.5491778731915135162151580647982"
+        "sentToBuilderUSD": "3.522702597163575540721902"
       }
     ],
-    "ethPrice": "1454.6867601728409",
-    "totalSentToBuilderUSD": "3.5491778731915135162151580647982",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "6/15/2022",
     "totalLiquidated": "126311.01893971385388",
     "totalSentToBuilder": "5.093827861533432934",
+    "totalSentToBuilderUSD": "6170.489713217989088924557178",
     "liquidations": [
       {
         "hash": "0x6ec27f7a6e2c9b3606e3f727afde38699fc36ed5ad81d9d92e38b34bd3b702d0",
         "liquidatedCollateral": "122825.89883587325484",
         "sentToBuilder": "5.093827861533432934",
-        "sentToBuilderUSD": "6188.3196282519319017901987450007756"
+        "sentToBuilderUSD": "6170.489713217989088924557178"
       },
       {
         "hash": "0xf859180d79fcef5e510cc9568ee2cd0a10f41567bf72013dfe566314e16192e2",
@@ -275,15 +328,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1214.8662649132034",
-    "totalSentToBuilderUSD": "6188.3196282519319017901987450007756",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "6/16/2022",
     "totalLiquidated": "245.80069831837828",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x3dfcc57a3edc32d67f835e2c6e63fa97966e7f0b0414a755e2e8017550c80995",
@@ -292,15 +345,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1230.3643353556051",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "6/17/2022",
     "totalLiquidated": "527.4414728832056",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x1cf1a846c9d79069d71c133cbe56f63e06b57df39462dcdf233765cb4ba867dc",
@@ -309,15 +362,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1068.6035748646073",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "6/18/2022",
     "totalLiquidated": "118798.38043811789331",
     "totalSentToBuilder": "0.008023200013992205",
+    "totalSentToBuilderUSD": "8.71622742317682270403565",
     "liquidations": [
       {
         "hash": "0x425c543c2b2b6f1f3970ec54d01723ccda9513a53e6082de9de8196b99d91538",
@@ -335,18 +388,18 @@
         "hash": "0xef075bec7f534f5fe8d17666bcf201965d39b556aab186109efb14b484fe8f0a",
         "liquidatedCollateral": "497.93829318804804",
         "sentToBuilder": "0.008023200013992205",
-        "sentToBuilderUSD": "8.7277486939358431596769574874825"
+        "sentToBuilderUSD": "8.71622742317682270403565"
       }
     ],
-    "ethPrice": "1087.8139244584365",
-    "totalSentToBuilderUSD": "8.7277486939358431596769574874825",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "7/2/2022",
     "totalLiquidated": "51.2763690984288",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x6f8ca1293ec7f8980b7d3706617463233be88d230113c18af488f488c65e8108",
@@ -355,15 +408,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1068.8194401301964",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "7/11/2022",
     "totalLiquidated": "259.63930530756132",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xe7bc6c3560ed984a3798025c435129998336ab2e3491572940e67957fa062898",
@@ -372,32 +425,32 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1169.012707661018",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "9/8/2022",
     "totalLiquidated": "212782.70057038953341",
     "totalSentToBuilder": "4.123735782454401387",
+    "totalSentToBuilderUSD": "6720.885922700593364514179112",
     "liquidations": [
       {
         "hash": "0xcd7450a04d7e8414c265b0f6d3d8b88688632520bd3cbc5a47b0c13c1a74a46e",
         "liquidatedCollateral": "212782.70057038953341",
         "sentToBuilder": "4.123735782454401387",
-        "sentToBuilderUSD": "6721.2078015719393169980564659015791"
+        "sentToBuilderUSD": "6720.885922700593364514179112"
       }
     ],
-    "ethPrice": "1629.8832311636493",
-    "totalSentToBuilderUSD": "6721.2078015719393169980564659015791",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "9/22/2022",
     "totalLiquidated": "6375.26352567174",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x1e20fc287f2bedc58b6c9a18a8a52c9e7b521442e1a8887aaea63ea4aea62392",
@@ -406,15 +459,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1252.7745621685783",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "11/10/2022",
     "totalLiquidated": "5130.61337523488805",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xcf4a9a3a7c9b213b116d56d48fc1ae4d10e3e958f7bb9d57c5aa9a542e7d5dba",
@@ -423,15 +476,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1095.1839771132936",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "11/21/2022",
     "totalLiquidated": "103.82241426279624",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0x38898a4a738a521deffb66d1519ac23cfb390635baa33e8c98942857d9e471f4",
@@ -440,32 +493,32 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1144.2531525085535",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "12/24/2022",
     "totalLiquidated": "38363.23980044181252",
     "totalSentToBuilder": "0.308607045807353759",
+    "totalSentToBuilderUSD": "376.53698682781318913526128",
     "liquidations": [
       {
         "hash": "0x8199d9f9dcdbbd42ca6393ee602011d4728a83c682d7bb46ef471a4ce34406fa",
         "liquidatedCollateral": "38363.23980044181252",
         "sentToBuilder": "0.308607045807353759",
-        "sentToBuilderUSD": "376.717159311577061871218380575574"
+        "sentToBuilderUSD": "376.53698682781318913526128"
       }
     ],
-    "ethPrice": "1220.701744919786",
-    "totalSentToBuilderUSD": "376.717159311577061871218380575574",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "1/21/2023",
     "totalLiquidated": "232.55767744442994",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xf7494c99f9bafb776e6d943ac77e9bc67534a48a3b63b96ae6adaa891c95bb36",
@@ -474,15 +527,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1661.3349193405402",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "4/18/2023",
     "totalLiquidated": "577.48066649261631",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xe54db0ea707b7022da5704a35e6e9342c2028557e763b41455c15443eba3ec62",
@@ -491,15 +544,15 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "2077.5356646371833",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   },
   {
-    "name": "Notional Finance Ethereum",
+    "name": "National Finance Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48",
     "date": "5/4/2023",
     "totalLiquidated": "0",
     "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
     "liquidations": [
       {
         "hash": "0xec149c1c292180c84c719f3dd06a6674b77cd7ac3f3ecf69622743a014589ee0",
@@ -508,8 +561,6 @@
         "sentToBuilderUSD": "0"
       }
     ],
-    "ethPrice": "1903.7282107352776",
-    "totalSentToBuilderUSD": "0",
-    "icon": "https://icons.llamao.fi/icons/protocols/notional?w=48&h=48"
+    "chainId": 1
   }
 ]
