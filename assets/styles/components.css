@@ -251,16 +251,16 @@ a.router-link-exact-active:not(.site-logo)::after {
 
 /* tooltip */
 .v-popper--theme-tooltip .v-popper__inner {
-  background: var(--gradient-color-dark) !important;
+  background: var(--paper) !important;
   font-family: var(--font);
   color: var(--ink);
-  padding: var(--space-xs);
-  border-radius: var(--corners);
+  padding: var(--space-xs) var(--space-s) !important;
+  border-radius: calc(var(--corners) / 2);
   box-shadow: var(--shadow);
 }
 
 .v-popper--theme-tooltip .v-popper__arrow-outer {
-  border-color: var(--green) !important;
+  border-color: var(--ink) !important;
 }
 
 .v-popper--theme-tooltip .v-popper__arrow-inner {

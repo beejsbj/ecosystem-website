@@ -77,7 +77,7 @@ const maxHeight = computed(() => {
               <span
                 class="liquidated"
                 :class="{ hide: !showLiquidatedBar }"
-                v-tooltip="protocol.totalLiquidated"
+                v-tooltip.top-end="`$${protocol.totalLiquidated}`"
               >
                 <span class="number firm-voice">
                   {{ formatNumber(protocol.totalLiquidated) }}
@@ -86,7 +86,7 @@ const maxHeight = computed(() => {
               <span
                 class="totalSentToBuilderUSD"
                 :class="{ hide: !showSentToBuilderBar }"
-                v-tooltip="protocol.totalSentToBuilderUSD"
+                v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
               >
                 <span class="number firm-voice">
                   {{ formatNumber(protocol.totalSentToBuilderUSD) }}
