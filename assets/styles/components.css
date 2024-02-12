@@ -11,7 +11,7 @@
   --data-color: var(--green);
 }
 [data-color="blue"] {
-  --data-color: var(--blue);
+  --data-color: var(--indigo);
 }
 [data-color="violet"] {
   --data-color: var(--violet);
