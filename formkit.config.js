@@ -20,10 +20,6 @@ import { createProPlugin, inputs } from "@formkit/pro";
 //
 import { generateClasses } from "@formkit/themes";
 
-//css
-import "@formkit/addons/css/multistep";
-import "@formkit/themes/genesis";
-
 //////////////////////////////
 
 //icons
@@ -67,7 +63,7 @@ const autoAnimate = {
 //plugins
 const plugins = [
   createMultiStepPlugin(),
-  createAutoHeightTextareaPlugin(),
+  createAutoHeightTextareaPlugin,
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
   //  proPlugin,
@@ -75,9 +71,13 @@ const plugins = [
 
 //config
 export default defineFormKitConfig(() => {
-  //   const config = useRuntimeConfig();
+  const config = useRuntimeConfig(); //#fixme
+
   // pro
-  // const proPlugin = createProPlugin("config.FORMKIT_PRO_KEY", inputs);
+  if (config.public.nodeEnv === "development") {
+    const proPlugin = createProPlugin(config.public.FORMKIT_PRO_KEY, inputs);
+    plugins.push(proPlugin);
+  }
 
   return {
     plugins,
