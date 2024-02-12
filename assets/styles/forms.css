@@ -1,5 +1,7 @@
+@import "formkit-theme.css";
+
 :root {
-  --fk-color-primary: var(--green) !important;
+  /* --fk-color-primary: var(--green) !important;
   --fk-color-border-focus: var(--green) !important;
   --fk-color-checked: var(--green) !important;
   --fk-color-border: var(--gray) !important;
@@ -18,7 +20,7 @@
 
   --fk-margin-outer: 0 !important;
 
-  --fk-margin-decorator: 0 !important;
+  --fk-margin-decorator: 0 !important; */
 
   /* vueform/multistep */
 
@@ -45,23 +47,13 @@ form,
   gap: var(--space-l);
 }
 
-input-field,
-form :is(form-field) {
-  display: grid;
-  gap: var(--space-s);
+.formkit-inner {
+  position: relative !important;
 }
 
-:is(form-field, input-field) input {
-  padding: var(--space-xs);
-}
+/* multistep */
 
-.formkit-fieldset {
-  border: unset !important;
-  /* box-shadow: 0 0 0 1px var(--green) !important; */
-}
-
-.formkit-wrapper {
-  max-width: 736px !important;
+[data-type="multi-step"] .formkit-wrapper {
   margin: 0 auto !important;
 
   display: grid !important;
@@ -85,11 +77,6 @@ form :is(form-field) {
 }
 .formkit-tab[data-active="true"]::before {
   background: var(--gray) !important;
-}
-
-.formkit-inner {
-  box-shadow: unset !important;
-  position: relative !important;
 }
 
 .formkit-steps {
@@ -119,56 +106,11 @@ form :is(form-field) {
 }
 
 .formkit-inner svg * {
-  fill: var(--ink) !important;
-}
-/* Label */
-label {
-  cursor: pointer;
-  color: var(--gray-light) !important;
+  /* fill: var(--ink) !important; */
 }
 
 .file-upload .formkit-no-files {
   color: var(--green) !important;
-}
-
-/* text input */
-
-input:not(.multiselect input, .formkit-inner input, input[type="file"]),
-textarea,
-.formkit-inner:not(.file-upload .formkit-inner) {
-  position: relative;
-  background: var(--gray-darkest);
-}
-
-:is(
-    input:not(.multiselect input, .formkit-inner input, input[type="file"]),
-    textarea,
-    .formkit-inner,
-    .formkit-fieldset,
-    .multiselect.is-active,
-    form-field.file-upload
-  ):is(:focus-visible, :focus-visible, :focus-within, :active) {
-  /* box-shadow: var(--shadow) !important; */
-}
-
-/* Radio/checkbox */
-.radio-group {
-  display: grid;
-  gap: var(--space-s);
-}
-
-:is([data-type="checkbox"], [data-type="radio"]) .formkit-wrapper {
-  display: flex !important;
-}
-:is([data-type="checkbox"], [data-type="radio"]) .formkit-decorator {
-  width: var(--step-0) !important;
-  height: var(--step-0) !important;
-  border-radius: (var(--corners) / 8) !important;
-}
-
-:is([data-type="checkbox"], [data-type="radio"]) .formkit-inner {
-  background: var(--gray-darkest) !important;
-  border-radius: (var(--corners) / 8) !important;
 }
 
 /* Multiselect */
@@ -249,25 +191,10 @@ form-field.file-upload {
   align-items: start;
 }
 
-/* range */
-input[type="range"] {
-  display: block;
-  width: 100%;
-  border-radius: var(--corners);
-  background: var(--gradient-dark);
-}
-input[type="range"]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: var(--line-width) !important;
-  cursor: pointer;
-  border-radius: var(--corners);
-  background: var(--gradient-color);
-}
-
 /*  */
 
 .text-action-error-500 {
-  color: var(--error);
+  color: var(--color-action-error-500);
 }
 
 /* vueform/multiselect */
