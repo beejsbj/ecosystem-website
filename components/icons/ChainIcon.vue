@@ -2,11 +2,27 @@
 import slug from "slug";
 slug.extend({ "/": "-" });
 
-const props = defineProps(["chain", "fill", "stroke", "strokeWidth"]);
+const props = defineProps([
+  "chain",
+  "fill",
+  "stroke",
+  "strokeWidth",
+  "chainId",
+]);
+
+const ecosystem = useEcosystemStore();
 
 const isTestnet = ref(false);
 const chain = computed(() => {
-  let chain = slug(props.chain);
+  let chain = "";
+
+  if (props.chain) {
+    chain = slug(props.chain);
+  }
+  if (props.chainId) {
+    chain = slug(ecosystem.chainNames(props.chainId));
+  }
+
   if (chain.includes("testnet")) {
     isTestnet.value = true;
   }
@@ -36,7 +52,7 @@ const chain = computed(() => {
 <style scoped lang="scss">
 picture {
   aspect-ratio: 1/1;
-  max-width: 20px;
+  width: 20px;
 
   img {
     width: 100%;
