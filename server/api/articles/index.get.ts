@@ -55,7 +55,7 @@ export default defineEventHandler(async (event) => {
     event.node.req.statusCode = 200;
     return { articles: articleListData?.slice(skips, limit), total };
   } catch (err: any) {
-    console.log("get articles error  ", err);
+    console.log("fetch articles error  ", err);
     event.node.req.statusCode = 500;
     return {
       code: "ERROR",
