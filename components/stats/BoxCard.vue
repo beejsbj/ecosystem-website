@@ -30,7 +30,7 @@ const props = defineProps(["teaser", "solid", "hideImage", "layout"]);
 
   cursor: pointer;
 
-  &.border-gradient-blue > * {
+  &.border-gradient-blue > *:not(picture) {
     filter: hue-rotate(70deg);
   }
 }
