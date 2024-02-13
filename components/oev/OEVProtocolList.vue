@@ -29,14 +29,17 @@ function buttonHandle(protocol) {
           <!-- Render a button with an event listener that calls the buttonHandle function and passes the protocol as an argument -->
           <button @click="buttonHandle(protocol)">
             <!-- Render a BoxCard component with the following props -->
+
             <BoxCard
               :teaser="protocol.name"
-              hideImage="true"
+              layout="flex"
               :class="{
                 'border-gradient-green': !protocol.hide,
                 'border-gradient-blue': protocol.hide,
               }"
-            />
+            >
+              <ChainIcon :chainId="protocol.chainId" />
+            </BoxCard>
           </button>
         </li>
       </template>
@@ -53,15 +56,28 @@ function buttonHandle(protocol) {
 }
 .protocol-list {
   display: grid;
-  gap: var(--space-l);
+  gap: var(--space-2xs);
   overflow-y: scroll;
   position: relative;
   max-height: 300px;
-  direction: rtl;
 
   @media (min-width: 768px) {
+    direction: rtl;
+
     max-height: 600px;
-    gap: var(--space-s);
+  }
+
+  .box-card {
+    direction: ltr;
+
+    :deep(picture) {
+      width: 50px;
+    }
+  }
+}
+:deep(.box-card .teaser-voice) {
+  @media (max-width: 768px) {
+    font-size: var(--step-0);
   }
 }
 
