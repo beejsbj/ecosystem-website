@@ -1,6 +1,6 @@
 [
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/15/2021",
     "totalLiquidated": "31564.025358861577578017791148293404",
@@ -35,7 +35,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/16/2021",
     "totalLiquidated": "143122.04846178193008363845094760964422",
@@ -406,7 +406,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/17/2021",
     "totalLiquidated": "83899.719196251559333771560359822427",
@@ -447,7 +447,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/18/2021",
     "totalLiquidated": "444.33582052695082755036648644728623",
@@ -470,7 +470,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/19/2021",
     "totalLiquidated": "7450.508393386585892717925523859001",
@@ -499,7 +499,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/20/2021",
     "totalLiquidated": "219843.88987857610799398423612486613309",
@@ -744,7 +744,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/21/2021",
     "totalLiquidated": "386.8202826573309891588234189399838",
@@ -761,7 +761,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/22/2021",
     "totalLiquidated": "185.0362514759058756126023699529705",
@@ -778,7 +778,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/23/2021",
     "totalLiquidated": "659.1154895231722176681642922945858",
@@ -801,7 +801,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/27/2021",
     "totalLiquidated": "3723.15117623704649196377514920762773",
@@ -830,7 +830,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/28/2021",
     "totalLiquidated": "1238424.09555202368662996498040492822993",
@@ -1093,7 +1093,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/29/2021",
     "totalLiquidated": "817186.34279431859284047802028828372908",
@@ -1434,7 +1434,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/31/2021",
     "totalLiquidated": "2490.6147121427758028160034204289247",
@@ -1457,7 +1457,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/2/2021",
     "totalLiquidated": "156539.56105905755269278013826914001625",
@@ -1528,7 +1528,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/4/2021",
     "totalLiquidated": "7273503.25058321182237985551924350487352",
@@ -4005,7 +4005,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/6/2021",
     "totalLiquidated": "500.3110030626733042548814456878028",
@@ -4022,7 +4022,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/8/2021",
     "totalLiquidated": "107.715777879603416319667678868864",
@@ -4039,7 +4039,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/11/2021",
     "totalLiquidated": "3125880.74474993805348447834232274464563",
@@ -4518,7 +4518,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/16/2021",
     "totalLiquidated": "17647.118428737418061940047834475901",
@@ -4541,7 +4541,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/19/2021",
     "totalLiquidated": "495.3222610176160259781660527388698",
@@ -4564,7 +4564,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/20/2021",
     "totalLiquidated": "299937.9712507003247392187989085244876",
@@ -4599,7 +4599,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/21/2021",
     "totalLiquidated": "493144.362842822262291886491627213219",
@@ -4634,7 +4634,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/23/2021",
     "totalLiquidated": "3424276.7841765791171892358428657530358",
@@ -4693,7 +4693,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/28/2021",
     "totalLiquidated": "49288.3909238395069402343863299000251",
@@ -4728,7 +4728,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/29/2021",
     "totalLiquidated": "2066.3848678955114576033723183536625",
@@ -4775,7 +4775,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/30/2021",
     "totalLiquidated": "536830.7040671413449629964659121033063",
@@ -6058,7 +6058,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/31/2021",
     "totalLiquidated": "918.1812810985109929072003451609285",
@@ -6087,7 +6087,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/3/2021",
     "totalLiquidated": "251566.0040019696212123666447018280431",
@@ -6206,7 +6206,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/4/2021",
     "totalLiquidated": "915.554400974227168639887601680733",
@@ -6223,7 +6223,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/7/2021",
     "totalLiquidated": "4220737.13868108665781990013464162336",
@@ -6258,7 +6258,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/8/2021",
     "totalLiquidated": "2221289.760873993564206203303199029594",
@@ -7133,7 +7133,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/18/2021",
     "totalLiquidated": "456.9459584927928310147529683370074",
@@ -7150,7 +7150,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/19/2021",
     "totalLiquidated": "42636.8446771938094448415862383868795",
@@ -7203,7 +7203,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/20/2021",
     "totalLiquidated": "114389.2621184333555373246007676206459",
@@ -7400,7 +7400,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/21/2021",
     "totalLiquidated": "56618.6088565329335204410607341489971",
@@ -7633,7 +7633,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/22/2021",
     "totalLiquidated": "543620.879040377001201661475179009295",
@@ -7986,7 +7986,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/23/2021",
     "totalLiquidated": "6396.458642568763213281669302396828",
@@ -8003,7 +8003,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/24/2021",
     "totalLiquidated": "9765.7876685925209762248624107618454",
@@ -8044,7 +8044,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/26/2021",
     "totalLiquidated": "456143.6502198585657921531151548665749",
@@ -8415,7 +8415,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/28/2021",
     "totalLiquidated": "126874.4044487077857509267239689235047",
@@ -8576,7 +8576,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/29/2021",
     "totalLiquidated": "59966.4529657464894647336399618244643",
@@ -8635,7 +8635,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/30/2021",
     "totalLiquidated": "55123.11543677093080958036625318578",
@@ -8652,7 +8652,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/1/2021",
     "totalLiquidated": "475.5256379846403966482114631940771",
@@ -8669,7 +8669,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/3/2021",
     "totalLiquidated": "90177.455726783428296984269083980778",
@@ -8698,7 +8698,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/4/2021",
     "totalLiquidated": "3821.9177699666055767115631312831006",
@@ -8745,7 +8745,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/5/2021",
     "totalLiquidated": "5764.7439908865606148738018351479869",
@@ -8786,7 +8786,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/6/2021",
     "totalLiquidated": "59237.5234389008253466857310024458045",
@@ -8983,7 +8983,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/7/2021",
     "totalLiquidated": "5685.3303686160269345050077365607133",
@@ -9060,7 +9060,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/8/2021",
     "totalLiquidated": "292370.7830572156805119515406352759393",
@@ -9395,7 +9395,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/11/2021",
     "totalLiquidated": "121801.3578045319733320497111316001232",
@@ -9520,7 +9520,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/12/2021",
     "totalLiquidated": "366472.3173876629846683406842695239684",
@@ -9603,7 +9603,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/15/2021",
     "totalLiquidated": "1544.3613597284616562754025352543052",
@@ -9626,7 +9626,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/16/2021",
     "totalLiquidated": "5595.1241605326201809073892968792814",
@@ -9655,7 +9655,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/18/2021",
     "totalLiquidated": "44268.02955645379906114063403918589",
@@ -9672,7 +9672,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/19/2021",
     "totalLiquidated": "50447.20820049681963159554144933839",
@@ -9689,7 +9689,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/20/2021",
     "totalLiquidated": "39793.2965478716325502141744674018333",
@@ -9760,7 +9760,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/21/2021",
     "totalLiquidated": "95518.8045466381207695838374423221992",
@@ -9783,7 +9783,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/23/2021",
     "totalLiquidated": "147.2492870525105338836007541759991",
@@ -9800,7 +9800,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/24/2021",
     "totalLiquidated": "395.0111010285758646634706186693659",
@@ -9823,7 +9823,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/26/2021",
     "totalLiquidated": "7819.920644595114637365855807212831",
@@ -9840,7 +9840,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/27/2021",
     "totalLiquidated": "31672.735446180871231416503116645262",
@@ -9935,7 +9935,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/28/2021",
     "totalLiquidated": "372900.2009111736057796299452618475941",
@@ -10090,7 +10090,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/29/2021",
     "totalLiquidated": "371591.264069829265535698737439917854",
@@ -10245,7 +10245,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/30/2021",
     "totalLiquidated": "161467.7969299584769633100384488706434",
@@ -10340,7 +10340,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/31/2021",
     "totalLiquidated": "57078.9019662658663885651364620163807",
@@ -10381,7 +10381,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/1/2021",
     "totalLiquidated": "908.9297059486897030275683877739659",
@@ -10404,7 +10404,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/2/2021",
     "totalLiquidated": "68744.5386047917987656765039728266836",
@@ -10487,7 +10487,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/3/2021",
     "totalLiquidated": "8240.9616270568915216882892055318304",
@@ -10534,7 +10534,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/4/2021",
     "totalLiquidated": "16196.655316480236743349737816110959",
@@ -10593,7 +10593,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/5/2021",
     "totalLiquidated": "700373.2813384609468370331506923208812",
@@ -10718,7 +10718,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/6/2021",
     "totalLiquidated": "22750.7476618252101024592650782556832",
@@ -10813,7 +10813,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/7/2021",
     "totalLiquidated": "673635.4061287125948964217640666425855",
@@ -10950,7 +10950,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/8/2021",
     "totalLiquidated": "10504.868315141428193619095472627495",
@@ -10973,7 +10973,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/9/2021",
     "totalLiquidated": "567.9062174558283838892064916152885",
@@ -10996,7 +10996,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/10/2021",
     "totalLiquidated": "723721.2882390761583934808632783993904",
@@ -11031,7 +11031,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/11/2021",
     "totalLiquidated": "122329.3392964481570731035471505613042",
@@ -11096,7 +11096,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/12/2021",
     "totalLiquidated": "178.5355728428006180263555313883797",
@@ -11113,7 +11113,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/13/2021",
     "totalLiquidated": "966530.0503341749770055065019135600931",
@@ -11196,7 +11196,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/14/2021",
     "totalLiquidated": "785.3352660441847899751227969003771",
@@ -11213,7 +11213,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/16/2021",
     "totalLiquidated": "683765.4020499216758374828428350322009",
@@ -11266,7 +11266,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/17/2021",
     "totalLiquidated": "125117.0690150107864234488604541421687",
@@ -11343,7 +11343,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/18/2021",
     "totalLiquidated": "5170077.6726755773869905766541925818888",
@@ -13364,7 +13364,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/19/2021",
     "totalLiquidated": "1897162.5589193940221166963571431447245",
@@ -13459,7 +13459,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/20/2021",
     "totalLiquidated": "20074.0850197418273534014125824055532",
@@ -13488,7 +13488,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/21/2021",
     "totalLiquidated": "390045.8367860367655592502950523556921",
@@ -13607,7 +13607,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/22/2021",
     "totalLiquidated": "31334.3208645608101736118756207601991",
@@ -13648,7 +13648,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/23/2021",
     "totalLiquidated": "288456.3722595462749510584202902347091",
@@ -13767,7 +13767,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/24/2021",
     "totalLiquidated": "1192532.3349416548343784114015766078332",
@@ -14150,7 +14150,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/25/2021",
     "totalLiquidated": "188215.7605520143911611773666688365402",
@@ -14335,7 +14335,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/26/2021",
     "totalLiquidated": "33632400.4674083731881692204024179786395",
@@ -17658,7 +17658,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/28/2021",
     "totalLiquidated": "231.1528243517811709830706190487393",
@@ -17675,7 +17675,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/1/2021",
     "totalLiquidated": "1082.6699489218732363005029932652599",
@@ -17698,7 +17698,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/2/2021",
     "totalLiquidated": "15090.372780597810795811666068786377",
@@ -17727,7 +17727,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/3/2021",
     "totalLiquidated": "700.8713270198537780672284017416426",
@@ -17750,7 +17750,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/4/2021",
     "totalLiquidated": "15841182.7375249148436228553828124426567",
@@ -20617,7 +20617,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/5/2021",
     "totalLiquidated": "2673452.4010431268900285693639148394979",
@@ -20916,7 +20916,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/6/2021",
     "totalLiquidated": "1391166.8689133902327260782372225503339",
@@ -21467,7 +21467,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/7/2021",
     "totalLiquidated": "7697.4976678182404889789238511708445",
@@ -21586,7 +21586,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/8/2021",
     "totalLiquidated": "40150.0690501149538789170874349419504",
@@ -21711,7 +21711,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/9/2021",
     "totalLiquidated": "17459.6167307450091706324556265647778",
@@ -21824,7 +21824,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/10/2021",
     "totalLiquidated": "9255.7920025255947652549509319881035",
@@ -21895,7 +21895,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/11/2021",
     "totalLiquidated": "125118.3452339693196316311279208846506",
@@ -21936,7 +21936,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/12/2021",
     "totalLiquidated": "136929.1664518024772161539342830075766",
@@ -21965,7 +21965,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/13/2021",
     "totalLiquidated": "13753.2581185621003713225820208716965",
@@ -22042,7 +22042,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/14/2021",
     "totalLiquidated": "377586.1477675404804102685228610746185",
@@ -22269,7 +22269,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/15/2021",
     "totalLiquidated": "1738.6470642535290630668018635310323",
@@ -22292,7 +22292,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/16/2021",
     "totalLiquidated": "389.7196405420438599864815738174158",
@@ -22315,7 +22315,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/17/2021",
     "totalLiquidated": "1428.969124679811307690662963323587",
@@ -22332,7 +22332,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/20/2021",
     "totalLiquidated": "1250.9948252818467536682134667153061",
@@ -22361,7 +22361,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/22/2021",
     "totalLiquidated": "1031.9997755249349340781465387565734",
@@ -22384,7 +22384,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/23/2021",
     "totalLiquidated": "504.6881503415838615254303790286678",
@@ -22407,7 +22407,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/25/2021",
     "totalLiquidated": "31453.68375554509882612331426397359",
@@ -22424,7 +22424,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/26/2021",
     "totalLiquidated": "2939.410381880033459212993172690429",
@@ -22483,7 +22483,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/28/2021",
     "totalLiquidated": "30760.8323469434406448003393366344081",
@@ -22566,7 +22566,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/29/2021",
     "totalLiquidated": "1747.1484515497500432882685901266236",
@@ -22601,7 +22601,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/30/2021",
     "totalLiquidated": "673.1073222794252330402159896947084",
@@ -22618,7 +22618,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/31/2021",
     "totalLiquidated": "585.8512786022597394336731675763271",
@@ -22641,7 +22641,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/5/2022",
     "totalLiquidated": "52989.726849940474218645074848319135",
@@ -22670,7 +22670,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/6/2022",
     "totalLiquidated": "5717.1617916465074296276874874251849",
@@ -22705,7 +22705,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/7/2022",
     "totalLiquidated": "12528.264309997080597993619781555293",
@@ -22734,7 +22734,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/8/2022",
     "totalLiquidated": "687432.1501434986671849374929846092048",
@@ -22763,7 +22763,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/10/2022",
     "totalLiquidated": "30043.9121201519876838347576591192611",
@@ -22876,7 +22876,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/11/2022",
     "totalLiquidated": "1520.0654594107891008157203836033975",
@@ -22899,7 +22899,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/20/2022",
     "totalLiquidated": "25443.4996182830955801920162532263707",
@@ -22928,7 +22928,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/21/2022",
     "totalLiquidated": "10710721.8363498169690115331205652643706",
@@ -23419,7 +23419,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/22/2022",
     "totalLiquidated": "26294663.6661839181419652211344279234219",
@@ -28410,7 +28410,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/24/2022",
     "totalLiquidated": "4466.2338906452350060162349306309194",
@@ -28451,7 +28451,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/27/2022",
     "totalLiquidated": "32981.0729174148899973597961779253687",
@@ -28504,7 +28504,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/28/2022",
     "totalLiquidated": "1285.6760354987379814759843149463911",
@@ -28539,7 +28539,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/29/2022",
     "totalLiquidated": "13178.510972220481652910649553070902",
@@ -28562,7 +28562,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/31/2022",
     "totalLiquidated": "29485.2273855081652549640507533984315",
@@ -28609,7 +28609,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/1/2022",
     "totalLiquidated": "211.9868896709834833083899226749227",
@@ -28626,7 +28626,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/3/2022",
     "totalLiquidated": "8226.4543894435849663153155195486767",
@@ -28667,7 +28667,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/4/2022",
     "totalLiquidated": "106356.8919880087815014643683380349088",
@@ -28714,7 +28714,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/5/2022",
     "totalLiquidated": "93333.74656733619166072459629121422",
@@ -28737,7 +28737,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/9/2022",
     "totalLiquidated": "178.9854717560375833326293345408445",
@@ -28754,7 +28754,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/10/2022",
     "totalLiquidated": "74198.5247090125355312792293397892961",
@@ -28777,7 +28777,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/13/2022",
     "totalLiquidated": "19602.49699382257641622919581191705",
@@ -28794,7 +28794,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/15/2022",
     "totalLiquidated": "152.7977409641875723026778257873954",
@@ -28811,7 +28811,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/17/2022",
     "totalLiquidated": "3231.702960771281384347753483651284",
@@ -28828,7 +28828,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/18/2022",
     "totalLiquidated": "2398.4703223027362393890976778057945",
@@ -28851,7 +28851,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/20/2022",
     "totalLiquidated": "445.7621706635144367391801264679985",
@@ -28868,7 +28868,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/21/2022",
     "totalLiquidated": "982.3602033787843720043147711324205",
@@ -28891,7 +28891,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/22/2022",
     "totalLiquidated": "738.7876303082968382445251635640205",
@@ -28908,7 +28908,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/24/2022",
     "totalLiquidated": "1497577.50444948860515235353584667115171",
@@ -30101,7 +30101,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/25/2022",
     "totalLiquidated": "4412.2915118839934942529523509330266",
@@ -30130,7 +30130,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/26/2022",
     "totalLiquidated": "21695.866612030449071142258975131628",
@@ -30177,7 +30177,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/27/2022",
     "totalLiquidated": "4820.4336531611993803186326253111687",
@@ -30212,7 +30212,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/28/2022",
     "totalLiquidated": "1340.373100348454082608372365186236",
@@ -30229,7 +30229,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/1/2022",
     "totalLiquidated": "10859.2656899846179151919027427002087",
@@ -30288,7 +30288,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/2/2022",
     "totalLiquidated": "3627.4751100653167762903309591868698",
@@ -30335,7 +30335,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/4/2022",
     "totalLiquidated": "4446.2482335279269318884192650656376",
@@ -30388,7 +30388,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/5/2022",
     "totalLiquidated": "8978.6121359666981731360751337804952",
@@ -30423,7 +30423,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/7/2022",
     "totalLiquidated": "1722.7387843959210427341197308538716",
@@ -30470,7 +30470,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/8/2022",
     "totalLiquidated": "8525.6627607749634697474785306631576",
@@ -30511,7 +30511,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/9/2022",
     "totalLiquidated": "293.6629761026364264802665964105383",
@@ -30534,7 +30534,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/11/2022",
     "totalLiquidated": "5062.6221863472280141573635688237165",
@@ -30575,7 +30575,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/13/2022",
     "totalLiquidated": "196.4566055706148433468380677041789",
@@ -30592,7 +30592,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/14/2022",
     "totalLiquidated": "1811.3997951042231293922489900556616",
@@ -30621,7 +30621,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/15/2022",
     "totalLiquidated": "700183.4737764108093238098847535552653",
@@ -30818,7 +30818,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/16/2022",
     "totalLiquidated": "124351.2814790288955204337791036629198",
@@ -30859,7 +30859,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/17/2022",
     "totalLiquidated": "22046.14697752892217268876984708341",
@@ -30876,7 +30876,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/18/2022",
     "totalLiquidated": "112.3607624962946898020446554453073",
@@ -30893,7 +30893,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/19/2022",
     "totalLiquidated": "209.3869625994406714059729202903397",
@@ -30910,7 +30910,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/20/2022",
     "totalLiquidated": "7352.9733704213354318720486650529712",
@@ -30933,7 +30933,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/22/2022",
     "totalLiquidated": "206.8944008095628582528645619031497",
@@ -30950,7 +30950,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/12/2022",
     "totalLiquidated": "4985.752597200991016653726685162558",
@@ -30973,7 +30973,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/13/2022",
     "totalLiquidated": "188.8383613850680189963160597239369",
@@ -30990,7 +30990,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/18/2022",
     "totalLiquidated": "285.06648530530497609378372687184",
@@ -31007,7 +31007,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/20/2022",
     "totalLiquidated": "149.8514797521333688926154612508043",
@@ -31024,7 +31024,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/22/2022",
     "totalLiquidated": "148.1641329990549673389213416012385",
@@ -31041,7 +31041,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/23/2022",
     "totalLiquidated": "399.5648172090501688725108579735682",
@@ -31058,7 +31058,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/24/2022",
     "totalLiquidated": "262.1053608764824187659863404358878",
@@ -31081,7 +31081,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/25/2022",
     "totalLiquidated": "209.281885678667268661106127461035",
@@ -31098,7 +31098,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/26/2022",
     "totalLiquidated": "25633.4533604485594207229407292669923",
@@ -31133,7 +31133,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/27/2022",
     "totalLiquidated": "10195.876704768970036627790747068401",
@@ -31168,7 +31168,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/28/2022",
     "totalLiquidated": "5265.483605024514488579367380325823",
@@ -31185,7 +31185,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/29/2022",
     "totalLiquidated": "34369.0643515523141214172045592325848",
@@ -31244,7 +31244,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/30/2022",
     "totalLiquidated": "17777.8244026497229399181547963287838",
@@ -31345,7 +31345,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/1/2022",
     "totalLiquidated": "2490936.858618586697032710237934467269",
@@ -31686,7 +31686,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/2/2022",
     "totalLiquidated": "5364.6085760220705547145857260648017",
@@ -31721,7 +31721,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/5/2022",
     "totalLiquidated": "527.8883973078488699488063055163141",
@@ -31744,7 +31744,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/6/2022",
     "totalLiquidated": "6420.673399115978306512743673717059",
@@ -31761,7 +31761,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/7/2022",
     "totalLiquidated": "541.457500351161843617819691242808",
@@ -31778,7 +31778,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/8/2022",
     "totalLiquidated": "229377.2092619909526423599316955844988",
@@ -31897,7 +31897,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/9/2022",
     "totalLiquidated": "1286103.4808619233469695306752439881743",
@@ -32388,7 +32388,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/10/2022",
     "totalLiquidated": "2340193.6673699704192226736091262380219",
@@ -33089,7 +33089,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/11/2022",
     "totalLiquidated": "3227552.17104645807741022363151149057715",
@@ -35038,7 +35038,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/12/2022",
     "totalLiquidated": "11610831.53031099399505409732899687533093",
@@ -37119,7 +37119,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/13/2022",
     "totalLiquidated": "28715.00264758325092650114015816620673",
@@ -37184,7 +37184,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/14/2022",
     "totalLiquidated": "3682.5996939264403977282930855469559",
@@ -37225,7 +37225,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/19/2022",
     "totalLiquidated": "14786.40105799731147026529106631965",
@@ -37242,7 +37242,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/24/2022",
     "totalLiquidated": "1265.548900051855027542725026913449",
@@ -37259,7 +37259,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/25/2022",
     "totalLiquidated": "131.819211105403503551230125478704",
@@ -37276,7 +37276,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/26/2022",
     "totalLiquidated": "78.12826365034147388530401735516072",
@@ -37293,7 +37293,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/27/2022",
     "totalLiquidated": "3714.8659421521655523943764576703852",
@@ -37346,7 +37346,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/28/2022",
     "totalLiquidated": "4484.75032930250749150627308056527",
@@ -37369,7 +37369,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/29/2022",
     "totalLiquidated": "2497.7756862599771665924036057875337",
@@ -37428,7 +37428,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/30/2022",
     "totalLiquidated": "1386.60978168620266887636549686357233",
@@ -37475,7 +37475,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/10/2022",
     "totalLiquidated": "6800.4089965136339433963831674087323",
@@ -37498,7 +37498,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/11/2022",
     "totalLiquidated": "51980.991299972985253158553694848437",
@@ -37521,7 +37521,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/12/2022",
     "totalLiquidated": "32958.2653059342038957599687040938665",
@@ -37568,7 +37568,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/13/2022",
     "totalLiquidated": "2138652.2380737342457687087849422544668",
@@ -38203,7 +38203,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/14/2022",
     "totalLiquidated": "902537.7529893244874743108392753839015",
@@ -38796,7 +38796,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/15/2022",
     "totalLiquidated": "281171.2913920601842118199042387641689",
@@ -39095,7 +39095,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/17/2022",
     "totalLiquidated": "3539.4301593452230432652263767932873",
@@ -39154,7 +39154,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/18/2022",
     "totalLiquidated": "812886.0268577686708921221410998515549",
@@ -39495,7 +39495,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/19/2022",
     "totalLiquidated": "63833.0741167151707316202627644726101",
@@ -39596,7 +39596,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/20/2022",
     "totalLiquidated": "1387.046368471426904815168500223629",
@@ -39619,7 +39619,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/14/2022",
     "totalLiquidated": "4038.498959016785179160864222991902",
@@ -39636,7 +39636,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/17/2022",
     "totalLiquidated": "698.0153456150007259517998235824212",
@@ -39653,7 +39653,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/18/2022",
     "totalLiquidated": "14688.95247337690421970660146649175",
@@ -39670,7 +39670,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/27/2022",
     "totalLiquidated": "140.9555132199303045703871131387754",
@@ -39687,7 +39687,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/29/2022",
     "totalLiquidated": "25581.00464584127854029848251666888876",
@@ -39722,7 +39722,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/4/2022",
     "totalLiquidated": "224.5802930275208548006387861928016",
@@ -39739,7 +39739,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/5/2022",
     "totalLiquidated": "1463.502534925186104499167335025564",
@@ -39756,7 +39756,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/7/2022",
     "totalLiquidated": "2386.8047108630699898808820330213559",
@@ -39779,7 +39779,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/11/2022",
     "totalLiquidated": "13671.892625003621309605980576882169",
@@ -39802,7 +39802,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/19/2022",
     "totalLiquidated": "3501.1720806985053396718129506415691",
@@ -39825,7 +39825,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/20/2022",
     "totalLiquidated": "16264.6706073498787763858282698467924",
@@ -39854,7 +39854,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/21/2022",
     "totalLiquidated": "1587.4405233866195880862392574772919",
@@ -39889,7 +39889,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/27/2022",
     "totalLiquidated": "1039.239754974879402762175398610923",
@@ -39906,7 +39906,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/28/2022",
     "totalLiquidated": "144.7879968200591495525846923410827",
@@ -39923,7 +39923,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/29/2022",
     "totalLiquidated": "83.45639563557852247666773818244168",
@@ -39940,7 +39940,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/30/2022",
     "totalLiquidated": "224.7813631587510188303689911530353",
@@ -39957,7 +39957,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/7/2022",
     "totalLiquidated": "248.2030813672240253692058266472041",
@@ -39974,7 +39974,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/19/2022",
     "totalLiquidated": "792.6410674769623070244068898403506",
@@ -39991,7 +39991,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/22/2022",
     "totalLiquidated": "2425.119049024825919360206316863564",
@@ -40008,7 +40008,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/27/2022",
     "totalLiquidated": "645.0172631953779756173399559609835",
@@ -40025,7 +40025,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/28/2022",
     "totalLiquidated": "476.7935345364019799758290750679782",
@@ -40042,7 +40042,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/29/2022",
     "totalLiquidated": "272623.2415502977209942931098534918185",
@@ -40113,7 +40113,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/30/2022",
     "totalLiquidated": "140.3989074682249577019543602718051",
@@ -40130,7 +40130,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/3/2022",
     "totalLiquidated": "1425.016071819528518710984613926044",
@@ -40147,7 +40147,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/10/2022",
     "totalLiquidated": "162.2250997244636570926252631366769",
@@ -40164,7 +40164,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/13/2022",
     "totalLiquidated": "54559.17449401282551922480927872483928",
@@ -40223,7 +40223,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/20/2022",
     "totalLiquidated": "3174.822596537793644005475535468145",
@@ -40246,7 +40246,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/21/2022",
     "totalLiquidated": "1211.4909837899724044022358912959955",
@@ -40275,7 +40275,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/24/2022",
     "totalLiquidated": "267.5915789515311606376858081462",
@@ -40292,7 +40292,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/29/2022",
     "totalLiquidated": "1761.7955291515120090062756821013817",
@@ -40315,7 +40315,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "10/31/2022",
     "totalLiquidated": "4213.2806859850102057345937063879439",
@@ -40344,7 +40344,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/1/2022",
     "totalLiquidated": "238.0755825443242267087084841706735",
@@ -40361,7 +40361,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/8/2022",
     "totalLiquidated": "109150.6557268948306948259714606503398",
@@ -40462,7 +40462,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/9/2022",
     "totalLiquidated": "176646.8950125986805064818655226479223",
@@ -40755,7 +40755,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/10/2022",
     "totalLiquidated": "87155.5946263833329073791815848218902",
@@ -40874,7 +40874,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/12/2022",
     "totalLiquidated": "202837.7907616826819220179606212220466",
@@ -40903,7 +40903,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/14/2022",
     "totalLiquidated": "1865.2046507056394832953029282914511",
@@ -40944,7 +40944,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/15/2022",
     "totalLiquidated": "5009.565246063635087076611453093978",
@@ -40961,7 +40961,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/23/2022",
     "totalLiquidated": "350.7027651141600821823349226727411",
@@ -40978,7 +40978,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "11/24/2022",
     "totalLiquidated": "326.7645785992819793028463394257838",
@@ -41001,7 +41001,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/2/2022",
     "totalLiquidated": "757715.89064812888113991094364072619622",
@@ -41606,7 +41606,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/17/2022",
     "totalLiquidated": "289573.1745578550629960944720021867434",
@@ -41647,7 +41647,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/22/2022",
     "totalLiquidated": "2037.4725549040877403686815041883718",
@@ -41670,7 +41670,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/28/2022",
     "totalLiquidated": "2254.306169628371171057690595612497",
@@ -41699,7 +41699,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "12/29/2022",
     "totalLiquidated": "6730.003087727442705538906992565429",
@@ -41722,7 +41722,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/4/2023",
     "totalLiquidated": "600.0705778864460981132862362095496",
@@ -41739,7 +41739,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/8/2023",
     "totalLiquidated": "3623.500530829768528756337319095624",
@@ -41756,7 +41756,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/21/2023",
     "totalLiquidated": "9744.974708786274651931708180370344",
@@ -41773,7 +41773,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "1/29/2023",
     "totalLiquidated": "8132.748465454519471959006282599948",
@@ -41802,7 +41802,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/2/2023",
     "totalLiquidated": "71494.27562377710041846722903339275",
@@ -41825,7 +41825,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/13/2023",
     "totalLiquidated": "412.7265250617302017952728853333086",
@@ -41842,7 +41842,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/14/2023",
     "totalLiquidated": "253661.5905910057035550762038830872",
@@ -41859,7 +41859,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/10/2023",
     "totalLiquidated": "1739.33752489947408105377245997444",
@@ -41876,7 +41876,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/11/2023",
     "totalLiquidated": "22654.0253729178657309558954415835442",
@@ -41929,7 +41929,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/18/2023",
     "totalLiquidated": "135488.3926437171251863767361047801597",
@@ -41952,7 +41952,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "3/25/2023",
     "totalLiquidated": "704.448376842153520414522592962538",
@@ -41969,7 +41969,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/4/2023",
     "totalLiquidated": "314283.8620054419798815236742271368",
@@ -41986,7 +41986,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/5/2023",
     "totalLiquidated": "10989.215523231582673660971055054705",
@@ -42009,7 +42009,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/11/2023",
     "totalLiquidated": "117.4965011798623975732625167499876",
@@ -42026,7 +42026,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/13/2023",
     "totalLiquidated": "2751.240318188501216876427741755928",
@@ -42043,7 +42043,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/14/2023",
     "totalLiquidated": "52159.426616823175979423482740902097",
@@ -42078,7 +42078,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/15/2023",
     "totalLiquidated": "13608.645264795581567375664226457489",
@@ -42113,7 +42113,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/16/2023",
     "totalLiquidated": "17782.7469378075892872191937122619441",
@@ -42148,7 +42148,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/17/2023",
     "totalLiquidated": "6099.6145911248549871573498091622577",
@@ -42177,7 +42177,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/21/2023",
     "totalLiquidated": "29146.60085248366779633686404523834",
@@ -42194,7 +42194,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/22/2023",
     "totalLiquidated": "11490.6470667442067098771528938128549",
@@ -42223,7 +42223,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/23/2023",
     "totalLiquidated": "127.6303309291470654509420997275346",
@@ -42240,7 +42240,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/24/2023",
     "totalLiquidated": "133806.029898081683609797547516241636",
@@ -42509,7 +42509,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/25/2023",
     "totalLiquidated": "78028.23880882242545024674269730145708",
@@ -42658,7 +42658,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/26/2023",
     "totalLiquidated": "266.6971351190716910897178339793197",
@@ -42675,7 +42675,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "4/27/2023",
     "totalLiquidated": "3981.6609318272683140810688436795407",
@@ -42710,7 +42710,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/1/2023",
     "totalLiquidated": "889.917693419325480865856332823327",
@@ -42727,7 +42727,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/2/2023",
     "totalLiquidated": "1603.2369359952994098569078572973046",
@@ -42762,7 +42762,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/5/2023",
     "totalLiquidated": "1949.7057827272686235265744691725354",
@@ -42791,7 +42791,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/6/2023",
     "totalLiquidated": "51340.0412818470871787959065592415532",
@@ -42946,7 +42946,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/7/2023",
     "totalLiquidated": "25945.9449670460913805722344276311933",
@@ -43023,7 +43023,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/8/2023",
     "totalLiquidated": "24408.7684447407411563013321189009369",
@@ -43142,7 +43142,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/9/2023",
     "totalLiquidated": "29134.1487939576953895543584233659461",
@@ -43195,7 +43195,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/10/2023",
     "totalLiquidated": "194.6634307685043533876910823513138",
@@ -43212,7 +43212,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/11/2023",
     "totalLiquidated": "136140.7907388148854468970900740568901",
@@ -43289,7 +43289,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/12/2023",
     "totalLiquidated": "29070.1589264713276451540316920521169",
@@ -43354,7 +43354,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/23/2023",
     "totalLiquidated": "182.3976008296715142553922558208537",
@@ -43371,7 +43371,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/24/2023",
     "totalLiquidated": "93470.031309561912502803242639691245",
@@ -43484,7 +43484,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/25/2023",
     "totalLiquidated": "261355.017163802535084307485095004223",
@@ -43567,7 +43567,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "5/31/2023",
     "totalLiquidated": "3241.8901657937386331400453427444239",
@@ -43590,7 +43590,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/1/2023",
     "totalLiquidated": "428.3609358973077343967174578909777",
@@ -43607,7 +43607,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/5/2023",
     "totalLiquidated": "18854.6771588556041907138075137144552",
@@ -43684,7 +43684,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/6/2023",
     "totalLiquidated": "3514.0213187046009637043769974714434",
@@ -43707,7 +43707,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/7/2023",
     "totalLiquidated": "6083.8177952376278220909047830920756",
@@ -43778,7 +43778,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/8/2023",
     "totalLiquidated": "6044.1243196921645574176008491571781",
@@ -43807,7 +43807,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/10/2023",
     "totalLiquidated": "324755.4796182416380668409224762708126",
@@ -44052,7 +44052,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/11/2023",
     "totalLiquidated": "158.8345905642849521697599469890779",
@@ -44069,7 +44069,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/12/2023",
     "totalLiquidated": "13417.7573844131898476084621776418866",
@@ -44134,7 +44134,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "6/15/2023",
     "totalLiquidated": "5298.9075590536303281660301600497047",
@@ -44163,7 +44163,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/24/2023",
     "totalLiquidated": "3849.599898346888394250617849504325",
@@ -44186,7 +44186,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "7/27/2023",
     "totalLiquidated": "551.7900901408966095057175741829555",
@@ -44203,7 +44203,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/16/2023",
     "totalLiquidated": "13941.8608283506210350279102073502846",
@@ -44232,7 +44232,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/17/2023",
     "totalLiquidated": "5597.9781639901973591483197769890883",
@@ -44267,7 +44267,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/18/2023",
     "totalLiquidated": "111775.0696972936750807908129593750477",
@@ -44326,7 +44326,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/21/2023",
     "totalLiquidated": "4141.0742428372736865788981918932602",
@@ -44385,7 +44385,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "8/22/2023",
     "totalLiquidated": "7962.986991870343425816302369403916",
@@ -44408,7 +44408,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/1/2023",
     "totalLiquidated": "11843.4069749187937956156528864332244",
@@ -44431,7 +44431,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/10/2023",
     "totalLiquidated": "43525.9061528777177605887082564777996",
@@ -44472,7 +44472,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/11/2023",
     "totalLiquidated": "2986.3127227290913207721212638325185",
@@ -44495,7 +44495,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "9/25/2023",
     "totalLiquidated": "82.89706269237409459272450683165656",
@@ -44512,7 +44512,7 @@
     "chainId": 56
   },
   {
-    "name": "Alpaca Lending BSC",
+    "name": "Alpaca Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/alpaca-finance?w=48&h=48",
     "date": "2/1/2024",
     "totalLiquidated": "2794.586287937537333385559947388802",

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/31/2023",
     "totalLiquidated": "1322.616412866578020259382",
@@ -17,7 +17,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/9/2023",
     "totalLiquidated": "1969.07519253121773402672982",
@@ -34,7 +34,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/10/2023",
     "totalLiquidated": "79291.3470550299999977456861",
@@ -51,7 +51,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/13/2023",
     "totalLiquidated": "448.89707346870088812341707918",
@@ -68,7 +68,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/4/2023",
     "totalLiquidated": "2678.7738693193658419437",
@@ -85,7 +85,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/9/2023",
     "totalLiquidated": "2124.2932540098322798",
@@ -102,7 +102,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/10/2023",
     "totalLiquidated": "73546.46354198208476480494510984",
@@ -221,7 +221,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/11/2023",
     "totalLiquidated": "60497.5334021804975492324",
@@ -244,7 +244,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/14/2023",
     "totalLiquidated": "12839.2057886807187",
@@ -261,7 +261,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/23/2023",
     "totalLiquidated": "49951.7011738132389981959092764",
@@ -284,7 +284,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/26/2023",
     "totalLiquidated": "3169.4734872460267193",
@@ -301,7 +301,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/27/2023",
     "totalLiquidated": "2507.6597740558930204433974935",
@@ -318,7 +318,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/5/2023",
     "totalLiquidated": "28434.3368160969",
@@ -335,7 +335,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/10/2023",
     "totalLiquidated": "2.9286188950746",
@@ -352,7 +352,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/13/2023",
     "totalLiquidated": "1288.57669424997",
@@ -369,7 +369,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/14/2023",
     "totalLiquidated": "1526.20070511219",
@@ -386,7 +386,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/18/2023",
     "totalLiquidated": "7574.63421812039799819853416",
@@ -403,7 +403,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/19/2023",
     "totalLiquidated": "41366.3572584173230660763741",
@@ -432,7 +432,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/20/2023",
     "totalLiquidated": "2948.06111545813250402012554",
@@ -449,7 +449,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/21/2023",
     "totalLiquidated": "22286.63377069900668779191289372",
@@ -472,7 +472,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/22/2023",
     "totalLiquidated": "65912.91632302432980670864701611",
@@ -519,7 +519,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/23/2023",
     "totalLiquidated": "998.501738024725426627793",
@@ -536,7 +536,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/24/2023",
     "totalLiquidated": "561.69018193434090107569048191",
@@ -553,7 +553,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/25/2023",
     "totalLiquidated": "4338.6847196218514998265646",
@@ -570,7 +570,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/26/2023",
     "totalLiquidated": "98.44933930147799863582335088",
@@ -587,7 +587,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/27/2023",
     "totalLiquidated": "4089.88494037376767131941208",
@@ -604,7 +604,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/2/2023",
     "totalLiquidated": "2946.9893558717842553666976",
@@ -621,7 +621,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/11/2023",
     "totalLiquidated": "2173.57375032740407115114632",
@@ -638,7 +638,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/12/2023",
     "totalLiquidated": "13337.65764204813954305684459958",
@@ -667,7 +667,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/25/2023",
     "totalLiquidated": "13804.5840449388082319913833",
@@ -690,7 +690,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/31/2023",
     "totalLiquidated": "531.4163924874258997138384173",
@@ -707,7 +707,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/1/2023",
     "totalLiquidated": "15524.53942652920449831976992",
@@ -724,7 +724,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/5/2023",
     "totalLiquidated": "6525.77665695598418017735344",
@@ -741,7 +741,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/6/2023",
     "totalLiquidated": "1126.4097374418504485",
@@ -758,7 +758,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/10/2023",
     "totalLiquidated": "273440.23146480038089183673936011",
@@ -859,7 +859,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/15/2023",
     "totalLiquidated": "310642.22084543850097639059328732",
@@ -984,7 +984,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/16/2023",
     "totalLiquidated": "3136.26978352758050466042775",
@@ -1001,7 +1001,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/20/2023",
     "totalLiquidated": "324.41243730605849990839832568",
@@ -1018,7 +1018,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/21/2023",
     "totalLiquidated": "86977.004386078752",
@@ -1035,7 +1035,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/23/2023",
     "totalLiquidated": "12982.9840025909349301688",
@@ -1052,7 +1052,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/30/2023",
     "totalLiquidated": "4707.6304705738629328",
@@ -1069,7 +1069,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/2/2023",
     "totalLiquidated": "6935.65987818794547829980143208",
@@ -1086,7 +1086,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/5/2023",
     "totalLiquidated": "80353.0232005037506675257379",
@@ -1109,7 +1109,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/6/2023",
     "totalLiquidated": "14235.7353404171002997729517",
@@ -1126,7 +1126,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/7/2023",
     "totalLiquidated": "14661.81512786521871808084301147",
@@ -1161,7 +1161,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/13/2023",
     "totalLiquidated": "3650.6441630584165856",
@@ -1178,7 +1178,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/14/2023",
     "totalLiquidated": "8691.3657363180851518246194414",
@@ -1201,7 +1201,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/17/2023",
     "totalLiquidated": "4114.103066457036687714695008",
@@ -1218,7 +1218,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/18/2023",
     "totalLiquidated": "6485.5726925847092992246",
@@ -1241,7 +1241,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/19/2023",
     "totalLiquidated": "1824.6422344602852082263",
@@ -1258,7 +1258,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/20/2023",
     "totalLiquidated": "7713.88130295517195666187646251",
@@ -1305,7 +1305,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/23/2023",
     "totalLiquidated": "3748.18513825452862251264",
@@ -1322,7 +1322,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/24/2023",
     "totalLiquidated": "352778.28356956956334466443980276",
@@ -1357,7 +1357,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/27/2023",
     "totalLiquidated": "1893.4706418262214391138174",
@@ -1380,7 +1380,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/31/2023",
     "totalLiquidated": "11864.59529530444613832918759832",
@@ -1403,7 +1403,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/1/2023",
     "totalLiquidated": "106550.30908051175291003906459022",
@@ -1450,7 +1450,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/5/2023",
     "totalLiquidated": "6419.7900451187288569417946249",
@@ -1479,7 +1479,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/9/2023",
     "totalLiquidated": "424460.6421239100894909585854",
@@ -1514,7 +1514,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/10/2023",
     "totalLiquidated": "16533.0265703396685129",
@@ -1531,7 +1531,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/16/2023",
     "totalLiquidated": "1527.8774620912164893",
@@ -1548,7 +1548,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/17/2023",
     "totalLiquidated": "538037.45496490210969745852207093",
@@ -1643,7 +1643,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/18/2023",
     "totalLiquidated": "8332802.9643623227525448175242125",
@@ -1978,7 +1978,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/19/2023",
     "totalLiquidated": "1490.59645037586940352066020548",
@@ -2013,7 +2013,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/20/2023",
     "totalLiquidated": "228.8094431325551199626",
@@ -2030,7 +2030,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/22/2023",
     "totalLiquidated": "18329.70799296406523790310537355",
@@ -2065,7 +2065,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/23/2023",
     "totalLiquidated": "4252.45025298396448684784511994",
@@ -2106,7 +2106,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/29/2023",
     "totalLiquidated": "7993.99600498677023918096",
@@ -2123,7 +2123,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/30/2023",
     "totalLiquidated": "4705.4514566246307764",
@@ -2146,7 +2146,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/1/2023",
     "totalLiquidated": "2066.08007475198306237522586128",
@@ -2181,7 +2181,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/2/2023",
     "totalLiquidated": "955.44556969536289498194652156",
@@ -2216,7 +2216,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/3/2023",
     "totalLiquidated": "831.255243121368789908",
@@ -2233,7 +2233,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/4/2023",
     "totalLiquidated": "785.80408509907374434908824",
@@ -2250,7 +2250,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/10/2023",
     "totalLiquidated": "3181.39065677582037252515363",
@@ -2291,7 +2291,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/11/2023",
     "totalLiquidated": "51892.58577259706867098645999",
@@ -2368,7 +2368,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/12/2023",
     "totalLiquidated": "166482.65524559474335427211144848",
@@ -2439,7 +2439,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/13/2023",
     "totalLiquidated": "573.26986211499727116521",
@@ -2462,7 +2462,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/17/2023",
     "totalLiquidated": "528.4191304482731950347816416",
@@ -2479,7 +2479,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/19/2023",
     "totalLiquidated": "7844.7553639077659290972120151",
@@ -2496,7 +2496,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/21/2023",
     "totalLiquidated": "8139.61311590072771936728",
@@ -2525,7 +2525,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/23/2023",
     "totalLiquidated": "246.0961508205347267",
@@ -2542,7 +2542,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/24/2023",
     "totalLiquidated": "35600.9101830448",
@@ -2559,7 +2559,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/25/2023",
     "totalLiquidated": "11513.675182576728782080901552",
@@ -2600,7 +2600,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/27/2023",
     "totalLiquidated": "22044.45297191092167927787315245",
@@ -2623,7 +2623,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/28/2023",
     "totalLiquidated": "6949.84167725199407806640690763",
@@ -2640,7 +2640,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/29/2023",
     "totalLiquidated": "209.6566400184050474512162682",
@@ -2657,7 +2657,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/3/2023",
     "totalLiquidated": "3319.20948496926857063977344",
@@ -2698,7 +2698,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/4/2023",
     "totalLiquidated": "366.29133812709769268339014482",
@@ -2721,7 +2721,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/6/2023",
     "totalLiquidated": "85.9399123768474693217968",
@@ -2738,7 +2738,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/8/2023",
     "totalLiquidated": "425.7500405730976965900967878",
@@ -2761,7 +2761,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/9/2023",
     "totalLiquidated": "33942.62960141628614032625819055",
@@ -2802,7 +2802,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/10/2023",
     "totalLiquidated": "131.3879956800309784",
@@ -2819,7 +2819,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/11/2023",
     "totalLiquidated": "5337.88619405204533778575740686",
@@ -2866,7 +2866,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/12/2023",
     "totalLiquidated": "167408.56594719086385315634464656",
@@ -2925,7 +2925,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/14/2023",
     "totalLiquidated": "9621.70156161401782352356774004",
@@ -2942,7 +2942,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/16/2023",
     "totalLiquidated": "104324.3857087744048309992855",
@@ -2977,7 +2977,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/20/2023",
     "totalLiquidated": "703.31308336836520717329754425",
@@ -2994,7 +2994,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/21/2023",
     "totalLiquidated": "57451.9201961331416089080956",
@@ -3029,7 +3029,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/22/2023",
     "totalLiquidated": "1381.41010769917927366654348328",
@@ -3058,7 +3058,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/23/2023",
     "totalLiquidated": "857935.5549077590486416887183987",
@@ -3099,7 +3099,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/25/2023",
     "totalLiquidated": "26729.75488385278672",
@@ -3116,7 +3116,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/26/2023",
     "totalLiquidated": "52172.99859332233533924330544666",
@@ -3187,7 +3187,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/27/2023",
     "totalLiquidated": "5454.50452681472729575478338686",
@@ -3216,7 +3216,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/29/2023",
     "totalLiquidated": "9222.55612429943765261242523705",
@@ -3245,7 +3245,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/31/2023",
     "totalLiquidated": "841.52473689309044897948275485",
@@ -3262,7 +3262,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/1/2023",
     "totalLiquidated": "12363.72043318492352998241604132",
@@ -3297,7 +3297,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/2/2023",
     "totalLiquidated": "39497.754453393546100889652221",
@@ -3344,7 +3344,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/3/2023",
     "totalLiquidated": "2361.79524459746072111340067783",
@@ -3373,7 +3373,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/5/2023",
     "totalLiquidated": "4239.5081789540817565491134",
@@ -3396,7 +3396,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/6/2023",
     "totalLiquidated": "50001.02693694998194",
@@ -3413,7 +3413,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/7/2023",
     "totalLiquidated": "240694.44421500447652025643763859",
@@ -3478,7 +3478,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/8/2023",
     "totalLiquidated": "15599.53827217293156",
@@ -3495,7 +3495,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/9/2023",
     "totalLiquidated": "582013.54921264957460643303937423",
@@ -3524,7 +3524,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/10/2023",
     "totalLiquidated": "15603.19280464752551779476286753",
@@ -3559,7 +3559,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/11/2023",
     "totalLiquidated": "79079.8533164685513255676",
@@ -3576,7 +3576,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/12/2023",
     "totalLiquidated": "6433.7029559016339889969207",
@@ -3593,7 +3593,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/13/2023",
     "totalLiquidated": "5261.8149045656065247361318324",
@@ -3610,7 +3610,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/15/2023",
     "totalLiquidated": "10341.2852792985558031068324",
@@ -3627,7 +3627,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/17/2023",
     "totalLiquidated": "8925.84168549405968183387",
@@ -3650,7 +3650,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/18/2023",
     "totalLiquidated": "2852.72458869929684918722",
@@ -3667,7 +3667,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/19/2023",
     "totalLiquidated": "1611.1167573985577991730452",
@@ -3684,7 +3684,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/21/2023",
     "totalLiquidated": "805.95743503039270882299",
@@ -3701,7 +3701,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/22/2023",
     "totalLiquidated": "33141.74418506397569550820044856",
@@ -3718,7 +3718,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/23/2023",
     "totalLiquidated": "27957.85474522230308439882053116",
@@ -3753,7 +3753,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/24/2023",
     "totalLiquidated": "2241.46011209113062",
@@ -3770,7 +3770,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/25/2023",
     "totalLiquidated": "15846.1644109398630138844611476",
@@ -3793,7 +3793,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/27/2023",
     "totalLiquidated": "448014.00015162900510150652719178",
@@ -3816,7 +3816,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/30/2023",
     "totalLiquidated": "65461.70714865330915323753911965",
@@ -3833,7 +3833,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/4/2023",
     "totalLiquidated": "331009.54098276749515648026043002",
@@ -3862,7 +3862,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/5/2023",
     "totalLiquidated": "42209.465390571678599988458",
@@ -3891,7 +3891,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/6/2023",
     "totalLiquidated": "4738.92461513450100060876",
@@ -3908,7 +3908,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/8/2023",
     "totalLiquidated": "1642.7509020575722",
@@ -3925,7 +3925,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/11/2023",
     "totalLiquidated": "465181.48000511207700110023085503",
@@ -4044,7 +4044,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/12/2023",
     "totalLiquidated": "4.4162158659749070042546114",
@@ -4061,7 +4061,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/13/2023",
     "totalLiquidated": "20631.20339578703618658566778579",
@@ -4078,7 +4078,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/14/2023",
     "totalLiquidated": "3051.23692802509705811417719264",
@@ -4095,7 +4095,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/16/2023",
     "totalLiquidated": "3092.3434993694672454482602",
@@ -4112,7 +4112,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/17/2023",
     "totalLiquidated": "2879.937592474841250044418",
@@ -4129,7 +4129,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/18/2023",
     "totalLiquidated": "172744.5843454041506830037067648",
@@ -4164,7 +4164,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/19/2023",
     "totalLiquidated": "124627.27431620454996357885668378",
@@ -4193,7 +4193,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/21/2023",
     "totalLiquidated": "40710.369931889775103025889925",
@@ -4222,7 +4222,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/22/2023",
     "totalLiquidated": "7246.42392441988693796119313352",
@@ -4245,7 +4245,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/25/2023",
     "totalLiquidated": "5853.17301426191305472123137605",
@@ -4268,7 +4268,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/26/2023",
     "totalLiquidated": "10687.97429425469627481883445218",
@@ -4315,7 +4315,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/27/2023",
     "totalLiquidated": "4202.82389493968419230568879184",
@@ -4338,7 +4338,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/28/2023",
     "totalLiquidated": "14978.454352827639910226862371",
@@ -4373,7 +4373,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/29/2023",
     "totalLiquidated": "4104.35903745773458367745200616",
@@ -4402,7 +4402,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/30/2023",
     "totalLiquidated": "54532.92034401341497093437504726",
@@ -4425,7 +4425,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/31/2023",
     "totalLiquidated": "316.7073627423467852696606",
@@ -4442,7 +4442,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/1/2024",
     "totalLiquidated": "3743.38106474253864781443691892",
@@ -4483,7 +4483,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/3/2024",
     "totalLiquidated": "7768300.78437316413846221534113981",
@@ -4644,7 +4644,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/4/2024",
     "totalLiquidated": "498.05371957891845107778966",
@@ -4661,7 +4661,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/5/2024",
     "totalLiquidated": "6342.427503056443162",
@@ -4678,7 +4678,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/8/2024",
     "totalLiquidated": "203478.51310329056569043137436456",
@@ -4731,7 +4731,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/9/2024",
     "totalLiquidated": "149968.21467803169379181783902",
@@ -4754,7 +4754,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/11/2024",
     "totalLiquidated": "977823.05213743745276710887589318",
@@ -4825,7 +4825,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/12/2024",
     "totalLiquidated": "10649.8881540589316488287915",
@@ -4848,7 +4848,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/13/2024",
     "totalLiquidated": "1299115.46032907464276058904505743",
@@ -4901,7 +4901,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/14/2024",
     "totalLiquidated": "9309.01157759506966189916555682",
@@ -4918,7 +4918,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/15/2024",
     "totalLiquidated": "9180.49736692604542682878",
@@ -4935,7 +4935,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/16/2024",
     "totalLiquidated": "7885.6509084231617352",
@@ -4952,7 +4952,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/17/2024",
     "totalLiquidated": "34222.78160758925593544110944645",
@@ -4975,7 +4975,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/18/2024",
     "totalLiquidated": "2188.4256116377976411220567051",
@@ -4992,7 +4992,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/19/2024",
     "totalLiquidated": "75894.71711420114428134231905",
@@ -5021,7 +5021,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/22/2024",
     "totalLiquidated": "4088748.74604989014481479843802322",
@@ -5146,7 +5146,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/23/2024",
     "totalLiquidated": "4755484.45704195219567225742760243",
@@ -5349,7 +5349,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/24/2024",
     "totalLiquidated": "5123.35718319895262218612497438",
@@ -5396,7 +5396,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/25/2024",
     "totalLiquidated": "780205.07128116875520450611929296",
@@ -5419,7 +5419,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/26/2024",
     "totalLiquidated": "199818.77285318555945414592712",
@@ -5442,7 +5442,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/29/2024",
     "totalLiquidated": "244.3032074477235555",
@@ -5459,7 +5459,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/30/2024",
     "totalLiquidated": "4577.94757488007775166239440168",
@@ -5476,7 +5476,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/31/2024",
     "totalLiquidated": "2214.49342168416579471715154173",
@@ -5493,7 +5493,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/1/2024",
     "totalLiquidated": "130260.58504872952249056403596824",
@@ -5534,7 +5534,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/2/2024",
     "totalLiquidated": "21322.55658753102706739368433328",
@@ -5563,7 +5563,7 @@
     "chainId": 1
   },
   {
-    "name": "Aave V3 Ethereum",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/3/2024",
     "totalLiquidated": "42099.45664205889349578328948772",

@@ -1,6 +1,6 @@
 [
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/19/2021",
     "totalLiquidated": "20839.34611835995083812318610329438976",
@@ -53,7 +53,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/20/2021",
     "totalLiquidated": "80538.8114809887257301402588957620975",
@@ -94,7 +94,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/21/2021",
     "totalLiquidated": "32163.3540548123703369395184910109696",
@@ -243,7 +243,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/22/2021",
     "totalLiquidated": "4365.1593919920896694734355020106515",
@@ -290,7 +290,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/23/2021",
     "totalLiquidated": "189058.8854319757941167262433845403269",
@@ -391,7 +391,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/24/2021",
     "totalLiquidated": "51439.87855379301357100595545556857086",
@@ -444,7 +444,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/25/2021",
     "totalLiquidated": "81826.435353516797973253584273707536019669",
@@ -527,7 +527,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/26/2021",
     "totalLiquidated": "156871.69062025959753446027812717408638",
@@ -592,7 +592,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/27/2021",
     "totalLiquidated": "1580.5967267579413260394031881908536",
@@ -615,7 +615,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/28/2021",
     "totalLiquidated": "19736.593795618968809631351828588654",
@@ -638,7 +638,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/29/2021",
     "totalLiquidated": "4528.98862094860211677248206868378671",
@@ -667,7 +667,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/30/2021",
     "totalLiquidated": "71662.3150482405115880970787372614151",
@@ -720,7 +720,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/31/2021",
     "totalLiquidated": "19265.88394335197496759773048515627509",
@@ -761,7 +761,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/1/2021",
     "totalLiquidated": "25481.70663628520195456027900179144122",
@@ -808,7 +808,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/2/2021",
     "totalLiquidated": "5562.536246430250229207408251564863016",
@@ -837,7 +837,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/4/2021",
     "totalLiquidated": "662.5476110351210875533682934216894",
@@ -854,7 +854,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/5/2021",
     "totalLiquidated": "88084.9614932169615278411940460277659227",
@@ -877,7 +877,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/6/2021",
     "totalLiquidated": "9161.3347793463856821542059880359258689",
@@ -918,7 +918,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/7/2021",
     "totalLiquidated": "2399447.9397179344147967721185516778643005",
@@ -1283,7 +1283,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/8/2021",
     "totalLiquidated": "720940.90007770415433191303473201387394",
@@ -1384,7 +1384,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/9/2021",
     "totalLiquidated": "41178.2599979829618429355835287495922",
@@ -1419,7 +1419,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/10/2021",
     "totalLiquidated": "124046.2234894687045649485981967504422",
@@ -1448,7 +1448,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/11/2021",
     "totalLiquidated": "889501.6045549200555167333524553947989",
@@ -1513,7 +1513,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/12/2021",
     "totalLiquidated": "40471.40458425118549786525319711388763",
@@ -1572,7 +1572,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/13/2021",
     "totalLiquidated": "24656.2617082961744044233071069990372",
@@ -1607,7 +1607,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/14/2021",
     "totalLiquidated": "16502.57635779626373472282413309821",
@@ -1624,7 +1624,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/17/2021",
     "totalLiquidated": "736429.081455282327779819892532453857",
@@ -1653,7 +1653,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/18/2021",
     "totalLiquidated": "25089.2183629461184085100190131567058",
@@ -1682,7 +1682,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/19/2021",
     "totalLiquidated": "8568.9896002284075246248965845197907",
@@ -1711,7 +1711,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/20/2021",
     "totalLiquidated": "1675474.7135412941113249328741830152135",
@@ -1836,7 +1836,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/21/2021",
     "totalLiquidated": "564647.3495006489058953275722839458098",
@@ -1907,7 +1907,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/22/2021",
     "totalLiquidated": "55986.7191720018317208725811785918976",
@@ -1954,7 +1954,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/23/2021",
     "totalLiquidated": "10524.79628046034604446810601768581541",
@@ -2031,7 +2031,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/24/2021",
     "totalLiquidated": "118816.6064284717622479574064789801395",
@@ -2060,7 +2060,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/26/2021",
     "totalLiquidated": "780905.0723827475098286540787766929543",
@@ -2113,7 +2113,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/27/2021",
     "totalLiquidated": "19976.9184294180317479349477980190574",
@@ -2136,7 +2136,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/28/2021",
     "totalLiquidated": "2417.334412685523696312939803930722",
@@ -2159,7 +2159,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/30/2021",
     "totalLiquidated": "4136.677583053608478487473521498151",
@@ -2182,7 +2182,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/3/2021",
     "totalLiquidated": "15744.00330641483297293162845919430955",
@@ -2211,7 +2211,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/4/2021",
     "totalLiquidated": "5450.49920996892749498127510652892731804",
@@ -2276,7 +2276,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/5/2021",
     "totalLiquidated": "2060569.7653842019691455067233037105277",
@@ -2329,7 +2329,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/6/2021",
     "totalLiquidated": "116494.45176341250944729280782531533335",
@@ -2376,7 +2376,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/7/2021",
     "totalLiquidated": "22839.527336738024612268593411441306914",
@@ -2429,7 +2429,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/8/2021",
     "totalLiquidated": "5038.2311403048613025752573400928858569",
@@ -2470,7 +2470,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/9/2021",
     "totalLiquidated": "7231.535548218284044678960221126428",
@@ -2493,7 +2493,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/11/2021",
     "totalLiquidated": "1382118.21705977616398194504973297564191",
@@ -2558,7 +2558,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/12/2021",
     "totalLiquidated": "63059.31504294773434381042013997936474",
@@ -2653,7 +2653,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/14/2021",
     "totalLiquidated": "717.36945618278633956421313122855023",
@@ -2676,7 +2676,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/16/2021",
     "totalLiquidated": "1661.144682380777123710707344590219",
@@ -2693,7 +2693,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/24/2021",
     "totalLiquidated": "43621.61852597016420807877362118721321",
@@ -2740,7 +2740,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/25/2021",
     "totalLiquidated": "198.1091623927408052852446372581156",
@@ -2763,7 +2763,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/26/2021",
     "totalLiquidated": "81.50580281564061724567312605211567",
@@ -2780,7 +2780,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/27/2021",
     "totalLiquidated": "1523875.3411036062504597408592380995036",
@@ -2845,7 +2845,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/29/2021",
     "totalLiquidated": "140.0033778844633648039071427614883",
@@ -2862,7 +2862,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/30/2021",
     "totalLiquidated": "14656.47284212878973279543107465605",
@@ -2879,7 +2879,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/31/2021",
     "totalLiquidated": "30724.04770217656243683377252428511",
@@ -2896,7 +2896,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/1/2021",
     "totalLiquidated": "1648.614154191327634391403300444933",
@@ -2913,7 +2913,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/2/2021",
     "totalLiquidated": "966.4490792203477892775063947718209",
@@ -2930,7 +2930,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/3/2021",
     "totalLiquidated": "25663.4795037201490773263734440669439",
@@ -2953,7 +2953,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/4/2021",
     "totalLiquidated": "38871.5777692846618099283709316558877",
@@ -3006,7 +3006,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/6/2021",
     "totalLiquidated": "590266.17785916794714473874519339004912",
@@ -3053,7 +3053,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/7/2021",
     "totalLiquidated": "29442.40252463733166765334895598370456",
@@ -3112,7 +3112,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/8/2021",
     "totalLiquidated": "6033.0645759075071246676838692524453",
@@ -3147,7 +3147,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/10/2021",
     "totalLiquidated": "1401.220502941463376260684688817447",
@@ -3164,7 +3164,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/11/2021",
     "totalLiquidated": "12109.6782326427031321871351770940118",
@@ -3199,7 +3199,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/12/2021",
     "totalLiquidated": "21816.462307430322283269058633400704",
@@ -3228,7 +3228,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/13/2021",
     "totalLiquidated": "290508.490163260222424585239114626099361",
@@ -3269,7 +3269,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/14/2021",
     "totalLiquidated": "981.9546905183178779475908029796532",
@@ -3286,7 +3286,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/15/2021",
     "totalLiquidated": "3056.034668294861466970054417852402996",
@@ -3327,7 +3327,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/16/2021",
     "totalLiquidated": "197961.2637863483424749939238589753547",
@@ -3380,7 +3380,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/17/2021",
     "totalLiquidated": "12327.4148530076567005836273791884786",
@@ -3439,7 +3439,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/18/2021",
     "totalLiquidated": "68942.2831841857861991191964465854796",
@@ -3504,7 +3504,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/19/2021",
     "totalLiquidated": "71198.4293877998993818883653759761",
@@ -3527,7 +3527,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/20/2021",
     "totalLiquidated": "368032.4460243213164156629783654379805",
@@ -3574,7 +3574,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/21/2021",
     "totalLiquidated": "1402363.34619931041271964948198905199684",
@@ -3669,7 +3669,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/22/2021",
     "totalLiquidated": "28143.3377506672196535701440542623871",
@@ -3704,7 +3704,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/23/2021",
     "totalLiquidated": "224325.72435870193520644609028576829267",
@@ -3835,7 +3835,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/24/2021",
     "totalLiquidated": "61921.63322640668965088107090578678178",
@@ -3918,7 +3918,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/25/2021",
     "totalLiquidated": "1414.6056858512493733855635758084633",
@@ -3947,7 +3947,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/26/2021",
     "totalLiquidated": "2686163.26773056974480748810675547947484",
@@ -4126,7 +4126,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/28/2021",
     "totalLiquidated": "626243.0184013727977235497516180906932",
@@ -4179,7 +4179,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/29/2021",
     "totalLiquidated": "160.75886760255329269762408448364283",
@@ -4202,7 +4202,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/30/2021",
     "totalLiquidated": "8064.54439319894409211729530223509457",
@@ -4237,7 +4237,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/1/2021",
     "totalLiquidated": "1708.917698333964433682667838629297",
@@ -4260,7 +4260,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/2/2021",
     "totalLiquidated": "19929.00440977760172468622854363202058",
@@ -4301,7 +4301,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/3/2021",
     "totalLiquidated": "20696.4434508904226328884294519758844",
@@ -4390,7 +4390,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/4/2021",
     "totalLiquidated": "5451796.79533284901713460339071764496327",
@@ -5457,7 +5457,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/5/2021",
     "totalLiquidated": "533198.91299749689685889848010453521",
@@ -5564,7 +5564,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/6/2021",
     "totalLiquidated": "244843.91581407182961267958740076031724",
@@ -5881,7 +5881,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/7/2021",
     "totalLiquidated": "2372.1685718128522651726772053461247",
@@ -5916,7 +5916,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/8/2021",
     "totalLiquidated": "2662.2147325431764465360278507929414",
@@ -5957,7 +5957,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/9/2021",
     "totalLiquidated": "32931.0953449635727470899155269888216",
@@ -6010,7 +6010,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/10/2021",
     "totalLiquidated": "36196.14551419214321959572414450616673",
@@ -6051,7 +6051,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/11/2021",
     "totalLiquidated": "7090.19974063002923995065026077748069",
@@ -6086,7 +6086,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/13/2021",
     "totalLiquidated": "72116.71445765072963642762019329692723",
@@ -6181,7 +6181,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/14/2021",
     "totalLiquidated": "812.38114093338876724744787217438371",
@@ -6216,7 +6216,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/15/2021",
     "totalLiquidated": "747570.01810290337279115473082695194273",
@@ -6245,7 +6245,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/16/2021",
     "totalLiquidated": "51809.1088361576934511155511053342462",
@@ -6280,7 +6280,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/17/2021",
     "totalLiquidated": "2320.88308238354661345166633428917476",
@@ -6321,7 +6321,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/18/2021",
     "totalLiquidated": "15124271.93177997429202963286292336",
@@ -6338,7 +6338,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/19/2021",
     "totalLiquidated": "1332.1572874493102641571296408243814",
@@ -6361,7 +6361,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/20/2021",
     "totalLiquidated": "17682.1194651739626854475245327526111",
@@ -6390,7 +6390,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/21/2021",
     "totalLiquidated": "390.7452594913755734225008970374774",
@@ -6413,7 +6413,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/22/2021",
     "totalLiquidated": "2740.6828139085276931615810490294553",
@@ -6442,7 +6442,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/23/2021",
     "totalLiquidated": "39193.3389930334684336800414756088571",
@@ -6465,7 +6465,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/24/2021",
     "totalLiquidated": "1435.698643374633009254377640065108",
@@ -6500,7 +6500,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/25/2021",
     "totalLiquidated": "246.95857828824293303752462989928071951",
@@ -6559,7 +6559,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/27/2021",
     "totalLiquidated": "721.9599137336235150443643467855829",
@@ -6576,7 +6576,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/28/2021",
     "totalLiquidated": "254822.3338129058339835198065745440011",
@@ -6605,7 +6605,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/29/2021",
     "totalLiquidated": "938.0319407926761953757596059717657",
@@ -6640,7 +6640,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/30/2021",
     "totalLiquidated": "687162.33549601341964666563856870227",
@@ -6681,7 +6681,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/31/2021",
     "totalLiquidated": "661.9071303323390116177410489718611",
@@ -6698,7 +6698,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/2/2022",
     "totalLiquidated": "366.4174163609541583157690807767829",
@@ -6715,7 +6715,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/3/2022",
     "totalLiquidated": "2.47956572404213253416604193996285",
@@ -6732,7 +6732,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/4/2022",
     "totalLiquidated": "26180.3184036600651567155183217850879",
@@ -6767,7 +6767,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/5/2022",
     "totalLiquidated": "105039.0116054497152004629831690568560005222",
@@ -6832,7 +6832,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/6/2022",
     "totalLiquidated": "433888.19586336682958649622536815170766",
@@ -6963,7 +6963,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/7/2022",
     "totalLiquidated": "732813.190896184842316239784881171048293997937",
@@ -7892,7 +7892,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/8/2022",
     "totalLiquidated": "888184.670815323205500794677121584116874357633",
@@ -8179,7 +8179,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/9/2022",
     "totalLiquidated": "99.104291817264526087125051805362519",
@@ -8238,7 +8238,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/10/2022",
     "totalLiquidated": "96955.14976520142030731603359173930021",
@@ -8291,7 +8291,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/11/2022",
     "totalLiquidated": "1108.640244462944131513755031766403086",
@@ -8326,7 +8326,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/12/2022",
     "totalLiquidated": "69.07873117132152483359988243101789",
@@ -8355,7 +8355,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/13/2022",
     "totalLiquidated": "39.5990619621010793805700166252206",
@@ -8372,7 +8372,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/14/2022",
     "totalLiquidated": "161.07197360981975632044490531903305",
@@ -8395,7 +8395,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/16/2022",
     "totalLiquidated": "4.70784470708727129944519",
@@ -8412,7 +8412,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/17/2022",
     "totalLiquidated": "2568.28252470127705830880794873056353",
@@ -8483,7 +8483,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/18/2022",
     "totalLiquidated": "3707.97643335948891395933604764164569",
@@ -8554,7 +8554,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/19/2022",
     "totalLiquidated": "28288.181062148817503781303321866594319",
@@ -8661,7 +8661,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/20/2022",
     "totalLiquidated": "2621.90233470808145380937874065245598",
@@ -8726,7 +8726,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/21/2022",
     "totalLiquidated": "1112014.187282567841530695182661383756648",
@@ -9343,7 +9343,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/22/2022",
     "totalLiquidated": "4929350.903299284346847206017998198455424",
@@ -11958,7 +11958,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/23/2022",
     "totalLiquidated": "91117.1461972946125683436777043568795",
@@ -11999,7 +11999,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/24/2022",
     "totalLiquidated": "317969.60799210643491264065162529319409",
@@ -12226,7 +12226,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/25/2022",
     "totalLiquidated": "68874.7661574678205552008126233448377",
@@ -12249,7 +12249,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/26/2022",
     "totalLiquidated": "1474.0112123645080555771800312415605",
@@ -12272,7 +12272,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/27/2022",
     "totalLiquidated": "185124.3334911300084516198416823005304",
@@ -12331,7 +12331,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/28/2022",
     "totalLiquidated": "34560.62937289018869571719011134515",
@@ -12348,7 +12348,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/30/2022",
     "totalLiquidated": "450.9169128487354367008050422042671",
@@ -12365,7 +12365,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/2/2022",
     "totalLiquidated": "129.8750256778508686806266792946044",
@@ -12382,7 +12382,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/3/2022",
     "totalLiquidated": "98435.298426427729059142136102591601661",
@@ -12483,7 +12483,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/4/2022",
     "totalLiquidated": "246.1583561618785386337107240657064",
@@ -12500,7 +12500,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/6/2022",
     "totalLiquidated": "19.39293798613118423209754922109981",
@@ -12517,7 +12517,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/7/2022",
     "totalLiquidated": "4940.296395954803385166838698190807",
@@ -12534,7 +12534,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/8/2022",
     "totalLiquidated": "3699.886941456525320530049243185393963",
@@ -12575,7 +12575,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/10/2022",
     "totalLiquidated": "2863.4223221182696947894667685843506192301",
@@ -12628,7 +12628,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/11/2022",
     "totalLiquidated": "78464.4019402920054676625512069322787304587",
@@ -12693,7 +12693,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/12/2022",
     "totalLiquidated": "756.36943335034034786441689225808288",
@@ -12728,7 +12728,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/13/2022",
     "totalLiquidated": "10.87787270631368894662928630879099",
@@ -12745,7 +12745,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/14/2022",
     "totalLiquidated": "66.36276779045986726399830099587904",
@@ -12762,7 +12762,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/15/2022",
     "totalLiquidated": "1060.29597386594064670261588567592597",
@@ -12791,7 +12791,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/16/2022",
     "totalLiquidated": "18571.165698312485538136381825082616",
@@ -12820,7 +12820,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/17/2022",
     "totalLiquidated": "308.55870410033974868498162104206218",
@@ -12855,7 +12855,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/18/2022",
     "totalLiquidated": "5837.33524298634237996239253712169665",
@@ -12890,7 +12890,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/19/2022",
     "totalLiquidated": "4404.84057242719070512994741077679668",
@@ -12925,7 +12925,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/20/2022",
     "totalLiquidated": "477898.60955388822718624423216595175732",
@@ -12996,7 +12996,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/21/2022",
     "totalLiquidated": "230769.30314185685515596580383490503511",
@@ -13031,7 +13031,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/22/2022",
     "totalLiquidated": "274612.02683782009105301508987008294232",
@@ -13174,7 +13174,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/23/2022",
     "totalLiquidated": "17367.6461029972244320026244442392616776165",
@@ -13215,7 +13215,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/24/2022",
     "totalLiquidated": "413169.17359253017773851351135197933207",
@@ -13496,7 +13496,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/25/2022",
     "totalLiquidated": "62.53962683963600394406697409763106",
@@ -13513,7 +13513,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/27/2022",
     "totalLiquidated": "1162.50302112668388837245801694971189",
@@ -13548,7 +13548,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/28/2022",
     "totalLiquidated": "2686.15611243694218506715085304841562",
@@ -13571,7 +13571,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/1/2022",
     "totalLiquidated": "3783.39954480529045031176539651109454",
@@ -13636,7 +13636,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/2/2022",
     "totalLiquidated": "1051.7397718681047455357615698896893",
@@ -13665,7 +13665,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/3/2022",
     "totalLiquidated": "65407.62299162448457577977469579957",
@@ -13682,7 +13682,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/4/2022",
     "totalLiquidated": "124.40911796754324754261024086918368",
@@ -13705,7 +13705,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/5/2022",
     "totalLiquidated": "5905.4389041186412970430856403825868",
@@ -13734,7 +13734,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/6/2022",
     "totalLiquidated": "121.19447400725450025800573239402175",
@@ -13757,7 +13757,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/7/2022",
     "totalLiquidated": "3968.9460028391600826637681949281579",
@@ -13798,7 +13798,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/8/2022",
     "totalLiquidated": "4765.51161269194459010645124152714411",
@@ -13827,7 +13827,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/9/2022",
     "totalLiquidated": "330.7143557516770497211141169254458",
@@ -13844,7 +13844,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/10/2022",
     "totalLiquidated": "48012.81016483316728070545832360276833",
@@ -13867,7 +13867,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/11/2022",
     "totalLiquidated": "70047.35739650181043028344122087221",
@@ -13890,7 +13890,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/13/2022",
     "totalLiquidated": "789.44839821811902547032622530138717",
@@ -13913,7 +13913,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/14/2022",
     "totalLiquidated": "164870.3554401167598521184740123858328",
@@ -13960,7 +13960,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/15/2022",
     "totalLiquidated": "7160.47840010133185071154736683139422",
@@ -13989,7 +13989,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/16/2022",
     "totalLiquidated": "340.5587800576214565278181460859122",
@@ -14006,7 +14006,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/18/2022",
     "totalLiquidated": "2244.27321082042744101717196666616191",
@@ -14047,7 +14047,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/25/2022",
     "totalLiquidated": "1447.706522032973837300447668239896",
@@ -14076,7 +14076,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/26/2022",
     "totalLiquidated": "71.7188508475714939937665366699653",
@@ -14093,7 +14093,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/29/2022",
     "totalLiquidated": "318.99897227462110335035333046197",
@@ -14116,7 +14116,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/1/2022",
     "totalLiquidated": "56471.53139292424877518812033372788438",
@@ -14151,7 +14151,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/2/2022",
     "totalLiquidated": "49798.0971327718669482878825241868552",
@@ -14174,7 +14174,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/4/2022",
     "totalLiquidated": "171294.1410993572877823259746991246966",
@@ -14215,7 +14215,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/5/2022",
     "totalLiquidated": "89190.05802677862911946504341210597802",
@@ -14238,7 +14238,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/6/2022",
     "totalLiquidated": "81437.8518290413920690832948973623983",
@@ -14303,7 +14303,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/7/2022",
     "totalLiquidated": "39662.7085571573471024019204563365805",
@@ -14338,7 +14338,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/8/2022",
     "totalLiquidated": "17204.99038685303655597370294641135",
@@ -14355,7 +14355,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/9/2022",
     "totalLiquidated": "6420.705823724617252140665597593204",
@@ -14384,7 +14384,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/11/2022",
     "totalLiquidated": "151787.91456105247497747578496590986602",
@@ -14455,7 +14455,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/12/2022",
     "totalLiquidated": "2899.59342562756475159561548476508472",
@@ -14490,7 +14490,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/18/2022",
     "totalLiquidated": "209075.4870089056905162839798850051882",
@@ -14543,7 +14543,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/22/2022",
     "totalLiquidated": "306.9863303512707518994612876451739",
@@ -14560,7 +14560,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/23/2022",
     "totalLiquidated": "66.7131076688181212705335851885881",
@@ -14577,7 +14577,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/24/2022",
     "totalLiquidated": "5750.2141183751983881851186913159454",
@@ -14612,7 +14612,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/25/2022",
     "totalLiquidated": "69112.15945923082620799081245169432219",
@@ -14731,7 +14731,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/26/2022",
     "totalLiquidated": "10072.1161199770629218784917283761713819676989",
@@ -14916,7 +14916,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/27/2022",
     "totalLiquidated": "1761.71083459411024212190290912776611",
@@ -14957,7 +14957,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/28/2022",
     "totalLiquidated": "159.5016111228102373337920807754083",
@@ -14974,7 +14974,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/29/2022",
     "totalLiquidated": "221361.179061701933629499970886312286075",
@@ -15171,7 +15171,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/30/2022",
     "totalLiquidated": "206977.09600666044199383545725584495028",
@@ -15326,7 +15326,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/1/2022",
     "totalLiquidated": "373185.93908388864352420952569243201815",
@@ -15553,7 +15553,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/4/2022",
     "totalLiquidated": "82.57869779888913025879092369566133",
@@ -15570,7 +15570,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/5/2022",
     "totalLiquidated": "80400.5185856699600316109285482109391",
@@ -15659,7 +15659,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/6/2022",
     "totalLiquidated": "84103.500712176829133765090734276882480412",
@@ -15898,7 +15898,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/7/2022",
     "totalLiquidated": "125.077673642782413314658912490509069024",
@@ -15933,7 +15933,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/8/2022",
     "totalLiquidated": "335433.4890638069968262553091630176756724",
@@ -16346,7 +16346,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/9/2022",
     "totalLiquidated": "2135678.431795671542592847918534940292876451265",
@@ -17779,7 +17779,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/10/2022",
     "totalLiquidated": "389275.40779941707619933564904045526287",
@@ -18330,7 +18330,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/11/2022",
     "totalLiquidated": "4498592.073997783179161005948910022810019",
@@ -21791,7 +21791,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/12/2022",
     "totalLiquidated": "3229587.27556445007682970300977899738347177",
@@ -24622,7 +24622,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/13/2022",
     "totalLiquidated": "30680.72139912716669441265740344769649",
@@ -25221,7 +25221,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/14/2022",
     "totalLiquidated": "16210.97872138087491367635776770066498",
@@ -25472,7 +25472,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/15/2022",
     "totalLiquidated": "8476.90799926007830703981337567302805",
@@ -25501,7 +25501,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/16/2022",
     "totalLiquidated": "39828.0804458081995869012482365246862",
@@ -25530,7 +25530,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/17/2022",
     "totalLiquidated": "35187.65368674259409181937871177683",
@@ -25553,7 +25553,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/18/2022",
     "totalLiquidated": "31102.85020939021648698048899026913604",
@@ -25594,7 +25594,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/19/2022",
     "totalLiquidated": "15916.30542907247710281639279549004405469",
@@ -25737,7 +25737,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/20/2022",
     "totalLiquidated": "20259.58163338501241747926047872075885",
@@ -25766,7 +25766,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/21/2022",
     "totalLiquidated": "17.36116108754469915960480494695079",
@@ -25783,7 +25783,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/23/2022",
     "totalLiquidated": "26319.00429763316534222156664565508",
@@ -25800,7 +25800,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/24/2022",
     "totalLiquidated": "22889.42943483112528333800261931039651",
@@ -25865,7 +25865,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/25/2022",
     "totalLiquidated": "23971.2672078908785544199682813828675",
@@ -25888,7 +25888,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/26/2022",
     "totalLiquidated": "35934.75554663431061734797870242409370149",
@@ -26547,7 +26547,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/27/2022",
     "totalLiquidated": "99217.289498879299952474925651582493577805",
@@ -28004,7 +28004,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/28/2022",
     "totalLiquidated": "147583.6832308435770022351171113051",
@@ -28021,7 +28021,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/30/2022",
     "totalLiquidated": "21.45569666602288600709327647592848",
@@ -28038,7 +28038,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/31/2022",
     "totalLiquidated": "40122.198907061132243834723347367763",
@@ -28253,7 +28253,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/1/2022",
     "totalLiquidated": "165.0100618828418174337993916038679",
@@ -28270,7 +28270,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/2/2022",
     "totalLiquidated": "282.36141693042634284869916194004507328919",
@@ -28299,7 +28299,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/3/2022",
     "totalLiquidated": "2092.146149986875175290747973668451",
@@ -28316,7 +28316,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/6/2022",
     "totalLiquidated": "871.2651851822799009028080067002634",
@@ -28333,7 +28333,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/7/2022",
     "totalLiquidated": "52016.8095179644334778903234117412941",
@@ -28362,7 +28362,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/8/2022",
     "totalLiquidated": "31.88939469402749158274316051197322",
@@ -28379,7 +28379,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/9/2022",
     "totalLiquidated": "690.59378703383736786836097360723896",
@@ -28402,7 +28402,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/10/2022",
     "totalLiquidated": "11254.24620678569475830811028293011251",
@@ -28443,7 +28443,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/11/2022",
     "totalLiquidated": "166052.68333356075803487531727482271216",
@@ -29198,7 +29198,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/12/2022",
     "totalLiquidated": "671057.932005047544132648257236776421502884",
@@ -30199,7 +30199,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/13/2022",
     "totalLiquidated": "1176698.460090003015537362061126631817221802",
@@ -32346,7 +32346,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/14/2022",
     "totalLiquidated": "354001.955105001802946611534594496802523",
@@ -32909,7 +32909,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/15/2022",
     "totalLiquidated": "196617.89670643140613339338937065013217",
@@ -33226,7 +33226,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/16/2022",
     "totalLiquidated": "1435.89840180233920824946829472733194",
@@ -33255,7 +33255,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/17/2022",
     "totalLiquidated": "407.7138022526298419857081210728366",
@@ -33272,7 +33272,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/18/2022",
     "totalLiquidated": "173057.8378289627421637167088783228224",
@@ -34063,7 +34063,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/19/2022",
     "totalLiquidated": "383230.595768028787749448973020889399996",
@@ -34476,7 +34476,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/20/2022",
     "totalLiquidated": "33.59865923426818860379494204793486845",
@@ -34505,7 +34505,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/21/2022",
     "totalLiquidated": "0.01715304060084760297891342179902999",
@@ -34522,7 +34522,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/22/2022",
     "totalLiquidated": "0.01698869382538798103855737627011141",
@@ -34539,7 +34539,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/23/2022",
     "totalLiquidated": "23.12116584398214086964200424055797793",
@@ -34568,7 +34568,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/24/2022",
     "totalLiquidated": "150952.701487412811346999716908818612774916",
@@ -34603,7 +34603,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/25/2022",
     "totalLiquidated": "1507.388915539138004168952371600385",
@@ -34620,7 +34620,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/26/2022",
     "totalLiquidated": "18.906296869360549932745789946627408",
@@ -34643,7 +34643,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/27/2022",
     "totalLiquidated": "11.09069431358118592802687880607968",
@@ -34660,7 +34660,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/29/2022",
     "totalLiquidated": "2358.9744393383857613027127121858297184",
@@ -34701,7 +34701,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/30/2022",
     "totalLiquidated": "26.46237248926040492846476118285669",
@@ -34718,7 +34718,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/1/2022",
     "totalLiquidated": "425.0791002450070926927531556332053",
@@ -34735,7 +34735,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/2/2022",
     "totalLiquidated": "0.4782508922979741775304858005790437",
@@ -34758,7 +34758,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/4/2022",
     "totalLiquidated": "0.2965970527868543317971449460792543",
@@ -34775,7 +34775,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/5/2022",
     "totalLiquidated": "19.022040117699112073604937354443865",
@@ -34804,7 +34804,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/6/2022",
     "totalLiquidated": "0.07783550154546520352510530541905738",
@@ -34821,7 +34821,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/8/2022",
     "totalLiquidated": "41119.096942928207502191092009593",
@@ -34838,7 +34838,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/11/2022",
     "totalLiquidated": "0.97491844442016291038006268342835185",
@@ -34891,7 +34891,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/12/2022",
     "totalLiquidated": "844.34200376321471074637536107453927",
@@ -34920,7 +34920,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/13/2022",
     "totalLiquidated": "110.5696178094159139183920208998497",
@@ -34937,7 +34937,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/14/2022",
     "totalLiquidated": "9.939699394773313610062695527910265",
@@ -34954,7 +34954,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/15/2022",
     "totalLiquidated": "10.04779124352441871091555058111698",
@@ -34971,7 +34971,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/17/2022",
     "totalLiquidated": "1767.790506584931535903303429671694",
@@ -34988,7 +34988,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/18/2022",
     "totalLiquidated": "1252.5543702565751349244521719531437",
@@ -35011,7 +35011,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/19/2022",
     "totalLiquidated": "76950.27632627252701535717857821815404",
@@ -35070,7 +35070,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/20/2022",
     "totalLiquidated": "20.26228384615861574239305644496196",
@@ -35093,7 +35093,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/21/2022",
     "totalLiquidated": "415.012357084423106576026705555554721",
@@ -35158,7 +35158,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/22/2022",
     "totalLiquidated": "23.463073334015355980884302158606896",
@@ -35187,7 +35187,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/23/2022",
     "totalLiquidated": "16.152073546893942474131345776682475",
@@ -35210,7 +35210,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/24/2022",
     "totalLiquidated": "79.12892379239312793964310760803709",
@@ -35227,7 +35227,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/25/2022",
     "totalLiquidated": "166.056424583592977676480238592493621",
@@ -35280,7 +35280,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/26/2022",
     "totalLiquidated": "596.922845736938867697175710495925278",
@@ -35351,7 +35351,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/27/2022",
     "totalLiquidated": "38.20719845513354010536705804603348",
@@ -35368,7 +35368,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/29/2022",
     "totalLiquidated": "6.776561346149717643049333672825231",
@@ -35385,7 +35385,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/30/2022",
     "totalLiquidated": "9.48731110094338909967149334982438",
@@ -35402,7 +35402,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/31/2022",
     "totalLiquidated": "6.985445200689670663913592814468003",
@@ -35419,7 +35419,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/1/2022",
     "totalLiquidated": "37.94956027253994659329332235523728",
@@ -35436,7 +35436,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/2/2022",
     "totalLiquidated": "17.87557740105460232571133616857752",
@@ -35453,7 +35453,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/4/2022",
     "totalLiquidated": "1583.10593543695707537349571464168",
@@ -35470,7 +35470,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/6/2022",
     "totalLiquidated": "1872.6039870830320429679912626209174",
@@ -35493,7 +35493,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/7/2022",
     "totalLiquidated": "1059.3747686465333391638944702442278",
@@ -35516,7 +35516,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/8/2022",
     "totalLiquidated": "13198.56181615838263097693410820741791",
@@ -35557,7 +35557,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/10/2022",
     "totalLiquidated": "39.432158913292608909874537325086874",
@@ -35592,7 +35592,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/11/2022",
     "totalLiquidated": "87.134956120531511072465040411835464",
@@ -35657,7 +35657,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/12/2022",
     "totalLiquidated": "28.88667562110783681686337276842093",
@@ -35686,7 +35686,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/13/2022",
     "totalLiquidated": "16.922231556230547766256199099415227",
@@ -35709,7 +35709,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/14/2022",
     "totalLiquidated": "16.728787209549404849726201972241035",
@@ -35732,7 +35732,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/15/2022",
     "totalLiquidated": "34.500094397478586890429067400154918",
@@ -35767,7 +35767,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/16/2022",
     "totalLiquidated": "8032.415554791732575731164785276482872",
@@ -35790,7 +35790,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/17/2022",
     "totalLiquidated": "15.833615773248828336874044367389984",
@@ -35813,7 +35813,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/19/2022",
     "totalLiquidated": "256622.650025580372533777611611106955055",
@@ -35950,7 +35950,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/20/2022",
     "totalLiquidated": "13082.182299407582955887330648533997122",
@@ -35991,7 +35991,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/22/2022",
     "totalLiquidated": "17747.74256451016998555518908415623542",
@@ -36020,7 +36020,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/23/2022",
     "totalLiquidated": "13.854298348196639187375732579171059",
@@ -36043,7 +36043,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/26/2022",
     "totalLiquidated": "725.944534484528588359601937380351168",
@@ -36072,7 +36072,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/27/2022",
     "totalLiquidated": "113981.5776264143335926090051030004316775",
@@ -36161,7 +36161,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/28/2022",
     "totalLiquidated": "722.734608600782671100203882042990287",
@@ -36208,7 +36208,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/29/2022",
     "totalLiquidated": "4806.775738350153479580953573197777016",
@@ -36501,7 +36501,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/30/2022",
     "totalLiquidated": "193.240876230826528009996220317010119",
@@ -36530,7 +36530,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/31/2022",
     "totalLiquidated": "55.33297385241194413907826807496786",
@@ -36547,7 +36547,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/1/2022",
     "totalLiquidated": "84.618808828312792485561777947415509",
@@ -36576,7 +36576,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/2/2022",
     "totalLiquidated": "420.753132192198844895863718620468978",
@@ -36623,7 +36623,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/3/2022",
     "totalLiquidated": "5.673398353931505130434151706324943",
@@ -36640,7 +36640,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/4/2022",
     "totalLiquidated": "12.990278093624616561493582002933704",
@@ -36663,7 +36663,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/5/2022",
     "totalLiquidated": "22.51107516875561358316052822349636",
@@ -36692,7 +36692,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/6/2022",
     "totalLiquidated": "217.553807240564885680187426090024591",
@@ -36739,7 +36739,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/7/2022",
     "totalLiquidated": "315.02795574012074528218811124892127896",
@@ -36768,7 +36768,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/10/2022",
     "totalLiquidated": "139.97652305569556623104341718777641",
@@ -36791,7 +36791,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/11/2022",
     "totalLiquidated": "33.68334507243216385826812264797754",
@@ -36808,7 +36808,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/12/2022",
     "totalLiquidated": "861.35960523866831973061327749132563",
@@ -36837,7 +36837,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/13/2022",
     "totalLiquidated": "44799.97796004420836357343900505032023",
@@ -36872,7 +36872,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/14/2022",
     "totalLiquidated": "359.23450045634075986322981177829549",
@@ -36895,7 +36895,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/16/2022",
     "totalLiquidated": "1206.950255872332235753477261390805227",
@@ -36936,7 +36936,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/17/2022",
     "totalLiquidated": "5.360440871864256395788329671027519",
@@ -36953,7 +36953,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/18/2022",
     "totalLiquidated": "82.930044996485633549265896444369835",
@@ -36976,7 +36976,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/19/2022",
     "totalLiquidated": "189310.663125720325091874546004593655786",
@@ -37221,7 +37221,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/20/2022",
     "totalLiquidated": "56.782953564576747711428317717732917",
@@ -37262,7 +37262,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/21/2022",
     "totalLiquidated": "10.219121745812839367930251993180441",
@@ -37285,7 +37285,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/22/2022",
     "totalLiquidated": "3927.674241961564937960276269121411546",
@@ -37368,7 +37368,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/23/2022",
     "totalLiquidated": "591.956386236644587217719267379514868",
@@ -37391,7 +37391,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/27/2022",
     "totalLiquidated": "453.74380565922415440704361176402362",
@@ -37420,7 +37420,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/28/2022",
     "totalLiquidated": "703.618381064768136152194463718406596",
@@ -37467,7 +37467,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/29/2022",
     "totalLiquidated": "2466.130067193320157590466838762014",
@@ -37484,7 +37484,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/1/2022",
     "totalLiquidated": "9.902034413221289804135163491716557",
@@ -37507,7 +37507,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/2/2022",
     "totalLiquidated": "6.873894643790959461427853503062545",
@@ -37524,7 +37524,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/3/2022",
     "totalLiquidated": "304.671261255107684891145326622238655",
@@ -37559,7 +37559,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/9/2022",
     "totalLiquidated": "158.873972499009871719340375761760793",
@@ -37588,7 +37588,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/10/2022",
     "totalLiquidated": "12.8737885810488748198213482536217",
@@ -37605,7 +37605,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/11/2022",
     "totalLiquidated": "3016.817144998982845116003600698263708",
@@ -37724,7 +37724,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/13/2022",
     "totalLiquidated": "8405.496813951178855568677032208908129",
@@ -38017,7 +38017,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/14/2022",
     "totalLiquidated": "103.6658955513418714443870960340144",
@@ -38034,7 +38034,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/15/2022",
     "totalLiquidated": "15.903582733875432707449727293313044",
@@ -38063,7 +38063,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/16/2022",
     "totalLiquidated": "80.46983452319114434398179654979087",
@@ -38116,7 +38116,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/17/2022",
     "totalLiquidated": "191.64988259993000809891242",
@@ -38133,7 +38133,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/18/2022",
     "totalLiquidated": "0.04399999695694146515243334357603781",
@@ -38150,7 +38150,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/20/2022",
     "totalLiquidated": "20.904791820725282236874173963660377",
@@ -38173,7 +38173,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/21/2022",
     "totalLiquidated": "27.550892408755721424500480017981754",
@@ -38202,7 +38202,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/22/2022",
     "totalLiquidated": "130.6237240429974896663232518813624",
@@ -38225,7 +38225,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/23/2022",
     "totalLiquidated": "79008.5521500951289583740871884897721",
@@ -38254,7 +38254,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/24/2022",
     "totalLiquidated": "172.628072921176364390851429763731512",
@@ -38445,7 +38445,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/25/2022",
     "totalLiquidated": "122.446485244842524149962078793361462909",
@@ -38600,7 +38600,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/26/2022",
     "totalLiquidated": "30.51488015199509228980473792333331",
@@ -38629,7 +38629,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/28/2022",
     "totalLiquidated": "195.765596311074623260450260227958614",
@@ -38670,7 +38670,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/29/2022",
     "totalLiquidated": "4.075298698081875036360406569185976",
@@ -38687,7 +38687,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/30/2022",
     "totalLiquidated": "1803.03153719814260099128812204584630909",
@@ -38710,7 +38710,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/31/2022",
     "totalLiquidated": "155.443297289304476536399159932737408",
@@ -38745,7 +38745,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/1/2022",
     "totalLiquidated": "19.0172890813391615418073544107242",
@@ -38762,7 +38762,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/2/2022",
     "totalLiquidated": "2531.96321827764622703016296381921431",
@@ -38797,7 +38797,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/5/2022",
     "totalLiquidated": "340.8006260095508188134073067263255",
@@ -38814,7 +38814,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/6/2022",
     "totalLiquidated": "667.9008569606439562488423979015484",
@@ -38831,7 +38831,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/7/2022",
     "totalLiquidated": "0.02179231812273065424813888329122572",
@@ -38848,7 +38848,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/8/2022",
     "totalLiquidated": "41141.0947054828059857135368307116632729",
@@ -39039,7 +39039,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/9/2022",
     "totalLiquidated": "108240.8446033680642061922532350309522079",
@@ -40208,7 +40208,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/10/2022",
     "totalLiquidated": "126688.477336921897141585352443438981451473",
@@ -40873,7 +40873,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/11/2022",
     "totalLiquidated": "175.5224357191784470682619675720807",
@@ -40896,7 +40896,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/12/2022",
     "totalLiquidated": "916.98849903021117486425650167542",
@@ -40913,7 +40913,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/13/2022",
     "totalLiquidated": "137.186957874310085621559467391928584",
@@ -40942,7 +40942,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/14/2022",
     "totalLiquidated": "32344.946013207537683367258463848132307",
@@ -41157,7 +41157,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/15/2022",
     "totalLiquidated": "48.10852352409171731802016737704922",
@@ -41174,7 +41174,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/17/2022",
     "totalLiquidated": "150.5896807528514411196952344594003",
@@ -41191,7 +41191,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/19/2022",
     "totalLiquidated": "59.02243365870528511108677340257554",
@@ -41214,7 +41214,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/21/2022",
     "totalLiquidated": "20311.026413614001658696023690837846007",
@@ -41507,7 +41507,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/22/2022",
     "totalLiquidated": "1456.772901236762088276899193010285332",
@@ -41704,7 +41704,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/23/2022",
     "totalLiquidated": "15.032247741192709682024894309579947",
@@ -41739,7 +41739,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/24/2022",
     "totalLiquidated": "157.899287488004764475715824925113272",
@@ -41780,7 +41780,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/25/2022",
     "totalLiquidated": "13.088102712669667520834013432229426",
@@ -41803,7 +41803,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/26/2022",
     "totalLiquidated": "6.642212876356183507327345803156803",
@@ -41820,7 +41820,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/28/2022",
     "totalLiquidated": "129.418881466473631691683583948529",
@@ -41837,7 +41837,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/29/2022",
     "totalLiquidated": "4.286954425048238160553609661489268",
@@ -41854,7 +41854,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/30/2022",
     "totalLiquidated": "20967.06726933044842415828857618685303",
@@ -41883,7 +41883,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/6/2022",
     "totalLiquidated": "125.8680328423196307707652678499902",
@@ -41900,7 +41900,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/7/2022",
     "totalLiquidated": "49.74262244754336563372646095890753",
@@ -41923,7 +41923,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/8/2022",
     "totalLiquidated": "4.357218655936877361839762808038292",
@@ -41940,7 +41940,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/12/2022",
     "totalLiquidated": "234.2071347921608229745564820592",
@@ -41957,7 +41957,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/13/2022",
     "totalLiquidated": "5897.8469147438995636271010454739572",
@@ -41980,7 +41980,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/14/2022",
     "totalLiquidated": "395.3409349794797218794666504698237",
@@ -42003,7 +42003,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/16/2022",
     "totalLiquidated": "33788.8486043806240801840607760384496",
@@ -42038,7 +42038,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/17/2022",
     "totalLiquidated": "66947.6097702589523509459151967670109",
@@ -42121,7 +42121,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/20/2022",
     "totalLiquidated": "3950.378426840766094606875537511604904",
@@ -42264,7 +42264,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/25/2022",
     "totalLiquidated": "391.96187557506238382292323929598579",
@@ -42293,7 +42293,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/27/2022",
     "totalLiquidated": "167.3128544239427023765158043679349",
@@ -42310,7 +42310,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/28/2022",
     "totalLiquidated": "2350.590750907823690803023147926472506",
@@ -42375,7 +42375,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/29/2022",
     "totalLiquidated": "2420.488929915352508043299481085447198",
@@ -42506,7 +42506,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/30/2022",
     "totalLiquidated": "29962.620171940087694303360433127544437",
@@ -42847,7 +42847,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/31/2022",
     "totalLiquidated": "12.40109754358601998832377396445406",
@@ -42864,7 +42864,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/3/2023",
     "totalLiquidated": "22.85516825353104462938032207589533",
@@ -42881,7 +42881,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/9/2023",
     "totalLiquidated": "66.92321524602336793266707690714596",
@@ -42898,7 +42898,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/11/2023",
     "totalLiquidated": "56360.773930798012264615906739509344342",
@@ -42957,7 +42957,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/12/2023",
     "totalLiquidated": "9268.25871957090345752557208499834757",
@@ -43004,7 +43004,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/14/2023",
     "totalLiquidated": "1219.903533056650994680704589479578067",
@@ -43051,7 +43051,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/15/2023",
     "totalLiquidated": "26.07255620560120434791700968963964",
@@ -43068,7 +43068,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/16/2023",
     "totalLiquidated": "1994.514082406540022417745806803024988",
@@ -43091,7 +43091,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/17/2023",
     "totalLiquidated": "9.922706377827330289317397003040319",
@@ -43108,7 +43108,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/18/2023",
     "totalLiquidated": "17535.891058680524454162738298991320929",
@@ -43131,7 +43131,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/22/2023",
     "totalLiquidated": "34.37002236423303781551245216566515",
@@ -43148,7 +43148,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/24/2023",
     "totalLiquidated": "32.2311900329213109282897547372073",
@@ -43165,7 +43165,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/25/2023",
     "totalLiquidated": "14.09505679774273906587933063232073",
@@ -43182,7 +43182,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/27/2023",
     "totalLiquidated": "1591.7260061424136789246854387587",
@@ -43199,7 +43199,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/28/2023",
     "totalLiquidated": "29803.836363639791257352724594939593183",
@@ -43282,7 +43282,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/29/2023",
     "totalLiquidated": "3642.2850040853014042270965131086193",
@@ -43323,7 +43323,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/30/2023",
     "totalLiquidated": "1541.950351786520344937414114724443566",
@@ -43400,7 +43400,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/31/2023",
     "totalLiquidated": "51.73519534985783203900150175097506",
@@ -43423,7 +43423,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/2/2023",
     "totalLiquidated": "1505.167290552049304029787706522558304",
@@ -43458,7 +43458,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/5/2023",
     "totalLiquidated": "2102.0390780053523681109326252253379",
@@ -43481,7 +43481,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/6/2023",
     "totalLiquidated": "3.33518789545446419062686751831227749",
@@ -43504,7 +43504,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/7/2023",
     "totalLiquidated": "5028.8888893924703299745014208226813",
@@ -43533,7 +43533,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/9/2023",
     "totalLiquidated": "3533.3359619585437816077380044986117",
@@ -43556,7 +43556,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/10/2023",
     "totalLiquidated": "5788.774128468143506993721736258785",
@@ -43579,7 +43579,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/13/2023",
     "totalLiquidated": "4696.163465460545429777284894918298484",
@@ -43620,7 +43620,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/14/2023",
     "totalLiquidated": "32.23341273924891490427932829076653",
@@ -43637,7 +43637,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/16/2023",
     "totalLiquidated": "1187.0980536809193194210474694191707",
@@ -43666,7 +43666,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/17/2023",
     "totalLiquidated": "1325.6266463222050845355579042025856",
@@ -43695,7 +43695,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/20/2023",
     "totalLiquidated": "663.2487324717172170625215088317323",
@@ -43724,7 +43724,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/21/2023",
     "totalLiquidated": "1140.94810434371615947829511986155904",
@@ -43747,7 +43747,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/24/2023",
     "totalLiquidated": "22.12863267636325644082138694614897",
@@ -43764,7 +43764,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/25/2023",
     "totalLiquidated": "2522.244839037018567964114068780331",
@@ -43787,7 +43787,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/26/2023",
     "totalLiquidated": "6284.9538235657626808391276954403099",
@@ -43810,7 +43810,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/28/2023",
     "totalLiquidated": "138.6873321308344516624380203017575",
@@ -43827,7 +43827,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/3/2023",
     "totalLiquidated": "102766.03363643517457509697416130311721",
@@ -43886,7 +43886,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/8/2023",
     "totalLiquidated": "26.23023181306987351091479730237166",
@@ -43903,7 +43903,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/9/2023",
     "totalLiquidated": "1486.12867980133080466171671249796673",
@@ -43944,7 +43944,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/10/2023",
     "totalLiquidated": "14058.9793374682293403219794902155941",
@@ -44003,7 +44003,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/11/2023",
     "totalLiquidated": "57547.740636115848440899016839350531077",
@@ -44092,7 +44092,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/13/2023",
     "totalLiquidated": "7.657522034988888202757078395361484",
@@ -44109,7 +44109,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/15/2023",
     "totalLiquidated": "2300.31738342695167092328414406945187",
@@ -44138,7 +44138,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/17/2023",
     "totalLiquidated": "40.67792908820824671049292589203152",
@@ -44155,7 +44155,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/19/2023",
     "totalLiquidated": "8831.09463240006681501750450523973505",
@@ -44178,7 +44178,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/24/2023",
     "totalLiquidated": "20.63945400724342360736211707517181",
@@ -44195,7 +44195,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "3/27/2023",
     "totalLiquidated": "1223.923427607338936020644871787271",
@@ -44212,7 +44212,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/4/2023",
     "totalLiquidated": "274.82727507902400086821639451274379",
@@ -44235,7 +44235,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/6/2023",
     "totalLiquidated": "4.693523452898077932674761042186983",
@@ -44252,7 +44252,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/8/2023",
     "totalLiquidated": "8.146221886626217581907766849405846",
@@ -44269,7 +44269,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/9/2023",
     "totalLiquidated": "35.49531369751218110064016749257358",
@@ -44286,7 +44286,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/10/2023",
     "totalLiquidated": "22.35321767884879604179858120533",
@@ -44303,7 +44303,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/11/2023",
     "totalLiquidated": "110.41076011489450671755778050976",
@@ -44320,7 +44320,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/14/2023",
     "totalLiquidated": "9641.7786545939310600992459099679",
@@ -44337,7 +44337,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/17/2023",
     "totalLiquidated": "13051.1446061291394778194126331649408",
@@ -44372,7 +44372,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/18/2023",
     "totalLiquidated": "1685.4621195528979401900264228652051",
@@ -44395,7 +44395,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/19/2023",
     "totalLiquidated": "130736.23185351245420968112580509840364",
@@ -44436,7 +44436,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/20/2023",
     "totalLiquidated": "234.60037424654638846484748260498395",
@@ -44465,7 +44465,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/21/2023",
     "totalLiquidated": "23167.140450094447238743525966678935882",
@@ -44500,7 +44500,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/23/2023",
     "totalLiquidated": "9258.913916529269168398069766757116",
@@ -44517,7 +44517,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/24/2023",
     "totalLiquidated": "1829.111211880156179635421436300914",
@@ -44534,7 +44534,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/26/2023",
     "totalLiquidated": "14338.9989198284702252320956230398532",
@@ -44569,7 +44569,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/27/2023",
     "totalLiquidated": "28888.9538906089073181473093169151594",
@@ -44604,7 +44604,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "4/29/2023",
     "totalLiquidated": "189.245763265276824892152631939329",
@@ -44621,7 +44621,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/1/2023",
     "totalLiquidated": "2586.37800115568600976845854901752477",
@@ -44650,7 +44650,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/2/2023",
     "totalLiquidated": "2466.93887781656871812169884081230071",
@@ -44679,7 +44679,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/3/2023",
     "totalLiquidated": "296.390787036759919537715418912597878",
@@ -44708,7 +44708,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/6/2023",
     "totalLiquidated": "17574.69873821706594270461315705901458",
@@ -44743,7 +44743,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/8/2023",
     "totalLiquidated": "56351.80394590555061700230342097931559",
@@ -44862,7 +44862,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/10/2023",
     "totalLiquidated": "36217.679772510718194093231670850716",
@@ -44891,7 +44891,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/11/2023",
     "totalLiquidated": "253.39786007307043352300300297252827",
@@ -44914,7 +44914,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/12/2023",
     "totalLiquidated": "32293.873766028915276547887135675782342",
@@ -44961,7 +44961,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/16/2023",
     "totalLiquidated": "39.07599209840715467086683533020136",
@@ -44978,7 +44978,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/21/2023",
     "totalLiquidated": "4714.62762235507846643848174146286583",
@@ -45001,7 +45001,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/22/2023",
     "totalLiquidated": "51.6411050757539678359675133678115",
@@ -45024,7 +45024,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/25/2023",
     "totalLiquidated": "124009.13398724600637352190398417242",
@@ -45065,7 +45065,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/28/2023",
     "totalLiquidated": "5779.756302521620575890194668663733",
@@ -45082,7 +45082,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/29/2023",
     "totalLiquidated": "13.389503835583192007029871291239537",
@@ -45105,7 +45105,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "5/31/2023",
     "totalLiquidated": "214.21208296358039360079978285102329",
@@ -45128,7 +45128,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/5/2023",
     "totalLiquidated": "3495.33440180367169622184623587369348",
@@ -45181,7 +45181,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/6/2023",
     "totalLiquidated": "301.26201185746501881341259110551307",
@@ -45204,7 +45204,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/9/2023",
     "totalLiquidated": "56.08642427392721373654808590768995",
@@ -45221,7 +45221,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/10/2023",
     "totalLiquidated": "1399913.781185527609323440047285208374734",
@@ -46852,7 +46852,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/12/2023",
     "totalLiquidated": "103.683920173408988309585885216407099",
@@ -46875,7 +46875,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/15/2023",
     "totalLiquidated": "34139.795541769231450996860282735844388",
@@ -46958,7 +46958,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/16/2023",
     "totalLiquidated": "591.96919488414295707814895050016217",
@@ -46981,7 +46981,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/17/2023",
     "totalLiquidated": "3.202636529441167769008486394998723",
@@ -46998,7 +46998,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/18/2023",
     "totalLiquidated": "3885.272973047617346095576507321246",
@@ -47015,7 +47015,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/20/2023",
     "totalLiquidated": "1090.590352879496016069571039701963",
@@ -47032,7 +47032,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/23/2023",
     "totalLiquidated": "316.8381138663987121467857545851897",
@@ -47049,7 +47049,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/24/2023",
     "totalLiquidated": "1063.856671701282204210618338102804",
@@ -47066,7 +47066,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/28/2023",
     "totalLiquidated": "2947.94352129507344721432106626173047",
@@ -47101,7 +47101,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/29/2023",
     "totalLiquidated": "6718.344206960266050383739501695405",
@@ -47118,7 +47118,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "6/30/2023",
     "totalLiquidated": "6013.78298202742565168235313698318329",
@@ -47153,7 +47153,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/3/2023",
     "totalLiquidated": "129.7492766586436245233056532742069",
@@ -47170,7 +47170,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/4/2023",
     "totalLiquidated": "38.00588534148874023658576367604243",
@@ -47187,7 +47187,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/5/2023",
     "totalLiquidated": "236.248974487852072885803163184472659",
@@ -47222,7 +47222,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/7/2023",
     "totalLiquidated": "793.2772355699103780970921030130783",
@@ -47239,7 +47239,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/8/2023",
     "totalLiquidated": "165.2198431911066226517951457883193",
@@ -47256,7 +47256,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/9/2023",
     "totalLiquidated": "29.5887304116147120473207526567556",
@@ -47273,7 +47273,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/12/2023",
     "totalLiquidated": "41.69249218657443933270110805722434",
@@ -47296,7 +47296,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/13/2023",
     "totalLiquidated": "4.580032188903939271948758214637539",
@@ -47313,7 +47313,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/14/2023",
     "totalLiquidated": "10804.482842247772855500887632235082723",
@@ -47342,7 +47342,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/16/2023",
     "totalLiquidated": "14.8185539822271914351253780417075",
@@ -47359,7 +47359,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/18/2023",
     "totalLiquidated": "11.72948646468172978177781078056941",
@@ -47376,7 +47376,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/19/2023",
     "totalLiquidated": "397.1031512281059773419595235591315",
@@ -47393,7 +47393,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/20/2023",
     "totalLiquidated": "769.2281925104554394009825367238417",
@@ -47410,7 +47410,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/23/2023",
     "totalLiquidated": "198.7652736703249745199331306449755",
@@ -47427,7 +47427,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/24/2023",
     "totalLiquidated": "6710.53150423689382168273165037845392",
@@ -47468,7 +47468,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/25/2023",
     "totalLiquidated": "404.3526462591861449467611752346655",
@@ -47485,7 +47485,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/28/2023",
     "totalLiquidated": "214.8566498332755410256643230843517",
@@ -47502,7 +47502,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "7/31/2023",
     "totalLiquidated": "110.98402374272782007460032868703467",
@@ -47525,7 +47525,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/1/2023",
     "totalLiquidated": "9231.347341223346061116751616517146978",
@@ -47560,7 +47560,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/2/2023",
     "totalLiquidated": "80.74546336453357469859775667599396",
@@ -47577,7 +47577,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/3/2023",
     "totalLiquidated": "20.51587797614921652908798411745596",
@@ -47594,7 +47594,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/5/2023",
     "totalLiquidated": "1459.885328883813615697165652213968",
@@ -47611,7 +47611,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/7/2023",
     "totalLiquidated": "1780.00777020210317527017690451538018",
@@ -47634,7 +47634,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/9/2023",
     "totalLiquidated": "122.9573155016574507850079037050553",
@@ -47651,7 +47651,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/10/2023",
     "totalLiquidated": "46.09345669094795710654547208595196",
@@ -47674,7 +47674,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/14/2023",
     "totalLiquidated": "289.4714623191205193040040236942279",
@@ -47691,7 +47691,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/15/2023",
     "totalLiquidated": "53228.960573188790418870306522351108667",
@@ -47738,7 +47738,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/16/2023",
     "totalLiquidated": "1196.767516952642816772553840082166448",
@@ -47779,7 +47779,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/17/2023",
     "totalLiquidated": "3795.8174707658740195805742320118911",
@@ -47814,7 +47814,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/18/2023",
     "totalLiquidated": "108688.222603195351875851728386710805473",
@@ -48311,7 +48311,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/19/2023",
     "totalLiquidated": "3.052915431808541519521326919241071",
@@ -48328,7 +48328,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/21/2023",
     "totalLiquidated": "8331.158140062817267529855419380479155",
@@ -48411,7 +48411,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/22/2023",
     "totalLiquidated": "26714.216273313281328240375438436413442",
@@ -48890,7 +48890,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/23/2023",
     "totalLiquidated": "360.46634450386667880920349506770559",
@@ -48913,7 +48913,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/25/2023",
     "totalLiquidated": "3.068314835011420103535567752880307",
@@ -48930,7 +48930,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/26/2023",
     "totalLiquidated": "4.536064495842163073769094337277",
@@ -48947,7 +48947,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/28/2023",
     "totalLiquidated": "12.87741193125531387591149523516395",
@@ -48970,7 +48970,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/29/2023",
     "totalLiquidated": "40.57911301976723848969132912395377",
@@ -48987,7 +48987,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "8/31/2023",
     "totalLiquidated": "6.158663993945028248865700565720716",
@@ -49010,7 +49010,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/1/2023",
     "totalLiquidated": "2064.774819974230701028616129647290812",
@@ -49057,7 +49057,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/2/2023",
     "totalLiquidated": "9.67560183322411394465422282995207",
@@ -49080,7 +49080,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/4/2023",
     "totalLiquidated": "62.761526594387148640984899877479",
@@ -49097,7 +49097,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/5/2023",
     "totalLiquidated": "771.646511379095837821866239955257479",
@@ -49186,7 +49186,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/6/2023",
     "totalLiquidated": "3.258332425369712131255962368536295",
@@ -49203,7 +49203,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/10/2023",
     "totalLiquidated": "40804.404006778307997519244329399379098",
@@ -49556,7 +49556,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/11/2023",
     "totalLiquidated": "13717.235034913084041413016654803846582",
@@ -49867,7 +49867,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/12/2023",
     "totalLiquidated": "3.156460338435271785232785657052775",
@@ -49884,7 +49884,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/13/2023",
     "totalLiquidated": "89.459782117545465353041123085513745",
@@ -49931,7 +49931,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/15/2023",
     "totalLiquidated": "99.792823010627294800904427806739547",
@@ -49960,7 +49960,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/16/2023",
     "totalLiquidated": "62.526345571674130733037592927877632",
@@ -49983,7 +49983,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/17/2023",
     "totalLiquidated": "1317.694609821153244244897835887049414",
@@ -50006,7 +50006,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/18/2023",
     "totalLiquidated": "61945.77666090442179277202793783209649",
@@ -50257,7 +50257,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/19/2023",
     "totalLiquidated": "4.00776197482207650387525085311273",
@@ -50274,7 +50274,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/20/2023",
     "totalLiquidated": "501.359269203448913957374587365330125",
@@ -50321,7 +50321,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/21/2023",
     "totalLiquidated": "1066.47912302294823555286149437009046",
@@ -50374,7 +50374,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/22/2023",
     "totalLiquidated": "308.738027177824219769124366171684705",
@@ -50415,7 +50415,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/23/2023",
     "totalLiquidated": "39.236234063027683182995022943565412",
@@ -50444,7 +50444,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/24/2023",
     "totalLiquidated": "742.882358192103322207849875640245445",
@@ -50467,7 +50467,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/25/2023",
     "totalLiquidated": "2758.336684909407118997251022544896378",
@@ -50556,7 +50556,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/26/2023",
     "totalLiquidated": "413.3465520216913635553741541059853",
@@ -50573,7 +50573,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/27/2023",
     "totalLiquidated": "968.448699849108595762557367553275",
@@ -50602,7 +50602,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "9/29/2023",
     "totalLiquidated": "60.75272535836312072747000678763429",
@@ -50619,7 +50619,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/1/2023",
     "totalLiquidated": "29.91454045679713341265028822441353",
@@ -50636,7 +50636,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/5/2023",
     "totalLiquidated": "72.8388772652343361982254818282702",
@@ -50653,7 +50653,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/6/2023",
     "totalLiquidated": "800.3728838546531298537650263089235",
@@ -50670,7 +50670,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/7/2023",
     "totalLiquidated": "776.44200413473918318447016208125",
@@ -50699,7 +50699,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/8/2023",
     "totalLiquidated": "707.1769770130331160501789086827314",
@@ -50716,7 +50716,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/9/2023",
     "totalLiquidated": "453.19883105728588453709158997547606",
@@ -50745,7 +50745,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/10/2023",
     "totalLiquidated": "488.1041208710613235073251972275135",
@@ -50762,7 +50762,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/11/2023",
     "totalLiquidated": "8636.139951170127571610753686442759415",
@@ -50809,7 +50809,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/12/2023",
     "totalLiquidated": "724.512072138422284586108327099814082",
@@ -50862,7 +50862,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/13/2023",
     "totalLiquidated": "1515.384408954493116415201040175225",
@@ -50879,7 +50879,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/14/2023",
     "totalLiquidated": "689.690763379705711671494615798628472",
@@ -50902,7 +50902,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/15/2023",
     "totalLiquidated": "4.641699892918730158637552710997354",
@@ -50919,7 +50919,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/16/2023",
     "totalLiquidated": "1217.58249179916454372536694876979366",
@@ -50948,7 +50948,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/17/2023",
     "totalLiquidated": "1373.390967391803428592482728467263214",
@@ -50983,7 +50983,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/18/2023",
     "totalLiquidated": "462.96459750178276181346979310026461",
@@ -51012,7 +51012,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/19/2023",
     "totalLiquidated": "906.23417871232784681653706533744116",
@@ -51041,7 +51041,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/20/2023",
     "totalLiquidated": "3.6868906984303195620675509720592",
@@ -51058,7 +51058,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/22/2023",
     "totalLiquidated": "1181.07724000528884143514619483823047",
@@ -51087,7 +51087,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/23/2023",
     "totalLiquidated": "1253.027527189106277980051783099277891",
@@ -51140,7 +51140,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/24/2023",
     "totalLiquidated": "16000.990995296679519746048851918221826",
@@ -51223,7 +51223,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/25/2023",
     "totalLiquidated": "77.60076804494454495763895709856962",
@@ -51246,7 +51246,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/26/2023",
     "totalLiquidated": "5.723115306371126652314149450361389",
@@ -51263,7 +51263,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/28/2023",
     "totalLiquidated": "91.64833514226883408083511896224136",
@@ -51280,7 +51280,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/29/2023",
     "totalLiquidated": "1044.61682196090674749378255574511804",
@@ -51303,7 +51303,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "10/31/2023",
     "totalLiquidated": "133.924923396559266969710800513415189",
@@ -51332,7 +51332,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/1/2023",
     "totalLiquidated": "1310.739928732052170400823231276776321",
@@ -51367,7 +51367,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/2/2023",
     "totalLiquidated": "753.7825324046391050507146865906625",
@@ -51402,7 +51402,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/3/2023",
     "totalLiquidated": "21.99699589669626489320025393181224",
@@ -51419,7 +51419,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/5/2023",
     "totalLiquidated": "7019.7761332576854063258611751723105",
@@ -51460,7 +51460,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/6/2023",
     "totalLiquidated": "5460.48363195994860241670293763517848",
@@ -51495,7 +51495,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/7/2023",
     "totalLiquidated": "82.42540250152784408774812187895041",
@@ -51518,7 +51518,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/8/2023",
     "totalLiquidated": "178.8704760655417221741902705055527",
@@ -51535,7 +51535,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/9/2023",
     "totalLiquidated": "2741.671790417497882014260632937322538",
@@ -51732,7 +51732,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/10/2023",
     "totalLiquidated": "23273.3284493301859044042055783462239",
@@ -52211,7 +52211,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/11/2023",
     "totalLiquidated": "17898.77103801699809610686758878946669",
@@ -53812,7 +53812,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/12/2023",
     "totalLiquidated": "18551.903769127044599115552281578271999",
@@ -56541,7 +56541,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/13/2023",
     "totalLiquidated": "43804.94956340052847073730316138229578",
@@ -57218,7 +57218,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/14/2023",
     "totalLiquidated": "95929.47107032406144190849368368287922",
@@ -57337,7 +57337,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/15/2023",
     "totalLiquidated": "28319.6406121722194649838602851512685",
@@ -58650,7 +58650,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/16/2023",
     "totalLiquidated": "58967.30141239596678218072103948470623",
@@ -60803,7 +60803,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/17/2023",
     "totalLiquidated": "57074.35598226926151294609118512588687",
@@ -61042,7 +61042,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/19/2023",
     "totalLiquidated": "782.7932522799186652805138951998485",
@@ -61059,7 +61059,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/21/2023",
     "totalLiquidated": "36726.40647349956170893274198161406681",
@@ -61088,7 +61088,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/22/2023",
     "totalLiquidated": "45765.2294859455951581833404700323727",
@@ -61141,7 +61141,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/23/2023",
     "totalLiquidated": "33157.453488819309959663236188879663453",
@@ -61176,7 +61176,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/24/2023",
     "totalLiquidated": "173.4751166556453314815878023101232",
@@ -61193,7 +61193,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/26/2023",
     "totalLiquidated": "22076.37899843704585121664983015765602",
@@ -61222,7 +61222,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/27/2023",
     "totalLiquidated": "33006.775917184703854700562833987392104",
@@ -61257,7 +61257,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/28/2023",
     "totalLiquidated": "17846.6388033825665383348815858633988",
@@ -61286,7 +61286,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/29/2023",
     "totalLiquidated": "23.41776380268568546503334157092144",
@@ -61303,7 +61303,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "11/30/2023",
     "totalLiquidated": "19.60852365555347801922994571057743",
@@ -61326,7 +61326,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/1/2023",
     "totalLiquidated": "353.73639558611640343557887974809443",
@@ -61355,7 +61355,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/2/2023",
     "totalLiquidated": "21.34111495859415204805550821335336",
@@ -61372,7 +61372,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/3/2023",
     "totalLiquidated": "12.67958243375178565170482416690304",
@@ -61395,7 +61395,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/4/2023",
     "totalLiquidated": "31418.56412456918743807346581887962982",
@@ -61436,7 +61436,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/5/2023",
     "totalLiquidated": "29653.33867476882221731050988017060151",
@@ -61483,7 +61483,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/6/2023",
     "totalLiquidated": "39796.209013163645738004795954679170742",
@@ -61692,7 +61692,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/7/2023",
     "totalLiquidated": "61536.0577243842584928657966981189499",
@@ -61721,7 +61721,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/8/2023",
     "totalLiquidated": "90666.62173200581415026770634013967626",
@@ -61816,7 +61816,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/9/2023",
     "totalLiquidated": "17263.85533532051362110137257180760218",
@@ -61971,7 +61971,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/10/2023",
     "totalLiquidated": "3093.41305446583069789715317514485487",
@@ -62216,7 +62216,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/11/2023",
     "totalLiquidated": "587035.1426851694130786581344177070135",
@@ -62443,7 +62443,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/12/2023",
     "totalLiquidated": "11330.96007002927461878660646143894091",
@@ -62712,7 +62712,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/13/2023",
     "totalLiquidated": "758.889974442538650107904488609119",
@@ -62735,7 +62735,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/14/2023",
     "totalLiquidated": "7408.6494076383463273591003238993239",
@@ -62758,7 +62758,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/16/2023",
     "totalLiquidated": "55459.6447996171439273062790345989258",
@@ -62799,7 +62799,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/17/2023",
     "totalLiquidated": "55926.30779071591032667796053454046549",
@@ -62918,7 +62918,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/18/2023",
     "totalLiquidated": "47552.588085620093840631655980698407",
@@ -62941,7 +62941,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/21/2023",
     "totalLiquidated": "4354.0658945400112983302260927405881",
@@ -63030,7 +63030,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/22/2023",
     "totalLiquidated": "11465.5628483130401167458850099108023",
@@ -63323,7 +63323,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/23/2023",
     "totalLiquidated": "206.9578080440032240301505175386409",
@@ -63340,7 +63340,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/24/2023",
     "totalLiquidated": "184054.5496626909118221991510228249524",
@@ -63495,7 +63495,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/25/2023",
     "totalLiquidated": "249.64885534753269960199711209997501",
@@ -63530,7 +63530,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/26/2023",
     "totalLiquidated": "32682.1260320583097370731143394111349",
@@ -63583,7 +63583,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/27/2023",
     "totalLiquidated": "2607.63758467439985291017408580932155",
@@ -63612,7 +63612,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/28/2023",
     "totalLiquidated": "5395.21459409103046418357999773582694",
@@ -63695,7 +63695,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/29/2023",
     "totalLiquidated": "2510.87568192755614062961736160247049",
@@ -63730,7 +63730,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/30/2023",
     "totalLiquidated": "1884.765744325236759286212819722924",
@@ -63747,7 +63747,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "12/31/2023",
     "totalLiquidated": "230.45955423931901714524416295064928",
@@ -63770,7 +63770,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/1/2024",
     "totalLiquidated": "563.12213222554400543028597235452",
@@ -63787,7 +63787,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/2/2024",
     "totalLiquidated": "62.71716982956877322702439324549917",
@@ -63804,7 +63804,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/3/2024",
     "totalLiquidated": "147627.7026768221895514001370235108363",
@@ -63935,7 +63935,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/4/2024",
     "totalLiquidated": "11.01763125961882592274514187685",
@@ -63952,7 +63952,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/5/2024",
     "totalLiquidated": "229.093464826736875553490865729522",
@@ -63969,7 +63969,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/6/2024",
     "totalLiquidated": "18186.9603656678377533091050610704209",
@@ -64022,7 +64022,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/7/2024",
     "totalLiquidated": "2723.12377624469938933004038592273999",
@@ -64045,7 +64045,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/8/2024",
     "totalLiquidated": "22525.57641000833185484878255604562173",
@@ -64176,7 +64176,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/10/2024",
     "totalLiquidated": "6255.95238533123691352229499164145782",
@@ -64211,7 +64211,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/11/2024",
     "totalLiquidated": "55218.291125185691676912541186751401864",
@@ -64258,7 +64258,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/12/2024",
     "totalLiquidated": "19197.09743937605991280364812931101947",
@@ -64305,7 +64305,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/13/2024",
     "totalLiquidated": "13807.23526564329827971340700660828",
@@ -64322,7 +64322,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/14/2024",
     "totalLiquidated": "626.4224547638240736695546331571198",
@@ -64345,7 +64345,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/15/2024",
     "totalLiquidated": "409.75325565741798082643270748423636",
@@ -64368,7 +64368,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/16/2024",
     "totalLiquidated": "60580.35479573978299953129872065621",
@@ -64385,7 +64385,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/18/2024",
     "totalLiquidated": "70265.3956529594337737093928411610036",
@@ -64438,7 +64438,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/19/2024",
     "totalLiquidated": "2133.16571752211856989951465910824425",
@@ -64473,7 +64473,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/22/2024",
     "totalLiquidated": "27654.2051426211192495208086333933605",
@@ -64586,7 +64586,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/23/2024",
     "totalLiquidated": "95730.56349321409691199525931551393282",
@@ -64795,7 +64795,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/24/2024",
     "totalLiquidated": "8.04345590000501291934409421622863",
@@ -64812,7 +64812,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/29/2024",
     "totalLiquidated": "18.07757858534901556882380260095239",
@@ -64829,7 +64829,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "1/31/2024",
     "totalLiquidated": "5864.8784666588424635936233549272265",
@@ -64852,7 +64852,7 @@
     "chainId": 43114
   },
   {
-    "name": "BANQI Lending Avalanche",
+    "name": "BANQI Lending",
     "icon": "https://icons.llamao.fi/icons/protocols/benqi?w=48&h=48",
     "date": "2/1/2024",
     "totalLiquidated": "35001.82003007851048951239437502644365",

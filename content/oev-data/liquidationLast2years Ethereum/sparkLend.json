@@ -1,6 +1,6 @@
 [
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "4/4/2023",
     "totalLiquidated": "0.418094464793208955518267",
@@ -17,7 +17,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/17/2023",
     "totalLiquidated": "5274.83181870375970515228",
@@ -34,7 +34,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/19/2023",
     "totalLiquidated": "4229.02897199122972864626156057",
@@ -51,7 +51,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/23/2023",
     "totalLiquidated": "4534.50447347461207969076783248",
@@ -68,7 +68,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "5/24/2023",
     "totalLiquidated": "6619.04344226841786050739131088",
@@ -85,7 +85,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/2/2023",
     "totalLiquidated": "2353.2323406195644986634595045",
@@ -102,7 +102,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/3/2023",
     "totalLiquidated": "0.1445616659987665838654712",
@@ -119,7 +119,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/4/2023",
     "totalLiquidated": "1176.63866939454930899305116924",
@@ -136,7 +136,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "7/25/2023",
     "totalLiquidated": "64.46517188649999932417466148",
@@ -153,7 +153,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "8/17/2023",
     "totalLiquidated": "7308.8081833582675187220068",
@@ -176,7 +176,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "8/18/2023",
     "totalLiquidated": "230559.82464903916484455617332577",
@@ -211,7 +211,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "9/11/2023",
     "totalLiquidated": "2487.3589446980192717211666417",
@@ -228,7 +228,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "9/12/2023",
     "totalLiquidated": "2259.456456687556520511",
@@ -245,7 +245,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/8/2023",
     "totalLiquidated": "3337.76328222575967689544187772",
@@ -262,7 +262,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/9/2023",
     "totalLiquidated": "3001.75990121985996461880882",
@@ -285,7 +285,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/10/2023",
     "totalLiquidated": "552.6646096894959663945147",
@@ -302,7 +302,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/11/2023",
     "totalLiquidated": "945.2002663415076965439230988",
@@ -325,7 +325,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/12/2023",
     "totalLiquidated": "276.42896359740673451790235275",
@@ -342,7 +342,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "10/31/2023",
     "totalLiquidated": "0.00243479022811449962430418",
@@ -359,7 +359,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "11/12/2023",
     "totalLiquidated": "3167.40390355097506840811134398",
@@ -376,7 +376,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "11/22/2023",
     "totalLiquidated": "3211.74450530010403898304",
@@ -393,7 +393,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "11/29/2023",
     "totalLiquidated": "523.51122473493316336199",
@@ -410,7 +410,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/6/2023",
     "totalLiquidated": "1206.0820658828743032467318",
@@ -427,7 +427,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/11/2023",
     "totalLiquidated": "3386.72180021411222626314119702",
@@ -444,7 +444,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/12/2023",
     "totalLiquidated": "1907.263797029159039727",
@@ -461,7 +461,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/15/2023",
     "totalLiquidated": "1112.98832823005300732137129",
@@ -478,7 +478,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "12/17/2023",
     "totalLiquidated": "611.9030904263269640097464112",
@@ -495,7 +495,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "1/3/2024",
     "totalLiquidated": "130614.824833574508814",
@@ -512,7 +512,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "1/19/2024",
     "totalLiquidated": "8585.1136993909572434384670012",
@@ -529,7 +529,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "1/22/2024",
     "totalLiquidated": "515.2517771314644470333",
@@ -546,7 +546,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "1/23/2024",
     "totalLiquidated": "7299.97092807198393505100931967",
@@ -617,7 +617,7 @@
     "chainId": 1
   },
   {
-    "name": "SparkLend Ethereum",
+    "name": "SparkLend",
     "icon": "https://icons.llamao.fi/icons/protocols/spark?w=48&h=48",
     "date": "1/24/2024",
     "totalLiquidated": "382.50206503869920923528143216",

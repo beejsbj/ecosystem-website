@@ -1,6 +1,6 @@
 [
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/7/2022",
     "totalLiquidated": "757.82936450014489689213379288",
@@ -29,7 +29,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/9/2022",
     "totalLiquidated": "559.0811611304999999313794412",
@@ -46,7 +46,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/10/2022",
     "totalLiquidated": "60.2889792791066853679790751",
@@ -63,7 +63,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/11/2022",
     "totalLiquidated": "2939.37306560683860314441955257",
@@ -116,7 +116,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/12/2022",
     "totalLiquidated": "616.1249425043721254472574688",
@@ -139,7 +139,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/18/2022",
     "totalLiquidated": "370.49398549468888651229565558",
@@ -156,7 +156,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/24/2022",
     "totalLiquidated": "219.05275245942529914284490746",
@@ -173,7 +173,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/25/2022",
     "totalLiquidated": "606.8575946266670398476751014",
@@ -196,7 +196,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/29/2022",
     "totalLiquidated": "39227.9392394949788524553948602",
@@ -249,7 +249,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/30/2022",
     "totalLiquidated": "26129.42268157312945853351769638",
@@ -290,7 +290,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/1/2022",
     "totalLiquidated": "31598.79961328877360086984057838",
@@ -373,7 +373,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/5/2022",
     "totalLiquidated": "21898.5933048169888154848529906",
@@ -402,7 +402,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/6/2022",
     "totalLiquidated": "17910.70529817615586948512264017",
@@ -443,7 +443,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/7/2022",
     "totalLiquidated": "362.22625261079558871687153094",
@@ -466,7 +466,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/8/2022",
     "totalLiquidated": "129435.31900946953515499270685069",
@@ -645,7 +645,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/9/2022",
     "totalLiquidated": "515614.79383034936777145461269321",
@@ -932,7 +932,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/10/2022",
     "totalLiquidated": "46949.01069216060241171263307611",
@@ -1063,7 +1063,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/11/2022",
     "totalLiquidated": "1844605.39269575233611298093562695",
@@ -2010,7 +2010,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/12/2022",
     "totalLiquidated": "1940481.41288554845728923722692378",
@@ -3071,7 +3071,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/13/2022",
     "totalLiquidated": "796.11843645170650661267081116",
@@ -3154,7 +3154,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/14/2022",
     "totalLiquidated": "4616.10357335883543279106160274",
@@ -3225,7 +3225,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/19/2022",
     "totalLiquidated": "781.66871788462400052496880897",
@@ -3296,7 +3296,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/20/2022",
     "totalLiquidated": "27.4834443032069300797189248",
@@ -3313,7 +3313,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/21/2022",
     "totalLiquidated": "99.2175431983736",
@@ -3330,7 +3330,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/23/2022",
     "totalLiquidated": "30.20471572493980706322960576",
@@ -3347,7 +3347,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/24/2022",
     "totalLiquidated": "2121.34912763030443187323137972",
@@ -3382,7 +3382,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/25/2022",
     "totalLiquidated": "37.77580960055078733196193685",
@@ -3405,7 +3405,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/26/2022",
     "totalLiquidated": "302912.12477031311748958053040524",
@@ -3704,7 +3704,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/27/2022",
     "totalLiquidated": "572051.56601761647120060016878418",
@@ -3961,7 +3961,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/28/2022",
     "totalLiquidated": "49.05092045111912",
@@ -3978,7 +3978,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/29/2022",
     "totalLiquidated": "835.81439114261062997561525232",
@@ -4133,7 +4133,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/1/2022",
     "totalLiquidated": "749.56747559611954542841389086",
@@ -4162,7 +4162,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/2/2022",
     "totalLiquidated": "34.88439046645384934904446195",
@@ -4191,7 +4191,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/3/2022",
     "totalLiquidated": "5.5071910129770532931025351",
@@ -4208,7 +4208,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/4/2022",
     "totalLiquidated": "1207.46241522810854785789952888",
@@ -4237,7 +4237,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/5/2022",
     "totalLiquidated": "1.5901937392",
@@ -4254,7 +4254,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/6/2022",
     "totalLiquidated": "8874.011303376940593819947",
@@ -4277,7 +4277,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/7/2022",
     "totalLiquidated": "66.33300900778847968489279733",
@@ -4306,7 +4306,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/8/2022",
     "totalLiquidated": "1636.54180985286127314048915363",
@@ -4329,7 +4329,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/9/2022",
     "totalLiquidated": "9817.611949135549382505682",
@@ -4346,7 +4346,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/10/2022",
     "totalLiquidated": "695369.0335016629734710366764647",
@@ -4537,7 +4537,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/11/2022",
     "totalLiquidated": "1477000.1454787760660753910469806",
@@ -5166,7 +5166,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/12/2022",
     "totalLiquidated": "665138.79562420847035854285729471",
@@ -5801,7 +5801,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/13/2022",
     "totalLiquidated": "2648679.81308278570315644883782216",
@@ -7798,7 +7798,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/14/2022",
     "totalLiquidated": "503990.48445940141104825006584795",
@@ -8361,7 +8361,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/15/2022",
     "totalLiquidated": "237370.16502957837891633654494175",
@@ -8702,7 +8702,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/16/2022",
     "totalLiquidated": "985.98279628140882298335",
@@ -8725,7 +8725,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/17/2022",
     "totalLiquidated": "25.1249790883",
@@ -8742,7 +8742,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/18/2022",
     "totalLiquidated": "423079.14218419724699152761722979",
@@ -9515,7 +9515,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/19/2022",
     "totalLiquidated": "135052.33228640538536438403441132",
@@ -9844,7 +9844,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/20/2022",
     "totalLiquidated": "15924.22342731734826115649370752",
@@ -9885,7 +9885,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/21/2022",
     "totalLiquidated": "8113.2786490695869",
@@ -9902,7 +9902,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/22/2022",
     "totalLiquidated": "3.14896500125042572216",
@@ -9919,7 +9919,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/23/2022",
     "totalLiquidated": "95.70515819726187504262672747",
@@ -9942,7 +9942,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/24/2022",
     "totalLiquidated": "6210.66147478418493266309392016",
@@ -9977,7 +9977,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/25/2022",
     "totalLiquidated": "251285.28862866250642082353614658",
@@ -10030,7 +10030,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/26/2022",
     "totalLiquidated": "53.14847967650555232311491542",
@@ -10143,7 +10143,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/27/2022",
     "totalLiquidated": "3.24523100376642344905600101",
@@ -10196,7 +10196,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/29/2022",
     "totalLiquidated": "3657.76518904958303367710636741",
@@ -10225,7 +10225,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/30/2022",
     "totalLiquidated": "169435.77807876930078043158611172",
@@ -10278,7 +10278,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/3/2022",
     "totalLiquidated": "1.07162971869200107254881652",
@@ -10295,7 +10295,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/5/2022",
     "totalLiquidated": "1914.81919257017853018367962793",
@@ -10342,7 +10342,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/7/2022",
     "totalLiquidated": "35.79160149580352631335661872",
@@ -10359,7 +10359,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/9/2022",
     "totalLiquidated": "38214.292104",
@@ -10376,7 +10376,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/10/2022",
     "totalLiquidated": "1348.497060816683201447992904",
@@ -10393,7 +10393,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/11/2022",
     "totalLiquidated": "1294.50547868809604650805568952",
@@ -10416,7 +10416,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/12/2022",
     "totalLiquidated": "3925.49337836308125595322069669",
@@ -10457,7 +10457,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/13/2022",
     "totalLiquidated": "462.64661281073046890968853625",
@@ -10486,7 +10486,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/16/2022",
     "totalLiquidated": "16137.04838123460667233806711388",
@@ -10515,7 +10515,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/17/2022",
     "totalLiquidated": "1261.98994930092130773173108908",
@@ -10538,7 +10538,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/18/2022",
     "totalLiquidated": "283897.20772814754847347567026324",
@@ -10633,7 +10633,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/19/2022",
     "totalLiquidated": "424662.70448759299495387868536109",
@@ -10752,7 +10752,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/20/2022",
     "totalLiquidated": "1719.0027338016998505577776321",
@@ -10769,7 +10769,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/21/2022",
     "totalLiquidated": "4486.99802466860246569486739131",
@@ -10792,7 +10792,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/22/2022",
     "totalLiquidated": "812.0300366642055925503",
@@ -10815,7 +10815,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/25/2022",
     "totalLiquidated": "9905.34563605941663547582154661",
@@ -10850,7 +10850,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/26/2022",
     "totalLiquidated": "2119.77976186719492162681406439",
@@ -10885,7 +10885,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/27/2022",
     "totalLiquidated": "105.96425314891416",
@@ -10902,7 +10902,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/28/2022",
     "totalLiquidated": "6327.19374260539821906427615172",
@@ -10931,7 +10931,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/29/2022",
     "totalLiquidated": "526.87781000009661913552557839",
@@ -10954,7 +10954,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/30/2022",
     "totalLiquidated": "0.55486974069122397745208288",
@@ -10971,7 +10971,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/1/2022",
     "totalLiquidated": "109.56040906939039843215570037",
@@ -10994,7 +10994,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/2/2022",
     "totalLiquidated": "212.1491018526771999788065584",
@@ -11017,7 +11017,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/3/2022",
     "totalLiquidated": "729.873333240866128",
@@ -11034,7 +11034,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/4/2022",
     "totalLiquidated": "0.02201185126068",
@@ -11051,7 +11051,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/5/2022",
     "totalLiquidated": "28.29088163598004702332643572",
@@ -11068,7 +11068,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/6/2022",
     "totalLiquidated": "206585.66636164720506324705501624",
@@ -11145,7 +11145,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/7/2022",
     "totalLiquidated": "358983.1084032662046187",
@@ -11270,7 +11270,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/8/2022",
     "totalLiquidated": "340711.72664990771527443657745916",
@@ -11359,7 +11359,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/9/2022",
     "totalLiquidated": "8525.17369411463338517705761947",
@@ -11394,7 +11394,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/10/2022",
     "totalLiquidated": "2739.57232198278322796232483498",
@@ -11417,7 +11417,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/11/2022",
     "totalLiquidated": "49.10625656862991168540825595",
@@ -11434,7 +11434,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/13/2022",
     "totalLiquidated": "642.14987056423909384981",
@@ -11457,7 +11457,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/14/2022",
     "totalLiquidated": "189.22032940850898959572135502",
@@ -11486,7 +11486,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/15/2022",
     "totalLiquidated": "2510.27454358334066710151232864",
@@ -11509,7 +11509,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/17/2022",
     "totalLiquidated": "406.0655388805575312005338166",
@@ -11538,7 +11538,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/18/2022",
     "totalLiquidated": "217.92190175088662416033185052",
@@ -11567,7 +11567,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/19/2022",
     "totalLiquidated": "21688.36354126220625883407355926",
@@ -11674,7 +11674,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/20/2022",
     "totalLiquidated": "144300.59001109767382373211230882",
@@ -11745,7 +11745,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/21/2022",
     "totalLiquidated": "767.74030059310297059232",
@@ -11768,7 +11768,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/22/2022",
     "totalLiquidated": "9.94319799999999999744418243",
@@ -11785,7 +11785,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/26/2022",
     "totalLiquidated": "4646.91817097830435158605510568",
@@ -11820,7 +11820,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/27/2022",
     "totalLiquidated": "15145.83038127268286934551396622",
@@ -11933,7 +11933,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/28/2022",
     "totalLiquidated": "14859.9753315058092315960084756",
@@ -11956,7 +11956,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/29/2022",
     "totalLiquidated": "14604.66126674569439473671946933",
@@ -12081,7 +12081,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/30/2022",
     "totalLiquidated": "6963.46831258934849347605105811",
@@ -12104,7 +12104,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/31/2022",
     "totalLiquidated": "0.44250731404071",
@@ -12121,7 +12121,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/1/2022",
     "totalLiquidated": "5.32216743017901030099409347",
@@ -12138,7 +12138,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/6/2022",
     "totalLiquidated": "1675.47812221646208549576",
@@ -12161,7 +12161,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/7/2022",
     "totalLiquidated": "12648.93181142353837809388136438",
@@ -12190,7 +12190,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/9/2022",
     "totalLiquidated": "1044.53100579546641076345382902",
@@ -12225,7 +12225,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/10/2022",
     "totalLiquidated": "4449.81277931884658283046045425",
@@ -12242,7 +12242,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/13/2022",
     "totalLiquidated": "14967.38954331626779177782602396",
@@ -12271,7 +12271,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/14/2022",
     "totalLiquidated": "5399.4636572656514651973",
@@ -12288,7 +12288,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/15/2022",
     "totalLiquidated": "5571.75014112633999807513395284",
@@ -12317,7 +12317,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/16/2022",
     "totalLiquidated": "12187.58838465335149893724103206",
@@ -12370,7 +12370,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/18/2022",
     "totalLiquidated": "5939.0598878823962016746201192",
@@ -12417,7 +12417,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/19/2022",
     "totalLiquidated": "36067.35533149429394383327962179",
@@ -12524,7 +12524,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/20/2022",
     "totalLiquidated": "207.6654333759030191903982534",
@@ -12541,7 +12541,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/21/2022",
     "totalLiquidated": "170.41838486347738",
@@ -12558,7 +12558,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/22/2022",
     "totalLiquidated": "19222.5967749950920826258714531",
@@ -12599,7 +12599,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/23/2022",
     "totalLiquidated": "5.43142549323819932538663612",
@@ -12616,7 +12616,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/24/2022",
     "totalLiquidated": "1.09424692585620599471417245",
@@ -12633,7 +12633,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/25/2022",
     "totalLiquidated": "9588.25377161282787641895551215",
@@ -12656,7 +12656,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/27/2022",
     "totalLiquidated": "805.42377592603010749008779564",
@@ -12673,7 +12673,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/28/2022",
     "totalLiquidated": "1637.32430055166378179964404071",
@@ -12702,7 +12702,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/29/2022",
     "totalLiquidated": "14.81270857404485337543534277",
@@ -12821,7 +12821,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/1/2022",
     "totalLiquidated": "1.54647596345648",
@@ -12838,7 +12838,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/5/2022",
     "totalLiquidated": "3.67963969650363864696",
@@ -12861,7 +12861,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/7/2022",
     "totalLiquidated": "324.86270660083148492188040377",
@@ -12878,7 +12878,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/9/2022",
     "totalLiquidated": "392.01425507782988336874",
@@ -12895,7 +12895,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/10/2022",
     "totalLiquidated": "225.60306360698801891733569821",
@@ -12918,7 +12918,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/11/2022",
     "totalLiquidated": "4608.68778349824505688553329908",
@@ -12977,7 +12977,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/13/2022",
     "totalLiquidated": "8833.9934615782586020630473725",
@@ -13048,7 +13048,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/14/2022",
     "totalLiquidated": "238.6087478435752183869688768",
@@ -13065,7 +13065,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/16/2022",
     "totalLiquidated": "120.92324302908191999148901347",
@@ -13088,7 +13088,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/17/2022",
     "totalLiquidated": "0.545019574854171272593815",
@@ -13105,7 +13105,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/20/2022",
     "totalLiquidated": "59.67321424731215258993267579",
@@ -13122,7 +13122,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/21/2022",
     "totalLiquidated": "29.83821210168135999036596046",
@@ -13139,7 +13139,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/25/2022",
     "totalLiquidated": "6723.31019072018032200939271332",
@@ -13168,7 +13168,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/26/2022",
     "totalLiquidated": "4679.76340669347792",
@@ -13185,7 +13185,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/27/2022",
     "totalLiquidated": "18.65950396384071358845068208",
@@ -13208,7 +13208,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/28/2022",
     "totalLiquidated": "0.50891002677534777887415832",
@@ -13225,7 +13225,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/29/2022",
     "totalLiquidated": "10805.14941233268574217131512506",
@@ -13278,7 +13278,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/30/2022",
     "totalLiquidated": "1035.93828623578469701925667552",
@@ -13295,7 +13295,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/31/2022",
     "totalLiquidated": "5306.9473124021952",
@@ -13318,7 +13318,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/3/2022",
     "totalLiquidated": "317.06269656347792519227757292",
@@ -13341,7 +13341,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/4/2022",
     "totalLiquidated": "12933.8914607980634178",
@@ -13358,7 +13358,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/5/2022",
     "totalLiquidated": "209.67519422971196",
@@ -13375,7 +13375,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/6/2022",
     "totalLiquidated": "164.2535750328772790227846806",
@@ -13398,7 +13398,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/8/2022",
     "totalLiquidated": "188272.42703139283658575130877469",
@@ -13709,7 +13709,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/9/2022",
     "totalLiquidated": "199359.17433580631935833056270896",
@@ -14260,7 +14260,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/10/2022",
     "totalLiquidated": "169169.31131004316356887802167606",
@@ -14715,7 +14715,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/11/2022",
     "totalLiquidated": "322.6546554532235205302492935",
@@ -14744,7 +14744,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/13/2022",
     "totalLiquidated": "77.60872750640687377226137176",
@@ -14767,7 +14767,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/14/2022",
     "totalLiquidated": "47.67391158832129642069218075",
@@ -14790,7 +14790,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/21/2022",
     "totalLiquidated": "34808.67587544643364042493609702",
@@ -14975,7 +14975,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/22/2022",
     "totalLiquidated": "5407.05875359535706241766827869",
@@ -15034,7 +15034,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/23/2022",
     "totalLiquidated": "4.38592854242399999066445045",
@@ -15051,7 +15051,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/25/2022",
     "totalLiquidated": "20669.8414922378842638",
@@ -15086,7 +15086,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/26/2022",
     "totalLiquidated": "1041.3057607243100232",
@@ -15103,7 +15103,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/28/2022",
     "totalLiquidated": "3089.03272494870481334452022829",
@@ -15126,7 +15126,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/29/2022",
     "totalLiquidated": "917.03886805393227294704749262",
@@ -15155,7 +15155,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/30/2022",
     "totalLiquidated": "2935.41701139789141",
@@ -15172,7 +15172,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/2/2022",
     "totalLiquidated": "1712.23906167974540748316735377",
@@ -15189,7 +15189,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/5/2022",
     "totalLiquidated": "276.53567740145485951561001766",
@@ -15212,7 +15212,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/7/2022",
     "totalLiquidated": "604.6834200285979786002325",
@@ -15229,7 +15229,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/8/2022",
     "totalLiquidated": "316.35252420731999999981029652",
@@ -15246,7 +15246,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/9/2022",
     "totalLiquidated": "65.7546552936220455094864227",
@@ -15263,7 +15263,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/12/2022",
     "totalLiquidated": "13.63121141979865999137518936",
@@ -15280,7 +15280,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/13/2022",
     "totalLiquidated": "499.68038372389855327910951793",
@@ -15297,7 +15297,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/14/2022",
     "totalLiquidated": "5115.82447",
@@ -15314,7 +15314,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/16/2022",
     "totalLiquidated": "1054.48065292365068259841557797",
@@ -15349,7 +15349,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/17/2022",
     "totalLiquidated": "1852.08162195009361647437311138",
@@ -15390,7 +15390,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/19/2022",
     "totalLiquidated": "14303.95559187661894139925133425",
@@ -15407,7 +15407,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/20/2022",
     "totalLiquidated": "511.34260760391494260262932554",
@@ -15478,7 +15478,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/22/2022",
     "totalLiquidated": "1329.22645074856998",
@@ -15495,7 +15495,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/23/2022",
     "totalLiquidated": "0.146109",
@@ -15512,7 +15512,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/28/2022",
     "totalLiquidated": "118.0574698263375201789479423",
@@ -15541,7 +15541,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/29/2022",
     "totalLiquidated": "905.12871099510867616285995321",
@@ -15654,7 +15654,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/30/2022",
     "totalLiquidated": "2789.13478495180459946723557399",
@@ -15803,7 +15803,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/1/2023",
     "totalLiquidated": "11.07134062133613205052209384",
@@ -15826,7 +15826,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/4/2023",
     "totalLiquidated": "6822.52681085572564083941018285",
@@ -15843,7 +15843,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/7/2023",
     "totalLiquidated": "5.005619381150423991496132",
@@ -15860,7 +15860,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/9/2023",
     "totalLiquidated": "9103.93905645118009665759159485",
@@ -15889,7 +15889,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/10/2023",
     "totalLiquidated": "4.13059514992878529646003325",
@@ -15912,7 +15912,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/11/2023",
     "totalLiquidated": "19146.53049565805160313109876323",
@@ -15983,7 +15983,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/12/2023",
     "totalLiquidated": "12432.28382163436753810313412602",
@@ -16084,7 +16084,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/14/2023",
     "totalLiquidated": "10464.20433608899670150473252936",
@@ -16185,7 +16185,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/15/2023",
     "totalLiquidated": "11.73169633290659639491951066",
@@ -16214,7 +16214,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/16/2023",
     "totalLiquidated": "10.955914",
@@ -16231,7 +16231,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/17/2023",
     "totalLiquidated": "3449.04664775515513805230666",
@@ -16254,7 +16254,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/18/2023",
     "totalLiquidated": "5804.5751574310115246063309064",
@@ -16283,7 +16283,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/20/2023",
     "totalLiquidated": "1.60092411547675",
@@ -16300,7 +16300,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/21/2023",
     "totalLiquidated": "9826.39861159143734678285246475",
@@ -16341,7 +16341,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/22/2023",
     "totalLiquidated": "2598.1853180604897471257",
@@ -16364,7 +16364,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/24/2023",
     "totalLiquidated": "7576.58297878793090358817854267",
@@ -16393,7 +16393,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/26/2023",
     "totalLiquidated": "731.854971101715999974088855",
@@ -16410,7 +16410,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/27/2023",
     "totalLiquidated": "5.193546",
@@ -16427,7 +16427,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/28/2023",
     "totalLiquidated": "111003.64472758222396268592376916",
@@ -16576,7 +16576,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/29/2023",
     "totalLiquidated": "2.73773469797091918162493242",
@@ -16593,7 +16593,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/30/2023",
     "totalLiquidated": "305.49905769893399999245769547",
@@ -16616,7 +16616,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/1/2023",
     "totalLiquidated": "831.00916866054276833029635",
@@ -16645,7 +16645,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/2/2023",
     "totalLiquidated": "40041.3420658240403359948615794",
@@ -16692,7 +16692,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/4/2023",
     "totalLiquidated": "21.18570082228616400957356",
@@ -16709,7 +16709,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/5/2023",
     "totalLiquidated": "0.0407572799999999835372204",
@@ -16726,7 +16726,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/9/2023",
     "totalLiquidated": "3830.70569053278916312743086263",
@@ -16779,7 +16779,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/10/2023",
     "totalLiquidated": "9870.49995417156212334132604241",
@@ -16826,7 +16826,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/11/2023",
     "totalLiquidated": "0.63247338844286532165",
@@ -16843,7 +16843,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/13/2023",
     "totalLiquidated": "2867.59335284757360785848281965",
@@ -16878,7 +16878,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/14/2023",
     "totalLiquidated": "21.41889290518",
@@ -16895,7 +16895,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/15/2023",
     "totalLiquidated": "35.380074",
@@ -16918,7 +16918,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/16/2023",
     "totalLiquidated": "33061.2366119218239848914335906",
@@ -16977,7 +16977,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/18/2023",
     "totalLiquidated": "18.7387088149227",
@@ -16994,7 +16994,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/20/2023",
     "totalLiquidated": "6218.557938749999999984775263",
@@ -17017,7 +17017,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/22/2023",
     "totalLiquidated": "210.85805138096689011157172",
@@ -17034,7 +17034,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/23/2023",
     "totalLiquidated": "140.28218294645309999192",
@@ -17051,7 +17051,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/24/2023",
     "totalLiquidated": "12900.7410890023329791445666135",
@@ -17098,7 +17098,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/26/2023",
     "totalLiquidated": "912.72919158387085112262735038",
@@ -17127,7 +17127,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/1/2023",
     "totalLiquidated": "18.04541861382493227657639774",
@@ -17144,7 +17144,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/2/2023",
     "totalLiquidated": "127.64197416679209159626185854",
@@ -17167,7 +17167,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/3/2023",
     "totalLiquidated": "810.42420102177808228462654546",
@@ -17202,7 +17202,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/5/2023",
     "totalLiquidated": "19.95038468381075517532546904",
@@ -17225,7 +17225,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/7/2023",
     "totalLiquidated": "13.84983533629493182581642796",
@@ -17242,7 +17242,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/8/2023",
     "totalLiquidated": "451.15463603982579997971",
@@ -17271,7 +17271,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/9/2023",
     "totalLiquidated": "35303.46281431807400824904376059",
@@ -17342,7 +17342,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/10/2023",
     "totalLiquidated": "1207999.05614356230062686869676605",
@@ -17659,7 +17659,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/11/2023",
     "totalLiquidated": "3972548.42794738327596013132474744",
@@ -25548,7 +25548,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/12/2023",
     "totalLiquidated": "7067700.98747132696073905144530859",
@@ -32777,7 +32777,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/13/2023",
     "totalLiquidated": "28755.88328838492625276430296072",
@@ -33256,7 +33256,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/14/2023",
     "totalLiquidated": "7975.6457156272342",
@@ -33321,7 +33321,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/15/2023",
     "totalLiquidated": "1806.69767746901975465130068777",
@@ -33344,7 +33344,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/16/2023",
     "totalLiquidated": "6.0699217728",
@@ -33361,7 +33361,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/17/2023",
     "totalLiquidated": "129.266101808312917210276488",
@@ -33384,7 +33384,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/18/2023",
     "totalLiquidated": "5957.20714692315836754599734872",
@@ -33413,7 +33413,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/19/2023",
     "totalLiquidated": "251.1180885696",
@@ -33430,7 +33430,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/20/2023",
     "totalLiquidated": "8047.803890712338964345566118",
@@ -33459,7 +33459,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/21/2023",
     "totalLiquidated": "1650.5498401243010873349",
@@ -33476,7 +33476,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/22/2023",
     "totalLiquidated": "975.37726031639720105520039171",
@@ -33493,7 +33493,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/24/2023",
     "totalLiquidated": "5833.7344846940386478693211",
@@ -33516,7 +33516,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "3/27/2023",
     "totalLiquidated": "11430.52745558477409468646437",
@@ -33539,7 +33539,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/1/2023",
     "totalLiquidated": "7.365055177714",
@@ -33556,7 +33556,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/5/2023",
     "totalLiquidated": "11947.60776143775744",
@@ -33585,7 +33585,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/6/2023",
     "totalLiquidated": "926.03564845796569061386108866",
@@ -33608,7 +33608,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/9/2023",
     "totalLiquidated": "504.69712814830835197800501",
@@ -33655,7 +33655,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/11/2023",
     "totalLiquidated": "23.50543140765",
@@ -33678,7 +33678,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/12/2023",
     "totalLiquidated": "84.70238512369204057215491797",
@@ -33731,7 +33731,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/13/2023",
     "totalLiquidated": "29.63921440116",
@@ -33748,7 +33748,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/14/2023",
     "totalLiquidated": "7472.9544758548113150811656",
@@ -33795,7 +33795,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/17/2023",
     "totalLiquidated": "78.8181851725",
@@ -33818,7 +33818,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/18/2023",
     "totalLiquidated": "565.80080525318585864281847937",
@@ -33835,7 +33835,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/19/2023",
     "totalLiquidated": "5379.87693533141047947012831378",
@@ -33882,7 +33882,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/20/2023",
     "totalLiquidated": "7096.21113185745412704050541603",
@@ -33947,7 +33947,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/21/2023",
     "totalLiquidated": "13753.13109797868958698754096122",
@@ -34018,7 +34018,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/22/2023",
     "totalLiquidated": "171.72910214999999999504156",
@@ -34035,7 +34035,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/26/2023",
     "totalLiquidated": "309.70465263599922",
@@ -34052,7 +34052,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/27/2023",
     "totalLiquidated": "1991.9432694252964673815056",
@@ -34081,7 +34081,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "4/29/2023",
     "totalLiquidated": "8.3355468021",
@@ -34098,7 +34098,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/1/2023",
     "totalLiquidated": "346.90972318509715039043362",
@@ -34127,7 +34127,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/6/2023",
     "totalLiquidated": "389.13051949838154",
@@ -34144,7 +34144,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/8/2023",
     "totalLiquidated": "14808.91654594103422581344064086",
@@ -34281,7 +34281,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/10/2023",
     "totalLiquidated": "2720.912142319999999547431078",
@@ -34310,7 +34310,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/11/2023",
     "totalLiquidated": "74.1994122539366322278028597",
@@ -34327,7 +34327,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/12/2023",
     "totalLiquidated": "10847.12770965099298007886958",
@@ -34416,7 +34416,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/16/2023",
     "totalLiquidated": "12.522618678725039989817386",
@@ -34433,7 +34433,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/17/2023",
     "totalLiquidated": "27.68224409875114221262628394",
@@ -34450,7 +34450,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/18/2023",
     "totalLiquidated": "1.72222383399968214447936215",
@@ -34641,7 +34641,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/20/2023",
     "totalLiquidated": "3563.6257815910789117435488",
@@ -34658,7 +34658,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/21/2023",
     "totalLiquidated": "74.737644244226545737200562",
@@ -34675,7 +34675,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/22/2023",
     "totalLiquidated": "1103.0696142967709999905359",
@@ -34698,7 +34698,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/25/2023",
     "totalLiquidated": "1862.64901394640688526248663893",
@@ -34751,7 +34751,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/27/2023",
     "totalLiquidated": "95.61283805593339",
@@ -34768,7 +34768,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/28/2023",
     "totalLiquidated": "37.64694879013921102162",
@@ -34785,7 +34785,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/29/2023",
     "totalLiquidated": "1924.083267402846",
@@ -34820,7 +34820,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/30/2023",
     "totalLiquidated": "11.426395122449999992869558",
@@ -34837,7 +34837,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "5/31/2023",
     "totalLiquidated": "1580.23990992",
@@ -34854,7 +34854,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/1/2023",
     "totalLiquidated": "7.185483009307237381162335",
@@ -34871,7 +34871,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/5/2023",
     "totalLiquidated": "1527437.9043377371577915603024501",
@@ -34960,7 +34960,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/6/2023",
     "totalLiquidated": "174.889228467893251992421",
@@ -34977,7 +34977,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/7/2023",
     "totalLiquidated": "1.080488247268998828568",
@@ -34994,7 +34994,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/8/2023",
     "totalLiquidated": "39.3599542509485217299677",
@@ -35023,7 +35023,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/9/2023",
     "totalLiquidated": "38.88115049659422469808741541",
@@ -35052,7 +35052,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/10/2023",
     "totalLiquidated": "779591.40819660244238410104173478",
@@ -36353,7 +36353,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/15/2023",
     "totalLiquidated": "23912.1457766693170220615170767",
@@ -36448,7 +36448,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/19/2023",
     "totalLiquidated": "111.5455835754",
@@ -36471,7 +36471,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/20/2023",
     "totalLiquidated": "205.20431373793671613469463734",
@@ -36578,7 +36578,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/21/2023",
     "totalLiquidated": "10363.550344077244833559081014",
@@ -36625,7 +36625,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/23/2023",
     "totalLiquidated": "320.21020825926624",
@@ -36648,7 +36648,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/28/2023",
     "totalLiquidated": "2006.0953651216617468007684",
@@ -36677,7 +36677,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "6/30/2023",
     "totalLiquidated": "7431.2147057646147",
@@ -36700,7 +36700,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/3/2023",
     "totalLiquidated": "1023.6423662604909",
@@ -36717,7 +36717,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/5/2023",
     "totalLiquidated": "1342.7705285652786643477292",
@@ -36734,7 +36734,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/6/2023",
     "totalLiquidated": "127.07908381387296",
@@ -36751,7 +36751,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/7/2023",
     "totalLiquidated": "23.2946890287",
@@ -36768,7 +36768,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/12/2023",
     "totalLiquidated": "20.99783377380280242063982794",
@@ -36785,7 +36785,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/13/2023",
     "totalLiquidated": "603.709296468820734484461741",
@@ -36802,7 +36802,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/14/2023",
     "totalLiquidated": "3235.50723076917229399252947389",
@@ -36849,7 +36849,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/15/2023",
     "totalLiquidated": "59.4750160932709",
@@ -36866,7 +36866,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/16/2023",
     "totalLiquidated": "272.71551692275787373854845",
@@ -36883,7 +36883,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/17/2023",
     "totalLiquidated": "136.34890414765018861",
@@ -36900,7 +36900,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/18/2023",
     "totalLiquidated": "102.3555060658837346393592",
@@ -36923,7 +36923,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/20/2023",
     "totalLiquidated": "3782.70165754822699143348765621",
@@ -36952,7 +36952,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/21/2023",
     "totalLiquidated": "1270.705395508111567635354108",
@@ -36969,7 +36969,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/23/2023",
     "totalLiquidated": "530.45316297476885996192499",
@@ -36992,7 +36992,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/24/2023",
     "totalLiquidated": "8309.71122799762199020675497304",
@@ -37027,7 +37027,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "7/28/2023",
     "totalLiquidated": "2431.53568145699286142795133632",
@@ -37044,7 +37044,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/1/2023",
     "totalLiquidated": "135177.71704411378053150805711328",
@@ -37277,7 +37277,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/2/2023",
     "totalLiquidated": "195.80506331150445896887529",
@@ -37312,7 +37312,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/8/2023",
     "totalLiquidated": "147.6516526322893493236333624",
@@ -37347,7 +37347,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/9/2023",
     "totalLiquidated": "1290.34799228580797091140813208",
@@ -37382,7 +37382,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/14/2023",
     "totalLiquidated": "126.91129794680105324378962095",
@@ -37405,7 +37405,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/15/2023",
     "totalLiquidated": "5724.68480671149539994910825914",
@@ -37482,7 +37482,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/16/2023",
     "totalLiquidated": "219.4026263395506444988885407",
@@ -37505,7 +37505,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/17/2023",
     "totalLiquidated": "439.0350187416435897685160944",
@@ -37540,7 +37540,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/18/2023",
     "totalLiquidated": "1711009.7005555970837385569314734",
@@ -37929,7 +37929,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/20/2023",
     "totalLiquidated": "20.4709806489444867836369946",
@@ -37946,7 +37946,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/21/2023",
     "totalLiquidated": "320.6790671668661053187214",
@@ -37993,7 +37993,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/22/2023",
     "totalLiquidated": "10913.74348326627361078477840781",
@@ -38208,7 +38208,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/23/2023",
     "totalLiquidated": "3023.7611846940011439102688208",
@@ -38267,7 +38267,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/25/2023",
     "totalLiquidated": "38.5899501438648",
@@ -38284,7 +38284,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/29/2023",
     "totalLiquidated": "19.0502220154944",
@@ -38307,7 +38307,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/30/2023",
     "totalLiquidated": "116.9286816808116790755206664",
@@ -38330,7 +38330,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "8/31/2023",
     "totalLiquidated": "25.4506237709970948731328",
@@ -38347,7 +38347,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/1/2023",
     "totalLiquidated": "349.84823713871743578727567308",
@@ -38388,7 +38388,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/5/2023",
     "totalLiquidated": "384.1602660200849761170847531",
@@ -38435,7 +38435,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/8/2023",
     "totalLiquidated": "99.8273508873873099915827304",
@@ -38452,7 +38452,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/9/2023",
     "totalLiquidated": "202.79658198954476799880503788",
@@ -38481,7 +38481,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/10/2023",
     "totalLiquidated": "6902.33319446090731596998601133",
@@ -38648,7 +38648,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/11/2023",
     "totalLiquidated": "25314.58987039293398936942744722",
@@ -38971,7 +38971,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/12/2023",
     "totalLiquidated": "1799.24738318739142919883890696",
@@ -38994,7 +38994,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/13/2023",
     "totalLiquidated": "99.72190549695979999103427648",
@@ -39017,7 +39017,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/14/2023",
     "totalLiquidated": "1533.6144020916507095037921702",
@@ -39034,7 +39034,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/18/2023",
     "totalLiquidated": "3354.0166422643695738128195814",
@@ -39111,7 +39111,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/19/2023",
     "totalLiquidated": "11.9232242151",
@@ -39128,7 +39128,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/20/2023",
     "totalLiquidated": "288.51821853563827786177782552",
@@ -39157,7 +39157,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/21/2023",
     "totalLiquidated": "126.1614656981482248491514",
@@ -39180,7 +39180,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/24/2023",
     "totalLiquidated": "17.703702",
@@ -39197,7 +39197,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/25/2023",
     "totalLiquidated": "392.3870442649799339861366016",
@@ -39232,7 +39232,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/26/2023",
     "totalLiquidated": "18.2079873368329236785455012",
@@ -39255,7 +39255,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/27/2023",
     "totalLiquidated": "26.96535183774014588557271771",
@@ -39290,7 +39290,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "9/30/2023",
     "totalLiquidated": "1145.2104761446176229428555906",
@@ -39307,7 +39307,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/2/2023",
     "totalLiquidated": "35.2536658122685",
@@ -39324,7 +39324,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/5/2023",
     "totalLiquidated": "18912.40339404780342112626746576",
@@ -39347,7 +39347,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/6/2023",
     "totalLiquidated": "7590.5995378615362",
@@ -39364,7 +39364,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/7/2023",
     "totalLiquidated": "423.1351057730779474490758468",
@@ -39411,7 +39411,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/8/2023",
     "totalLiquidated": "637.362187231204",
@@ -39428,7 +39428,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/9/2023",
     "totalLiquidated": "3605.09928057882663148271487712",
@@ -39451,7 +39451,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/10/2023",
     "totalLiquidated": "9.25838491092990159150190428",
@@ -39468,7 +39468,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/11/2023",
     "totalLiquidated": "34.42259952420107805636263124",
@@ -39533,7 +39533,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/12/2023",
     "totalLiquidated": "8144.32756515339775279333398908",
@@ -39562,7 +39562,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/13/2023",
     "totalLiquidated": "165.09004127088846299272778226",
@@ -39579,7 +39579,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/16/2023",
     "totalLiquidated": "25472.2151652698316710471",
@@ -39614,7 +39614,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/17/2023",
     "totalLiquidated": "168.18649393169999999749206",
@@ -39631,7 +39631,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/18/2023",
     "totalLiquidated": "7.21144261225377",
@@ -39648,7 +39648,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/20/2023",
     "totalLiquidated": "6.40722704314824",
@@ -39665,7 +39665,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/21/2023",
     "totalLiquidated": "6205.75032556106017",
@@ -39682,7 +39682,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/22/2023",
     "totalLiquidated": "651.61992162273772134670461055",
@@ -39711,7 +39711,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/23/2023",
     "totalLiquidated": "396.72315805169094562614244",
@@ -39740,7 +39740,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/24/2023",
     "totalLiquidated": "29098.2298109115543999849086368",
@@ -39805,7 +39805,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/25/2023",
     "totalLiquidated": "32.73291311684808848726731575",
@@ -39828,7 +39828,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/26/2023",
     "totalLiquidated": "996.33425946508413901420740602",
@@ -40001,7 +40001,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/30/2023",
     "totalLiquidated": "2065.772738605278",
@@ -40018,7 +40018,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "10/31/2023",
     "totalLiquidated": "2965.196784940671",
@@ -40035,7 +40035,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/1/2023",
     "totalLiquidated": "482.6550301882",
@@ -40052,7 +40052,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/2/2023",
     "totalLiquidated": "1362.48581907468272",
@@ -40075,7 +40075,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/5/2023",
     "totalLiquidated": "104.083609306452935246076342",
@@ -40092,7 +40092,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/6/2023",
     "totalLiquidated": "514.15151624271742936215054302",
@@ -40115,7 +40115,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/8/2023",
     "totalLiquidated": "603.8639247889702188",
@@ -40132,7 +40132,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/9/2023",
     "totalLiquidated": "1012.51400798135386555018922623",
@@ -40167,7 +40167,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/10/2023",
     "totalLiquidated": "477.71495874841899776439689872",
@@ -40196,7 +40196,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/11/2023",
     "totalLiquidated": "24494.01814860521809780866199035",
@@ -40225,7 +40225,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/12/2023",
     "totalLiquidated": "190338.43934246453524226847081952",
@@ -40470,7 +40470,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/13/2023",
     "totalLiquidated": "23943.35968886055316967584349924",
@@ -40541,7 +40541,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/14/2023",
     "totalLiquidated": "4046.54684366381678222908236056",
@@ -40588,7 +40588,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/15/2023",
     "totalLiquidated": "17547.36894899359827695175320983",
@@ -40635,7 +40635,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/16/2023",
     "totalLiquidated": "82648.2290046540858143042170358",
@@ -40760,7 +40760,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/17/2023",
     "totalLiquidated": "6942.97006079883297838283298627",
@@ -40825,7 +40825,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/18/2023",
     "totalLiquidated": "114.80374584677437778198410519",
@@ -40860,7 +40860,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/20/2023",
     "totalLiquidated": "8652.64609692199999999270749575",
@@ -40877,7 +40877,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/21/2023",
     "totalLiquidated": "9468.561028341127999982310502",
@@ -40900,7 +40900,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/22/2023",
     "totalLiquidated": "3737.59963703501220212056569438",
@@ -40941,7 +40941,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/23/2023",
     "totalLiquidated": "14.6289334101",
@@ -40958,7 +40958,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/27/2023",
     "totalLiquidated": "9217.95715307514564206011571232",
@@ -40987,7 +40987,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "11/28/2023",
     "totalLiquidated": "1490.54073530632174851555",
@@ -41004,7 +41004,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/1/2023",
     "totalLiquidated": "170.01267539884643",
@@ -41027,7 +41027,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/2/2023",
     "totalLiquidated": "24.33921093958749080656126",
@@ -41056,7 +41056,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/3/2023",
     "totalLiquidated": "11.7867507619704198224875601",
@@ -41073,7 +41073,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/4/2023",
     "totalLiquidated": "17498.70586122087505105447005769",
@@ -41186,7 +41186,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/5/2023",
     "totalLiquidated": "45353.26723039282940434170111983",
@@ -41305,7 +41305,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/6/2023",
     "totalLiquidated": "25362.46132362803189313852932046",
@@ -41406,7 +41406,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/7/2023",
     "totalLiquidated": "414.1237661178125",
@@ -41429,7 +41429,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/8/2023",
     "totalLiquidated": "2478.7430829370672921573094",
@@ -41482,7 +41482,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/9/2023",
     "totalLiquidated": "20340.85712813181975919152276965",
@@ -41649,7 +41649,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/10/2023",
     "totalLiquidated": "5342.18635847593570069695021",
@@ -41684,7 +41684,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/11/2023",
     "totalLiquidated": "22355.59301838782540077459413514",
@@ -41815,7 +41815,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/12/2023",
     "totalLiquidated": "6063.94703310713082619691180477",
@@ -41874,7 +41874,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/13/2023",
     "totalLiquidated": "58.23767123880763361712078",
@@ -41909,7 +41909,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/14/2023",
     "totalLiquidated": "107.44267201108221",
@@ -41938,7 +41938,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/15/2023",
     "totalLiquidated": "40390.3155056517105356816175787",
@@ -41955,7 +41955,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/16/2023",
     "totalLiquidated": "38928.79760308323715586385220172",
@@ -41990,7 +41990,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/17/2023",
     "totalLiquidated": "359.0142853401132",
@@ -42007,7 +42007,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/18/2023",
     "totalLiquidated": "10702.75597978517213714381203",
@@ -42048,7 +42048,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/21/2023",
     "totalLiquidated": "13108.71185129865931100828283522",
@@ -42071,7 +42071,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/22/2023",
     "totalLiquidated": "3317.29885660682733096471992614",
@@ -42118,7 +42118,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/23/2023",
     "totalLiquidated": "583.904759475507132779416437",
@@ -42153,7 +42153,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/24/2023",
     "totalLiquidated": "85139.09307632818379355328109776",
@@ -42200,7 +42200,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/25/2023",
     "totalLiquidated": "170.70070407287624",
@@ -42217,7 +42217,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/26/2023",
     "totalLiquidated": "114262.34683060928739837622748602",
@@ -42312,7 +42312,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/27/2023",
     "totalLiquidated": "7858.04780879581580674530072257",
@@ -42347,7 +42347,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/28/2023",
     "totalLiquidated": "50191.31349109031612186490526027",
@@ -42406,7 +42406,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/29/2023",
     "totalLiquidated": "31.551143786571230634701025",
@@ -42423,7 +42423,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/30/2023",
     "totalLiquidated": "1990.727839788824973119723807",
@@ -42446,7 +42446,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "12/31/2023",
     "totalLiquidated": "3288.23757873328751001020086138",
@@ -42463,7 +42463,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/1/2024",
     "totalLiquidated": "15517.72184974352941928801817015",
@@ -42492,7 +42492,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/2/2024",
     "totalLiquidated": "14607.16626942915702",
@@ -42533,7 +42533,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/3/2024",
     "totalLiquidated": "282710.85026959726988422700669918",
@@ -42784,7 +42784,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/6/2024",
     "totalLiquidated": "26881.81987455945190827022226542",
@@ -42819,7 +42819,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/8/2024",
     "totalLiquidated": "156261.860197896203246589601005",
@@ -42974,7 +42974,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/9/2024",
     "totalLiquidated": "6688.32210512886074635642142971",
@@ -43015,7 +43015,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/10/2024",
     "totalLiquidated": "11088.5570097321843893757052",
@@ -43044,7 +43044,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/11/2024",
     "totalLiquidated": "9327.79852600771437",
@@ -43091,7 +43091,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/12/2024",
     "totalLiquidated": "1552.05468002253795721755239558",
@@ -43126,7 +43126,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/13/2024",
     "totalLiquidated": "10476.5425065884048305596557531",
@@ -43197,7 +43197,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/14/2024",
     "totalLiquidated": "1879.15757165407023894904",
@@ -43220,7 +43220,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/15/2024",
     "totalLiquidated": "5441.60913239685910198895826676",
@@ -43255,7 +43255,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/17/2024",
     "totalLiquidated": "788.530253839269102431727296",
@@ -43278,7 +43278,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/18/2024",
     "totalLiquidated": "2067.94882103344822366719847056",
@@ -43337,7 +43337,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/19/2024",
     "totalLiquidated": "2368.94190365889007640104670682",
@@ -43408,7 +43408,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/20/2024",
     "totalLiquidated": "31.62418116440150344117490127",
@@ -43431,7 +43431,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/22/2024",
     "totalLiquidated": "107242.82175598734714989613533107",
@@ -43562,7 +43562,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/23/2024",
     "totalLiquidated": "69200.64361071289502702611673417",
@@ -43819,7 +43819,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/24/2024",
     "totalLiquidated": "7.5681012263184",
@@ -43836,7 +43836,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/29/2024",
     "totalLiquidated": "2453.6882745359086851",
@@ -43859,7 +43859,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/30/2024",
     "totalLiquidated": "76.82341574350459236912",
@@ -43876,7 +43876,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "1/31/2024",
     "totalLiquidated": "11.9094894940374654794263493",
@@ -43893,7 +43893,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/1/2024",
     "totalLiquidated": "29121.9456560534290977605637912",
@@ -43934,7 +43934,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/2/2024",
     "totalLiquidated": "2259.90197020770172027597672128",
@@ -43957,7 +43957,7 @@
     "chainId": 43114
   },
   {
-    "name": "Aave V3 Avalanche",
+    "name": "Aave V3",
     "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
     "date": "2/3/2024",
     "totalLiquidated": "53.94431763152611098944674892",
