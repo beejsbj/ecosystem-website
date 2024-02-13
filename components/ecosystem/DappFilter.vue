@@ -43,7 +43,7 @@ const years = computed(() => {
 });
 
 onMounted(() => {
-  const pageLoad = gsap.timeline();
+//   const pageLoad = gsap.timeline();
 
   //   pageLoad.fromTo(
   //     "dapp-filter",

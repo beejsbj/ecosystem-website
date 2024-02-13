@@ -35,6 +35,7 @@ let gsapContext = null;
 
 onMounted(() => {
   setTimeout(() => {
+    if (!ecosystem.hasMoreItems) return;
     gsapContext = gsap.context(() => {
       //   scroll trigger, when the bottom of dapp grid comes into view call handleloadmore
       ScrollTrigger.create({
@@ -55,7 +56,9 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  gsapContext.kill();
+  if (gsapContext) {
+    gsapContext.kill();
+  }
 });
 </script>
 
