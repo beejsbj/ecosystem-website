@@ -20,6 +20,7 @@ export const useOEVStore = defineStore("oev", function () {
         id: protocol.title[0].toLowerCase() + protocol.title.slice(1),
         name: protocol.body[0].name,
         icon: protocol.body[0].icon,
+        chainId: protocol.body[0].chainId,
         data: protocol.body,
         dataWeekly: dataToWeekly(protocol.body),
         dataMonthly: dataToMonthly(protocol.body),
@@ -70,6 +71,7 @@ export const useOEVStore = defineStore("oev", function () {
     parsed.push({
       id: "total",
       name: "Total",
+      chainId: 1,
       hide: true,
       // trueHide: true,
       ...totalData,
