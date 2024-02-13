@@ -11,6 +11,7 @@ function addToChart(totalLiquidated, incentiveRate) {
   // Create a new protocol object and push it to the protocols array in the OEV store
   const userProtocol = {
     id: `userAdded`,
+    chainId: 1,
     totalLiquidated,
     withOEV: totalLiquidated - totalLiquidated * incentiveRate,
     totalSentToBuilderUSD: totalLiquidated * incentiveRate,

@@ -9,7 +9,7 @@ export const useOEVStore = defineStore("oev", function () {
   const protocols = ref([]);
 
   // this variable defines the number of protocols to show in the chart
-  const protocolCount = ref(4);
+  const protocolCount = ref(6);
 
   function setProtocols(raw) {
     // Map over the oevRaw data and transform it into a new array of objects
@@ -27,7 +27,7 @@ export const useOEVStore = defineStore("oev", function () {
         dataCumulative: dataToCumulative(protocol.body),
 
         // Set the default hide value to false for protocolCount amount of protocols and not first one
-        hide: i >= protocolCount.value || i === 0,
+        hide: i >= protocolCount.value || i < 3,
       };
 
       // Calculate additional properties for each protocol
