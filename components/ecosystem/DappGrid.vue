@@ -1,7 +1,8 @@
 <script setup>
 import { useEcosystemStore } from "~/stores/ecosystem";
-import { useInfiniteScroll } from "@vueuse/core";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const ecosystem = useEcosystemStore();
 
@@ -23,40 +24,38 @@ const listRef = ref(null);
 
 const handleLoadMore = () => {
   if (
-    ecosystem.list.length < ecosystem.totalProjects ||
+    ecosystem.list.length < ecosystem.totalProjects &&
     ecosystem.list.length >= 10
   ) {
     ecosystem.filterQuery.page += 1;
   }
 };
 
+let gsapContext = null;
+
 onMounted(() => {
-  const pageLoad = gsap.timeline();
-
-  pageLoad.to(".dapp-grid", {
-    opacity: 1,
-    duration: 0,
-  });
-
-  if (document.querySelector("dapp-card")) {
-    pageLoad.fromTo(
-      "dapp-card",
-      {
-        y: "10vw",
-        duration: 0,
-        delay: "0.5",
-      },
-      {
-        y: "0vw",
-        opacity: 1,
-        duration: 0.5,
-        stagger: {
-          each: 0.15,
-          from: "start",
+  setTimeout(() => {
+    gsapContext = gsap.context(() => {
+      //   scroll trigger, when the bottom of dapp grid comes into view call handleloadmore
+      ScrollTrigger.create({
+        trigger: ".dapp-grid",
+        start: "80% 50%",
+        end: "85% 45%",
+        onEnter: () => {
+          console.log("scroll");
+          handleLoadMore();
         },
-      }
-    );
-  }
+        onLeaveBack: () => {
+          console.log("refresh");
+          ScrollTrigger.refresh();
+        },
+      });
+    });
+  }, 3000);
+});
+
+onUnmounted(() => {
+  gsapContext.kill();
 });
 </script>
 
@@ -68,13 +67,13 @@ onMounted(() => {
       :key="dapp?.name"
       :data-index="index"
     />
-    <button
+    <!-- <button
       class="text show-more"
       @click="handleLoadMore"
       v-if="ecosystem.hasMoreItems"
     >
-      {{ "Show More" }}
-    </button>
+      how More
+    </button> -->
   </div>
 </template>
 
