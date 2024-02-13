@@ -19,7 +19,8 @@ export default defineEventHandler(async (event) => {
 
     if (articleListData === undefined) {
       const data: any = await axios.get(fileListEndpoint);
-      const articleFolders: any[] = await data.data;
+      const repoItems: any[] = await data.data;
+      const articleFolders = repoItems?.filter((el) => el?.type === "dir");
 
       articleListData = [];
 

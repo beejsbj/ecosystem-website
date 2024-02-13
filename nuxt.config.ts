@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import type { HookResult, Nuxt } from "nuxt/schema";
+import type { Nuxt } from "nuxt/schema";
 
 export default defineNuxtConfig({
   spaLoadingTemplate: "./app-loading.html",
