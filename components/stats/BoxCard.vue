@@ -4,11 +4,11 @@ const props = defineProps(["teaser", "solid", "hideImage", "layout"]);
 
 <template>
   <div class="box-card" :class="props.layout ?? 'grid'">
-    <picture v-if="!props.hideImage">
-      <slot>
+    <slot>
+      <picture v-if="!props.hideImage">
         <img src="@/assets/images/background/square.jpg" alt="" />
-      </slot>
-    </picture>
+      </picture>
+    </slot>
 
     <h4 class="teaser-voice" v-if="props.teaser">
       {{ props.teaser }}
@@ -24,7 +24,8 @@ const props = defineProps(["teaser", "solid", "hideImage", "layout"]);
 .box-card {
   gap: 0.5rem;
   border-radius: var(--corners);
-  padding: 1.5rem;
+  padding: 2rem 1rem;
+  padding-top: 1.25rem;
   text-align: center;
   position: relative;
 
@@ -51,6 +52,7 @@ const props = defineProps(["teaser", "solid", "hideImage", "layout"]);
 
 .box-card .teaser-voice {
   font-size: var(--step--1);
+  white-space: nowrap;
 }
 
 .box-card .solid-voice {
