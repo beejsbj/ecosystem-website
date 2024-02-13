@@ -1,10 +1,7 @@
 <script setup>
-import { gsap } from "gsap";
 import { useInterfaceStore } from "@/stores/interface";
-import { useEcosystemStore } from "@/stores/ecosystem";
 
 const ui = useInterfaceStore();
-const ecosystem = useEcosystemStore();
 
 useSeoMeta({
   title: "Ecosystems",
@@ -19,25 +16,6 @@ useSeoMeta({
 
   twitterDescription:
     "Welcome to the API3 ecosystem. Easily list your dApp or service and join our thriving community",
-});
-
-onMounted(() => {
-  const pageLoad = gsap.timeline();
-
-  pageLoad.fromTo(
-    ".ecosystem-header",
-    {
-      y: 50,
-      duration: 0,
-      delay: "0.5",
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power4.out",
-    }
-  );
 });
 </script>
 
