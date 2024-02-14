@@ -19,7 +19,8 @@ export default defineEventHandler(async (event) => {
 
     if (articleListData === undefined) {
       const data: any = await axios.get(fileListEndpoint);
-      const articleFolders: any[] = await data.data;
+      const repoItems: any[] = await data.data;
+      const articleFolders = repoItems?.filter((el) => el?.type === "dir");
 
       articleListData = [];
 
@@ -54,7 +55,7 @@ export default defineEventHandler(async (event) => {
     event.node.req.statusCode = 200;
     return { articles: articleListData?.slice(skips, limit), total };
   } catch (err: any) {
-    console.log("get articles error  ", err);
+    console.log("fetch articles error  ", err);
     event.node.req.statusCode = 500;
     return {
       code: "ERROR",
