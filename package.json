@@ -20,7 +20,7 @@
     "@types/uuid": "^9.0.2",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
-    "nuxt": "^3.5.3",
+    "nuxt": "^3.10.1",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-url": "^10.1.3",
