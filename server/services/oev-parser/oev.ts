@@ -135,8 +135,8 @@ export async function prepareSingleLiquidationChart(
     const chartData = raw?.map((liquidation: any) => {
       return [
         liquidation?.date,
-        liquidation?.totalLiquidated,
-        liquidation?.totalSentToBuilderUSD,
+        Number(liquidation?.totalLiquidated),
+        Number(liquidation?.totalSentToBuilderUSD),
       ];
     });
 
