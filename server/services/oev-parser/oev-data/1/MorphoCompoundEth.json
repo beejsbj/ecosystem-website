@@ -1,0 +1,606 @@
+[
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "6/6/2022",
+    "totalLiquidated": "316.74882878713806676516",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x7b4164116ac49b9ea9f456abba92c4ea499f95594ad2302bdccdc923693a75ca",
+        "liquidatedCollateral": "316.74882878713806676516",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "7/23/2022",
+    "totalLiquidated": "48.484235",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x378b7043db066c643a26929c486f301d8f4e3e554836f1473c0c1d06571e3cdd",
+        "liquidatedCollateral": "48.484235",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "8/16/2022",
+    "totalLiquidated": "346.91653623256832464638",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x36dc36f28582cde84b8dbdd116606135920f1d6263e993dbcbb40ce59716c2ce",
+        "liquidatedCollateral": "60.931257",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x66734e560cef752ca5cd6224d34018852c629796e854b8e6c73f49f2deb763e2",
+        "liquidatedCollateral": "285.98527923256832464638",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "8/19/2022",
+    "totalLiquidated": "158.22032577265395641017",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x67db21ffd226bbe70713bf1492e38adc9f35a8d66c1ba0b3aeab34f395724554",
+        "liquidatedCollateral": "158.22032577265395641017",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "8/22/2022",
+    "totalLiquidated": "87.6302286365213969976",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0xee617652883cb0b1b48b022ed6f5f9b2ef92aeb1d52b1b7398056c7e42e6d6c0",
+        "liquidatedCollateral": "87.6302286365213969976",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "8/24/2022",
+    "totalLiquidated": "80.845490419167922694",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x51873029d64a50ac31c500bf0c5f4062d24bda58220fd471e462d69fb62bdc43",
+        "liquidatedCollateral": "80.845490419167922694",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/7/2022",
+    "totalLiquidated": "1149597.685496",
+    "totalSentToBuilder": "10.980504961440442339",
+    "totalSentToBuilderUSD": "17139.544180954816632645580182",
+    "liquidations": [
+      {
+        "hash": "0x11c8907f548ca7c18070576f9397329b971634d457855f78a0dc519823fcc68f",
+        "liquidatedCollateral": "1149597.685496",
+        "sentToBuilder": "10.980504961440442339",
+        "sentToBuilderUSD": "17139.544180954816632645580182"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/8/2022",
+    "totalLiquidated": "846598.60789",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x89008ee9222ab2270b2300da321012cb14c20ea9cd89d87a04abf947057747b1",
+        "liquidatedCollateral": "229434.421593",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xde36276a876ca61597393502600e9a07f5ce4deb59265278997e89dc8596b1c2",
+        "liquidatedCollateral": "617164.186297",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/15/2022",
+    "totalLiquidated": "309131.279904",
+    "totalSentToBuilder": "10.593918331343816132",
+    "totalSentToBuilderUSD": "17321.935851719987563309485056",
+    "liquidations": [
+      {
+        "hash": "0xb384059ef71b03e0b03714752012df395d16ab89e396a2187ffd1ad4f8a640aa",
+        "liquidatedCollateral": "309131.279904",
+        "sentToBuilder": "10.593918331343816132",
+        "sentToBuilderUSD": "17321.935851719987563309485056"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/18/2022",
+    "totalLiquidated": "37.873814999999999805241509",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x250c514487af9d256020536e8dafe7f45f5b99c346d7406bd3bac27d7551b9f2",
+        "liquidatedCollateral": "37.873814999999999805241509",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/22/2022",
+    "totalLiquidated": "18.9405199999999987924",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0xe3aecb0b90d7c89387c3cdc93b41989349dfc1d74570d861e642acb3cabb9886",
+        "liquidatedCollateral": "18.9405199999999987924",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/26/2022",
+    "totalLiquidated": "409.148399999999999999050608",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x122b6617cbc94ffc5521538cc1b7d2cf6336293c591715c532dbbbbaba0e2217",
+        "liquidatedCollateral": "409.148399999999999999050608",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/30/2022",
+    "totalLiquidated": "128.902961568399999999467897",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x7af9e2166003284161cbfc3df20d3a9fc30fe68027b0c5513e4ceb5fd5155c75",
+        "liquidatedCollateral": "128.902961568399999999467897",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "10/5/2022",
+    "totalLiquidated": "0.0000929999999982751744",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x0e9dd59601aec5e0807dec0842ae0d7c7bc9f2cf03be7d4414613e24f4fca620",
+        "liquidatedCollateral": "0.0000119999999996455744",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x2addf38bbe47a55843370e2890e216f086eab2512bbcb59acf26afcba4d4e8a5",
+        "liquidatedCollateral": "0.000005999999999141472",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x3e5be8c8c9bbf158ce5849e2b514de9fda696aa9264cd7abf631301601fea93d",
+        "liquidatedCollateral": "0.000049999999999658752",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xff5312915ae8b7b2f76fdde9e426190a2536ba1a7b3f3a8cadb0a82dfd422b78",
+        "liquidatedCollateral": "0.000024999999999829376",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "10/13/2022",
+    "totalLiquidated": "490.589048946475113490370438",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x20fc4e5decdda8d7f20f814f54f8a4f808adb1646bb5640cfc53d38238c8be20",
+        "liquidatedCollateral": "236.689638999999999827263425",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xe6d7bc6a89250513c6ee395ef71604250b2aa0e40f0c61f6c64f99adcf18a546",
+        "liquidatedCollateral": "253.899409946475113663107013",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "10/26/2022",
+    "totalLiquidated": "125559.514862999999999386311676",
+    "totalSentToBuilder": "5.075184955471428962",
+    "totalSentToBuilderUSD": "7415.521128000942442919730198",
+    "liquidations": [
+      {
+        "hash": "0x154150a79163da60868b768088473878e9cc2e4c0cfbd22b2ea184d89fbbdc7b",
+        "liquidatedCollateral": "125559.514862999999999386311676",
+        "sentToBuilder": "5.075184955471428962",
+        "sentToBuilderUSD": "7415.521128000942442919730198"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "10/30/2022",
+    "totalLiquidated": "19367.268889999999998484638081",
+    "totalSentToBuilder": "0.840914073194066636",
+    "totalSentToBuilderUSD": "1362.026738250938266131665136",
+    "liquidations": [
+      {
+        "hash": "0xb925c6fd0c8ca3340c03712da9852f0ddd350ce40955db2d25a1e1c6d1ec10e3",
+        "liquidatedCollateral": "19367.268889999999998484638081",
+        "sentToBuilder": "0.840914073194066636",
+        "sentToBuilderUSD": "1362.026738250938266131665136"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "11/5/2022",
+    "totalLiquidated": "70.401425818673389999765745",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0xe5afd66c0c0f8e96ec118ea81e601d9d487071f4eb83d00ce5c271e62cb44d30",
+        "liquidatedCollateral": "70.401425818673389999765745",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "11/9/2022",
+    "totalLiquidated": "14440.446998999999998877289668",
+    "totalSentToBuilder": "0.523680300495282835",
+    "totalSentToBuilderUSD": "698.129958405163759999468895",
+    "liquidations": [
+      {
+        "hash": "0x0935d29e2d93533db1d4f470ba6f55146a71b032763e7e019a59d558801dc07f",
+        "liquidatedCollateral": "4009.716054999999998877289668",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xcc10d9fc4de09c20e69d9b4784c73979e533085ca2990685d42504fa248945d3",
+        "liquidatedCollateral": "10430.730944",
+        "sentToBuilder": "0.523680300495282835",
+        "sentToBuilderUSD": "698.129958405163759999468895"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "11/21/2022",
+    "totalLiquidated": "450.029367867236077874804488",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x1483a4292078fe1f92c133b2c36a5dd6cfec1d9cb55cb53b40f36c09f5dca410",
+        "liquidatedCollateral": "70.74568186723608045364323",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x32bafb5a8f082edfef45ad7668792c821184a38181d41a1d8dd9a9a9541dd8cd",
+        "liquidatedCollateral": "157.47319399999999886732",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5718241d40a359a4b0377ffde46532820fa7b84566d06094c5d7e6e4021c62aa",
+        "liquidatedCollateral": "103.17051099999999965946",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xcf5ecdf39d30157db0dbede709e2acd1e8494cacbb33aed4d2db28bc77442021",
+        "liquidatedCollateral": "118.639980999999998894381258",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "1/7/2023",
+    "totalLiquidated": "437.297254066486362164039712",
+    "totalSentToBuilder": "0.001856361870363",
+    "totalSentToBuilderUSD": "2.3565025142038253874",
+    "liquidations": [
+      {
+        "hash": "0x2889db747c1fca90936c6b60a8f540d0c9ce3cdd48701c2292e3b1bd7ed1145d",
+        "liquidatedCollateral": "437.297254066486362164039712",
+        "sentToBuilder": "0.001856361870363",
+        "sentToBuilderUSD": "2.3565025142038253874"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "1/28/2023",
+    "totalLiquidated": "4616.953772",
+    "totalSentToBuilder": "0.18638577798681413",
+    "totalSentToBuilderUSD": "297.86783966237207468022158",
+    "liquidations": [
+      {
+        "hash": "0x598a1685d607531b9ff1f74902701cac3b4a7df91b55a0c71c6426800c57a51a",
+        "liquidatedCollateral": "4616.953772",
+        "sentToBuilder": "0.18638577798681413",
+        "sentToBuilderUSD": "297.86783966237207468022158"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "3/11/2023",
+    "totalLiquidated": "3716.872434999999999999482704",
+    "totalSentToBuilder": "0.057341813472154371",
+    "totalSentToBuilderUSD": "81.94723322676099348422793",
+    "liquidations": [
+      {
+        "hash": "0x7304228baf834e326b4cbd0526d5b23582908e0758aa9b6218d7ce51a13eb772",
+        "liquidatedCollateral": "3716.872434999999999999482704",
+        "sentToBuilder": "0.057341813472154371",
+        "sentToBuilderUSD": "81.94723322676099348422793"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "4/7/2023",
+    "totalLiquidated": "935.012571",
+    "totalSentToBuilder": "0.01157599859110035",
+    "totalSentToBuilderUSD": "21.67876766196153829104585",
+    "liquidations": [
+      {
+        "hash": "0x7ff17fc2db78a561e5c067c6aa4f68a12004ac60112d910b0d9b84a55400c363",
+        "liquidatedCollateral": "935.012571",
+        "sentToBuilder": "0.01157599859110035",
+        "sentToBuilderUSD": "21.67876766196153829104585"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "4/12/2023",
+    "totalLiquidated": "14100.867800148841617087643968",
+    "totalSentToBuilder": "0.428462991251393477",
+    "totalSentToBuilderUSD": "810.630430758417452151861239",
+    "liquidations": [
+      {
+        "hash": "0x3d07349e397d5e96a5b4da0d9dbd8b64328dd0895f54ab053468acae9407ecf1",
+        "liquidatedCollateral": "14100.867800148841617087643968",
+        "sentToBuilder": "0.428462991251393477",
+        "sentToBuilderUSD": "810.630430758417452151861239"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "4/14/2023",
+    "totalLiquidated": "18609.442023",
+    "totalSentToBuilder": "0.576825512960773123",
+    "totalSentToBuilderUSD": "1161.686588329230421556743672",
+    "liquidations": [
+      {
+        "hash": "0x926b7b20b7ecfa7035afb9e53ec03fa7d470749d41cc55751d882e8eccc0c392",
+        "liquidatedCollateral": "18609.442023",
+        "sentToBuilder": "0.576825512960773123",
+        "sentToBuilderUSD": "1161.686588329230421556743672"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "7/16/2023",
+    "totalLiquidated": "106492.05653272428224995369448",
+    "totalSentToBuilder": "1.622090450708080079",
+    "totalSentToBuilderUSD": "3133.30294109981835836155658",
+    "liquidations": [
+      {
+        "hash": "0x9dcf0a54026159ad915b2bbb352eb86e6d56562a47e5c7bf67d94c430137ae3e",
+        "liquidatedCollateral": "106492.05653272428224995369448",
+        "sentToBuilder": "1.622090450708080079",
+        "sentToBuilderUSD": "3133.30294109981835836155658"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "7/17/2023",
+    "totalLiquidated": "12022.142094286565100716153184",
+    "totalSentToBuilder": "0.234591205867843684",
+    "totalSentToBuilderUSD": "451.281774003380859444173824",
+    "liquidations": [
+      {
+        "hash": "0x8cb055b87a2945083d4af58bada4974253e57ac2edb78f1ccfe739e9e7623638",
+        "liquidatedCollateral": "12022.142094286565100716153184",
+        "sentToBuilder": "0.234591205867843684",
+        "sentToBuilderUSD": "451.281774003380859444173824"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "7/19/2023",
+    "totalLiquidated": "933.411703",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0xe4806495b04fe45d6ee2c9858debda93d91d856f558968222ce587a16475c451",
+        "liquidatedCollateral": "933.411703",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/18/2023",
+    "totalLiquidated": "236.357017",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x34cb146494879a77b3b70eb15c75c271992c78609c7ac956ad4621a878819891",
+        "liquidatedCollateral": "236.357017",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "9/30/2023",
+    "totalLiquidated": "461653.859815",
+    "totalSentToBuilder": "20.361555825452234038",
+    "totalSentToBuilderUSD": "33959.704729603206743440391974",
+    "liquidations": [
+      {
+        "hash": "0xfe3143284bb07179c5d0b49cc369cc8f5e5f71f2dab8c1f9eb8107008ad5d84a",
+        "liquidatedCollateral": "461653.859815",
+        "sentToBuilder": "20.361555825452234038",
+        "sentToBuilderUSD": "33959.704729603206743440391974"
+      }
+    ],
+    "chainId": 1
+  },
+  {
+    "name": "Morpho Compound",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "date": "12/9/2023",
+    "totalLiquidated": "2856.55541972196",
+    "totalSentToBuilder": "0.002348624343733778",
+    "totalSentToBuilderUSD": "5.53966744102590192639023",
+    "liquidations": [
+      {
+        "hash": "0xde22d711d370d7b3438cf1621722df50423724a203396dc730e1a98d4681b39e",
+        "liquidatedCollateral": "2856.55541972196",
+        "sentToBuilder": "0.002348624343733778",
+        "sentToBuilderUSD": "5.53966744102590192639023"
+      }
+    ],
+    "chainId": 1
+  }
+]
