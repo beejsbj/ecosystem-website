@@ -21,8 +21,6 @@ export const useOEVStore = defineStore("oev", function () {
     });
 
     protocols.value = parsed;
-
-    console.log("parsed", protocols.value);
   }
 
   //computed
