@@ -76,6 +76,17 @@ onMounted(() => {
     );
 
     timeline.to(
+      ".oev-loader p",
+      {
+        duration: 0.5,
+        opacity: 1,
+        ease: "power4.inOut",
+      },
+      "-=0.6"
+    );
+
+    //
+    timeline.to(
       ".oev-loader",
       {
         duration: 0.5,
@@ -192,6 +203,7 @@ onUnmounted(() => {
         </g>
       </g>
     </svg>
+    <p>NETWORK</p>
   </picture>
 </template>
 
@@ -216,6 +228,17 @@ onUnmounted(() => {
 
   rect,
   path {
+    opacity: 0;
+  }
+
+  p {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--indigo, var(--blue));
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    margin-top: -3rem;
+
     opacity: 0;
   }
 }
