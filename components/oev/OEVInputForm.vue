@@ -43,52 +43,57 @@ function buttonHandle(event) {
 </script>
 
 <template>
-  <form v-auto-animate>
-    <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
-    <form-field>
-      <FormKit
-        type="number"
-        label="What is the liquidation incentive rate?"
-        :classes="{
-          label: '$reset calm-voice',
-        }"
-        name="incentive"
-        min="0.5"
-        max="100"
-        step="0.5"
-        placeholder="Enter the percentage"
-        id="incentive"
-        v-model.number="form.incentive"
-        :show-validation="formSubmitted"
-      />
-    </form-field>
-    <form-field>
-      <FormKit
-        type="number"
-        label="What is the total value locked of your protocol?"
-        :classes="{
-          label: '$reset calm-voice',
-        }"
-        name="tvl"
-        placeholder="Enter amount of TVL"
-        help="Large numbers work best."
-        id="tvl"
-        v-model.number="form.tvl"
-        step="100000"
-        min="0"
-        validation-label="TVL"
-        :show-validation="formSubmitted"
-      />
-    </form-field>
+  <SectionColumn>
+    <form v-auto-animate>
+      <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
+      <form-field>
+        <FormKit
+          type="number"
+          label="What is the liquidation incentive rate?"
+          :classes="{
+            label: '$reset calm-voice',
+          }"
+          name="incentive"
+          min="0.5"
+          max="100"
+          step="0.5"
+          placeholder="5%"
+          id="incentive"
+          v-model.number="form.incentive"
+          :show-validation="formSubmitted"
+          prefix-icon="number"
+          help="Enter the TVL percentage sent as a liquidation incentive."
+        />
+      </form-field>
+      <form-field>
+        <FormKit
+          type="number"
+          label="What is the total value locked of your protocol?"
+          :classes="{
+            label: '$reset calm-voice',
+          }"
+          name="tvl"
+          placeholder="5000000"
+          help="Optimal results are achieved with larger numerical values."
+          id="tvl"
+          v-model.number="form.tvl"
+          step="100000"
+          min="0"
+          validation-label="TVL"
+          :show-validation="formSubmitted"
+          prefix-icon="number"
+        />
+      </form-field>
 
-    <button
-      class="button"
-      @click.prevent="buttonHandle"
-      :disabled="formSubmitted"
-    >
-      Visualize your dApp
-    </button>
-  </form>
+      <button
+        class="button"
+        @click.prevent="buttonHandle"
+        :disabled="formSubmitted"
+      >
+        Visualize your dApp
+      </button>
+    </form>
+  </SectionColumn>
 </template>
 
 <style scoped lang="scss">
@@ -102,6 +107,16 @@ form {
   :deep(.formkit-wrapper) {
     max-width: unset !important;
   }
+
+  //   @media (min-width: 768px) {
+  //     grid-template-columns: 1fr 1fr;
+
+  //     h2,
+  //     button {
+  //       grid-column: 1 / -1;
+  //       justify-self: center;
+  //     }
+  //   }
 }
 
 h2 {
