@@ -46,17 +46,17 @@ const diffInDays = Math.ceil(
 
 console.log(diffInDays);
 
-if (diffInDays > 1) {
+if (diffInDays > 2) {
   loading.value = true;
 
   // Hide the loader after 5 seconds
   setTimeout(() => {
     loading.value = false;
   }, 5000);
-}
 
-// Update the last visit date
-lastVisit.value = currentDate.toISOString();
+  // Update the last visit date
+  lastVisit.value = currentDate.toISOString();
+}
 </script>
 
 <template>
