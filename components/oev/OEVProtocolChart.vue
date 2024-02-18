@@ -71,8 +71,6 @@ const parsed = computed(() => {
     };
   });
 
-  console.log(dataLiquidated);
-
   const labels =
     selectedPeriod.value === "daily"
       ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 10))
