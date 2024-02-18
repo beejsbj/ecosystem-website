@@ -10,11 +10,12 @@ definePageMeta({
   alias: ["/watchtower", "/oev-watchtower"],
 });
 
-// Fetch data from the content/oev-data which contains the json files
-const oevRaw = await queryContent("oev-data").find();
-
 // Import the OEV store and initialize it
 const oev = useOEVStore();
+
+const { data: overview } = await useFetch("/api/oev");
+// Set the fetched OEV data to the OEV store
+oev.setProtocols(overview.value);
 
 // Compute the user's total liquidated value (tvl) and total savings using OEV
 const userSaving = computed(() =>
@@ -23,8 +24,12 @@ const userSaving = computed(() =>
     : oev.getProtocolById("userAdded").totalSentToBuilderUSD
 );
 
-// Set the fetched OEV data to the OEV store
-oev.setProtocols(oevRaw);
+//
+const loading = ref(true);
+
+setTimeout(() => {
+  loading.value = false;
+}, 5000);
 </script>
 
 <template>
@@ -94,6 +99,8 @@ oev.setProtocols(oevRaw);
       </p>
     </text-content>
   </SectionColumn>
+
+  <LazyOEVLoader v-if="loading" />
 </template>
 
 <style scoped lang="scss">
@@ -116,8 +123,6 @@ text-content {
   display: grid;
   place-items: center;
   text-align: center;
-  //   padding: var(--space-s);
-
   @media (min-width: 768px) {
     padding: var(--space-3xl);
   }

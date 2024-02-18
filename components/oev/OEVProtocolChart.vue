@@ -2,7 +2,7 @@
 const oev = useOEVStore();
 const ui = useInterfaceStore();
 
-const selectedDataset = ref("aaveV2Eth");
+const selectedDataset = ref("aaveV2Eth-1");
 const selectedPeriod = ref("monthly");
 const isLogarithmic = ref(false);
 
@@ -44,39 +44,34 @@ const options = computed(() => {
   };
 });
 
+// fetch
+//   /api/oev/chart?protocolId=aaveV2Eth-1&&period=daily
+
+const apiString = computed(() => {
+  return `/api/oev/chart?protocolId=${selectedDataset.value}&&period=${selectedPeriod.value}`;
+});
+const { data: rawData } = await useFetch(apiString);
+
 // data manipulation
 const parsed = computed(() => {
   //   console.log(oev.protocols);
-  const index = oev.protocols.findIndex(
-    (protocol) => protocol.id === selectedDataset.value
-  );
+  const protocol = oev.getProtocolById(selectedDataset.value);
 
-  const protocol = oev.protocols[index];
-  //   console.log(index);
-  //   console.log(oev.protocols);
-
-  const rawData =
-    selectedPeriod.value === "daily"
-      ? protocol.data
-      : selectedPeriod.value === "weekly"
-      ? protocol.dataWeekly
-      : selectedPeriod.value === "monthly"
-      ? protocol.dataMonthly
-      : protocol.dataCumulative;
-
-  const dataLiquidated = rawData.map((dataPoint) => {
+  const dataLiquidated = rawData.value.map((dataPoint) => {
     return {
-      x: new Date(dataPoint.date),
-      y: dataPoint.totalLiquidated,
+      x: new Date(dataPoint[0]),
+      y: dataPoint[1],
     };
   });
 
-  const dataSentToBuilder = rawData.map((dataPoint) => {
+  const dataSentToBuilder = rawData.value.map((dataPoint) => {
     return {
-      x: new Date(dataPoint.date),
-      y: dataPoint.totalSentToBuilderUSD,
+      x: new Date(dataPoint[0]),
+      y: dataPoint[2],
     };
   });
+
+  console.log(dataLiquidated);
 
   const labels =
     selectedPeriod.value === "daily"
@@ -119,10 +114,14 @@ const parsed = computed(() => {
             :key="protocol.id"
             :value="protocol.id"
             v-if="!protocol.trueHide"
+            :selected="protocol.id === selectedDataset"
           >
             {{ protocol.name }}
           </option>
         </template>
+
+        <!-- total all -->
+        <option :key="'all'" :value="'all'">Total</option>
       </FormKit>
       <div class="buttons-content">
         <template v-for="period in periods">

@@ -4,24 +4,8 @@ import formatNumber from "@/utils/formatNumber";
 // Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
 
-// Compute the average savings
-const averageSavings = computed(() => {
-  const totalSaving = oev.getTotals().totalSentToBuilderUSD;
-  return (totalSaving / oev.protocols.length - 1).toFixed(2);
-});
-
 // Compute the OEV rate
 const oevRate = computed(() => oev.getTotals().oevRate.toFixed(2));
-
-// Compute the total savings
-const totalSaving = computed(() =>
-  oev.getTotals().totalSentToBuilderUSD.toFixed(2)
-);
-const oevCaptureRate = computed(() => {
-  const totalLiquidated = oev.getTotals().totalLiquidated;
-  const totalSentToBuilder = oev.getTotals().totalSentToBuilderUSD;
-  return (totalSentToBuilder / totalLiquidated) * 100;
-});
 </script>
 
 <template>

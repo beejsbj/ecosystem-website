@@ -9,80 +9,20 @@ export const useOEVStore = defineStore("oev", function () {
   const protocols = ref([]);
 
   // this variable defines the number of protocols to show in the chart
-  const protocolCount = ref(6);
+  const protocolCount = ref(4);
 
+  // Set the protocols data
   function setProtocols(raw) {
-    // Map over the oevRaw data and transform it into a new array of objects
-
     const parsed = raw.map((protocol, i) => {
-      const newProtocol = {
-        // Generate an id for each protocol by converting the first letter of the title to lowercase and concatenating the rest of the title
-        id: protocol.title[0].toLowerCase() + protocol.title.slice(1),
-        name: protocol.body[0].name,
-        icon: protocol.body[0].icon,
-        chainId: protocol.body[0].chainId,
-        data: protocol.body,
-        dataWeekly: dataToWeekly(protocol.body),
-        dataMonthly: dataToMonthly(protocol.body),
-        dataCumulative: dataToCumulative(protocol.body),
-
-        // Set the default hide value to false for protocolCount amount of protocols and not first one
-        hide: i >= protocolCount.value || i < 3,
+      return {
+        hide: i >= protocolCount.value,
+        ...protocol,
       };
-
-      // Calculate additional properties for each protocol
-      newProtocol.totalLiquidated = getTotalLiquidated(newProtocol);
-      newProtocol.totalSentToBuilderUSD = getTotalSentToBuilder(newProtocol);
-      newProtocol.oevRate = getOEVRate(newProtocol);
-      // newProtocol.withOEV = getOEV(newProtocol);
-
-      newProtocol.data.forEach((dataPoint) => {
-        dataPoint.withOEV = getOEV(dataPoint);
-      });
-
-      newProtocol.dataWeekly.forEach((dataPoint) => {
-        dataPoint.withOEV = getOEV(dataPoint);
-      });
-
-      newProtocol.dataMonthly.forEach((dataPoint) => {
-        dataPoint.withOEV = getOEV(dataPoint);
-      });
-
-      return newProtocol;
-    });
-
-    // Add a "total" protocol object to the parsed array
-    // Create the "total" protocol object
-    const totalData = parsed.reduce(
-      (acc, protocol) => ({
-        data: acc.data.concat(protocol.data),
-        dataMonthly: acc.dataMonthly.concat(protocol.dataMonthly),
-        dataWeekly: acc.dataWeekly.concat(protocol.dataWeekly),
-        dataCumulative: acc.dataCumulative.concat(protocol.dataCumulative),
-      }),
-      {
-        data: [],
-        dataMonthly: [],
-        dataWeekly: [],
-        dataCumulative: [],
-      }
-    );
-
-    parsed.push({
-      id: "total",
-      name: "Total",
-      chainId: 1,
-      hide: true,
-      // trueHide: true,
-      ...totalData,
-      totalLiquidated: getTotalLiquidated(totalData),
-      totalSentToBuilderUSD: getTotalSentToBuilder(totalData),
-      oevRate: getOEVRate(totalData),
-      // withOEV: getOEV(totalData),
     });
 
     protocols.value = parsed;
-    //  return parsed;
+
+    console.log("parsed", protocols.value);
   }
 
   //computed
@@ -122,98 +62,6 @@ export const useOEVStore = defineStore("oev", function () {
         Number(total) + Number(dataPoint.totalSentToBuilderUSD),
       0
     );
-  }
-
-  // Convert the data array to a monthly data array
-  function dataToMonthly(array) {
-    const monthly = {};
-
-    array.forEach((dataPoint, i) => {
-      const date = new Date(dataPoint.date);
-      const month = date.getMonth() + 1;
-      const year = date.getFullYear();
-
-      const key = `${month}-${year}`;
-
-      if (monthly[key]) {
-        monthly[key].totalLiquidated += Number(dataPoint.totalLiquidated);
-        monthly[key].totalSentToBuilderUSD += Number(
-          dataPoint.totalSentToBuilderUSD
-        );
-      } else {
-        monthly[key] = {
-          totalLiquidated: Number(dataPoint.totalLiquidated),
-          totalSentToBuilderUSD: Number(dataPoint.totalSentToBuilderUSD),
-          month: month,
-          year: year,
-          id: key,
-          date: dataPoint.date,
-        };
-      }
-    });
-
-    const sorted = Object.values(monthly).sort((a, b) => {
-      return new Date(a.year, a.month) - new Date(b.year, b.month);
-    });
-
-    return sorted;
-  }
-
-  // Convert the data array to a weekly data array
-  function dataToWeekly(array) {
-    const weekly = {};
-
-    array.forEach((dataPoint, i) => {
-      const date = new Date(dataPoint.date);
-      const week = Math.ceil(
-        (date - new Date(date.getFullYear(), 0, 1)) / 604800000
-      );
-
-      const year = date.getFullYear();
-
-      const key = `${week}-${year}`;
-
-      if (weekly[key]) {
-        weekly[key].totalLiquidated += Number(dataPoint.totalLiquidated);
-        weekly[key].totalSentToBuilderUSD += Number(
-          dataPoint.totalSentToBuilderUSD
-        );
-      } else {
-        weekly[key] = {
-          totalLiquidated: Number(dataPoint.totalLiquidated),
-          totalSentToBuilderUSD: Number(dataPoint.totalSentToBuilderUSD),
-          week: week,
-          year: year,
-          id: key,
-          date: dataPoint.date,
-        };
-      }
-    });
-
-    const sorted = Object.values(weekly).sort((a, b) => {
-      return new Date(a.year, a.week) - new Date(b.year, b.week);
-    });
-
-    return sorted;
-  }
-
-  function dataToCumulative(array) {
-    const cumulative = [];
-    let totalLiquidated = 0;
-    let totalSentToBuilderUSD = 0;
-
-    array.forEach((dataPoint, i) => {
-      totalLiquidated += Number(dataPoint.totalLiquidated);
-      totalSentToBuilderUSD += Number(dataPoint.totalSentToBuilderUSD);
-
-      cumulative.push({
-        totalLiquidated: totalLiquidated,
-        totalSentToBuilderUSD: totalSentToBuilderUSD,
-        date: dataPoint.date,
-      });
-    });
-
-    return cumulative;
   }
 
   function getProtocolById(id) {

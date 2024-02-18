@@ -3,9 +3,6 @@ import formatNumber from "@/utils/formatNumber";
 
 const oev = useOEVStore();
 
-// Calculate the relative heights
-const maxLiquidated = oev.getTotals().totalLiquidated;
-
 const showLiquidatedBar = ref(false);
 const showSentToBuilderBar = ref(true);
 

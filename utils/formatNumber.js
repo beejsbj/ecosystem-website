@@ -12,5 +12,5 @@ export default function formatNumber(value) {
     }
   }
 
-  return value.toString();
+  return value.toFixed(1).toString();
 }
