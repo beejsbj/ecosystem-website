@@ -42,6 +42,7 @@ export async function createPR(
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
 
+  console.log("private key is", parsePrivateKey());
   let branchCreated = false;
   try {
     const projectJsonData: string = JSON.stringify(projectData, null, 2);
