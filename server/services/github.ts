@@ -16,27 +16,28 @@ function parsePrivateKey() {
     "\n" +
     "-----END RSA PRIVATE KEY-----";
 
-  return config.nodeEnv === "production" ? config.gitAppPrivateKey : parsedKey;
+  return parsedKey;
 }
 
-const octokit = new Octokit({
+const octokitDev = new Octokit({
   authStrategy: createAppAuth,
   auth: {
-    appId:
-      config.nodeEnv === "production" ? config.gitAppId : config.gitAppIdDev,
+    appId: config.gitAppIdDev,
     privateKey: parsePrivateKey(),
-    installationId:
-      config.nodeEnv === "production"
-        ? config.gitAppInstallationId
-        : config.gitAppInstallationIdDev,
-    clientId:
-      config.nodeEnv === "production"
-        ? config.gitAppClientId
-        : config.gitAppClientIdDev,
-    clientSecret:
-      config.nodeEnv === "production"
-        ? config.gitAppClientSecret
-        : config.gitAppClientSecretDev,
+    installationId: config.gitAppInstallationIdDev,
+    clientId: config.gitAppClientIdDev,
+    clientSecret: config.gitAppClientSecretDev,
+  },
+});
+
+const octoKitProd = new Octokit({
+  authStrategy: createAppAuth,
+  auth: {
+    appId: config.gitAppId,
+    privateKey: config.gitAppPrivateKey,
+    installationId: config.gitAppInstallationId,
+    clientId: config.gitAppClientId,
+    clientSecret: config.gitAppClientSecret,
   },
 });
 
@@ -52,7 +53,10 @@ export async function createPR(
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
 
-  console.log("private key is", parsePrivateKey());
+  const octokit = config.nodeEnv === "production" ? octoKitProd : octokitDev;
+
+  console.log("nodeEnv", config.nodeEnv);
+  console.log("private key", config.gitAppPrivateKey);
   let branchCreated = false;
   try {
     const projectJsonData: string = JSON.stringify(projectData, null, 2);
