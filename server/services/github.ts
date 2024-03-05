@@ -16,7 +16,7 @@ function parsePrivateKey() {
     "\n" +
     "-----END RSA PRIVATE KEY-----";
 
-  return parsedKey;
+  return config.nodeEnv === "production" ? config.gitAppPrivateKey : parsedKey;
 }
 
 const octokit = new Octokit({
