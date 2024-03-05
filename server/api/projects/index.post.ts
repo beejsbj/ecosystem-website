@@ -1,9 +1,9 @@
 import { Project } from "~/server/models/Project";
 import { imageUploadHandler } from "../../utils/imageUpload";
 import { authenticated } from "../../utils/authenticated";
-import { checkBuildStatus } from "~/server/services/build";
 import { type ProjectType } from "~/server/types";
 import slug from "slug";
+import { createPR } from "~/server/services/github";
 
 export default authenticated(
   imageUploadHandler(
@@ -124,17 +124,17 @@ export default authenticated(
 
         // project json will be stored with active status in pull request for review
         payload.status = "active";
-        // verify build and create pr
-        const buildResult = await checkBuildStatus(payload, createdProject.id);
+        // verify schema and create pr
+        const prStatus = await createPR(payload, createdProject.id);
 
-        if (!buildResult.success) {
+        if (!prStatus.success) {
           // remove project data from db when build failed
           await Project.findByIdAndDelete(createdProject.id);
 
           event.res.statusCode = 400;
           return {
             code: "BUILD_FAILED",
-            message: "Failed to build project!",
+            message: prStatus.message,
           };
         }
 
@@ -142,8 +142,7 @@ export default authenticated(
         return {
           code: "OK",
           message: "Project submitted successfully!",
-          // data: buildResult?.data,
-          data: "",
+          data: prStatus.data,
         };
       } catch (err: any) {
         console.log("create project error ", err);

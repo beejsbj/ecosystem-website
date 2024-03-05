@@ -75,6 +75,7 @@ const submitHandler = async (event) => {
     images,
     verificationPayload
   );
+
   if (submitResult.success) {
     successData.value.message = submitResult.message;
     successData.value.pr_url = submitResult.data;
