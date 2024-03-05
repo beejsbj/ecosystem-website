@@ -22,11 +22,21 @@ function parsePrivateKey() {
 const octokit = new Octokit({
   authStrategy: createAppAuth,
   auth: {
-    appId: config.gitAppId,
+    appId:
+      config.nodeEnv === "production" ? config.gitAppId : config.gitAppIdDev,
     privateKey: parsePrivateKey(),
-    installationId: config.gitAppInstallationId,
-    clientId: config.gitAppClientId,
-    clientSecret: config.gitAppClientSecret,
+    installationId:
+      config.nodeEnv === "production"
+        ? config.gitAppInstallationId
+        : config.gitAppInstallationIdDev,
+    clientId:
+      config.nodeEnv === "production"
+        ? config.gitAppClientId
+        : config.gitAppClientIdDev,
+    clientSecret:
+      config.nodeEnv === "production"
+        ? config.gitAppClientSecret
+        : config.gitAppClientSecretDev,
   },
 });
 
