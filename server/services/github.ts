@@ -56,13 +56,8 @@ export async function createPR(
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
 
-  // console.log("nodeEnv", config.nodeEnv);
-  console.log("private key", config.gitAppPrivateKey);
-
   const octokit = config.nodeEnv === "production" ? octoKitProd : octokitDev;
 
-  // console.log("nodeEnv", config.nodeEnv);2
-  console.log("private key", config.gitAppPrivateKey);
   let branchCreated = false;
   try {
     const projectJsonData: string = JSON.stringify(projectData, null, 2);
