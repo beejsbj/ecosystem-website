@@ -8,7 +8,10 @@ import type { Status } from "./helper";
 const config = useRuntimeConfig();
 
 function parsePrivateKey() {
-  const key = config.gitAppPrivateKey;
+  const key: any =
+    config.nodeEnv === "production"
+      ? config.gitAppPrivateKey
+      : config.gitAppPrivateKeyDev;
   const parsedKey =
     "-----BEGIN RSA PRIVATE KEY-----" +
     "\n" +
@@ -34,7 +37,7 @@ const octoKitProd = new Octokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.gitAppId,
-    privateKey: config.gitAppPrivateKey,
+    privateKey: parsePrivateKey(),
     installationId: config.gitAppInstallationId,
     clientId: config.gitAppClientId,
     clientSecret: config.gitAppClientSecret,
