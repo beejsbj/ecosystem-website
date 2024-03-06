@@ -53,9 +53,12 @@ export async function createPR(
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
 
+  // console.log("nodeEnv", config.nodeEnv);
+  console.log("private key", config.gitAppPrivateKey);
+
   const octokit = config.nodeEnv === "production" ? octoKitProd : octokitDev;
 
-  console.log("nodeEnv", config.nodeEnv);
+  // console.log("nodeEnv", config.nodeEnv);2
   console.log("private key", config.gitAppPrivateKey);
   let branchCreated = false;
   try {
@@ -136,7 +139,7 @@ export async function createPR(
     };
   } catch (err) {
     // delete created branch if something went wrong
-
+    console.log("private key in catch", config.gitAppPrivateKey);
     console.error("Something went wrong during pr creation: ", err);
 
     // delete the branch if it was created and an error occurred
