@@ -54,6 +54,11 @@ main {
   pointer-events: none;
 }
 
+.flex {
+  display: flex;
+  gap: var(--space-s);
+}
+
 .grid-3fr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -77,8 +77,8 @@ export default defineFormKitConfig(() => {
 
   // pro
   if (config.public.nodeEnv === "development") {
-    //  const proPlugin = createProPlugin(config.public.FORMKIT_PRO_KEY, inputs);
-    //  plugins.push(proPlugin);
+    const proPlugin = createProPlugin(config.public.FORMKIT_PRO_KEY, inputs);
+    plugins.push(proPlugin);
   }
 
   return {
