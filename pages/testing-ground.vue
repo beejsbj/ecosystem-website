@@ -7,21 +7,15 @@ const ecosystem = useEcosystemStore();
 <template>
   <PageTitle heading="test ground" />
   <SectionColumn>
-    <OEVLoader />
+
   </SectionColumn>
 </template>
 
 <style scoped>
-ul {
+:deep(ul) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-m);
-}
-
-div {
-  background: var(--green);
-  aspect-ratio: 1;
-  width: var(--space);
 }
 </style>
 

@@ -16,10 +16,18 @@ const { copy, copied, text } = useClipboard();
 
 <template>
   <div>
-    <span class="calm-voice" @click="copy(code)" v-tooltip="'Copy code'">
+    <span class="calm-voice copy" @click="copy(code)" v-tooltip="'Copy code'">
       <template v-if="!copied">{{ language }}</template>
 
       <template v-else> Copied! </template>
+
+      <picture class="copy">
+        <img
+          loading="lazy"
+          src="@/assets/images/interface/copy.svg"
+          alt="Copy icon"
+        />
+      </picture>
     </span>
     <slot />
   </div>
@@ -29,10 +37,11 @@ const { copy, copied, text } = useClipboard();
 div {
   position: relative;
   border-radius: var(--corners);
-  margin: var(--space-l) 0;
+  margin: var(--space-s) 0;
   padding: var(--space-l) var(--space-s);
   background: var(--gradient-dark);
-  overflow: scroll;
+  //   overflow: scroll;
+
   span {
     position: absolute;
     top: 1rem;
@@ -45,12 +54,18 @@ div {
     color: unset;
   }
 
-  &:hover {
-    overflow: visible;
-  }
-
   :deep(pre) {
-    white-space: pre;
+    white-space: pre-wrap;
+    //  overflow-x: scroll;
   }
+}
+
+span.copy {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+picture.copy {
+  max-width: var(--space-xs);
 }
 </style>

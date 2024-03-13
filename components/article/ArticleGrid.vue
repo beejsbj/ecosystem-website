@@ -33,7 +33,8 @@ const sorted = computed(() => {
       return b.isFeatured ?? false - a.isFeatured ?? false;
     });
   }
-  return blog.list;
+
+  return blog.list.filter((article) => !article.hidden);
 });
 
 const layouts = [

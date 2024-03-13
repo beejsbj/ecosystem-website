@@ -120,7 +120,14 @@ const handleFilter = (event) => {
               v-model="ecosystem.filterQuery.chains[chain.value]"
               @change="handleFilter"
               v-auto-animate
-            />
+            >
+              <template #label="context">
+                <ChainIcon :chain="chain.label" />
+                <span class="whisper-voice">
+                  {{ context.label }}
+                </span>
+              </template>
+            </FormKit>
           </li>
         </template>
       </ul>
@@ -161,7 +168,14 @@ const handleFilter = (event) => {
               v-model="ecosystem.filterQuery.productTypes[productType.name]"
               @change="handleFilter"
               v-auto-animate
-            />
+            >
+              <template #label="context">
+                <DynamicIcon :icon="productType.name" />
+                <span class="whisper-voice">
+                  {{ context.label }}
+                </span>
+              </template>
+            </FormKit>
           </li>
         </template>
       </ul>
@@ -203,7 +217,14 @@ const handleFilter = (event) => {
               v-model="ecosystem.filterQuery.categories[category.name]"
               @change="handleFilter"
               v-auto-animate
-            />
+            >
+              <!-- <template #label="context">
+                <DynamicIcon :icon="category.name" />
+                <span class="whisper-voice">
+                  {{ context.label }}
+                </span>
+              </template> -->
+            </FormKit>
           </li>
         </template>
       </ul>
@@ -310,6 +331,11 @@ dapp-filter {
 
     //  gap: calc(var(--space-m));
     padding: 0 var(--space-m);
+
+    :deep(picture) {
+      max-width: 20px;
+      width: 20px;
+    }
   }
 }
 

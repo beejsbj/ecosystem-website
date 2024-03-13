@@ -16,7 +16,7 @@
           feeds.
         </p>
 
-        <button class="button" @click="navigateTo('/ecosystem')">
+        <button class="button" @click="navigateTo('/add-dapp')">
           Join The Ecosystem
         </button>
       </text-content>

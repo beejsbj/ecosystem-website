@@ -35,19 +35,19 @@ onMounted(() => {
     <text-content>
       <h2 class="attention-voice">Tell us about your dApp</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
     <form-field>
       <FormKit
         type="text"
-        label="What is the name of your dApp?*"
-        label-class="$reset calm-voice"
+        label="What is the name of your dApp?"
         name="dappName"
         placeholder="dApp Name"
         validation="required|length:0,30"
         validation-label="Name"
         id="dappName"
+        suffix-icon="help"
         v-model="dappForm.name"
       />
     </form-field>
@@ -57,8 +57,7 @@ onMounted(() => {
         v-auto-animate
         id="logoForm"
         type="file"
-        label="Upload your dApp’s logo.*"
-        label-class="$reset calm-voice"
+        label="Upload your dApp’s logo."
         name="logo"
         no-files-icon="fileImage"
         fileName="logo"
@@ -69,6 +68,9 @@ onMounted(() => {
         :validation-messages="{
           fileSize: 'File size must be below 3MB',
         }"
+        file-item-icon="fileImage"
+        suffix-icon="help"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
       <p class="whisper-voice">Minimum width: 512px</p>
@@ -79,8 +81,7 @@ onMounted(() => {
     <form-field>
       <FormKit
         type="text"
-        label="Enter your  dApp’s slogan.*"
-        label-class="$reset calm-voice"
+        label="Enter your  dApp’s slogan."
         name="shortDescription"
         placeholder="dApp slogan"
         help="Insert a quater-tweet sized description of your dApp"
@@ -88,6 +89,7 @@ onMounted(() => {
         validation-label="Slogan"
         id="shortDescription"
         v-model="dappForm.tagline"
+        suffix-icon="help"
       />
     </form-field>
 
@@ -95,15 +97,16 @@ onMounted(() => {
     <form-field>
       <FormKit
         type="textarea"
+        auto-height
         rows="5"
-        label="Tell us about your dApp.*"
-        label-class="$reset calm-voice"
+        label="Tell us about your dApp."
         name="longDescription"
         placeholder="dApp description"
         help="This is going to be your 'About', it can be a paragraph or two."
         validation="required"
         validation-label="Description"
         id="longDescription"
+        suffix-icon="help"
         v-model="dappForm.description"
       />
     </form-field>

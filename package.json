@@ -20,6 +20,7 @@
     "@types/uuid": "^9.0.2",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
+    "nuxt": "^3.10.1",
     "nuxt-lodash": "^2.5.3",
     "nuxt": "^3.10.1",
     "postcss": "^8.4.31",
@@ -70,7 +71,7 @@
     "uuid": "^9.0.0",
     "viem": "^1.4.2",
     "vue-chartjs": "^5.2.0",
-    "vue-easy-lightbox": "^1.16.0",
+    "vue-easy-lightbox": "^1.7.0",
     "zod": "^3.21.4"
   },
   "browserslist": [

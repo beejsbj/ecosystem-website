@@ -25,7 +25,7 @@ useSeoMeta({
     class="loud-voice ecosystem-header"
   >
     <NuxtLink to="/add-dapp" class="button solid-voice">
-      <span class=""> Join the Ecosystem </span>
+      Join the Ecosystem
     </NuxtLink>
   </PageTitle>
 
