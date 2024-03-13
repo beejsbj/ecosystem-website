@@ -1,7 +1,4 @@
 <script setup>
-import Multiselect from "@vueform/multiselect";
-import "@vueform/multiselect/themes/default.css";
-
 const options = ref([
   {
     label: "option1",
@@ -92,11 +89,11 @@ const inputs = ref([
   //     type: "autocomplete",
   //     options: options.value,
   //   },
-  //   {
-  //     label: "Taglist",
-  //     type: "taglist",
-  //     options: options.value,
-  //   },
+  {
+    label: "Taglist",
+    type: "taglist",
+    options: options.value,
+  },
   //   {
   //     label: "Dropdown",
   //     type: "dropdown",

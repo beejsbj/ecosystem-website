@@ -49,9 +49,14 @@ const imageRatio = async function (node) {
     })
   );
 
-  // Check if all aspect ratios are equal to 16/6.
-  console.log(imageRatios);
-  return imageRatios.every((ratio) => ratio === 16 / 6);
+  // Check if all aspect ratios are equal to 16/6 with a tolerance of a single decimal.
+  return imageRatios.every((ratio) => {
+    const requiredRatio = 16 / 6;
+    const tolerance = 0.1;
+    const ratioDiff = Math.abs(ratio - requiredRatio);
+
+    return ratioDiff <= tolerance;
+  });
 };
 </script>
 
