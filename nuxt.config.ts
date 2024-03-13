@@ -64,8 +64,19 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "@formkit/nuxt",
+    // tooltip
     "floating-vue/nuxt",
+
+    //formkit
+    "@formkit/nuxt",
+
+    //lodash
+    [
+      "nuxt-lodash",
+      {
+        prefix: "_",
+      },
+    ],
     [
       "@nuxt/content",
       {

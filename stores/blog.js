@@ -33,10 +33,8 @@ export const useBlogStore = defineStore("blog", () => {
     },
   });
 
-  console.log("blog data  ", data);
-
   watch([filterQuery, data], ([newQuery, newData], [oldQuery, prevData]) => {
-    console.log("blog store ", { newQuery, newData });
+    //  console.log("blog store ", { newQuery, newData });
     if (!newData) return;
     totalArticles.value = newData.total;
     if (newQuery.page === 1) {

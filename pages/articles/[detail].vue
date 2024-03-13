@@ -34,30 +34,68 @@ useSeoMeta({
 
   twitterCard: "summary_large_image",
 });
+
+// navigate article.body with up down keys, settings the hover state
+
+onMounted(() => {
+  const article = document.querySelector("article.body");
+
+  const children = article.querySelectorAll("article.body > *");
+
+  let index = 0;
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      if (e.key === "ArrowDown") {
+        index++;
+      }
+      if (e.key === "ArrowUp") {
+        index--;
+      }
+
+      if (index < 0) {
+        index = 0;
+      }
+      if (index > children.length - 1) {
+        index = children.length - 1;
+      }
+
+      children.forEach((child, i) => {
+        if (i === index) {
+          child.style.setProperty("--height", "100%");
+          child.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          child.style.removeProperty("--height");
+        }
+      });
+    }
+  });
+});
 </script>
 
 <template>
-    <SectionColumn innerClass="article">
-      <div class="article-wrapper">
-        <ArticleSide :toc="article?.content?.toc" :title="article?.title" />
-        <ArticleHeader :article="article" />
+  <SectionColumn innerClass="article">
+    <div class="article-wrapper">
+      <ArticleSide :toc="article?.content?.toc" :title="article?.title" />
+      <ArticleHeader :article="article" />
 
-        <picture class="cover" v-if="article?.cover">
-          <NuxtImg
-            loading="lazy"
-            :src="article?.cover"
-            :alt="`Cover of ${article?.title}`"
-          />
-        </picture>
-
-        <ContentRendererMarkdown
-          v-if="article?.content"
-          :value="article?.content"
-          tag="article"
-          class="body"
+      <picture class="cover" v-if="article?.cover">
+        <NuxtImg
+          loading="lazy"
+          :src="article?.cover"
+          :alt="`Cover of ${article?.title}`"
         />
-      </div>
-    </SectionColumn>
+      </picture>
+
+      <ContentRendererMarkdown
+        v-if="article?.content"
+        :value="article?.content"
+        tag="article"
+        class="body"
+      />
+    </div>
+  </SectionColumn>
 </template>
 
 <style lang="scss">
@@ -77,13 +115,12 @@ inner-column.article {
     & > :not(aside, header) {
       grid-column: 1 / -1;
       @media (min-width: 768px) {
-        grid-column: 4 / 11;
+        grid-column: 4 / 12;
         //     padding: var(--space-l);
         //     gap: var(--space-l);
       }
 
       &.cover {
-        height: 100%;
         aspect-ratio: 16/10;
         img {
           width: 100%;
@@ -100,13 +137,13 @@ inner-column.article {
 
   article.body {
     h2 {
-      margin-bottom: var(--space-m);
       margin-top: var(--space-2xl);
+      margin-bottom: var(--space-m);
     }
 
     h3 {
-      margin-bottom: var(--space-m);
       margin-top: var(--space-l);
+      margin-bottom: var(--space-m);
     }
     ul {
       margin-top: var(--space-s);
@@ -115,100 +152,31 @@ inner-column.article {
 
       li {
         position: relative;
-        --space: 1.25rem;
-        left: var(--space);
+        letter-spacing: 0.02em;
+
         &::before {
           content: "";
+          display: inline-block;
           width: 8px;
           height: 8px;
 
-          position: absolute;
-          left: calc(-1 * var(--space));
-          top: 50%;
-          transform: translateY(-50%);
+          position: relative;
+          margin-right: var(--space-xs);
 
           background-size: cover;
           background-position: center;
+          background: var(--gradient-color);
+          border-radius: 50%;
         }
       }
     }
 
     p {
       margin-top: var(--space-s);
-
-      &:has(img) {
-        margin-top: var(--space-l);
-      }
+      letter-spacing: 0.02em;
 
       &:has(> :is(a, code)) {
-        overflow: auto;
-      }
-    }
-
-    li,
-    p {
-      letter-spacing: 0.02em;
-    }
-
-    figure {
-      margin: var(--space-l) 0;
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: var(--space-s);
-      justify-items: start;
-
-      position: relative;
-
-      &::after {
-        position: absolute;
-        inset: 0;
-
-        content: "";
-        z-index: 1;
-      }
-    }
-
-    & > blockquote {
-      margin: var(--space-l) 0;
-      padding: var(--space-2xl);
-      background: var(--gradient-dark);
-      display: block;
-      // max-width: 70ch;
-      color: var(--ink);
-      position: relative;
-      border-radius: var(--corners);
-      //   overflow: hidden;
-      z-index: 1;
-
-      p {
-        margin: 0;
-        padding: 0;
-        font-style: italic;
-      }
-      blockquote {
-        margin-top: var(--space-s);
-        color: var(--green);
-        text-align: right;
-        font-style: normal;
-      }
-
-      &::before {
-        content: "“";
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        font-size: 10rem;
-        color: var(--violet);
-        z-index: -1;
-        opacity: 0.5;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        inset: calc(-1 * var(--line-width));
-        z-index: -2;
-        border-radius: calc(var(--corners) + 3rem);
+        //   overflow: auto;
       }
     }
 
@@ -231,9 +199,10 @@ inner-column.article {
 
         transition: 0.1s;
       }
-    }
-    .highlight {
-      --height: 100%;
+
+      &:is(:hover, :focus-visible)::before {
+        --height: 100%;
+      }
     }
   }
 }

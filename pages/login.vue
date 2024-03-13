@@ -7,14 +7,16 @@ const route = useRoute();
 </script>
 
 <template>
-  <SectionColumn>
-    <h1 class="loud-voice gradient-text-color-light">
-      Please Connect your wallet
-    </h1>
-    <div class="actions">
-      <ConnectButton />
-    </div>
-  </SectionColumn>
+  <main>
+    <SectionColumn>
+      <h1 class="loud-voice gradient-text-color-light">
+        Please Connect your wallet
+      </h1>
+      <div class="actions">
+        <ConnectButton />
+      </div>
+    </SectionColumn>
+  </main>
 </template>
 
 <style lang="scss" scoped>

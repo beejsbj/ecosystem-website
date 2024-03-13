@@ -1,5 +1,6 @@
 <script setup>
 definePageMeta({
+  title: "Add Your dApp",
   layout: "footer-less",
 });
 
