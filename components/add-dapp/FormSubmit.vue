@@ -1,15 +1,10 @@
 <script setup>
-const props = defineProps(["next", "previous", "isLastStep"]);
+const props = defineProps(["isLastStep"]);
 const web3Store = useWeb3Store();
 </script>
 
 <template>
   <div class="actions">
-    <button class="text" @click.prevent="previous()">Previous</button>
-    <button class="button outline" @click.prevent="next()" v-if="!isLastStep">
-      Next
-    </button>
-
     <FormKit
       type="submit"
       label="Add Project"

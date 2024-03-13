@@ -10,7 +10,7 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     <text-content>
       <h2 class="attention-voice">How can your users contact you?</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
 
@@ -20,10 +20,10 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
         id="website"
         v-model="dappForm.links.website"
         label="What’s your company’s website?*"
-        label-class="$reset calm-voice"
         validation="url"
         validation-label="Website"
         placeholder="https://yourwebsite.com"
+        prefix-icon="url"
       />
     </form-field>
 
@@ -37,9 +37,9 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="twitter"
           v-model="dappForm.links.socials.twitter"
           label="Twitter"
-          label-class="$reset calm-voice"
           placeholder="https://twitter.com/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -51,9 +51,9 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="discord"
           v-model="dappForm.links.socials.discord"
           label="Discord"
-          label-class="$reset calm-voice"
           placeholder="https://discord.gg/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -65,9 +65,9 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="github"
           v-model="dappForm.links.socials.github"
           label="Github"
-          label-class="$reset calm-voice"
           placeholder="github.com/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -78,9 +78,9 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="reddit"
           v-model="dappForm.links.socials.reddit"
           label="Reddit"
-          label-class="$reset calm-voice"
           placeholder="https://reddit.com/r/yourdapp"
           validation="url"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -92,8 +92,8 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="telegram"
           v-model="dappForm.links.socials.telegram"
           label="Telegram"
-          label-class="$reset calm-voice"
           placeholder="https://t.me/yourdapp"
+          prefix-icon="url"
         />
       </form-field>
       <form-field>
@@ -104,8 +104,8 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="facebook"
           v-model="dappForm.links.socials.facebook"
           label="Facebook"
-          label-class="$reset calm-voice"
           placeholder="https://facebook.com/yourdapp"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -117,8 +117,8 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="youtube"
           v-model="dappForm.links.socials.youtube"
           label="Youtube"
-          label-class="$reset calm-voice"
           placeholder="https://youtube.com/yourdapp"
+          prefix-icon="url"
         />
       </form-field>
 
@@ -130,8 +130,8 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           id="blog"
           v-model="dappForm.links.socials.blog"
           label="Blog"
-          label-class="$reset calm-voice"
           placeholder="https://yourdapp.com/blog"
+          prefix-icon="url"
         />
       </form-field>
     </div>
@@ -163,8 +163,20 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     }
   }
 
+  :deep(.formkit-outer) {
+    margin: unset;
+  }
+
+  :deep(.formkit-label) {
+    padding: unset;
+  }
+
   :deep(.formkit-wrapper) {
-    grid-template-columns: 0.2fr 1fr;
+    //  grid-template-columns: 0.2fr 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 0.2fr 1fr;
+    }
   }
 
   :deep(picture) {

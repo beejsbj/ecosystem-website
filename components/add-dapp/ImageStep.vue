@@ -60,7 +60,7 @@ const imageRatio = async function (node) {
     <text-content>
       <h2 class="attention-voice">Tell us about your dApp</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
     <form-field>
@@ -71,8 +71,8 @@ const imageRatio = async function (node) {
         id="dapp"
         v-model="dappForm.links.dapp"
         label="Where can someone find your dApp?*"
-        label-class="$reset calm-voice"
         placeholder="https://yourdapp.com"
+        prefix-icon="url"
       />
     </form-field>
 
@@ -84,8 +84,8 @@ const imageRatio = async function (node) {
         id="docs"
         v-model="dappForm.links.docs"
         label="Where can someone find your dApp’s documentation?"
-        label-class="$reset calm-voice"
         placeholder="https://docs.api3.org/"
+        prefix-icon="url"
       />
     </form-field>
 
@@ -97,8 +97,8 @@ const imageRatio = async function (node) {
         id="explorer"
         v-model="dappForm.links.explorer"
         label="Explorer"
-        label-class="$reset calm-voice"
         placeholder="https://etherscan.io/"
+        prefix-icon="url"
       />
     </form-field>
     <form-field class="file-upload">
@@ -106,7 +106,6 @@ const imageRatio = async function (node) {
         id="coverForm"
         type="file"
         label="Upload a branded cover*"
-        label-class="$reset calm-voice"
         name="cover"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
         v-auto-animate
@@ -117,6 +116,8 @@ const imageRatio = async function (node) {
           fileSize: 'File size must be below 3MB',
           imageRatio: 'Image ratio must be 16:6',
         }"
+        file-item-icon="fileImage"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
 
@@ -130,7 +131,6 @@ const imageRatio = async function (node) {
         type="file"
         multiple="true"
         label="Upload your screenshots"
-        label-class="$reset calm-voice"
         name="screenshots"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
         validation="fileSize"
@@ -139,6 +139,8 @@ const imageRatio = async function (node) {
         :validation-messages="{
           fileSize: 'Each file must be below 3MB',
         }"
+        file-item-icon="fileImage"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
       <p class="whisper-voice">Accepted file size: 6MB</p>
