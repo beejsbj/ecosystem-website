@@ -5,9 +5,16 @@ const datePublished = computed(() => {
   const date = new Date(props.article?.created_at);
   return date.toLocaleDateString("en-US", {
     year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
   });
+});
+
+const author = computed(() => {
+  return {
+    name: props.article?.author?.name,
+    image: null,
+  };
 });
 </script>
 
@@ -20,38 +27,25 @@ const datePublished = computed(() => {
       {{ article?.subtitle }}
     </h2>
     <article-meta>
+      <picture>
+        <img
+          loading="lazy"
+          src="@/assets/images/icons/logo-icon.svg"
+          :src="author?.image"
+          alt="author icon"
+        />
+      </picture>
       <div class="author">
-        <picture>
-          <img
-            loading="lazy"
-            src="@/assets/images/icons/author.svg"
-            alt="author icon"
-          />
-        </picture>
-        <p class="solid-voice">
-          {{ article?.author?.name }}
+        <p class="firm-voice">
+          {{ author?.name }}
         </p>
       </div>
       <div class="date">
-        <picture>
-          <img
-            loading="lazy"
-            src="@/assets/images/icons/calendar-icon.svg"
-            alt="calendar icon"
-          />
-        </picture>
         <p class="solid-voice">
           {{ datePublished }}
         </p>
       </div>
       <div class="tag">
-        <picture>
-          <img
-            loading="lazy"
-            src="@/assets/images/icons/bookmark-icon.svg"
-            alt="bookmark icon"
-          />
-        </picture>
         <p class="solid-voice">
           {{ article?.category }}
         </p>
@@ -104,10 +98,12 @@ header {
 
   article-meta {
     display: grid;
-    gap: var(--space-s);
-    grid-template-columns: repeat(3, 1fr);
+    row-gap: var(--space-3xs);
+    column-gap: var(--space-s);
+    grid-template-columns: 40px 1fr 1fr;
     margin-top: var(--space-2xs);
     justify-self: start;
+
     .solid-voice {
       font-size: var(--step--1);
     }
@@ -115,8 +111,31 @@ header {
       display: flex;
       gap: var(--space-2xs);
       align-items: center;
-      picture {
-        max-width: 15px;
+    }
+
+    div.author {
+      grid-column: 2 / -1;
+    }
+
+    div.date {
+      grid-column: 2;
+    }
+    div.tag {
+      grid-column: 3;
+    }
+
+    picture {
+      grid-row: span 2;
+      align-self: center;
+      aspect-ratio: 1/1;
+      max-width: 40px;
+      border-radius: 50%;
+      //   background: var(--gray);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }

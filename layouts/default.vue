@@ -37,17 +37,21 @@ useHead({
 
   picture.curves-decoration-3 {
     position: absolute;
-    top: 100px;
-    left: -200px;
 
-    width: 300vw;
+    --top: 100px;
+    --left: -200px;
+    --width: 300vw;
+    top: var(--top);
+    left: var(--left);
+
+    width: var(--width);
 
     @media (min-width: 768px) {
       display: block;
-      top: -50px;
-      left: -500px;
+      --top: -50px;
+      --left: -500px;
 
-      width: 200vw;
+      --width: 200vw;
       z-index: -10;
     }
   }

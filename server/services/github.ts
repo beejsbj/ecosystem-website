@@ -8,7 +8,10 @@ import type { Status } from "./helper";
 const config = useRuntimeConfig();
 
 function parsePrivateKey() {
-  const key = config.gitAppPrivateKey;
+  const key: any =
+    config.nodeEnv === "production"
+      ? config.gitAppPrivateKey
+      : config.gitAppPrivateKeyDev;
   const parsedKey =
     "-----BEGIN RSA PRIVATE KEY-----" +
     "\n" +
@@ -19,7 +22,18 @@ function parsePrivateKey() {
   return parsedKey;
 }
 
-const octokit = new Octokit({
+const octokitDev = new Octokit({
+  authStrategy: createAppAuth,
+  auth: {
+    appId: config.gitAppIdDev,
+    privateKey: parsePrivateKey(),
+    installationId: config.gitAppInstallationIdDev,
+    clientId: config.gitAppClientIdDev,
+    clientSecret: config.gitAppClientSecretDev,
+  },
+});
+
+const octoKitProd = new Octokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.gitAppId,
@@ -41,6 +55,8 @@ export async function createPR(
   const branch = `${title}-${projectId}`;
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
+
+  const octokit = config.nodeEnv === "production" ? octoKitProd : octokitDev;
 
   let branchCreated = false;
   try {
@@ -121,7 +137,7 @@ export async function createPR(
     };
   } catch (err) {
     // delete created branch if something went wrong
-
+    console.log("private key in catch", config.gitAppPrivateKey);
     console.error("Something went wrong during pr creation: ", err);
 
     // delete the branch if it was created and an error occurred

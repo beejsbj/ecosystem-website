@@ -48,6 +48,12 @@ main {
   display: none;
 }
 
+.hide-opacity,
+.hideOpacity {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .grid-3fr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

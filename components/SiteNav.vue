@@ -3,6 +3,7 @@
 <template>
   <nav>
     <NuxtLink class="text hover-underline" to="/ecosystem">Ecosystem</NuxtLink>
+    <NuxtLink class="text hover-underline" to="/oev">OEV</NuxtLink>
     <NuxtLink class="text hover-underline" to="/articles">Articles</NuxtLink>
     <NuxtLink class="text" to="/guild">Guild</NuxtLink>
     <div class="actions">
@@ -45,14 +46,19 @@ nav.panel-menu {
   gap: var(--space-m);
   padding: var(--space-l);
 
-  a {
+  a.text {
     color: var(--ink);
     font-size: var(--step-1);
+    padding: unset;
 
     &.button {
       justify-self: center;
       min-width: 200px;
     }
+  }
+
+  a.icon {
+    padding: unset;
   }
 }
 </style>

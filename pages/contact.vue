@@ -1,3 +1,5 @@
 <template>
-  <PageTitle heading="Contact" />
+  <main>
+    <PageTitle heading="Contact" />
+  </main>
 </template>

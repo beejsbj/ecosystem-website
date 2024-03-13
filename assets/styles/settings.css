@@ -57,6 +57,17 @@ html {
 
   --gradient-light: linear-gradient(130deg, var(--white), var(--gray-light));
 
+  --gradient-radial-dark: var(
+    --Gradient-Gradient-On-chain,
+    radial-gradient(
+      208.44% 148.88% at 50% 0%,
+      rgba(217, 217, 217, 0.25) 0%,
+      rgba(0, 0, 0, 0) 45.83%,
+      rgba(245, 245, 245, 0.15) 100%
+    ),
+    #040606
+  );
+
   --gradient-color: linear-gradient(130deg, var(--green), var(--violet));
 
   --gradient-color-light: linear-gradient(130deg, var(--ink), var(--green));

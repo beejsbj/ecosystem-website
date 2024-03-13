@@ -47,9 +47,11 @@ a {
   border: var(--border-light);
 }
 
-.button.outline:is(:hover, :focus-visible) {
+
+.button.outline:is(:hover, :focus-visible, .hover) {
   color: var(--indigo-lighter);
   border-color: var(--indigo-lighter);
+
   filter: saturate(2);
 }
 .button.outline:active {
@@ -65,6 +67,9 @@ a {
   color: var(--white);
   --link-hover: var(--green-lighter);
   --link-active: var(--green);
+}
+p :is(button, a).text {
+  padding: 0;
 }
 .text:is(:hover, :focus-visible) {
   color: var(--link-hover) !important;

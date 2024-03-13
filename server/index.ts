@@ -10,6 +10,9 @@ export default async (_nitroApp: Nitro) => {
       config.nodeEnv === "production"
         ? config.mongodbUri
         : config.mongodbUriDev;
+
+    console.log("node env", config.nodeEnv);
+    console.log("dbUrl", dbUrl);
     await mongoose.connect(dbUrl);
 
     // sync projects on server startup
