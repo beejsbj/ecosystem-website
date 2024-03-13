@@ -35,69 +35,41 @@ onMounted(() => {
       </p>
     </text-content>
     <form-field>
-      <label class="calm-voice" for="categories">
-        Select up to x categories that your dApp serves.*
-      </label>
-      <Multiselect
-        id="categories"
+      <FormKit
+        type="select"
         v-model="dappForm.categories"
-        mode="tags"
-        :close-on-select="false"
-        :searchable="true"
-        :create-option="false"
         :options="ecosystem.categoryOptions"
-        class="tags"
-        :classes="{
-          tag: 'calm-voice multiselect-tag',
-          dropdown: 'calm-voice multiselect-dropdown',
-          tagsSearch: 'calm-voice multiselect-tags-search',
-        }"
+        :label="`Select up to x categories that your dApp serves.*`"
+        help="Hold down the CTRL/CMD  to select multiple categories."
+        :required="true"
+        multiple="true"
       />
     </form-field>
 
     <form-field>
-      <label class="calm-voice" for="chains">
-        Select the networks your dApp supports.*
-      </label>
-      <Multiselect
-        id="chains"
+      <FormKit
+        type="select"
         v-model="dappForm.chains"
-        mode="tags"
-        :close-on-select="false"
-        :searchable="true"
-        :create-option="false"
         :options="ecosystem.chainOptions"
-        class="tags"
-        :classes="{
-          tag: 'calm-voice multiselect-tag',
-          dropdown: 'calm-voice multiselect-dropdown',
-          tagsSearch: 'calm-voice multiselect-tags-search',
-        }"
+        :label="`Select the networks your dApp supports.*`"
+        help="Hold down the CTRL/CMD  to select multiple networks."
+        :required="true"
+        multiple="true"
       />
     </form-field>
 
     <form-field>
-      <label class="calm-voice" for="productType">
-        Select the service your dApp uses.*
-      </label>
-      <Multiselect
-        id="productType"
+      <FormKit
+        type="select"
         v-model="dappForm.productType"
-        mode="single"
-        :close-on-select="true"
-        :searchable="true"
-        :create-option="false"
         :options="ecosystem.productTypeOptions"
-        :classes="{
-          singleLabelText: 'calm-voice multiselect-single-label-text',
-          dropdown: 'calm-voice multiselect-dropdown',
-          search: 'calm-voice multiselect-search',
-        }"
+        :label="`Select the service your dApp uses.*`"
+        :required="true"
       />
     </form-field>
 
     <form-field>
-      <label class="calm-voice" for="year">
+      <!-- <label class="calm-voice" for="year">
         When was your dApp released?*
       </label>
       <Multiselect
@@ -114,6 +86,14 @@ onMounted(() => {
           dropdown: 'calm-voice multiselect-dropdown',
           search: 'calm-voice multiselect-search',
         }"
+      /> -->
+
+      <FormKit
+        type="select"
+        v-model="dappForm.year"
+        :options="yearOptions"
+        :label="`When was your dApp released?*`"
+        :required="true"
       />
     </form-field>
   </section>

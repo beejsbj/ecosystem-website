@@ -42,7 +42,7 @@
 input-field,
 form-field {
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-3xs);
 }
 
 /* Form */

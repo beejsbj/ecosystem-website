@@ -473,7 +473,11 @@
 /* file */
 
 [data-type="file"] .formkit-inner {
-  box-shadow: unset;
+  /* box-shadow: unset; */
+}
+[data-type="file"] .formkit-input {
+  /* display: none; */
+  background: transparent;
 }
 
 /* pro */

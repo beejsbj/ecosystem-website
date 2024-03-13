@@ -71,9 +71,9 @@ export default defineNuxtConfig({
     [
       "@formkit/nuxt",
       {
-        autoImport: false, //#fixme
-      }
-     ],
+        //   autoImport: false, //#fixme
+      },
+    ],
     //lodash
     [
       "nuxt-lodash",
