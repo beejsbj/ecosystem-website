@@ -1,24 +1,31 @@
 import { defineStore } from "pinia";
 import { gsap } from "gsap";
+import { onMounted, onUnmounted } from "vue";
 
 export const useInterfaceStore = defineStore("interface", function () {
   const firstLoad = ref(true);
 
   //
   //viewport size /////////////////////////////
-  const isMobile = computed(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth < 768;
+  const isMobile = ref(false);
+  const isTablet = ref(false);
+  const isDesktop = ref(false);
+
+  function updateViewportSize() {
+    if (typeof window === "undefined") return;
+
+    isMobile.value = window.innerWidth < 768;
+    isTablet.value = window.innerWidth < 1024 && window.innerWidth >= 768;
+    isDesktop.value = window.innerWidth >= 1024;
+  }
+
+  onMounted(() => {
+    updateViewportSize();
+    window.addEventListener("resize", updateViewportSize);
   });
 
-  const isTablet = computed(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth < 1024 && window.innerWidth >= 768;
-  });
-
-  const isDesktop = computed(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth >= 1024;
+  onUnmounted(() => {
+    window.removeEventListener("resize", updateViewportSize);
   });
 
   //

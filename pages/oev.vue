@@ -44,8 +44,6 @@ const diffInDays = Math.ceil(
   (currentDate - lastVisitDate) / (1000 * 60 * 60 * 24)
 );
 
-console.log(diffInDays);
-
 if (diffInDays > 2) {
   loading.value = true;
 
@@ -105,7 +103,7 @@ if (diffInDays > 2) {
     </text-content>
   </SectionColumn>
 
-  <LazyOEVLoader v-if="loading" />
+  <!-- <LazyOEVLoader v-if="loading" /> -->
 </template>
 
 <style scoped lang="scss">
