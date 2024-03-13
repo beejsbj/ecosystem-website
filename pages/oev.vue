@@ -94,7 +94,7 @@ if (diffInDays > 2) {
   <SectionColumn>
     <text-content>
       <p class="firm-voice">
-        You can verify this data yourself by
+        You can verify this data by
         <NuxtLink
           class="text green"
           to="https://github.com/AamirAlam/aave-extract-mev-funds"
