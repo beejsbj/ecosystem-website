@@ -14,11 +14,13 @@ blockquote {
   position: relative;
   border-radius: var(--corners);
   z-index: 1;
+  border-right: var(--border-color);
 
   :deep(p) {
     margin: 0;
     padding: 0;
     font-style: italic;
+    word-break: break-all;
   }
 }
 </style>

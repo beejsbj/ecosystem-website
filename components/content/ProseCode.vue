@@ -39,7 +39,8 @@ div {
   border-radius: var(--corners);
   margin: var(--space-s) 0;
   padding: var(--space-l) var(--space-s);
-  background: var(--gradient-dark);
+  background: var(--paper);
+  border: var(--border-dark);
   //   overflow: scroll;
 
   span {
@@ -56,6 +57,8 @@ div {
 
   :deep(pre) {
     white-space: pre-wrap;
+    word-break: break-all;
+
     //  overflow-x: scroll;
   }
 }
