@@ -1,7 +1,5 @@
 <script setup>
 import { useEcosystemStore } from "~/stores/ecosystem";
-import Multiselect from "@vueform/multiselect";
-import "@vueform/multiselect/themes/default.css";
 
 const ecosystem = useEcosystemStore();
 
@@ -36,64 +34,45 @@ onMounted(() => {
     </text-content>
     <form-field>
       <FormKit
-        type="select"
+        type="taglist"
         v-model="dappForm.categories"
         :options="ecosystem.categoryOptions"
         :label="`Select up to x categories that your dApp serves.*`"
-        help="Hold down the CTRL/CMD  to select multiple categories."
         :required="true"
-        multiple="true"
+        popover
       />
     </form-field>
 
     <form-field>
       <FormKit
-        type="select"
+        type="taglist"
         v-model="dappForm.chains"
         :options="ecosystem.chainOptions"
         :label="`Select the networks your dApp supports.*`"
-        help="Hold down the CTRL/CMD  to select multiple networks."
         :required="true"
-        multiple="true"
+        popover
       />
     </form-field>
 
     <form-field>
       <FormKit
-        type="select"
+        type="dropdown"
         v-model="dappForm.productType"
         :options="ecosystem.productTypeOptions"
         :label="`Select the service your dApp uses.*`"
         :required="true"
+        popover
       />
     </form-field>
 
     <form-field>
-      <!-- <label class="calm-voice" for="year">
-        When was your dApp released?*
-      </label>
-      <Multiselect
-        id="year"
-        v-model="dappForm.year"
-        mode="single"
-        :required="true"
-        :close-on-select="true"
-        :searchable="true"
-        :create-option="false"
-        :options="yearOptions"
-        :classes="{
-          singleLabelText: 'calm-voice multiselect-single-label-text',
-          dropdown: 'calm-voice multiselect-dropdown',
-          search: 'calm-voice multiselect-search',
-        }"
-      /> -->
-
       <FormKit
-        type="select"
+        type="dropdown"
         v-model="dappForm.year"
         :options="yearOptions"
         :label="`When was your dApp released?*`"
         :required="true"
+        popover
       />
     </form-field>
   </section>
