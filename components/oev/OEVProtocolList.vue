@@ -81,6 +81,7 @@ h3 {
   text-align: center;
   position: sticky;
   top: 0;
+  padding-top: var(--space-m);
   z-index: 1;
   background: var(--paper);
   transition: all 0.3s ease-in-out, scale 0.2s 0.3s ease-in-out;

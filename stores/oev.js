@@ -13,13 +13,12 @@ export const useOEVStore = defineStore("oev", function () {
 
   // Set the protocols data
   function setProtocols(raw) {
-    console.log("Setting Protocols", raw);
     if (!raw) return;
 
     const parsed = raw?.map((protocol, i) => {
       return {
-        hide: i >= protocolCount.value,
         ...protocol,
+        hide: i >= protocolCount.value,
       };
     });
 
