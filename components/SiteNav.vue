@@ -1,11 +1,30 @@
-<script setup></script>
+<script setup>
+// use runtime, get env
+
+const config = useRuntimeConfig();
+
+const isDev = config.public.nodeEnv === "development";
+</script>
 
 <template>
   <nav>
+    <template v-if="isDev">
+      <NuxtLink
+        class="text hover-underline dev indigo whisper-voice"
+        to="/style-guide"
+        >Style Gudie</NuxtLink
+      >
+      <NuxtLink
+        class="text hover-underline dev indigo whisper-voice"
+        to="/testing"
+        >Testing Ground</NuxtLink
+      >
+    </template>
     <NuxtLink class="text hover-underline" to="/ecosystem">Ecosystem</NuxtLink>
     <NuxtLink class="text hover-underline new" to="/oev"> OEV </NuxtLink>
     <NuxtLink class="text hover-underline" to="/articles">Articles</NuxtLink>
     <NuxtLink class="text" to="/guild">Guild</NuxtLink>
+
     <div class="actions">
       <NuxtLink to="https://discord.com/invite/qnRrcfnm5W" class="icon">
         <DynamicIcon icon="Discord-stroke" />
@@ -33,6 +52,7 @@ nav:not(.panel-menu) {
 
   a {
     color: var(--ink);
+    white-space: nowrap;
   }
 
   .button {

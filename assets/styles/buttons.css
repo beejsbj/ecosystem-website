@@ -47,7 +47,6 @@ a {
   border: var(--border-light);
 }
 
-
 .button.outline:is(:hover, :focus-visible, .hover) {
   color: var(--indigo-lighter);
   border-color: var(--indigo-lighter);
@@ -80,16 +79,16 @@ p :is(button, a).text {
 
 .text.green {
   color: var(--green);
-  --link-hover: var(--green-lighter);
+  --link-hover: var(--green-lighter) !important;
   --link-active: var(--green-dark);
 }
 .text.violet {
-  color: var(--violet);
+  color: var(--violet) !important;
   --link-hover: var(--violet-light);
   --link-active: var(--violet-dark);
 }
-.text.blue {
-  color: var(--indigo-lighter);
+.text.indigo {
+  color: var(--indigo-lighter) !important;
   --link-hover: var(--indigo-light);
   --link-active: var(--indigo);
 }

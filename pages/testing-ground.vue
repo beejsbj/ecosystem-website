@@ -1,14 +1,16 @@
 <script setup>
 import { CHAINS } from "@api3/chains";
 
+definePageMeta({
+  alias: ["/testing"],
+});
+
 const ecosystem = useEcosystemStore();
 </script>
 
 <template>
   <PageTitle heading="test ground" />
-  <SectionColumn>
-
-  </SectionColumn>
+  <SectionColumn> </SectionColumn>
 </template>
 
 <style scoped>
