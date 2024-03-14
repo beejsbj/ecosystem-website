@@ -23,6 +23,10 @@ const OevTotalSchema = new Schema({
     type: String,
     required: true,
   },
+  icon: {
+    type: String,
+    required: false,
+  },
   chainId: {
     type: String,
     required: true,
