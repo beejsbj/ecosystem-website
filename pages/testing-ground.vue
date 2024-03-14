@@ -7,7 +7,12 @@ const ecosystem = useEcosystemStore();
 <template>
   <PageTitle heading="test ground" />
   <SectionColumn>
-    <FormGuide />
+    <ul>
+      <li v-for="chain in CHAINS" :key="chain">
+        <ChainIcon :id="chain.id" />
+        <!-- {{ chain }} -->
+      </li>
+    </ul>
   </SectionColumn>
 </template>
 

@@ -41,6 +41,7 @@
     "@nuxtjs/robots": "^3.0.0",
     "@octokit/auth-app": "^6.0.0",
     "@octokit/rest": "^19.0.13",
+    "@phase21/logos": "^2.10.0",
     "@pinia/nuxt": "^0.4.9",
     "@vercel/kv": "^0.2.2",
     "@vueuse/core": "^9.13.0",
