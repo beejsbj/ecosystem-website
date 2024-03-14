@@ -3,8 +3,6 @@ import {
   prepareSingleLiquidationChart,
 } from "~/server/services/oev-parser/oev";
 import { OevChart } from "~/server/models/OevChart";
-import { queryCache, cacheInterval } from "~/server/services/cache";
-
 export default defineEventHandler(async (event) => {
   try {
     const { protocolId, period }: any = getQuery(event);
@@ -16,13 +14,8 @@ export default defineEventHandler(async (event) => {
         message: "Invalid protocolId in query params",
       };
     }
-    const cached = queryCache.get(`charts-${protocolId}-${period}`);
-    let result;
-    if (!cached) {
-      result = await OevChart.findOne({ id: protocolId, period });
-      queryCache.set(`charts-${protocolId}-${period}`, result, cacheInterval);
-    }
-    result = cached;
+
+    const result = await OevChart.findOne({ id: protocolId, period });
 
     if (!result) {
       event.node.res.statusCode = 401;
