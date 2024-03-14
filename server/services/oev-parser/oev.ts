@@ -12,6 +12,7 @@ import {
   getTotalLiquidated,
   getTotalSentToBuilder,
 } from "./helpers";
+import { OevTotal } from "../../models/OevTotal";
 
 async function readSingleProtocolRawData(file: string, chainId: string) {
   const folder = chainId;
@@ -105,17 +106,24 @@ export async function parseOevSnapshot() {
     withOEV: getOEV({ totalLiquidated, totalSentToBuilderUSD }),
   });
 
-  return parsed;
+  // clear the database if parse data already exists
+
+  await OevTotal.deleteMany({});
+  // update each element of parsed to the database
+  for (let i = 0; i < parsed.length; i++) {
+    const protocol = parsed[i];
+    // update the database
+    await new OevTotal(protocol).save();
+    console.log("Updated protocol: ", protocol);
+  }
 }
 
-{
-}
 export const PERIOD = {
   daily: "daily",
   weekly: "weekly",
   monthly: "monthly",
   cumulative: "cumulative",
-  logarithmic: "logarithmic",
+  // logarithmic: "logarithmic",
 };
 
 // [("daily", "weekly", "cumulative", "logarithmic")];
@@ -128,7 +136,7 @@ export async function prepareSingleLiquidationChart(
   const raw = await readSingleProtocolRawData(file, chainId);
 
   if (!raw) {
-    return null;
+    return [];
   }
 
   if (period === PERIOD.daily) {
@@ -173,6 +181,7 @@ export async function prepareSingleLiquidationChart(
     return chartData;
   } else {
     // logarthmic
+    return [];
   }
 }
 

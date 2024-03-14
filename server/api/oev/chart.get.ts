@@ -2,7 +2,7 @@ import {
   prepareAllLiquidationChart,
   prepareSingleLiquidationChart,
 } from "~/server/services/oev-parser/oev";
-
+import { OevChart } from "~/server/models/OevChart";
 export default defineEventHandler(async (event) => {
   try {
     const { protocolId, period }: any = getQuery(event);
@@ -15,43 +15,18 @@ export default defineEventHandler(async (event) => {
       };
     }
 
-    let result: any = [];
+    const result = await OevChart.findOne({ id: protocolId, period });
 
-    if (protocolId !== "all") {
-      const file = protocolId?.split("-")?.[0] + ".json";
-      const chainId = protocolId?.split("-")?.[1];
-
-      if (!chainId) {
-        event.node.res.statusCode = 401;
-        return {
-          code: "ERROR",
-          message: "Invalid ProtocolId in query params",
-        };
-      }
-
-      if (!file) {
-        event.node.res.statusCode = 401;
-        return {
-          code: "ERROR",
-          message: "Invalid ProtocolId in query params",
-        };
-      }
-
-      if (!period) {
-        event.node.res.statusCode = 401;
-        return {
-          code: "ERROR",
-          message: "Invalid period in query params",
-        };
-      }
-
-      result = await prepareSingleLiquidationChart(file, chainId, period);
-    } else {
-      result = await prepareAllLiquidationChart(period);
+    if (!result) {
+      event.node.res.statusCode = 401;
+      return {
+        code: "ERROR",
+        message: "Chart not found for the given protocolId and period",
+      };
     }
 
     event.node.req.statusCode = 200;
-    return result;
+    return result?.data;
   } catch (err: any) {
     console.log("fetch articles error  ", err);
     event.node.req.statusCode = 500;

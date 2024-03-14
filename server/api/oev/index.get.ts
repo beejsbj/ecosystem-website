@@ -1,13 +1,13 @@
-import { parseOevSnapshot } from "~/server/services/oev-parser/oev";
+import { OevTotal } from "~/server/models/OevTotal";
 
 export default defineEventHandler(async (event) => {
   try {
-    const parsed = await parseOevSnapshot();
+    const protocols = await OevTotal.find({});
 
     event.node.req.statusCode = 200;
-    return parsed;
+    return protocols;
   } catch (err: any) {
-    console.log("fetch articles error  ", err);
+    console.log("fetch oev data error  ", err);
     event.node.req.statusCode = 500;
     return {
       code: "ERROR",
