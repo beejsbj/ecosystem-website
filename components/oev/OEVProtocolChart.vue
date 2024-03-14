@@ -1,6 +1,7 @@
 <script setup>
 const oev = useOEVStore();
 const ui = useInterfaceStore();
+const ecosystem = useEcosystemStore();
 
 const selectedDataset = ref("aaveV2Eth-1");
 const selectedPeriod = ref("monthly");
@@ -100,26 +101,55 @@ const parsed = computed(() => {
     ],
   };
 });
+
+// const inputProtocols = oev.protocols.filter((protocol) => !protocol.trueHide);
+// inputProtocols.push({
+//   id: "all",
+//   name: "Total",
+// });
+// change it to value and label
+
+const inputProtocols = computed(() => {
+  const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
+
+  protocols.map((protocol) => {
+    console.log(protocol);
+    protocol.value = protocol.id;
+    protocol.label = protocol.name;
+    protocol.chainId = protocol.chainId;
+
+    return protocol;
+  });
+
+  protocols.push({
+    value: "all",
+    label: "Total",
+  });
+  return protocols;
+});
 </script>
 
 <template>
   <div class="chart-grid">
     <h2 class="attention-voice">Historic Liquidation Data</h2>
     <div class="actions">
-      <FormKit type="select" v-model="selectedDataset">
-        <template v-for="protocol in oev.protocols">
-          <option
-            :key="protocol.id"
-            :value="protocol.id"
-            v-if="!protocol.trueHide"
-            :selected="protocol.id === selectedDataset"
-          >
-            {{ protocol.name }}
-          </option>
+      <FormKit
+        type="dropdown"
+        v-model="selectedDataset"
+        :options="inputProtocols"
+      >
+        <template #option="{ option }">
+          <div class="protocol-option">
+            <ChainIcon
+              v-if="option.chainId"
+              :chain="ecosystem.chainNames(option.chainId)"
+            />
+            <DynamicIcon v-else icon="dapp" />
+            <span class="whisper-voice">
+              {{ option.label }}
+            </span>
+          </div>
         </template>
-
-        <!-- total all -->
-        <option :key="'all'" :value="'all'">Total</option>
       </FormKit>
       <div class="buttons-content">
         <template v-for="period in periods">
@@ -201,6 +231,19 @@ div.actions {
     span {
       text-transform: capitalize;
     }
+  }
+}
+
+.protocol-option {
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: 24px 1fr;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs);
+
+  picture {
+    //  margin-left: var(--space-2xs);
   }
 }
 </style>
