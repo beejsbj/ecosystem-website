@@ -1,7 +1,6 @@
 <script setup>
 const oev = useOEVStore();
 const ui = useInterfaceStore();
-const ecosystem = useEcosystemStore();
 
 const selectedDataset = ref("aaveV2Eth-1");
 const selectedPeriod = ref("monthly");
@@ -140,10 +139,7 @@ const inputProtocols = computed(() => {
       >
         <template #option="{ option }">
           <div class="protocol-option">
-            <ChainIcon
-              v-if="option.chainId"
-              :chain="ecosystem.chainNames(option.chainId)"
-            />
+            <ChainIcon v-if="option.chainId" :chainId="option.chainId" />
             <DynamicIcon v-else icon="dapp" />
             <span class="whisper-voice">
               {{ option.label }}
