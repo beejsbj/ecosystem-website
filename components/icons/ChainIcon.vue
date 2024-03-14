@@ -1,15 +1,33 @@
 <script setup>
+// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "@phase21/logos";
+
 import slug from "slug";
+
+const props = defineProps(["chain", "id", "fill", "stroke", "strokeWidth"]);
+
 slug.extend({ "/": "-" });
 
-const props = defineProps(["chain", "fill", "stroke", "strokeWidth"]);
+const ecosystem = useEcosystemStore();
 
 const isTestnet = ref(false);
+
 const chain = computed(() => {
-  let chain = slug(props.chain);
+  //   ecosystem.chainNames(props.id);
+  let chain = props.chain
+    ? slug(props.chain)
+    : props.id
+    ? slug(ecosystem.chainNames(props.id))
+    : "";
+
+  // if testnet, rename the chain
   if (chain.includes("testnet")) {
     isTestnet.value = true;
   }
+  chain = renameChain(chain);
+  return chain;
+});
+
+function renameChain(chain) {
   chain = chain.replace("-testnet", "");
   chain = chain.replace("-goerli", "");
   chain = chain.replace("-sepolia", "");
@@ -18,9 +36,10 @@ const chain = computed(() => {
   chain = chain === "sepolia" ? "ethereum" : chain;
   chain = chain === "goerli" ? "ethereum" : chain;
   chain = chain === "mainnet" ? "ethereum" : chain;
-
   return chain;
-});
+}
+
+console.log(ChainLogo(chain.value));
 </script>
 
 <template>
@@ -36,7 +55,7 @@ const chain = computed(() => {
 <style scoped lang="scss">
 picture {
   aspect-ratio: 1/1;
-  max-width: 20px;
+  max-width: 24px;
 
   img {
     width: 100%;
@@ -50,6 +69,6 @@ picture {
   position: relative;
   background: var(--gray-darker);
   border-radius: var(--corners);
-  padding: 2.5%;
+  padding: 0.5%;
 }
 </style>
