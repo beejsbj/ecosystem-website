@@ -76,10 +76,9 @@ export default defineFormKitConfig(() => {
   const config = useRuntimeConfig(); //#fixme
 
   // pro
-  if (config.public.nodeEnv === "development") {
-    const proPlugin = createProPlugin(config.public.formkitProKey, inputs);
-    plugins.push(proPlugin);
-  }
+
+  const proPlugin = createProPlugin(config.public.formkitProKey, inputs);
+  plugins.push(proPlugin);
 
   return {
     plugins,
