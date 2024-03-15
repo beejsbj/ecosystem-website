@@ -3,6 +3,7 @@ import formatNumber from "@/utils/formatNumber";
 
 // Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
+const ui = useInterfaceStore();
 
 // Compute the OEV rate
 const oevRate = computed(() => oev.getTotals().oevRate.toFixed(2));

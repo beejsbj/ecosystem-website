@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ecosystem = useEcosystemStore();
+const ui = useInterfaceStore();
 
 const listRef = ref(null);
 
@@ -65,11 +66,13 @@ onUnmounted(() => {
 <template>
   <div class="dapp-grid" ref="listRef" v-auto-animate>
     <DappCard
+      v-if="ui.loadingDone && ecosystem.list.length > 0"
       v-for="(dapp, index) in ecosystem.list"
       :dapp="dapp"
       :key="dapp?.name"
       :data-index="index"
     />
+    <SkeletonCard v-else v-for="index in 10" />
     <!-- <button
       class="text show-more"
       @click="handleLoadMore"

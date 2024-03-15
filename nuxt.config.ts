@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["@/assets/styles/site.css"],
+  css: ["@/assets/styles/site.css", "vue-skeletor/dist/vue-skeletor.css"],
 
   postcss: {
     plugins: {

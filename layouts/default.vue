@@ -13,9 +13,7 @@ useHead({
 
 <template>
   <div class="curves-wrapper">
-    <picture class="curves-decoration-3">
-      <CurvesDecoration3 />
-    </picture>
+    <CurvesDecoration3 />
   </div>
 
   <SiteHeader />
@@ -35,7 +33,7 @@ useHead({
   width: 100%;
   z-index: -10;
 
-  picture.curves-decoration-3 {
+  :deep(picture.curves-decoration-3) {
     position: absolute;
 
     --top: 100px;

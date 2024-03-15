@@ -1,8 +1,5 @@
 <script setup>
-import formatNumber from "@/utils/formatNumber";
-import { useStorage } from "@vueuse/core";
-
-////
+///
 ///
 ///
 definePageMeta({
@@ -26,35 +23,11 @@ const { data: overview } = await useFetch("/api/oev");
 // Set the fetched OEV data to the OEV store
 oev.setProtocols(overview.value);
 
-//
-//
-//
-// loading logic
-const loading = ref(false);
-const lastVisit = useStorage("lastVisit", new Date().toISOString());
+const loading = ref(true);
 
-// Get the current date
-const currentDate = new Date();
-
-// Get the last visit date
-const lastVisitDate = new Date(lastVisit.value);
-
-// Calculate the difference in days
-const diffInDays = Math.ceil(
-  (currentDate - lastVisitDate) / (1000 * 60 * 60 * 24)
-);
-
-if (diffInDays > 2) {
-  loading.value = true;
-
-  // Hide the loader after 5 seconds
-  setTimeout(() => {
-    loading.value = false;
-  }, 5000);
-
-  // Update the last visit date
-  lastVisit.value = currentDate.toISOString();
-}
+setTimeout(() => {
+  loading.value = false;
+}, 2000);
 </script>
 
 <template>
@@ -77,16 +50,12 @@ if (diffInDays > 2) {
   <!--  -->
   <LazyOEVInputForm />
 
-  <SectionColumn inner-class="wide">
-    <OEVInterfaceChart />
-  </SectionColumn>
+  <OEVInterfaceChart />
 
   <!-- displaying user's TVL and savings -->
   <LazyOEVDisplayText />
 
-  <SectionColumn inner-class="wide">
-    <OEVProtocolChart />
-  </SectionColumn>
+  <OEVProtocolChart />
 
   <!--  displaying a message about data verification -->
   <SectionColumn>
@@ -102,8 +71,6 @@ if (diffInDays > 2) {
       </p>
     </text-content>
   </SectionColumn>
-
-  <!-- <LazyOEVLoader v-if="loading" /> -->
 </template>
 
 <style scoped lang="scss">

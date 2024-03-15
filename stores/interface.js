@@ -46,6 +46,13 @@ export const useInterfaceStore = defineStore("interface", function () {
   //hero image
   const heroImage = ref(null);
 
+  // loadingDone
+  const loadingDone = ref(false);
+
+  setTimeout(() => {
+    loadingDone.value = true;
+  }, 2000);
+
   //
   //page transition
   const transitionState = reactive({
@@ -55,6 +62,9 @@ export const useInterfaceStore = defineStore("interface", function () {
     transitionState.transitionComplete = value;
   };
 
+  //
+
+  //
   const api3Colors = {
     green: "hsla(166, 64%, 69%, 1)",
     violet: "hsla(256, 34%, 54%, 1)",
@@ -110,6 +120,7 @@ export const useInterfaceStore = defineStore("interface", function () {
     showModal,
     toggleModal,
     api3Colors,
+    loadingDone,
 
     transitionState,
     toggleTransitionComplete,

@@ -1,5 +1,6 @@
 <script setup>
 const route = useRoute();
+// const ui = useInterfaceStore();
 
 useHead({
   htmlAttrs: {
@@ -13,9 +14,7 @@ useHead({
 
 <template>
   <div class="curves-wrapper">
-    <picture class="curves-decoration-3">
-      <CurvesDecoration3 />
-    </picture>
+    <LazyCurvesDecoration3 />
   </div>
 
   <SiteHeader />
@@ -23,6 +22,8 @@ useHead({
   <main>
     <slot />
   </main>
+
+  <!-- <LoadingSpinner v-if="ui.loadingDone" /> -->
 </template>
 
 <style scoped lang="scss">
@@ -33,7 +34,7 @@ useHead({
   width: 100%;
   z-index: -10;
 
-  picture.curves-decoration-3 {
+  :deep(picture.curves-decoration-3) {
     position: absolute;
     top: 100px;
     left: -200px;

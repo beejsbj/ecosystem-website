@@ -52,7 +52,8 @@ const chain = computed(() => {
 <style scoped lang="scss">
 picture {
   aspect-ratio: 1/1;
-  width: 20px;
+  width: 24px;
+  height: 24px;
 
   img {
     width: 100%;

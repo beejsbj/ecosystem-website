@@ -32,82 +32,84 @@ const maxHeight = computed(() => {
 </script>
 
 <template>
-  <div class="chart-grid">
-    <h2 class="attention-voice">Protocol Performance Comparison</h2>
-    <!-- OEV Protocol List component -->
-    <LazyOEVProtocolList />
-    <!-- OEV Interface Chart component -->
-    <div class="chart-container bars">
-      <div class="legend">
-        <button
-          @click="toggleLiquidated"
-          :class="{
-            dimmed: !showLiquidatedBar,
-          }"
-        >
-          <div class="liquidated"></div>
-          <p class="whisper-voice">Total Liquidated</p>
-        </button>
-        <button
-          @click="toggleSentToBuilder"
-          :class="{
-            dimmed: !showSentToBuilderBar,
-          }"
-        >
-          <div class="totalSentToBuilderUSD"></div>
-          <p class="whisper-voice">OEV Recaptured</p>
-        </button>
-      </div>
-      <ul class="bars" v-auto-animate>
-        <template v-for="(protocol, i) in oev.protocols">
-          <li v-if="!protocol.hide" :key="protocol.id">
-            <div
-              class="bar"
-              :class="{ userAdded: protocol.id === 'userAdded' }"
-              :style="`
-					  --bar-liquidated-height: ${(protocol.totalLiquidated / maxHeight) * 150};
-					  --bar-totalSentToBuilderUSD-height: ${
-              (protocol.totalSentToBuilderUSD / maxHeight) * 150
-            };
-				  `"
-            >
-              <span
-                class="liquidated"
-                :class="{ hide: !showLiquidatedBar }"
-                v-tooltip.top-end="`$${protocol.totalLiquidated}`"
+  <SectionColumn inner-class="wide">
+    <div class="chart-grid">
+      <h2 class="attention-voice">Protocol Performance Comparison</h2>
+      <!-- OEV Protocol List component -->
+      <LazyOEVProtocolList />
+      <!-- OEV Interface Chart component -->
+      <div class="chart-container bars">
+        <div class="legend">
+          <button
+            @click="toggleLiquidated"
+            :class="{
+              dimmed: !showLiquidatedBar,
+            }"
+          >
+            <div class="liquidated"></div>
+            <p class="whisper-voice">Total Liquidated</p>
+          </button>
+          <button
+            @click="toggleSentToBuilder"
+            :class="{
+              dimmed: !showSentToBuilderBar,
+            }"
+          >
+            <div class="totalSentToBuilderUSD"></div>
+            <p class="whisper-voice">OEV Recaptured</p>
+          </button>
+        </div>
+        <ul class="bars" v-auto-animate>
+          <template v-for="(protocol, i) in oev.protocols">
+            <li v-if="!protocol.hide" :key="protocol.id">
+              <div
+                class="bar"
+                :class="{ userAdded: protocol.id === 'userAdded' }"
+                :style="`
+							 --bar-liquidated-height: ${(protocol.totalLiquidated / maxHeight) * 150};
+							 --bar-totalSentToBuilderUSD-height: ${
+                 (protocol.totalSentToBuilderUSD / maxHeight) * 150
+               };
+						 `"
               >
-                <span class="number firm-voice">
-                  {{ formatNumber(protocol.totalLiquidated) }}
+                <span
+                  class="liquidated"
+                  :class="{ hide: !showLiquidatedBar }"
+                  v-tooltip.top-end="`$${protocol.totalLiquidated}`"
+                >
+                  <span class="number firm-voice">
+                    {{ formatNumber(protocol.totalLiquidated) }}
+                  </span>
                 </span>
-              </span>
-              <span
-                class="totalSentToBuilderUSD"
-                :class="{ hide: !showSentToBuilderBar }"
-                v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
-              >
-                <span class="number firm-voice">
-                  {{ formatNumber(protocol.totalSentToBuilderUSD) }}
+                <span
+                  class="totalSentToBuilderUSD"
+                  :class="{ hide: !showSentToBuilderBar }"
+                  v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
+                >
+                  <span class="number firm-voice">
+                    {{ formatNumber(protocol.totalSentToBuilderUSD) }}
+                  </span>
                 </span>
-              </span>
-            </div>
-            <picture class="protocol-logo" v-if="protocol.icon">
-              <NuxtImg
-                :src="protocol.icon"
-                :alt="protocol.name"
-                loading="lazy"
-              />
-            </picture>
+              </div>
+              <picture class="protocol-logo" v-if="protocol.icon">
+                <NuxtImg
+                  :src="protocol.icon"
+                  :alt="protocol.name"
+                  loading="lazy"
+                />
+              </picture>
 
-            <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-            <ChainIcon :chainId="protocol.chainId" />
-            <p class="solid-voice protocol-name">
-              {{ protocol.name }}
-            </p>
-          </li>
-        </template>
-      </ul>
+              <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
+              <ChainIcon :chainId="protocol.chainId" />
+              <p class="solid-voice protocol-name">
+                {{ protocol.name }}
+              </p>
+            </li>
+          </template>
+        </ul>
+      </div>
     </div>
-  </div>
+  </SectionColumn>
 </template>
 
 <style scoped lang="scss">

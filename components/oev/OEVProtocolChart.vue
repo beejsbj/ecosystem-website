@@ -112,7 +112,7 @@ const inputProtocols = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
 
   protocols.map((protocol) => {
-    console.log(protocol);
+    //  console.log(protocol);
     protocol.value = protocol.id;
     protocol.label = protocol.name;
     protocol.chainId = protocol.chainId;
@@ -129,53 +129,55 @@ const inputProtocols = computed(() => {
 </script>
 
 <template>
-  <div class="chart-grid">
-    <h2 class="attention-voice">Historic Liquidation Data</h2>
-    <div class="actions">
-      <FormKit
-        type="dropdown"
-        v-model="selectedDataset"
-        :options="inputProtocols"
-      >
-        <template #option="{ option }">
-          <div class="protocol-option">
-            <ChainIcon v-if="option.chainId" :chainId="option.chainId" />
-            <DynamicIcon v-else icon="dapp" />
-            <span class="whisper-voice">
-              {{ option.label }}
-            </span>
-          </div>
-        </template>
-      </FormKit>
-      <div class="buttons-content">
-        <template v-for="period in periods">
+  <SectionColumn inner-class="wide">
+    <div class="chart-grid">
+      <h2 class="attention-voice">Historic Liquidation Data</h2>
+      <div class="actions">
+        <FormKit
+          type="dropdown"
+          v-model="selectedDataset"
+          :options="inputProtocols"
+        >
+          <template #option="{ option }">
+            <div class="protocol-option">
+              <ChainIcon v-if="option.chainId" :chainId="option.chainId" />
+              <DynamicIcon v-else icon="dapp" />
+              <span class="whisper-voice">
+                {{ option.label }}
+              </span>
+            </div>
+          </template>
+        </FormKit>
+        <div class="buttons-content">
+          <template v-for="period in periods">
+            <button
+              class="button outline"
+              @click="selectedPeriod = period"
+              :class="{
+                hover: selectedPeriod === period,
+              }"
+            >
+              <span>{{ ui.isMobile ? period.slice(0, 1) : period }}</span>
+            </button>
+          </template>
           <button
-            class="button outline"
-            @click="selectedPeriod = period"
+            class="button outline log"
+            @click="isLogarithmic = !isLogarithmic"
             :class="{
-              hover: selectedPeriod === period,
+              hover: isLogarithmic,
             }"
           >
-            <span>{{ ui.isMobile ? period.slice(0, 1) : period }}</span>
+            <span>
+              {{ ui.isMobile ? "log" : "logarithmic" }}
+            </span>
           </button>
-        </template>
-        <button
-          class="button outline log"
-          @click="isLogarithmic = !isLogarithmic"
-          :class="{
-            hover: isLogarithmic,
-          }"
-        >
-          <span>
-            {{ ui.isMobile ? "log" : "logarithmic" }}
-          </span>
-        </button>
+        </div>
+      </div>
+      <div class="chart-container lines">
+        <LineChart :data="parsed" :options="options" :metadata="metadata" />
       </div>
     </div>
-    <div class="chart-container lines">
-      <LineChart :data="parsed" :options="options" :metadata="metadata" />
-    </div>
-  </div>
+  </SectionColumn>
 </template>
 
 <style scoped lang="scss">
@@ -205,7 +207,6 @@ div.actions {
   align-content: center;
 
   @media (min-width: 768px) {
-    //  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   .buttons-content {
@@ -239,7 +240,6 @@ div.actions {
   padding: var(--space-2xs);
 
   picture {
-    //  margin-left: var(--space-2xs);
   }
 }
 </style>
