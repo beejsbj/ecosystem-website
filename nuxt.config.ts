@@ -184,9 +184,8 @@ export default defineNuxtConfig({
     brevoMailApi: process.env.NUXT_BREVO_MAIL_API,
     emailReceiver: process.env.NUXT_EMAIL_RECIEVER,
     emailSender: process.env.NUXT_EMAIL_SENDER,
-    //  FORMKIT_PRO_KEY: process.env.NUXT_FORMKIT_PRO_KEY,
     public: {
-      FORMKIT_PRO_KEY: process.env.NUXT_FORMKIT_PRO_KEY,
+      formkitProKey: process.env.NUXT_FORMKIT_PRO_KEY,
       walletConnectProjectId: process.env.NUXT_PUBLIC_WALLET_CONNECT_PROJECT_ID, //this might not work #fixme
       nodeEnv: process.env.NUXT_NODE_ENV,
     },
