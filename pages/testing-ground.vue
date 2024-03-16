@@ -1,15 +1,17 @@
 <script setup>
 import { CHAINS } from "@api3/chains";
-
-const ecosystem = useEcosystemStore();
+// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "api3-logos";
 </script>
 
 <template>
   <PageTitle heading="test ground" />
   <SectionColumn>
     <ul>
+      <FeedIcon feed="bnb/bsc" />
+
       <li v-for="chain in CHAINS" :key="chain">
-        <ChainIcon :id="chain.id" />
+        <!-- <ChainIcon :id="chain.id" /> -->
+
         <!-- {{ chain }} -->
       </li>
     </ul>

@@ -1,5 +1,5 @@
 <script setup>
-// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "@phase21/logos";
+// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "api3-logos";
 
 import slug from "slug";
 
@@ -39,7 +39,7 @@ function renameChain(chain) {
   return chain;
 }
 
-console.log(ChainLogo(chain.value));
+// console.log(ChainLogo(chain.value));
 </script>
 
 <template>

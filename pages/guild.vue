@@ -149,56 +149,56 @@ onMounted(() => {
 </script>
 
 <template>
-    <section>
-      <inner-column v-auto-animate>
-        <aside>
-          <h1 class="loud-voice">
-            {{ content.unselectedHeading }}
-          </h1>
-          <div class="actions">
-            <button
-              class="text green hover-underline"
-              v-for="(buttonText, index) in content.buttons"
-              @click="buttonHandle($event, buttonText, index)"
-            >
-              {{ buttonText }}
-            </button>
-          </div>
-        </aside>
-        <div class="panel" v-if="selected">
-          <h2 class="loud-voice" v-show="selected">
-            Join the
-            <span class="gradient-text-color">{{ selected }}</span> by minting
-            this NFT
-          </h2>
-
-          <p v-if="content.paragraph">
-            {{ content.paragraph }}
-          </p>
-
-          <Transition name="fade" mode="out-in" v-if="selected && !isMinted">
-            <button class="button" :disabled="loading" @click="handleAction">
-              {{ buttonText }}
-            </button>
-          </Transition>
-
-          <Transition name="fade" mode="out-in" v-if="selected && isMinted">
-            <button class="button" :disabled="loading">
-              <a
-                href="https://opensea.io/collection/api3-guild"
-                target="_blank"
-                class="group"
-              >
-                <span>
-                  {{ isMintChecking ? "Fetching NFT..." : "Visit OpenSea" }}
-                </span>
-                <ExternalLink v-if="!isMintChecking" />
-              </a>
-            </button>
-          </Transition>
+  <section>
+    <inner-column v-auto-animate>
+      <aside>
+        <h1 class="loud-voice">
+          {{ content.unselectedHeading }}
+        </h1>
+        <div class="actions">
+          <button
+            class="text green hover-underline"
+            v-for="(buttonText, index) in content.buttons"
+            @click="buttonHandle($event, buttonText, index)"
+          >
+            {{ buttonText }}
+          </button>
         </div>
-      </inner-column>
-    </section>
+      </aside>
+      <div class="panel" v-if="selected">
+        <h2 class="loud-voice" v-show="selected">
+          Join the
+          <span class="gradient-text-color">{{ selected }}</span> by minting
+          this NFT
+        </h2>
+
+        <p v-if="content.paragraph">
+          {{ content.paragraph }}
+        </p>
+
+        <Transition name="fade" mode="out-in" v-if="selected && !isMinted">
+          <button class="button" :disabled="loading" @click="handleAction">
+            {{ buttonText }}
+          </button>
+        </Transition>
+
+        <Transition name="fade" mode="out-in" v-if="selected && isMinted">
+          <button class="button" :disabled="loading">
+            <a
+              href="https://opensea.io/collection/api3-guild"
+              target="_blank"
+              class="group"
+              :class="{ 'external-link': !isMintChecking }"
+            >
+              <span>
+                {{ isMintChecking ? "Fetching NFT..." : "Visit OpenSea" }}
+              </span>
+            </a>
+          </button>
+        </Transition>
+      </div>
+    </inner-column>
+  </section>
 </template>
 
 <style scoped lang="scss">
