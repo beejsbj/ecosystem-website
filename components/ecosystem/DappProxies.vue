@@ -36,7 +36,7 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
 
         <!-- feed name -->
         <div class="feedname">
-          {{ proxy?.feedName }}
+          <FeedIcon :feed="proxy.feedName" v-tooltip="proxy?.feedName" />
         </div>
 
         <!-- type -->

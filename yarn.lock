@@ -2656,6 +2656,13 @@
     "@parcel/watcher-win32-ia32" "2.4.0"
     "@parcel/watcher-win32-x64" "2.4.0"
 
+"@phase21/logos@^2.10.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@phase21/logos/-/logos-2.10.0.tgz#386e79f4cc048b57e19a877f8e97e9b16f793316"
+  integrity sha512-8p6Pu4TeCsvXJ7zQEk88Fctp5bW4mC2KS6t5/PnE7yoeDilO/oISwH7D2xvyHxesemG3olY0OX9Lu9zoNI7KVQ==
+  dependencies:
+    camelcase "^6.3.0"
+
 "@pinia/nuxt@^0.4.9":
   version "0.4.11"
   resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.4.11.tgz#1b3f728ae112d45deff5971376e05b8a8d64f720"
@@ -4760,6 +4767,13 @@ apg-js@^4.1.1:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/apg-js/-/apg-js-4.3.0.tgz#2c55d3f1aa6b90be5d3c6539f346cf2c726702c3"
   integrity sha512-8U8MULS+JocCnm11bfrVS4zxtAcE3uOiCAI21SnjDrV9LNhMSGwTGGeko3QfyK1JLWwT7KebFqJMB2puzfdFMQ==
+
+api3-logos@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/api3-logos/-/api3-logos-1.0.0.tgz#1df847250a724248ea851ebf4b86814bf341c33f"
+  integrity sha512-qwA6UbJ4L9YDPl7VWxt/J1JO8TsUIxo5IKAnRD0Z//rAeJMOC5v67BdkbugS1e2BgoeW8U1V2lNiVPP4Cf9uOg==
+  dependencies:
+    camelcase "^6.3.0"
 
 append-field@^1.0.0:
   version "1.0.0"

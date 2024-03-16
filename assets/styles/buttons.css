@@ -44,7 +44,7 @@ a {
 
 .button.outline {
   background: none;
-  border: var(--border-light);
+  border: var(--border);
 }
 
 .button.outline:is(:hover, :focus-visible, .hover) {
@@ -118,6 +118,17 @@ img.caret.left {
 }
 img.caret.right {
   transform: rotate(-90deg);
+}
+
+/* exeternal link */
+
+:is(button, a, span).external-link {
+  --size: 16px;
+  background: url("@/assets/images/interface/diagonal-arrow.svg");
+  background-repeat: no-repeat;
+  padding-right: calc(var(--size) + var(--space-3xs));
+  background-size: var(--size);
+  background-position: right;
 }
 
 /* diabled buttons */

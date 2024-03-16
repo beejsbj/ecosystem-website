@@ -177,10 +177,10 @@ const miscLinks = [
               v-for="(link, linkIndex) in footerMenu.links"
               :key="linkIndex"
               :to="link.path"
-              class="calm-voice text footer-link hover-underline"
+              class="text footer-link hover-underline"
+              :class="link.external ? 'external-link' : ''"
             >
               <span>{{ link.label }}</span>
-              <ExternalLink v-if="link.external" />
             </NuxtLink>
           </nav>
         </section>
@@ -194,13 +194,12 @@ const miscLinks = [
             v-for="(link, index) in miscLinks"
             :key="index"
             :to="link.path"
-            class="calm-voice text footer-link"
+            class="text footer-link"
+            :class="link.external ? 'external-link' : ''"
           >
             <span>
               {{ link.label }}
             </span>
-
-            <ExternalLink v-if="link.external" />
           </NuxtLink>
         </nav>
         <nav class="social-icons">
@@ -208,7 +207,7 @@ const miscLinks = [
             v-for="social in socials"
             :key="social.name"
             :to="social.link"
-            class="calm-voice"
+            class="icon"
           >
             <DynamicIcon :icon="social?.icon" />
           </NuxtLink>
@@ -229,10 +228,10 @@ footer {
     padding-right: var(--space-l);
   }
 }
-.calm-voice {
-  font-size: var(--step-0);
-  padding: var(--space-2xs) 0;
+a.text {
+  padding-left: 0;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 nav {

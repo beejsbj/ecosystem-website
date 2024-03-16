@@ -1,31 +1,33 @@
 <script setup>
-import slug from "slug";
-slug.extend({ "/": "-" });
+// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "api3-logos";
 
-const props = defineProps([
-  "chain",
-  "fill",
-  "stroke",
-  "strokeWidth",
-  "chainId",
-]);
+import slug from "slug";
+
+const props = defineProps(["chain", "id", "fill", "stroke", "strokeWidth"]);
+
+slug.extend({ "/": "-" });
 
 const ecosystem = useEcosystemStore();
 
 const isTestnet = ref(false);
+
 const chain = computed(() => {
-  let chain = "";
+  //   ecosystem.chainNames(props.id);
+  let chain = props.chain
+    ? slug(props.chain)
+    : props.id
+    ? slug(ecosystem.chainNames(props.id))
+    : "";
 
-  if (props.chain) {
-    chain = slug(props.chain);
-  }
-  if (props.chainId) {
-    chain = slug(ecosystem.chainNames(props.chainId));
-  }
-
+  // if testnet, rename the chain
   if (chain.includes("testnet")) {
     isTestnet.value = true;
   }
+  chain = renameChain(chain);
+  return chain;
+});
+
+function renameChain(chain) {
   chain = chain.replace("-testnet", "");
   chain = chain.replace("-goerli", "");
   chain = chain.replace("-sepolia", "");
@@ -34,9 +36,10 @@ const chain = computed(() => {
   chain = chain === "sepolia" ? "ethereum" : chain;
   chain = chain === "goerli" ? "ethereum" : chain;
   chain = chain === "mainnet" ? "ethereum" : chain;
-
   return chain;
-});
+}
+
+// console.log(ChainLogo(chain.value));
 </script>
 
 <template>
@@ -52,8 +55,7 @@ const chain = computed(() => {
 <style scoped lang="scss">
 picture {
   aspect-ratio: 1/1;
-  width: 24px;
-  height: 24px;
+  max-width: 24px;
 
   img {
     width: 100%;
@@ -67,6 +69,6 @@ picture {
   position: relative;
   background: var(--gray-darker);
   border-radius: var(--corners);
-  padding: 2.5%;
+  padding: 0.5%;
 }
 </style>

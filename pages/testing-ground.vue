@@ -1,16 +1,21 @@
 <script setup>
 import { CHAINS } from "@api3/chains";
-
-definePageMeta({
-  alias: ["/testing"],
-});
-
-const ecosystem = useEcosystemStore();
+// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "api3-logos";
 </script>
 
 <template>
   <PageTitle heading="test ground" />
-  <SectionColumn> </SectionColumn>
+  <SectionColumn>
+    <ul>
+      <FeedIcon feed="bnb/bsc" />
+
+      <li v-for="chain in CHAINS" :key="chain">
+        <!-- <ChainIcon :id="chain.id" /> -->
+
+        <!-- {{ chain }} -->
+      </li>
+    </ul>
+  </SectionColumn>
 </template>
 
 <style scoped>
