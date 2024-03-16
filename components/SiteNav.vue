@@ -4,26 +4,33 @@
 const config = useRuntimeConfig();
 
 const isDev = config.public.nodeEnv === "development";
+
+const links = [
+  //   {
+  //     name: "Style Guide",
+  //     to: "/style-guide",
+  //     dev: true,
+  //   },
+  //   {
+  //     name: "Testing Ground",
+  //     to: "/testing",
+  //     dev: true,
+  //   },
+
+  { name: "Ecosystem", to: "/ecosystem" },
+  { name: "OEV", to: "/oev", class: "new" },
+  { name: "Articles", to: "/articles" },
+  { name: "Guild", to: "/guild" },
+];
 </script>
 
 <template>
   <nav>
-    <template v-if="isDev">
-      <NuxtLink
-        class="text hover-underline dev indigo whisper-voice"
-        to="/style-guide"
-        >Style Gudie</NuxtLink
-      >
-      <NuxtLink
-        class="text hover-underline dev indigo whisper-voice"
-        to="/testing"
-        >Testing Ground</NuxtLink
-      >
+    <template v-for="link in links" :key="link.name">
+      <NuxtLink :to="link.to" class="text hover-underline" :class="link.class">
+        {{ link.name }}
+      </NuxtLink>
     </template>
-    <NuxtLink class="text hover-underline" to="/ecosystem">Ecosystem</NuxtLink>
-    <NuxtLink class="text hover-underline new" to="/oev"> OEV </NuxtLink>
-    <NuxtLink class="text hover-underline" to="/articles">Articles</NuxtLink>
-    <NuxtLink class="text" to="/guild">Guild</NuxtLink>
 
     <div class="actions">
       <NuxtLink to="https://discord.com/invite/qnRrcfnm5W" class="icon">

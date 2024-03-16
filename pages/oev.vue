@@ -50,12 +50,12 @@ setTimeout(() => {
   <!--  -->
   <LazyOEVInputForm />
 
-  <OEVInterfaceChart />
+  <LazyOEVInterfaceChart />
 
   <!-- displaying user's TVL and savings -->
   <LazyOEVDisplayText />
 
-  <OEVProtocolChart />
+  <LazyOEVProtocolChart />
 
   <!--  displaying a message about data verification -->
   <SectionColumn>
