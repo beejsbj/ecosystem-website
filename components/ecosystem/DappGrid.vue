@@ -1,8 +1,6 @@
 <script setup>
 import { useEcosystemStore } from "~/stores/ecosystem";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+const { gsap, ScrollTrigger } = useGsap();
 
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();

@@ -1,7 +1,5 @@
 <script setup>
-import { gsap } from "gsap";
-
-function animateCurvesWaves() {
+function animateCurvesWaves(gsap) {
   //   animation of the curves making waves
   const tl = gsap.timeline({
     repeat: -1,
@@ -28,8 +26,8 @@ function animateCurvesWaves() {
   );
 }
 
-onMounted(() => {
-  //   animateCurvesWaves();
+useGsap((gsap) => {
+  //   animateCurvesWaves(gsap);
 });
 </script>
 

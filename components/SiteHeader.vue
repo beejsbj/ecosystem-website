@@ -1,6 +1,6 @@
 <script setup>
 import { useInterfaceStore } from "~/stores/interface";
-import { gsap } from "gsap";
+
 
 const ui = useInterfaceStore();
 const router = useRouter();
@@ -8,21 +8,8 @@ const router = useRouter();
 const showMenu = ref(false);
 const showPlaceholder = ref(true);
 
-onMounted(() => {
-  //   change show placeholder to false when client side rendering
-  //   showPlaceholder.value = false;
-  //   const pageLoad = gsap.timeline();
-  //   if (ui.firstLoad) {
-  //     pageLoad.from(".site-header", {
-  //       delay: "0.5",
-  //       duration: 0.5,
-  //       y: -50,
-  //       opacity: 0,
-  //       ease: "power4.out",
-  //     });
-  //     ui.firstLoad = false;
-  //   }
-});
+
+
 nextTick(() => {
   showPlaceholder.value = false;
 });
