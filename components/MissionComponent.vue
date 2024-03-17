@@ -27,13 +27,21 @@ const content = ref([
     <GraphicText
       :heading="card.title"
       :paragraph="card.description"
-      :image="card.image"
       :class="index % 2 !== 0 ? 'reverse' : ''"
-    />
+      :image="card.image"
+    >
+      <DatafeedFirstParty v-if="index == 0" />
+      <DaoGoverned v-if="index == 1" />
+      <DevExperience v-if="index == 2" />
+    </GraphicText>
   </SectionColumn>
 </template>
 
-<style>
+<style scoped>
+:deep(inner-column) {
+  padding: var(--space-s) var(--space-s);
+}
+
 .mission-section {
   opacity: 1;
 }
