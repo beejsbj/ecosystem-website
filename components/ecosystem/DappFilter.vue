@@ -77,7 +77,7 @@ const handleFilter = (event) => {
       <search-bar>
         <FormKit
           type="search"
-          placeholder="Search"
+          placeholder="Filter"
           v-model="ecosystem.filterQuery.searchKey"
           prefix-icon="search"
         />
@@ -124,7 +124,7 @@ const handleFilter = (event) => {
               v-auto-animate
             >
               <template #label="context">
-                <div class="flex">
+                <div class="chain-option">
                   <ChainIcon :chain="chain.label" />
                   <span class="whisper-voice">
                     {{ context.label }}
@@ -178,7 +178,7 @@ const handleFilter = (event) => {
               v-auto-animate
             >
               <template #label="context">
-                <div class="flex">
+                <div class="chain-option">
                   <DynamicIcon :icon="productType.name" />
                   <span class="whisper-voice">
                     {{ context.label }}
@@ -349,7 +349,7 @@ dapp-filter {
     padding: 0 var(--space-m);
 
     :deep(picture) {
-      max-width: 24px;
+      width: 20px;
     }
   }
 }
@@ -358,10 +358,12 @@ button.icon.caret {
   max-width: var(--space-l);
 }
 
-.flex {
-  display: flex;
+.chain-option {
   padding-left: var(--space-3xs);
+  display: grid;
   align-items: center;
+
+  grid-template-columns: 20px 1fr;
   gap: var(--space-3xs);
 }
 </style>

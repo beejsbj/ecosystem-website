@@ -8,6 +8,7 @@ const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
 
 const listRef = ref(null);
+const props = defineProps(["layout"]);
 
 // useInfiniteScroll(
 //   listRef,
@@ -64,13 +65,14 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="dapp-grid" ref="listRef" v-auto-animate>
+  <ul class="dapp-grid" :class="layout" ref="listRef" v-auto-animate>
     <DappCard
       v-if="ui.loadingDone && ecosystem.list.length > 0"
       v-for="(dapp, index) in ecosystem.list"
       :dapp="dapp"
       :key="dapp?.name"
       :data-index="index"
+      :class="layout"
     />
     <SkeletonCard v-else v-for="index in 10" />
     <!-- <button
@@ -80,7 +82,7 @@ onUnmounted(() => {
     >
       how More
     </button> -->
-  </div>
+  </ul>
 </template>
 
 <style scoped>

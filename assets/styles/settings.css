@@ -53,7 +53,7 @@ html {
   /* Gradients */
   --gradient-direction: 180deg;
 
-  --gradient-dark: linear-gradient(130deg, var(--gray-darker), var(--paper));
+  --gradient-dark: linear-gradient(45deg, var(--paper), var(--gray-darker));
 
   --gradient-light: linear-gradient(130deg, var(--white), var(--gray-light));
 

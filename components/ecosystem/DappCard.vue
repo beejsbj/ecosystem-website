@@ -31,7 +31,7 @@ function filterBy(event) {
 </script>
 
 <template>
-  <dapp-card class="list-move">
+  <li class="dapp-card list-move">
     <header>
       <ul class="chain-list">
         <li
@@ -90,11 +90,11 @@ function filterBy(event) {
         class="card-link"
       />
     </footer>
-  </dapp-card>
+  </li>
 </template>
 
 <style lang="scss" scoped>
-dapp-card {
+.dapp-card {
   display: grid;
   grid-template-rows: 0.1fr 1fr 0.1fr;
   gap: var(--space-s);
@@ -200,5 +200,21 @@ dapp-card {
 }
 :is(.category, .productType, .chain):hover {
   filter: brightness(1.2);
+}
+
+.text-card {
+  min-height: unset;
+  display: block;
+  padding: var(--space-s) var(--space-l);
+
+  header,
+  .whisper-voice,
+  footer ul {
+    display: none;
+  }
+
+  text-content {
+    display: flex;
+  }
 }
 </style>

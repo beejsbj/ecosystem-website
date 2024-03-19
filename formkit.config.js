@@ -73,7 +73,7 @@ const plugins = [
 
 //config
 export default defineFormKitConfig(() => {
-  const config = useRuntimeConfig(); //#fixme
+  const config = useRuntimeConfig();
 
   // pro
 
