@@ -30,12 +30,13 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.7.tgz#26ea493a831b4f3a85475e7157be02fb4eab51fb"
   integrity sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==
 
-"@api3/chains@^3.5.1":
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@api3/chains/-/chains-3.5.1.tgz#daf14bffb4fcae1916c197ca66b7942dcf86d13b"
-  integrity sha512-AI1/FbLsqJlSiGIEKMMRLCKaV6r6B7uXHBfzVJPY95rIdiHbmwUEGmlD4ikFTsV3nKDO0YDGm7NDnlmPW0aVJQ==
+"@api3/chains@^4.13.1":
+  version "4.13.1"
+  resolved "https://registry.yarnpkg.com/@api3/chains/-/chains-4.13.1.tgz#a45cdcf476638cca1992779026c74680e1605f1a"
+  integrity sha512-JvvZBsZT0WcfrbXJAWd9ha7JPqOcXiP9uJfa7vqRD65WNbm5H8R91QR6at7JQyIi9HzSwTeiOaKVKGjrfHaUsg==
   dependencies:
-    zod "^3.22.2"
+    viem "^2.7.18"
+    zod "^3.22.4"
 
 "@aws-crypto/crc32@3.0.0":
   version "3.0.0"
@@ -2656,6 +2657,13 @@
     "@parcel/watcher-win32-ia32" "2.4.0"
     "@parcel/watcher-win32-x64" "2.4.0"
 
+"@phase21/logos@^2.10.2":
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/@phase21/logos/-/logos-2.10.2.tgz#66391847deeabe1eccb3e087a64f8d0496578ba7"
+  integrity sha512-qfTUfwtIcK/7yv3692i+nVp6Zu4Tdi5YaOcEefIT2GJAs3gNJ66PGiIC+OLk3sa7FJYZymOTe6Vty3U8HFZ6UA==
+  dependencies:
+    camelcase "^6.3.0"
+
 "@pinia/nuxt@^0.4.9":
   version "0.4.11"
   resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.4.11.tgz#1b3f728ae112d45deff5971376e05b8a8d64f720"
@@ -4640,6 +4648,11 @@ abitype@0.9.8:
   version "0.9.8"
   resolved "https://registry.yarnpkg.com/abitype/-/abitype-0.9.8.tgz#1f120b6b717459deafd213dfbf3a3dd1bf10ae8c"
   integrity sha512-puLifILdm+8sjyss4S+fsUN09obiT1g2YW6CtcQF+QDzxR0euzgEB29MZujC6zMk2a6SVmtttq1fc6+YFA7WYQ==
+
+abitype@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/abitype/-/abitype-1.0.0.tgz#237176dace81d90d018bebf3a45cb42f2a2d9e97"
+  integrity sha512-NMeMah//6bJ56H5XRj8QCV4AwuW6hB6zqz2LnhhLdcWVQOsXki6/Pn3APeqxCma62nXIcmZWdu1DlHWS74umVQ==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -12394,6 +12407,20 @@ viem@^1.0.0, viem@^1.4.2, viem@^1.6.0:
     isows "1.0.3"
     ws "8.13.0"
 
+viem@^2.7.18:
+  version "2.8.13"
+  resolved "https://registry.yarnpkg.com/viem/-/viem-2.8.13.tgz#9ca35d41524fce9f80f48a4e1b2328b2745af773"
+  integrity sha512-jEbRUjsiBwmoDr3fnKL1Bh1GhK5ERhmZcPLeARtEaQoBTPB6bcO2siKhNPVOF8qrYRnGHGQrZHncBWMQhTjGYg==
+  dependencies:
+    "@adraffy/ens-normalize" "1.10.0"
+    "@noble/curves" "1.2.0"
+    "@noble/hashes" "1.3.2"
+    "@scure/bip32" "1.3.2"
+    "@scure/bip39" "1.2.1"
+    abitype "1.0.0"
+    isows "1.0.3"
+    ws "8.13.0"
+
 vite-node@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/vite-node/-/vite-node-1.2.2.tgz#f6d329b06f9032130ae6eac1dc773f3663903c25"
@@ -12900,7 +12927,7 @@ zip-stream@^5.0.1:
     compress-commons "^5.0.1"
     readable-stream "^3.6.0"
 
-zod@^3.21.4, zod@^3.22.2:
+zod@^3.21.4, zod@^3.22.4:
   version "3.22.4"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
   integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
