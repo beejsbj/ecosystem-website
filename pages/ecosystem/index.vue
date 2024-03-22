@@ -20,29 +20,31 @@ useSeoMeta({
 </script>
 
 <template>
-  <PageTitle
-    heading="API3 Ecosystem Partners"
-    class="loud-voice ecosystem-header"
-  >
-    <NuxtLink to="/add-dapp" class="button solid-voice">
-      Join the Ecosystem
-    </NuxtLink>
-  </PageTitle>
+  <div>
+    <PageTitle
+      heading="API3 Ecosystem Partners"
+      class="loud-voice ecosystem-header"
+    >
+      <NuxtLink to="/add-dapp" class="button solid-voice">
+        Join the Ecosystem
+      </NuxtLink>
+    </PageTitle>
 
-  <SectionColumn innerClass="ecosystem-main-grid">
-    <!-- <ClientOnly> -->
-    <LazyDappFilter v-if="!ui.isMobile" />
-    <div v-else>
-      <FilterButtons />
+    <SectionColumn innerClass="ecosystem-main-grid">
+      <!-- <ClientOnly> -->
+      <LazyDappFilter v-if="!ui.isMobile" />
+      <div v-else>
+        <FilterButtons />
 
-      <ModalSlot>
-        <LazyDappFilter />
-      </ModalSlot>
-    </div>
-    <!-- </ClientOnly> -->
+        <ModalSlot>
+          <LazyDappFilter />
+        </ModalSlot>
+      </div>
+      <!-- </ClientOnly> -->
 
-    <LazyDappGrid />
-  </SectionColumn>
+      <LazyDappGrid />
+    </SectionColumn>
+  </div>
 </template>
 
 <style lang="scss">
