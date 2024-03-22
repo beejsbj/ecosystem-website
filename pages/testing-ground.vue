@@ -10,7 +10,7 @@ const ecosystem = useEcosystemStore();
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <PageTitle heading="test ground" />
     <SectionColumn>
       <ul>
@@ -23,7 +23,7 @@ const ecosystem = useEcosystemStore();
 
       <NuxtLink to="/style-guide">style guide</NuxtLink>
     </SectionColumn>
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style scoped>

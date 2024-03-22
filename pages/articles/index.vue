@@ -18,7 +18,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <PageTitle heading="Articles" />
     <SectionColumn>
       <h2 class="attention-voice">Featured</h2>
@@ -39,7 +39,7 @@ useSeoMeta({
       <h2 class="attention-voice">All</h2>
       <LazyArticleGrid layout="3" isRecentSort="true" />
     </SectionColumn>
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style lang="scss" scoped>

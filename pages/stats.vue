@@ -14,7 +14,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <PageTitle heading="Stats" />
     <SectionColumn>
       <div class="actions">
@@ -188,7 +188,7 @@ useSeoMeta({
         </ul>
       </SectionColumn>
     </Transition>
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style scoped>

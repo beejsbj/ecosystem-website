@@ -25,7 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <HeroLanding />
 
     <MissionComponent />
@@ -39,7 +39,7 @@ onMounted(() => {
     <CallToAction />
 
     <HomeArticles />
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style lang="scss">

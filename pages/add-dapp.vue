@@ -14,7 +14,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <PageTitle heading="Join the Ecosystem" innerClass="add-dapp-title">
       <p>
         Join the API3 ecosystem. Easily list your dApp or service and join our
@@ -24,5 +24,5 @@ useSeoMeta({
     <SectionColumn>
       <LazyAddDappForm />
     </SectionColumn>
-  </div>
+  </ContentsWrapper>
 </template>

@@ -31,7 +31,7 @@ setTimeout(() => {
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <!-- Page Title component with heading and notice voice -->
     <PageTitle heading="OEV Watchtower">
       <p class="notice-voice">
@@ -72,7 +72,7 @@ setTimeout(() => {
         </p>
       </text-content>
     </SectionColumn>
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">

@@ -28,7 +28,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <main>
+  <ContentsWrapper>
     <SectionColumn>
       <article class="infographic">
         <header>
@@ -91,7 +91,7 @@ useSeoMeta({
         </div>
       </article>
     </SectionColumn>
-  </main>
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">

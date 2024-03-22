@@ -20,7 +20,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <PageTitle
       heading="API3 Ecosystem Partners"
       class="loud-voice ecosystem-header"
@@ -44,7 +44,7 @@ useSeoMeta({
 
       <LazyDappGrid />
     </SectionColumn>
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style lang="scss">

@@ -10,7 +10,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <PageTitle heading="Style Guide" voice="booming-voice" />
     <SectionColumn>
       <p>
@@ -69,7 +69,7 @@ useSeoMeta({
     <SectionColumn id="text-guide">
       <TextVoices />
     </SectionColumn>
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">

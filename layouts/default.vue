@@ -12,17 +12,19 @@ useHead({
 </script>
 
 <template>
-  <div class="curves-wrapper">
-    <CurvesDecoration3 />
-  </div>
+  <ContentsWrapper>
+    <div class="curves-wrapper">
+      <CurvesDecoration3 />
+    </div>
 
-  <SiteHeader />
+    <SiteHeader />
 
-  <main>
-    <slot />
-  </main>
+    <main>
+      <slot />
+    </main>
 
-  <SiteFooter />
+    <SiteFooter />
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">

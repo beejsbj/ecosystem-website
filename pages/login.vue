@@ -7,7 +7,7 @@ const route = useRoute();
 </script>
 
 <template>
-  <div>
+  <ContentsWrapper>
     <SectionColumn>
       <h1 class="loud-voice gradient-text-color-light">
         Please Connect your wallet
@@ -16,7 +16,7 @@ const route = useRoute();
         <ConnectButton />
       </div>
     </SectionColumn>
-  </div>
+  </ContentsWrapper>
 </template>
 
 <style lang="scss" scoped>
