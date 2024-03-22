@@ -99,7 +99,7 @@ function buttonHandle(event) {
 <style scoped lang="scss">
 form {
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-m);
   justify-content: center;
 
   --fk-font-size-input: var(--step-0);
@@ -108,15 +108,15 @@ form {
     max-width: unset !important;
   }
 
-  //   @media (min-width: 768px) {
-  //     grid-template-columns: 1fr 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
 
-  //     h2,
-  //     button {
-  //       grid-column: 1 / -1;
-  //       justify-self: center;
-  //     }
-  //   }
+    h2,
+    button {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+  }
 }
 
 h2 {
