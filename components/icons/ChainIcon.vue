@@ -67,6 +67,6 @@ picture {
   position: relative;
   background: var(--gray-darker);
   border-radius: var(--corners);
-  padding: 2.5%;
+  padding: 0.5%;
 }
 </style>
