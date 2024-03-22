@@ -264,9 +264,7 @@ a.router-link-exact-active:not(.site-logo, .button)::after {
 }
 
 .v-popper--theme-tooltip .v-popper__arrow-outer {
-
   border-color: var(--ink) !important;
-
 }
 
 .v-popper--theme-tooltip .v-popper__arrow-inner {
@@ -302,4 +300,22 @@ a.router-link-exact-active:not(.site-logo, .button)::after {
   filter: brightness(1.2);
   width: calc(var(--line-width) * 4);
   height: calc(var(--line-width) * 4);
+}
+
+.chain-option {
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: 24px 1fr;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs) 0;
+}
+
+.formkit-icon-option {
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: 24px 1fr;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs);
 }
