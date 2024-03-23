@@ -1,6 +1,5 @@
 <script setup>
 import { useEcosystemStore } from "@/stores/ecosystem";
-import slug from "slug";
 
 const props = defineProps(["dapp"]);
 const ecosystem = useEcosystemStore();
@@ -85,10 +84,7 @@ function filterBy(event) {
           <!-- <DynamicIcon :icon="category" /> -->
         </li>
       </ul>
-      <NuxtLink
-        :to="`/ecosystem/${slug(dapp?.name ?? '#')}`"
-        class="card-link"
-      />
+      <NuxtLink :to="`/ecosystem/${dapp.slug}`" class="card-link" />
     </footer>
   </li>
 </template>
@@ -200,21 +196,5 @@ function filterBy(event) {
 }
 :is(.category, .productType, .chain):hover {
   filter: brightness(1.2);
-}
-
-.text-card {
-  min-height: unset;
-  display: block;
-  padding: var(--space-s) var(--space-l);
-
-  header,
-  .whisper-voice,
-  footer ul {
-    display: none;
-  }
-
-  text-content {
-    display: flex;
-  }
 }
 </style>
