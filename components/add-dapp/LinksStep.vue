@@ -148,9 +148,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
   display: grid;
 
   gap: var(--space-l);
-  @media (min-width: 768px) {
-    //  grid-template-columns: repeat(2, 1fr);
-  }
 
   form-field {
     display: flex;
@@ -172,8 +169,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
   }
 
   :deep(.formkit-wrapper) {
-    //  grid-template-columns: 0.2fr 1fr;
-
     @media (min-width: 768px) {
       grid-template-columns: 0.2fr 1fr;
     }

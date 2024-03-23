@@ -1,6 +1,5 @@
 <script setup>
-import { CHAINS } from "@api3/chains";
-// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "@phase21/logos";,
+const hello = "hello";
 
 definePageMeta({
   alias: ["/testing"],
@@ -13,14 +12,6 @@ const ecosystem = useEcosystemStore();
   <ContentsWrapper>
     <PageTitle heading="test ground" />
     <SectionColumn>
-      <ul>
-        <li v-for="chain in CHAINS" :key="chain.id">
-          {{ chain.name }}
-
-          <ChainIcon :chainId="chain.id" />
-        </li>
-      </ul>
-
       <NuxtLink to="/style-guide">style guide</NuxtLink>
     </SectionColumn>
   </ContentsWrapper>

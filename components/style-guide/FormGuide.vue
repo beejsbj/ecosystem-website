@@ -247,7 +247,7 @@ ul {
     display: grid;
     gap: 1rem;
 
-    @container (min-width: 500px) {
+    @media (min-width: 500px) {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-template-columns: 1fr 1fr;
     }
