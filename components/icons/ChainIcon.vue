@@ -99,6 +99,7 @@ picture:has(.not-found) {
     content: attr(data-first-letter);
     display: grid;
     place-items: center;
+    line-height: 0;
 
     position: absolute;
     inset: 0;
