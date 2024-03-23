@@ -1,6 +1,13 @@
 <script setup>
 const route = useRoute();
-// const ui = useInterfaceStore();
+
+const loadingDone = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    loadingDone.value = true;
+  }, 2000);
+});
 
 useHead({
   htmlAttrs: {
@@ -13,17 +20,19 @@ useHead({
 </script>
 
 <template>
-  <div class="curves-wrapper">
-    <LazyCurvesDecoration3 />
-  </div>
+  <ContentsWrapper>
+    <div class="curves-wrapper">
+      <LazyCurvesDecoration3 />
+    </div>
 
-  <SiteHeader />
+    <SiteHeader />
 
-  <main>
-    <slot />
-  </main>
+    <main>
+      <slot />
+    </main>
 
-  <!-- <LoadingSpinner v-if="ui.loadingDone" /> -->
+    <!-- <LoadingSpinner v-if="!loadingDone" /> -->
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">

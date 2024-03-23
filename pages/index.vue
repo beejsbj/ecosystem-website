@@ -25,36 +25,24 @@ onMounted(() => {
 </script>
 
 <template>
-  <HeroLanding />
+  <ContentsWrapper>
+    <HeroLanding />
 
-  <MissionComponent />
+    <MissionComponent />
 
-  <section class="curves-wrapper">
-    <picture class="curves-decoration-3">
-      <CurvesDecoration3 />
-    </picture>
-  </section>
+    <section class="curves-wrapper">
+      <picture class="curves-decoration-3">
+        <CurvesDecoration3 />
+      </picture>
+    </section>
 
-  <CallToAction />
+    <CallToAction />
 
-  <SectionColumn class="home-article-grid">
-    <h2 class="loud-voice">Articles</h2>
-    <LazyArticleGrid layout="0" cardCount="4" isFeaturedSort="true" />
-    <NuxtLink class="text blue" to="/articles">See More</NuxtLink>
-  </SectionColumn>
+    <HomeArticles />
+  </ContentsWrapper>
 </template>
 
 <style lang="scss">
-.home-article-grid {
-  .loud-voice {
-    text-align: center;
-  }
-  a.text {
-    text-align: center;
-    margin-top: var(--space-m);
-  }
-}
-
 body:has(main.index) {
   @media (min-width: 1024px) {
     //  overflow: hidden;

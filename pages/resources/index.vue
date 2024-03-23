@@ -8,7 +8,7 @@ const children = ref(
 </script>
 
 <template>
-  <main>
+  <ContentsWrapper>
     <PageTitle heading="Resources" />
 
     <SectionColumn>
@@ -18,7 +18,7 @@ const children = ref(
         </li>
       </ul>
     </SectionColumn>
-  </main>
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss"></style>

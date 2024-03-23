@@ -31,46 +31,48 @@ setTimeout(() => {
 </script>
 
 <template>
-  <!-- Page Title component with heading and notice voice -->
-  <PageTitle heading="OEV Watchtower">
-    <p class="notice-voice">
-      OEV Watchtower helps you understand how much you can capture with the OEV
-      Network.
-    </p>
-
-    <!-- OEV Summary Cards component -->
-    <OEVSummaryCards class="summary-cards" />
-
-    <p class="whisper-voice disclamer">
-      <!-- data starts frpm 2021 -->
-      *All data is based on records from 2021 onwards.
-    </p>
-  </PageTitle>
-
-  <!--  -->
-  <LazyOEVInputForm />
-
-  <LazyOEVInterfaceChart />
-
-  <!-- displaying user's TVL and savings -->
-  <LazyOEVDisplayText />
-
-  <LazyOEVProtocolChart />
-
-  <!--  displaying a message about data verification -->
-  <SectionColumn>
-    <text-content>
-      <p class="firm-voice">
-        You can verify this data by
-        <NuxtLink
-          class="text green"
-          to="https://github.com/AamirAlam/aave-extract-mev-funds"
-        >
-          heading to our GitHub.
-        </NuxtLink>
+  <ContentsWrapper>
+    <!-- Page Title component with heading and notice voice -->
+    <PageTitle heading="OEV Watchtower">
+      <p class="notice-voice">
+        OEV Watchtower helps you understand how much you can capture with the
+        OEV Network.
       </p>
-    </text-content>
-  </SectionColumn>
+
+      <!-- OEV Summary Cards component -->
+      <OEVSummaryCards class="summary-cards" />
+
+      <p class="whisper-voice disclamer">
+        <!-- data starts frpm 2021 -->
+        *All data is based on records from 2021 onwards.
+      </p>
+    </PageTitle>
+
+    <!--  -->
+    <LazyOEVInputForm />
+
+    <LazyOEVInterfaceChart />
+
+    <!-- displaying user's TVL and savings -->
+    <LazyOEVDisplayText />
+
+    <LazyOEVProtocolChart />
+
+    <!--  displaying a message about data verification -->
+    <SectionColumn>
+      <text-content>
+        <p class="firm-voice">
+          You can verify this data by
+          <NuxtLink
+            class="text green"
+            to="https://github.com/AamirAlam/aave-extract-mev-funds"
+          >
+            heading to our GitHub.
+          </NuxtLink>
+        </p>
+      </text-content>
+    </SectionColumn>
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">

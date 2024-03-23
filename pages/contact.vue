@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <ContentsWrapper>
     <PageTitle heading="Contact" />
-  </main>
+  </ContentsWrapper>
 </template>

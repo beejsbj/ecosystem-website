@@ -11,30 +11,28 @@ const userSaving = computed(() =>
 
 <template>
   <SectionColumn class="user-tvl-text">
-    <text-content>
+    <div>
       <p class="loud-voice">
-        <span
-          >With your TVL of
-          <span class="gradient-text-color"
-            >${{ formatNumber(oev.userTvl) }}</span
-          >
-          you would capture
-          <span class="gradient-text-color"
-            >${{ formatNumber(userSaving) }}</span
-          >
-          per year through the OEV Network**
+        With your TVL of
+        <span class="gradient-text-color">
+          ${{ formatNumber(oev.userTvl) }}
         </span>
+        you would capture
+        <span class="gradient-text-color">
+          ${{ formatNumber(userSaving) }}
+        </span>
+        per year through the OEV Network**
       </p>
       <p class="whisper-voice">
         **This is an estimate based on the current Liquidation rate of 5% of
         TVL.
       </p>
-    </text-content>
+    </div>
   </SectionColumn>
 </template>
 
 <style lang="scss" scoped>
-text-content {
+div {
   grid-column: 1 / -1;
   display: grid;
   place-items: center;
@@ -49,39 +47,12 @@ text-content {
     }
   }
 }
-.user-tvl-text {
-  @supports (animation-timeline: view()) {
-    text-content p span {
-      background-repeat: no-repeat;
-      background-size: 0 100%;
-      animation: scroll-reveal linear forwards;
-      animation-timeline: view() !important;
 
-      animation-range-start: contain 10px !important;
-      animation-range-end: contain 230px !important;
-
-      &.gradient-text-color:nth-child(1) {
-        animation-range-start: contain 170px !important;
-        animation-range-end: contain 180px !important;
-      }
-      &.gradient-text-color:nth-child(2) {
-        animation-range-start: contain 230px !important;
-        animation-range-end: contain 240px !important;
-      }
-
-      &:not(.gradient-text-color) {
-        color: hsla(0, 0%, 100%, 0.1) !important;
-        background-image: var(--gradient-light);
-        background-clip: text;
-      }
-    }
-  }
+p {
+  line-height: 1.3;
 }
 
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
-    scale: 1.1;
-  }
+.gradient-text-color {
+  padding: 0;
 }
 </style>

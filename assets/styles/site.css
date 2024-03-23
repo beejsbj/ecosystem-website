@@ -64,10 +64,6 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.display-contents {
-  display: contents;
-}
-
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;
@@ -76,6 +72,16 @@ main {
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.4s;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  filter: blur(1rem) grayscale(1);
 }
 
 .fade-enter-active,
