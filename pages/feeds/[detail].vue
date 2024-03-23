@@ -1,7 +1,25 @@
 <script setup>
 import { CHAINS } from "@api3/chains";
+import { useStorage } from "@vueuse/core";
 
-const chain = ref("Avalanche testnet");
+const route = useRoute();
+const ecosystem = useEcosystemStore();
+
+const feedSlug = route.params.detail;
+const feedName = feedSlug.replace("-", "/");
+const proxy = route.query;
+// fetch dapps related to the feed #todo
+
+//
+// console.clear();
+
+// const chainId = proxy.chainId;
+
+const selectedChain = ref(proxy.chainId);
+
+const chain = computed(() => {
+  return ecosystem.chainNames(selectedChain);
+});
 
 const chains = CHAINS.map((chain) => {
   return {
@@ -9,16 +27,24 @@ const chains = CHAINS.map((chain) => {
     value: chain.id,
   };
 });
+
+function handleChainChange() {
+  console.log(selectedChain);
+}
 </script>
 
 <template>
   <article>
+    <pre>
+		{{ proxy }}
+	</pre
+    >
     <SectionColumn class="header">
       <div class="title-mast">
         <div class="feed-icon-heading">
           <FeedIcon feed="metis/bsc" />
 
-          <h1 class="loud-voice">ABZ/XYZ</h1>
+          <h1 class="loud-voice">{{ feedName }}</h1>
         </div>
 
         <NuxtLink
@@ -32,7 +58,7 @@ const chains = CHAINS.map((chain) => {
       <div class="feed-info">
         <FormKit
           type="dropdown"
-          v-model="chain"
+          v-model="selectedChain"
           @change="handleChainChange"
           :options="chains"
           v-auto-animate
@@ -48,18 +74,22 @@ const chains = CHAINS.map((chain) => {
             </div>
           </template>
         </FormKit>
-        <p class="whisper-voice">Type: <span>dApi</span></p>
         <div class="feed-id">
           <p class="whisper-voice">Data Feed ID:</p>
-          <WalletAddress
-            walletAddress="0x1561c3bac6b63f29abb7dd4ff47a047672d7d403f06bc53ba7d140679422ba66"
-          />
+          <WalletAddress :walletAddress="proxy.datafeedId ?? proxy.dapiId" />
         </div>
       </div>
     </SectionColumn>
 
     <SectionColumn class="main">
-      <DappGrid layout="text-card" />
+      <ul class="feed-dapp-cards">
+        <FeedDappCard
+          v-for="dapp in ecosystem.list"
+          :dapp="dapp"
+          :proxy="proxy"
+          :class="{ 'text-card': dapp.slug != proxy.dappSlug }"
+        />
+      </ul>
 
       <div class="chain-value-card">
         <text-content>
@@ -77,16 +107,6 @@ const chains = CHAINS.map((chain) => {
           </div>
         </div>
       </div>
-
-      <!-- <div class="source-card">
-        <h2 class="calm-voice">Source</h2>
-        <div>
-          <picture>
-            <NuxtImg loading="lazy" src="/images/chains/bsc.svg" alt="bsc" />
-          </picture>
-          <p class="solid-voice">Chainlink</p>
-        </div>
-      </div> -->
     </SectionColumn>
   </article>
 </template>
@@ -132,7 +152,7 @@ const chains = CHAINS.map((chain) => {
     justify-content: start;
 
     padding-left: var(--space-s);
-    grid-template-columns: 200px 100px;
+    grid-template-columns: 200px 200px;
 
     .formkit-outer {
       margin: 0 !important;
@@ -147,7 +167,7 @@ const chains = CHAINS.map((chain) => {
     }
 
     @media (min-width: 500px) {
-      grid-template-columns: 200px 100px 200px;
+      grid-template-columns: 200px 1fr;
     }
 
     .feed-id {
@@ -221,5 +241,13 @@ const chains = CHAINS.map((chain) => {
   grid-template-columns: 24px 1fr;
   gap: var(--space-3xs);
   padding: var(--space-2xs) 0;
+}
+
+ul.feed-dapp-cards {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-l);
+  position: relative;
 }
 </style>
