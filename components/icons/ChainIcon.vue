@@ -37,6 +37,16 @@ const chain = computed(() => {
 
   return chain;
 });
+
+const isFound = ref(true);
+
+const imgSrc = computed(() => {
+  return `/images/chains/${chain.value}.svg`;
+});
+
+const onError = () => {
+  isFound.value = false;
+};
 </script>
 
 <template>
@@ -44,8 +54,15 @@ const chain = computed(() => {
     class="chain-icon"
     :class="{ testnet: isTestnet }"
     v-tooltip="props.chain"
+    :data-first-letter="chain[0].toUpperCase()"
   >
-    <NuxtImg loading="lazy" :src="`/images/chains/${chain}.svg`" :alt="chain" />
+    <NuxtImg
+      loading="lazy"
+      :src="imgSrc"
+      :alt="chain"
+      @error="onError"
+      :class="{ 'not-found': !isFound }"
+    />
   </picture>
 </template>
 
@@ -68,5 +85,27 @@ picture {
   background: var(--gray-darker);
   border-radius: var(--corners);
   padding: 0.5%;
+}
+
+picture:has(.not-found) {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: attr(data-first-letter);
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    inset: 0;
+    background: var(--gray-darker);
+    border-radius: var(--corners);
+    padding: 0.5%;
+    z-index: 2;
+  }
 }
 </style>
