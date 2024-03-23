@@ -109,13 +109,16 @@ const buttons = ref([
 
 <style scoped lang="scss">
 ul {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-items: center;
 
-  --gap: var(--space-2xl);
+  --gap: var(--space-l);
 
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
 li:has(.button) {

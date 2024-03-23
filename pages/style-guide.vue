@@ -47,7 +47,7 @@ useSeoMeta({
     </SectionColumn>
 
     <SectionColumn id="misc-guide">
-      <!-- <MiscGuide /> -->
+      <MiscGuide />
     </SectionColumn>
 
     <SectionColumn id="button-guide">
