@@ -173,7 +173,6 @@ aside {
 
     picture.chain-icon {
       aspect-ratio: 1/1;
-      width: 16px;
     }
   }
 }
