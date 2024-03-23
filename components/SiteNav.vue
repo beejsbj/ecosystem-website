@@ -18,7 +18,7 @@ const links = [
   //   },
 
   { name: "Ecosystem", to: "/ecosystem" },
-  { name: "OEV", to: "/oev", class: "new" },
+  //   { name: "OEV", to: "/oev", class: "new" },
   { name: "Articles", to: "/articles" },
   { name: "Guild", to: "/guild" },
 ];
