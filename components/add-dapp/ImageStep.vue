@@ -51,11 +51,10 @@ const imageRatio = async function (node) {
 
   // Check if all aspect ratios are equal to 16/6 with a tolerance of a single decimal.
   return imageRatios.every((ratio) => {
-    const requiredRatio = 16 / 6;
-    const tolerance = 0.1;
-    const ratioDiff = Math.abs(ratio - requiredRatio);
+    const lowerBound = 16 / 6.5; // approximately 2.2857
+    const upperBound = 16 / 5.5; // 3.2
 
-    return ratioDiff <= tolerance;
+    return ratio >= lowerBound && ratio <= upperBound;
   });
 };
 </script>
@@ -108,12 +107,14 @@ const imageRatio = async function (node) {
     </form-field>
     <form-field class="file-upload">
       <FormKit
+        v-auto-animate
         id="coverForm"
         type="file"
         label="Upload a branded cover*"
         name="cover"
+        no-files-icon="fileImage"
+        fileName="cover"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
-        v-auto-animate
         validation="required|fileSize|imageRatio"
         validation-label="Cover image"
         :validation-rules="{ fileSize, imageRatio }"
@@ -126,17 +127,19 @@ const imageRatio = async function (node) {
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
 
-      <p class="whisper-voice">Minimum width: 1024px. Ratio: 16:6</p>
+      <p class="whisper-voice">Minimum width: 1024px.</p>
+      <p class="whisper-voice">Ratio: 16:6</p>
       <p class="whisper-voice">Accepted file size: 6MB</p>
     </form-field>
     <form-field class="file-upload">
       <FormKit
         v-auto-animate
-        id="screenShotForm"
         type="file"
+        id="screenShotForm"
         multiple="true"
         label="Upload your screenshots"
         name="screenshots"
+        no-files-icon="fileImage"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
         validation="fileSize"
         validation-label="Screenshots"
