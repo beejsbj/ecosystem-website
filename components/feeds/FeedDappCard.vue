@@ -1,6 +1,4 @@
 <script setup>
-import slug from "slug";
-
 const props = defineProps(["dapp", "proxy"]);
 </script>
 
@@ -20,7 +18,7 @@ const props = defineProps(["dapp", "proxy"]);
 
       <!-- <div class="productType" :data-productType="dapp?.productType">
         <DynamicIcon :icon="dapp?.productType" @click="filterBy" />
-      </div> -->
+      </div> #todo-->
     </header>
 
     <text-content>
