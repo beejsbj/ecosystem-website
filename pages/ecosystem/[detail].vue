@@ -62,22 +62,6 @@ onMounted(() => {
     }
   );
 });
-
-const formattedProxies = computed(() => {
-  if (!dapp.value?.proxies) {
-    return [];
-  }
-
-  const formattedProxyItems = [];
-  Object.keys(dapp.value?.proxies).forEach((chain) => {
-    let chainItems = dapp.value?.proxies?.[chain]?.map((el) => {
-      return { ...el, chainId: chain };
-    });
-    formattedProxyItems.push(...chainItems);
-  });
-
-  return formattedProxyItems;
-});
 </script>
 
 <template>
@@ -138,10 +122,7 @@ const formattedProxies = computed(() => {
           </div>
         </section>
 
-        <DappProxies
-          :proxies="formattedProxies"
-          v-if="dapp?.productType != 'qrng'"
-        />
+        <DappProxies v-if="dapp?.productType != 'qrng'" :dapp="dapp" />
 
         <DappScreenshots :dapp="dapp" />
       </article>
