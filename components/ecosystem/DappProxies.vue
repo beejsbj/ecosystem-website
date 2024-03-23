@@ -1,9 +1,54 @@
 <script setup>
+import { useStorage } from "@vueuse/core";
 import { useEcosystemStore } from "@/stores/ecosystem";
 
 const ecosystem = useEcosystemStore();
 
-const props = defineProps(["proxies", "isForm", "dappForm"]);
+const props = defineProps(["dapp", "isForm", "dappForm"]);
+
+const formattedProxies = computed(() => {
+  if (!props.dapp?.proxies) {
+    return [];
+  }
+
+  const formattedProxyItems = [];
+  Object.keys(props.dapp?.proxies).forEach((chain) => {
+    let chainItems = props.dapp?.proxies?.[chain]?.map((el) => {
+      return { ...el, chainId: chain };
+    });
+    formattedProxyItems.push(...chainItems);
+  });
+
+  //   console.log(formattedProxyItems);
+
+  return formattedProxyItems;
+});
+
+function getFeedQuery(proxy) {
+  console.log(proxy);
+
+  //slug of detail page
+  let feedSlug = proxy.feedName;
+  feedSlug = feedSlug.replace("/", "-");
+  let fullQuery = `${feedSlug}`;
+  fullQuery += `?dappSlug=${props.dapp.slug}`;
+  fullQuery += `&chainId=${proxy.chainId}`;
+  fullQuery += `&proxyId=${proxy.proxyAddress}`;
+
+  //   type
+  fullQuery += `&type=${proxy.proxyType}`;
+  fullQuery +=
+    proxy.proxyType == "datafeedId" ? `&datafeedId=${proxy.datafeedId}` : "";
+  fullQuery += proxy.proxyType == "dapi" ? `&dapiId=${proxy.dapiNameHash}` : "";
+
+  //  oev
+  fullQuery += proxy.oev.enabled ? `&oev=${proxy.oev.enabled}` : "";
+  fullQuery += proxy.oev.enabled
+    ? `&oevBeneficiary=${proxy.oev.beneficiary}`
+    : "";
+
+  return fullQuery;
+}
 </script>
 
 <template>
@@ -17,12 +62,12 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
         <div class="whisper-voice type">Type</div>
         <div class="whisper-voice proxy-address">Proxy Address</div>
         <div class="whisper-voice address">dAPI ID</div>
-        <div class="whisper-voice is-oev">is OEV?</div>
+        <div class="whisper-voice feed-link"></div>
         <div class="" v-if="isForm"></div>
       </li>
 
       <!-- Dynamically rendered table based on data -->
-      <li class="table-row" v-for="(proxy, index) in proxies">
+      <li class="table-row" v-for="(proxy, index) in formattedProxies">
         <!-- chain -->
         <div class="chain">
           <ChainIcon
@@ -60,15 +105,16 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
           />
         </div>
 
-        <!-- is oev -->
-        <div class="is-oev">
-          <picture v-if="isForm ? proxy.isOEV : proxy?.oev?.enabled">
-            <NuxtImg
-              loading="lazy"
-              src="/images/icons/oev.svg"
-              alt="OEV icon"
-            />
-          </picture>
+        <!-- link -->
+        <div class="feed-link">
+          <NuxtLink
+            class="text external-link whisper-voice"
+            :to="`/feeds/${getFeedQuery(proxy)}`"
+            :target="`${proxy.feedName}-${props.dapp.slug}`"
+            v-if="!isForm"
+          >
+            Go to Feed
+          </NuxtLink>
         </div>
 
         <!-- button column rendered when this component is loaded in the form-->
@@ -102,10 +148,13 @@ section.proxy-table {
     position: relative;
     scroll-behavior: smooth;
 
+    background: var(--paper);
+    border-radius: var(--corners);
+
     .table-head {
       position: sticky;
       top: 0;
-      background-color: var(--paper);
+      background: var(--gray-darkest);
       z-index: 1;
       border-bottom: none;
 
@@ -132,20 +181,16 @@ section.proxy-table {
     }
 
     .chain picture.chain-icon {
-      max-width: 20px;
+      flex-grow: 1;
     }
 
     & + .table-row {
       // border-top: var(--border-light);
     }
 
-    .is-oev {
+    .feed-link {
       display: flex;
       align-items: center;
-
-      picture {
-        max-width: 20px;
-      }
     }
 
     picture.cross {
