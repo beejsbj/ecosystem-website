@@ -42,10 +42,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <PageTitle
-    heading="API3 Ecosystem Partners"
-    class="loud-voice ecosystem-header"
-  >
+  <PageTitle heading="API3 Partners" class="loud-voice ecosystem-header">
     <NuxtLink to="/add-dapp" class="button solid-voice">
       <span class=""> Join the Ecosystem </span>
     </NuxtLink>
