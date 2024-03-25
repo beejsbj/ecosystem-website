@@ -1,26 +1,33 @@
 <script setup>
-import slug from "slug";
-slug.extend({ "/": "-" });
+import * as Logos from "@phase21/logos";
 
-const props = defineProps(["chain", "fill", "stroke", "strokeWidth"]);
+// const { $chainLogo } = useNuxtApp();
+
+const props = defineProps(["id"]);
+
+const ecosystem = useEcosystemStore();
 
 const isTestnet = ref(false);
+const isFound = ref(true);
+
 const chain = computed(() => {
-  let chain = slug(props.chain);
+  const chain = ecosystem.chainNames(props.id);
+
   if (chain.includes("testnet")) {
     isTestnet.value = true;
   }
-  chain = chain.replace("-testnet", "");
-  chain = chain.replace("-goerli", "");
-  chain = chain.replace("-sepolia", "");
-  chain = chain.replace("-chain", "");
-
-  chain = chain === "sepolia" ? "ethereum" : chain;
-  chain = chain === "goerli" ? "ethereum" : chain;
-  chain = chain === "mainnet" ? "ethereum" : chain;
 
   return chain;
 });
+
+const imgSrc = computed(() => {
+  const src = Logos.ChainLogo(props.id);
+  return src;
+});
+
+const onError = () => {
+  isFound.value = false;
+};
 </script>
 
 <template>
@@ -28,15 +35,23 @@ const chain = computed(() => {
     class="chain-icon"
     :class="{ testnet: isTestnet }"
     v-tooltip="props.chain"
+    :data-first-letter="chain[0].toUpperCase()"
   >
-    <NuxtImg loading="lazy" :src="`/images/chains/${chain}.svg`" :alt="chain" />
+    <img
+      loading="lazy"
+      :src="imgSrc"
+      :alt="chain"
+      @error="onError"
+      :class="{ 'not-found': !isFound }"
+    />
   </picture>
 </template>
 
 <style scoped lang="scss">
 picture {
   aspect-ratio: 1/1;
-  max-width: 20px;
+  width: 24px;
+  height: 24px;
 
   img {
     width: 100%;
@@ -50,6 +65,29 @@ picture {
   position: relative;
   background: var(--gray-darker);
   border-radius: var(--corners);
-  padding: 2.5%;
+  padding: 0.5%;
+}
+
+picture:has(.not-found) {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: attr(data-first-letter);
+    display: grid;
+    place-items: center;
+    line-height: 0;
+
+    position: absolute;
+    inset: 0;
+    background: var(--gray-darker);
+    border-radius: var(--corners);
+    padding: 0.5%;
+    z-index: 2;
+  }
 }
 </style>

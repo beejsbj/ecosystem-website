@@ -60,12 +60,8 @@ onMounted(() => {
         <ul>
           <li v-for="chain in dapp?.chains" :key="chain.id">
             <!-- {{ chain }} -->
-            <ChainIcon
-              :chain="ecosystem.chainNames(chain)"
-              fill="var(--green)"
-              stroke="var(--paper)"
-              strokeWidth="var(--line-width)"
-            />
+            <!-- #todo clean up -->
+            <ChainIcon :id="chain" />
           </li>
         </ul>
       </div>

@@ -9,7 +9,7 @@ const ecosystem = useEcosystemStore();
   <SectionColumn>
     <ul>
       <li v-for="chain in CHAINS">
-        <ChainIcon :chain="chain.name" />
+        <!-- <ChainIcon :chain="chain.name" />/ -->
         <p class="micro-voice">
           {{ chain.name }}
         </p>

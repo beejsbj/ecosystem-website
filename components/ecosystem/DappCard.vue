@@ -40,11 +40,9 @@ function filterBy(event) {
           :data-chain="chain"
           @click="filterBy"
         >
-          <ChainIcon
-            :chain="ecosystem.chainNames(chain)"
-            fill="none"
-            stroke="var(--green)"
-          />
+          <!-- #todo clean up -->
+
+          <ChainIcon :id="chain" />
         </li>
       </ul>
 
