@@ -66,7 +66,9 @@ function handleChainChange() {
         </template>
       </FormKit>
       <p class="whisper-voice">
-        Type: <span>{{ proxy.type }}</span>
+        Type:
+
+        <span>{{ proxy.type }}</span>
       </p>
       <div class="feed-id">
         <p class="whisper-voice">Data Feed ID:</p>
@@ -110,14 +112,13 @@ function handleChainChange() {
   }
 
   .feed-info {
-    display: grid;
+    display: flex;
 
     gap: var(--space-s);
     align-items: center;
     justify-content: start;
 
     padding-left: var(--space-s);
-    grid-template-columns: 200px 100px;
 
     .formkit-outer {
       margin: 0 !important;
@@ -131,13 +132,14 @@ function handleChainChange() {
       box-shadow: unset !important;
     }
 
-    @media (min-width: 500px) {
-      grid-template-columns: 200px 100px 200px;
-    }
+    .feed-id,
+    & > p {
+      background-color: var(--gray-darkest);
+      padding: var(--space-3xs);
+      border-radius: calc(var(--corners) / 2);
 
-    .feed-id {
-      background-color: var(--paper);
       display: flex;
+      align-items: center;
     }
   }
 }
