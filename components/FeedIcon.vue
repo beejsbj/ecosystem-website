@@ -1,23 +1,44 @@
 <script setup>
-import * as Logos from "@phase21/logos";
+// import * as Logos from "@phase21/logos";
+
+const { $chainLogo, $symbolLogo } = useNuxtApp();
 
 const props = defineProps(["feed"]);
-
+// DAI/USD
 const symbols = props.feed.split("/");
 symbols.map((symbol) => symbol.toLowerCase());
 
+const isFound = ref(true);
 
-
- imgSrc function(feed) {
-  const src = Logos.SymbolLogo(feed);
-  return src;
+const onError = () => {
+  isFound.value = false;
 };
+
+function imgSrc(symbol) {
+  const src = $symbolLogo(symbol);
+  console.log(src);
+  return src;
+}
+
+// const imgSrc = computed(() => {
+//   //   const src = "btc";
+//   return src;
+// });
 </script>
 
 <template>
   <div class="feed-icon">
-    <picture v-for="symbol in symbols">
-      <img loading="lazy" :src="imgSrc(symbol)" :alt="symbol" />
+    <picture
+      v-for="symbol in symbols"
+      :data-first-letter="symbol[0].toUpperCase()"
+    >
+      <img
+        loading="lazy"
+        :src="imgSrc(symbol)"
+        :alt="symbol"
+        @error="onError"
+        :class="{ 'not-found': !isFound }"
+      />
     </picture>
   </div>
 </template>
@@ -36,8 +57,6 @@ picture {
   max-width: var(--width);
   isolation: isolate;
   overflow: unset;
-  border: 1px solid var(--ink);
-  padding: var(--space-3xs);
   position: relative;
 
   img {
@@ -56,6 +75,29 @@ picture {
     position: relative;
     z-index: 2;
     right: calc(var(--width) * 0.1);
+  }
+}
+
+picture:has(.not-found) {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: attr(data-first-letter);
+    display: grid;
+    place-items: center;
+    line-height: 0;
+
+    position: absolute;
+    inset: 0;
+    background: var(--gray-darker);
+    border-radius: var(--corners);
+    padding: 0.5%;
+    z-index: 2;
   }
 }
 </style>
