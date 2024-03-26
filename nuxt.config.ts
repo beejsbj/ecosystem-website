@@ -60,6 +60,14 @@ export default defineNuxtConfig({
     transpile: ["gsap", "@phase21/logos"],
   },
 
+  vite: {
+    optimizeDeps: {
+      // This fixes a 500 error when running in dev mode after adding the build.transpile option above.
+      // e.g: The requested module '/_nuxt/node_modules/mypackage/dist/index.js?v=85eb31b5' does not provide an export named 'default'
+      include: ["@phase21/logos > @phase21/logos"],
+    },
+  },
+
   vue: {
     compilerOptions: {
       //every tag with '-' is a custom element

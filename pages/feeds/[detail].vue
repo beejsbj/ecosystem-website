@@ -5,16 +5,25 @@ const ecosystem = useEcosystemStore();
 const feedSlug = route.params.detail;
 const feedName = feedSlug.replace("-", "/");
 const proxy = route.query;
+
+// /api/projects?page=1&&ticker=WBTC/USD
+
+const { data: feedProjects } = await useFetch(
+  `/api/projects?&ticker=${feedName}`
+);
 </script>
 
 <template>
   <article>
-    <FeedDetailHeader />
+    <SectionColumn class="header">
+      <FeedDetailHeader />
+      <FeedHeaderInfo :proxy="proxy" />
+    </SectionColumn>
 
     <SectionColumn class="main">
       <ul class="feed-dapp-cards">
         <FeedDappCard
-          v-for="dapp in ecosystem.list"
+          v-for="dapp in feedProjects.projects"
           :dapp="dapp"
           :proxy="proxy"
           :class="{ 'text-card': dapp.slug != proxy.dappSlug }"

@@ -10,9 +10,9 @@ const { data: dapp } = await useFetch(`/api/projects/project/${dappSlug}`);
 
 useSeoMeta({
   //title
-  title: () => dapp.value.name,
-  ogTitle: () => dapp.value.name,
-  twitterTitle: () => dapp.value.name,
+  title: () => dapp?.value.name,
+  ogTitle: () => dapp?.value.name,
+  twitterTitle: () => dapp?.value.name,
 
   //website
   ogType: () => "article",

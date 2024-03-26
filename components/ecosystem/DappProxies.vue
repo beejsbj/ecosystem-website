@@ -25,8 +25,6 @@ const formattedProxies = computed(() => {
 });
 
 function getFeedQuery(proxy) {
-  console.log(proxy);
-
   //slug of detail page
   let feedSlug = proxy.feedName;
   feedSlug = feedSlug.replace("/", "-");
@@ -78,7 +76,7 @@ function getFeedQuery(proxy) {
 
         <!-- feed name -->
         <div class="feedname">
-          <FeedIcon :feed="proxy.feedName" v-tooltip="proxy?.feedName" />
+          <!-- <FeedIcon :feed="proxy.feedName" v-tooltip="proxy?.feedName" /> -->
         </div>
 
         <!-- type -->

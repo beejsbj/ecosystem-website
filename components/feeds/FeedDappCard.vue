@@ -36,14 +36,18 @@ const props = defineProps(["dapp", "proxy"]);
         {{ dapp?.name ?? "Dapp Name" }}
       </h2>
 
-      <p class="">
+      <p v-if="proxy.proxyId">
         <strong>Proxy Address:</strong>
         <WalletAddress :walletAddress="proxy.proxyId" />
       </p>
     </text-content>
 
     <footer>
-      <NuxtLink :to="`/ecosystem/${dapp?.slug}`" class="text button outline">
+      <NuxtLink
+        :to="`/ecosystem/${dapp?.slug}`"
+        :target="dapp.slug"
+        class="text external-link"
+      >
         Go to Dapp
       </NuxtLink>
     </footer>
