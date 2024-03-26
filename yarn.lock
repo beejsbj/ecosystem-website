@@ -9555,7 +9555,7 @@ nuxt-lodash@^2.5.3:
     "@types/lodash-es" "^4.17.10"
     lodash-es "^4.17.21"
 
-nuxt@^3.10.1:
+nuxt@^3.11.1:
   version "3.11.1"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.11.1.tgz#82f0d90c00af64295dbed1c7316ff431266893a7"
   integrity sha512-CsncE1dxP0cmOYT+PBdjMD0bOK8eZizG5tgNWUOJAAAtU45sO38maoBumYYL2kUpT/SC/dMP+831DAcVPvi9pQ==
@@ -12381,9 +12381,9 @@ viem@^1.0.0, viem@^1.4.2, viem@^1.6.0:
     ws "8.13.0"
 
 viem@^2.7.18:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/viem/-/viem-2.9.1.tgz#13d104921d868487ca25aa8b9c69363715de07eb"
-  integrity sha512-Q0H6eXeltzK5sye1SQoCAchpquBaUXIqn3w2VdvNLjW49/e1X1JcWD8pOPJP78zymSXEK8ZOXaE6b+W59+h6Fg==
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/viem/-/viem-2.9.2.tgz#29bd2425222be136bf969a90dd3a8d6032221904"
+  integrity sha512-GRakUTNiYE9W+vL+Be9JkQfzWnkczerHtSpEe2JR/jEGTYZAs4shrA4WLgiaVCI9JxpnduZhQfRWNvy2dlyP2g==
   dependencies:
     "@adraffy/ens-normalize" "1.10.0"
     "@noble/curves" "1.2.0"
