@@ -236,16 +236,21 @@ ul {
   display: grid;
   --gap: var(--space-xl);
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  container-type: inline-size;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 
   li.grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+
+    @media (min-width: 500px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   li

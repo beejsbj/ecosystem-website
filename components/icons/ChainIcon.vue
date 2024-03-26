@@ -1,45 +1,34 @@
 <script setup>
-// import { ChainLogo, SymbolLogo, ApiProviderLogo } from "api3-logos";
+import * as Logos from "@phase21/logos";
 
-import slug from "slug";
+// const { $chainLogo } = useNuxtApp();
 
-const props = defineProps(["chain", "id", "fill", "stroke", "strokeWidth"]);
-
-slug.extend({ "/": "-" });
+const props = defineProps(["id"]);
 
 const ecosystem = useEcosystemStore();
 
 const isTestnet = ref(false);
+const isFound = ref(true);
 
 const chain = computed(() => {
-  //   ecosystem.chainNames(props.id);
-  let chain = props.chain
-    ? slug(props.chain)
-    : props.id
-    ? slug(ecosystem.chainNames(props.id))
-    : "";
+  const chain = ecosystem.chainNames(props.id);
 
   // if testnet, rename the chain
   if (chain.includes("testnet")) {
     isTestnet.value = true;
   }
-  chain = renameChain(chain);
+
   return chain;
 });
 
-function renameChain(chain) {
-  chain = chain.replace("-testnet", "");
-  chain = chain.replace("-goerli", "");
-  chain = chain.replace("-sepolia", "");
-  chain = chain.replace("-chain", "");
+const imgSrc = computed(() => {
+  const src = Logos.ChainLogo(props.id);
+  return src;
+});
 
-  chain = chain === "sepolia" ? "ethereum" : chain;
-  chain = chain === "goerli" ? "ethereum" : chain;
-  chain = chain === "mainnet" ? "ethereum" : chain;
-  return chain;
-}
-
-// console.log(ChainLogo(chain.value));
+const onError = () => {
+  isFound.value = false;
+};
 </script>
 
 <template>
@@ -47,8 +36,15 @@ function renameChain(chain) {
     class="chain-icon"
     :class="{ testnet: isTestnet }"
     v-tooltip="props.chain"
+    :data-first-letter="chain[0].toUpperCase()"
   >
-    <NuxtImg loading="lazy" :src="`/images/chains/${chain}.svg`" :alt="chain" />
+    <img
+      loading="lazy"
+      :src="imgSrc"
+      :alt="chain"
+      @error="onError"
+      :class="{ 'not-found': !isFound }"
+    />
   </picture>
 </template>
 
@@ -70,5 +66,28 @@ picture {
   background: var(--gray-darker);
   border-radius: var(--corners);
   padding: 0.5%;
+}
+
+picture:has(.not-found) {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: attr(data-first-letter);
+    display: grid;
+    place-items: center;
+    line-height: 0;
+
+    position: absolute;
+    inset: 0;
+    background: var(--gray-darker);
+    border-radius: var(--corners);
+    padding: 0.5%;
+    z-index: 2;
+  }
 }
 </style>

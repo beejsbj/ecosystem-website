@@ -70,12 +70,9 @@ function getFeedQuery(proxy) {
       <li class="table-row" v-for="(proxy, index) in formattedProxies">
         <!-- chain -->
         <div class="chain">
-          <ChainIcon
-            :chain="ecosystem.chainNames(proxy.chainId)"
-            fill="var(--green)"
-            stroke="var(--paper)"
-            strokeWidth="15%"
-          />
+          <!-- #todo clean up -->
+
+          <ChainIcon :id="chain" />
           {{ ecosystem.chainNames(proxy.chainId) }}
         </div>
 

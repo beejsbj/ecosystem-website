@@ -71,6 +71,7 @@ onMounted(() => {
         file-item-icon="fileImage"
         suffix-icon="help"
         file-remove-icon="trash"
+        help="A square image is recommended for best results. "
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
       <p class="whisper-voice">Minimum width: 512px</p>

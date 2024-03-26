@@ -47,7 +47,7 @@ useSeoMeta({
     </SectionColumn>
 
     <SectionColumn id="misc-guide">
-      <!-- <MiscGuide /> -->
+      <MiscGuide />
     </SectionColumn>
 
     <SectionColumn id="button-guide">
@@ -86,13 +86,6 @@ useSeoMeta({
     }
   }
 }
-
-// :deep(code) {
-//   font-size: var(--step--1);
-//   @media (min-width: 768px) {
-//     font-size: var(--step-0);
-//   }
-// }
 
 :deep(.slider) {
   margin-top: var(--space-l);
