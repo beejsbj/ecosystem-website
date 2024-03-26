@@ -100,7 +100,7 @@ const maxHeight = computed(() => {
               </picture>
 
               <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-              <ChainIcon :chainId="protocol.chainId" />
+              <ChainIcon :id="protocol.chainId" />
               <p class="solid-voice protocol-name">
                 {{ protocol.name }}
               </p>

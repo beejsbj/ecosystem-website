@@ -118,9 +118,16 @@ function filterBy(event) {
       gap: var(--space-2xs);
     }
 
-    picture.chain-icon {
-      width: 20px;
-    }
+    //  .chain-list {
+    //    display: flex;
+    //    max-width: 50%;
+    //    overflow-x: scroll;
+    //    gap: var(--space-2xs);
+
+    //    li {
+    //      flex-shrink: 0;
+    //    }
+    //  }
 
     .productType {
       display: flex;
@@ -130,9 +137,9 @@ function filterBy(event) {
 
   text-content {
     display: grid;
-    column-gap: var(--space-2xs);
+    column-gap: var(--space-3xs);
 
-    grid-template-columns: 0.1fr 1fr;
+    grid-template-columns: 0.2fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
 

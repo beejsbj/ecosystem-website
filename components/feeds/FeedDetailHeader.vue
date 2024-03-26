@@ -58,7 +58,7 @@ function handleChainChange() {
       >
         <template #option="{ option }">
           <div class="chain-option">
-            <ChainIcon :chain="option.label" />
+            <ChainIcon :id="option.value" />
             <span class="whisper-voice">
               {{ option.label }}
             </span>
@@ -142,15 +142,5 @@ function handleChainChange() {
       align-items: center;
     }
   }
-}
-
-.chain-option {
-  padding-left: var(--space-s);
-  display: grid;
-  align-items: center;
-
-  grid-template-columns: 24px 1fr;
-  gap: var(--space-3xs);
-  padding: var(--space-2xs) 0;
 }
 </style>

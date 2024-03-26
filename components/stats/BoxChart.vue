@@ -36,7 +36,7 @@ const data = computed(() => {
         :teaser="dataPoint.key ?? metadata.title"
         :solid="dataPoint.value"
       >
-        <ChainIcon :chain="dataPoint.key" v-if="isChains" />
+        <ChainIcon :id="dataPoint.key" v-if="isChains" />
       </BoxCard>
 
       <div

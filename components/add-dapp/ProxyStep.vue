@@ -103,7 +103,7 @@ async function handleUpdateProxy() {
         >
           <template #option="{ option }">
             <div class="chain-option">
-              <ChainIcon :chain="option.label" />
+              <ChainIcon :id="option.value" />
               <span>
                 {{ option.label }}
               </span>
@@ -236,12 +236,5 @@ async function handleUpdateProxy() {
   }
 }
 
-.chain-option {
-  display: grid;
-  align-items: center;
 
-  grid-template-columns: 24px 1fr;
-  gap: var(--space-3xs);
-  padding: var(--space-2xs) 0;
-}
 </style>

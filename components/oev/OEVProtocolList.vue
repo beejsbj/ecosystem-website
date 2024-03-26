@@ -34,7 +34,7 @@ function buttonHandle(protocol) {
                 'border-gradient-blue': protocol.hide,
               }"
             >
-              <ChainIcon :chainId="protocol.chainId" />
+              <ChainIcon :id="protocol.chainId" />
             </BoxCard>
           </button>
         </li>

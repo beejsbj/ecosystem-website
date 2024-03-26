@@ -140,7 +140,7 @@ const inputProtocols = computed(() => {
         >
           <template #option="{ option }">
             <div class="protocol-option">
-              <ChainIcon v-if="option.chainId" :chainId="option.chainId" />
+              <ChainIcon v-if="option.chainId" :id="option.chainId" />
               <DynamicIcon v-else icon="dapp" />
               <span class="whisper-voice">
                 {{ option.label }}

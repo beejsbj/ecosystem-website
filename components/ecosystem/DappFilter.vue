@@ -125,7 +125,7 @@ const handleFilter = (event) => {
             >
               <template #label="context">
                 <div class="chain-option">
-                  <ChainIcon :chain="chain.label" />
+                  <ChainIcon :id="chain.value" />
                   <span class="whisper-voice">
                     {{ context.label }}
                   </span>
@@ -347,10 +347,6 @@ dapp-filter {
 
     //  gap: calc(var(--space-m));
     padding: 0 var(--space-m);
-
-    :deep(picture) {
-      width: 20px;
-    }
   }
 }
 
@@ -358,12 +354,5 @@ button.icon.caret {
   max-width: var(--space-l);
 }
 
-.chain-option {
-  padding-left: var(--space-3xs);
-  display: grid;
-  align-items: center;
 
-  grid-template-columns: 20px 1fr;
-  gap: var(--space-3xs);
-}
 </style>
