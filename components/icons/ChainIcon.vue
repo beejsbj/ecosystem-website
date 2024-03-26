@@ -1,5 +1,7 @@
 <script setup>
-import * as Logos from "@phase21/logos";
+// import * as Logos from "@phase21/logos";
+
+const { $chainLogo } = useNuxtApp();
 
 const props = defineProps(["id"]);
 
@@ -12,15 +14,15 @@ const chain = computed(() => {
   const chain = ecosystem.chainNames(props.id);
 
   // if testnet, rename the chain
-  if (chain.includes("testnet")) {
-    isTestnet.value = true;
-  }
+  //   if (chain.includes("testnet")) {
+  //     isTestnet.value = true;
+  //   }
 
   return chain;
 });
 
 const imgSrc = computed(() => {
-  const src = Logos.ChainLogo(props.id);
+  const src = $chainLogo(props.id);
   return src;
 });
 
