@@ -303,19 +303,8 @@ a.router-link-exact-active:not(.site-logo, .button)::after {
 }
 
 .chain-option {
-  display: grid;
+  display: flex;
   align-items: center;
-
-  grid-template-columns: 24px 1fr;
   gap: var(--space-3xs);
   padding: var(--space-2xs) 0;
-}
-
-.formkit-icon-option {
-  display: grid;
-  align-items: center;
-
-  grid-template-columns: 24px 1fr;
-  gap: var(--space-3xs);
-  padding: var(--space-2xs);
 }
