@@ -57,7 +57,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ["gsap"],
+    transpile: ["gsap", "@phase21/logos"],
   },
 
   vue: {
