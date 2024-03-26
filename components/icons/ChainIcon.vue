@@ -1,8 +1,6 @@
 <script setup>
 import * as Logos from "@phase21/logos";
 
-// const { $chainLogo } = useNuxtApp();
-
 const props = defineProps(["id"]);
 
 const ecosystem = useEcosystemStore();

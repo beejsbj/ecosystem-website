@@ -15,13 +15,13 @@ useSeoMeta({
   title: "API3 Ecosystem Home",
 });
 
-onMounted(() => {
-  //   document.body.scrollTop = document.documentElement.scrollTop = 0;
-  //   window.scroll({
-  //     top: 0,
-  //     left: 0,
-  //   });
-});
+// onMounted(() => {
+//   document.body.scrollTop = document.documentElement.scrollTop = 0;
+//   window.scroll({
+//     top: 0,
+//     left: 0,
+//   });
+// });
 </script>
 
 <template>
@@ -51,19 +51,12 @@ body:has(main.index) {
 main.index {
   display: grid;
   gap: var(--space-3xs);
-  inner-column {
-  }
+
   inner-column > h2 {
     margin-bottom: var(--space-l);
   }
   @media (min-width: 768px) {
     gap: calc(var(--space-3xs) * 10);
-  }
-  @media (min-width: 1024px) {
-    & > section:not(.scrolling-stats) {
-      inner-column {
-      }
-    }
   }
 }
 </style>
@@ -85,7 +78,6 @@ main.index {
     transform: translate(-50%, -50%) rotate(10deg) scaleY(1.8);
 
     width: 500vw;
-    //   display: none;
 
     @media (min-width: 768px) {
       display: block;
@@ -101,8 +93,6 @@ main.index {
       width: 100vw;
       transform: translate(-50%, -50%) scaleX(2);
     }
-
-    //  display: none;
   }
 }
 </style>

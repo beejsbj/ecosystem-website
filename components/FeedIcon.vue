@@ -1,19 +1,23 @@
 <script setup>
+import * as Logos from "@phase21/logos";
+
 const props = defineProps(["feed"]);
-// props.feed = API3/USD
 
 const symbols = props.feed.split("/");
 symbols.map((symbol) => symbol.toLowerCase());
+
+
+
+ imgSrc function(feed) {
+  const src = Logos.SymbolLogo(feed);
+  return src;
+};
 </script>
 
 <template>
   <div class="feed-icon">
     <picture v-for="symbol in symbols">
-      <NuxtImg
-        loading="lazy"
-        :src="`/images/chains/${symbol}.svg`"
-        :alt="symbol"
-      />
+      <img loading="lazy" :src="imgSrc(symbol)" :alt="symbol" />
     </picture>
   </div>
 </template>
