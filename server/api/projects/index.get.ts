@@ -1,5 +1,6 @@
 import { isNumber } from "../../services/helper";
 import { Project } from "~/server/models/Project";
+import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   try {
@@ -10,6 +11,7 @@ export default defineEventHandler(async (event) => {
       chains,
       productTypes,
       years,
+      ticker,
       orderBy,
       orderDirection,
     }: any = getQuery(event);
@@ -95,14 +97,56 @@ export default defineEventHandler(async (event) => {
 
     const finalFilter = { $and: [searchFilters, selectionFilters] };
 
-    const totalProjects = await Project.countDocuments(finalFilter);
+    let cacheKey = `${JSON.stringify(finalFilter)}-${limit}-${skips}`;
+    if (ticker !== undefined) {
+      cacheKey = `${cacheKey}-${ticker}`;
+    }
+
+    const cachedData: any = queryCache.get(cacheKey);
+
+    if (cachedData !== undefined) {
+      console.log("getting from cache");
+      return JSON.parse(cachedData);
+    }
 
     let projects = await Project.find(finalFilter).sort({ year: -1 });
 
-    const filteredList = projects?.slice(skips, limit);
+    let filteredList: any[] = projects;
 
-    return { projects: filteredList, total: totalProjects };
+    // apply proxyAddress filter if any
+    if (ticker !== undefined) {
+      filteredList = projects?.filter((project: any) => {
+        const proxies = project.proxies;
+        if (!proxies) return false;
+        const proxyKeys = Object.keys(proxies);
+        for (let i = 0; i < proxyKeys.length; i++) {
+          const chainId = proxyKeys[i];
+          const proxyList = proxies[chainId];
+          for (let j = 0; j < proxyList.length; j++) {
+            const proxy = proxyList[j];
+
+            if (proxy.feedName === ticker) {
+              return true;
+            }
+          }
+        }
+        return false;
+      });
+    }
+    const totalProjects = filteredList.length;
+
+    const results = filteredList?.slice(skips, limit);
+
+    // cache result with new queries
+    queryCache.set(
+      cacheKey,
+      JSON.stringify({ projects: results, total: totalProjects }),
+      cacheInterval
+    );
+
+    return { projects: results, total: totalProjects };
   } catch (err: any) {
+    console.log("get projects error", err);
     event.node.res.statusCode = 500;
     return {
       code: "ERROR",
