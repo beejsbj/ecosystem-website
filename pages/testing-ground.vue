@@ -13,6 +13,7 @@ const ecosystem = useEcosystemStore();
     <PageTitle heading="test ground" />
     <SectionColumn>
       <NuxtLink to="/style-guide">style guide</NuxtLink>
+      <FeedIcon feed="aapl/usd" />
     </SectionColumn>
   </ContentsWrapper>
 </template>
