@@ -1,26 +1,50 @@
 <script setup>
-const props = defineProps(["dapp", "proxy"]);
+const props = defineProps(["dapp", "proxy", "feedname"]);
+const router = useRouter();
+
+const formattedProxies = computed(() => {
+  if (!props.dapp?.proxies) {
+    return [];
+  }
+
+  const formattedProxyItems = [];
+  Object.keys(props.dapp?.proxies).forEach((chain) => {
+    let chainItems = props.dapp?.proxies?.[chain]?.map((el) => {
+      return { ...el, chainId: chain };
+    });
+    formattedProxyItems.push(...chainItems);
+  });
+
+  console.log(formattedProxyItems);
+
+  return formattedProxyItems.filter(
+    (proxy) =>
+      proxy.feedName == props.feedname && proxy.chainId == props.proxy.chainId
+  );
+});
+
+function handleCardClick() {
+  //   move  card to top of the list
+
+  //change query params
+  router.push({
+    query: {
+      dappSlug: props.dapp.slug,
+      chainId: props.proxy.chainId,
+    },
+  });
+}
+
+const isOevEnabled = computed(() => {
+  //   check if dapp is proxy enabled
+  const isTrue = formattedProxies.value.some((proxy) => proxy.oev.enabled);
+  return isTrue;
+});
 </script>
 
 <template>
-  <li class="feed-dapp-card">
-    <header>
-      <!-- <ul class="chain-list">
-        <li
-          class="chain"
-          v-for="chain in dapp?.chains"
-          :data-chain="chain"
-          @click="filterBy"
-        >
-          <ChainIcon :id="chain" fill="none" stroke="var(--green)" />
-        </li>
-      </ul> -->
-
-      <!-- <div class="productType" :data-productType="dapp?.productType">
-        <DynamicIcon :icon="dapp?.productType" @click="filterBy" />
-      </div> #todo-->
-    </header>
-
+  <li class="feed-dapp-card" @click="handleCardClick()">
+    <div class="oev-tag whisper-voice" v-if="isOevEnabled">OEV Enabled</div>
     <text-content>
       <picture class="logo">
         <NuxtImg
@@ -36,28 +60,34 @@ const props = defineProps(["dapp", "proxy"]);
         {{ dapp?.name ?? "Dapp Name" }}
       </h2>
 
-      <p v-if="proxy.proxyId">
-        <strong>Proxy Address:</strong>
-        <WalletAddress :walletAddress="proxy.proxyId" />
-      </p>
+      <ul class="proxy-list">
+        <h3 class="solid-voice">Proxy Address</h3>
+        <template v-for="proxy in formattedProxies">
+          <li>
+            <p>
+              <WalletAddress :walletAddress="proxy.proxyAddress" />
+            </p>
+            <p class="whisper-voice">
+              {{ proxy.oev.enabled ? "OEV Enabled" : "" }}
+            </p>
+          </li>
+        </template>
+      </ul>
     </text-content>
 
-    <footer>
-      <NuxtLink
-        :to="`/ecosystem/${dapp?.slug}`"
-        :target="dapp.slug"
-        class="text external-link"
-      >
-        Go to Dapp
-      </NuxtLink>
-    </footer>
+    <NuxtLink
+      :to="`/ecosystem/${dapp?.slug}`"
+      :target="dapp.slug"
+      class="text whisper-voice external-link green"
+    >
+      Go to Dapp
+    </NuxtLink>
   </li>
 </template>
 
 <style scoped lang="scss">
 .feed-dapp-card {
   display: grid;
-  grid-template-rows: 0.1fr 1fr 0.1fr;
   gap: var(--space-s);
 
   padding: var(--space-l);
@@ -69,8 +99,18 @@ const props = defineProps(["dapp", "proxy"]);
   position: relative;
   overflow: hidden;
 
-  grid-column: 1/-1;
-  grid-row: 1/2;
+  &.display-card {
+    background: var(--gradient-radial-green);
+    grid-column: 1/-1;
+    grid-row: span 2;
+    h2 {
+      font-size: var(--step-2);
+    }
+
+    picture.logo {
+      max-width: 60px;
+    }
+  }
 
   &:hover {
     background: var(--gradient-radial-green-hover);
@@ -78,10 +118,9 @@ const props = defineProps(["dapp", "proxy"]);
 
   text-content {
     display: grid;
-    column-gap: var(--space-2xs);
-
     grid-template-columns: 0.1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    gap: var(--space-2xs);
+
     align-items: center;
 
     picture.logo {
@@ -98,48 +137,54 @@ const props = defineProps(["dapp", "proxy"]);
     }
 
     h2 {
-      text-wrap: balance;
-      // z-index: 2;
+      // white-space: nowrap;
     }
 
-    p {
+    ul {
       grid-column: 2/-1;
-      display: flex;
-      align-items: center;
+
+      display: grid;
+      gap: var(--space-2xs);
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+
+        p {
+          margin-top: unset;
+        }
+      }
     }
   }
 
-  footer {
+  a {
     display: flex;
+    align-items: center;
+    //  white-space: nowrap;
+
     justify-content: flex-end;
   }
-}
 
-.category,
-.productType,
-.chain {
-  cursor: pointer;
-}
-:is(.category, .productType, .chain):hover {
-  filter: brightness(1.2);
-}
-
-li:not(.text-card) {
-  h2 {
-    font-size: var(--step-2);
-  }
-
-  picture.logo {
-    max-width: 60px;
+  .oev-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--space-3xs) var(--space-2xs);
+    border-bottom-left-radius: var(--corners);
+    font-weight: var(--weight-heavy);
+    background: var(--ink);
+    color: var(--paper);
   }
 }
 
-.text-card {
+.feed-dapp-card:not(.display-card) {
   min-height: unset;
-  display: block;
+  display: grid;
+  gap: var(--space-3xs);
+  align-items: center;
   padding: var(--space-s) var(--space-m);
   grid-column: unset;
-  grid-row: unset;
 
   text-content {
     display: flex;
@@ -149,18 +194,9 @@ li:not(.text-card) {
     }
   }
 
-  footer {
-    a {
-      content: "";
-      padding-left: 0;
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      cursor: pointer;
-      color: transparent;
-      font-size: 0;
-      border: unset;
-    }
+  ul,
+  h3 {
+    display: none;
   }
 }
 </style>

@@ -1,15 +1,16 @@
 <script setup>
 const route = useRoute();
+const router = useRouter();
 const ecosystem = useEcosystemStore();
 
 const feedSlug = route.params.detail;
 const feedName = feedSlug.replace("-", "/");
-const proxy = route.query;
-
-// /api/projects?page=1&&ticker=WBTC/USD
+const proxy = computed(() => {
+  return route.query;
+});
 
 const { data: feedProjects } = await useFetch(
-  `/api/projects?&ticker=${feedName}`
+  `/api/projects?&ticker=${feedName}&chains=${proxy.value.chainId}`
 );
 </script>
 
@@ -21,12 +22,14 @@ const { data: feedProjects } = await useFetch(
     </SectionColumn>
 
     <SectionColumn class="main">
-      <ul class="feed-dapp-cards">
+      <ul class="feed-dapp-cards" v-auto-animate>
         <FeedDappCard
           v-for="dapp in feedProjects.projects"
           :dapp="dapp"
           :proxy="proxy"
-          :class="{ 'text-card': dapp.slug != proxy.dappSlug }"
+          :key="dapp.slug"
+          :feedname="feedName"
+          :class="{ 'display-card': dapp.slug == proxy.dappSlug }"
         />
       </ul>
 
@@ -60,7 +63,7 @@ const { data: feedProjects } = await useFetch(
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 0.4fr;
+    grid-template-columns: 1fr 0.2fr;
 
     ul {
       order: unset;

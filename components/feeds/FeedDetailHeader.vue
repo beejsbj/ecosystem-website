@@ -1,6 +1,4 @@
 <script setup>
-import { CHAINS } from "@api3/chains";
-
 // const props = defineProps(["proxy"]);
 // const chainId = proxy.chainId;
 
@@ -9,24 +7,10 @@ const ecosystem = useEcosystemStore();
 
 const feedSlug = route.params.detail;
 const feedName = feedSlug.replace("-", "/");
-const proxy = route.query;
-
-const selectedChain = ref(proxy.chainId);
 
 const chain = computed(() => {
-  return ecosystem.chainNames(selectedChain);
+  return ecosystem.chainNames(route.query.chainId);
 });
-
-const chains = CHAINS.map((chain) => {
-  return {
-    label: chain.name,
-    value: chain.id,
-  };
-});
-
-function handleChainChange() {
-  console.log(selectedChain);
-}
 </script>
 
 <template>
@@ -53,13 +37,13 @@ function handleChainChange() {
   display: grid;
 
   .feed-icon-heading {
-    display: grid;
+    display: flex;
+    gap: var(--space-2xs);
     align-items: center;
-    grid-template-columns: 100px 1fr;
   }
 
-  .feed-icon picture {
-    --width: 100px;
+  :deep(.feed-icon) picture {
+    --width: 50px;
   }
 
   .button {

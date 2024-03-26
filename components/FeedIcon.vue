@@ -16,7 +16,6 @@ const onError = () => {
 
 function imgSrc(symbol) {
   const src = $symbolLogo(symbol);
-  console.log(src);
   return src;
 }
 

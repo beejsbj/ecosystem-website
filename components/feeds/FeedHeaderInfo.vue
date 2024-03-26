@@ -3,17 +3,23 @@ import { CHAINS } from "@api3/chains";
 
 const props = defineProps(["proxy"]);
 
+const selectedChain = ref(props.proxy.chainId);
+
 const chains = CHAINS.map((chain) => {
   return {
     label: chain.name,
     value: chain.id,
   };
 });
+
+//
+function handleChainChange() {
+  console.log(selectedChain);
+}
 </script>
 
 <template>
   <div class="feed-info">
-    {{ proxy }}
     <FormKit
       type="dropdown"
       v-model="selectedChain"
