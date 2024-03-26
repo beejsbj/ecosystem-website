@@ -1,47 +1,28 @@
 <script setup>
-import slug from "slug";
-slug.extend({ "/": "-" });
+import * as Logos from "@phase21/logos";
 
-const props = defineProps([
-  "chain",
-  "fill",
-  "stroke",
-  "strokeWidth",
-  "chainId",
-]);
+// const { $chainLogo } = useNuxtApp();
+
+const props = defineProps(["id"]);
 
 const ecosystem = useEcosystemStore();
 
 const isTestnet = ref(false);
-const chain = computed(() => {
-  let chain = "";
+const isFound = ref(true);
 
-  if (props.chain) {
-    chain = slug(props.chain);
-  }
-  if (props.chainId) {
-    chain = slug(ecosystem.chainNames(props.chainId));
-  }
+const chain = computed(() => {
+  const chain = ecosystem.chainNames(props.id);
 
   if (chain.includes("testnet")) {
     isTestnet.value = true;
   }
-  chain = chain.replace("-testnet", "");
-  chain = chain.replace("-goerli", "");
-  chain = chain.replace("-sepolia", "");
-  chain = chain.replace("-chain", "");
-
-  chain = chain === "sepolia" ? "ethereum" : chain;
-  chain = chain === "goerli" ? "ethereum" : chain;
-  chain = chain === "mainnet" ? "ethereum" : chain;
 
   return chain;
 });
 
-const isFound = ref(true);
-
 const imgSrc = computed(() => {
-  return `/images/chains/${chain.value}.svg`;
+  const src = Logos.ChainLogo(props.id);
+  return src;
 });
 
 const onError = () => {
@@ -56,7 +37,7 @@ const onError = () => {
     v-tooltip="props.chain"
     :data-first-letter="chain[0].toUpperCase()"
   >
-    <NuxtImg
+    <img
       loading="lazy"
       :src="imgSrc"
       :alt="chain"
