@@ -20,11 +20,12 @@ useSeoMeta({
 </script>
 
 <template>
-  <PageTitle heading="API3 Partners" class="loud-voice ecosystem-header">
-    <NuxtLink to="/add-dapp" class="button solid-voice">
-      <span class=""> Join the Ecosystem </span>
-    </NuxtLink>
-  </PageTitle>
+  <ContentsWrapper>
+    <PageTitle heading="API3 Partners" class="loud-voice ecosystem-header">
+      <NuxtLink to="/add-dapp" class="button solid-voice">
+        <span class=""> Join the Ecosystem </span>
+      </NuxtLink>
+    </PageTitle>
 
     <SectionColumn innerClass="ecosystem-main-grid">
       <!-- <ClientOnly> -->
