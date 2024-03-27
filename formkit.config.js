@@ -42,8 +42,6 @@ const classes = generateClasses({
   },
 });
 
-console.log(classes);
-
 //auto animate
 const autoAnimate = {
   config: {
@@ -142,8 +140,6 @@ function addAsteriskPlugin(node) {
 
 function addPrefixIconPlugin(node) {
   node.on("created", () => {
-    console.log(node.type);
-
     if (node.type !== "input") {
       //  node.props.prefixIcon = 'email'
       return;
