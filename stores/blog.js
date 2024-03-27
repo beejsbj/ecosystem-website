@@ -29,7 +29,7 @@ export const useBlogStore = defineStore("blog", () => {
       console.log("fetch articles error", error);
     },
     onRequest({ request, options }) {
-      console.log("fetch articles");
+      // console.log("fetch articles");
     },
   });
 
