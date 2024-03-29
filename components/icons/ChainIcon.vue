@@ -35,8 +35,8 @@ const onError = () => {
   <picture
     class="chain-icon"
     :class="{ testnet: isTestnet }"
-    v-tooltip="props.chain"
-    :data-first-letter="chain[0].toUpperCase()"
+    v-tooltip="chain"
+    :data-first-letter="chain?.[0]?.toUpperCase()"
   >
     <img
       loading="lazy"
