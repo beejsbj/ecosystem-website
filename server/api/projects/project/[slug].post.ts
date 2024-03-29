@@ -6,7 +6,7 @@ import { Upvote } from "~/server/models/Upvote";
 export default authenticated(
   defineEventHandler(async (event: any) => {
     try {
-      const projectId = event.context?.params?.id;
+      const projectId = event.context?.params?.slug;
 
       if (!mongoose.isValidObjectId(projectId)) {
         event.node.res.statusCode = 400;

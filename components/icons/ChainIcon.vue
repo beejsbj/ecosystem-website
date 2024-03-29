@@ -1,7 +1,7 @@
 <script setup>
-import * as Logos from "@phase21/logos";
+// import * as Logos from "@phase21/logos";
 
-// const { $chainLogo } = useNuxtApp();
+const { $chainLogo } = useNuxtApp();
 
 const props = defineProps(["id"]);
 
@@ -13,15 +13,16 @@ const isFound = ref(true);
 const chain = computed(() => {
   const chain = ecosystem.chainNames(props.id);
 
-  if (chain.includes("testnet")) {
-    isTestnet.value = true;
-  }
+  // if testnet, rename the chain
+  //   if (chain.includes("testnet")) {
+  //     isTestnet.value = true;
+  //   }
 
   return chain;
 });
 
 const imgSrc = computed(() => {
-  const src = Logos.ChainLogo(props.id);
+  const src = $chainLogo(props.id);
   return src;
 });
 
@@ -34,8 +35,8 @@ const onError = () => {
   <picture
     class="chain-icon"
     :class="{ testnet: isTestnet }"
-    v-tooltip="props.chain"
-    :data-first-letter="chain[0].toUpperCase()"
+    v-tooltip="chain"
+    :data-first-letter="chain?.[0]?.toUpperCase()"
   >
     <img
       loading="lazy"
@@ -50,8 +51,7 @@ const onError = () => {
 <style scoped lang="scss">
 picture {
   aspect-ratio: 1/1;
-  width: 24px;
-  height: 24px;
+  max-width: 24px;
 
   img {
     width: 100%;
