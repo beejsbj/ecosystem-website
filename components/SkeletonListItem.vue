@@ -14,5 +14,6 @@ import { Skeletor } from "vue-skeletor";
   display: grid;
   align-items: center;
   grid-template-columns: 0.1fr 1fr;
+  margin-top: var(--space-xs);
 }
 </style>
