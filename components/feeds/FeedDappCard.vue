@@ -25,30 +25,16 @@ const formattedProxies = computed(() => {
   });
 });
 
-function handleCardClick() {
-  //   move  card to top of the list
-
+function handleProxyClick(currentProxy) {
   //change query params
+
   router.push({
     query: {
       dappSlug: props.dapp.slug,
-      chainId: props.proxy.chainId,
-    },
-  });
-
-  console.log(useRoute().query);
-}
-
-function handleProxyClick(proxy) {
-  //change query params
-  console.log("proxy", proxy);
-  router.push({
-    query: {
-      dappSlug: props.dapp.slug,
-      chainId: proxy.chainId,
-      proxyId: proxy.proxyAddress,
-      feedId: proxy.datafeedId ?? proxy.dapiNameHash,
-      type: proxy.proxyType,
+      chainId: currentProxy.chainId,
+      proxyId: currentProxy.proxyAddress,
+      feedId: currentProxy.datafeedId ?? currentProxy.dapiNameHash,
+      type: currentProxy.proxyType,
     },
   });
 }
@@ -61,7 +47,7 @@ const isOevEnabled = computed(() => {
 </script>
 
 <template>
-  <div class="feed-dapp-card" @click="handleCardClick()" v-auto-animate>
+  <div class="feed-dapp-card" v-auto-animate>
     <div class="oev-tag whisper-voice" v-if="isOevEnabled">OEV Enabled</div>
     <text-content>
       <picture class="logo">
@@ -75,7 +61,7 @@ const isOevEnabled = computed(() => {
       <h2
         :class="dapp?.name.length <= 16 ? 'firm-voice' : 'firm-voice-smaller'"
       >
-        {{ dapp?.name ?? "Dapp Name" }}
+        {{ dapp?.name ?? "dApp Name" }}
       </h2>
 
       <ul class="proxy-list" v-auto-animate>
@@ -104,7 +90,7 @@ const isOevEnabled = computed(() => {
       :target="dapp.slug"
       class="text whisper-voice external-link green"
     >
-      Go to Dapp
+      Go to dApp
     </NuxtLink>
   </div>
 </template>
@@ -143,7 +129,7 @@ const isOevEnabled = computed(() => {
 
   text-content {
     display: grid;
-    grid-template-columns: 0.1fr 0.9fr 1fr;
+    grid-template-columns: 0.2fr 0.8fr 1fr;
     gap: var(--space-2xs);
 
     align-items: center;
@@ -162,7 +148,7 @@ const isOevEnabled = computed(() => {
     }
 
     h2 {
-      // white-space: nowrap;
+      white-space: nowrap;
     }
 
     ul {
@@ -186,9 +172,9 @@ const isOevEnabled = computed(() => {
   a {
     display: flex;
     align-items: center;
-    //  white-space: nowrap;
 
     justify-self: flex-end;
+    align-self: end;
   }
 
   .oev-tag {
