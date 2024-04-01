@@ -3,6 +3,7 @@
 // const chainId = proxy.chainId;
 
 const route = useRoute();
+const router = useRouter();
 const ecosystem = useEcosystemStore();
 
 const feedSlug = route.params.detail;
@@ -11,6 +12,12 @@ const feedName = feedSlug.replace("-", "/");
 const chain = computed(() => {
   return ecosystem.chainNames(route.query.chainId);
 });
+
+function handleReset() {
+  router.push({
+    query: {},
+  });
+}
 </script>
 
 <template>
@@ -23,12 +30,18 @@ const chain = computed(() => {
       </h1>
     </div>
 
-    <NuxtLink
-      :to="`https://market.api3.org/dapis/${chain}/${feedSlug}`"
-      class="button outline whisper-voice"
-    >
-      <span class="external-link"> View on Market </span>
-    </NuxtLink>
+    <div class="actions">
+      <button @click="handleReset" class="button whisper-voice">
+        Reset To Feed List
+      </button>
+
+      <NuxtLink
+        :to="`https://market.api3.org/dapis/${chain}/${feedSlug}`"
+        class="button outline whisper-voice"
+      >
+        <span class="external-link"> View on Market </span>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -47,18 +60,22 @@ const chain = computed(() => {
   }
 
   .button {
-    display: grid;
-    text-transform: uppercase;
-    place-items: center;
-    margin: var(--space-s) 0;
-    justify-self: start;
-    margin-left: var(--space-s);
+    //  display: grid;
+    //  text-transform: uppercase;
+    //  place-items: center;
+    //  margin: var(--space-s) 0;
+    //  justify-self: start;
+    //  margin-left: var(--space-s);
+  }
+
+  .actions {
+    align-items: center;
   }
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
 
-    .button {
+    .actions {
       justify-self: end;
     }
   }
