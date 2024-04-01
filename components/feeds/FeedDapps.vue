@@ -74,16 +74,18 @@ function handleCardClick(dapp) {
         v-else-if="dapps.length > 1"
       >
         <h3 class="teaser-voice">dApps that are on this Feed</h3>
-        <li v-for="dapp in dapps">
-          <SkeletonCard v-if="pending" />
-          <FeedDappCard
-            :dapp="dapp"
-            :proxy="proxy"
-            :key="dapp.slug"
-            :feedname="feedName"
-            @click="handleCardClick(dapp)"
-          />
-        </li>
+        <template v-for="dapp in dapps">
+          <li v-if="displayDapp !== dapp" :key="dapp.slug">
+            <SkeletonCard v-if="pending" />
+            <FeedDappCard
+              :dapp="dapp"
+              :proxy="proxy"
+              :key="dapp.slug"
+              :feedname="feedName"
+              @click="handleCardClick(dapp)"
+            />
+          </li>
+        </template>
       </ul>
     </template>
 

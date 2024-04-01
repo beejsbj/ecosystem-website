@@ -201,6 +201,7 @@ const isOevEnabled = computed(() => {
   gap: var(--space-3xs);
   align-items: center;
   padding: var(--space-s) var(--space-m);
+  cursor: pointer;
 
   text-content {
     display: flex;
