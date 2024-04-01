@@ -245,11 +245,10 @@ nav {
 
 .footer-navigation inner-column {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: var(--space-xl);
   justify-content: space-between;
 
-  @media (min-width: 768px) {
+  @media (min-width: 500px) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
     align-items: start;
@@ -304,6 +303,7 @@ section.other inner-column {
 
   .social-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: var(--space-s);
