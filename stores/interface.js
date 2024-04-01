@@ -51,7 +51,7 @@ export const useInterfaceStore = defineStore("interface", function () {
 
   setTimeout(() => {
     loadingDone.value = true;
-  }, 2000);
+  }, 2500);
 
   //
   //page transition
@@ -77,7 +77,7 @@ export const useInterfaceStore = defineStore("interface", function () {
     name: "page-transiton",
     mode: "out-in",
     onEnter: (el, done) => {
-      console.log("onEnter");
+      // console.log("onEnter");
       gsap.set(el, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
       gsap
         .timeline({
