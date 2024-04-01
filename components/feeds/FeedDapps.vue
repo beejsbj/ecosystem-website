@@ -23,6 +23,11 @@ const displayDapp = computed(() => {
 
 function handleCardClick(dapp) {
   //   move  card to top of the list
+  const card = event.target.closest(".feed-dapp-card");
+
+  if (card.classList.contains("display-card")) {
+    return;
+  }
 
   //change query params
   router.push({
@@ -54,6 +59,7 @@ function handleCardClick(dapp) {
           :dapp="displayDapp"
           :proxy="proxy"
           :feedname="feedName"
+          key="chain-value-card"
         />
       </div>
     </template>
@@ -82,7 +88,7 @@ function handleCardClick(dapp) {
               :proxy="proxy"
               :key="dapp.slug"
               :feedname="feedName"
-              @click="handleCardClick(dapp)"
+              :class="{ 'display-card': !displayDapp }"
             />
           </li>
         </template>
@@ -122,7 +128,7 @@ function handleCardClick(dapp) {
 .feed-dapp-cards {
   display: grid;
   align-content: start;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: var(--space-s);
   position: relative;
 

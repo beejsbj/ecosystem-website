@@ -54,8 +54,6 @@ async function submitForm() {
 
   const data = await response.json();
 
-
-
   if (data.success) {
     // reset form by id
     reset("contact-form");
@@ -198,7 +196,6 @@ async function submitForm() {
         type="form"
         id="contact-form"
         :actions="false"
-        v-auto-animate
         @submit="submitForm"
         v-if="formEnabled"
       >
@@ -276,12 +273,13 @@ async function submitForm() {
         </form-field>
         <ul class="validation-errors" v-auto-animate v-if="serverMessages">
           <li
-            v-for="message in serverMessages"
+            v-for="(message, i) in serverMessages"
             class="solid-voice"
             :class="{
               success: message.success,
               error: !message.success,
             }"
+            :key="i"
           >
             {{ message.message }}
           </li>

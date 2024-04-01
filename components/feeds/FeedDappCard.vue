@@ -25,6 +25,12 @@ const formattedProxies = computed(() => {
   });
 });
 
+const isOevEnabled = computed(() => {
+  //   check if dapp is proxy enabled
+  const isTrue = formattedProxies.value.some((proxy) => proxy.oev.enabled);
+  return isTrue;
+});
+
 function handleProxyClick(currentProxy) {
   //change query params
 
@@ -39,16 +45,29 @@ function handleProxyClick(currentProxy) {
   });
 }
 
-const isOevEnabled = computed(() => {
-  //   check if dapp is proxy enabled
-  const isTrue = formattedProxies.value.some((proxy) => proxy.oev.enabled);
-  return isTrue;
-});
+function handleCardClick(dapp) {
+  //   move  card to top of the list
+  const isButton = event.target.closest("button");
+
+  if (isButton) {
+    return;
+  }
+
+  //change query params
+  router.push({
+    query: {
+      dappSlug: dapp.slug,
+      chainId: props.proxy.chainId,
+    },
+  });
+}
 </script>
 
 <template>
-  <div class="feed-dapp-card" v-auto-animate>
-    <div class="oev-tag whisper-voice" v-if="isOevEnabled">OEV Enabled</div>
+  <div class="feed-dapp-card" @click="handleCardClick(dapp)">
+    <div class="oev-tag absolute whisper-voice" v-if="isOevEnabled">
+      OEV Enabled
+    </div>
     <text-content>
       <picture class="logo">
         <NuxtImg
@@ -63,29 +82,30 @@ const isOevEnabled = computed(() => {
       >
         {{ dapp?.name ?? "dApp Name" }}
       </h2>
-
-      <ul class="proxy-list" v-auto-animate>
-        <h3 class="solid-voice">Proxy Address</h3>
-        <template v-for="proxy in formattedProxies">
-          <li>
-            <p>
-              <WalletAddress :walletAddress="proxy.proxyAddress" />
-            </p>
-            <p class="whisper-voice">
-              {{ proxy.oev.enabled ? "OEV Enabled" : "" }}
-            </p>
-            <button
-              class="button outline whisper-voice"
-              @click="handleProxyClick(proxy)"
-              v-if="props.proxy.proxyId !== proxy.proxyAddress"
-              :key="proxy.proxyAddress"
-            >
-              View Proxy
-            </button>
-          </li>
-        </template>
-      </ul>
     </text-content>
+    <ul class="proxy-list" v-auto-animate>
+      <h3 class="solid-voice">Proxy Address</h3>
+      <template v-for="proxy in formattedProxies">
+        <li>
+          <p>
+            <WalletAddress :walletAddress="proxy.proxyAddress" />
+          </p>
+          <div>
+            <p v-if="proxy.oev.enabled" class="oev-tag whisper-voice">
+              OEV Enabled
+            </p>
+          </div>
+          <button
+            class="button outline whisper-voice"
+            @click="handleProxyClick(proxy)"
+            v-if="props.proxy.proxyId !== proxy.proxyAddress"
+            :key="proxy.proxyAddress"
+          >
+            View Proxy
+          </button>
+        </li>
+      </template>
+    </ul>
 
     <NuxtLink
       :to="`/ecosystem/${dapp?.slug}`"
@@ -113,6 +133,7 @@ const isOevEnabled = computed(() => {
 
   &.display-card {
     background: var(--gradient-radial-green);
+    grid-template-columns: 0.2fr 0.8fr 1fr;
     grid-column: 1;
     grid-row: 1/-1;
     h2 {
@@ -131,8 +152,10 @@ const isOevEnabled = computed(() => {
 
   text-content {
     display: grid;
-    grid-template-columns: 0.2fr 0.8fr 1fr;
+    grid-column: 1/-1;
+    grid-template-columns: subgrid;
     gap: var(--space-2xs);
+    align-items: center;
 
     picture.logo {
       max-width: 40px;
@@ -150,31 +173,32 @@ const isOevEnabled = computed(() => {
     h2 {
       white-space: nowrap;
     }
+  }
+  ul {
+    grid-column: 2/-1;
 
-    ul {
-      grid-column: 2/-1;
+    display: grid;
+    gap: var(--space-2xs);
 
+    li {
       display: grid;
-      gap: var(--space-2xs);
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: var(--space-xs);
+      min-height: 26px;
 
-      li {
-        display: flex;
-        align-items: center;
-        gap: var(--space-xs);
-        min-height: 26px;
+      p {
+        margin-top: unset;
+      }
 
-        p {
-          margin-top: unset;
-        }
-
-        .button {
-          padding: 0.2em 0.75em;
-        }
+      .button {
+        padding: 0.2em 0.75em;
       }
     }
   }
 
   a {
+    grid-column: 1/-1;
     display: flex;
     align-items: center;
 
@@ -183,14 +207,26 @@ const isOevEnabled = computed(() => {
   }
 
   .oev-tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: var(--space-3xs) var(--space-2xs);
-    border-bottom-left-radius: var(--corners);
+    padding: 0.2em 0.75em;
+    border-radius: var(--corners);
     font-weight: var(--weight-heavy);
-    background: var(--ink);
+    background: var(--green-lighter);
     color: var(--paper);
+    text-align: center;
+
+    &:is(p) {
+      background: unset;
+      color: var(--green-lighter);
+    }
+
+    &.absolute {
+      border-radius: unset;
+      border-bottom-left-radius: var(--corners);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }
 
@@ -205,6 +241,7 @@ const isOevEnabled = computed(() => {
 
   text-content {
     display: flex;
+    align-items: center;
 
     p {
       display: none;

@@ -126,19 +126,13 @@ onMounted(async () => {
       valid-step-icon=""
     >
       <!-- Step 1 -->
-      <FormKit
-        type="step"
-        v-auto-animate
-        name="content"
-        :next-attrs="nextClasses"
-      >
+      <FormKit type="step" name="content" :next-attrs="nextClasses">
         <ContentStep :dappForm="dappForm" />
       </FormKit>
 
       <!-- Step 2 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="images"
         :next-attrs="nextClasses"
         :previous-attrs="prevClasses"
@@ -149,7 +143,6 @@ onMounted(async () => {
       <!-- Step 3 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="tags"
         :next-attrs="nextClasses"
         :previous-attrs="prevClasses"
@@ -160,7 +153,6 @@ onMounted(async () => {
       <!-- Step 4 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="proxy"
         v-if="dappForm.productType === 'datafeed'"
         :next-attrs="nextClasses"
@@ -172,7 +164,6 @@ onMounted(async () => {
       <!-- Step 5 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="links"
         :previous-attrs="prevClasses"
         :next-attrs="nextClasses"
@@ -183,8 +174,12 @@ onMounted(async () => {
           <div class="messages">
             <ul class="validation-errors" v-auto-animate>
               <FormKitMessages v-auto-animate />
-              <template v-if="!isValid">
-                <li v-for="message in messages" class="whisper-voice">
+              <template
+                v-if="!isValid"
+                v-for="(message, i) in messages"
+                :key="i"
+              >
+                <li class="whisper-voice">
                   {{ message }}
                 </li>
               </template>

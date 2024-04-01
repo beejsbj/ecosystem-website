@@ -39,11 +39,12 @@ function handleReset() {
       </h1>
     </div>
 
-    <div class="actions" v-auto-animate>
+    <div class="actions" v-auto-animate v-if="showReset">
       <button
         @click="handleReset"
         class="button whisper-voice"
         v-if="showReset"
+        key="reset-button"
       >
         Reset To Feed List
       </button>
@@ -53,6 +54,7 @@ function handleReset() {
         :to="`https://market.api3.org/dapis/${chainSlug}/${feedSlug}`"
         class="button outline whisper-voice"
         :target="`${chainSlug}-${feedSlug}`"
+        key="market-button"
       >
         <span class="external-link"> View on Market </span>
       </NuxtLink>

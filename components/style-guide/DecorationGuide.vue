@@ -143,7 +143,7 @@ onMounted(() => {});
       </li>
     </ul>
 
-    <ul v-auto-animate>
+    <ul>
       <li v-for="icon in icons" :key="icon.name">
         <component
           :is="loadIcon(icon.component)"
@@ -152,7 +152,6 @@ onMounted(() => {});
           :key="icon.name"
           stroke="var(--green)"
           fill="none"
-          v-auto-animate
           v-tooltip="icon.name"
         />
       </li>

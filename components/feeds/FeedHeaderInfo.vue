@@ -32,7 +32,6 @@ function handleChainChange(event) {
       @input="handleChainChange"
       :options="chains"
       placeholder="Select Chain"
-      v-auto-animate
       select-icon="down"
       popover
     >
