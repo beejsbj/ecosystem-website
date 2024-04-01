@@ -21,6 +21,7 @@ function handleChainChange() {
 <template>
   <div class="feed-info">
     <FormKit
+      v-if="selectedChain"
       type="dropdown"
       v-model="selectedChain"
       @change="handleChainChange"
@@ -43,9 +44,9 @@ function handleChainChange() {
 
       <span>{{ proxy.type }}</span>
     </p>
-    <div class="feed-id" v-if="proxy.datafeedId || proxy.dapiId">
+    <div class="feed-id" v-if="proxy.feedId">
       <p class="whisper-voice">Data Feed ID:</p>
-      <WalletAddress :walletAddress="proxy.datafeedId ?? proxy.dapiId" />
+      <WalletAddress :walletAddress="proxy.feedId" />
     </div>
   </div>
 </template>

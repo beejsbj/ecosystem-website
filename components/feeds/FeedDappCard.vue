@@ -15,12 +15,14 @@ const formattedProxies = computed(() => {
     formattedProxyItems.push(...chainItems);
   });
 
-  console.log(formattedProxyItems);
-
-  return formattedProxyItems.filter(
-    (proxy) =>
-      proxy.feedName == props.feedname && proxy.chainId == props.proxy.chainId
-  );
+  return formattedProxyItems.filter((proxy) => {
+    if (props.proxy.chainId == undefined)
+      return proxy.feedName == props.feedname;
+    else
+      return (
+        proxy.feedName == props.feedname && proxy.chainId == props.proxy.chainId
+      );
+  });
 });
 
 function handleCardClick() {
@@ -33,6 +35,22 @@ function handleCardClick() {
       chainId: props.proxy.chainId,
     },
   });
+
+  console.log(useRoute().query);
+}
+
+function handleProxyClick(proxy) {
+  //change query params
+  console.log("proxy", proxy);
+  router.push({
+    query: {
+      dappSlug: props.dapp.slug,
+      chainId: proxy.chainId,
+      proxyId: proxy.proxyAddress,
+      feedId: proxy.datafeedId ?? proxy.dapiNameHash,
+      type: proxy.proxyType,
+    },
+  });
 }
 
 const isOevEnabled = computed(() => {
@@ -43,7 +61,7 @@ const isOevEnabled = computed(() => {
 </script>
 
 <template>
-  <li class="feed-dapp-card" @click="handleCardClick()">
+  <div class="feed-dapp-card" @click="handleCardClick()" v-auto-animate>
     <div class="oev-tag whisper-voice" v-if="isOevEnabled">OEV Enabled</div>
     <text-content>
       <picture class="logo">
@@ -60,7 +78,7 @@ const isOevEnabled = computed(() => {
         {{ dapp?.name ?? "Dapp Name" }}
       </h2>
 
-      <ul class="proxy-list">
+      <ul class="proxy-list" v-auto-animate>
         <h3 class="solid-voice">Proxy Address</h3>
         <template v-for="proxy in formattedProxies">
           <li>
@@ -70,6 +88,12 @@ const isOevEnabled = computed(() => {
             <p class="whisper-voice">
               {{ proxy.oev.enabled ? "OEV Enabled" : "" }}
             </p>
+            <button
+              class="button outline whisper-voice"
+              @click="handleProxyClick(proxy)"
+            >
+              View Proxy
+            </button>
           </li>
         </template>
       </ul>
@@ -82,7 +106,7 @@ const isOevEnabled = computed(() => {
     >
       Go to Dapp
     </NuxtLink>
-  </li>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -90,7 +114,7 @@ const isOevEnabled = computed(() => {
   display: grid;
   gap: var(--space-s);
 
-  padding: var(--space-l);
+  padding: var(--space-m);
   border-radius: var(--corners);
   background: var(--paper);
   border: var(--border-dark);
@@ -101,10 +125,11 @@ const isOevEnabled = computed(() => {
 
   &.display-card {
     background: var(--gradient-radial-green);
-    grid-column: 1/-1;
-    grid-row: span 2;
+    grid-column: 1;
+    grid-row: 1/-1;
     h2 {
       font-size: var(--step-2);
+      grid-column: span 2;
     }
 
     picture.logo {
@@ -118,7 +143,7 @@ const isOevEnabled = computed(() => {
 
   text-content {
     display: grid;
-    grid-template-columns: 0.1fr 1fr;
+    grid-template-columns: 0.1fr 0.9fr 1fr;
     gap: var(--space-2xs);
 
     align-items: center;
@@ -163,7 +188,7 @@ const isOevEnabled = computed(() => {
     align-items: center;
     //  white-space: nowrap;
 
-    justify-content: flex-end;
+    justify-self: flex-end;
   }
 
   .oev-tag {
@@ -181,10 +206,10 @@ const isOevEnabled = computed(() => {
 .feed-dapp-card:not(.display-card) {
   min-height: unset;
   display: grid;
+  grid-column: 2;
   gap: var(--space-3xs);
   align-items: center;
   padding: var(--space-s) var(--space-m);
-  grid-column: unset;
 
   text-content {
     display: flex;
@@ -195,7 +220,8 @@ const isOevEnabled = computed(() => {
   }
 
   ul,
-  h3 {
+  h3,
+  a {
     display: none;
   }
 }
