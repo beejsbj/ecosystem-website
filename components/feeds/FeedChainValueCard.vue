@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+const props = defineProps(["dapp", "proxy", "feedName"]);
+</script>
 
 <template>
-  <div class="chain-value-card">
+  <div class="chain-value-card" v-if="proxy.proxyId && proxy.feedId">
     <text-content>
       <h2 class="teaser-voice">Chain Value</h2>
       <p class="value attention-voice">$176.2</p>
