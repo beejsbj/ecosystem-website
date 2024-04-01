@@ -77,6 +77,8 @@ const isOevEnabled = computed(() => {
             <button
               class="button outline whisper-voice"
               @click="handleProxyClick(proxy)"
+              v-if="props.proxy.proxyId !== proxy.proxyAddress"
+              :key="proxy.proxyAddress"
             >
               View Proxy
             </button>
@@ -132,8 +134,6 @@ const isOevEnabled = computed(() => {
     grid-template-columns: 0.2fr 0.8fr 1fr;
     gap: var(--space-2xs);
 
-    align-items: center;
-
     picture.logo {
       max-width: 40px;
       border-radius: 50%;
@@ -161,9 +161,14 @@ const isOevEnabled = computed(() => {
         display: flex;
         align-items: center;
         gap: var(--space-xs);
+        min-height: 26px;
 
         p {
           margin-top: unset;
+        }
+
+        .button {
+          padding: 0.2em 0.75em;
         }
       }
     }
