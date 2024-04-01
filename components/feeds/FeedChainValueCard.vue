@@ -34,7 +34,6 @@
   border-radius: var(--corners);
 
   p.value {
-    //  text-align: center;
     margin-top: var(--space-2xs);
   }
 }

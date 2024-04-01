@@ -62,11 +62,11 @@ function filterBy(event) {
       <h2
         :class="dapp?.name.length <= 16 ? 'firm-voice' : 'firm-voice-smaller'"
       >
-        {{ dapp?.name ?? "Dapp Name" }}
+        {{ dapp?.name ?? "dApp Name" }}
       </h2>
 
       <p class="whisper-voice">
-        {{ dapp?.tagline ?? "This is the Dapp Tagline" }}
+        {{ dapp?.tagline ?? "This is the dApp Tagline" }}
       </p>
     </text-content>
 

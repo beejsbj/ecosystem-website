@@ -19,7 +19,7 @@ const formattedProxies = computed(() => {
     formattedProxyItems.push(...chainItems);
   });
 
-  //   console.log(formattedProxyItems);
+
 
   return formattedProxyItems;
 });
@@ -150,8 +150,6 @@ section.proxy-table {
       background: var(--gray-darkest);
       z-index: 1;
       border-bottom: none;
-
-      // box-shadow: var(--shadow);
     }
   }
   .table-row {
@@ -175,10 +173,6 @@ section.proxy-table {
 
     .chain picture.chain-icon {
       flex-grow: 1;
-    }
-
-    & + .table-row {
-      // border-top: var(--border-light);
     }
 
     .feed-link {

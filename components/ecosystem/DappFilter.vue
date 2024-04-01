@@ -311,8 +311,7 @@ dapp-filter {
     display: grid;
     gap: var(--space-m);
     padding: var(--space-s);
-    search-bar {
-    }
+
     text-content {
       display: flex;
       justify-content: space-between;
@@ -345,7 +344,6 @@ dapp-filter {
     flex-direction: column;
     gap: var(--space-3xs);
 
-    //  gap: calc(var(--space-m));
     padding: 0 var(--space-m);
   }
 }
