@@ -63,6 +63,7 @@ export default {
   display: flex;
   align-items: center;
   gap: var(--space-3xs);
+  padding: 0;
 }
 
 .whisper-voice {
