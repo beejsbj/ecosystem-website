@@ -245,18 +245,30 @@ nav {
 
 .footer-navigation inner-column {
   display: grid;
-  gap: var(--space-xl);
+  gap: var(--space-l);
   justify-content: space-between;
 
-  @media (min-width: 500px) {
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: start;
+  }
+
+  @media (min-width: 940px) {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: 1fr 1fr;
     align-items: start;
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
+  @media (min-width: 1110px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
   }
 
   .site-logo {
