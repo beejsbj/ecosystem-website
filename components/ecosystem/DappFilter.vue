@@ -354,5 +354,7 @@ button.icon.caret {
   max-width: var(--space-l);
 }
 
-
+:deep(.formkit-outer) {
+  margin: unset;
+}
 </style>

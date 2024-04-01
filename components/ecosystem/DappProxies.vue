@@ -35,9 +35,7 @@ function getFeedQuery(proxy) {
 
   //   type
   fullQuery += `&type=${proxy.proxyType}`;
-  fullQuery +=
-    proxy.proxyType == "datafeedId" ? `&datafeedId=${proxy.datafeedId}` : "";
-  fullQuery += proxy.proxyType == "dapi" ? `&dapiId=${proxy.dapiNameHash}` : "";
+  fullQuery += `&feedId=${proxy.datafeedId ?? proxy.dapiNameHash}`;
 
   //  oev
   fullQuery += proxy.oev.enabled ? `&oev=${proxy.oev.enabled}` : "";
@@ -70,7 +68,7 @@ function getFeedQuery(proxy) {
         <div class="chain">
           <!-- #todo clean up -->
 
-          <ChainIcon :id="chain" />
+          <ChainIcon :id="proxy.chainId" />
           {{ ecosystem.chainNames(proxy.chainId) }}
         </div>
 
