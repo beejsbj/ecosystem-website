@@ -56,10 +56,6 @@ useSeoMeta({
     justify-content: space-between;
     justify-items: start;
 
-    .button {
-      justify-self: center;
-    }
-
     @media (min-width: 768px) {
       display: flex;
     }
