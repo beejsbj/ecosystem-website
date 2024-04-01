@@ -15,41 +15,19 @@ const fetchString = computed(() => {
   return fetchString;
 });
 
-const params = {
-  ticker: feedName,
-  chainId: proxy.value.chainId,
-};
-
-const { data: feedProjects, pending } = await useLazyFetch("/api/projects", {
-  params,
+const params = computed(() => {
+  return {
+    ticker: feedName,
+  };
 });
 
-// const { data: feedProjects, pending } = await useAsyncData(
-//   "test",
-//   () =>
-//     $fetch(`/api/projects`, {
-//       params: {
-//         ticker: feedName,
-//         chainId: proxy.value.chainId,
-//       },
-//     }),
-//   {
-//     watch: [proxy],
-//   }
-// );
-
-// watch(proxy, (oldQuery, newQuery) => {
-//   console.log("before", feedProjects.value.projects.length);
-//   console.log("route.query changed", newQuery);
-//   //   refresh();
-//   console.log("after", feedProjects.value.projects.length);
-// });
+const { data: feedProjects, pending } = await useFetch("/api/projects", {
+  params,
+});
 </script>
 
 <template>
   <article>
-    <!-- <p>project count {{ feedProjects.projects.length }}</p> -->
-
     <!--  -->
     <SectionColumn class="header">
       <FeedDetailHeader />
@@ -65,5 +43,3 @@ const { data: feedProjects, pending } = await useLazyFetch("/api/projects", {
     />
   </article>
 </template>
-
-<style scoped lang="scss"></style>
