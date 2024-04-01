@@ -41,7 +41,7 @@ function handleCardClick(dapp) {
         <SkeletonCard />
         <SkeletonCard />
       </div>
-      <div class="display-card-section" v-else>
+      <div class="display-card-section" v-else v-auto-animate>
         <FeedDappCard
           :dapp="displayDapp"
           :proxy="proxy"
@@ -119,7 +119,7 @@ function handleCardClick(dapp) {
 
 .feed-dapp-cards {
   display: grid;
-  align-items: start;
+  align-content: start;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-s);
   position: relative;
