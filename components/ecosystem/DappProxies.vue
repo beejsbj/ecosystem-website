@@ -19,8 +19,6 @@ const formattedProxies = computed(() => {
     formattedProxyItems.push(...chainItems);
   });
 
-
-
   return formattedProxyItems;
 });
 

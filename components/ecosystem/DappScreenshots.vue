@@ -41,12 +41,21 @@ const onShow = (index) => {
 <style scoped lang="scss">
 .image-grid {
   display: grid;
-  gap: var(--space-3xs);
-  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
   grid-template-rows: auto auto;
 
   li {
     cursor: pointer;
+    border-radius: var(--corners);
+    overflow: hidden;
+    aspect-ratio: 16/9;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 </style>
