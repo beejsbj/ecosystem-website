@@ -2,8 +2,9 @@
 import { CHAINS } from "@api3/chains";
 
 const props = defineProps(["proxy"]);
+const router = useRouter();
 
-const selectedChain = ref(props.proxy.chainId);
+const selectedChain = ref(props.proxy.chainId ?? null);
 
 const chains = CHAINS.map((chain) => {
   return {
@@ -13,19 +14,24 @@ const chains = CHAINS.map((chain) => {
 });
 
 //
-function handleChainChange() {
-  console.log(selectedChain);
+function handleChainChange(event) {
+  router.push({
+    query: {
+      dappSlug: props.proxy.dappSlug,
+      chainId: event,
+    },
+  });
 }
 </script>
 
 <template>
   <div class="feed-info">
     <FormKit
-      v-if="selectedChain"
       type="dropdown"
       v-model="selectedChain"
-      @change="handleChainChange"
+      @input="handleChainChange"
       :options="chains"
+      placeholder="Select Chain"
       v-auto-animate
       select-icon="down"
       popover
@@ -40,12 +46,10 @@ function handleChainChange() {
       </template>
     </FormKit>
     <p class="whisper-voice" v-if="proxy.type">
-      Type:
-
-      <span>{{ proxy.type }}</span>
+      Type:&nbsp;<span>{{ proxy.type.toUpperCase() }}</span>
     </p>
     <div class="feed-id" v-if="proxy.feedId">
-      <p class="whisper-voice">Data Feed ID:</p>
+      <p class="whisper-voice">Data Feed ID:&nbsp;</p>
       <WalletAddress :walletAddress="proxy.feedId" />
     </div>
   </div>
@@ -58,14 +62,17 @@ function handleChainChange() {
   gap: var(--space-s);
   align-items: center;
   justify-content: start;
+  margin-top: var(--space-s);
 
   padding-left: var(--space-s);
 
   .formkit-outer {
     margin: 0 !important;
+    flex-basis: 220px;
+    background-color: var(--paper);
   }
-  .formkit-inner {
-    box-shadow: unset !important;
+  :deep(.formkit-inner) {
+    padding-left: var(--space-2xs);
   }
 
   .feed-id,
