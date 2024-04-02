@@ -178,7 +178,7 @@ function handleCardClick(dapp) {
     grid-column: 2/-1;
 
     display: grid;
-    gap: var(--space-2xs);
+    gap: var(--space-3xs);
 
     li {
       display: grid;

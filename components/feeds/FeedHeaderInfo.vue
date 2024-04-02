@@ -57,13 +57,12 @@ function handleChainChange(event) {
 <style scoped lang="scss">
 .feed-info {
   display: flex;
+  flex-wrap: wrap;
 
   gap: var(--space-s);
   align-items: center;
   justify-content: start;
-  margin-top: var(--space-s);
-
-  padding-left: var(--space-s);
+  margin-top: var(--space-m);
 
   .formkit-outer {
     margin: 0 !important;
@@ -82,6 +81,11 @@ function handleChainChange(event) {
 
     display: flex;
     align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 </style>

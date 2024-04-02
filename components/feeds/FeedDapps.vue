@@ -128,7 +128,6 @@ function handleCardClick(dapp) {
 .feed-dapp-cards {
   display: grid;
   align-content: start;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: var(--space-s);
   position: relative;
 
@@ -140,6 +139,7 @@ function handleCardClick(dapp) {
 
   @media (min-width: 768px) {
     grid-column: 2;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
 

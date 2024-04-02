@@ -66,6 +66,8 @@ function handleReset() {
 .title-mast {
   display: grid;
 
+  gap: var(--space-xs);
+
   .feed-icon-heading {
     display: flex;
     gap: var(--space-2xs);
