@@ -162,7 +162,7 @@ section.proxy-table {
     div {
       white-space: nowrap;
       @media (max-width: 768px) {
-        min-width: 130px;
+        min-width: 100px;
       }
     }
 
