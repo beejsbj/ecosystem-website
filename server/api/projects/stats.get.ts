@@ -99,7 +99,7 @@ export default defineEventHandler(async (event) => {
     const allProjects = await Project.find({ status: "active" });
 
     // get preare a list with feedNames as keys and list of chainIds as values
-    const feedStats: any = {};
+    const feedStats: any[] = [];
     allProjects.forEach((project) => {
       if (!project.proxies) {
         return;
@@ -110,14 +110,19 @@ export default defineEventHandler(async (event) => {
         const proxies = project.proxies[chainId];
 
         proxies.forEach((proxy: any) => {
-          if (!feedStats[proxy.feedName]) {
-            feedStats[proxy.feedName] = [];
+          const existingFeedStat = feedStats.find(
+            (feedStat) => feedStat.feedName === proxy.feedName
+          );
+          if (existingFeedStat) {
+            if (!existingFeedStat.chainIds.includes(chainId)) {
+              existingFeedStat.chainIds.push(chainId);
+            }
+          } else {
+            feedStats.push({
+              feedName: proxy.feedName,
+              chainIds: [chainId],
+            });
           }
-          if (feedStats[proxy.feedName].includes(chainId)) {
-            return;
-          }
-
-          feedStats[proxy.feedName].push(chainId);
         });
       });
     });
