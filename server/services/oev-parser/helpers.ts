@@ -34,6 +34,16 @@ export function getTotalSentToBuilder(protocol: any[]) {
   );
 }
 
+// Calculate the total profit made by the searcher for a protocol
+export function getTotalProfit(protocol: any[]) {
+  return protocol.reduce(
+    (total, dataPoint) =>
+      Number(total) +
+      Number(!dataPoint.totalProfitUSD ? 0 : dataPoint.totalProfitUSD),
+    0
+  );
+}
+
 // Convert the data array to a monthly data array
 export function dataToMonthly(array: any[]) {
   const monthly: any = {};

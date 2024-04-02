@@ -1,14 +1,3 @@
-/**
- *  id: "total",
-    name: "Total",
-    chainId: 1,
-    hide: true,
-    trueHide: true,
-    totalLiquidated: totalLiquidated,
-    totalSentToBuilderUSD: totalSentToBuilderUSD,
-    oevRate: getOEVRate({ totalLiquidated, totalSentToBuilderUSD }),
-    withOEV: getOEV({ totalLiquidated, totalSentToBuilderUSD }),
- */
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 /**
@@ -44,6 +33,10 @@ const OevTotalSchema = new Schema({
     required: true,
   },
   totalSentToBuilderUSD: {
+    type: Number,
+    required: true,
+  },
+  totalProfitUSD: {
     type: Number,
     required: true,
   },

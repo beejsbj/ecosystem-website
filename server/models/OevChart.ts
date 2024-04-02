@@ -12,14 +12,8 @@ const OevChartSchema = new Schema({
     type: String,
     required: true,
   },
-  // array of [
-  // "6/7/2021",
-  // 1492.9429421981115,
-  // 36.24253864949333
-  // ],
-  // array of objects
   data: {
-    type: Array,
+    type: Array, // nx4 array of [timestamp, totalLiquidated, totalSentToBuilderUSD, totalProfitUSD]
     required: true,
   },
 });

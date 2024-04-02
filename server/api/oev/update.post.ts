@@ -72,11 +72,11 @@ export default defineEventHandler(async (event: any) => {
     event.node.res.statusCode = 201;
     return { code: "OK", message: "All oev data synced with files!" };
   } catch (err: any) {
-    console.log("add article error ", err);
+    console.log("Update error ", err);
     event.node.res.statusCode = 500;
     return {
       code: "ERROR",
-      message: "Failed to add, Invalid markdown file!",
+      message: "Failed to update OEV data!",
     };
   }
 });
