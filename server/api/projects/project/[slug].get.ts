@@ -1,4 +1,5 @@
 import { Project } from "~/server/models/Project";
+import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   const projectSlug = event.context?.params?.slug;
@@ -11,6 +12,17 @@ export default defineEventHandler(async (event) => {
         message: "Invalid project name slug",
       };
     }
+
+    const cacheKey = "project-" + projectSlug + "-details";
+    const cachedData: any = queryCache.get(cacheKey);
+
+    if (cachedData !== undefined) {
+      console.log("getting from cache");
+
+      event.node.res.statusCode = 200;
+      return JSON.parse(cachedData);
+    }
+
     const project = await Project.findOne({
       slug: projectSlug,
       status: "active",
@@ -23,6 +35,9 @@ export default defineEventHandler(async (event) => {
         message: `Project not found `,
       };
     }
+
+    // cache result with new queries
+    queryCache.set(cacheKey, JSON.stringify(project), cacheInterval);
 
     return project;
   } catch (err) {

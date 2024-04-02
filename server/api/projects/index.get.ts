@@ -105,7 +105,7 @@ export default defineEventHandler(async (event) => {
     const cachedData: any = queryCache.get(cacheKey);
 
     if (cachedData !== undefined) {
-      console.log("getting from cache");
+      event.node.res.statusCode = 200;
       return JSON.parse(cachedData);
     }
 
@@ -144,6 +144,7 @@ export default defineEventHandler(async (event) => {
       cacheInterval
     );
 
+    event.node.res.statusCode = 200;
     return { projects: results, total: totalProjects };
   } catch (err: any) {
     console.log("get projects error", err);

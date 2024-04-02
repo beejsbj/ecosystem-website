@@ -1,7 +1,18 @@
 import { Project } from "~/server/models/Project";
+import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   try {
+    const cacheKey = "stats";
+    const cachedData: any = queryCache.get(cacheKey);
+
+    if (cachedData !== undefined) {
+      console.log("getting from cache");
+
+      event.node.res.statusCode = 200;
+      return JSON.parse(cachedData);
+    }
+
     const stats = await Project.aggregate([
       {
         $match: {
@@ -83,7 +94,43 @@ export default defineEventHandler(async (event) => {
         count: el?.count,
       };
     });
-    const finalPayload = { chains, categories, productTypes, years };
+
+    // prepare feed stats
+    const allProjects = await Project.find({ status: "active" });
+
+    // get preare a list with feedNames as keys and list of chainIds as values
+    const feedStats: any = {};
+    allProjects.forEach((project) => {
+      if (!project.proxies) {
+        return;
+      }
+      const chainIds = Object.keys(project.proxies);
+
+      chainIds.forEach((chainId) => {
+        const proxies = project.proxies[chainId];
+
+        proxies.forEach((proxy: any) => {
+          if (!feedStats[proxy.feedName]) {
+            feedStats[proxy.feedName] = [];
+          }
+          if (feedStats[proxy.feedName].includes(chainId)) {
+            return;
+          }
+
+          feedStats[proxy.feedName].push(chainId);
+        });
+      });
+    });
+
+    const finalPayload = {
+      chains,
+      categories,
+      productTypes,
+      years,
+      feeds: feedStats,
+    };
+    // cache result
+    queryCache.set(cacheKey, JSON.stringify(finalPayload), cacheInterval);
 
     event.node.res.statusCode = 200;
     return finalPayload;
