@@ -1,49 +1,74 @@
 <script setup>
-import { CHAINS } from "@api3/chains";
-
+import { reset } from "@formkit/core";
 const props = defineProps(["proxy"]);
+const ecosystem = useEcosystemStore();
+const ui = useInterfaceStore();
 const router = useRouter();
 
-const selectedChain = ref(props.proxy.chainId ?? null);
+const { data: stats, pending } = await useFetch("/api/projects/stats/", {
+  pick: ["feeds"],
+});
 
-const chains = CHAINS.map((chain) => {
-  return {
-    label: chain.name,
-    value: chain.id,
-  };
+const currentFeedChains = computed(() => {
+  let chains = stats.value.feeds.find(
+    (feed) => feed.feedName == props.proxy.feedName
+  )?.chainIds;
+
+  if (!chains) {
+    return [];
+  }
+
+  return chains.map((chain) => {
+    return {
+      label: ecosystem.chainNames(chain),
+      value: chain,
+    };
+  });
 });
 
 //
-function handleChainChange(event) {
+
+function handleChainChange(chain) {
+  //   this should only triiger when the user changes the chain using the dropdown
+
+  if (chain == props.proxy.chainId) {
+    return;
+  }
+  console.log("dropdown handler");
   router.push({
     query: {
-      dappSlug: props.proxy.dappSlug,
-      chainId: event,
+      chainId: chain,
     },
   });
 }
 </script>
 
 <template>
-  <div class="feed-info">
-    <FormKit
-      type="dropdown"
-      v-model="selectedChain"
-      @input="handleChainChange"
-      :options="chains"
-      placeholder="Select Chain"
-      select-icon="down"
-      popover
-    >
-      <template #option="{ option }">
-        <div class="chain-option">
-          <ChainIcon :id="option.value" />
-          <span class="whisper-voice">
-            {{ option.label }}
-          </span>
-        </div>
-      </template>
-    </FormKit>
+  <div class="feed-info" v-auto-animate>
+    <SkeletonListItem v-if="!ui.loadingDone || pending" />
+
+    <ClientOnly v-else>
+      <FormKit
+        id="chain-select"
+        type="dropdown"
+        v-model="props.proxy.chainId"
+        :options="currentFeedChains"
+        @input="handleChainChange"
+        placeholder="Select Chain"
+        select-icon="down"
+        popover
+        selection-removable
+      >
+        <template #option="{ option }">
+          <div class="chain-option">
+            <ChainIcon :id="option.value" />
+            <span class="whisper-voice">
+              {{ option.label }}
+            </span>
+          </div>
+        </template>
+      </FormKit>
+    </ClientOnly>
     <p class="whisper-voice" v-if="proxy.type">
       Type:&nbsp;<span>{{ proxy.type.toUpperCase() }}</span>
     </p>
@@ -81,6 +106,8 @@ function handleChainChange(event) {
 
     display: flex;
     align-items: center;
+
+    white-space: nowrap;
   }
 
   @media (min-width: 768px) {
