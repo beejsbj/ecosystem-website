@@ -72,7 +72,7 @@ function getFeedQuery(proxy) {
 
         <!-- feed name -->
         <div class="feedname">
-          <!-- <FeedIcon :feed="proxy.feedName" v-tooltip="proxy?.feedName" /> -->
+          <FeedIcon :feed="proxy.feedName" />
         </div>
 
         <!-- type -->
@@ -160,7 +160,10 @@ section.proxy-table {
     min-width: fit-content;
 
     div {
-      min-width: 130px;
+      white-space: nowrap;
+      @media (max-width: 768px) {
+        min-width: 130px;
+      }
     }
 
     .chain {

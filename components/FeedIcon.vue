@@ -26,7 +26,7 @@ function imgSrc(symbol) {
 </script>
 
 <template>
-  <div class="feed-icon">
+  <div class="feed-icon" v-tooltip="feed">
     <picture
       v-for="symbol in symbols"
       :data-first-letter="symbol[0].toUpperCase()"
