@@ -101,7 +101,6 @@ function getFeedQuery(proxy) {
           <NuxtLink
             class="text external-link whisper-voice"
             :to="`/feeds/${getFeedQuery(proxy)}`"
-            :target="`${proxy.feedName}-${props.dapp.slug}`"
             v-if="!isForm"
           >
             Go to Feed
