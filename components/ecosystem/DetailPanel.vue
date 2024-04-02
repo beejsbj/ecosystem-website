@@ -124,10 +124,6 @@ aside {
     li {
       display: flex;
       gap: var(--space-3xs);
-
-      :deep(picture) {
-        max-width: 2rem;
-      }
     }
   }
 
@@ -163,13 +159,9 @@ aside {
 
 .chain {
   ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: var(--space-s);
-
-    picture.chain-icon {
-      aspect-ratio: 1/1;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
   }
 }
 
