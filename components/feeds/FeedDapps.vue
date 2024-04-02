@@ -20,23 +20,6 @@ const displayDapp = computed(() => {
 
   return dapps.value.find((dapp) => dapp.slug == props.proxy.dappSlug);
 });
-
-function handleCardClick(dapp) {
-  //   move  card to top of the list
-  const card = event.target.closest(".feed-dapp-card");
-
-  if (card.classList.contains("display-card")) {
-    return;
-  }
-
-  //change query params
-  router.push({
-    query: {
-      dappSlug: dapp.slug,
-      chainId: props.proxy.chainId,
-    },
-  });
-}
 </script>
 
 <template>

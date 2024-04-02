@@ -48,8 +48,9 @@ function handleProxyClick(currentProxy) {
 function handleCardClick(dapp) {
   //   move  card to top of the list
   const isButton = event.target.closest("button");
+  const card = event.target.closest(".feed-dapp-card");
 
-  if (isButton) {
+  if (isButton || card.classList.contains("display-card")) {
     return;
   }
 
