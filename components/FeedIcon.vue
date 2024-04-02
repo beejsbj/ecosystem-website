@@ -46,6 +46,7 @@ function imgSrc(symbol) {
 .feed-icon {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 picture {
