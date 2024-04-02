@@ -4,15 +4,9 @@ const route = useRoute();
 const feedSlug = route.params.detail;
 const feedName = feedSlug.replace("-", "/");
 const proxy = computed(() => {
-  return route.query;
-});
-
-const fetchString = computed(() => {
-  let fetchString = `/api/projects?&ticker=${feedName}`;
-  if (proxy.value.chainId) {
-    fetchString += `&chains=${proxy.value.chainId}`;
-  }
-  return fetchString;
+  let proxy = { ...route.query };
+  proxy.feedName = feedName;
+  return proxy;
 });
 
 const params = computed(() => {
@@ -29,6 +23,7 @@ const { data: feedProjects, pending } = await useFetch("/api/projects", {
 <template>
   <article>
     <!--  -->
+
     <SectionColumn class="header">
       <FeedDetailHeader />
       <FeedHeaderInfo :proxy="proxy" />
