@@ -33,16 +33,18 @@ function filterBy(event) {
   <li class="dapp-card list-move">
     <header>
       <ul class="chain-list">
-        <li
-          class="chain"
-          v-for="chain in dapp?.chains"
-          :data-chain="chain"
-          @click="filterBy"
-        >
-          <!-- #todo clean up -->
+        <template v-for="(chain, i) in dapp?.chains">
+          <li class="chain" :data-chain="chain" @click="filterBy" v-if="i < 3">
+            <!-- #todo clean up -->
 
-          <ChainIcon :id="chain" />
-        </li>
+            <ChainIcon :id="chain" />
+          </li>
+          <li v-else-if="i == 4">
+            <picture class="plus-icon">
+              <img src="@/assets/images/interface/plus.svg" alt="" />
+            </picture>
+          </li>
+        </template>
       </ul>
 
       <div class="productType" :data-productType="dapp?.productType">
@@ -114,8 +116,13 @@ function filterBy(event) {
 
     .chain-list {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       gap: var(--space-2xs);
+
+      .plus-icon {
+        max-width: 10px;
+      }
     }
 
     //  .chain-list {
