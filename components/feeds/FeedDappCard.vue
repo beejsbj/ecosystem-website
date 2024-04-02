@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(["dapp", "proxy", "feedname"]);
+const props = defineProps(["dapp", "proxy"]);
 const router = useRouter();
 
 const formattedProxies = computed(() => {
@@ -16,11 +16,12 @@ const formattedProxies = computed(() => {
   });
 
   return formattedProxyItems.filter((proxy) => {
-    if (props.proxy.chainId == undefined)
-      return proxy.feedName == props.feedname;
-    else
+    if (props.proxy.chainId == undefined) {
+      return proxy.feedName == props.proxy.feedName;
+    } else
       return (
-        proxy.feedName == props.feedname && proxy.chainId == props.proxy.chainId
+        proxy.feedName == props.proxy.feedName &&
+        proxy.chainId == props.proxy.chainId
       );
   });
 });
@@ -43,6 +44,8 @@ function handleProxyClick(currentProxy) {
       type: currentProxy.proxyType,
     },
   });
+
+  scrollToDisplayCard();
 }
 
 function handleCardClick(dapp) {
@@ -55,20 +58,26 @@ function handleCardClick(dapp) {
   }
 
   //change query params
+
   router.push({
     query: {
       dappSlug: dapp.slug,
       chainId: props.proxy.chainId,
     },
   });
+
+  scrollToDisplayCard();
+}
+
+function scrollToDisplayCard() {
+  const displayCard = document.querySelector(".display-card-section");
+  displayCard.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 </script>
 
 <template>
   <div class="feed-dapp-card" @click="handleCardClick(dapp)">
-    <div class="oev-tag absolute whisper-voice" v-if="isOevEnabled">
-      OEV Enabled
-    </div>
+    <div class="oev-tag absolute" v-if="isOevEnabled">OEV</div>
     <text-content>
       <picture class="logo">
         <NuxtImg
@@ -208,9 +217,10 @@ function handleCardClick(dapp) {
   }
 
   .oev-tag {
-    padding: 0.2em 0.75em;
+    padding: 0.25em 0.75em;
     border-radius: var(--corners);
-    font-weight: var(--weight-heavy);
+    font-weight: 800;
+    font-size: calc((var(--step--2) + var(--step--1)) / 2);
     background: var(--green-lighter);
     color: var(--paper);
     text-align: center;
