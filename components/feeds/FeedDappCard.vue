@@ -77,7 +77,7 @@ function scrollToDisplayCard() {
 
 <template>
   <div class="feed-dapp-card" @click="handleCardClick(dapp)">
-    <div class="oev-tag absolute" v-if="isOevEnabled">OEV</div>
+    <div class="oev-tag absolute solid-voice" v-if="isOevEnabled">OEV</div>
     <text-content>
       <picture class="logo">
         <NuxtImg
