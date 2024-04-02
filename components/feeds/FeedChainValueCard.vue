@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(["dapp", "proxy", "feedName"]);
+const props = defineProps(["dapp", "proxy"]);
 </script>
 
 <template>

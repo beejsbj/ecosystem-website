@@ -1,17 +1,22 @@
 <script setup>
-const props = defineProps(["feedProjects", "pending", "proxy", "feedName"]);
+const props = defineProps(["feedProjects", "pending", "proxy"]);
 const router = useRouter();
 const ui = useInterfaceStore();
 
+// #todo get more dapps on scroll
 const dapps = computed(() => {
   if (!props.proxy.chainId) {
     return props.feedProjects.projects;
   }
 
   return props.feedProjects.projects.filter((dapp) => {
-    return dapp.proxies[props.proxy.chainId];
+    if (dapp.proxies[props.proxy.chainId]) {
+      return true;
+    }
   });
 });
+
+console.log(dapps.value);
 
 const displayDapp = computed(() => {
   if (!dapps.value || !props.proxy.dappSlug) {
@@ -19,6 +24,18 @@ const displayDapp = computed(() => {
   }
 
   return dapps.value.find((dapp) => dapp.slug == props.proxy.dappSlug);
+});
+
+const filteredDapps = computed(() => {
+  if (!dapps.value) {
+    return [];
+  }
+
+  if (!displayDapp.value) {
+    return dapps.value;
+  }
+
+  return dapps.value.filter((dapp) => dapp.slug !== displayDapp.value.slug);
 });
 </script>
 
@@ -34,20 +51,18 @@ const displayDapp = computed(() => {
           :dapp="displayDapp"
           :proxy="proxy"
           :key="displayDapp.slug"
-          :feedname="feedName"
           class="display-card"
         />
 
         <FeedChainValueCard
           :dapp="displayDapp"
           :proxy="proxy"
-          :feedname="feedName"
           key="chain-value-card"
         />
       </div>
     </template>
 
-    <template v-if="dapps">
+    <template v-if="filteredDapps">
       <ul
         class="feed-dapp-cards"
         :class="{ 'is-display': !displayDapp }"
@@ -60,17 +75,16 @@ const displayDapp = computed(() => {
         class="feed-dapp-cards"
         :class="{ 'is-display': !displayDapp }"
         v-auto-animate
-        v-else-if="dapps.length > 1"
+        v-else-if="filteredDapps.length > 0"
       >
-        <h3 class="teaser-voice">dApps that are on this Feed</h3>
-        <template v-for="dapp in dapps">
+        <h3 class="teaser-voice">dApps that use this Feed</h3>
+        <template v-for="dapp in filteredDapps">
           <li v-if="displayDapp !== dapp" :key="dapp.slug">
             <SkeletonCard v-if="pending" />
             <FeedDappCard
               :dapp="dapp"
               :proxy="proxy"
               :key="dapp.slug"
-              :feedname="feedName"
               :class="{ 'display-card': !displayDapp }"
             />
           </li>

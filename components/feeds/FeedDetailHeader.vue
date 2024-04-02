@@ -15,7 +15,8 @@ const chainSlug = computed(() => {
 });
 
 const showReset = computed(() => {
-  return Object.keys(route.query).length > 0;
+  const hasQuery = Object.keys(route.query).length > 0;
+  return hasQuery;
 });
 
 const showMarket = computed(() => {
