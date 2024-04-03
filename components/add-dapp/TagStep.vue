@@ -53,7 +53,7 @@ onMounted(() => {
         popover
       >
         <template #option="{ option }">
-          <div class="formkit-icon-option">
+          <div class="chain-option">
             <ChainIcon :chain="option.label" />
             <span>
               {{ option.label }}
@@ -101,7 +101,7 @@ onMounted(() => {
         popover
       >
         <template #option="{ option }">
-          <div class="formkit-icon-option">
+          <div class="chain-option">
             <DynamicIcon :icon="option.label" />
             <span>
               {{ option.label }}

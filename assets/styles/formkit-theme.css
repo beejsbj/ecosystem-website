@@ -520,3 +520,10 @@
 [data-type="taglist"] .formkit-remove-selection {
   color: var(--ink) !important;
 }
+
+.chain-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs) 0;
+}
