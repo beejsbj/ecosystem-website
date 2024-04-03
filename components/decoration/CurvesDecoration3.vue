@@ -1423,7 +1423,6 @@ picture.curves-decoration-3 {
     @media (min-width: 768px) {
       top: 0px;
       left: 500px;
-      border: var(--border);
     }
 
     @media (min-width: 1324px) {
