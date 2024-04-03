@@ -1,5 +1,5 @@
 <script setup>
-import { reset } from "@formkit/core";
+import { Skeletor } from "vue-skeletor";
 const props = defineProps(["proxy"]);
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
@@ -44,42 +44,63 @@ function handleChainChange(chain) {
 </script>
 
 <template>
-  <div class="feed-info" v-auto-animate>
-    <SkeletonListItem v-if="!ui.loadingDone || pending" />
+  <div class="container">
+    <div class="feed-info" v-auto-animate>
+      <template v-if="!ui.loadingDone || pending">
+        <SkeletonListItem class="skeleton" />
+        <Skeletor pill />
+      </template>
 
-    <ClientOnly v-else>
-      <FormKit
-        id="chain-select"
-        type="dropdown"
-        v-model="props.proxy.chainId"
-        :options="currentFeedChains"
-        @input="handleChainChange"
-        placeholder="Select Chain"
-        select-icon="down"
-        popover
-        selection-removable
-      >
-        <template #option="{ option }">
-          <div class="chain-option">
-            <ChainIcon :id="option.value" />
-            <span class="whisper-voice">
-              {{ option.label }}
-            </span>
-          </div>
-        </template>
-      </FormKit>
-    </ClientOnly>
-    <p class="whisper-voice" v-if="proxy.type">
-      Type:&nbsp;<span>{{ proxy.type.toUpperCase() }}</span>
-    </p>
-    <div class="feed-id" v-if="proxy.feedId">
-      <p class="whisper-voice">Data Feed ID:&nbsp;</p>
-      <WalletAddress :walletAddress="proxy.feedId" />
+      <template v-else>
+        <ClientOnly>
+          <FormKit
+            id="chain-select"
+            type="dropdown"
+            v-model="props.proxy.chainId"
+            :options="currentFeedChains"
+            @input="handleChainChange"
+            placeholder="Select Chain"
+            select-icon="down"
+            popover
+            selection-removable
+          >
+            <template #option="{ option }">
+              <div class="chain-option">
+                <ChainIcon :id="option.value" />
+                <span class="whisper-voice">
+                  {{ option.label }}
+                </span>
+              </div>
+            </template>
+          </FormKit>
+        </ClientOnly>
+        <p class="whisper-voice" v-if="proxy.type">
+          Type:&nbsp;<span>{{ proxy.type.toUpperCase() }}</span>
+        </p>
+        <div class="feed-id" v-if="proxy.feedId">
+          <p class="whisper-voice">Data Feed ID:&nbsp;</p>
+          <WalletAddress :walletAddress="proxy.feedId" />
+        </div>
+      </template>
     </div>
+
+    <FeedHeaderActions />
   </div>
 </template>
 
 <style scoped lang="scss">
+.container {
+  margin-top: var(--space-s);
+
+  display: grid;
+  align-items: center;
+  gap: var(--space-xs);
+  row-gap: var(--space-m);
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 0.6fr;
+  }
+}
 .feed-info {
   display: flex;
   flex-wrap: wrap;
@@ -87,12 +108,17 @@ function handleChainChange(chain) {
   gap: var(--space-s);
   align-items: center;
   justify-content: start;
-  margin-top: var(--space-m);
+  container-type: inline-size;
 
-  .formkit-outer {
+  .formkit-outer,
+  .skeleton {
     margin: 0 !important;
     flex-basis: 220px;
     background-color: var(--paper);
+
+    @media (max-width: 500px) {
+      flex-basis: 100%;
+    }
   }
   :deep(.formkit-inner) {
     padding-left: var(--space-2xs);
@@ -109,10 +135,16 @@ function handleChainChange(chain) {
 
     white-space: nowrap;
   }
+}
 
-  @media (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
+@container (max-width: 500px) {
+  .formkit-outer,
+  .skeleton {
+    flex-basis: 100% !important;
+  }
+
+  .formkit-outer {
+    order: 3;
   }
 }
 </style>

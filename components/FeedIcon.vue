@@ -68,13 +68,13 @@ picture {
   &:first-child {
     position: relative;
     z-index: 3;
-    left: calc(var(--width) * 0.1);
+    //  left: calc(var(--width) * 0.1);
   }
 
   &:last-child {
     position: relative;
     z-index: 2;
-    right: calc(var(--width) * 0.1);
+    right: calc(var(--width) * 0.2);
   }
 }
 

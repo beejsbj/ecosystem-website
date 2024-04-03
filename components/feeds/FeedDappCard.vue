@@ -48,7 +48,7 @@ function handleProxyClick(currentProxy) {
   scrollToDisplayCard();
 }
 
-function handleCardClick(dapp) {
+function handleCardClick() {
   //   move  card to top of the list
   const isButton = event.target.closest("button");
   const card = event.target.closest(".feed-dapp-card");
@@ -57,11 +57,15 @@ function handleCardClick(dapp) {
     return;
   }
 
-  //change query params
+  if (formattedProxies.value.length === 1) {
+    handleProxyClick(formattedProxies.value[0]);
+    return;
+  }
 
+  //change query params
   router.push({
     query: {
-      dappSlug: dapp.slug,
+      dappSlug: props.dapp.slug,
       chainId: props.proxy.chainId,
     },
   });
@@ -70,13 +74,13 @@ function handleCardClick(dapp) {
 }
 
 function scrollToDisplayCard() {
-  const displayCard = document.querySelector(".display-card-section");
-  displayCard.scrollIntoView({ behavior: "smooth", block: "center" });
+  const displayCard = document.querySelector(".feed-icon-heading");
+  displayCard.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 </script>
 
 <template>
-  <div class="feed-dapp-card" @click="handleCardClick(dapp)">
+  <div class="feed-dapp-card" @click="handleCardClick">
     <div class="oev-tag absolute solid-voice" v-if="isOevEnabled">OEV</div>
     <text-content>
       <picture class="logo">
