@@ -125,7 +125,7 @@ const handleFilter = (event) => {
             >
               <template #label="context">
                 <div class="flex">
-                  <ChainIcon :chain="chain.label" />
+                  <ChainIcon :id="chain.value" />
                   <span class="whisper-voice">
                     {{ context.label }}
                   </span>

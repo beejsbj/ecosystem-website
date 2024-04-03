@@ -103,7 +103,7 @@ async function handleUpdateProxy() {
         >
           <template #option="{ option }">
             <div class="chain-option">
-              <ChainIcon :chain="option.label" />
+              <ChainIcon :id="option.value" />
               <span>
                 {{ option.label }}
               </span>

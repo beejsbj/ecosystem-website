@@ -54,7 +54,7 @@ onMounted(() => {
       >
         <template #option="{ option }">
           <div class="chain-option">
-            <ChainIcon :chain="option.label" />
+            <ChainIcon :id="option.value" />
             <span>
               {{ option.label }}
             </span>
@@ -63,7 +63,7 @@ onMounted(() => {
         <template #tag="{ handlers, option, classes }">
           <div :class="classes.tag">
             <!-- <img :src="option.logo" class="w-5 mr-2 bg-white" /> -->
-            <ChainIcon :chain="option.label" />
+            <ChainIcon :id="option.value" />
             <span :class="classes.tagLabel">
               {{ option.label }}
             </span>
