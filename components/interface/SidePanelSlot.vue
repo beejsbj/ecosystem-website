@@ -21,60 +21,23 @@ function onBeforeEnter(el, done) {
     },
     {
       x: "0%",
+      ease: "power4.out",
       duration: 0.3,
       onComplete: done,
     }
   );
 }
 
-function onEnter(el, done) {
-  const $as = el.querySelectorAll("nav .text");
-  const $buttons = el.querySelector("nav .button");
-  const timeline = gsap.timeline();
-
-  timeline
-    .fromTo(
-      $as,
-      {
-        x: "100%",
-        ease: "linear",
-      },
-      {
-        delay: 0.3,
-        x: "0%",
-        duration: 0.3,
-        stagger: 0.1,
-        ease: "linear",
-      }
-    )
-    .fromTo(
-      $buttons,
-      {
-        y: "50vh",
-        ease: "linear",
-      },
-      {
-        y: "0%",
-        duration: 0.3,
-        stagger: 0.1,
-        ease: "linear",
-        onComplete: done,
-      },
-      "-=0.3"
-    );
-}
-
 function onLeave(el, done) {
   gsap.fromTo(
     el,
     {
-      ease: "linear",
       x: "0%",
     },
     {
       x: "100%",
-      duration: 0.5,
-      ease: "linear",
+      duration: 0.3,
+      ease: "power4.out",
       onComplete: done,
     }
   );
@@ -86,7 +49,6 @@ function onLeave(el, done) {
     <Transition
       name="panel"
       @before-enter="onBeforeEnter"
-      @enter="onEnter"
       @leave="onLeave"
       :css="false"
     >
