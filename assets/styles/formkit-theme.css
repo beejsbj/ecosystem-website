@@ -527,3 +527,9 @@
   gap: var(--space-3xs);
   padding: var(--space-2xs) 0;
 }
+
+/* formkit-help */
+
+.oev .formkit-help {
+  display: none;
+}
