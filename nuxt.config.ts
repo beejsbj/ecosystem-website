@@ -108,7 +108,7 @@ export default defineNuxtConfig({
     [
       "@nuxt/devtools",
       {
-        enabled: false, // Enable only in development
+        enabled: true, // Enable only in development
       },
     ],
 

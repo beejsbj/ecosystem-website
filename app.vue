@@ -85,10 +85,3 @@ onMounted(() => {
     <NuxtPage />
   </NuxtLayout>
 </template>
-
-<style>
-/* nuxt dev tools */
-body > div[data-v-app] {
-  display: none;
-}
-</style>
