@@ -118,18 +118,17 @@ const inputs = ref([
       match the design of the site.
     </p>
     <ul>
-      <template v-for="input in inputs">
+      <template v-for="(input, i) in inputs">
         <li class="grid" v-if="!input.isMultiselect && !input.isRepeater">
           <!-- normal -->
           <FormKit
             :type="input.type"
             :label="input.label"
             :name="input.label"
-            :id="input.label"
+            :id="i + input.label + 'normal'"
             :options="input.options"
             help="This is a help message. Default input"
             :placeholder="`Add ${input.label.toLowerCase()}...`"
-            :prefix-icon="input.type"
             :multiple="input.isMultiple"
             value="This is the input"
           />
@@ -139,11 +138,10 @@ const inputs = ref([
             :type="input.type"
             :label="input.label + ' Focused'"
             :name="input.label"
-            :id="input.label"
+            :id="i + input.label + 'focused'"
             :options="input.options"
             help="This is a help message"
             :placeholder="`Add ${input.label.toLowerCase()}...`"
-            :prefix-icon="input.type"
             :multiple="input.isMultiple"
             :focused="true"
             value="This is the input"
@@ -157,11 +155,10 @@ const inputs = ref([
             :type="input.type"
             :label="input.label + ' Invalid'"
             :name="input.label"
-            :id="input.label"
+            :id="i + input.label + 'invalid'"
             :options="input.options"
             help="This is a help message."
             :placeholder="`Add ${input.label.toLowerCase()}...`"
-            :prefix-icon="input.type"
             :multiple="input.isMultiple"
             validation="length:30"
             validation-visibility="live"
@@ -174,11 +171,10 @@ const inputs = ref([
             :type="input.type"
             :label="input.label + ' Disabled'"
             :name="input.label"
-            :id="input.label"
+            :id="i + input.label + 'disabled'"
             :options="input.options"
             help="This is a help message."
             :placeholder="`Add ${input.label.toLowerCase()}...`"
-            :prefix-icon="input.type"
             :multiple="input.isMultiple"
             value="This is the input"
             disabled
@@ -204,27 +200,6 @@ const inputs = ref([
             />
             <FormKit type="toggle" name="toggle" label="Airplane mode" />
           </FormKit>
-        </li>
-        <li v-if="input.isMultiselect">
-          <label class="notice-voice" :for="input.label">
-            {{ input.label }}
-          </label>
-          <Multiselect
-            :mode="input.type"
-            :label="input.label"
-            :name="input.label"
-            :id="input.label"
-            :searchable="true"
-            :create-option="false"
-            :options="['option1', 'option2', 'option3']"
-            :classes="{
-              singleLabelText: 'calm-voice multiselect-single-label-text',
-              dropdown: 'calm-voice multiselect-dropdown',
-              search: 'calm-voice multiselect-search',
-              tag: 'calm-voice multiselect-tag',
-              tagsSearch: 'calm-voice multiselect-tags-search',
-            }"
-          />
         </li>
       </template>
     </ul>
