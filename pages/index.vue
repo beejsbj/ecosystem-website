@@ -12,7 +12,7 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: "API3 Ecosystem Home",
+  title: "API3 Ecosystem",
 });
 
 onMounted(() => {
