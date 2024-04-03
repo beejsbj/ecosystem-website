@@ -37,12 +37,10 @@ const icons = {
 const classes = generateClasses({
   text: {
     // applies to all input types
-    outer: "SHAZAM",
+    outer: "",
     label: "calm-voice",
   },
 });
-
-console.log(classes);
 
 //auto animate
 const autoAnimate = {
