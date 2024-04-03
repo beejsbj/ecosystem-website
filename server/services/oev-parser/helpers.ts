@@ -44,6 +44,16 @@ export function getTotalProfit(protocol: any[]) {
   );
 }
 
+// Calculate the total profit made by the searcher for a protocol
+export function getTotalIncentive(protocol: any[]) {
+  return protocol.reduce(
+    (total, dataPoint) =>
+      Number(total) +
+      Number(!dataPoint.totalIncentiveUSD ? 0 : dataPoint.totalIncentiveUSD),
+    0
+  );
+}
+
 // Convert the data array to a monthly data array
 export function dataToMonthly(array: any[]) {
   const monthly: any = {};
@@ -60,10 +70,14 @@ export function dataToMonthly(array: any[]) {
       monthly[key].totalSentToBuilderUSD += Number(
         dataPoint.totalSentToBuilderUSD
       );
+      monthly[key].totalProfitUSD += Number(dataPoint.totalProfitUSD);
+      monthly[key].totalIncentiveUSD += Number(dataPoint.totalIncentiveUSD);
     } else {
       monthly[key] = {
         totalLiquidated: Number(dataPoint.totalLiquidated),
         totalSentToBuilderUSD: Number(dataPoint.totalSentToBuilderUSD),
+        totalProfitUSD: Number(dataPoint.totalProfitUSD),
+        totalIncentiveUSD: Number(dataPoint.totalIncentiveUSD),
         month: month,
         year: year,
         id: key,
@@ -101,10 +115,14 @@ export function dataToWeekly(array: any[]) {
       weekly[key].totalSentToBuilderUSD += Number(
         dataPoint.totalSentToBuilderUSD
       );
+      weekly[key].totalProfitUSD += Number(dataPoint.totalProfitUSD);
+      weekly[key].totalIncentiveUSD += Number(dataPoint.totalIncentiveUSD);
     } else {
       weekly[key] = {
         totalLiquidated: Number(dataPoint.totalLiquidated),
         totalSentToBuilderUSD: Number(dataPoint.totalSentToBuilderUSD),
+        totalProfitUSD: Number(dataPoint.totalProfitUSD),
+        totalIncentiveUSD: Number(dataPoint.totalIncentiveUSD),
         week: week,
         year: year,
         id: key,
@@ -126,14 +144,20 @@ export function dataToCumulative(array: any[]) {
   const cumulative: any[] = [];
   let totalLiquidated = 0;
   let totalSentToBuilderUSD = 0;
+  let totalProfitUSD = 0;
+  let totalIncentiveUSD = 0;
 
   array.forEach((dataPoint, i) => {
     totalLiquidated += Number(dataPoint.totalLiquidated);
     totalSentToBuilderUSD += Number(dataPoint.totalSentToBuilderUSD);
+    totalProfitUSD += Number(dataPoint.totalProfitUSD);
+    totalIncentiveUSD += Number(dataPoint.totalIncentiveUSD);
 
     cumulative.push({
       totalLiquidated: totalLiquidated,
       totalSentToBuilderUSD: totalSentToBuilderUSD,
+      totalProfitUSD: totalProfitUSD,
+      totalIncentiveUSD: totalIncentiveUSD,
       date: dataPoint.date,
     });
   });

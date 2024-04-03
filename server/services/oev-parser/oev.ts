@@ -12,6 +12,7 @@ import {
   getTotalLiquidated,
   getTotalSentToBuilder,
   getTotalProfit,
+  getTotalIncentive,
 } from "./helpers";
 import { OevTotal } from "../../models/OevTotal";
 
@@ -88,6 +89,7 @@ export async function parseOevSnapshot() {
     newProtocol.totalLiquidated = getTotalLiquidated(protocol.body);
     newProtocol.totalSentToBuilderUSD = getTotalSentToBuilder(protocol.body);
     newProtocol.totalProfitUSD = getTotalProfit(protocol.body);
+    newProtocol.totalIncentiveUSD = getTotalIncentive(protocol.body);
     newProtocol.oevRate = getOEVRate(newProtocol);
     newProtocol.withOEV = getOEV(newProtocol);
 
@@ -97,6 +99,7 @@ export async function parseOevSnapshot() {
   const totalLiquidated = getTotalLiquidated(parsed);
   const totalSentToBuilderUSD = getTotalSentToBuilder(parsed);
   const totalProfitUSD = getTotalProfit(parsed);
+  const totalIncentiveUSD = getTotalIncentive(parsed);
   parsed.push({
     id: "total",
     name: "Total",
@@ -106,6 +109,7 @@ export async function parseOevSnapshot() {
     totalLiquidated: totalLiquidated,
     totalSentToBuilderUSD: totalSentToBuilderUSD,
     totalProfitUSD: totalProfitUSD,
+    totalIncentiveUSD: totalIncentiveUSD,
     oevRate: getOEVRate({ totalLiquidated, totalSentToBuilderUSD }),
     withOEV: getOEV({ totalLiquidated, totalSentToBuilderUSD }),
   });
@@ -148,7 +152,10 @@ export async function prepareSingleLiquidationChart(
         liquidation?.date,
         Number(liquidation?.totalLiquidated),
         Number(liquidation?.totalSentToBuilderUSD),
-        Number(liquidation?.totalProfitUSD),
+        Number(!liquidation?.totalProfitUSD ? 0 : liquidation.totalProfitUSD),
+        Number(
+          !liquidation?.totalIncentiveUSD ? 0 : liquidation.totalIncentiveUSD
+        ),
       ];
     });
 
@@ -159,7 +166,8 @@ export async function prepareSingleLiquidationChart(
         liquidation?.date,
         liquidation?.totalLiquidated,
         liquidation?.totalSentToBuilderUSD,
-        liquidation?.totalProfitUSD,
+        !liquidation?.totalProfitUSD ? 0 : liquidation.totalProfitUSD,
+        !liquidation?.totalIncentiveUSD ? 0 : liquidation.totalIncentiveUSD,
       ];
     });
 
@@ -170,7 +178,8 @@ export async function prepareSingleLiquidationChart(
         liquidation?.date,
         liquidation?.totalLiquidated,
         liquidation?.totalSentToBuilderUSD,
-        liquidation?.totalProfitUSD,
+        !liquidation?.totalProfitUSD ? 0 : liquidation.totalProfitUSD,
+        !liquidation?.totalIncentiveUSD ? 0 : liquidation.totalIncentiveUSD,
       ];
     });
 
@@ -181,7 +190,8 @@ export async function prepareSingleLiquidationChart(
         liquidation?.date,
         liquidation?.totalLiquidated,
         liquidation?.totalSentToBuilderUSD,
-        liquidation?.totalProfitUSD,
+        !liquidation?.totalProfitUSD ? 0 : liquidation.totalProfitUSD,
+        !liquidation?.totalIncentiveUSD ? 0 : liquidation.totalIncentiveUSD,
       ];
     });
 
@@ -207,7 +217,10 @@ export async function prepareAllLiquidationChart(period: string) {
         liquidation?.date,
         Number(liquidation?.totalLiquidated),
         Number(liquidation?.totalSentToBuilderUSD),
-        Number(liquidation?.totalProfitUSD),
+        Number(!liquidation?.totalProfitUSD ? 0 : liquidation?.totalProfitUSD),
+        Number(
+          !liquidation?.totalIncentiveUSD ? 0 : liquidation?.totalIncentiveUSD
+        ),
       ];
     });
   });
@@ -219,6 +232,7 @@ export async function prepareAllLiquidationChart(period: string) {
       totalLiquidated: liq?.[1],
       totalSentToBuilderUSD: liq?.[2],
       totalProfitUSD: liq?.[3],
+      totalIncentiveUSD: liq?.[4],
     };
   });
 
@@ -231,7 +245,8 @@ export async function prepareAllLiquidationChart(period: string) {
           liquidation?.date,
           liquidation?.totalLiquidated,
           liquidation?.totalSentToBuilderUSD,
-          liquidation?.totalProfitUSD,
+          !liquidation?.totalProfitUSD ? 0 : liquidation.totalProfitUSD,
+          !liquidation?.totalIncentiveUSD ? 0 : liquidation.totalIncentiveUSD,
         ];
       }
     );
@@ -244,7 +259,8 @@ export async function prepareAllLiquidationChart(period: string) {
           liquidation?.date,
           liquidation?.totalLiquidated,
           liquidation?.totalSentToBuilderUSD,
-          liquidation?.totalProfitUSD,
+          !liquidation?.totalProfitUSD ? 0 : liquidation.totalProfitUSD,
+          !liquidation?.totalIncentiveUSD ? 0 : liquidation.totalIncentiveUSD,
         ];
       }
     );
@@ -257,6 +273,7 @@ export async function prepareAllLiquidationChart(period: string) {
         totalLiquidated: liq?.[1],
         totalSentToBuilderUSD: liq?.[2],
         totalProfitUSD: liq?.[3],
+        totalIncentiveUSD: liq?.[4],
       };
     });
     const cumulativeData = dataToCumulative(combinedProtocolsRaw)?.map(
@@ -265,7 +282,8 @@ export async function prepareAllLiquidationChart(period: string) {
           liquidation?.date,
           liquidation?.totalLiquidated,
           liquidation?.totalSentToBuilderUSD,
-          liquidation?.totalProfitUSD,
+          !liquidation?.totalProfitUSD ? 0 : liquidation.totalProfitUSD,
+          !liquidation?.totalIncentiveUSD ? 0 : liquidation.totalIncentiveUSD,
         ];
       }
     );

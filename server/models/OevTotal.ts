@@ -40,6 +40,10 @@ const OevTotalSchema = new Schema({
     type: Number,
     required: true,
   },
+  totalIncentiveUSD: {
+    type: Number,
+    required: true,
+  },
   oevRate: {
     type: Number,
     required: true,
