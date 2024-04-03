@@ -1416,7 +1416,7 @@ picture.curves-decoration-3 {
     z-index: 1;
     background: linear-gradient(
       135deg,
-      hsla(0, 0%, 0%, 0.8) 20%,
+      hsla(0, 0%, 0%, 0.45) 20%,
       transparent 50% 100%
     );
 
