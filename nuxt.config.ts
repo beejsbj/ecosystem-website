@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       ssr: false,
       prerender: false,
     },
+    "/style-guide": {
+      ssr: false,
+    },
   },
 
   //global default head metadata
