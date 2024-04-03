@@ -6,16 +6,29 @@ const oev = useOEVStore();
 const ui = useInterfaceStore();
 
 // Compute the OEV rate
-const oevRate = computed(() => oev.getTotals().oevRate.toFixed(2));
+const {
+  totalLiquidated,
+  totalSentToBuilderUSD,
+  totalIncentiveUSD,
+  totalProfitUSD,
+} = oev.getTotals();
 
 const cards = [
   {
     title: "TOTAL LIQUIDATED",
-    value: `$${formatNumber(oev.getTotals().totalLiquidated)}*`,
+    value: `$${formatNumber(totalLiquidated)}*`,
   },
   {
     title: "TOTAL SENT TO BUILDER",
-    value: `$${formatNumber(oev.getTotals().totalSentToBuilderUSD)}*`,
+    value: `$${formatNumber(totalSentToBuilderUSD)}*`,
+  },
+  {
+    title: "TOTAL INCENTIVE",
+    value: `$${formatNumber(totalIncentiveUSD)}*`,
+  },
+  {
+    title: "TOTAL PROFIT",
+    value: `$${formatNumber(totalProfitUSD)}*`,
   },
 ];
 
@@ -55,7 +68,6 @@ ul {
 
 /* Style each summary card */
 li {
-  display: grid;
   gap: var(--space-xs);
   padding: var(--space-m);
   border: var(--border-dark);
