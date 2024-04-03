@@ -1,4 +1,5 @@
 <script setup>
+import { createTooltip, destroyTooltip } from "floating-vue";
 // Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
 
@@ -44,6 +45,25 @@ function buttonHandle(event) {
   form.value = {}; // Reset the form
   formSubmitted.value = true; // Show the output section
 }
+
+function handleIconClick(node, event) {
+  const el = event.target;
+
+  const tooltip = createTooltip(el, {
+    triggers: [],
+    content: node.props.help,
+  });
+
+  tooltip.show();
+
+  setTimeout(() => {
+    tooltip.hide();
+    // Transition
+    setTimeout(() => {
+      destroyTooltip(el);
+    }, 400);
+  }, 3000);
+}
 </script>
 
 <template>
@@ -74,6 +94,7 @@ function buttonHandle(event) {
           v-model.number="form.incentive"
           :show-validation="formSubmitted"
           suffix-icon="info"
+          @suffix-icon-click="handleIconClick"
           help="Enter the TVL percentage sent as a liquidation incentive."
         />
       </form-field>
@@ -97,6 +118,7 @@ function buttonHandle(event) {
           validation-label="TVL"
           :show-validation="formSubmitted"
           suffix-icon="info"
+          @suffix-icon-click="handleIconClick"
         />
       </form-field>
     </FormKit>
