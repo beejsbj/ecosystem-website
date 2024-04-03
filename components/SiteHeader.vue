@@ -63,13 +63,13 @@ nextTick(() => {
 </template>
 
 <style scoped lang="scss">
-.site-header :deep(inner-column) {
-  padding: var(--space-s) var(--space-l);
-}
+.site-header {
+  :deep(inner-column) {
+    padding: var(--space-s) var(--space-l);
 
-@media (min-width: 768px) {
-  .site-header :deep(inner-column) {
-    padding: var(--space-xl) var(--space-s);
+    @media (min-width: 768px) {
+      padding: var(--space-xl) var(--space-s);
+    }
   }
 }
 
@@ -82,6 +82,7 @@ mast-head {
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: center;
+
   .site-logo {
     width: 200px;
     cursor: pointer;
