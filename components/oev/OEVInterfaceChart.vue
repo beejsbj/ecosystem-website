@@ -119,13 +119,13 @@ const maxHeight = computed(() => {
   position: relative;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
 
     .chart-container {
-      grid-column: 2 / -1;
+      grid-column: span 9;
     }
-    .protocol-list {
-      grid-column: 1 / 2;
+    .protocol-list-wrapper {
+      grid-column: span 3;
     }
   }
 }

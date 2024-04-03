@@ -55,6 +55,7 @@ const { data: rawData } = await useFetch(apiString);
 // data manipulation
 const parsed = computed(() => {
   //   console.log(oev.protocols);
+  console.log(rawData.value);
   const protocol = oev.getProtocolById(selectedDataset.value);
 
   const dataLiquidated = rawData.value.map((dataPoint) => {
@@ -187,13 +188,13 @@ const inputProtocols = computed(() => {
   position: relative;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
 
     .chart-container {
-      grid-column: 2 / -1;
+      grid-column: span 9;
     }
     .actions {
-      grid-column: 1 / 2;
+      grid-column: span 3;
     }
   }
 }
