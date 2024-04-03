@@ -37,6 +37,7 @@ const data = computed(() => {
         :solid="dataPoint.value"
       >
         <ChainIcon :id="dataPoint.key" v-if="isChains" />
+        <!-- {{ dataPoint.value }} #todo fix this component -->
       </BoxCard>
 
       <div
