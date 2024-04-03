@@ -38,15 +38,16 @@ useHead({
   :deep(picture.curves-decoration-3) {
     position: absolute;
 
-    --top: 100px;
-    --left: -200px;
+    --top: 0px;
+    --left: -250px;
+    --left: -60vw;
     --width: 300vw;
     top: var(--top);
     left: var(--left);
 
     width: var(--width);
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       display: block;
       --top: -50px;
       --left: -500px;

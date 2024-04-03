@@ -1410,7 +1410,7 @@ picture.curves-decoration-3 {
     pointer-events: none;
     position: absolute;
     top: 0px;
-    left: 200px;
+    left: 60vw;
     width: 800px;
     aspect-ratio: 1;
     z-index: 1;
@@ -1421,8 +1421,17 @@ picture.curves-decoration-3 {
     );
 
     @media (min-width: 768px) {
-      top: 50px;
+      top: 0px;
       left: 500px;
+      border: var(--border);
+    }
+
+    @media (min-width: 1324px) {
+      background: linear-gradient(
+        135deg,
+        hsla(0, 0%, 0%, 0.65) 20%,
+        transparent 50% 100%
+      );
     }
   }
 }
