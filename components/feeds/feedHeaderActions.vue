@@ -4,6 +4,9 @@ const route = useRoute();
 const router = useRouter();
 const ecosystem = useEcosystemStore();
 
+const feedSlug = route.params.detail;
+const feedName = feedSlug.replace("-", "/");
+
 const chainSlug = computed(() => {
   return slug(ecosystem.chainNames(route.query.chainId));
 });

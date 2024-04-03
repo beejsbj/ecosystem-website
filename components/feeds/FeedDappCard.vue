@@ -91,9 +91,7 @@ function scrollToDisplayCard() {
           :alt="`Logo of ${dapp?.name}`"
         />
       </picture>
-      <h2
-        :class="dapp?.name.length <= 16 ? 'firm-voice' : 'firm-voice-smaller'"
-      >
+      <h2 class="firm-voice-smaller">
         {{ dapp?.name ?? "dApp Name" }}
       </h2>
     </text-content>
