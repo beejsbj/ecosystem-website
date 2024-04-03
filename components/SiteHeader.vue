@@ -1,7 +1,4 @@
 <script setup>
-import { useInterfaceStore } from "~/stores/interface";
-import { gsap } from "gsap";
-
 const ui = useInterfaceStore();
 const router = useRouter();
 
@@ -65,7 +62,7 @@ nextTick(() => {
   </header>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .site-header :deep(inner-column) {
   padding: var(--space-s) var(--space-l);
 }
@@ -79,6 +76,7 @@ nextTick(() => {
 .mast-head-placeholder {
   height: 50px;
 }
+
 mast-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,13 +84,14 @@ mast-head {
   align-items: center;
   .site-logo {
     width: 200px;
-
     cursor: pointer;
+
     @media (min-width: 768px) {
       width: 275px;
     }
   }
 }
+
 button.menu {
   max-width: 40px;
   justify-self: end;
