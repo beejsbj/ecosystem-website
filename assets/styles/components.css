@@ -301,10 +301,3 @@ a.router-link-exact-active:not(.site-logo, .button)::after {
   width: calc(var(--line-width) * 4);
   height: calc(var(--line-width) * 4);
 }
-
-.chain-option {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3xs);
-  padding: var(--space-2xs) 0;
-}

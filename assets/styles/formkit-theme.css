@@ -49,7 +49,7 @@
 
   /* Structure */
   --fk-max-width-input: unset;
-  --fk-box-size: 1em;
+  --fk-box-size: 1.25em;
 
   /* Colors */
   --fk-color-primary: var(--green);
@@ -87,7 +87,7 @@
   /* Borders */
   --fk-border-width: var(--line-width);
   --fk-border-width-decorator: var(--fk-border-width);
-  --fk-border-width-focus: var(--fk-border-width);
+  --fk-border-width-focus: calc(var(--fk-border-width) * 2);
   --fk-border-width-checked: var(--fk-border-width);
   --fk-border-width-decorator-checked: var(--fk-border-width-focus);
   --fk-border-width-decorator-focus: var(--fk-border-width-decorator-checked);
@@ -124,10 +124,10 @@
   --fk-border-box-shadow-invalid-focus: 0 0 0
     var(--fk-border-width-decorator-focus-visible)
     var(--fk-error-ring-focus-color);
-  --fk-border-radius-tl: calc(var(--corners) / 0.5rem);
-  --fk-border-radius-tr: calc(var(--corners) / 0.5rem);
-  --fk-border-radius-bl: calc(var(--corners) / 0.5rem);
-  --fk-border-radius-br: calc(var(--corners) / 0.5rem);
+  --fk-border-radius-tl: calc(var(--corners) / 2);
+  --fk-border-radius-tr: calc(var(--corners) / 2);
+  --fk-border-radius-bl: calc(var(--corners) / 2);
+  --fk-border-radius-br: calc(var(--corners) / 2);
   --fk-border-radius: var(--fk-border-radius-tl, 0.25em)
     var(--fk-border-radius-tr, 0.25em) var(--fk-border-radius-br, 0.25em)
     var(--fk-border-radius-bl, 0.25em);
@@ -431,11 +431,6 @@
   border-color: var(--fk-color-border-focus);
 }
 
-[data-type="checkbox"] .formkit-input:checked ~ .formkit-decorator {
-  /* --fk-bg-decorator: var(--ink);
-  --fk-color-primary: var(--paper); */
-}
-
 /* invalid */
 .formkit-outer[data-invalid="true"]:is(
     [data-type="checkbox"],
@@ -524,4 +519,11 @@
 }
 [data-type="taglist"] .formkit-remove-selection {
   color: var(--ink) !important;
+}
+
+.chain-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs) 0;
 }
