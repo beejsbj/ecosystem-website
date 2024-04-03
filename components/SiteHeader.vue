@@ -65,19 +65,17 @@ nextTick(() => {
   </header>
 </template>
 
-<style>
-.site-header inner-column {
-  padding: var(--space-m) var(--space-s);
+<style lang="scss" scoped>
+.site-header :deep(inner-column) {
+  padding: var(--space-s) var(--space-l);
 }
 
 @media (min-width: 768px) {
-  .site-header inner-column {
+  .site-header :deep(inner-column) {
     padding: var(--space-xl) var(--space-s);
   }
 }
-</style>
 
-<style lang="scss" scoped>
 .mast-head-placeholder {
   height: 50px;
 }
@@ -96,8 +94,9 @@ mast-head {
   }
 }
 button.menu {
-  max-width: 50px;
+  max-width: 40px;
   justify-self: end;
+  padding: 0;
 
   &.menuOpen {
     z-index: 9999;
