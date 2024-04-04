@@ -27,7 +27,7 @@ const props = defineProps(["proxies", "isForm", "dappForm"]);
         <div class="chain">
           <!-- #todo clean up -->
 
-          <ChainIcon :id="chain" />
+          <ChainIcon :id="props.chainId" />
           {{ ecosystem.chainNames(proxy.chainId) }}
         </div>
 

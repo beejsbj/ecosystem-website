@@ -12,6 +12,7 @@
 .home-article-grid {
   .loud-voice {
     text-align: center;
+    margin-bottom: var(--space-l);
   }
   a.text {
     text-align: center;

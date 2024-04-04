@@ -43,27 +43,15 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-body:has(main.index) {
-  @media (min-width: 1024px) {
-    //  overflow: hidden;
-  }
-}
 main.index {
   display: grid;
   gap: var(--space-3xs);
-  inner-column {
-  }
+
   inner-column > h2 {
     margin-bottom: var(--space-l);
   }
   @media (min-width: 768px) {
     gap: calc(var(--space-3xs) * 10);
-  }
-  @media (min-width: 1024px) {
-    & > section:not(.scrolling-stats) {
-      inner-column {
-      }
-    }
   }
 }
 </style>

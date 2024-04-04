@@ -1,13 +1,12 @@
 <script setup>
 import { gsap } from "gsap";
 
+const ui = useInterfaceStore();
 function animate() {
-  let context;
-
-  context = gsap.context(() => {
+  let context = gsap.context(() => {
     const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
 
-    const colorLength = 4100;
+    const curvesLength = 4100;
 
     const duration = 3;
     const easing = "linear";
@@ -15,8 +14,8 @@ function animate() {
     const timeline = gsap.timeline();
 
     timeline.set(curvesPath, {
-      strokeDashoffset: 1 * colorLength,
-      strokeDasharray: colorLength,
+      strokeDashoffset: 1 * curvesLength,
+      strokeDasharray: curvesLength,
     });
 
     timeline.to(curvesPath, {
