@@ -99,10 +99,6 @@ const buttons = ref([
           <button :class="button.class" :disabled="button.disabled">
             {{ button.name }}
           </button>
-
-          <FormKit type="submit" label="heelo">
-            {{ button.name }}
-          </FormKit>
         </div>
       </li>
     </ul>
