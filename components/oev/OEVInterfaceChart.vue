@@ -66,7 +66,6 @@ const maxHeight = computed(() => {
 });
 
 function barHeight(value) {
-  console.log(value, maxHeight.value);
   return (value / maxHeight.value) * 150;
 }
 
