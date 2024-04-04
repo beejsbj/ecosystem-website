@@ -53,6 +53,7 @@
 
   /* Colors */
   --fk-color-primary: var(--green);
+  --fk-color-secondary: var(--indigo);
   --fk-color-checked: var(--fk-color-primary);
   --fk-color-input: var(--ink);
   --fk-color-input-selection: var(--green-darker);
@@ -79,7 +80,7 @@
   --fk-bg-input: var(--paper);
   --fk-bg-disabled: rgba(0 0 0 / 5%);
   --fk-bg-decorator: linear-gradient(0deg, rgba(0, 0, 0, 0.07), transparent);
-  --fk-bg-button: var(--fk-color-primary);
+  --fk-bg-button: var(--fk-color-secondary);
   --fk-bg-button-hover: var(--fk-bg-button);
   --fk-bg-submit: var(--fk-bg-button);
   --fk-bg-submit-hover: var(--fk-bg-submit);
@@ -530,6 +531,6 @@
 
 /* formkit-help */
 
-.oev .formkit-help {
+.formkit-help {
   display: none;
 }
