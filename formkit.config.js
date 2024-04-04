@@ -68,7 +68,7 @@ const plugins = [
   createAutoHeightTextareaPlugin,
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
-  //   addPrefixIconPlugin,
+  addPrefixIconPlugin,
   hideSuffixIfNoHelpPlugin,
   //  proPlugin,
 ];
@@ -129,12 +129,43 @@ function hideSuffixIfNoHelpPlugin(node) {
 }
 
 //
-function addPrefixIconPlugin(node) {
-  if (!node.props.type) return;
+// function addPrefixIconPlugin(node) {
+//   if (!node.props.type) return;
 
-  if (node.props.type === "email") {
-    node.props.prefixIcon = icons.email;
-  }
+//   if (node.props.type === "email") {
+//     node.props.prefixIcon = icons.email;
+//   }
+// }
+
+function addPrefixIconPlugin(node) {
+  node.on("created", () => {
+    //  console.log(icons);
+
+    const typesToApply = ["email", "password", "text", "url", "search"];
+
+    if (node.props.prefixIcon) return; // return if already set
+
+    if (!typesToApply.includes(node.props.type)) return; // return if type is not in the list
+
+    if (!node.props.definition) return;
+
+    const originalSchema = node.props.definition.schema;
+    //   const originalSchema = clone(node.props.definition.schema);
+
+    node.props.definition.schema = (extensions) => {
+      const localExtensions = {
+        ...extensions,
+        prefix: {
+          $el: "label",
+          attrs: {
+            class: "formkit-prefix-icon formkit-icon",
+            innerHTML: icons[node.props.type],
+          },
+        },
+      };
+      return originalSchema(localExtensions);
+    };
+  });
 }
 
 //
