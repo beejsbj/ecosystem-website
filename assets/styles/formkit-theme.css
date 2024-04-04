@@ -35,7 +35,7 @@
   --fk-font-size-remove: var(--step--1);
   --fk-font-size-option: 0.9em;
   --fk-font-size-message: var(--step--1);
-  --fk-font-size-button: 0.875em;
+  --fk-font-size-button: var(--fk-font-size);
   --fk-font-size-summary: 1.25em;
 
   --fk-line-height: 1.1;
@@ -225,11 +225,13 @@
     var(--fk-padding-decorator-l);
 
   --fk-padding-button-x: calc(var(--fk-padding-base) * 8);
-  --fk-padding-button-y: calc(var(--fk-padding-base) * 3);
+  --fk-padding-button-y: calc(var(--fk-padding-base) * 4);
   --fk-padding-button-t: var(--fk-padding-button-y);
   --fk-padding-button-r: var(--fk-padding-button-x);
   --fk-padding-button-b: var(--fk-padding-button-y);
   --fk-padding-button-l: var(--fk-padding-button-x);
+  --fk-padding-button: var(--fk-padding-button-t) var(--fk-padding-button-r)
+    var(--fk-padding-button-b) var(--fk-padding-button-l);
   --fk-padding-button: var(--fk-padding-button-t) var(--fk-padding-button-r)
     var(--fk-padding-button-b) var(--fk-padding-button-l);
 
@@ -245,8 +247,7 @@
     calc(var(--fk-margin-base) * 2)
   );
   --fk-margin-outer-l: var(--fk-margin-outer-x, 0);
-  --fk-margin-outer: var(--fk-margin-outer-t) var(--fk-margin-outer-r)
-    var(--fk-margin-outer-b) var(--fk-margin-outer-l);
+  --fk-margin-outer: 0;
 
   --fk-margin-wrapper-x: inherit;
   --fk-margin-wrapper-y: inherit;
@@ -333,7 +334,7 @@
   --fk-margin-button-x: inherit;
   --fk-margin-button-y: inherit;
   --fk-margin-button-t: var(--fk-margin-button-y, 0);
-  --fk-margin-button-r: var(--fk-margin-button-x, 0.5em);
+  --fk-margin-button-r: var(--fk-margin-button-x, 0);
   --fk-margin-button-b: var(--fk-margin-button-y, 0);
   --fk-margin-button-l: var(--fk-margin-button-x, 0);
   --fk-margin-button: var(--fk-margin-button-t) var(--fk-margin-button-r)
@@ -406,6 +407,15 @@
   --fk-mark-color: #aaa;
   --fk-mark-color-active: var(--ink);
   --fk-colorpicker-bg: var(--ink);
+}
+
+[data-type="toggle"] .formkit-inner {
+  border-radius: var(--fk-toggle-width);
+}
+
+[data-type="toggle"][data-invalid="true"] .formkit-track,
+[data-type="toggle"][data-invalid="true"] input:checked ~ .formkit-track {
+  background-color: var(--fk-color-error);
 }
 
 /* input elements not checkbox or radio */
@@ -535,4 +545,8 @@
 
 [data-type="submit"] .formkit-suffix-icon {
   display: none;
+}
+
+[data-family="button"] .formkit-outer {
+  /* margin: 0; */
 }
