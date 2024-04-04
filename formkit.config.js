@@ -128,15 +128,6 @@ function hideSuffixIfNoHelpPlugin(node) {
   }
 }
 
-//
-// function addPrefixIconPlugin(node) {
-//   if (!node.props.type) return;
-
-//   if (node.props.type === "email") {
-//     node.props.prefixIcon = icons.email;
-//   }
-// }
-
 function addPrefixIconPlugin(node) {
   node.on("created", () => {
     //  console.log(icons);
