@@ -20,6 +20,10 @@ const inputs = ref([
     type: "text",
   },
   {
+    label: "Search",
+    type: "search",
+  },
+  {
     label: "Email",
     type: "email",
   },
@@ -37,13 +41,22 @@ const inputs = ref([
   },
 
   {
-    label: "Search",
-    type: "search",
+    label: "Textarea",
+    type: "textarea",
+  },
+  {
+    label: "File",
+    type: "file",
+    formFieldClass: "file-upload",
+  },
+  {
+    label: "Range",
+    type: "range",
   },
 
   {
-    label: "Textarea",
-    type: "textarea",
+    label: "Toggle",
+    type: "toggle",
   },
 
   {
@@ -56,56 +69,37 @@ const inputs = ref([
     type: "radio",
     options: options.value,
   },
-  {
-    label: "File",
-    type: "file",
-    formFieldClass: "file-upload",
-  },
-
-  //   {
-  // 	label: "Search",
-  // 	type: "search",
-  //   },
 
   {
     label: "Select",
     type: "select",
     options: options.value,
-  },
-  {
-    label: "Select",
-    type: "select",
-    options: options.value,
-    isMultiple: true,
-  },
-  {
-    label: "Range",
-    type: "range",
   },
 
   //   pro
-  //   {
-  //     label: "Autocomplete",
-  //     type: "autocomplete",
-  //     options: options.value,
-  //   },
+  {
+    label: "Autocomplete",
+    type: "autocomplete",
+    options: options.value,
+  },
+  {
+    label: "Dropdown",
+    type: "dropdown",
+    options: options.value,
+  },
   {
     label: "Taglist",
     type: "taglist",
     options: options.value,
+    selectIcon: "down",
   },
-  //   {
-  //     label: "Dropdown",
-  //     type: "dropdown",
-  //     options: options.value,
-  //   },
 
-  //   {
-  //     label: "Repeater",
-  //     type: "repeater",
-  //     options: options.value,
-  //     isRepeater: true,
-  //   },
+  {
+    label: "Repeater",
+    type: "repeater",
+    options: options.value,
+    isRepeater: true,
+  },
 ]);
 </script>
 
@@ -199,6 +193,7 @@ const inputs = ref([
               placeholder="Add email address..."
             />
             <FormKit type="toggle" name="toggle" label="Airplane mode" />
+            <FormKit type="submit" name="submit" label="Submit" />
           </FormKit>
         </li>
       </template>
