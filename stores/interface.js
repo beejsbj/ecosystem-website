@@ -3,7 +3,20 @@ import { gsap } from "gsap";
 import { onMounted, onUnmounted } from "vue";
 
 export const useInterfaceStore = defineStore("interface", function () {
+  const config = useRuntimeConfig();
+
+  const isDev = config.public.nodeEnv === "development";
+
   const firstLoad = ref(true);
+
+  // api3 colors /////////////////////////////
+  const api3Colors = {
+    green: "hsla(166, 64%, 69%, 1)",
+    violet: "hsla(256, 34%, 54%, 1)",
+    blue: "hsla(226, 100%, 50%, 1)",
+    red: "hsla(0, 85%, 65%, 1)",
+    yellow: "hsla(44, 85%, 65%, 1)",
+  };
 
   //
   //viewport size /////////////////////////////
@@ -19,15 +32,6 @@ export const useInterfaceStore = defineStore("interface", function () {
     isDesktop.value = window.innerWidth >= 1024;
   }
 
-  onMounted(() => {
-    updateViewportSize();
-    window.addEventListener("resize", updateViewportSize);
-  });
-
-  onUnmounted(() => {
-    window.removeEventListener("resize", updateViewportSize);
-  });
-
   //
   //main menu /////////////////////////////
   const mainMenuOpen = ref(false);
@@ -36,17 +40,17 @@ export const useInterfaceStore = defineStore("interface", function () {
   }
 
   //
-  //modal
+  //modal /////////////////////////////
   const showModal = ref(false);
   function toggleModal() {
     showModal.value = !showModal.value;
   }
 
   //
-  //hero image
+  //hero image /////////////////////////////
   const heroImage = ref(null);
 
-  // loadingDone
+  // loadingDone	/////////////////////////////
   const loadingDone = ref(false);
 
   setTimeout(() => {
@@ -54,24 +58,10 @@ export const useInterfaceStore = defineStore("interface", function () {
   }, 2000);
 
   //
-  //page transition
+  //page transition	/////////////////////////////
   const transitionState = reactive({
     transitionComplete: false,
   });
-  const toggleTransitionComplete = (value) => {
-    transitionState.transitionComplete = value;
-  };
-
-  //
-
-  //
-  const api3Colors = {
-    green: "hsla(166, 64%, 69%, 1)",
-    violet: "hsla(256, 34%, 54%, 1)",
-    blue: "hsla(226, 100%, 50%, 1)",
-    red: "hsla(0, 85%, 65%, 1)",
-    yellow: "hsla(44, 85%, 65%, 1)",
-  };
 
   const pageTransitionConfig = {
     name: "page-transiton",
@@ -101,6 +91,11 @@ export const useInterfaceStore = defineStore("interface", function () {
     },
   };
 
+  function toggleTransitionComplete(value) {
+    transitionState.transitionComplete = value;
+  }
+
+  //notify /////////////////////////////
   function notify(message) {
     toast(message, {
       position: toast.POSITION.BOTTOM_RIGHT,
@@ -108,6 +103,30 @@ export const useInterfaceStore = defineStore("interface", function () {
     });
   }
 
+  //disable dev tools /////////////////////////////
+  function disableDevTools() {
+    if (typeof window === "undefined") return;
+
+    if (!isDev) {
+      const devTools = document.querySelector("body > div[data-v-app]");
+      if (devTools) {
+        devTools.style.display = "none";
+      }
+    }
+  }
+
+  //init /////////////////////////////
+  onMounted(() => {
+    updateViewportSize();
+    //  disableDevTools();
+    window.addEventListener("resize", updateViewportSize);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener("resize", updateViewportSize);
+  });
+
+  //return /////////////////////////////
   return {
     mainMenuOpen,
     toggleMenu,

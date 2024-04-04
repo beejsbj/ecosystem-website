@@ -1,4 +1,5 @@
 <script setup>
+import { createTooltip, destroyTooltip } from "floating-vue";
 // Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
 
@@ -29,11 +30,15 @@ function addToChart(totalLiquidated, incentiveRate) {
 function buttonHandle(event) {
   const liquidationRate = 0.05; // 5% liquidation rate
 
-  oev.userTvl = form.value.tvl;
-  oev.userIncentive = form.value.incentive;
+  const tvl = event.tvl.split(",").join("");
+  const incentive = event.incentive;
 
-  const totalLiquidated = form.value.tvl * liquidationRate;
-  const incentiveRate = form.value.incentive / 100;
+  oev.userTvl = tvl;
+
+  oev.userIncentive = incentive;
+
+  const totalLiquidated = tvl * liquidationRate;
+  const incentiveRate = incentive / 100;
 
   addToChart(totalLiquidated, incentiveRate); // Add the user's input to the chart
 
@@ -44,7 +49,15 @@ function buttonHandle(event) {
 
 <template>
   <SectionColumn>
-    <form v-auto-animate>
+    <FormKit
+      type="form"
+      @submit="buttonHandle"
+      submit-label="Visualize your dApp"
+      :submit-attrs="{
+        inputClass: '$reset button' + (formSubmitted ? ' disabled' : ''),
+      }"
+      :disabled="formSubmitted"
+    >
       <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
       <form-field>
         <FormKit
@@ -61,38 +74,31 @@ function buttonHandle(event) {
           id="incentive"
           v-model.number="form.incentive"
           :show-validation="formSubmitted"
-          prefix-icon="number"
           help="Enter the TVL percentage sent as a liquidation incentive."
         />
       </form-field>
       <form-field>
         <FormKit
-          type="number"
+          type="mask"
           label="What is the total value locked of your protocol?"
           :classes="{
             label: '$reset calm-voice',
           }"
           name="tvl"
           placeholder="5000000"
+          mask="###{,###|repeat}"
+          allow-incomplete="true"
+          show-mask="false"
           help="Optimal results are achieved with larger numerical values."
           id="tvl"
-          v-model.number="form.tvl"
+          v-model="form.tvl"
           step="100000"
           min="0"
           validation-label="TVL"
           :show-validation="formSubmitted"
-          prefix-icon="number"
         />
       </form-field>
-
-      <button
-        class="button"
-        @click.prevent="buttonHandle"
-        :disabled="formSubmitted"
-      >
-        Visualize your dApp
-      </button>
-    </form>
+    </FormKit>
   </SectionColumn>
 </template>
 
@@ -112,7 +118,7 @@ form {
     grid-template-columns: 1fr 1fr;
 
     h2,
-    button {
+    :deep(.formkit-actions) {
       grid-column: 1 / -1;
       justify-self: center;
     }

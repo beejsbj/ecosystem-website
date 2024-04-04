@@ -31,11 +31,11 @@
   --fk-font-size-input: var(--fk-font-size);
   --fk-font-size-label: 0.875em;
   --fk-font-size-legend: 0.875em;
-  --fk-font-size-help: 0.8125em;
-  --fk-font-size-remove: 0.8125em;
+  --fk-font-size-help: var(--step--1);
+  --fk-font-size-remove: var(--step--1);
   --fk-font-size-option: 0.9em;
-  --fk-font-size-message: 0.8125em;
-  --fk-font-size-button: 0.875em;
+  --fk-font-size-message: var(--step--1);
+  --fk-font-size-button: var(--fk-font-size);
   --fk-font-size-summary: 1.25em;
 
   --fk-line-height: 1.1;
@@ -53,6 +53,7 @@
 
   /* Colors */
   --fk-color-primary: var(--green);
+  --fk-color-secondary: var(--indigo);
   --fk-color-checked: var(--fk-color-primary);
   --fk-color-input: var(--ink);
   --fk-color-input-selection: var(--green-darker);
@@ -79,7 +80,7 @@
   --fk-bg-input: var(--paper);
   --fk-bg-disabled: rgba(0 0 0 / 5%);
   --fk-bg-decorator: linear-gradient(0deg, rgba(0, 0, 0, 0.07), transparent);
-  --fk-bg-button: var(--fk-color-primary);
+  --fk-bg-button: var(--fk-color-secondary);
   --fk-bg-button-hover: var(--fk-bg-button);
   --fk-bg-submit: var(--fk-bg-button);
   --fk-bg-submit-hover: var(--fk-bg-submit);
@@ -224,11 +225,13 @@
     var(--fk-padding-decorator-l);
 
   --fk-padding-button-x: calc(var(--fk-padding-base) * 8);
-  --fk-padding-button-y: calc(var(--fk-padding-base) * 3);
+  --fk-padding-button-y: calc(var(--fk-padding-base) * 4);
   --fk-padding-button-t: var(--fk-padding-button-y);
   --fk-padding-button-r: var(--fk-padding-button-x);
   --fk-padding-button-b: var(--fk-padding-button-y);
   --fk-padding-button-l: var(--fk-padding-button-x);
+  --fk-padding-button: var(--fk-padding-button-t) var(--fk-padding-button-r)
+    var(--fk-padding-button-b) var(--fk-padding-button-l);
   --fk-padding-button: var(--fk-padding-button-t) var(--fk-padding-button-r)
     var(--fk-padding-button-b) var(--fk-padding-button-l);
 
@@ -244,8 +247,7 @@
     calc(var(--fk-margin-base) * 2)
   );
   --fk-margin-outer-l: var(--fk-margin-outer-x, 0);
-  --fk-margin-outer: var(--fk-margin-outer-t) var(--fk-margin-outer-r)
-    var(--fk-margin-outer-b) var(--fk-margin-outer-l);
+  --fk-margin-outer: 0;
 
   --fk-margin-wrapper-x: inherit;
   --fk-margin-wrapper-y: inherit;
@@ -332,7 +334,7 @@
   --fk-margin-button-x: inherit;
   --fk-margin-button-y: inherit;
   --fk-margin-button-t: var(--fk-margin-button-y, 0);
-  --fk-margin-button-r: var(--fk-margin-button-x, 0.5em);
+  --fk-margin-button-r: var(--fk-margin-button-x, 0);
   --fk-margin-button-b: var(--fk-margin-button-y, 0);
   --fk-margin-button-l: var(--fk-margin-button-x, 0);
   --fk-margin-button: var(--fk-margin-button-t) var(--fk-margin-button-r)
@@ -405,6 +407,15 @@
   --fk-mark-color: #aaa;
   --fk-mark-color-active: var(--ink);
   --fk-colorpicker-bg: var(--ink);
+}
+
+[data-type="toggle"] .formkit-inner {
+  border-radius: var(--fk-toggle-width);
+}
+
+[data-type="toggle"][data-invalid="true"] .formkit-track,
+[data-type="toggle"][data-invalid="true"] input:checked ~ .formkit-track {
+  background-color: var(--fk-color-error);
 }
 
 /* input elements not checkbox or radio */
@@ -492,15 +503,13 @@
 }
 
 /* dropdown */
-/* [data-family="dropdown"].formkit-outer:not([data-overscroll])
-  .formkit-dropdown-wrapper {
-  background-color: var(--fk-dropdown-bg);
-  border-radius: var(--fk-border-radius);
-  box-shadow: var(--fk-dropdown-shadow);
-  margin: var(--fk-dropdown-margin) 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-} */
+[data-family="dropdown"] .formkit-select-icon {
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+[data-family="dropdown"][data-expanded="true"] .formkit-select-icon {
+  transform: rotate(180deg);
+}
 
 .formkit-listbox {
   background-color: var(--fk-dropdown-bg);
@@ -519,4 +528,25 @@
 }
 [data-type="taglist"] .formkit-remove-selection {
   color: var(--ink) !important;
+}
+
+.chain-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs) 0;
+}
+
+/* disable parts */
+
+.formkit-help {
+  display: none;
+}
+
+[data-family="button"] .formkit-suffix-icon {
+  display: none;
+}
+
+[data-family="button"] .formkit-outer {
+  /* margin: 0; */
 }

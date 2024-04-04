@@ -9,7 +9,7 @@ function buttonHandle(protocol) {
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="protocol-list-wrapper">
     <h3
       class="whisper-voice"
       :class="{ hideOpacity: oev.isAllHidden && false }"
@@ -34,7 +34,7 @@ function buttonHandle(protocol) {
                 'border-gradient-blue': protocol.hide,
               }"
             >
-              <ChainIcon :chainId="protocol.chainId" />
+              <ChainIcon :id="protocol.chainId" />
             </BoxCard>
           </button>
         </li>
@@ -46,7 +46,7 @@ function buttonHandle(protocol) {
 <style scoped>
 /* Apply styles only to this component */
 
-.wrapper {
+.protocol-list-wrapper {
   display: grid;
   gap: var(--space-xs);
 }

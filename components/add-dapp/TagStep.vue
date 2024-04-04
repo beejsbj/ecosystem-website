@@ -53,8 +53,8 @@ onMounted(() => {
         popover
       >
         <template #option="{ option }">
-          <div class="formkit-icon-option">
-            <ChainIcon :chain="option.label" />
+          <div class="chain-option">
+            <ChainIcon :id="option.value" />
             <span>
               {{ option.label }}
             </span>
@@ -63,7 +63,7 @@ onMounted(() => {
         <template #tag="{ handlers, option, classes }">
           <div :class="classes.tag">
             <!-- <img :src="option.logo" class="w-5 mr-2 bg-white" /> -->
-            <ChainIcon :chain="option.label" />
+            <ChainIcon :id="option.value" />
             <span :class="classes.tagLabel">
               {{ option.label }}
             </span>
@@ -101,7 +101,7 @@ onMounted(() => {
         popover
       >
         <template #option="{ option }">
-          <div class="formkit-icon-option">
+          <div class="chain-option">
             <DynamicIcon :icon="option.label" />
             <span>
               {{ option.label }}

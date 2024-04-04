@@ -6,29 +6,48 @@ const oev = useOEVStore();
 const ui = useInterfaceStore();
 
 // Compute the OEV rate
-const oevRate = computed(() => oev.getTotals().oevRate.toFixed(2));
+const {
+  totalLiquidated,
+  totalSentToBuilderUSD,
+  totalIncentiveUSD,
+  totalProfitUSD,
+} = oev.getTotals();
+
+const cards = [
+  {
+    title: "TOTAL LIQUIDATED",
+    value: `$${formatNumber(totalLiquidated)}*`,
+  },
+  {
+    title: "TOTAL SENT TO BUILDER",
+    value: `$${formatNumber(totalSentToBuilderUSD)}*`,
+  },
+  {
+    title: "TOTAL INCENTIVE",
+    value: `$${formatNumber(totalIncentiveUSD)}*`,
+  },
+  {
+    title: "TOTAL Searcher PROFIT",
+    value: `$${formatNumber(totalProfitUSD)}*`,
+  },
+];
+
+const gridCount = computed(() => {
+  if (cards.length == 1) {
+    return 1;
+  }
+  return cards.length % 2 === 0 ? 2 : 3;
+});
 </script>
 
 <template>
   <ul class="summary-cards">
     <!-- Display the OEV Saving Rate -->
-    <li class="summary-card">
-      <h3 class="teaser-voice">TOTAL LIQUIDATED</h3>
+    <li class="summary-card" v-for="card in cards">
+      <h3 class="teaser-voice">{{ card.title }}</h3>
       <p class="attention-voice">
-        ${{ formatNumber(oev.getTotals().totalLiquidated) }}*
+        {{ card.value }}
       </p>
-    </li>
-    <!-- Display the Average Savings -->
-    <li class="summary-card">
-      <h3 class="teaser-voice">TOTAL OEV LOST</h3>
-      <p class="attention-voice">
-        ${{ formatNumber(oev.getTotals().totalSentToBuilderUSD) }}*
-      </p>
-    </li>
-    <!-- Display the Total Savings -->
-    <li class="summary-card hide" v-if="false">
-      <h3 class="teaser-voice">OEV Capture Rate</h3>
-      <p class="attention-voice">{{ oevRate }}%</p>
     </li>
   </ul>
 </template>
@@ -37,18 +56,18 @@ const oevRate = computed(() => oev.getTotals().oevRate.toFixed(2));
 /* Style the summary cards container */
 ul {
   display: grid;
+  --grid-count: v-bind(gridCount);
 
   gap: var(--space-m);
   padding-top: var(--space-m);
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(var(--grid-count), 1fr);
   }
 }
 
 /* Style each summary card */
 li {
-  display: grid;
   gap: var(--space-xs);
   padding: var(--space-m);
   border: var(--border-dark);

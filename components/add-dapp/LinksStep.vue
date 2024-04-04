@@ -160,10 +160,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     }
   }
 
-  :deep(.formkit-outer) {
-    margin: unset;
-  }
-
   :deep(.formkit-label) {
     padding: unset;
   }

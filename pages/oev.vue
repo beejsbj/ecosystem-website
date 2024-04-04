@@ -34,7 +34,7 @@ setTimeout(() => {
   <ContentsWrapper>
     <!-- Page Title component with heading and notice voice -->
     <PageTitle heading="OEV Watchtower">
-      <p class="notice-voice">
+      <p class="calm-voice">
         OEV Watchtower helps you understand how much you can capture with the
         OEV Network.
       </p>
