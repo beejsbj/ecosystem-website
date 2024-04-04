@@ -27,7 +27,7 @@ const cards = [
     value: `$${formatNumber(totalIncentiveUSD)}*`,
   },
   {
-    title: "TOTAL PROFIT",
+    title: "TOTAL Searcher PROFIT",
     value: `$${formatNumber(totalProfitUSD)}*`,
   },
 ];
