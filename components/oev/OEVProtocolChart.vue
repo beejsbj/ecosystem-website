@@ -72,6 +72,20 @@ const parsed = computed(() => {
     };
   });
 
+  const dataProfit = rawData.value.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint[0]),
+      y: dataPoint[3],
+    };
+  });
+
+  const dataIncentive = rawData.value.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint[0]),
+      y: dataPoint[4],
+    };
+  });
+
   const labels =
     selectedPeriod.value === "daily"
       ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 10))
@@ -94,10 +108,14 @@ const parsed = computed(() => {
         data: dataLiquidated,
         label: "Total Liquidated",
       },
-      // {
-      //   data: dataOEV,
-      //   label: "With OEV",
-      // },
+      {
+        data: dataProfit,
+        label: "Total Profit",
+      },
+      {
+        data: dataIncentive,
+        label: "Total Incentive",
+      },
     ],
   };
 });
