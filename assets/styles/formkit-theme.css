@@ -543,7 +543,7 @@
   display: none;
 }
 
-[data-type="submit"] .formkit-suffix-icon {
+[data-family="button"] .formkit-suffix-icon {
   display: none;
 }
 

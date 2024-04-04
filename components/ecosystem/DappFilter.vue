@@ -343,7 +343,7 @@ dapp-filter {
   .pills {
     display: flex;
     flex-direction: column;
-    gap: var(--space-3xs);
+    gap: var(--space-xs);
 
     //  gap: calc(var(--space-m));
     padding: 0 var(--space-m);
