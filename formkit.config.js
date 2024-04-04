@@ -68,6 +68,8 @@ const plugins = [
   createAutoHeightTextareaPlugin,
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
+  //   addPrefixIconPlugin,
+  hideSuffixIfNoHelpPlugin,
   //  proPlugin,
 ];
 
@@ -118,7 +120,24 @@ function handleSuffixClick(node, event) {
   }, 3000);
 }
 
-// plugins
+// plugins ////////////////
+//
+function hideSuffixIfNoHelpPlugin(node) {
+  if (!node.props.help) {
+    node.props.suffixIcon = "";
+  }
+}
+
+//
+function addPrefixIconPlugin(node) {
+  if (!node.props.type) return;
+
+  if (node.props.type === "email") {
+    node.props.prefixIcon = icons.email;
+  }
+}
+
+//
 function addAsteriskPlugin(node) {
   const legends = ["checkbox_multi", "radio_multi", "repeater", "transferlist"];
   if (
@@ -168,41 +187,4 @@ function addAsteriskPlugin(node) {
       return schemaFn(sectionsSchema);
     };
   });
-}
-
-function addPrefixIconPlugin(node) {
-  node.on("created", () => {
-    console.log(node.type);
-
-    if (node.type !== "input") {
-      //  node.props.prefixIcon = 'email'
-      return;
-    }
-
-    if (node.props.type === "email") {
-      node.props.prefixIcon = "email";
-    }
-  });
-
-  //   email
-  //   if (node.props.type === "email") {
-  //     node.props.prefixIcon = "email";
-  //   }
-
-  //   //   password
-  //   if (node.props.type === "password") {
-  //     node.props.prefixIcon = "lock";
-  //   }
-
-  //   text
-
-  //   number
-  //   if (node.props.type === "number") {
-  //     node.props.prefixIcon = "number";
-  //   }
-
-  //   //   url
-  //   if (node.props.type === "url") {
-  //     node.props.prefixIcon = "url";
-  //   }
 }
