@@ -257,8 +257,5 @@ div.actions {
   grid-template-columns: 24px 1fr;
   gap: var(--space-3xs);
   padding: var(--space-2xs);
-
-  picture {
-  }
 }
 </style>
