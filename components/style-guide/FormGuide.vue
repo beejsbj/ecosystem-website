@@ -93,6 +93,10 @@ const inputs = ref([
     options: options.value,
     selectIcon: "down",
   },
+  {
+    label: "Submit",
+    type: "submit",
+  },
 
   {
     label: "Repeater",
@@ -104,7 +108,7 @@ const inputs = ref([
 </script>
 
 <template>
-  <form class="form-guide">
+  <FormKit class="form-guide" type="form">
     <h2 class="attention-voice">Form</h2>
     <p>
       These are the forms inputs that are used. Using the Formkit and
@@ -198,7 +202,7 @@ const inputs = ref([
         </li>
       </template>
     </ul>
-  </form>
+  </FormKit>
 </template>
 
 <style scoped>
