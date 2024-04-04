@@ -1,3 +1,5 @@
+import { createTooltip, destroyTooltip } from "floating-vue";
+
 // formkit.config.js
 import { defaultConfig, defineFormKitConfig } from "@formkit/vue";
 import {
@@ -84,8 +86,37 @@ export default defineFormKitConfig(() => {
     icons,
 
     classes,
+
+    props: {
+      selectIcon: "down",
+      suffixIcon: "info",
+
+      onSuffixIconClick: handleSuffixClick,
+    },
   };
 });
+
+// functions
+
+function handleSuffixClick(node, event) {
+  if (!node.props.help) return;
+  const el = event.target;
+
+  const tooltip = createTooltip(el, {
+    triggers: [],
+    content: node.props.help,
+  });
+
+  tooltip.show();
+
+  setTimeout(() => {
+    tooltip.hide();
+    // Transition
+    setTimeout(() => {
+      destroyTooltip(el);
+    }, 400);
+  }, 3000);
+}
 
 // plugins
 function addAsteriskPlugin(node) {
