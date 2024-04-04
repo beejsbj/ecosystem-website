@@ -140,7 +140,7 @@ button.disabled {
   align-items: center;
 }
 
-:is(.button, [data-type="submit"] .formkit-input)::before {
+[data-loading] :is(.button, [data-type="submit"] .formkit-input)::before {
   content: "";
   margin-right: 0;
 
