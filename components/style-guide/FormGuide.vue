@@ -118,11 +118,14 @@ const inputs = ref([
     <ul>
       <template v-for="(input, i) in inputs">
         <li class="grid" v-if="!input.isMultiselect && !input.isRepeater">
+          <h3 class="whisper-voice">
+            {{ input.label }}
+          </h3>
           <!-- normal -->
           <FormKit
             :type="input.type"
-            :label="input.label"
-            :name="input.label"
+            :label="' Normal'"
+            :name="input.label + 'normal'"
             :id="i + input.label + 'normal'"
             :options="input.options"
             help="This is a help message. Default input"
@@ -134,8 +137,8 @@ const inputs = ref([
           <!-- focused -->
           <FormKit
             :type="input.type"
-            :label="input.label + ' Focused'"
-            :name="input.label"
+            :label="' Focused'"
+            :name="input.label + 'focused'"
             :id="i + input.label + 'focused'"
             :options="input.options"
             help="This is a help message"
@@ -151,8 +154,8 @@ const inputs = ref([
           <!-- invalid -->
           <FormKit
             :type="input.type"
-            :label="input.label + ' Invalid'"
-            :name="input.label"
+            :label="' Invalid'"
+            :name="input.label + 'invalid'"
             :id="i + input.label + 'invalid'"
             :options="input.options"
             help="This is a help message."
@@ -167,8 +170,8 @@ const inputs = ref([
 
           <FormKit
             :type="input.type"
-            :label="input.label + ' Disabled'"
-            :name="input.label"
+            :label="' Disabled'"
+            :name="input.label + 'disabled'"
             :id="i + input.label + 'disabled'"
             :options="input.options"
             help="This is a help message."
@@ -219,10 +222,13 @@ ul {
 
   li.grid {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
+    border: var(--border-dark);
+    border-radius: var(--corners);
+    padding: var(--space-s);
 
     @media (min-width: 500px) {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -235,6 +241,10 @@ ul {
 
   li .focused:is([data-type="checkbox"], [data-type="radio"]) :deep(fieldset) {
     border-color: var(--fk-color-border-focus);
+  }
+
+  h3 {
+    grid-column: 1 / -1;
   }
 }
 </style>

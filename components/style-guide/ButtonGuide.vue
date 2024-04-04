@@ -96,11 +96,13 @@ const buttons = ref([
           </template>
         </button>
         <div data-loading v-else>
-          <div data-type="submit">
-            <button :class="button.class" :disabled="button.disabled">
-              {{ button.name }}
-            </button>
-          </div>
+          <button :class="button.class" :disabled="button.disabled">
+            {{ button.name }}
+          </button>
+
+          <FormKit type="submit" label="heelo">
+            {{ button.name }}
+          </FormKit>
         </div>
       </li>
     </ul>
