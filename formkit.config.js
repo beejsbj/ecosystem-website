@@ -124,7 +124,7 @@ function handleSuffixClick(node, event) {
 //
 function hideSuffixIfNoHelpPlugin(node) {
   if (!node.props.help) {
-    node.props.suffixIcon = "";
+    node.props.suffixIcon = null;
   }
 }
 

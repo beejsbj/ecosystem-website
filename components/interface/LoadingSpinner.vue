@@ -5,19 +5,11 @@ onMounted(() => {
   gsap.set("body", {
     overflowY: "hidden",
   });
-
-  gsap.set("header main footer", {
-    opacity: 0,
-  });
 });
 
 onUnmounted(() => {
   gsap.set("body", {
     overflowY: "auto",
-  });
-
-  gsap.set("header main footer", {
-    opacity: 1,
   });
 });
 </script>
