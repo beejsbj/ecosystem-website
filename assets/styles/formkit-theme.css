@@ -31,10 +31,10 @@
   --fk-font-size-input: var(--fk-font-size);
   --fk-font-size-label: 0.875em;
   --fk-font-size-legend: 0.875em;
-  --fk-font-size-help: 0.8125em;
-  --fk-font-size-remove: 0.8125em;
+  --fk-font-size-help: var(--step--1);
+  --fk-font-size-remove: var(--step--1);
   --fk-font-size-option: 0.9em;
-  --fk-font-size-message: 0.8125em;
+  --fk-font-size-message: var(--step--1);
   --fk-font-size-button: 0.875em;
   --fk-font-size-summary: 1.25em;
 
@@ -493,15 +493,13 @@
 }
 
 /* dropdown */
-/* [data-family="dropdown"].formkit-outer:not([data-overscroll])
-  .formkit-dropdown-wrapper {
-  background-color: var(--fk-dropdown-bg);
-  border-radius: var(--fk-border-radius);
-  box-shadow: var(--fk-dropdown-shadow);
-  margin: var(--fk-dropdown-margin) 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-} */
+[data-family="dropdown"] .formkit-select-icon {
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+[data-family="dropdown"][data-expanded="true"] .formkit-select-icon {
+  transform: rotate(180deg);
+}
 
 .formkit-listbox {
   background-color: var(--fk-dropdown-bg);
@@ -529,8 +527,12 @@
   padding: var(--space-2xs) 0;
 }
 
-/* formkit-help */
+/* disable parts */
 
 .formkit-help {
+  display: none;
+}
+
+[data-type="submit"] .formkit-suffix-icon {
   display: none;
 }
