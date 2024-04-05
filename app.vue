@@ -87,7 +87,7 @@ onMounted(() => {
 </template>
 
 <style>
-/* nuxt dev tools */
+/* disable the w3m-modal break without disabling devtools for dev env */
 body > div[data-v-app]:not(#vue-inspector-container, #nuxt-devtools-container) {
   display: none;
 }
