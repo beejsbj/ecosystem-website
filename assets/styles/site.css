@@ -140,3 +140,16 @@ html {
   --w3m-success-color: var(--success) !important;
   --w3m-error-color: var(--warning) !important;
 }
+
+/* w3m-model temp fix */
+
+w3m-modal:empty {
+  /* display: none; */
+}
+
+w3m-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  max-height: 100vh;
+}
