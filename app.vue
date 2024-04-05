@@ -88,7 +88,7 @@ onMounted(() => {
 
 <style>
 /* nuxt dev tools */
-body > div[data-v-app] {
+body > div[data-v-app]:not(#vue-inspector-container, #nuxt-devtools-container) {
   display: none;
 }
 </style>
