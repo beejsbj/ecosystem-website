@@ -9,20 +9,6 @@ const ui = useInterfaceStore();
 
 const listRef = ref(null);
 
-// useInfiniteScroll(
-//   listRef,
-//   () => {
-//     console.log("scroll");
-//     if (
-//       ecosystem.list.length < ecosystem.totalProjects ||
-//       ecosystem.list.length >= 10
-//     ) {
-//       ecosystem.filterQuery.page += 1;
-//     }
-//   },
-//   { distance: 20 }
-// );
-
 const handleLoadMore = () => {
   if (
     ecosystem.list.length < ecosystem.totalProjects &&
