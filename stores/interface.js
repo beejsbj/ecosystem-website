@@ -128,12 +128,14 @@ export const useInterfaceStore = defineStore("interface", function () {
 
   //return /////////////////////////////
   return {
+    isDev,
     mainMenuOpen,
     toggleMenu,
     notify,
     isMobile,
     isTablet,
     isDesktop,
+
     firstLoad,
     heroImage,
     showModal,
