@@ -1,5 +1,5 @@
 <script setup>
-import { createTooltip, destroyTooltip } from "floating-vue";
+import { reset } from "@formkit/core";
 // Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
 
@@ -47,7 +47,8 @@ function buttonHandle(event) {
 
   addToChart(totalLiquidated, incentiveRate); // Add the user's input to the chart
 
-  form.value = {}; // Reset the form
+  reset("oev-form"); // Reset the form
+
   formSubmitted.value = true; // Show the output section
 }
 </script>
@@ -55,6 +56,7 @@ function buttonHandle(event) {
 <template>
   <SectionColumn>
     <FormKit
+      id="oev-form"
       type="form"
       @submit="buttonHandle"
       submit-label="Visualize your dApp"
@@ -80,6 +82,8 @@ function buttonHandle(event) {
           v-model.number="form.incentive"
           :show-validation="formSubmitted"
           help="Enter the TVL percentage sent as a liquidation incentive."
+          validation="required|numeric|min:0.5|max:100"
+          validation-label="Incentive Rate"
         />
       </form-field>
       <form-field>
@@ -91,7 +95,7 @@ function buttonHandle(event) {
           }"
           name="tvl"
           placeholder="5000000"
-          mask="###{,###|repeat}"
+          mask="{###,|repeat}"
           allow-incomplete="true"
           show-mask="false"
           help="Optimal results are achieved with larger numerical values."
@@ -101,6 +105,7 @@ function buttonHandle(event) {
           min="0"
           validation-label="TVL"
           :show-validation="formSubmitted"
+          validation="required"
         />
       </form-field>
     </FormKit>
