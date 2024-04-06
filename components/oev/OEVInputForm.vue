@@ -10,12 +10,18 @@ const form = ref({}); // Reference to the form element
 // Function to add the user's input to the chart
 function addToChart(totalLiquidated, incentiveRate) {
   // Create a new protocol object and push it to the protocols array in the OEV store
+
+  const totalIncentiveUSD = totalLiquidated * incentiveRate;
+  const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
+  const totalProfitUSD = totalIncentiveUSD * 0.25;
+
   const userProtocol = {
     id: `userAdded`,
     chainId: 1,
     totalLiquidated,
-    withOEV: totalLiquidated - totalLiquidated * incentiveRate,
-    totalSentToBuilderUSD: totalLiquidated * incentiveRate,
+    totalSentToBuilderUSD,
+    totalProfitUSD,
+    totalIncentiveUSD,
     name: `You`,
     trueHide: true,
   };
@@ -34,7 +40,6 @@ function buttonHandle(event) {
   const incentive = event.incentive;
 
   oev.userTvl = tvl;
-
   oev.userIncentive = incentive;
 
   const totalLiquidated = tvl * liquidationRate;
