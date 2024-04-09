@@ -96,6 +96,7 @@ function buttonHandle(event) {
           name="tvl"
           placeholder="5000000"
           mask="{###,|repeat}"
+          reverse
           allow-incomplete="true"
           show-mask="false"
           help="Optimal results are achieved with larger numerical values."
