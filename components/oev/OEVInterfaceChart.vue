@@ -4,9 +4,9 @@ import formatNumber from "@/utils/formatNumber";
 const oev = useOEVStore();
 
 const showLiquidatedBar = ref(false);
+const showIncentives = ref(true);
+const showProfits = ref(true);
 const showSentToBuilderBar = ref(true);
-const showProfits = ref(false);
-const showIncentives = ref(false);
 
 function toggleLiquidated() {
   showLiquidatedBar.value = !showLiquidatedBar.value;
@@ -111,24 +111,8 @@ const gridStarts = computed(() => {
             <div class="liquidated"></div>
             <p class="whisper-voice">Total Liquidated</p>
           </button>
-          <button
-            @click="toggleSentToBuilder"
-            :class="{
-              dimmed: !showSentToBuilderBar,
-            }"
-          >
-            <div class="totalSentToBuilderUSD"></div>
-            <p class="whisper-voice">Total Sent to Builder</p>
-          </button>
-          <button
-            @click="toggleProfits"
-            :class="{
-              dimmed: !showProfits,
-            }"
-          >
-            <div class="profits"></div>
-            <p class="whisper-voice">Total Profits</p>
-          </button>
+
+          <!--  -->
           <button
             @click="toggleIncentives"
             :class="{
@@ -137,6 +121,28 @@ const gridStarts = computed(() => {
           >
             <div class="incentives"></div>
             <p class="whisper-voice">Total Incentives</p>
+          </button>
+
+          <!--  -->
+          <button
+            @click="toggleProfits"
+            :class="{
+              dimmed: !showProfits,
+            }"
+          >
+            <div class="profits"></div>
+            <p class="whisper-voice">Total Searcher Profits</p>
+          </button>
+
+          <!--  -->
+          <button
+            @click="toggleSentToBuilder"
+            :class="{
+              dimmed: !showSentToBuilderBar,
+            }"
+          >
+            <div class="totalSentToBuilderUSD"></div>
+            <p class="whisper-voice">Total Sent to Builder</p>
           </button>
         </div>
         <ul class="bars" v-auto-animate>
@@ -289,7 +295,7 @@ text-content {
   }
 }
 
-.totalSentToBuilderUSD {
+.liquidated {
   --background: linear-gradient(
     to bottom,
     hsla(160, 69%, 69%, 0.3),
@@ -303,7 +309,7 @@ text-content {
   );
 }
 
-.liquidated {
+.incentives {
   --background: linear-gradient(
     to bottom,
     hsla(255, 34%, 54%, 0.5),
@@ -331,7 +337,7 @@ text-content {
   );
 }
 
-.incentives {
+.totalSentToBuilderUSD {
   --background: linear-gradient(
     to bottom,
     hsla(0, 85%, 65%, 0.3),
