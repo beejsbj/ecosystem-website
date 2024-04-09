@@ -1,6 +1,7 @@
 <script setup>
 import { useInterfaceStore } from "@/stores/interface";
 import { Line } from "vue-chartjs";
+import zoom from "chartjs-plugin-zoom";
 import formatNumber from "@/utils/formatNumber";
 
 import {
@@ -29,10 +30,13 @@ ChartJS.register(
   Legend,
   Colors,
   Filler,
-  LogarithmicScale
+  LogarithmicScale,
+  zoom
 );
 
 const props = defineProps(["data", "options", "metadata"]);
+
+const chart = ref(null);
 
 const ui = useInterfaceStore();
 
@@ -75,6 +79,20 @@ const options = computed(() => {
           left: 8,
         },
       },
+
+      // zoom: {
+      //   //   pan: {
+      //   //     enabled: true,
+      //   //     mode: 'x',
+      //   //     modifierKey: 'ctrl',
+      //   //   },
+      //   zoom: {
+      //     drag: {
+      //       enabled: true,
+      //     },
+      //     mode: "x",
+      //   },
+      // },
     },
 
     scales: {
@@ -144,11 +162,34 @@ const options = computed(() => {
 
   return merged;
 });
+
+const isZoomEnabled = computed(() => {
+  console.log(options.value.plugins.zoom);
+  return props.options.plugins.zoom.enabled;
+});
+
+const handleZoomReset = () => {
+  console.log("reset zoom");
+  //   console.log(chart.value.chart);
+  chart.value.chart.resetZoom();
+};
 </script>
 
 <template>
   <div class="chart-container">
-    <Line :data="props.data" :options="options" :metadata="props.metadata" />
+    <Line
+      :data="props.data"
+      :options="options"
+      :metadata="props.metadata"
+      ref="chart"
+    />
+    <button
+      v-if="isZoomEnabled"
+      @click="handleZoomReset"
+      class="whisper-voice button outline"
+    >
+      Reset Zoom
+    </button>
   </div>
 </template>
 

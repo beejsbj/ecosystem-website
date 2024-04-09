@@ -8,6 +8,12 @@ const isLogarithmic = ref(false);
 
 const periods = ["daily", "weekly", "monthly", "cumulative"];
 
+const enableZoom = computed(() => {
+  return (
+    selectedPeriod.value === "cumulative" || selectedPeriod.value === "daily"
+  );
+});
+
 //
 const metadata = {
   title: "Historic Liquidation Data",
@@ -30,6 +36,21 @@ const options = computed(() => {
       //   position: "right",
       //   align: "start",
       // },
+
+      zoom: {
+        enabled: enableZoom.value,
+        //   pan: {
+        //     enabled: true,
+        //     mode: 'x',
+        //     modifierKey: 'ctrl',
+        //   },
+        zoom: {
+          drag: {
+            enabled: enableZoom.value,
+          },
+          mode: "x",
+        },
+      },
     },
     scales: {
       y: {
@@ -84,16 +105,25 @@ const parsed = computed(() => {
     };
   });
 
-  const labels =
-    selectedPeriod.value === "daily"
-      ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 10))
-      : selectedPeriod.value === "weekly"
-      ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 15)) //weekly
-      : dataLiquidated.map(
-          (item) =>
-            item.x.toDateString().slice(4, 8) +
-            item.x.toDateString().slice(10, 15)
-        ); //monthly
+  let labels;
+
+  if (
+    selectedPeriod.value === "daily" ||
+    selectedPeriod.value === "cumulative"
+  ) {
+    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 10));
+  }
+
+  if (selectedPeriod.value === "weekly") {
+    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 15));
+  }
+
+  if (selectedPeriod.value === "monthly") {
+    labels = dataLiquidated.map(
+      (item) =>
+        item.x.toDateString().slice(4, 8) + item.x.toDateString().slice(10, 15)
+    );
+  }
 
   return {
     labels,
