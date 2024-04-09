@@ -18,19 +18,18 @@ const cards = [
     title: "TOTAL LIQUIDATED",
     value: `$${formatNumber(totalLiquidated)}*`,
   },
+  //   {
+  //     title: "TOTAL SENT TO BUILDER",
+  //     value: `$${formatNumber(totalSentToBuilderUSD)}*`,
+  //   },
   {
-    title: "TOTAL SENT TO BUILDER",
-    value: `$${formatNumber(totalSentToBuilderUSD)}*`,
-  },
-  {
-    title: "TOTAL INCENTIVE",
-    //  amount lost to oev
+    title: "AMOUNT LOST TO OEV",
     value: `$${formatNumber(totalIncentiveUSD)}*`,
   },
-  {
-    title: "TOTAL Searcher PROFIT",
-    value: `$${formatNumber(totalProfitUSD)}*`,
-  },
+  //   {
+  //     title: "TOTAL Searcher PROFIT",
+  //     value: `$${formatNumber(totalProfitUSD)}*`,
+  //   },
 ];
 
 const gridCount = computed(() => {
