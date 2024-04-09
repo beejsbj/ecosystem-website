@@ -99,20 +99,22 @@ const parsed = computed(() => {
     labels,
     datasets: [
       {
-        data: dataSentToBuilder,
-        label: "Total Sent to Builder",
-      },
-      {
         data: dataLiquidated,
         label: "Total Liquidated",
       },
       {
-        data: dataProfit,
-        label: "Total Profit",
-      },
-      {
         data: dataIncentive,
         label: "Total Incentive",
+      },
+      {
+        data: dataProfit,
+        label: "Total Profit",
+        hidden: true,
+      },
+      {
+        data: dataSentToBuilder,
+        label: "Total Sent to Builder",
+        hidden: true,
       },
     ],
   };
