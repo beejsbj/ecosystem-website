@@ -3,7 +3,7 @@ const oev = useOEVStore();
 const ui = useInterfaceStore();
 
 const selectedDataset = ref("aaveV2Eth-1");
-const selectedPeriod = ref("monthly");
+const selectedPeriod = ref("cumulative");
 const isLogarithmic = ref(false);
 
 const periods = ["daily", "weekly", "monthly", "cumulative"];
