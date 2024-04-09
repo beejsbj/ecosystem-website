@@ -24,6 +24,7 @@ const cards = [
   },
   {
     title: "TOTAL INCENTIVE",
+    //  amount lost to oev
     value: `$${formatNumber(totalIncentiveUSD)}*`,
   },
   {
