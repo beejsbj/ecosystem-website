@@ -1,5 +1,6 @@
 <script setup>
 definePageMeta({
+  title: "Add Your dApp",
   layout: "footer-less",
 });
 
@@ -13,13 +14,15 @@ useSeoMeta({
 </script>
 
 <template>
-  <PageTitle heading="Join the Ecosystem" innerClass="add-dapp-title">
-    <p>
-      Join the API3 ecosystem. Easily list your dApp or service and join our
-      thriving community
-    </p>
-  </PageTitle>
-  <SectionColumn>
-    <LazyAddDappForm />
-  </SectionColumn>
+  <ContentsWrapper>
+    <PageTitle heading="Join the Ecosystem" innerClass="add-dapp-title">
+      <p>
+        Join the API3 ecosystem. Easily list your dApp or service and join our
+        thriving community
+      </p>
+    </PageTitle>
+    <SectionColumn>
+      <LazyAddDappForm />
+    </SectionColumn>
+  </ContentsWrapper>
 </template>

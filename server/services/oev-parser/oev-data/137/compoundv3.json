@@ -1,0 +1,761 @@
+[
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "3/10/2023",
+    "totalLiquidated": "151.035",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xa3e08643225dea5f27a0815157574fcfd6017dd7eef2c41ec4c66cf11ccd3734",
+        "liquidatedCollateral": "151.035",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "3/15/2023",
+    "totalLiquidated": "0.01339922",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x2b804668eecd4a6754e25c5b7d590ca9fbd053b4ce3ed9f12ca933816029b783",
+        "liquidatedCollateral": "0.01339922",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "4/20/2023",
+    "totalLiquidated": "0.00004543",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xbae8c901b47833aab5c05b960bef4412bf3972d1c8c987c41276b44409608706",
+        "liquidatedCollateral": "0.00004543",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "4/24/2023",
+    "totalLiquidated": "1778.49886506",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0c8c4df7ef71d2c3da73737f305e1d9326b6adedf84f05e4def2e9a92420cdbe",
+        "liquidatedCollateral": "359.95393506",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x0c8c4df7ef71d2c3da73737f305e1d9326b6adedf84f05e4def2e9a92420cdbe",
+        "liquidatedCollateral": "1418.54493",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "4/25/2023",
+    "totalLiquidated": "14354.7160174",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xb769c2648fed844e7b6be602d79dcb849b724dc414cc4dd3335c164c9604a28a",
+        "liquidatedCollateral": "14354.7135",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xc971980c5657080083d87729d04d9a223c64ef9613bca9ab9ff8fa5de8a4dbe1",
+        "liquidatedCollateral": "0.0025174",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "5/8/2023",
+    "totalLiquidated": "286.44651767",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x61b0936c70b584dfb7db013d0fe8a63dbcfdc0c57ea0287cb39f84e22be7be88",
+        "liquidatedCollateral": "0.00005417",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xe7838e48bf8562816001ffd1571445304b00028ac479da3dfda2b455d9fe89a6",
+        "liquidatedCollateral": "286.4464635",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "5/12/2023",
+    "totalLiquidated": "0.16949878",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6a2c5fb17b176e445d4e684589030245c69035d4fcfaf6607116a64f4eedd09c",
+        "liquidatedCollateral": "0.16949878",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "6/5/2023",
+    "totalLiquidated": "250.08",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3af7c7c56f1b798c92dbb27c98bcc49f7169b004f794021c4ca193617fb1895f",
+        "liquidatedCollateral": "250.08",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "6/6/2023",
+    "totalLiquidated": "5685.98316562",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0b19ed8262cbca02a025d4f418770fb837d506b7468021320f99de962cf3f3a7",
+        "liquidatedCollateral": "288.7709396",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x72a78bc6e00a3ecd44f6a4bd42a4a3b547c4a97e9270cb1344190236aaa7130b",
+        "liquidatedCollateral": "4953.9510411",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xf7a9ce4463825e3777dbc0431646dfa8413eec74c80c1f3fccd5f8f144566dfa",
+        "liquidatedCollateral": "443.26118492",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "6/9/2023",
+    "totalLiquidated": "1430.72061175",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5b797e4b3a8620961353f6c2511acac535b857f564dbdd85b1db313612aaed89",
+        "liquidatedCollateral": "1081.661644",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x8b4931e715b1a3470a680813a886ac2b1e7aec0a701b06ac7379197ea0dbecc5",
+        "liquidatedCollateral": "67.90142135",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x8b4931e715b1a3470a680813a886ac2b1e7aec0a701b06ac7379197ea0dbecc5",
+        "liquidatedCollateral": "281.1575464",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "6/10/2023",
+    "totalLiquidated": "11344.80300659",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x60d3e04723d34dfaf0f43c4077f2dbec9ed2ae9e46b81be24e6c033fb1faf9a1",
+        "liquidatedCollateral": "2888.272547",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x78161e6bfe08861af3f08759366d0f161e071a600c7d718c43cf81bfd2a2b8eb",
+        "liquidatedCollateral": "128.739884",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x7f95305c18225b1343bcc472d7c531b081a70d378ab3c61c999fd4d1f52e1a9e",
+        "liquidatedCollateral": "314.45908256",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x7f95305c18225b1343bcc472d7c531b081a70d378ab3c61c999fd4d1f52e1a9e",
+        "liquidatedCollateral": "1318.94011158",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9ccc9f947c59cdef6546e0d3f7bb8dc6ada5646cbe0ef91584f8886348db3adf",
+        "liquidatedCollateral": "633.94337963",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xac7124c462efb6c5cc5e5453ed2856f3a3162c860f1528029ef093844a860cd5",
+        "liquidatedCollateral": "751.91490055",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xd6ec85f48920f00f7a969002de4829d8ccb6536de47a971520f84ddeebb9b1eb",
+        "liquidatedCollateral": "5144.832",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xe3339839cb3419ab965d05213302dc34ad7f5e83279e11aaff920db51efccdf7",
+        "liquidatedCollateral": "33.39829698",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xe3339839cb3419ab965d05213302dc34ad7f5e83279e11aaff920db51efccdf7",
+        "liquidatedCollateral": "33.74789129",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xe3339839cb3419ab965d05213302dc34ad7f5e83279e11aaff920db51efccdf7",
+        "liquidatedCollateral": "96.554913",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "8/9/2023",
+    "totalLiquidated": "263.26344542",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x250ed4f3ed0e8d104d47bc3b379c8a07f60d35b8b185947a2bdcd4aedc6dcde4",
+        "liquidatedCollateral": "136.8",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5c756ed1eb6d240cff3d397a8fc66520466c5039dec074c7f1031238cc16a98b",
+        "liquidatedCollateral": "37.27504742",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5c756ed1eb6d240cff3d397a8fc66520466c5039dec074c7f1031238cc16a98b",
+        "liquidatedCollateral": "89.188398",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "8/17/2023",
+    "totalLiquidated": "7642.13110003",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x56796074b75172a3852721d7b7adca7b7e73cc24157870e00eb63f2b3ee65cdc",
+        "liquidatedCollateral": "6843.52353163",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x56796074b75172a3852721d7b7adca7b7e73cc24157870e00eb63f2b3ee65cdc",
+        "liquidatedCollateral": "660.569",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xad435b716963efd62c06fbd909e1b24b8ba9c052b61e07d578447f7a4358f397",
+        "liquidatedCollateral": "0.0001926",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xcb21746c95289ee88cda2c42f9a17999d75924d18921179e2e3cc6c9b0658ea3",
+        "liquidatedCollateral": "138.0383758",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "8/18/2023",
+    "totalLiquidated": "37540.47050784",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3057b38f9b1e10603572414bb08ba123e73a5e8b9bd22c03dcad22db00076512",
+        "liquidatedCollateral": "0.00003812",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x600420a2e55285c80423c5766b23f1f70ccd8cad2e1a5fb624fb8d5ffb316248",
+        "liquidatedCollateral": "362.92089737",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x7e8e41e875e0314172a1c490301f16b99834b568a8183523f2bc5c023f42b97d",
+        "liquidatedCollateral": "1681.71070352",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9914ba5e2c2163831835253a51f936e8dbbe338db0d904f39b6986f6da59b4c5",
+        "liquidatedCollateral": "131.583",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xa55b115add3843a7efdf701f42bb6ab1f0eca566c80c4d8eab3f96bbd2a6e633",
+        "liquidatedCollateral": "341.92243738",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xa55b115add3843a7efdf701f42bb6ab1f0eca566c80c4d8eab3f96bbd2a6e633",
+        "liquidatedCollateral": "737.67873034",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xa55b115add3843a7efdf701f42bb6ab1f0eca566c80c4d8eab3f96bbd2a6e633",
+        "liquidatedCollateral": "2574.45000101",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xaab32365f70f9ec10937de88194577847ee361faaee2db56518eb08e7c8c0159",
+        "liquidatedCollateral": "531.98319136",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xef62f76708b3417ea3c5377a41de0b0e6a4b3da2156a1f4dcd70e2510c6077be",
+        "liquidatedCollateral": "0.00014089",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xf9cb4d3508f5c5b07d5e1dbf7ec99e0bd37351c8a3474983b8b2557e7811aac2",
+        "liquidatedCollateral": "13796.32727994",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xf9cb4d3508f5c5b07d5e1dbf7ec99e0bd37351c8a3474983b8b2557e7811aac2",
+        "liquidatedCollateral": "17381.89408791",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "8/22/2023",
+    "totalLiquidated": "6772.70174916",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xb1a83af7695910c59a7eb6eae285837234074f625095b1902521c13bb3b9923a",
+        "liquidatedCollateral": "6772.70174916",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "8/25/2023",
+    "totalLiquidated": "0.00005847",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd2f7b9c00cdca4ce1df1e29a3ee09b0101dcefe58db2d0a6c5e21ec5ca0a9455",
+        "liquidatedCollateral": "0.00005744",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xd2f7b9c00cdca4ce1df1e29a3ee09b0101dcefe58db2d0a6c5e21ec5ca0a9455",
+        "liquidatedCollateral": "0.00000103",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "10/12/2023",
+    "totalLiquidated": "1836.01785063",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6d1c08a99db73bef68b271a506947fed79759a6a2a5b743454c7aad4428eac4a",
+        "liquidatedCollateral": "1836.01785063",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "10/16/2023",
+    "totalLiquidated": "1.12123921",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x4271a02910d59991476acd94f2b938b889eea382c0f4b59c2e643fac5a4f03a9",
+        "liquidatedCollateral": "1.12123921",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "10/20/2023",
+    "totalLiquidated": "0.00618588",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xbbe1e87a6916cb8eff36999bc9f16c3c584d8adcd359bdab58c19bd702811bd3",
+        "liquidatedCollateral": "0.00001931",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xfb540ef64924b6b2b65780e24b3a2bc656a4448714bdb47bf3afae5e03ad08b5",
+        "liquidatedCollateral": "0.00616657",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "10/27/2023",
+    "totalLiquidated": "241.062084",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xaf74aa5617a60f0c68a610d8621d8c0badf3681d0984874d7d99a15e2c15fb7b",
+        "liquidatedCollateral": "241.062084",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "12/11/2023",
+    "totalLiquidated": "12689.0725696",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xfe53160e6f8a245192b4433198cca6fedc0d0437c79bf319411fa58209ae5209",
+        "liquidatedCollateral": "2525.33269302",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xfe53160e6f8a245192b4433198cca6fedc0d0437c79bf319411fa58209ae5209",
+        "liquidatedCollateral": "10163.73987658",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "1/3/2024",
+    "totalLiquidated": "122348.63861293",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x09983486792459ae5a3b79d703ce3610370003038020a6f67d4b9fb7330af02b",
+        "liquidatedCollateral": "118094.52417649",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x34c17a18bc6b0fd928b247252f4d13925cc8a47d1c273684778365e2403dbef3",
+        "liquidatedCollateral": "2971.580963",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x36de62dcb7da519d7b5403d183ba525c684ace237af6b71abbe545a1667d2243",
+        "liquidatedCollateral": "1282.53347344",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "1/8/2024",
+    "totalLiquidated": "358.16371221",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x089f9ac715e0e74e39fa3fee21594780cceba77f6ad302d6b4ff9f2bff10c661",
+        "liquidatedCollateral": "358.16371221",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "1/18/2024",
+    "totalLiquidated": "365.18300176",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3223d8a78094c80cf132a288a71514d3a9726f011756ba6e4bba83ba9ad9167f",
+        "liquidatedCollateral": "365.18300176",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "1/22/2024",
+    "totalLiquidated": "574.2731358",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x2c8e7549ec5fa05a37928ea8ff5582ceea3e7463f186af54cdb6baf5aa44a5a3",
+        "liquidatedCollateral": "574.2731358",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "1/23/2024",
+    "totalLiquidated": "10700.00995612",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x00913a4aaf5d723880924ad721b1efa80e38ab24e5983bdec3ecf7e79beaa2d8",
+        "liquidatedCollateral": "122.62455216",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x00913a4aaf5d723880924ad721b1efa80e38ab24e5983bdec3ecf7e79beaa2d8",
+        "liquidatedCollateral": "569.65001631",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x3b8f5ab9c60d4ff248640283aeb1e96756319f8915c77747df237da36beca4c5",
+        "liquidatedCollateral": "0.00004105",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x6215f234a45642e397cf57ac1c38f75042cdde8d333bc85a0a98a191cb541955",
+        "liquidatedCollateral": "0.00007256",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x6b5366ccf81fa9c7b8e1ef5a6a679d711080507150eb6faf4438dc1caaed9cbe",
+        "liquidatedCollateral": "0.00004985",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x6faa114b163069bb97e85aa873d76d8890718feb1c11aa1ffa62264ab48c6e7c",
+        "liquidatedCollateral": "0.00063629",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x719c0d76df1116ffbf20086dcda513ffbdcdd0010fd4b51ff0350b9c7b512c33",
+        "liquidatedCollateral": "7182.81",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xb1c6938c5039db867c210904f0201c38f3790ce97cccd06c2f3d18d2e05683f9",
+        "liquidatedCollateral": "504.6510502",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xb1c6938c5039db867c210904f0201c38f3790ce97cccd06c2f3d18d2e05683f9",
+        "liquidatedCollateral": "1772.05053964",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xb1c6938c5039db867c210904f0201c38f3790ce97cccd06c2f3d18d2e05683f9",
+        "liquidatedCollateral": "400.7271",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xb7db691be1a4d2bea7320ba8c9374f594cc5e8fb7cd3fd9540e352de838906cc",
+        "liquidatedCollateral": "147.45645276",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xd949d5d4fa1d4833feab60af2a7470acd471f661eb050cf9a6893fce331160bc",
+        "liquidatedCollateral": "0.00003421",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xdb2ee2ca2a2c2a277036c5096859f62ffce954abe455d347c8518598a3df97f9",
+        "liquidatedCollateral": "0.00018674",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xdd93d766fe6991b2ab41a9db54e08cd6ee31a81fb778d54f0b2d3cd26897c5f4",
+        "liquidatedCollateral": "0.03922435",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  },
+  {
+    "name": "Compound V3",
+    "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
+    "date": "2/3/2024",
+    "totalLiquidated": "0.02809929",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5a727935594c62ddac2e44eeec4665b116e68450d81624d13c38bf3c6993bb18",
+        "liquidatedCollateral": "0.02809897",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5a727935594c62ddac2e44eeec4665b116e68450d81624d13c38bf3c6993bb18",
+        "liquidatedCollateral": "0.00000032",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 137
+  }
+]

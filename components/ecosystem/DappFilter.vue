@@ -43,8 +43,7 @@ const years = computed(() => {
 });
 
 onMounted(() => {
-  const pageLoad = gsap.timeline();
-
+  //   const pageLoad = gsap.timeline();
   //   pageLoad.fromTo(
   //     "dapp-filter",
   //     {
@@ -80,7 +79,6 @@ const handleFilter = (event) => {
           type="search"
           placeholder="Search"
           v-model="ecosystem.filterQuery.searchKey"
-          prefix-icon="search"
         />
       </search-bar>
     </header>
@@ -104,7 +102,10 @@ const handleFilter = (event) => {
         </button>
       </div>
       <ul class="pills" v-auto-animate>
-        <template v-for="(chain, index) in chains">
+        <template
+          v-if="ui.loadingDone && chains"
+          v-for="(chain, index) in chains"
+        >
           <li
             class="pill"
             :key="chain.value"
@@ -120,9 +121,19 @@ const handleFilter = (event) => {
               v-model="ecosystem.filterQuery.chains[chain.value]"
               @change="handleFilter"
               v-auto-animate
-            />
+            >
+              <template #label="context">
+                <div class="flex">
+                  <ChainIcon :id="chain.value" />
+                  <span class="whisper-voice">
+                    {{ context.label }}
+                  </span>
+                </div>
+              </template>
+            </FormKit>
           </li>
         </template>
+        <SkeletonListItem v-else v-for="i in 5" />
       </ul>
     </div>
 
@@ -146,7 +157,10 @@ const handleFilter = (event) => {
         </button>
       </div>
       <ul class="pills" v-auto-animate>
-        <template v-for="(productType, index) in productTypes">
+        <template
+          v-if="ui.loadingDone && productTypes"
+          v-for="(productType, index) in productTypes"
+        >
           <li
             class="pill"
             :key="productType.name"
@@ -161,9 +175,19 @@ const handleFilter = (event) => {
               v-model="ecosystem.filterQuery.productTypes[productType.name]"
               @change="handleFilter"
               v-auto-animate
-            />
+            >
+              <template #label="context">
+                <div class="flex">
+                  <DynamicIcon :icon="productType.name" />
+                  <span class="whisper-voice">
+                    {{ context.label }}
+                  </span>
+                </div>
+              </template>
+            </FormKit>
           </li>
         </template>
+        <SkeletonListItem v-else v-for="i in 5" />
       </ul>
     </div>
 
@@ -188,7 +212,10 @@ const handleFilter = (event) => {
       </div>
 
       <ul class="pills" v-auto-animate>
-        <template v-for="(category, index) in categories">
+        <template
+          v-if="ui.loadingDone && categories"
+          v-for="(category, index) in categories"
+        >
           <li
             class="pill"
             :key="category.name"
@@ -203,9 +230,17 @@ const handleFilter = (event) => {
               v-model="ecosystem.filterQuery.categories[category.name]"
               @change="handleFilter"
               v-auto-animate
-            />
+            >
+              <!-- <template #label="context">
+                <DynamicIcon :icon="category.name" />
+                <span class="whisper-voice">
+                  {{ context.label }}
+                </span>
+              </template> -->
+            </FormKit>
           </li>
         </template>
+        <SkeletonListItem v-else v-for="i in 5" />
       </ul>
     </div>
 
@@ -228,7 +263,7 @@ const handleFilter = (event) => {
         </button>
       </div>
       <ul class="pills" v-auto-animate>
-        <template v-for="(year, index) in years">
+        <template v-if="ui.loadingDone && years" v-for="(year, index) in years">
           <li
             class="pill"
             :key="year.name"
@@ -246,6 +281,7 @@ const handleFilter = (event) => {
             />
           </li>
         </template>
+        <SkeletonListItem v-else v-for="i in 5" />
       </ul>
     </div>
 
@@ -306,14 +342,25 @@ dapp-filter {
   .pills {
     display: flex;
     flex-direction: column;
-    gap: calc((var(--space-s) + var(--space-m)) / 2);
+    gap: var(--space-xs);
 
     //  gap: calc(var(--space-m));
     padding: 0 var(--space-m);
+
+    :deep(picture) {
+      max-width: 24px;
+    }
   }
 }
 
 button.icon.caret {
   max-width: var(--space-l);
+}
+
+.flex {
+  display: flex;
+  padding-left: var(--space-3xs);
+  align-items: center;
+  gap: var(--space-3xs);
 }
 </style>

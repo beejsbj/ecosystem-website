@@ -12,19 +12,19 @@ useHead({
 </script>
 
 <template>
-  <div class="curves-wrapper">
-    <picture class="curves-decoration-3">
+  <ContentsWrapper>
+    <div class="curves-wrapper">
       <CurvesDecoration3 />
-    </picture>
-  </div>
+    </div>
 
-  <SiteHeader />
+    <SiteHeader />
 
-  <main>
-    <slot />
-  </main>
+    <main>
+      <slot />
+    </main>
 
-  <SiteFooter />
+    <SiteFooter />
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">
@@ -35,19 +35,23 @@ useHead({
   width: 100%;
   z-index: -10;
 
-  picture.curves-decoration-3 {
+  :deep(picture.curves-decoration-3) {
     position: absolute;
-    top: 100px;
-    left: -200px;
 
-    width: 300vw;
+    --top: 100px;
+    --left: -200px;
+    --width: 300vw;
+    top: var(--top);
+    left: var(--left);
+
+    width: var(--width);
 
     @media (min-width: 768px) {
       display: block;
-      top: -50px;
-      left: -500px;
+      --top: -50px;
+      --left: -500px;
 
-      width: 200vw;
+      --width: 200vw;
       z-index: -10;
     }
   }

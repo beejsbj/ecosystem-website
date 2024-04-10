@@ -1,5 +1,4 @@
 <script setup>
-import Multiselect from "@vueform/multiselect";
 import { useEcosystemStore } from "@/stores/ecosystem";
 
 const ecosystem = useEcosystemStore();
@@ -75,7 +74,7 @@ async function handleUpdateProxy() {
     <text-content>
       <h2 class="attention-voice">Enter Proxy information</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
     <div class="proxy-form grid-item" v-auto-animate>
@@ -83,48 +82,45 @@ async function handleUpdateProxy() {
         <FormKit
           type="text"
           label="Proxy address"
-          label-class="$reset calm-voice"
           name="proxyAddress"
           validation-label="Proxy address"
           id="proxyAddress"
           help="You can get proxy address from market.api3.org"
           v-model="dappForm.proxyAddress"
+          placeholder="0x..."
         />
       </form-field>
 
       <form-field>
-        <label class="calm-voice" for="proxy-chain"> Proxy chain </label>
-        <Multiselect
-          id="proxy-chain"
-          v-model="dappForm.proxyChain"
-          mode="single"
-          :close-on-select="true"
-          :searchable="true"
-          :create-option="false"
+        <FormKit
+          type="autocomplete"
+          :label="`Proxy chain`"
+          :id="`proxy-chain`"
           :options="ecosystem.chainOptions"
-          :classes="{
-            singleLabelText: 'calm-voice multiselect-single-label-text',
-            dropdown: 'calm-voice multiselect-dropdown',
-            search: 'calm-voice multiselect-search',
-          }"
-        />
+          :v-model="dappForm.proxyChain"
+          :required="true"
+          popover
+        >
+          <template #option="{ option }">
+            <div class="chain-option">
+              <ChainIcon :id="option.value" />
+              <span>
+                {{ option.label }}
+              </span>
+            </div>
+          </template>
+        </FormKit>
       </form-field>
 
       <form-field class="feed-option">
-        <label class="calm-voice" for="feed-name"> Proxy feed name </label>
-        <Multiselect
-          id="feed-name"
-          v-model="dappForm.feedName"
-          mode="single"
-          :close-on-select="true"
-          :searchable="true"
-          :create-option="false"
+        <FormKit
+          type="autocomplete"
+          :label="`Proxy feed name`"
+          :id="`feed-name`"
           :options="props?.feedNameOptions"
-          :classes="{
-            singleLabelText: 'calm-voice multiselect-single-label-text',
-            search: 'calm-voice multiselect-search',
-            dropdown: 'calm-voice multiselect-dropdown',
-          }"
+          :v-model="dappForm.feedName"
+          :required="true"
+          popover
         />
       </form-field>
 
@@ -238,5 +234,14 @@ async function handleUpdateProxy() {
   .error-message {
     color: var(--error, red);
   }
+}
+
+.chain-option {
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: 24px 1fr;
+  gap: var(--space-3xs);
+  padding: var(--space-2xs) 0;
 }
 </style>

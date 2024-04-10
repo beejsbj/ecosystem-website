@@ -12,7 +12,7 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: "API3 Ecosystem Home",
+  title: "API3 Ecosystem",
 });
 
 onMounted(() => {
@@ -25,57 +25,33 @@ onMounted(() => {
 </script>
 
 <template>
-  <HeroLanding />
+  <ContentsWrapper>
+    <HeroLanding />
 
-  <MissionComponent />
+    <MissionComponent />
 
-  <section class="curves-wrapper">
-    <picture class="curves-decoration-3">
-      <CurvesDecoration3 />
-    </picture>
-  </section>
+    <section class="curves-wrapper">
+      <picture class="curves-decoration-3">
+        <CurvesDecoration3 />
+      </picture>
+    </section>
 
-  <CallToAction />
+    <CallToAction />
 
-  <SectionColumn class="home-article-grid">
-    <h2 class="loud-voice">Articles</h2>
-    <LazyArticleGrid layout="0" cardCount="4" isFeaturedSort="true" />
-    <NuxtLink class="text blue" to="/articles">See More</NuxtLink>
-  </SectionColumn>
+    <HomeArticles />
+  </ContentsWrapper>
 </template>
 
 <style lang="scss">
-.home-article-grid {
-  .loud-voice {
-    text-align: center;
-  }
-  a.text {
-    text-align: center;
-    margin-top: var(--space-m);
-  }
-}
-
-body:has(main.index) {
-  @media (min-width: 1024px) {
-    //  overflow: hidden;
-  }
-}
 main.index {
   display: grid;
   gap: var(--space-3xs);
-  inner-column {
-  }
+
   inner-column > h2 {
     margin-bottom: var(--space-l);
   }
   @media (min-width: 768px) {
     gap: calc(var(--space-3xs) * 10);
-  }
-  @media (min-width: 1024px) {
-    & > section:not(.scrolling-stats) {
-      inner-column {
-      }
-    }
   }
 }
 </style>

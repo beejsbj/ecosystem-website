@@ -1,6 +1,18 @@
 <script setup>
-import Multiselect from "@vueform/multiselect";
-import "@vueform/multiselect/themes/default.css";
+const options = ref([
+  {
+    label: "option1",
+    value: "option1",
+  },
+  {
+    label: "option2",
+    value: "option2",
+  },
+  {
+    label: "option3",
+    value: "option3",
+  },
+]);
 
 const inputs = ref([
   {
@@ -8,40 +20,95 @@ const inputs = ref([
     type: "text",
   },
   {
-    label: "Textarea",
-    type: "textarea",
+    label: "Search",
+    type: "search",
+  },
+  {
+    label: "Email",
+    type: "email",
+  },
+  {
+    label: "Password",
+    type: "password",
+  },
+  {
+    label: "Number",
+    type: "number",
+  },
+  {
+    label: "URL",
+    type: "url",
   },
 
   {
-    label: "Single Select",
-    type: "single",
-    isMultiselect: true,
-  },
-  {
-    label: "Multi Select",
-    type: "tags",
-    isMultiselect: true,
-  },
-  {
-    label: "Checkbox",
-    type: "checkbox",
-    options: ["option1", "option2", "option3"],
-  },
-  {
-    label: "Radio",
-    type: "radio",
-    options: ["option1", "option2", "option3"],
+    label: "Textarea",
+    type: "textarea",
   },
   {
     label: "File",
     type: "file",
     formFieldClass: "file-upload",
   },
+  {
+    label: "Range",
+    type: "range",
+  },
+
+  {
+    label: "Toggle",
+    type: "toggle",
+  },
+
+  {
+    label: "Checkbox",
+    type: "checkbox",
+    options: options.value,
+  },
+  {
+    label: "Radio",
+    type: "radio",
+    options: options.value,
+  },
+
+  {
+    label: "Select",
+    type: "select",
+    options: options.value,
+  },
+
+  //   pro
+  {
+    label: "Autocomplete",
+    type: "autocomplete",
+    options: options.value,
+  },
+  {
+    label: "Dropdown",
+    type: "dropdown",
+    options: options.value,
+  },
+  {
+    label: "Taglist",
+    type: "taglist",
+    options: options.value,
+    selectIcon: "down",
+  },
+  {
+    label: "Submit",
+    type: "submit",
+  },
+
+  {
+    label: "Repeater",
+    type: "repeater",
+    options: options.value,
+    isRepeater: true,
+  },
 ]);
 </script>
 
 <template>
-  <div class="form-guide">
+  <FormKit class="form-guide" type="form">
     <h2 class="attention-voice">Form</h2>
     <p>
       These are the forms inputs that are used. Using the Formkit and
@@ -49,58 +116,135 @@ const inputs = ref([
       match the design of the site.
     </p>
     <ul>
-      <li v-for="input in inputs">
-        <form-field
-          :type="input.type"
-          :label="input.label"
-          :class="input.formFieldClass"
-        >
+      <template v-for="(input, i) in inputs">
+        <li class="grid" v-if="!input.isMultiselect && !input.isRepeater">
+          <h3 class="whisper-voice">
+            {{ input.label }}
+          </h3>
+          <!-- normal -->
           <FormKit
-            v-if="!input.isMultiselect"
             :type="input.type"
-            :label="input.label"
-            label-class="$reset notice-voice"
-            :name="input.label"
-            :id="input.label"
+            :label="' Normal'"
+            :name="input.label + 'normal'"
+            :id="i + input.label + 'normal'"
             :options="input.options"
-            help="This is a help message"
+            help="This is a help message. Default input"
+            :placeholder="`Add ${input.label.toLowerCase()}...`"
+            :multiple="input.isMultiple"
+            value="This is the input"
           />
 
-          <template v-else>
-            <label class="notice-voice" :for="input.label">
-              {{ input.label }}
-            </label>
-            <Multiselect
-              :mode="input.type"
-              :label="input.label"
-              :name="input.label"
-              :id="input.label"
-              :searchable="true"
-              :create-option="false"
-              :options="['option1', 'option2', 'option3']"
-              :classes="{
-                singleLabelText: 'calm-voice multiselect-single-label-text',
-                dropdown: 'calm-voice multiselect-dropdown',
-                search: 'calm-voice multiselect-search',
-                tag: 'calm-voice multiselect-tag',
-                tagsSearch: 'calm-voice multiselect-tags-search',
-              }"
+          <!-- focused -->
+          <FormKit
+            :type="input.type"
+            :label="' Focused'"
+            :name="input.label + 'focused'"
+            :id="i + input.label + 'focused'"
+            :options="input.options"
+            help="This is a help message"
+            :placeholder="`Add ${input.label.toLowerCase()}...`"
+            :multiple="input.isMultiple"
+            :focused="true"
+            value="This is the input"
+            :classes="{
+              outer: 'focused',
+            }"
+          />
+
+          <!-- invalid -->
+          <FormKit
+            :type="input.type"
+            :label="' Invalid'"
+            :name="input.label + 'invalid'"
+            :id="i + input.label + 'invalid'"
+            :options="input.options"
+            help="This is a help message."
+            :placeholder="`Add ${input.label.toLowerCase()}...`"
+            :multiple="input.isMultiple"
+            validation="length:30"
+            validation-visibility="live"
+            value="This is the input"
+          />
+
+          <!-- disabled -->
+
+          <FormKit
+            :type="input.type"
+            :label="' Disabled'"
+            :name="input.label + 'disabled'"
+            :id="i + input.label + 'disabled'"
+            :options="input.options"
+            help="This is a help message."
+            :placeholder="`Add ${input.label.toLowerCase()}...`"
+            :multiple="input.isMultiple"
+            value="This is the input"
+            disabled
+          />
+        </li>
+        <li v-if="input.isRepeater">
+          <!--  -->
+          <FormKit
+            id="repeater"
+            name="users"
+            type="repeater"
+            label="Users"
+            #default="{ index }"
+            :insert-control="true"
+            :add-button="false"
+          >
+            <FormKit
+              type="email"
+              :label="`${index + 1}. Email`"
+              name="email"
+              validation="email"
+              placeholder="Add email address..."
             />
-          </template>
-        </form-field>
-      </li>
+            <FormKit type="toggle" name="toggle" label="Airplane mode" />
+            <FormKit type="submit" name="submit" label="Submit" />
+          </FormKit>
+        </li>
+      </template>
     </ul>
-  </div>
+  </FormKit>
 </template>
 
 <style scoped>
 ul {
   display: grid;
   --gap: var(--space-xl);
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  container-type: inline-size;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  li.grid {
+    display: grid;
+    gap: 2rem;
+    border: var(--border-dark);
+    border-radius: var(--corners);
+    padding: var(--space-s);
+
+    @media (min-width: 500px) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  li
+    .focused:not([data-type="checkbox"], [data-type="radio"])
+    :deep(.formkit-inner) {
+    box-shadow: var(--fk-border-box-shadow-focus);
+  }
+
+  li .focused:is([data-type="checkbox"], [data-type="radio"]) :deep(fieldset) {
+    border-color: var(--fk-color-border-focus);
+  }
+
+  h3 {
+    grid-column: 1 / -1;
   }
 }
 </style>

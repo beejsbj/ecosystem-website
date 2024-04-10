@@ -48,13 +48,20 @@ main {
   display: none;
 }
 
+.hide-opacity,
+.hideOpacity {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flex {
+  display: flex;
+  gap: var(--space-s);
+}
+
 .grid-3fr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-.display-contents {
-  display: contents;
 }
 
 .page-enter-active,
@@ -65,6 +72,16 @@ main {
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.4s;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  filter: blur(1rem) grayscale(1);
 }
 
 .fade-enter-active,
@@ -123,3 +140,17 @@ html {
   --w3m-success-color: var(--success) !important;
   --w3m-error-color: var(--warning) !important;
 }
+
+/* w3m-model temp fix */
+
+/* w3m-modal:empty {
+  display: none;
+} */
+
+/* w3m-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  max-height: 100vh;
+  pointer-events: none;
+} */

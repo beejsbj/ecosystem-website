@@ -49,9 +49,13 @@ const imageRatio = async function (node) {
     })
   );
 
-  // Check if all aspect ratios are equal to 16/6.
-  console.log(imageRatios);
-  return imageRatios.every((ratio) => ratio === 16 / 6);
+  // Check if all aspect ratios are equal to 16/6 with a tolerance of a single decimal.
+  return imageRatios.every((ratio) => {
+    const lowerBound = 16 / 6.5; // approximately 2.2857
+    const upperBound = 16 / 5.5; // 3.2
+
+    return ratio >= lowerBound && ratio <= upperBound;
+  });
 };
 </script>
 
@@ -60,7 +64,7 @@ const imageRatio = async function (node) {
     <text-content>
       <h2 class="attention-voice">Tell us about your dApp</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
     <form-field>
@@ -71,7 +75,6 @@ const imageRatio = async function (node) {
         id="dapp"
         v-model="dappForm.links.dapp"
         label="Where can someone find your dApp?*"
-        label-class="$reset calm-voice"
         placeholder="https://yourdapp.com"
       />
     </form-field>
@@ -84,7 +87,6 @@ const imageRatio = async function (node) {
         id="docs"
         v-model="dappForm.links.docs"
         label="Where can someone find your dApp’s documentation?"
-        label-class="$reset calm-voice"
         placeholder="https://docs.api3.org/"
       />
     </form-field>
@@ -97,19 +99,19 @@ const imageRatio = async function (node) {
         id="explorer"
         v-model="dappForm.links.explorer"
         label="Explorer"
-        label-class="$reset calm-voice"
         placeholder="https://etherscan.io/"
       />
     </form-field>
     <form-field class="file-upload">
       <FormKit
+        v-auto-animate
         id="coverForm"
         type="file"
         label="Upload a branded cover*"
-        label-class="$reset calm-voice"
         name="cover"
+        no-files-icon="fileImage"
+        fileName="cover"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
-        v-auto-animate
         validation="required|fileSize|imageRatio"
         validation-label="Cover image"
         :validation-rules="{ fileSize, imageRatio }"
@@ -117,21 +119,24 @@ const imageRatio = async function (node) {
           fileSize: 'File size must be below 3MB',
           imageRatio: 'Image ratio must be 16:6',
         }"
+        file-item-icon="fileImage"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
 
-      <p class="whisper-voice">Minimum width: 1024px. Ratio: 16:6</p>
+      <p class="whisper-voice">Minimum width: 1024px.</p>
+      <p class="whisper-voice">Ratio: 16:6</p>
       <p class="whisper-voice">Accepted file size: 6MB</p>
     </form-field>
     <form-field class="file-upload">
       <FormKit
         v-auto-animate
-        id="screenShotForm"
         type="file"
+        id="screenShotForm"
         multiple="true"
         label="Upload your screenshots"
-        label-class="$reset calm-voice"
         name="screenshots"
+        no-files-icon="fileImage"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
         validation="fileSize"
         validation-label="Screenshots"
@@ -139,6 +144,8 @@ const imageRatio = async function (node) {
         :validation-messages="{
           fileSize: 'Each file must be below 3MB',
         }"
+        file-item-icon="fileImage"
+        file-remove-icon="trash"
       />
       <p class="whisper-voice">Accepted file types: jpeg, png, webp</p>
       <p class="whisper-voice">Accepted file size: 6MB</p>

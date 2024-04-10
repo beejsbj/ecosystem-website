@@ -189,6 +189,20 @@ const miscLinks = [
 
     <section class="other">
       <inner-column>
+        <nav class="social-icons">
+          <NuxtLink
+            v-for="social in socials"
+            :key="social.name"
+            :to="social.link"
+            class="calm-voice"
+          >
+            <DynamicIcon :icon="social?.icon" />
+          </NuxtLink>
+        </nav>
+        <p class="calm-voice">
+          © 2023 <span class="no-wrap">API3 Foundation</span>
+        </p>
+
         <nav class="misc-links">
           <NuxtLink
             v-for="(link, index) in miscLinks"
@@ -203,17 +217,6 @@ const miscLinks = [
             <ExternalLink v-if="link.external" />
           </NuxtLink>
         </nav>
-        <nav class="social-icons">
-          <NuxtLink
-            v-for="social in socials"
-            :key="social.name"
-            :to="social.link"
-            class="calm-voice"
-          >
-            <DynamicIcon :icon="social?.icon" />
-          </NuxtLink>
-        </nav>
-        <p class="calm-voice">© 2023 API3 Ecosystem Foundation</p>
       </inner-column>
     </section>
   </footer>
@@ -288,6 +291,7 @@ section.other inner-column {
   border-top: var(--border);
 
   display: grid;
+  grid-template-columns: 0.5fr 1fr;
 
   @media (min-width: 1264px) {
     display: flex;
@@ -297,22 +301,34 @@ section.other inner-column {
 
   .misc-links {
     column-gap: var(--space-l);
-    row-gap: var(--space-2xs);
-    display: flex;
-    justify-content: center;
+    row-gap: 0;
+    display: grid;
+    justify-content: end;
     flex-wrap: wrap;
+    text-align: right;
+
+    a {
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
   }
 
   .social-icons {
+    grid-column: 1/-1;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: var(--space-s);
     fill: var(--gray);
+    @media (min-width: 768px) {
+      gap: var(--space-xl);
+    }
     @media (min-width: 1264px) {
-      order: 3;
       gap: var(--space-l);
-      flex-grow: 1;
+      flex-basis: 100%;
     }
     @media (min-width: 1380px) {
       gap: var(--space-xl);
@@ -325,9 +341,19 @@ section.other inner-column {
 
   p {
     color: var(--gray);
-    @media (min-width: 1024px) {
-      grid-column: 1/-1;
-    }
+    align-self: end;
+    text-align: left;
   }
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--gradient-color);
+  z-index: 1;
 }
 </style>

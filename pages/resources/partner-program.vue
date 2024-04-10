@@ -113,7 +113,7 @@ async function submitForm() {
 
       <ul>
         <li v-for="card in content.rewards.cards" class="border-gradient-green">
-          <h3 class="solid-voice">
+          <h3 class="teaser-voice">
             {{ card.title }}
           </h3>
           <p class="loud-voice">
@@ -162,7 +162,7 @@ async function submitForm() {
           <picture v-if="false">
             <img :src="card.image" alt="" />
           </picture>
-          <h3 class="teaser-voice">
+          <h3 class="teaser-voice blue">
             {{ card.title }}
           </h3>
           <p class="notice-voice">
@@ -209,7 +209,6 @@ async function submitForm() {
             id="name"
             name="name"
             label="Name"
-            label-class="$reset calm-voice"
             placeholder="Name"
             validation="required"
             v-model="form.name"
@@ -222,7 +221,6 @@ async function submitForm() {
             id="email"
             name="email"
             label="Email"
-            label-class="$reset calm-voice"
             placeholder="Email"
             validation="required|email"
             v-model="form.email"
@@ -235,7 +233,6 @@ async function submitForm() {
             id="telegram"
             name="Telegram"
             label="Telegram"
-            label-class="$reset calm-voice"
             placeholder="t.me/your-username"
             validation="url"
             v-model="form.telegram"
@@ -248,7 +245,6 @@ async function submitForm() {
             id="level"
             name="level"
             label="Level"
-            label-class="$reset calm-voice"
             placeholder="Level"
             validation="required"
             v-model="form.level"
@@ -266,7 +262,6 @@ async function submitForm() {
             id="message"
             name="message"
             label="Message"
-            label-class="$reset calm-voice"
             placeholder="Message"
             validation="required"
             v-model="form.message"
@@ -362,10 +357,12 @@ async function submitForm() {
 
   li {
     padding: var(--space-m);
-    grid-column: span 2;
+    @media (min-width: 768px) {
+      grid-column: span 2;
 
-    &:nth-last-child(1) {
-      grid-column: 2 / span 2;
+      &:nth-last-child(1) {
+        grid-column: 2 / span 2;
+      }
     }
   }
 }
@@ -375,12 +372,34 @@ async function submitForm() {
 
   display: grid;
   gap: var(--space-m);
+  @media (min-width: 768px) {
+    //  grid-template-columns: repeat(12, 1fr);
+  }
 
   li {
     padding: var(--space-m);
 
     display: grid;
     gap: var(--space-3xs);
+
+    //  @media (min-width: 768px) {
+    //    grid-column: var(--grid-start) / -1;
+    //    &:nth-child(1) {
+    //      --grid-start: 1;
+    //    }
+    //    &:nth-child(2) {
+    //      --grid-start: 2;
+    //    }
+    //    &:nth-child(3) {
+    //      --grid-start: 3;
+    //    }
+    //    &:nth-child(4) {
+    //      --grid-start: 4;
+    //    }
+    //    &:nth-child(5) {
+    //      --grid-start: 5;
+    //    }
+    //  }
 
     picture {
       max-width: 80px;

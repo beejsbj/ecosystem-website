@@ -1,25 +1,36 @@
 import { defineStore } from "pinia";
 import { gsap } from "gsap";
+import { onMounted, onUnmounted } from "vue";
 
 export const useInterfaceStore = defineStore("interface", function () {
+  const config = useRuntimeConfig();
+
+  const isDev = config.public.nodeEnv === "development";
+
   const firstLoad = ref(true);
+
+  // api3 colors /////////////////////////////
+  const api3Colors = {
+    green: "hsla(166, 64%, 69%, 1)",
+    violet: "hsla(256, 34%, 54%, 1)",
+    blue: "hsla(226, 100%, 50%, 1)",
+    red: "hsla(0, 85%, 65%, 1)",
+    yellow: "hsla(44, 85%, 65%, 1)",
+  };
 
   //
   //viewport size /////////////////////////////
-  const isMobile = computed(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth < 768;
-  });
+  const isMobile = ref(false);
+  const isTablet = ref(false);
+  const isDesktop = ref(false);
 
-  const isTablet = computed(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth < 1024 && window.innerWidth >= 768;
-  });
+  function updateViewportSize() {
+    if (typeof window === "undefined") return;
 
-  const isDesktop = computed(() => {
-    if (typeof window === "undefined") return false;
-    return window.innerWidth >= 1024;
-  });
+    isMobile.value = window.innerWidth < 768;
+    isTablet.value = window.innerWidth < 1024 && window.innerWidth >= 768;
+    isDesktop.value = window.innerWidth >= 1024;
+  }
 
   //
   //main menu /////////////////////////////
@@ -29,24 +40,28 @@ export const useInterfaceStore = defineStore("interface", function () {
   }
 
   //
-  //modal
+  //modal /////////////////////////////
   const showModal = ref(false);
   function toggleModal() {
     showModal.value = !showModal.value;
   }
 
   //
-  //hero image
+  //hero image /////////////////////////////
   const heroImage = ref(null);
 
+  // loadingDone	/////////////////////////////
+  const loadingDone = ref(false);
+
+  setTimeout(() => {
+    loadingDone.value = true;
+  }, 2000);
+
   //
-  //page transition
+  //page transition	/////////////////////////////
   const transitionState = reactive({
     transitionComplete: false,
   });
-  const toggleTransitionComplete = (value) => {
-    transitionState.transitionComplete = value;
-  };
 
   const pageTransitionConfig = {
     name: "page-transiton",
@@ -76,6 +91,11 @@ export const useInterfaceStore = defineStore("interface", function () {
     },
   };
 
+  function toggleTransitionComplete(value) {
+    transitionState.transitionComplete = value;
+  }
+
+  //notify /////////////////////////////
   function notify(message) {
     toast(message, {
       position: toast.POSITION.BOTTOM_RIGHT,
@@ -83,17 +103,45 @@ export const useInterfaceStore = defineStore("interface", function () {
     });
   }
 
+  //disable dev tools /////////////////////////////
+  function disableDevTools() {
+    if (typeof window === "undefined") return;
+
+    if (!isDev) {
+      const devTools = document.querySelector("body > div[data-v-app]");
+      if (devTools) {
+        devTools.style.display = "none";
+      }
+    }
+  }
+
+  //init /////////////////////////////
+  onMounted(() => {
+    updateViewportSize();
+    //  disableDevTools();
+    window.addEventListener("resize", updateViewportSize);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener("resize", updateViewportSize);
+  });
+
+  //return /////////////////////////////
   return {
+    isDev,
     mainMenuOpen,
     toggleMenu,
     notify,
     isMobile,
     isTablet,
     isDesktop,
+
     firstLoad,
     heroImage,
     showModal,
     toggleModal,
+    api3Colors,
+    loadingDone,
 
     transitionState,
     toggleTransitionComplete,

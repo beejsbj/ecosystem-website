@@ -1,3 +1,5 @@
+@import "api3-design-tokens";
+
 html {
   /* Black and white */
   --hue: 166;
@@ -31,19 +33,19 @@ html {
   --violet-darker: hsla(calc(90 + var(--hue)), 34%, 34%, 1);
   --violet-darkest: hsla(calc(90 + var(--hue)), 34%, 10%, 1);
 
-  --blue: hsla(calc(60 + var(--hue)), 100%, 55%, 1);
+  --indigo: hsla(calc(60 + var(--hue)), 100%, 55%, 1);
 
-  --blue-light: hsla(calc(60 + var(--hue)), 100%, 65%, 1);
-  --blue-lighter: hsla(calc(60 + var(--hue)), 100%, 75%, 1);
-  --blue-lightest: hsla(calc(60 + var(--hue)), 100%, 85%, 1);
+  --indigo-light: hsla(calc(60 + var(--hue)), 100%, 65%, 1);
+  --indigo-lighter: hsla(calc(60 + var(--hue)), 100%, 75%, 1);
+  --indigo-lightest: hsla(calc(60 + var(--hue)), 100%, 85%, 1);
 
-  --blue-dark: hsla(calc(60 + var(--hue)), 100%, 45%, 1);
-  --blue-darker: hsla(calc(60 + var(--hue)), 100%, 35%, 1);
-  --blue-darkest: hsla(calc(60 + var(--hue)), 100%, 25%, 1);
+  --indigo-dark: hsla(calc(60 + var(--hue)), 100%, 45%, 1);
+  --indigo-darker: hsla(calc(60 + var(--hue)), 100%, 35%, 1);
+  --indigo-darkest: hsla(calc(60 + var(--hue)), 100%, 25%, 1);
 
-  --success: hsla(122, 85%, 65%, 1);
-  --warning: hsla(44, 85%, 65%, 1);
-  --error: hsla(0, 85%, 65%, 1);
+  --success: hsla(148, 76%, 41%, 1);
+  --warning: hsla(40, 100%, 55%, 1);
+  --error: hsla(15, 99%, 55%, 1);
 
   --paper: var(--black);
   --ink: var(--white);
@@ -54,6 +56,17 @@ html {
   --gradient-dark: linear-gradient(130deg, var(--gray-darker), var(--paper));
 
   --gradient-light: linear-gradient(130deg, var(--white), var(--gray-light));
+
+  --gradient-radial-dark: var(
+    --Gradient-Gradient-On-chain,
+    radial-gradient(
+      208.44% 148.88% at 50% 0%,
+      rgba(217, 217, 217, 0.25) 0%,
+      rgba(0, 0, 0, 0) 45.83%,
+      rgba(245, 245, 245, 0.15) 100%
+    ),
+    #040606
+  );
 
   --gradient-color: linear-gradient(130deg, var(--green), var(--violet));
 
@@ -168,7 +181,7 @@ html {
   /* Shadows */
   --shadow-line-gap: var(--space-3xs);
 
-  --shadow: var(--violet) 0px 0px 2em -0.625em;
+  --shadow: 0px 4px 20px 0px hsla(150, 6%, 7%, 0.9);
 
   --shadow-selected: 2px 2px 1px var(--violet);
 

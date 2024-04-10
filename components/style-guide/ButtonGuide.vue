@@ -1,11 +1,59 @@
 <script setup>
 const buttons = ref([
   {
-    name: "Primary",
+    name: "Primary Button",
     class: "button",
   },
   {
-    name: "Text",
+    name: "P Loading",
+    class: "button",
+    isLoading: true,
+  },
+  {
+    name: "P Disabled",
+    class: "button",
+    disabled: true,
+  },
+
+  {
+    name: "Secondary Button",
+    class: "button outline",
+  },
+
+  {
+    name: "S Loading",
+    class: "button outline",
+    isLoading: true,
+  },
+
+  {
+    name: "S Disabled",
+    class: "button outline",
+    disabled: true,
+  },
+
+  {
+    name: "Icon Button",
+    class: "icon button",
+  },
+  {
+    name: "Icon Secondary",
+    class: "icon button outline",
+  },
+
+  {
+    name: "I Disabled",
+    class: "icon button",
+    disabled: true,
+  },
+  {
+    name: "I Disabled",
+    class: "icon button outline",
+    disabled: true,
+  },
+
+  {
+    name: "Text Button",
     class: "text",
   },
   {
@@ -20,55 +68,10 @@ const buttons = ref([
     name: "Text Violet",
     class: "text violet",
   },
-  {
-    name: "Icon",
-    class: "icon button",
-  },
-  {
-    name: "outline",
-    class: "button outline",
-  },
 
   {
-    name: "Loud",
-    class: "button",
-  },
-  {
-    name: "Loading",
-    class: "button",
-    isLoading: true,
-  },
-
-  {
-    name: "Loading",
-    class: "button outline",
-    isLoading: true,
-  },
-
-  {
-    name: "Disabled",
-    class: "button",
-    disabled: true,
-  },
-  {
-    name: "Disabled",
+    name: "Text Disabled",
     class: "text",
-    disabled: true,
-  },
-  {
-    name: "Disabled",
-    class: "icon button",
-    disabled: true,
-  },
-  {
-    name: "Disabled",
-    class: "button outline",
-    disabled: true,
-  },
-
-  {
-    name: "Disabled",
-    class: "button",
     disabled: true,
   },
 ]);
@@ -83,21 +86,19 @@ const buttons = ref([
         <button
           :class="button.class"
           :disabled="button.disabled"
-          v-tooltip="button.class"
           v-if="!button.isLoading"
         >
-          Button
+          <template v-if="button.class.includes('icon')">
+            <DynamicIcon icon="qrng" />
+          </template>
+          <template v-else>
+            {{ button.name }}
+          </template>
         </button>
         <div data-loading v-else>
-          <div data-type="submit">
-            <button
-              :class="button.class"
-              :disabled="button.disabled"
-              v-tooltip="button.class"
-            >
-              Button
-            </button>
-          </div>
+          <button :class="button.class" :disabled="button.disabled">
+            {{ button.name }}
+          </button>
         </div>
       </li>
     </ul>
@@ -106,12 +107,31 @@ const buttons = ref([
 
 <style scoped lang="scss">
 ul {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-items: center;
 
-  --gap: var(--space-xl);
+  --gap: var(--space-l);
 
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+li:has(.button) {
+  grid-row: 1;
+}
+
+li:has(.outline) {
+  grid-row: 2;
+}
+
+li:has(.icon) {
+  grid-row: 3;
+}
+
+li:has(.text) {
+  grid-row: 4;
 }
 </style>

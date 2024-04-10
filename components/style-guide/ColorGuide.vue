@@ -104,35 +104,35 @@ const colors = ref([
   [
     {
       name: "Tertiary",
-      variable: "--blue",
+      variable: "--indigo",
     },
   ],
   [
     {
       name: "Tertiary Light",
-      variable: "--blue-light",
+      variable: "--indigo-light",
     },
     {
       name: "Tertiary Lighter",
-      variable: "--blue-lighter",
+      variable: "--indigo-lighter",
     },
     {
       name: "Tertiary Lightest",
-      variable: "--blue-lightest",
+      variable: "--indigo-lightest",
     },
   ],
   [
     {
       name: "Tertiary Dark",
-      variable: "--blue-dark",
+      variable: "--indigo-dark",
     },
     {
       name: "Tertiary Darker",
-      variable: "--blue-darker",
+      variable: "--indigo-darker",
     },
     {
       name: "Tertiary Darkest",
-      variable: "--blue-darkest",
+      variable: "--indigo-darkest",
     },
   ],
 
@@ -225,6 +225,10 @@ const colors = ref([
     {
       name: "Pattern Six",
       class: "pattern-six",
+    },
+    {
+      name: "Pattern Seven",
+      class: "pattern-seven",
     },
   ],
 ]);

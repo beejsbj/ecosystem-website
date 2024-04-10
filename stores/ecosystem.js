@@ -79,7 +79,10 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
     if (newQuery.page === 1) {
       projectList.value = newData.projects;
     } else {
-      projectList.value = [...projectList.value, ...newData.projects];
+      // projectList.value = [...projectList.value, ...newData.projects]; #todo
+      projectList.value = Array.from(
+        new Set([...projectList.value, ...newData.projects])
+      );
     }
 
     if (

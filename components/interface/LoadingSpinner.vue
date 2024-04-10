@@ -1,4 +1,18 @@
-<script setup></script>
+<script setup>
+import gsap from "gsap";
+
+onMounted(() => {
+  gsap.set("body", {
+    overflowY: "hidden",
+  });
+});
+
+onUnmounted(() => {
+  gsap.set("body", {
+    overflowY: "auto",
+  });
+});
+</script>
 
 <template>
   <div class="mask">
@@ -26,8 +40,8 @@
   --size: 50px;
   width: var(--size);
   height: var(--size);
-  -webkit-animation: loader 400ms linear infinite;
-  animation: loader 400ms linear infinite;
+  -webkit-animation: loader 800ms ease-in-out infinite;
+  animation: loader 800ms ease-in-out infinite;
 }
 
 @-webkit-keyframes loader {

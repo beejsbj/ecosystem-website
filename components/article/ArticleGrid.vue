@@ -33,7 +33,8 @@ const sorted = computed(() => {
       return b.isFeatured ?? false - a.isFeatured ?? false;
     });
   }
-  return blog.list;
+
+  return blog.list.filter((article) => !article.hidden);
 });
 
 const layouts = [
@@ -68,13 +69,22 @@ function handleLoadMore() {
 
 <template>
   <ul class="article-grid" v-auto-animate>
-    <template v-for="(article, index) in sorted">
+    <template
+      v-if="ui.loadingDone && blog.list.length > 0"
+      v-for="(article, index) in sorted"
+    >
       <ArticleCard
         :article="article"
         :class="cardType(index, layouts[layoutIndex], article)"
         v-if="index < (props.cardCount ?? sorted.length)"
       />
     </template>
+
+    <SkeletonCard
+      class="article-skeleton"
+      v-else
+      v-for="index in props.cardCount ? props.cardCount + 1 : 10"
+    />
     <button
       class="text show-more"
       @click="handleLoadMore"
@@ -98,6 +108,14 @@ function handleLoadMore() {
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.article-skeleton {
+  grid-column: span 2;
+
+  @media (min-width: 768px) {
+    grid-column: span 6;
   }
 }
 </style>

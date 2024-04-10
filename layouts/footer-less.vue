@@ -1,6 +1,14 @@
 <script setup>
 const route = useRoute();
 
+const loadingDone = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    loadingDone.value = true;
+  }, 2000);
+});
+
 useHead({
   htmlAttrs: {
     lang: "en",
@@ -12,17 +20,21 @@ useHead({
 </script>
 
 <template>
-  <div class="curves-wrapper">
-    <picture class="curves-decoration-3">
-      <CurvesDecoration3 />
-    </picture>
-  </div>
+  <ContentsWrapper>
+    <LoadingSpinner v-if="!loadingDone" />
 
-  <SiteHeader />
+    <template v-else>
+      <div class="curves-wrapper">
+        <LazyCurvesDecoration3 />
+      </div>
 
-  <main>
-    <slot />
-  </main>
+      <SiteHeader />
+
+      <main>
+        <slot />
+      </main>
+    </template>
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">
@@ -33,7 +45,7 @@ useHead({
   width: 100%;
   z-index: -10;
 
-  picture.curves-decoration-3 {
+  :deep(picture.curves-decoration-3) {
     position: absolute;
     top: 100px;
     left: -200px;

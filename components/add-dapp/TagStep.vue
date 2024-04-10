@@ -1,7 +1,5 @@
 <script setup>
 import { useEcosystemStore } from "~/stores/ecosystem";
-import Multiselect from "@vueform/multiselect";
-import "@vueform/multiselect/themes/default.css";
 
 const ecosystem = useEcosystemStore();
 
@@ -31,89 +29,96 @@ onMounted(() => {
     <text-content>
       <h2 class="attention-voice">Tell us about your dApp</h2>
       <p>
-        This information will be displayed for other to learn about your dApp.
+        This information will be displayed for others to learn about your dApp.
       </p>
     </text-content>
     <form-field>
-      <label class="calm-voice" for="categories">
-        Select up to x categories that your dApp serves.*
-      </label>
-      <Multiselect
-        id="categories"
+      <FormKit
+        type="taglist"
         v-model="dappForm.categories"
-        mode="tags"
-        :close-on-select="false"
-        :searchable="true"
-        :create-option="false"
         :options="ecosystem.categoryOptions"
-        class="tags"
-        :classes="{
-          tag: 'calm-voice multiselect-tag',
-          dropdown: 'calm-voice multiselect-dropdown',
-          tagsSearch: 'calm-voice multiselect-tags-search',
-        }"
-      />
-    </form-field>
-
-    <form-field>
-      <label class="calm-voice" for="chains">
-        Select the networks your dApp supports.*
-      </label>
-      <Multiselect
-        id="chains"
-        v-model="dappForm.chains"
-        mode="tags"
-        :close-on-select="false"
-        :searchable="true"
-        :create-option="false"
-        :options="ecosystem.chainOptions"
-        class="tags"
-        :classes="{
-          tag: 'calm-voice multiselect-tag',
-          dropdown: 'calm-voice multiselect-dropdown',
-          tagsSearch: 'calm-voice multiselect-tags-search',
-        }"
-      />
-    </form-field>
-
-    <form-field>
-      <label class="calm-voice" for="productType">
-        Select the service your dApp uses.*
-      </label>
-      <Multiselect
-        id="productType"
-        v-model="dappForm.productType"
-        mode="single"
-        :close-on-select="true"
-        :searchable="true"
-        :create-option="false"
-        :options="ecosystem.productTypeOptions"
-        :classes="{
-          singleLabelText: 'calm-voice multiselect-single-label-text',
-          dropdown: 'calm-voice multiselect-dropdown',
-          search: 'calm-voice multiselect-search',
-        }"
-      />
-    </form-field>
-
-    <form-field>
-      <label class="calm-voice" for="year">
-        When was your dApp released?*
-      </label>
-      <Multiselect
-        id="year"
-        v-model="dappForm.year"
-        mode="single"
+        :label="`Select up to x categories that your dApp serves.*`"
         :required="true"
-        :close-on-select="true"
-        :searchable="true"
-        :create-option="false"
+        popover
+      />
+    </form-field>
+
+    <form-field>
+      <FormKit
+        type="taglist"
+        v-model="dappForm.chains"
+        :options="ecosystem.chainOptions"
+        :label="`Select the networks your dApp supports.*`"
+        :required="true"
+        popover
+      >
+        <template #option="{ option }">
+          <div class="chain-option">
+            <ChainIcon :id="option.value" />
+            <span>
+              {{ option.label }}
+            </span>
+          </div>
+        </template>
+        <template #tag="{ handlers, option, classes }">
+          <div :class="classes.tag">
+            <!-- <img :src="option.logo" class="w-5 mr-2 bg-white" /> -->
+            <ChainIcon :id="option.value" />
+            <span :class="classes.tagLabel">
+              {{ option.label }}
+            </span>
+            <button
+              @click.prevent="handlers.removeSelection(option)()"
+              tabindex="-1"
+              type="button"
+              aria-controls="input_1"
+              class="formkit-remove-selection"
+            >
+              <span class="formkit-close-icon formkit-icon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16">
+                  <path
+                    d="M10,12.5c-.13,0-.26-.05-.35-.15L1.65,4.35c-.2-.2-.2-.51,0-.71,.2-.2,.51-.2,.71,0L10.35,11.65c.2,.2,.2,.51,0,.71-.1,.1-.23,.15-.35,.15Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M2,12.5c-.13,0-.26-.05-.35-.15-.2-.2-.2-.51,0-.71L9.65,3.65c.2-.2,.51-.2,.71,0,.2,.2,.2,.51,0,.71L2.35,12.35c-.1,.1-.23,.15-.35,.15Z"
+                    fill="currentColor"
+                  ></path></svg
+              ></span>
+            </button>
+          </div>
+        </template>
+      </FormKit>
+    </form-field>
+
+    <form-field>
+      <FormKit
+        type="dropdown"
+        v-model="dappForm.productType"
+        :options="ecosystem.productTypeOptions"
+        :label="`Select the service your dApp uses.*`"
+        :required="true"
+        popover
+      >
+        <template #option="{ option }">
+          <div class="chain-option">
+            <DynamicIcon :icon="option.label" />
+            <span>
+              {{ option.label }}
+            </span>
+          </div>
+        </template>
+      </FormKit>
+    </form-field>
+
+    <form-field>
+      <FormKit
+        type="dropdown"
+        v-model="dappForm.year"
         :options="yearOptions"
-        :classes="{
-          singleLabelText: 'calm-voice multiselect-single-label-text',
-          dropdown: 'calm-voice multiselect-dropdown',
-          search: 'calm-voice multiselect-search',
-        }"
+        :label="`When was your dApp released?*`"
+        :required="true"
+        popover
       />
     </form-field>
   </section>

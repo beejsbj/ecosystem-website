@@ -18,12 +18,19 @@ export default defineNuxtConfig({
       ssr: false,
       prerender: false,
     },
+    "/style-guide": {
+      ssr: false,
+    },
   },
 
   //global default head metadata
   app: {
-    //  pageTransition: {
-    //    name: "page",
+    pageTransition: {
+      name: "page",
+      mode: "out-in",
+    },
+    //  layoutTransition: {
+    //    name: "layout",
     //    mode: "out-in",
     //  },
 
@@ -41,7 +48,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["@/assets/styles/site.css", "@formkit/themes/genesis"],
+  css: ["@/assets/styles/site.css", "vue-skeletor/dist/vue-skeletor.css"],
 
   postcss: {
     plugins: {
@@ -72,8 +79,23 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "@formkit/nuxt",
-    "floating-vue/nuxt",
+    // tooltip
+    ["floating-vue/nuxt", {}],
+
+    //formkit
+    [
+      "@formkit/nuxt",
+      {
+        //   autoImport: false, //#fixme
+      },
+    ],
+    //lodash
+    [
+      "nuxt-lodash",
+      {
+        prefix: "_",
+      },
+    ],
     [
       "@nuxt/content",
       {
@@ -89,7 +111,7 @@ export default defineNuxtConfig({
     [
       "@nuxt/devtools",
       {
-        enabled: false, // Enable only in development
+        enabled: true, // Enable only in development
       },
     ],
 
@@ -119,6 +141,8 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
+  //   plugins: ["~/plugins/gsap.ts", "~/plugins/floating-vue.ts"],
 
   components: [
     {
@@ -176,7 +200,9 @@ export default defineNuxtConfig({
     emailReceiver: process.env.NUXT_EMAIL_RECIEVER,
     emailSender: process.env.NUXT_EMAIL_SENDER,
     public: {
-      walletConnectProjectId: "8ea05c2c45ce1000d51a7364ce317dc5",
+      formkitProKey: process.env.NUXT_FORMKIT_PRO_KEY,
+      walletConnectProjectId: process.env.NUXT_PUBLIC_WALLET_CONNECT_PROJECT_ID, //this might not work #fixme
+      nodeEnv: process.env.NUXT_NODE_ENV,
     },
   },
 });

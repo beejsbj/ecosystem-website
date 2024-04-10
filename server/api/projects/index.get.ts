@@ -97,12 +97,11 @@ export default defineEventHandler(async (event) => {
 
     const totalProjects = await Project.countDocuments(finalFilter);
 
-    let projects = await Project.find(finalFilter)
-      .skip(skips)
-      .limit(limit)
-      .sort({ year: -1 });
+    let projects = await Project.find(finalFilter).sort({ year: -1 });
 
-    return { projects, total: totalProjects };
+    const filteredList = projects?.slice(skips, limit);
+
+    return { projects: filteredList, total: totalProjects };
   } catch (err: any) {
     event.node.res.statusCode = 500;
     return {

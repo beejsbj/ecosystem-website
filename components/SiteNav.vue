@@ -1,10 +1,37 @@
-<script setup></script>
+<script setup>
+// use runtime, get env
+
+const config = useRuntimeConfig();
+
+const isDev = config.public.nodeEnv === "development";
+
+const links = [
+  //   {
+  //     name: "Style Guide",
+  //     to: "/style-guide",
+  //     dev: true,
+  //   },
+  //   {
+  //     name: "Testing Ground",
+  //     to: "/testing",
+  //     dev: true,
+  //   },
+
+  { name: "Ecosystem", to: "/ecosystem" },
+  { name: "OEV", to: "/oev", class: "new" },
+  { name: "Articles", to: "/articles" },
+  { name: "Guild", to: "/guild" },
+];
+</script>
 
 <template>
   <nav>
-    <NuxtLink class="text hover-underline" to="/ecosystem">Ecosystem</NuxtLink>
-    <NuxtLink class="text hover-underline" to="/articles">Articles</NuxtLink>
-    <NuxtLink class="text" to="/guild">Guild</NuxtLink>
+    <template v-for="link in links" :key="link.name">
+      <NuxtLink :to="link.to" class="text hover-underline" :class="link.class">
+        {{ link.name }}
+      </NuxtLink>
+    </template>
+
     <div class="actions">
       <NuxtLink to="https://discord.com/invite/qnRrcfnm5W" class="icon">
         <DynamicIcon icon="Discord-stroke" />
@@ -32,6 +59,7 @@ nav:not(.panel-menu) {
 
   a {
     color: var(--ink);
+    white-space: nowrap;
   }
 
   .button {
@@ -45,14 +73,19 @@ nav.panel-menu {
   gap: var(--space-m);
   padding: var(--space-l);
 
-  a {
+  a.text {
     color: var(--ink);
     font-size: var(--step-1);
+    padding: unset;
 
     &.button {
       justify-self: center;
       min-width: 200px;
     }
+  }
+
+  a.icon {
+    padding: unset;
   }
 }
 </style>

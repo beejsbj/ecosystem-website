@@ -1,34 +1,27 @@
 <script setup>
-import { CHAINS } from "@api3/chains";
+const hello = "hello";
+
+definePageMeta({
+  alias: ["/testing"],
+});
 
 const ecosystem = useEcosystemStore();
 </script>
 
 <template>
-  <PageTitle heading="test ground" />
-  <SectionColumn>
-    <ul>
-      <li v-for="chain in CHAINS">
-        <!-- <ChainIcon :chain="chain.name" />/ -->
-        <p class="micro-voice">
-          {{ chain.name }}
-        </p>
-      </li>
-    </ul>
-  </SectionColumn>
+  <ContentsWrapper>
+    <PageTitle heading="test ground" />
+    <SectionColumn>
+      <NuxtLink to="/style-guide">style guide</NuxtLink>
+    </SectionColumn>
+  </ContentsWrapper>
 </template>
 
 <style scoped>
-ul {
+:deep(ul) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-m);
-}
-
-div {
-  background: var(--green);
-  aspect-ratio: 1;
-  width: var(--space);
 }
 </style>
 

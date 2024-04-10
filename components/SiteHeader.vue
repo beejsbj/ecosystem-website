@@ -6,65 +6,63 @@ const ui = useInterfaceStore();
 const router = useRouter();
 
 const showMenu = ref(false);
-const showPlaceholder = ref(true);
+
+let context;
 
 onMounted(() => {
-  //   change show placeholder to false when client side rendering
-  //   showPlaceholder.value = false;
-  //   const pageLoad = gsap.timeline();
-  //   if (ui.firstLoad) {
-  //     pageLoad.from(".site-header", {
-  //       delay: "0.5",
-  //       duration: 0.5,
-  //       y: -50,
-  //       opacity: 0,
-  //       ease: "power4.out",
-  //     });
-  //     ui.firstLoad = false;
-  //   }
+  context = gsap.context(() => {
+    const pageLoad = gsap.timeline();
+    if (ui.firstLoad) {
+      pageLoad.from(".site-header", {
+        delay: "0.5",
+        duration: 0.5,
+        y: -50,
+        opacity: 0,
+        ease: "power4.out",
+      });
+      ui.firstLoad = false;
+    }
+  });
 });
-nextTick(() => {
-  showPlaceholder.value = false;
+
+onUnmounted(() => {
+  context.kill();
 });
 </script>
 
 <template>
   <header class="site-header">
     <SectionColumn class="mast-head">
-      <Transition mode="out-in" name="fade">
-        <div class="mast-head-placeholder" v-if="showPlaceholder" />
+      <mast-head>
+        <NuxtLink to="/" class="site-logo">
+          <picture class="site-logo" :class="{ menuOpen: showMenu }">
+            <NuxtImg
+              loading="lazy"
+              src="/images/logo-full.svg"
+              alt="Full API3 Logo"
+            />
+          </picture>
+        </NuxtLink>
+        <SiteNav v-if="!ui.isMobile" />
 
-        <mast-head v-else>
-          <NuxtLink to="/" class="site-logo">
-            <picture class="site-logo" :class="{ menuOpen: showMenu }">
-              <NuxtImg
-                loading="lazy"
-                src="/images/logo-full.svg"
-                alt="Full API3 Logo"
-              />
-            </picture>
-          </NuxtLink>
-          <SiteNav v-if="!ui.isMobile" />
-
-          <!-- menu icon -->
-          <button
-            :class="` menu icon ${showMenu ? 'menuOpen' : ''}`"
-            v-if="ui.isMobile"
-            @click="showMenu = !showMenu"
-          >
-            <picture>
-              <MenuIcon />
-            </picture>
-          </button>
-          <SidePanelSlot
-            v-if="ui.isMobile"
-            :showPanel="showMenu"
-            @toggle="showMenu = !showMenu"
-          >
-            <SiteNav class="panel-menu" />
-          </SidePanelSlot>
-        </mast-head>
-      </Transition>
+        <!-- menu icon -->
+        <button
+          :class="` menu icon ${showMenu ? 'menuOpen' : ''}`"
+          v-if="ui.isMobile"
+          @click="showMenu = !showMenu"
+        >
+          <picture>
+            <MenuIcon />
+          </picture>
+        </button>
+        <SidePanelSlot
+          v-if="ui.isMobile"
+          :showPanel="showMenu"
+          @toggle="showMenu = !showMenu"
+        >
+          <SiteNav class="panel-menu" />
+        </SidePanelSlot>
+      </mast-head>
     </SectionColumn>
   </header>
 </template>

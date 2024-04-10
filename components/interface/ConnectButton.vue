@@ -9,7 +9,9 @@ async function buttonHandle() {
 <template>
   <button class="button" @click.prevent="buttonHandle">
     <Transition name="fade" mode="out-in">
-      <span class="" v-if="!web3Store?.state?.isConnected"> Connect </span>
+      <span class="" v-if="!web3Store?.state?.isConnected">
+        Connect Wallet
+      </span>
       <span v-else class=""> Connected </span>
     </Transition>
   </button>

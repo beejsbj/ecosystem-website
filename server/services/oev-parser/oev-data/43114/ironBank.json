@@ -1,0 +1,1217 @@
+[
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "10/20/2021",
+    "totalLiquidated": "24.68762646000471135111611401784571",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5768826b24e3777e2aa44057d8c114abc7ed3d149f5cd49b14651996aa808e17",
+        "liquidatedCollateral": "24.68762646000471135111611401784571",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "10/22/2021",
+    "totalLiquidated": "14806.4185604565345256868016713639119",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0cb7589c979848decca985a21ce7d5b0499d516037c76650ea5e25f7a2b6690f",
+        "liquidatedCollateral": "144.2641503287654327817591132149519",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xf106acf6b82374da6d0d748ec167d466205e267baa63f7051bff9210b5060561",
+        "liquidatedCollateral": "14662.15441012776909290504255814896",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "11/28/2021",
+    "totalLiquidated": "152.6116560343939880451844609946688",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xdb5a1a7d7c22bf61aab1496682fd06c994b4a462b98af17869c3de7a15ee6a54",
+        "liquidatedCollateral": "152.6116560343939880451844609946688",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "11/29/2021",
+    "totalLiquidated": "85.53627818657509755727029357090565",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x8b6853fba1142369b179685fc8f96a585092e23f8273e9e65d159f975b34d95f",
+        "liquidatedCollateral": "85.53627818657509755727029357090565",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "12/4/2021",
+    "totalLiquidated": "3459.322921567689800400347811280629",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xae83a525283c769143e1950d3089f7086f9a990a9951262a2ed8e55db0f69e1d",
+        "liquidatedCollateral": "3459.322921567689800400347811280629",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "12/6/2021",
+    "totalLiquidated": "394.3813608437063511726757883300198",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x5b8706908e3d5227aa9add6def993dec23bd9d4c518289bec540683c35320dfa",
+        "liquidatedCollateral": "104.1066715711908028033393961831356",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x748b3625141fbe37b86ff6531e75b0a15f990e5f27a5b65c6206a3ea186b89e4",
+        "liquidatedCollateral": "77.8572633927370917790240283049852",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xd0bcdaff1e4d5cb199e75636758ad852f3354ed0d86cf382481ac20b06a48cf4",
+        "liquidatedCollateral": "212.417425879778456590312363841899",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "12/25/2021",
+    "totalLiquidated": "8098.345138535058605045742458488996",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x8a93d709d0fba75b341f9a6588bd4df69c5342afa71f775ca4d9121a71834ce3",
+        "liquidatedCollateral": "8098.345138535058605045742458488996",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "1/7/2022",
+    "totalLiquidated": "150.77075577570205406721029486002861",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3ea4c4f686b57640672844bfaa9ae240f88c3ec663a7d58f746130de18fef787",
+        "liquidatedCollateral": "40.95708622972977269277120852091542",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x80452fe01937e75eff3663ddbc30cf749816b82119964a1f6a6df72d11070ced",
+        "liquidatedCollateral": "37.80321157711529113361873282268652",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xe455ca83aace17ddd664fabc0c6e2b7b39acfc52a81a54f6dca864552e41265b",
+        "liquidatedCollateral": "32.15094983126449255223267358122699",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xfd97737bfd506527aafd9cf212c1cb06cf543f27858870b61ccb6c348ef1c5ea",
+        "liquidatedCollateral": "39.85950813759249768858767993519968",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "1/21/2022",
+    "totalLiquidated": "223.41959518989718533328310185836694",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x4acc4af15c41f47498215eb87dc13aadb62f59b18be59cc52c6b533b80bd17b6",
+        "liquidatedCollateral": "35.25040747892949889632380071814294",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9328d0d723e7695009c0b88457f41f3fea5c68d5c91169d0d734e50531a30598",
+        "liquidatedCollateral": "188.169187710967686436959301140224",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "1/22/2022",
+    "totalLiquidated": "10632.03232200140339039304952891518759",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3eebd3719e62b49d316b2a3bb5407f3f389b94e277d207b789646ec80cba9890",
+        "liquidatedCollateral": "218.0285367406539096311798885982235",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x4fd7ff264507296d3e8b88416fd5be31a51519bffaef4ed5dddcc9a1ae17013f",
+        "liquidatedCollateral": "384.9944877915559583001924640101743",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xb24b04898bcd9168a6a4fed2d3ca27edc5534c2e5e7e1f6769b1fedee52e7d23",
+        "liquidatedCollateral": "192.5064857463888726027144968080416",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xb72b98cdddeb7d9c89c023c3dc59620a1e610ae2a773a0dc2148aa0334843ff5",
+        "liquidatedCollateral": "20.03716838283857583584463673733829",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xc61d18b9af21dc238499e2138121de8bfd6650c9122618b89724ca234616a845",
+        "liquidatedCollateral": "327.1411913551265511002385277505589",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xdde6833032aee237ebfa2c9cad06faeb1937795bcae861aa8d625fa2abdbe235",
+        "liquidatedCollateral": "9489.324451984839522922879515010851",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "1/24/2022",
+    "totalLiquidated": "3871.526814740934144415034650454798",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x9205343afe998365489998fba174270084ee225dea661cd775d60af09b1a2ec9",
+        "liquidatedCollateral": "3871.526814740934144415034650454798",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "2/18/2022",
+    "totalLiquidated": "2471.120290896693811205033916642467",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6e0893871bdb3595aa074aea006a3b579fb5c7a668e915965d358ffd5e88e679",
+        "liquidatedCollateral": "2471.120290896693811205033916642467",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "2/20/2022",
+    "totalLiquidated": "8044.325402757954056886271438634632",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xa3a69af841addcbd3a6eb122af24f053d514bb26c9958b74106b2694687dba0d",
+        "liquidatedCollateral": "8044.325402757954056886271438634632",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "2/24/2022",
+    "totalLiquidated": "4028.44649106053655210812741768331",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xe999970ab7a276831823446fe119265c7214e7a8dabc0628de5e385636c5a845",
+        "liquidatedCollateral": "4028.44649106053655210812741768331",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "3/15/2022",
+    "totalLiquidated": "95591.70554821314495918216071388006",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xfa23ab4e62b3b8c6d0d898e31af1d270f79d9361f06ff4a9551bb9be7d5d67c4",
+        "liquidatedCollateral": "95591.70554821314495918216071388006",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "3/19/2022",
+    "totalLiquidated": "606.0159373131275523136286114298471",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1a5c6a0cad88c84bcc840f5ddc1d70a5bc5e38a2fe0cb4c7e609c96ae5a41799",
+        "liquidatedCollateral": "606.0159373131275523136286114298471",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "4/1/2022",
+    "totalLiquidated": "21.06178417657421842847262884849624",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x6aa4d26faf254f1d7ed68c46c65d8677d721a822eac1fd4b3ced62a34b1c79ce",
+        "liquidatedCollateral": "21.06178417657421842847262884849624",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "4/30/2022",
+    "totalLiquidated": "37544.566098089370899823570335500486",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1eb5e485e21eb2865e963e628321ea0d3b7982f10bb53998eb1e99e56c4ee27d",
+        "liquidatedCollateral": "32066.60316722547850703283581711597",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xc9b57983f3344cd01aa6c591a9ce8ad44ab58bcea950b7afae0f1d82ea0ee8e7",
+        "liquidatedCollateral": "5477.962930863892392790734518384516",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/8/2022",
+    "totalLiquidated": "2800.109832591499014864292686414645",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xa6fa1617d26de67ae1208274710b2cb2afaa76f2d57c6a8331d9c1e310aeb215",
+        "liquidatedCollateral": "2800.109832591499014864292686414645",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/9/2022",
+    "totalLiquidated": "3773.10573490707943244181057991278",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x2d003a69857e2bac456def961ad22210f5d4702ab8d415f6ab55032491c9046e",
+        "liquidatedCollateral": "2372.602865632740855619226230414512",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x97a52eec065e64f5d55e8dca4184ad178def872054f85f7f51cbff74d6b37062",
+        "liquidatedCollateral": "1400.502869274338576822584349498268",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/11/2022",
+    "totalLiquidated": "3347.8602570305042203577213852458368",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x39c84cdffe62f4de1ca245020e1e5fb1cf07c561441f7dbcc5a9e7da2928dc19",
+        "liquidatedCollateral": "349.7826716517230298168462588922543",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x484795b5e4ddb02b939eb9ca3ab5012acb69b0cddc40d6d94de56580a6f0da23",
+        "liquidatedCollateral": "80.2689914141681600149709818273386",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x97a87af7becfdb756e9216f7d1859e642933e4322c865db44665a06f49c387cc",
+        "liquidatedCollateral": "700.3743448132234979343001465217443",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9e0a3d33ca0ea201685e8810d07160cde67aa4efd4b4e99405d1413e999a72da",
+        "liquidatedCollateral": "1633.470737396976592683433174205298",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xa9f0f940e8662b1a1d50d1181e3d56db9d675e16062cca1994909b920056e2cf",
+        "liquidatedCollateral": "298.6109263438237222680366048833777",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xb85ce181433fe5778e4f298f4d7e64151594151af3a938154f12bdc891d746aa",
+        "liquidatedCollateral": "138.7162658414853856845439530421558",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xcd5cb2cfc4a1f9131a4226dd96088a6d6690e5016d886080b5d4e79d356e1954",
+        "liquidatedCollateral": "146.6363195691038319555902658736681",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/12/2022",
+    "totalLiquidated": "2261.57308025786592493042843956482838",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1b5b8f8d5873fde47dc5830b5d1359bffa02a3c0fdc3423a2cb944b546bea5d3",
+        "liquidatedCollateral": "1187.349603706158683531370597893214",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x2846a5653689ee240f41a3b62aef36443fe02a165728676995f9f3515bd68428",
+        "liquidatedCollateral": "174.2440861581430861115630711745744",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x7636d641be9f6d6bd5c1839365b9202c5ebbca60ee5949b30f0ef9070b8ec8ab",
+        "liquidatedCollateral": "69.40346774812768101925733085608578",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xa9f2a7c6127c5ed5ead1bd43a3d5bebe832a6a07ae2b0b9ad3caa74daa05cea7",
+        "liquidatedCollateral": "830.5759226454364742682374396409542",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/13/2022",
+    "totalLiquidated": "52.09895475700895354761957420189137",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x8287fc619551b26de4470aa3b1462f4335a82bbbb5a0b48c4e40dd332c4031ad",
+        "liquidatedCollateral": "16.78382801138491819761013046867764",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x997a738a80e20c020d29efbfdcda4163a8b45e85f9b6abbcbe403200f0b673c8",
+        "liquidatedCollateral": "18.20134453318518719574823411569411",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xc6dea7b4a9348dd883683cd12c1411f10aaedc58f570d068189213dcc6743c0f",
+        "liquidatedCollateral": "17.11378221243884815426120961751962",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/14/2022",
+    "totalLiquidated": "13.30841288931057367024487395957184",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x9fe4aa50dc69bb11b7352377417ae998763cb748032afe2c49069ca874187eda",
+        "liquidatedCollateral": "13.30841288931057367024487395957184",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/19/2022",
+    "totalLiquidated": "7.090875358250889284977238791907976",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xb7f3385eb1400a865bf0e53502f3c6e3183c8202ecf86d0be069571f569473e6",
+        "liquidatedCollateral": "7.090875358250889284977238791907976",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/26/2022",
+    "totalLiquidated": "45.5643550107042871819417814937031",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x11d1c7fbdab1713a217acfb1e0d90c78ff9e3638e97964268ef6ec3cbbc667b1",
+        "liquidatedCollateral": "34.83717411941110955001100064878366",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x2f7c6eaf0b8e99d2f7f1cfe23621296bc6348758e285614c21da53f0ff5ce662",
+        "liquidatedCollateral": "10.72718089129317763193078084491944",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/27/2022",
+    "totalLiquidated": "96.606751447916894527701234521500073",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3653584109245afc91c300f27c05a30cd6dd740fa7721b9576e15eb0e149cc81",
+        "liquidatedCollateral": "87.49595496420136501869626548997961",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xd02ae77dec493e96ef1f888a80f1c04a893bfc92747ee05dfa327a0231bd445b",
+        "liquidatedCollateral": "9.110796483715529509004969031520463",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "5/30/2022",
+    "totalLiquidated": "8.019097385134081460148169479198263",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xf52ebbd8fa0c738be7fde2a0a6bb7eae111aa04b3b778a9d48a977e49f98f738",
+        "liquidatedCollateral": "8.019097385134081460148169479198263",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/11/2022",
+    "totalLiquidated": "17.47492156767651543748717008741672",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x916299f07881295c8453191e15f0150bf511ca58c716a8e64726dabe00abc4e9",
+        "liquidatedCollateral": "17.47492156767651543748717008741672",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/12/2022",
+    "totalLiquidated": "59.058883351853835347552870045761002",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x0cd99c7ef57202784f7c440689ed1de96f8c534386186e18033fef60f33256bc",
+        "liquidatedCollateral": "8.738879088796011325205588396700892",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5b3af966f0fb400a25b6bc36115acc015b9a8f4c2d28d0cadfecbc77d9b71787",
+        "liquidatedCollateral": "44.00619586691808400257562092652556",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5d01737e06f2258bb5469880e7a2056ab3a320d4b5e9218bfed2e22ad38482bc",
+        "liquidatedCollateral": "6.31380839613974001977166072253455",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/13/2022",
+    "totalLiquidated": "1080.232533293689657362258174709484645",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x468edf903e45a687de32c1965a03138afe41e73fb33b322a6c8f273ee0dbf159",
+        "liquidatedCollateral": "22.01496692277430357237855212671828",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x6be0a83877bd3cef73da395decdaafa6b497c0541b62fa528ad8874f2509dbec",
+        "liquidatedCollateral": "40.37655577993101023587955497880951",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x76ff2ca4066946186165ddad8a2bfc012a334f9ec6cdce632f86f9576bb15cfa",
+        "liquidatedCollateral": "409.7385790926469854591518148675",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x78b397cee24d7b4341f72a1b0f06e86dd131a834fde29cd358da58bc1bacd7ed",
+        "liquidatedCollateral": "4.577896385941534848028780457256855",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9867128b11f156051778d1120b94c0b99f01c6d600b8488d01ab68d18e30c43f",
+        "liquidatedCollateral": "5.3879240258452724559567165562",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xbf503e0728e586af73549eddf2a1ad2c1845d8bb70d0e888786b92a6bb32dce1",
+        "liquidatedCollateral": "598.136611086550550790862755723",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/14/2022",
+    "totalLiquidated": "299.3814698839286938947880980912411",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x78780c53dafd4ebeaf91f704447e24aa1e5eac5bcc34b67ccba3a26223bf1711",
+        "liquidatedCollateral": "299.3814698839286938947880980912411",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/18/2022",
+    "totalLiquidated": "204.8855990370846612513244599576194",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x627b744e6aca019054bf29d815193b18fb16c505ec6cc0ca99c8003b1322f8c2",
+        "liquidatedCollateral": "204.8855990370846612513244599576194",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/19/2022",
+    "totalLiquidated": "908.2094374876706249149639218563267",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x514a000aa53a59c9ca2a59bf6047d94d2155228babc40dccb31ca4bdc161fea7",
+        "liquidatedCollateral": "20.2161923393713266674792734480346",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5aac1508cd9c65efe4f47ea51aa14087b03694ae47dcfa36d9be8b7e753cda1c",
+        "liquidatedCollateral": "738.2184346145948925440416951620171",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x77ab616497c4da921560fedd99cc9d5b4d3b3b8984eab867170b6dee60c775a0",
+        "liquidatedCollateral": "149.774810533704405703442953246275",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "11/9/2022",
+    "totalLiquidated": "218.05981774410682148189819799055252",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1161693a115136b1d103ce08781cb9cf6afdfe13693e1f16cf90094721125e40",
+        "liquidatedCollateral": "11.60132461423388683898020881400692",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x11a7cfdd55d4e41920542c363e039075d9cfc4c4e01b56d82f05490c1d9a9cdf",
+        "liquidatedCollateral": "32.06342988896832308478648581801465",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9d36e0335c16fecd3da694e4f4722d258580b1682a20696b9a446dca94fdd845",
+        "liquidatedCollateral": "106.9778074796671004838512292635003",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xbba3d4366e5ab9c75e21001defac2ba8e20d9a8b0d094a0683a62f455c47d7ff",
+        "liquidatedCollateral": "14.47554722184589278262843989009482",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xd316a2b676972544924dfa491b4a25bc414362c9d8b0a29271939b40fba8bd77",
+        "liquidatedCollateral": "52.94170853939161829165183420493583",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "11/10/2022",
+    "totalLiquidated": "82.424560003459722076850224161747717",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xac2ea15a2a8ab6b2d33908727af8b897c47b72c6568db0ac67522092331d9dc4",
+        "liquidatedCollateral": "4.569359009233288987387050125178167",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xdeafdee72baf78fa3234d7901bfa80a0273a72043cfc7bed8c8cf93105c0073a",
+        "liquidatedCollateral": "77.85520099422643308946317403656955",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "11/14/2022",
+    "totalLiquidated": "10.6252783450603578590490028439272",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xc7a88a21b3e6a3b86395708a8a56b4bd74a564a8db2607a13a6b167edef8f097",
+        "liquidatedCollateral": "10.6252783450603578590490028439272",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "12/20/2022",
+    "totalLiquidated": "13.171957495613833218922922648310735",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd2f29c9d85193bf5507912ff3a414bfa301d87c33dae502d15e600dea90a9a86",
+        "liquidatedCollateral": "5.859719705114160938589376152012561",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xef52228268118c4fdfab1cb5a42052fd868d474eaf4d25412a8c5521a683edae",
+        "liquidatedCollateral": "7.312237790499672280333546496298174",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "3/26/2023",
+    "totalLiquidated": "2.159881198341942835719718482891545",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1b5dca4e48b071d050467cfb87466337636fdcd539d98a16eeb180c5ddb753aa",
+        "liquidatedCollateral": "2.159881198341942835719718482891545",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "3/27/2023",
+    "totalLiquidated": "0.17706507104583845239761584136643621",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x21f7b1468c5eb4b7f3dc9408b4715e218fd9535355b4003f0e5dae01bcf38c10",
+        "liquidatedCollateral": "0.006477989059998529848113034530556893",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x6f52060a293007046e81b695229836c3210d1aa64f15e8ee6eb488ed9232d97f",
+        "liquidatedCollateral": "0.006477988917248700363726220614153571",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x73eba07b4fa2b47d9a3f1408e9772d3518f65713411ae6302e83213544483779",
+        "liquidatedCollateral": "0.006477989032546638269773203983260678",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x906056d6eff622c2f4c79c080b3f5df3eb72a38c3271dfe736c3b46a03ca62f3",
+        "liquidatedCollateral": "0.01079664871700044210393735708485739",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9aaa876751573a68d5f7e2123acde73b7ec2e9eaaae25da30cb286c7eaf6f8c4",
+        "liquidatedCollateral": "0.01079664856143971272311980565249469",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xca402cb66b56216e19dab22d5813a3da41c12dca52001532ccf7757fc1aa3699",
+        "liquidatedCollateral": "0.06477990874180726533508966718318794",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xfb01a2296b2ace58eecd26370581b81287953c620e12bf549c5128a37668449d",
+        "liquidatedCollateral": "0.006477988999604369063362578335388758",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xff42d2eef0e7e1edd70da71df0117699648b5622e36d3a28a256ff1e961e0d24",
+        "liquidatedCollateral": "0.06477990901619279469049397398253629",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/10/2023",
+    "totalLiquidated": "455.004722285171029317194233757596959",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x26e93923bc80bfd301b1dfbbca8d24ffef90d1c80f78a59851d06fc44661fc84",
+        "liquidatedCollateral": "5.678198089109909584343578213715265",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x54ad8351eb752cb23f975282403df5f0c67885304f54d6e0584b51a142a0a7e5",
+        "liquidatedCollateral": "7.133151131536361263477840922212444",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5e3e2e45c3ebfc3d16e72ed44c79567656c6bf04415f9c94df6b752567835757",
+        "liquidatedCollateral": "14.3778894658061835912875549189097",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x9fb57257e87f10574b1d870325f7de05b3f37f8751e8bdc30a8f640fd130f147",
+        "liquidatedCollateral": "14.77448627033971948909076307768778",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xee7b61137ab38cfde423e131a7e7f05fd6e4c6b77d1f8a10c67124a1659bcec3",
+        "liquidatedCollateral": "383.8961756746878875558142005159701",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xf1e721fad01aef79404f2b017e912246471c1c3ce9018f974355b7081781fee1",
+        "liquidatedCollateral": "29.14482165369096783318029610910167",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/15/2023",
+    "totalLiquidated": "354.2053174532162391607675358929773",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xb9e5c9916610979c4802057f35210e9fbcf7610cf2e3d7ea67b29fe8ffcace3d",
+        "liquidatedCollateral": "118.6780128403076106746737274237423",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xefd8998905d85236ef27f6fb1a3298b38bba49c9ad37d222ca11275d28b71ed0",
+        "liquidatedCollateral": "235.527304612908628486093808469235",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/16/2023",
+    "totalLiquidated": "88.96616735888222749034704349256768",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x1093c51966df05f00c3b7410b6334601f55e0734bd747376e045dd5dbcdc7b07",
+        "liquidatedCollateral": "29.87049798922384272926748305519848",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x5b1271bdadd3693cf50ae7437a466e28431f4e79479b37454dcb1d01e0c7fa99",
+        "liquidatedCollateral": "59.0956693696583847610795604373692",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "6/20/2023",
+    "totalLiquidated": "33.70092746447372796344697957018096",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x996c5c3ea08c1656895778cb9dd5621481112be1dec17857f842af0588fab603",
+        "liquidatedCollateral": "33.70092746447372796344697957018096",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "8/18/2023",
+    "totalLiquidated": "202.770680819359060072951954257332967",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x40e74dcb596a04d91158a3a38b51b5541588525796fb90726d724b8f60a06a70",
+        "liquidatedCollateral": "195.2492652093346772472391750178291",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0xda571455c61ed492e3f6630cc07376e1f19757a5479a524da4bca758e6e9d2fb",
+        "liquidatedCollateral": "7.521415610024382825712779239503867",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "8/21/2023",
+    "totalLiquidated": "3.938675716893678253125979955812974",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xa811174533175729d4d514fc64e80c776ba8fd7536f20d0fcd0801c3691943b9",
+        "liquidatedCollateral": "3.938675716893678253125979955812974",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "8/22/2023",
+    "totalLiquidated": "3.189006859160143408393502486542884",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xbbd9051fe36a166acc9cc2361522bbf629b39331689554934f494d821a8509b1",
+        "liquidatedCollateral": "3.189006859160143408393502486542884",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "9/11/2023",
+    "totalLiquidated": "101.267649687570631187229351427329734",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x01da8c0238e7df02998ad01f747c3564b450451d36053601b272304bffb10d9b",
+        "liquidatedCollateral": "98.34194724994507848014967616634",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      },
+      {
+        "hash": "0x0c48b20bb5ba9c674e1607b3812d73ddd106bd26c1422a93fdae023669712a35",
+        "liquidatedCollateral": "2.925702437625552707079675260989734",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "9/18/2023",
+    "totalLiquidated": "2.366110190049722202465490438723619",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0x3ec18edb18868d18528f87455896dd9702f114db768eab983739cf68b8dfbdf9",
+        "liquidatedCollateral": "2.366110190049722202465490438723619",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "9/25/2023",
+    "totalLiquidated": "3.793558269047626377679222176503144",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xd74d3aafcfa7178e9b364559698716bb81164020d54ff3a00e9db1365ae303a6",
+        "liquidatedCollateral": "3.793558269047626377679222176503144",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  },
+  {
+    "name": "Iron Bank",
+    "icon": "https://icons.llamao.fi/icons/protocols/iron-bank?w=48&h=48",
+    "date": "1/11/2024",
+    "totalLiquidated": "20.3283896766286220005890108804096",
+    "totalSentToBuilder": "0",
+    "liquidations": [
+      {
+        "hash": "0xa3577777a40bc524759f5eceaf03e775138be39a1abc82daf9b160fe1a4c0fdf",
+        "liquidatedCollateral": "20.3283896766286220005890108804096",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0"
+      }
+    ],
+    "totalSentToBuilderUSD": "0",
+    "chainId": 43114
+  }
+]

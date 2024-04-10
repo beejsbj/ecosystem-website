@@ -1,15 +1,12 @@
 <script setup>
-import { gsap } from "gsap";
 import { useInterfaceStore } from "@/stores/interface";
-import { useEcosystemStore } from "@/stores/ecosystem";
 
 const ui = useInterfaceStore();
-const ecosystem = useEcosystemStore();
 
 useSeoMeta({
-  title: "Ecosystems",
-  ogTitle: "Ecosystems",
-  twitterTitle: "Ecosystems",
+  title: "API3 Partners",
+  ogTitle: "API3 Partners",
+  twitterTitle: "API3 Partners",
 
   description:
     "Welcome to the API3 ecosystem. Easily list your dApp or service and join our thriving community",
@@ -20,48 +17,31 @@ useSeoMeta({
   twitterDescription:
     "Welcome to the API3 ecosystem. Easily list your dApp or service and join our thriving community",
 });
-
-onMounted(() => {
-  const pageLoad = gsap.timeline();
-
-  pageLoad.fromTo(
-    ".ecosystem-header",
-    {
-      y: 50,
-      duration: 0,
-      delay: "0.5",
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power4.out",
-    }
-  );
-});
 </script>
 
 <template>
-  <PageTitle heading="API3 Partners" class="loud-voice ecosystem-header">
-    <NuxtLink to="/add-dapp" class="button solid-voice">
-      <span class=""> Join the Ecosystem </span>
-    </NuxtLink>
-  </PageTitle>
+  <ContentsWrapper>
+    <PageTitle heading="API3 Partners" class="loud-voice ecosystem-header">
+      <NuxtLink to="/add-dapp" class="button solid-voice">
+        <span class=""> Join the Ecosystem </span>
+      </NuxtLink>
+    </PageTitle>
 
-  <SectionColumn innerClass="ecosystem-main-grid">
-    <!-- <ClientOnly> -->
-    <LazyDappFilter v-if="!ui.isMobile" />
-    <div v-else>
-      <FilterButtons />
+    <SectionColumn innerClass="ecosystem-main-grid">
+      <!-- <ClientOnly> -->
+      <LazyDappFilter v-if="!ui.isMobile" />
+      <div v-else>
+        <FilterButtons />
 
-      <ModalSlot>
-        <LazyDappFilter />
-      </ModalSlot>
-    </div>
-    <!-- </ClientOnly> -->
+        <ModalSlot>
+          <LazyDappFilter />
+        </ModalSlot>
+      </div>
+      <!-- </ClientOnly> -->
 
-    <LazyDappGrid />
-  </SectionColumn>
+      <LazyDappGrid />
+    </SectionColumn>
+  </ContentsWrapper>
 </template>
 
 <style lang="scss">
@@ -75,10 +55,6 @@ onMounted(() => {
     align-items: center;
     justify-content: space-between;
     justify-items: start;
-
-    .button {
-      justify-self: center;
-    }
 
     @media (min-width: 768px) {
       display: flex;
