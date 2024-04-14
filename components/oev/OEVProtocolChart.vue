@@ -3,10 +3,16 @@ const oev = useOEVStore();
 const ui = useInterfaceStore();
 
 const selectedDataset = ref("aaveV2Eth-1");
-const selectedPeriod = ref("monthly");
+const selectedPeriod = ref("cumulative");
 const isLogarithmic = ref(false);
 
 const periods = ["daily", "weekly", "monthly", "cumulative"];
+
+const enableZoom = computed(() => {
+  return (
+    selectedPeriod.value === "cumulative" || selectedPeriod.value === "daily"
+  );
+});
 
 //
 const metadata = {
@@ -30,6 +36,21 @@ const options = computed(() => {
       //   position: "right",
       //   align: "start",
       // },
+
+      zoom: {
+        enabled: enableZoom.value,
+        //   pan: {
+        //     enabled: true,
+        //     mode: 'x',
+        //     modifierKey: 'ctrl',
+        //   },
+        zoom: {
+          drag: {
+            enabled: enableZoom.value,
+          },
+          mode: "x",
+        },
+      },
     },
     scales: {
       y: {
@@ -54,8 +75,6 @@ const { data: rawData } = await useFetch(apiString);
 
 // data manipulation
 const parsed = computed(() => {
-  //   console.log(oev.protocols);
-  console.log(rawData.value);
   const protocol = oev.getProtocolById(selectedDataset.value);
 
   const dataLiquidated = rawData.value.map((dataPoint) => {
@@ -72,32 +91,61 @@ const parsed = computed(() => {
     };
   });
 
-  const labels =
-    selectedPeriod.value === "daily"
-      ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 10))
-      : selectedPeriod.value === "weekly"
-      ? dataLiquidated.map((item) => item.x.toDateString().slice(4, 15)) //weekly
-      : dataLiquidated.map(
-          (item) =>
-            item.x.toDateString().slice(4, 8) +
-            item.x.toDateString().slice(10, 15)
-        ); //monthly
+  const dataProfit = rawData.value.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint[0]),
+      y: dataPoint[3],
+    };
+  });
+
+  const dataIncentive = rawData.value.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint[0]),
+      y: dataPoint[4],
+    };
+  });
+
+  let labels;
+
+  if (
+    selectedPeriod.value === "daily" ||
+    selectedPeriod.value === "cumulative"
+  ) {
+    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 10));
+  }
+
+  if (selectedPeriod.value === "weekly") {
+    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 15));
+  }
+
+  if (selectedPeriod.value === "monthly") {
+    labels = dataLiquidated.map(
+      (item) =>
+        item.x.toDateString().slice(4, 8) + item.x.toDateString().slice(10, 15)
+    );
+  }
 
   return {
     labels,
     datasets: [
       {
-        data: dataSentToBuilder,
-        label: "Total Sent to Builder",
-      },
-      {
         data: dataLiquidated,
         label: "Total Liquidated",
       },
-      // {
-      //   data: dataOEV,
-      //   label: "With OEV",
-      // },
+      {
+        data: dataIncentive,
+        label: "Total Incentive",
+      },
+      {
+        data: dataProfit,
+        label: "Total Profit",
+        hidden: true,
+      },
+      {
+        data: dataSentToBuilder,
+        label: "Total Sent to Builder",
+        hidden: true,
+      },
     ],
   };
 });
@@ -239,8 +287,5 @@ div.actions {
   grid-template-columns: 24px 1fr;
   gap: var(--space-3xs);
   padding: var(--space-2xs);
-
-  picture {
-  }
 }
 </style>

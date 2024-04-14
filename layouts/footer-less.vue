@@ -21,17 +21,19 @@ useHead({
 
 <template>
   <ContentsWrapper>
-    <div class="curves-wrapper">
-      <LazyCurvesDecoration3 />
-    </div>
+    <LoadingSpinner v-if="!loadingDone" />
 
-    <SiteHeader />
+    <template v-else>
+      <div class="curves-wrapper">
+        <LazyCurvesDecoration3 />
+      </div>
 
-    <main>
-      <slot />
-    </main>
+      <SiteHeader />
 
-    <!-- <LoadingSpinner v-if="!loadingDone" /> -->
+      <main>
+        <slot />
+      </main>
+    </template>
   </ContentsWrapper>
 </template>
 

@@ -76,7 +76,6 @@ const imageRatio = async function (node) {
         v-model="dappForm.links.dapp"
         label="Where can someone find your dApp?*"
         placeholder="https://yourdapp.com"
-        prefix-icon="url"
       />
     </form-field>
 
@@ -89,7 +88,6 @@ const imageRatio = async function (node) {
         v-model="dappForm.links.docs"
         label="Where can someone find your dApp’s documentation?"
         placeholder="https://docs.api3.org/"
-        prefix-icon="url"
       />
     </form-field>
 
@@ -102,7 +100,6 @@ const imageRatio = async function (node) {
         v-model="dappForm.links.explorer"
         label="Explorer"
         placeholder="https://etherscan.io/"
-        prefix-icon="url"
       />
     </form-field>
     <form-field class="file-upload">

@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       ssr: false,
       prerender: false,
     },
+    "/style-guide": {
+      ssr: false,
+    },
   },
 
   //global default head metadata
@@ -108,7 +111,7 @@ export default defineNuxtConfig({
     [
       "@nuxt/devtools",
       {
-        enabled: false, // Enable only in development
+        enabled: true, // Enable only in development
       },
     ],
 

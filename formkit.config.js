@@ -1,3 +1,5 @@
+import { createTooltip, destroyTooltip } from "floating-vue";
+
 // formkit.config.js
 import { defaultConfig, defineFormKitConfig } from "@formkit/vue";
 import {
@@ -37,7 +39,7 @@ const icons = {
 const classes = generateClasses({
   text: {
     // applies to all input types
-    outer: "SHAZAM",
+    outer: "",
     label: "calm-voice",
   },
 });
@@ -66,6 +68,8 @@ const plugins = [
   createAutoHeightTextareaPlugin,
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
+  addPrefixIconPlugin,
+  hideSuffixIfNoHelpPlugin,
   //  proPlugin,
 ];
 
@@ -73,6 +77,7 @@ const plugins = [
 export default defineFormKitConfig(() => {
   const config = useRuntimeConfig();
 
+  //hide help by default #todo
   // pro
 
   const proPlugin = createProPlugin(config.public.formkitProKey, inputs);
@@ -83,10 +88,78 @@ export default defineFormKitConfig(() => {
     icons,
 
     classes,
+
+    props: {
+      selectIcon: "down",
+      suffixIcon: "info",
+
+      onSuffixIconClick: handleSuffixClick,
+    },
   };
 });
 
-// plugins
+// functions
+
+function handleSuffixClick(node, event) {
+  if (!node.props.help) return;
+  const el = event.target;
+
+  const tooltip = createTooltip(el, {
+    triggers: [],
+    content: node.props.help,
+  });
+
+  tooltip.show();
+
+  setTimeout(() => {
+    tooltip.hide();
+    // Transition
+    setTimeout(() => {
+      destroyTooltip(el);
+    }, 400);
+  }, 3000);
+}
+
+// plugins ////////////////
+//
+function hideSuffixIfNoHelpPlugin(node) {
+  if (!node.props.help) {
+    node.props.suffixIcon = null;
+  }
+}
+
+function addPrefixIconPlugin(node) {
+  node.on("created", () => {
+    //  console.log(icons);
+
+    const typesToApply = ["email", "password", "text", "url", "search"];
+
+    if (node.props.prefixIcon) return; // return if already set
+
+    if (!typesToApply.includes(node.props.type)) return; // return if type is not in the list
+
+    if (!node.props.definition) return;
+
+    const originalSchema = node.props.definition.schema;
+    //   const originalSchema = clone(node.props.definition.schema);
+
+    node.props.definition.schema = (extensions) => {
+      const localExtensions = {
+        ...extensions,
+        prefix: {
+          $el: "label",
+          attrs: {
+            class: "formkit-prefix-icon formkit-icon",
+            innerHTML: icons[node.props.type],
+          },
+        },
+      };
+      return originalSchema(localExtensions);
+    };
+  });
+}
+
+//
 function addAsteriskPlugin(node) {
   const legends = ["checkbox_multi", "radio_multi", "repeater", "transferlist"];
   if (
@@ -136,39 +209,4 @@ function addAsteriskPlugin(node) {
       return schemaFn(sectionsSchema);
     };
   });
-}
-
-function addPrefixIconPlugin(node) {
-  node.on("created", () => {
-    if (node.type !== "input") {
-      //  node.props.prefixIcon = 'email'
-      return;
-    }
-
-    if (node.props.type === "email") {
-      node.props.prefixIcon = "email";
-    }
-  });
-
-  //   email
-  //   if (node.props.type === "email") {
-  //     node.props.prefixIcon = "email";
-  //   }
-
-  //   //   password
-  //   if (node.props.type === "password") {
-  //     node.props.prefixIcon = "lock";
-  //   }
-
-  //   text
-
-  //   number
-  //   if (node.props.type === "number") {
-  //     node.props.prefixIcon = "number";
-  //   }
-
-  //   //   url
-  //   if (node.props.type === "url") {
-  //     node.props.prefixIcon = "url";
-  //   }
 }

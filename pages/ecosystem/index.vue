@@ -4,9 +4,9 @@ import { useInterfaceStore } from "@/stores/interface";
 const ui = useInterfaceStore();
 
 useSeoMeta({
-  title: "Ecosystems",
-  ogTitle: "Ecosystems",
-  twitterTitle: "Ecosystems",
+  title: "API3 Partners",
+  ogTitle: "API3 Partners",
+  twitterTitle: "API3 Partners",
 
   description:
     "Welcome to the API3 ecosystem. Easily list your dApp or service and join our thriving community",

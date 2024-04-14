@@ -13,13 +13,16 @@ const userSaving = computed(() =>
   <SectionColumn class="user-tvl-text">
     <div>
       <p class="loud-voice">
-        With your TVL of
+        With a TVL of
         <span class="gradient-text-color">
-          ${{ formatNumber(oev.userTvl) }}
+          ${{ oev.userTvl ? formatNumber(oev.userTvl) : "1B" }}
+        </span>
+        <span v-if="!oev.userTvl">
+          and a <span class="gradient-text-color">5%</span> incentive rate
         </span>
         you would capture
         <span class="gradient-text-color">
-          ${{ formatNumber(userSaving) }}
+          ${{ oev.userTvl ? formatNumber(userSaving) : "1.9M" }}
         </span>
         per year through the OEV Network**
       </p>

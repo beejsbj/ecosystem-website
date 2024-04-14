@@ -1,53 +1,37 @@
 <script setup>
 import { gsap } from "gsap";
 
-function animateCurvesWaves() {
-  //   const pageLoad = gsap.timeline();
+const ui = useInterfaceStore();
+function animate() {
+  let context = gsap.context(() => {
+    const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
 
-  //   pageLoad.fromTo(
-  //     "#curve-decoration-3 path",
-  //     {
-  //       strokeDashoffset: "1100",
-  //       strokeDasharray: "1100",
-  //       opacity: 0,
-  //     },
-  //     {
-  //       strokeDashoffset: 0,
-  //       duration: 5,
-  //       opacity: 1,
-  //       // clearProps: "all",
-  //       ease: "power1.inOut",
-  //     }
-  //   );
+    const curvesLength = 4100;
 
-  //   animation of the curves making waves
-  const tl = gsap.timeline({
-    repeat: -1,
-    repeatDelay: 0,
-    defaults: {
-      duration: 1,
-      ease: "power1.inOut",
-      stagger: { each: 0.5, repeat: "-1", from: "end", yoyo: true },
-    },
+    const duration = 3;
+    const easing = "linear";
+
+    const timeline = gsap.timeline();
+
+    timeline.set(curvesPath, {
+      strokeDashoffset: 1 * curvesLength,
+      strokeDasharray: curvesLength,
+    });
+
+    timeline.to(curvesPath, {
+      duration: duration,
+      strokeDashoffset: 0,
+      ease: easing,
+    });
   });
 
-  tl.fromTo(
-    "#curve-decoration-3 path",
-    {
-      // strokeDashoffset: "1100",
-      // strokeDasharray: "1100",
-    },
-    {
-      duration: 5,
-      // strokeDashoffset: 0,
-      scaleY: 0.98,
-      transformOrigin: "center center",
-    }
-  );
+  setTimeout(() => {
+    context.kill();
+  }, 2000);
 }
 
 onMounted(() => {
-  //   animateCurvesWaves();
+  animate();
 });
 </script>
 

@@ -3,25 +3,27 @@ const ui = useInterfaceStore();
 const router = useRouter();
 
 const showMenu = ref(false);
-const showPlaceholder = ref(true);
+
+let context;
 
 onMounted(() => {
-  //   change show placeholder to false when client side rendering
-  //   showPlaceholder.value = false;
-  //   const pageLoad = gsap.timeline();
-  //   if (ui.firstLoad) {
-  //     pageLoad.from(".site-header", {
-  //       delay: "0.5",
-  //       duration: 0.5,
-  //       y: -50,
-  //       opacity: 0,
-  //       ease: "power4.out",
-  //     });
-  //     ui.firstLoad = false;
-  //   }
+  context = gsap.context(() => {
+    const pageLoad = gsap.timeline();
+    if (ui.firstLoad) {
+      pageLoad.from(".site-header", {
+        delay: "0.5",
+        duration: 0.5,
+        y: -50,
+        opacity: 0,
+        ease: "power4.out",
+      });
+      ui.firstLoad = false;
+    }
+  });
 });
-nextTick(() => {
-  showPlaceholder.value = false;
+
+onUnmounted(() => {
+  context.kill();
 });
 </script>
 

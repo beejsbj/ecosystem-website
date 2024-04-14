@@ -4,6 +4,8 @@ import formatNumber from "@/utils/formatNumber";
 const oev = useOEVStore();
 
 const showLiquidatedBar = ref(false);
+const showIncentives = ref(true);
+const showProfits = ref(true);
 const showSentToBuilderBar = ref(true);
 
 function toggleLiquidated() {
@@ -12,22 +14,82 @@ function toggleLiquidated() {
 function toggleSentToBuilder() {
   showSentToBuilderBar.value = !showSentToBuilderBar.value;
 }
+function toggleProfits() {
+  showProfits.value = !showProfits.value;
+}
+function toggleIncentives() {
+  showIncentives.value = !showIncentives.value;
+}
 
 const maxHeight = computed(() => {
   //check if protocols have hide, use the protocol with the highest value
   const protocols = oev.protocols.filter((protocol) => !protocol.hide);
 
-  if (showLiquidatedBar.value) {
-    const max = Math.max(
-      ...protocols.map((protocol) => protocol.totalLiquidated)
-    );
-    return max;
-  } else {
-    const max = Math.max(
-      ...protocols.map((protocol) => protocol.totalSentToBuilderUSD)
-    );
-    return max;
-  }
+  let liquidatedMax = Math.max(
+    ...protocols.map((protocol) => protocol.totalLiquidated)
+  );
+  let sentToBuilderMax = Math.max(
+    ...protocols.map((protocol) => protocol.totalSentToBuilderUSD)
+  );
+  let profitsMax = Math.max(
+    ...protocols.map((protocol) => protocol.totalProfitUSD)
+  );
+  let incentivesMax = Math.max(
+    ...protocols.map((protocol) => protocol.totalIncentiveUSD)
+  );
+
+  //   sort the values by highest
+  const values = [
+    {
+      isShown: showLiquidatedBar.value,
+      value: liquidatedMax,
+    },
+    {
+      isShown: showSentToBuilderBar.value,
+      value: sentToBuilderMax,
+    },
+    {
+      isShown: showProfits.value,
+      value: profitsMax,
+    },
+    {
+      isShown: showIncentives.value,
+      value: incentivesMax,
+    },
+  ];
+
+  //based on what is showm, get the highest value, excluding the hidden protocols
+
+  return Math.max(
+    ...values.filter((value) => value.isShown).map((value) => value.value)
+  );
+});
+
+function barHeight(value) {
+  return (value / maxHeight.value) * 150;
+}
+
+const gridCount = computed(() => {
+  let count = 0;
+  showLiquidatedBar.value ? count++ : count;
+  showSentToBuilderBar.value ? count++ : count;
+  showProfits.value ? count++ : count;
+  showIncentives.value ? count++ : count;
+
+  return count;
+});
+
+const gridStarts = computed(() => {
+  //   based on the grid count, and if the bars are shown, calculate the grid start
+
+  let starts = [];
+  let count = 1;
+  showLiquidatedBar.value ? starts.push(count) : count;
+  showSentToBuilderBar.value ? starts.push(count + 1) : count;
+  showProfits.value ? starts.push(count + 2) : count;
+  showIncentives.value ? starts.push(count + 3) : count;
+
+  return starts;
 });
 </script>
 
@@ -49,6 +111,30 @@ const maxHeight = computed(() => {
             <div class="liquidated"></div>
             <p class="whisper-voice">Total Liquidated</p>
           </button>
+
+          <!--  -->
+          <button
+            @click="toggleIncentives"
+            :class="{
+              dimmed: !showIncentives,
+            }"
+          >
+            <div class="incentives"></div>
+            <p class="whisper-voice">Total Incentives</p>
+          </button>
+
+          <!--  -->
+          <button
+            @click="toggleProfits"
+            :class="{
+              dimmed: !showProfits,
+            }"
+          >
+            <div class="profits"></div>
+            <p class="whisper-voice">Total Searcher Profits</p>
+          </button>
+
+          <!--  -->
           <button
             @click="toggleSentToBuilder"
             :class="{
@@ -56,7 +142,7 @@ const maxHeight = computed(() => {
             }"
           >
             <div class="totalSentToBuilderUSD"></div>
-            <p class="whisper-voice">OEV Recaptured</p>
+            <p class="whisper-voice">Total Sent to Builder</p>
           </button>
         </div>
         <ul class="bars" v-auto-animate>
@@ -66,10 +152,14 @@ const maxHeight = computed(() => {
                 class="bar"
                 :class="{ userAdded: protocol.id === 'userAdded' }"
                 :style="`
-							 --bar-liquidated-height: ${(protocol.totalLiquidated / maxHeight) * 150};
-							 --bar-totalSentToBuilderUSD-height: ${
-                 (protocol.totalSentToBuilderUSD / maxHeight) * 150
-               };
+							 --bar-liquidated-height: ${barHeight(protocol.totalLiquidated)};
+							 --bar-totalSentToBuilderUSD-height: ${barHeight(
+                 protocol.totalSentToBuilderUSD
+               )};
+							 --bar-profits-height: ${barHeight(protocol.totalProfitUSD)};
+							 --bar-incentives-height: ${barHeight(protocol.totalIncentiveUSD)};
+
+
 						 `"
               >
                 <span
@@ -77,7 +167,7 @@ const maxHeight = computed(() => {
                   :class="{ hide: !showLiquidatedBar }"
                   v-tooltip.top-end="`$${protocol.totalLiquidated}`"
                 >
-                  <span class="number firm-voice">
+                  <span class="number solid-voice">
                     {{ formatNumber(protocol.totalLiquidated) }}
                   </span>
                 </span>
@@ -86,8 +176,26 @@ const maxHeight = computed(() => {
                   :class="{ hide: !showSentToBuilderBar }"
                   v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
                 >
-                  <span class="number firm-voice">
+                  <span class="number solid-voice">
                     {{ formatNumber(protocol.totalSentToBuilderUSD) }}
+                  </span>
+                </span>
+                <span
+                  class="profits"
+                  :class="{ hide: !showProfits }"
+                  v-tooltip.top-end="`$${protocol.totalProfitUSD}`"
+                >
+                  <span class="number solid-voice">
+                    {{ formatNumber(protocol.totalProfitUSD) }}
+                  </span>
+                </span>
+                <span
+                  class="incentives"
+                  :class="{ hide: !showIncentives }"
+                  v-tooltip.top-end="`$${protocol.totalIncentiveUSD}`"
+                >
+                  <span class="number solid-voice">
+                    {{ formatNumber(protocol.totalIncentiveUSD) }}
                   </span>
                 </span>
               </div>
@@ -187,7 +295,7 @@ text-content {
   }
 }
 
-.totalSentToBuilderUSD {
+.liquidated {
   --background: linear-gradient(
     to bottom,
     hsla(160, 69%, 69%, 0.3),
@@ -196,12 +304,12 @@ text-content {
 
   --after-background: linear-gradient(
     to bottom,
-    hsla(160, 69%, 40%, 1),
+    hsla(160, 69%, 69%, 1),
     hsla(160, 69%, 0%, 1)
   );
 }
 
-.liquidated {
+.incentives {
   --background: linear-gradient(
     to bottom,
     hsla(255, 34%, 54%, 0.5),
@@ -210,10 +318,39 @@ text-content {
 
   --after-background: linear-gradient(
     to bottom,
-    hsla(255, 34%, 60%, 1),
+    hsla(255, 34%, 70%, 1),
     hsla(255, 34%, 0%, 0)
   );
 }
+
+.profits {
+  --background: linear-gradient(
+    to bottom,
+    hsla(226, 100%, 50%, 0.3),
+    hsla(226, 100%, 50%, 0)
+  );
+
+  --after-background: linear-gradient(
+    to bottom,
+    hsla(226, 100%, 70%, 1),
+    hsla(226, 100%, 0%, 1)
+  );
+}
+
+.totalSentToBuilderUSD {
+  --background: linear-gradient(
+    to bottom,
+    hsla(0, 85%, 65%, 0.3),
+    hsla(0, 85%, 65%, 0)
+  );
+
+  --after-background: linear-gradient(
+    to bottom,
+    hsla(0, 85%, 65%, 1),
+    hsla(0, 85%, 0%, 1)
+  );
+}
+
 ul.bars {
   display: grid;
   gap: var(--space-s);
@@ -242,23 +379,29 @@ li {
   & > p {
     text-align: center;
     white-space: nowrap;
-    @media (max-width: 768px) {
-      font-size: var(--step--2);
+    font-size: var(--step--2);
+    scale: 1.8;
+
+    @media (max-width: 1170px) {
+      scale: 1.3;
+    }
+
+    @media (max-width: 850px) {
+      scale: unset;
     }
   }
 
   .bar {
+    --grid-count: v-bind(gridCount);
+
     height: 400px;
     position: relative;
     display: grid;
     gap: var(--space-3xs);
-    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    grid-template-columns: repeat(var(--grid-count), 1fr);
 
     transition: 0.2s ease-in-out;
-
-    &:has(> .hide) {
-      grid-template-columns: unset;
-    }
 
     &.userAdded {
       filter: brightness(2) saturate(3);
@@ -279,11 +422,8 @@ li {
     & > span {
       transition: 0.2s ease-in-out;
       border-radius: var(--corners);
-      position: absolute;
-      left: 1px;
-      right: 1px;
+      position: relative;
       background: var(--background);
-      bottom: 0%;
 
       /*styling to make the gradient border*/
       &::before {
@@ -310,6 +450,7 @@ li {
       .number {
         text-align: center;
         position: absolute;
+        font-size: var(--step--1);
 
         left: 50%;
         top: calc(var(--space-l) * -1);
@@ -320,15 +461,23 @@ li {
         }
       }
       &.liquidated {
-        grid-column: 1 / span 1;
-
-        height: calc(var(--bar-liquidated-height) * 2px);
+        grid-column: span 1;
+        height: calc(var(--bar-liquidated-height) * 1.5px);
       }
 
       &.totalSentToBuilderUSD {
-        grid-column: 2 / span 1;
+        grid-column: span 1;
+        height: calc(var(--bar-totalSentToBuilderUSD-height) * 1.5px);
+      }
 
-        height: calc(var(--bar-totalSentToBuilderUSD-height) * 2px);
+      &.profits {
+        grid-column: span 1;
+        height: calc(var(--bar-profits-height) * 1.5px);
+      }
+
+      &.incentives {
+        grid-column: span 1;
+        height: calc(var(--bar-incentives-height) * 1.5px);
       }
     }
   }

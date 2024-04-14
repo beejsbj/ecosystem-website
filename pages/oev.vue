@@ -56,7 +56,9 @@ setTimeout(() => {
     <!-- displaying user's TVL and savings -->
     <LazyOEVDisplayText />
 
-    <LazyOEVProtocolChart />
+    <ClientOnly>
+      <LazyOEVProtocolChart />
+    </ClientOnly>
 
     <!--  displaying a message about data verification -->
     <SectionColumn>

@@ -6,6 +6,7 @@ import { getValidationMessages } from "@formkit/validation";
 const { verifyWallet } = useSiwe();
 const { submitProject, fetchFeedNames } = useHttpCalls();
 const web3Store = useWeb3Store();
+const ui = useInterfaceStore();
 
 const dappForm = useStorage("dapp-form", {});
 
@@ -121,7 +122,7 @@ onMounted(async () => {
     <FormKit
       type="multi-step"
       tab-style="progress"
-      :allow-incomplete="false"
+      :allow-incomplete="ui.isDev"
       :hide-progress-labels="true"
       valid-step-icon=""
     >
@@ -228,10 +229,6 @@ div.actions {
   display: flex !important;
   justify-content: center;
   gap: var(--space-m);
-
-  .formkit-outer {
-    margin: unset;
-  }
 
   button {
     padding: 1em 2em;

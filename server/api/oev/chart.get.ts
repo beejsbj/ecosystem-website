@@ -1,8 +1,6 @@
-import {
-  prepareAllLiquidationChart,
-  prepareSingleLiquidationChart,
-} from "~/server/services/oev-parser/oev";
 import { OevChart } from "~/server/models/OevChart";
+import { cacheInterval, queryCache } from "~/server/services/cache";
+
 export default defineEventHandler(async (event) => {
   try {
     const { protocolId, period }: any = getQuery(event);
@@ -15,6 +13,16 @@ export default defineEventHandler(async (event) => {
       };
     }
 
+    const cacheKey = `charts-${protocolId}-${period}`;
+
+    const cachedData: any = await queryCache.get(cacheKey);
+
+    if (cachedData !== undefined) {
+      event.node.res.statusCode = 200;
+      console.log("getting from cache");
+      return JSON.parse(cachedData);
+    }
+
     const result = await OevChart.findOne({ id: protocolId, period });
 
     if (!result) {
@@ -25,8 +33,12 @@ export default defineEventHandler(async (event) => {
       };
     }
 
+    const response = result.data;
+    // cache result with new queries
+    queryCache.set(cacheKey, JSON.stringify(response), cacheInterval);
+
     event.node.req.statusCode = 200;
-    return result?.data;
+    return response;
   } catch (err: any) {
     console.log("fetch articles error  ", err);
     event.node.req.statusCode = 500;

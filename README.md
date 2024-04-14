@@ -1,6 +1,12 @@
 # API3 Ecosystem with Nuxt3
 
+## Production deployment
+
 https://ecosystem.api3.org/
+
+## Staging deployment
+
+https://staging.d1ecxl0h41jkn0.amplifyapp.com/
 
 ## Setup with docker
 

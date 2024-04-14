@@ -1,7 +1,8 @@
 [
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "11/24/2022",
     "totalLiquidated": "162.1701473072550164172501",
     "totalSentToBuilder": "0",
@@ -11,14 +12,22 @@
         "hash": "0x2178bd92617c267e309d7f14bc18aa6385c32315ea00912a294dacc84d874421",
         "liquidatedCollateral": "162.1701473072550164172501",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "-8.49093354901843654133459064",
+        "incentiveUSD": "7.7223879670121439230886",
+        "txCostUSD": "16.21332151603058046442319064",
+        "collateralPriceUSD": "1.1935221e-7",
+        "user": "0xdc8bc3cf68d0f518b35cf461cb3da87ac2d34ba6"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "-8.49093354901843654133459064",
+    "totalIncentiveUSD": "7.7223879670121439230886",
+    "totalTxCostUSD": "16.21332151603058046442319064"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "12/28/2022",
     "totalLiquidated": "26.289634986256248963",
     "totalSentToBuilder": "0",
@@ -28,31 +37,47 @@
         "hash": "0xa35632a4ba22c6602488aec0458054f4de88d85cf150bd21b084d48e1472a0d3",
         "liquidatedCollateral": "26.289634986256248963",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "-18.690907026005438358",
+        "incentiveUSD": "1.132088766053994342",
+        "txCostUSD": "19.8229957920594327",
+        "collateralPriceUSD": "99.95551551378",
+        "user": "0x3880ccbd20c568790560b94eacefd64e8dbcbc96"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "-18.690907026005438358",
+    "totalIncentiveUSD": "1.132088766053994342",
+    "totalTxCostUSD": "19.8229957920594327"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "1/9/2023",
     "totalLiquidated": "141532.95962248200524883429963216",
     "totalSentToBuilder": "2.6814812",
-    "totalSentToBuilderUSD": "3452.2751322138472",
+    "totalSentToBuilderUSD": "3427.08458481519612",
     "liquidations": [
       {
         "hash": "0x6d56a46c3fba60d70de7083ded8ad640950d9e661162ed72278d5e0f9dd3308d",
         "liquidatedCollateral": "141532.95962248200524883429963216",
         "sentToBuilder": "2.6814812",
-        "sentToBuilderUSD": "3452.2751322138472"
+        "sentToBuilderUSD": "3427.08458481519612",
+        "profitUSD": "5941.151518072997791716698795024",
+        "incentiveUSD": "9521.805334258506968669166665024",
+        "txCostUSD": "153.56923137031305695246787",
+        "collateralPriceUSD": "100.507290537988801932",
+        "user": "0x4334703b0b74e2045926f82f4158a103fce1df4f"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "5941.151518072997791716698795024",
+    "totalIncentiveUSD": "9521.805334258506968669166665024",
+    "totalTxCostUSD": "153.56923137031305695246787"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "1/21/2023",
     "totalLiquidated": "3496.825420432715084668827598891234",
     "totalSentToBuilder": "0",
@@ -62,112 +87,177 @@
         "hash": "0x8815428e053f4fa5cf03964630d49a3edaef06e35bacbeaefe90e8b21c9f577d",
         "liquidatedCollateral": "2331.139201102055055099409584192174",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "62.478878270234289964937376462174",
+        "incentiveUSD": "100.383984366547566246944871972174",
+        "txCostUSD": "37.90510609631327628200749551",
+        "collateralPriceUSD": "99.69291630263982946641",
+        "user": "0x603a5d8404a412dad3227fc3baacb505451fa5be"
       },
       {
         "hash": "0xe90c79d66e41b46406f9ab26c4b68d07ed746cf46182014dc75f6e2b26c0d5cc",
         "liquidatedCollateral": "1165.68621933066002956941801469906",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "12.86251399031392447190102767906",
+        "incentiveUSD": "50.19701423359235451830524657906",
+        "txCostUSD": "37.3345002432784300464042189",
+        "collateralPriceUSD": "99.69291630263982946641",
+        "user": "0x603a5d8404a412dad3227fc3baacb505451fa5be"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "75.341392260548214436838404141234",
+    "totalIncentiveUSD": "150.580998600139920765250118551234",
+    "totalTxCostUSD": "75.23960633959170632841171441"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "3/10/2023",
     "totalLiquidated": "24346.23270552742711756756",
     "totalSentToBuilder": "0.539836065325634903",
-    "totalSentToBuilderUSD": "776.694608606271096024087196",
+    "totalSentToBuilderUSD": "774.24838464153976489890953988",
     "liquidations": [
       {
         "hash": "0xd312b554aee2cbe82e6e25f8d3f049de43bc893239de1ca688847d955dc7caf3",
         "liquidatedCollateral": "24346.23270552742711756756",
         "sentToBuilder": "0.539836065325634903",
-        "sentToBuilderUSD": "776.694608606271096024087196"
+        "sentToBuilderUSD": "774.24838464153976489890953988",
+        "profitUSD": "913.45875917444482175571613996",
+        "incentiveUSD": "1933.59279919046486536246218892",
+        "txCostUSD": "245.88565537448027870783650908",
+        "collateralPriceUSD": "1.41566e-7",
+        "user": "0x72cf204877ed7fc3c31b87052fb4975b2efda940"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "913.45875917444482175571613996",
+    "totalIncentiveUSD": "1933.59279919046486536246218892",
+    "totalTxCostUSD": "245.88565537448027870783650908"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "3/11/2023",
     "totalLiquidated": "136751.94759244783775731308555890155",
     "totalSentToBuilder": "2.19010991489906533",
-    "totalSentToBuilderUSD": "3129.8878971734836293272239",
+    "totalSentToBuilderUSD": "3446.5938622558978850027734347",
     "liquidations": [
       {
         "hash": "0x38ab0c841de3c5f3758df0f73d1365ed3a24f9875b38b41a41d264e55708b8c2",
         "liquidatedCollateral": "57775.11468077603154058795781163777",
         "sentToBuilder": "1.5018468",
-        "sentToBuilderUSD": "2146.290508412844"
+        "sentToBuilderUSD": "2344.45794714",
+        "profitUSD": "3626.44976903960045006948170996419",
+        "incentiveUSD": "6124.13834681693664156638170996419",
+        "txCostUSD": "153.2306306373361914969",
+        "collateralPriceUSD": "1.4366790431266e-7",
+        "user": "0xe7cace2d0c8039e0ad5b49e95110e91b3b58b188"
       },
       {
         "hash": "0xa781fa427185c651f2f40d10c2f36857c726bad96ef05c0c49886bd6bad45a42",
         "liquidatedCollateral": "78976.83291167180621672512774726378",
         "sentToBuilder": "0.68826311489906533",
-        "sentToBuilderUSD": "983.5973887606396293272239"
+        "sentToBuilderUSD": "1102.1359151158978850027734347",
+        "profitUSD": "2997.68469898139317994434395392765",
+        "incentiveUSD": "4503.05216427083335770551643182765",
+        "txCostUSD": "403.2315501735422927583990432",
+        "collateralPriceUSD": "91.20659883554818231852",
+        "user": "0x14ff0bc9417b6796f79768729002a793b51205b8"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "6624.13446802099363001382566389184",
+    "totalIncentiveUSD": "10627.19051108776999927189814179184",
+    "totalTxCostUSD": "556.4621808108784842552990432"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "6/15/2023",
     "totalLiquidated": "117529.55577005762942101581506235718",
     "totalSentToBuilder": "1.777342419639966958",
-    "totalSentToBuilderUSD": "2933.500409301795103399499902",
+    "totalSentToBuilderUSD": "3008.82743536010726385904",
     "liquidations": [
       {
         "hash": "0x00e9878ae2654d46b6359809efaa299f8aab15ac474c5e57485abf66355ab085",
         "liquidatedCollateral": "42487.93193317628167437466268285945",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "2986.55757272911456012871714963155",
+        "incentiveUSD": "3147.25421727231716106450258185155",
+        "txCostUSD": "160.69664454320260093578543222",
+        "collateralPriceUSD": "5.994343544e-11",
+        "user": "0xb742da24d6d5803b6c5e4f5bf0ff2c0ef1e94f55"
       },
       {
         "hash": "0x2a8e081e5830719b1e7140e2ef6fdab0e3a0c0d529ac93a4b122445456e77cbe",
         "liquidatedCollateral": "62587.16637497601850832902077949773",
         "sentToBuilder": "1.626827169876120372",
-        "sentToBuilderUSD": "2685.075265159988630809598868"
+        "sentToBuilderUSD": "2754.02317933988665535136",
+        "profitUSD": "4364.36689935094519995945679641573",
+        "incentiveUSD": "7390.10957748625839670881679641573",
+        "txCostUSD": "271.719498795426541398",
+        "collateralPriceUSD": "6.011076905e-11",
+        "user": "0xaecdde1672f3f121b3a6c43a2e0b5dfc28f6224c"
       },
       {
         "hash": "0x3136832bbb0912b3f070123f31a16d8c9c89555afcf1238611f2feae80791672",
         "liquidatedCollateral": "12454.4574619053292383121316",
         "sentToBuilder": "0.150515249763846586",
-        "sentToBuilderUSD": "248.425144141806472589901034"
+        "sentToBuilderUSD": "254.80425602022060850768",
+        "profitUSD": "441.5033901018780109109811023496",
+        "incentiveUSD": "847.8736589680934297126611023496",
+        "txCostUSD": "151.566012845994810294",
+        "collateralPriceUSD": "1.6761772e-7",
+        "user": "0xb742da24d6d5803b6c5e4f5bf0ff2c0ef1e94f55"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "7792.42786218193777099915504839688",
+    "totalIncentiveUSD": "11385.23745372666898748598048061688",
+    "totalTxCostUSD": "583.98215618462395262778543222"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "7/20/2023",
     "totalLiquidated": "13191.734406269627587468866619697074",
     "totalSentToBuilder": "0.351030185888120494",
-    "totalSentToBuilderUSD": "663.12190259826514429002262",
+    "totalSentToBuilderUSD": "671.19009673897489925338128526",
     "liquidations": [
       {
         "hash": "0x8e6de1ed3821b89abcdb5c8b878ef4382c9e4627a4462b3e9665cc20172d71a1",
         "liquidatedCollateral": "4396.970193966535887662565450254408",
         "sentToBuilder": "0.103936151471392023",
-        "sentToBuilderUSD": "196.34305334190751718085579"
+        "sentToBuilderUSD": "200.13529582725362380788",
+        "profitUSD": "209.02583660683342936038022867115",
+        "incentiveUSD": "525.83679167662665252314022867115",
+        "txCostUSD": "116.67565924253959935488",
+        "collateralPriceUSD": "7.89384153e-11",
+        "user": "0x21c157d91b78729dc8d1fc5dbafdbe61259aa1c9"
       },
       {
         "hash": "0xe643fb5c09671d641d5150396c2677df4019c677e6abbeb28a8a2fb8a361022a",
         "liquidatedCollateral": "8794.764212303091699806301169442666",
         "sentToBuilder": "0.247094034416728471",
-        "sentToBuilderUSD": "466.77884925635762710916683"
+        "sentToBuilderUSD": "471.05480091172127544550128526",
+        "profitUSD": "574.249525315007354494382455028156",
+        "incentiveUSD": "1122.518816637876216171501728088156",
+        "txCostUSD": "77.2144904111475862316179878",
+        "collateralPriceUSD": "7.899092245e-11",
+        "user": "0x21c157d91b78729dc8d1fc5dbafdbe61259aa1c9"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "783.275361921840783854762683699306",
+    "totalIncentiveUSD": "1648.355608314502868694641956759306",
+    "totalTxCostUSD": "193.8901496536871855864979878"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "8/1/2023",
     "totalLiquidated": "2201.321183293905280003457198447855",
     "totalSentToBuilder": "0",
@@ -177,65 +267,97 @@
         "hash": "0xfcf5d0e546fd0c13af01fad32f70b036dff2116857e827fb93a878b25276c022",
         "liquidatedCollateral": "2201.321183293905280003457198447855",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "66.061270289885199872912753609936",
+        "incentiveUSD": "163.060828392141131851962819049936",
+        "txCostUSD": "96.99955810225593197905006544",
+        "collateralPriceUSD": "5.540825725e-11",
+        "user": "0x21c157d91b78729dc8d1fc5dbafdbe61259aa1c9"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "66.061270289885199872912753609936",
+    "totalIncentiveUSD": "163.060828392141131851962819049936",
+    "totalTxCostUSD": "96.99955810225593197905006544"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "8/17/2023",
     "totalLiquidated": "12701.6271379420234268458",
     "totalSentToBuilder": "0.167550541120256929",
-    "totalSentToBuilderUSD": "302.523792050736191582146807",
+    "totalSentToBuilderUSD": "289.30929731939706297342539707",
     "liquidations": [
       {
         "hash": "0x4f09fac5030d89519d0d3803518b923eb740cee8ab5e183e0204b746172e2e3d",
         "liquidatedCollateral": "12701.6271379420234268458",
         "sentToBuilder": "0.167550541120256929",
-        "sentToBuilderUSD": "302.523792050736191582146807"
+        "sentToBuilderUSD": "289.30929731939706297342539707",
+        "profitUSD": "426.97427263069897724008945198",
+        "incentiveUSD": "894.14868484044579661001082017",
+        "txCostUSD": "177.86511489034975639649597112",
+        "collateralPriceUSD": "1.72855e-7",
+        "user": "0x72cf204877ed7fc3c31b87052fb4975b2efda940"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "426.97427263069897724008945198",
+    "totalIncentiveUSD": "894.14868484044579661001082017",
+    "totalTxCostUSD": "177.86511489034975639649597112"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "8/18/2023",
     "totalLiquidated": "21054.83633942865230775887257099934",
     "totalSentToBuilder": "0.308317203831805852",
-    "totalSentToBuilderUSD": "518.601392258219183662621104",
+    "totalSentToBuilderUSD": "526.5441207039580340456",
     "liquidations": [
       {
         "hash": "0x3f8dc0fece5c87f8dfcc1247982e6a5d2367065c7cc71140a40823629f079c26",
         "liquidatedCollateral": "21054.83633942865230775887257099934",
         "sentToBuilder": "0.308317203831805852",
-        "sentToBuilderUSD": "518.601392258219183662621104"
+        "sentToBuilderUSD": "526.5441207039580340456",
+        "profitUSD": "1326.37506992511264329296388928796",
+        "incentiveUSD": "2086.16162732830264943456388928796",
+        "txCostUSD": "233.242436699231972096",
+        "collateralPriceUSD": "5.008604153e-11",
+        "user": "0xb742da24d6d5803b6c5e4f5bf0ff2c0ef1e94f55"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "1326.37506992511264329296388928796",
+    "totalIncentiveUSD": "2086.16162732830264943456388928796",
+    "totalTxCostUSD": "233.242436699231972096"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "8/22/2023",
     "totalLiquidated": "27976.35581129935557384575887726789",
     "totalSentToBuilder": "0.800733017492506272",
-    "totalSentToBuilderUSD": "1335.045582489594559948250784",
+    "totalSentToBuilderUSD": "1333.01491265925719596944842208",
     "liquidations": [
       {
         "hash": "0x0bb87fd16a6af9da6d9a9d9acb64b3b11e2b8adf8db768faecc198528a0c92b3",
         "liquidatedCollateral": "27976.35581129935557384575887726789",
         "sentToBuilder": "0.800733017492506272",
-        "sentToBuilderUSD": "1335.045582489594559948250784"
+        "sentToBuilderUSD": "1333.01491265925719596944842208",
+        "profitUSD": "1929.40986771315508731897096502789",
+        "incentiveUSD": "3405.33756534809834958750593134789",
+        "txCostUSD": "142.91278497568606629908654424",
+        "collateralPriceUSD": "4.541486885e-11",
+        "user": "0xaecdde1672f3f121b3a6c43a2e0b5dfc28f6224c"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "1929.40986771315508731897096502789",
+    "totalIncentiveUSD": "3405.33756534809834958750593134789",
+    "totalTxCostUSD": "142.91278497568606629908654424"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "9/11/2023",
     "totalLiquidated": "6368.52909194380933826994",
     "totalSentToBuilder": "0",
@@ -245,31 +367,47 @@
         "hash": "0xff6460e768bb6587da64d01f2e051c19e062084e34ec30a866bb59f255ac965a",
         "liquidatedCollateral": "6368.52909194380933826994",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "253.76527597777725078416938032",
+        "incentiveUSD": "303.26329009256234850056938032",
+        "txCostUSD": "49.4980141147850977164",
+        "collateralPriceUSD": "1.59799e-7",
+        "user": "0x72cf204877ed7fc3c31b87052fb4975b2efda940"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "253.76527597777725078416938032",
+    "totalIncentiveUSD": "303.26329009256234850056938032",
+    "totalTxCostUSD": "49.4980141147850977164"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "10/5/2023",
     "totalLiquidated": "3201.06120307937321979196",
     "totalSentToBuilder": "0.048048169348774435",
-    "totalSentToBuilderUSD": "79.17320686889755324486248",
+    "totalSentToBuilderUSD": "77.6931934489038781587753501",
     "liquidations": [
       {
         "hash": "0x5c7eeaa55d119822c27fa1114edd2684d0bb61dd23544746b438325618e38237",
         "liquidatedCollateral": "3201.06120307937321979196",
         "sentToBuilder": "0.048048169348774435",
-        "sentToBuilderUSD": "79.17320686889755324486248"
+        "sentToBuilderUSD": "77.6931934489038781587753501",
+        "profitUSD": "103.23018313633915596843050839",
+        "incentiveUSD": "230.12467930982641203193812859",
+        "txCostUSD": "49.2013027245833779047322701",
+        "collateralPriceUSD": "1.62257e-7",
+        "user": "0x72cf204877ed7fc3c31b87052fb4975b2efda940"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "103.23018313633915596843050839",
+    "totalIncentiveUSD": "230.12467930982641203193812859",
+    "totalTxCostUSD": "49.2013027245833779047322701"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "10/12/2023",
     "totalLiquidated": "1022.7227739809677698477944134500856",
     "totalSentToBuilder": "0",
@@ -279,20 +417,33 @@
         "hash": "0xc9e950d077f5010eed5805c3d22dd3dccc88caea3cf7138cefe428082b070be8",
         "liquidatedCollateral": "459.429114665591771146521375573",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "-9.618364661370985474223288747",
+        "incentiveUSD": "21.877526585302974353856814453",
+        "txCostUSD": "31.4958912466739598280801032",
+        "collateralPriceUSD": "26720.09851412119310105195",
+        "user": "0xdf5b0e3887ec6cb55c261d4bc051de8dbf7d8650"
       },
       {
         "hash": "0xeebc36420c740d3adfdc0476239a5006023835ee13edbc116b829bb00c31ca76",
         "liquidatedCollateral": "563.2936593153759987012730378770856",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "-6.1791863548224652651754806729144",
+        "incentiveUSD": "24.2566646310248172322545589270856",
+        "txCostUSD": "30.4358509858472824974300396",
+        "collateralPriceUSD": "100.04996912179082691759",
+        "user": "0x603a5d8404a412dad3227fc3baacb505451fa5be"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "-15.7975510161934507393987694199144",
+    "totalIncentiveUSD": "46.1341912163277915861113733800856",
+    "totalTxCostUSD": "61.9317422325212423255101428"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "10/19/2023",
     "totalLiquidated": "44807.31941692424479844651083338395",
     "totalSentToBuilder": "0",
@@ -302,31 +453,47 @@
         "hash": "0x110346870ba2f3ebd5cfc089dc74b3ac922d35590aada4452581bf6375b4ad06",
         "liquidatedCollateral": "44807.31941692424479844651083338395",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "3298.68027036092755263619069080395",
+        "incentiveUSD": "3319.06069754994405914397374538395",
+        "txCostUSD": "20.38042718901650650778305458",
+        "collateralPriceUSD": "4.152697499e-11",
+        "user": "0x279a7dbfae376427ffac52fcb0883147d42165ff"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "3298.68027036092755263619069080395",
+    "totalIncentiveUSD": "3319.06069754994405914397374538395",
+    "totalTxCostUSD": "20.38042718901650650778305458"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "10/26/2023",
     "totalLiquidated": "50889.80500753144742663848062010476",
     "totalSentToBuilder": "0.894428",
-    "totalSentToBuilderUSD": "1598.773891263752",
+    "totalSentToBuilderUSD": "1607.98592807059432",
     "liquidations": [
       {
         "hash": "0x07a43a7dd4c673976d4ec808cbaef0ec07044334137f94506056dcd82b90ed66",
         "liquidatedCollateral": "50889.80500753144742663848062010476",
         "sentToBuilder": "0.894428",
-        "sentToBuilderUSD": "1598.773891263752"
+        "sentToBuilderUSD": "1607.98592807059432",
+        "profitUSD": "2146.53370739841600848416452863486",
+        "incentiveUSD": "3799.41293822279935025476608143486",
+        "txCostUSD": "44.8933027537890217706015528",
+        "collateralPriceUSD": "100.05152682129589896101",
+        "user": "0xa2eef3c3f55757c38fcbb8f52755e824f85b2ad6"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "2146.53370739841600848416452863486",
+    "totalIncentiveUSD": "3799.41293822279935025476608143486",
+    "totalTxCostUSD": "44.8933027537890217706015528"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "11/13/2023",
     "totalLiquidated": "1993.12299738790430672239117223217",
     "totalSentToBuilder": "0",
@@ -336,31 +503,47 @@
         "hash": "0x9faf6c396ea34e96108d6d51319265a58f36108b7f0faccdb19a800276c3f932",
         "liquidatedCollateral": "1993.12299738790430672239117223217",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "7.27536810607477355094762255217",
+        "incentiveUSD": "85.82826282260088050805696223217",
+        "txCostUSD": "78.55289471652610695710933968",
+        "collateralPriceUSD": "100.00377293449091273062",
+        "user": "0x338faa9462730f47ae6e46c41a075cc3e326cc89"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "7.27536810607477355094762255217",
+    "totalIncentiveUSD": "85.82826282260088050805696223217",
+    "totalTxCostUSD": "78.55289471652610695710933968"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "12/20/2023",
     "totalLiquidated": "5404.43204627094725196438557420807",
     "totalSentToBuilder": "0.002417328985208186",
-    "totalSentToBuilderUSD": "5.263104155924836252963372",
+    "totalSentToBuilderUSD": "5.32700370019501016793071962",
     "liquidations": [
       {
         "hash": "0xded97aff0de21fdeed11bed58592857a648344a52f8a5871a8c999b1208d88f9",
         "liquidatedCollateral": "5404.43204627094725196438557420807",
         "sentToBuilder": "0.002417328985208186",
-        "sentToBuilderUSD": "5.263104155924836252963372"
+        "sentToBuilderUSD": "5.32700370019501016793071962",
+        "profitUSD": "154.94895245485143212686219934807",
+        "incentiveUSD": "405.65530342396888068405269382807",
+        "txCostUSD": "245.37934726892243838925977486",
+        "collateralPriceUSD": "5.93281042e-11",
+        "user": "0xaecdde1672f3f121b3a6c43a2e0b5dfc28f6224c"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "154.94895245485143212686219934807",
+    "totalIncentiveUSD": "405.65530342396888068405269382807",
+    "totalTxCostUSD": "245.37934726892243838925977486"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "1/3/2024",
     "totalLiquidated": "11695.40654620882774626953457201475",
     "totalSentToBuilder": "0",
@@ -370,43 +553,116 @@
         "hash": "0xe3e68e3e898ca9434125c3108118d5a1b89590b88209d8f1bce6c5c54195bc49",
         "liquidatedCollateral": "11695.40654620882774626953457201475",
         "sentToBuilder": "0",
-        "sentToBuilderUSD": "0"
+        "sentToBuilderUSD": "0",
+        "profitUSD": "54.39014412337456067118159465475",
+        "incentiveUSD": "866.32641083028353676048797775475",
+        "txCostUSD": "811.9362667069089760893063831",
+        "collateralPriceUSD": "5.339881509e-11",
+        "user": "0xaecdde1672f3f121b3a6c43a2e0b5dfc28f6224c"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "54.39014412337456067118159465475",
+    "totalIncentiveUSD": "866.32641083028353676048797775475",
+    "totalTxCostUSD": "811.9362667069089760893063831"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "1/18/2024",
     "totalLiquidated": "22919.52180078372282125951864370594",
     "totalSentToBuilder": "0.346402667151331245",
-    "totalSentToBuilderUSD": "875.91145009768492043707119",
+    "totalSentToBuilderUSD": "878.6739411038997821399164542",
     "liquidations": [
       {
         "hash": "0x111d975044e68b0129657bf6495ac486b2c614d250abbb19b431d516997d1678",
         "liquidatedCollateral": "22919.52180078372282125951864370594",
         "sentToBuilder": "0.346402667151331245",
-        "sentToBuilderUSD": "875.91145009768492043707119"
+        "sentToBuilderUSD": "878.6739411038997821399164542",
+        "profitUSD": "1560.93571425301857245165641921009",
+        "incentiveUSD": "2576.41629671750888001096780801009",
+        "txCostUSD": "136.8066413605905254193949346",
+        "collateralPriceUSD": "5.438312644e-11",
+        "user": "0x279a7dbfae376427ffac52fcb0883147d42165ff"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "1560.93571425301857245165641921009",
+    "totalIncentiveUSD": "2576.41629671750888001096780801009",
+    "totalTxCostUSD": "136.8066413605905254193949346"
   },
   {
-    "name": "Morpho Aave",
+    "name": "Morpho Aave Ethereum",
     "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
     "date": "1/24/2024",
     "totalLiquidated": "5857.739045216058342911495501533573",
     "totalSentToBuilder": "0.1396545",
-    "totalSentToBuilderUSD": "313.070441299302",
+    "totalSentToBuilderUSD": "312.461143288749075",
     "liquidations": [
       {
         "hash": "0x3dcfe6454a7bd233336aa223530dc2c8239b3156797c5904c68a197b8003a99f",
         "liquidatedCollateral": "5857.739045216058342911495501533573",
         "sentToBuilder": "0.1396545",
-        "sentToBuilderUSD": "313.070441299302"
+        "sentToBuilderUSD": "312.461143288749075",
+        "profitUSD": "384.801006548963235921748271376291",
+        "incentiveUSD": "746.367739230679322622932971376291",
+        "txCostUSD": "49.1055893929670117011847",
+        "collateralPriceUSD": "4.392992064e-11",
+        "user": "0xaecdde1672f3f121b3a6c43a2e0b5dfc28f6224c"
       }
     ],
-    "chainId": 1
+    "totalProfitUSD": "384.801006548963235921748271376291",
+    "totalIncentiveUSD": "746.367739230679322622932971376291",
+    "totalTxCostUSD": "49.1055893929670117011847"
+  },
+  {
+    "name": "Morpho Aave Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
+    "date": "3/23/2024",
+    "totalLiquidated": "1999.549958399626978142442",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x734c5d58809acaf9a1b56c8e227cb1f05d16741cb061603b458c92cd98536635",
+        "liquidatedCollateral": "1999.549958399626978142442",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0",
+        "profitUSD": "-29.689394037220258937482765497752",
+        "incentiveUSD": "95.216664685696519798689872412248",
+        "txCostUSD": "124.90605872291677873617263791",
+        "collateralPriceUSD": "3.283542e-7",
+        "user": "0x67f5a11abcfbfdf446b5cb75d0d9baa5315246ad"
+      }
+    ],
+    "totalProfitUSD": "-29.689394037220258937482765497752",
+    "totalIncentiveUSD": "95.216664685696519798689872412248",
+    "totalTxCostUSD": "124.90605872291677873617263791"
+  },
+  {
+    "name": "Morpho Aave Ethereum",
+    "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
+    "chainId": 1,
+    "date": "3/24/2024",
+    "totalLiquidated": "999.1500789077085019075931061315652",
+    "totalSentToBuilder": "0",
+    "totalSentToBuilderUSD": "0",
+    "liquidations": [
+      {
+        "hash": "0x38854e9465f657cdfafb487c293bda779ca60ecc661ee63de44decbc9a063f93",
+        "liquidatedCollateral": "999.1500789077085019075931061315652",
+        "sentToBuilder": "0",
+        "sentToBuilderUSD": "0",
+        "profitUSD": "-9.0833420344417738694188669623949",
+        "incentiveUSD": "43.0256006606323113809512392176051",
+        "txCostUSD": "52.10894269507408525037010618",
+        "collateralPriceUSD": "99.77842918133884994618",
+        "user": "0xef49fe20949593ed1767aa27e6d61649d6574835"
+      }
+    ],
+    "totalProfitUSD": "-9.0833420344417738694188669623949",
+    "totalIncentiveUSD": "43.0256006606323113809512392176051",
+    "totalTxCostUSD": "52.10894269507408525037010618"
   }
 ]

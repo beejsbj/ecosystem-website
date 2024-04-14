@@ -1,4 +1,5 @@
 <script setup>
+import { reset } from "@formkit/core";
 // Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
 
@@ -9,12 +10,18 @@ const form = ref({}); // Reference to the form element
 // Function to add the user's input to the chart
 function addToChart(totalLiquidated, incentiveRate) {
   // Create a new protocol object and push it to the protocols array in the OEV store
+
+  const totalIncentiveUSD = totalLiquidated * incentiveRate;
+  const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
+  const totalProfitUSD = totalIncentiveUSD * 0.25;
+
   const userProtocol = {
     id: `userAdded`,
     chainId: 1,
     totalLiquidated,
-    withOEV: totalLiquidated - totalLiquidated * incentiveRate,
-    totalSentToBuilderUSD: totalLiquidated * incentiveRate,
+    totalSentToBuilderUSD,
+    totalProfitUSD,
+    totalIncentiveUSD,
     name: `You`,
     trueHide: true,
   };
@@ -33,7 +40,6 @@ function buttonHandle(event) {
   const incentive = event.incentive;
 
   oev.userTvl = tvl;
-
   oev.userIncentive = incentive;
 
   const totalLiquidated = tvl * liquidationRate;
@@ -41,7 +47,8 @@ function buttonHandle(event) {
 
   addToChart(totalLiquidated, incentiveRate); // Add the user's input to the chart
 
-  form.value = {}; // Reset the form
+  reset("oev-form"); // Reset the form
+
   formSubmitted.value = true; // Show the output section
 }
 </script>
@@ -49,6 +56,7 @@ function buttonHandle(event) {
 <template>
   <SectionColumn>
     <FormKit
+      id="oev-form"
       type="form"
       @submit="buttonHandle"
       submit-label="Visualize your dApp"
@@ -73,8 +81,9 @@ function buttonHandle(event) {
           id="incentive"
           v-model.number="form.incentive"
           :show-validation="formSubmitted"
-          suffix-icon="info"
           help="Enter the TVL percentage sent as a liquidation incentive."
+          validation="required|numeric|min:0.5|max:100"
+          validation-label="Incentive Rate"
         />
       </form-field>
       <form-field>
@@ -86,7 +95,8 @@ function buttonHandle(event) {
           }"
           name="tvl"
           placeholder="5000000"
-          mask="###{,###|repeat}"
+          mask="{###,|repeat}"
+          reverse
           allow-incomplete="true"
           show-mask="false"
           help="Optimal results are achieved with larger numerical values."
@@ -96,7 +106,7 @@ function buttonHandle(event) {
           min="0"
           validation-label="TVL"
           :show-validation="formSubmitted"
-          suffix-icon="info"
+          validation="required"
         />
       </form-field>
     </FormKit>

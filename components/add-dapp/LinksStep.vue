@@ -23,7 +23,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
         validation="url"
         validation-label="Website"
         placeholder="https://yourwebsite.com"
-        prefix-icon="url"
       />
     </form-field>
 
@@ -39,7 +38,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Twitter"
           placeholder="https://twitter.com/yourdapp"
           validation="url"
-          prefix-icon="url"
         />
       </form-field>
 
@@ -53,7 +51,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Discord"
           placeholder="https://discord.gg/yourdapp"
           validation="url"
-          prefix-icon="url"
         />
       </form-field>
 
@@ -67,7 +64,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Github"
           placeholder="github.com/yourdapp"
           validation="url"
-          prefix-icon="url"
         />
       </form-field>
 
@@ -80,7 +76,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           label="Reddit"
           placeholder="https://reddit.com/r/yourdapp"
           validation="url"
-          prefix-icon="url"
         />
       </form-field>
 
@@ -93,7 +88,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           v-model="dappForm.links.socials.telegram"
           label="Telegram"
           placeholder="https://t.me/yourdapp"
-          prefix-icon="url"
         />
       </form-field>
       <form-field>
@@ -105,7 +99,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           v-model="dappForm.links.socials.facebook"
           label="Facebook"
           placeholder="https://facebook.com/yourdapp"
-          prefix-icon="url"
         />
       </form-field>
 
@@ -118,7 +111,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           v-model="dappForm.links.socials.youtube"
           label="Youtube"
           placeholder="https://youtube.com/yourdapp"
-          prefix-icon="url"
         />
       </form-field>
 
@@ -131,7 +123,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
           v-model="dappForm.links.socials.blog"
           label="Blog"
           placeholder="https://yourdapp.com/blog"
-          prefix-icon="url"
         />
       </form-field>
     </div>
@@ -158,10 +149,6 @@ props.dappForm.links.socials = props.dappForm.links.socials ?? {};
     :deep(.formkit-outer) {
       flex-grow: 1;
     }
-  }
-
-  :deep(.formkit-outer) {
-    margin: unset;
   }
 
   :deep(.formkit-label) {

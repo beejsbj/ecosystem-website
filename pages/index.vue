@@ -12,7 +12,7 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: "API3 Ecosystem Home",
+  title: "API3 Ecosystem",
 });
 
 // onMounted(() => {
@@ -43,11 +43,6 @@ useSeoMeta({
 </template>
 
 <style lang="scss">
-body:has(main.index) {
-  @media (min-width: 1024px) {
-    //  overflow: hidden;
-  }
-}
 main.index {
   display: grid;
   gap: var(--space-3xs);

@@ -1,11 +1,28 @@
 import { OevTotal } from "~/server/models/OevTotal";
+import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   try {
+    const cacheKey = "oev-totals";
+    let cachedData: any = queryCache.get(cacheKey);
+
+    if (cachedData !== undefined) {
+      event.node.res.statusCode = 200;
+      console.log("cached");
+      return JSON.parse(cachedData);
+    }
+
     const protocols = await OevTotal.find({});
 
+    const filtered = protocols.filter(
+      (protocol) => protocol.totalProfitUSD !== 0
+    );
+
+    // cache result with new queries
+    queryCache.set(cacheKey, JSON.stringify(filtered), cacheInterval);
+
     event.node.req.statusCode = 200;
-    return protocols;
+    return filtered;
   } catch (err: any) {
     console.log("fetch oev data error  ", err);
     event.node.req.statusCode = 500;

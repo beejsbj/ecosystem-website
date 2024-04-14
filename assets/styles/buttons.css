@@ -143,36 +143,37 @@ button.disabled {
 
 /* loading buttons */
 
-[data-loading] [data-type="submit"] :is(.button) {
+[data-loading] :is(.button, [data-type="submit"] .formkit-input) {
   filter: brightness(1.1);
   pointer-events: none;
   position: relative;
+  display: inline-flex;
+  align-items: center;
 }
-[data-loading] [data-type="submit"] :is(.button)::before {
+
+[data-loading] :is(.button, [data-type="submit"] .formkit-input)::before {
   content: "";
-  position: absolute;
-  width: 20px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background: transparent;
-  border-left: var(--ink) 2px solid;
-  border-top: var(--ink) 2px solid;
+  margin-right: 0;
 
-  animation: rotate 1s linear infinite;
+  border: 0 solid transparent;
+  border-radius: 1.28571428em;
 
-  transform: unset;
+  height: 1.28571428em;
+  width: 0;
 
-  left: calc(50% - 10px);
-  bottom: -30px;
+  transition: width 0.25s, border 0.25s, margin-right 0.25s;
+}
 
-  transition: width 0.1s, height 0.2s, border 0.25s, bottom 0.25s, left 0.1s;
+[data-loading] :is(.button, [data-type="submit"] .formkit-input)::before {
+  animation: rotate 0.5s linear infinite;
+  margin-right: 0.75em;
+  width: 1.28571428em;
+  border: 0.1428571429em solid white;
+  border-right-color: transparent;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1turn);
   }
 }

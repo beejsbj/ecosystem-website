@@ -47,7 +47,6 @@ onMounted(() => {
         validation="required|length:0,30"
         validation-label="Name"
         id="dappName"
-        suffix-icon="help"
         v-model="dappForm.name"
       />
     </form-field>
@@ -69,7 +68,6 @@ onMounted(() => {
           fileSize: 'File size must be below 3MB',
         }"
         file-item-icon="fileImage"
-        suffix-icon="help"
         file-remove-icon="trash"
         help="A square image is recommended for best results. "
       />
@@ -90,7 +88,6 @@ onMounted(() => {
         validation-label="Slogan"
         id="shortDescription"
         v-model="dappForm.tagline"
-        suffix-icon="help"
       />
     </form-field>
 
@@ -107,7 +104,6 @@ onMounted(() => {
         validation="required"
         validation-label="Description"
         id="longDescription"
-        suffix-icon="help"
         v-model="dappForm.description"
       />
     </form-field>

@@ -79,7 +79,6 @@ const handleFilter = (event) => {
           type="search"
           placeholder="Filter"
           v-model="ecosystem.filterQuery.searchKey"
-          prefix-icon="search"
         />
       </search-bar>
     </header>
