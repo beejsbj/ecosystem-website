@@ -1,6 +1,7 @@
 <script setup>
 const ui = useInterfaceStore();
-function animate() {
+
+useGsap((gsap) => {
   let context = gsap.context(() => {
     const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
     //   const pageLoad = gsap.timeline();
@@ -27,10 +28,6 @@ function animate() {
   setTimeout(() => {
     context.kill();
   }, 2000);
-}
-
-useGsap((gsap) => {
-  animate();
 });
 </script>
 
