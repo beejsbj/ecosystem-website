@@ -1,115 +1,103 @@
 <script setup>
-import { gsap } from "gsap";
+useGsap((gsap) => {
+  const timeline = gsap.timeline({ repeat: 0, repeatDelay: 0.1 });
 
-var context;
+  timeline.set("body", {
+    overflowY: "hidden",
+  });
 
-onMounted(() => {
-  context = gsap.context(() => {
-    const timeline = gsap.timeline({ repeat: 0, repeatDelay: 0.1 });
+  timeline.set(".oev-loader :is(#O, #V) path", {
+    scale: 0.5,
+    y: 100,
+    opacity: 1,
+  });
 
-    timeline.set("body", {
-      overflowY: "hidden",
-    });
+  //   E
+  timeline.set(".oev-loader :is(#E) rect", {
+    y: -100,
+    scale: 0.5,
+    opacity: 1,
+  });
 
-    timeline.set(".oev-loader :is(#O, #V) path", {
-      scale: 0.5,
-      y: 100,
-      opacity: 1,
-    });
+  timeline.set(".oev-loader #tilted-E", {
+    rotate: 10,
+  });
 
-    //   E
-    timeline.set(".oev-loader :is(#E) rect", {
-      y: -100,
-      scale: 0.5,
-      opacity: 1,
-    });
+  timeline.to(".oev-loader :is(#O, #V) path", {
+    duration: 0.75,
+    y: 0,
+    scale: 1,
+    ease: "back.out(1.7)",
+    stagger: {
+      each: 0.3,
+      from: "end",
+    },
+  });
 
-    timeline.set(".oev-loader #tilted-E", {
-      rotate: 10,
-    });
-
-    timeline.to(".oev-loader :is(#O, #V) path", {
-      duration: 0.75,
+  timeline.to(
+    ".oev-loader :is(#E) rect",
+    {
+      duration: 1,
       y: 0,
       scale: 1,
-      ease: "back.out(1.7)",
+
+      ease: "elastic.out(1,0.6)",
       stagger: {
-        each: 0.3,
+        each: 0.2,
         from: "end",
       },
-    });
+    },
+    "-=0.7"
+  );
 
-    timeline.to(
-      ".oev-loader :is(#E) rect",
-      {
-        duration: 1,
-        y: 0,
-        scale: 1,
+  timeline.to(
+    ".oev-loader :is(#E) rect",
+    {
+      duration: 0.2,
+      rotate: -20,
+      ease: "power2.inOut",
+    },
+    "-=0.6"
+  );
 
-        ease: "elastic.out(1,0.6)",
-        stagger: {
-          each: 0.2,
-          from: "end",
-        },
-      },
-      "-=0.7"
-    );
+  timeline.to(
+    ".oev-loader :is(#E) rect",
+    {
+      duration: 0.2,
+      rotate: 0,
+      ease: "back.out(4)",
+    },
+    "-=0.35"
+  );
 
-    timeline.to(
-      ".oev-loader :is(#E) rect",
-      {
-        duration: 0.2,
-        rotate: -20,
-        ease: "power2.inOut",
-      },
-      "-=0.6"
-    );
+  timeline.to(
+    ".oev-loader p",
+    {
+      duration: 0.5,
+      opacity: 1,
+      ease: "power4.inOut",
+    },
+    "-=0.6"
+  );
 
-    timeline.to(
-      ".oev-loader :is(#E) rect",
-      {
-        duration: 0.2,
-        rotate: 0,
-        ease: "back.out(4)",
-      },
-      "-=0.35"
-    );
+  //
+  timeline.to(
+    ".oev-loader",
+    {
+      duration: 0.5,
+      opacity: 0,
+      ease: "power4.inOut",
+    },
+    "-=0.3"
+  );
 
-    timeline.to(
-      ".oev-loader p",
-      {
-        duration: 0.5,
-        opacity: 1,
-        ease: "power4.inOut",
-      },
-      "-=0.6"
-    );
-
-    //
-    timeline.to(
-      ".oev-loader",
-      {
-        duration: 0.5,
-        opacity: 0,
-        ease: "power4.inOut",
-      },
-      "-=0.3"
-    );
-
-    timeline.set(".oev-loader", {
-      display: "none",
-    });
-
-    timeline.set("body", {
-      overflowY: "auto",
-    });
-
-    return timeline;
+  timeline.set(".oev-loader", {
+    display: "none",
   });
-});
 
-onUnmounted(() => {
-  context.kill();
+  timeline.set("body", {
+    overflowY: "auto",
+  });
 });
 </script>
 

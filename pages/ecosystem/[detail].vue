@@ -1,5 +1,4 @@
 <script setup>
-import { gsap } from "gsap";
 import { useInterfaceStore } from "~/stores/interface";
 
 const route = useRoute();
@@ -36,7 +35,7 @@ useSeoMeta({
   twitterCard: "summary_large_image",
 });
 
-onMounted(() => {
+useGsap((gsap) => {
   const pageLoad = gsap.timeline();
 
   pageLoad.to(".detail-page", { opacity: 1, duration: 0 }).fromTo(

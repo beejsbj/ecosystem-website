@@ -5,7 +5,7 @@ definePageMeta({
   alias: ["/testing"],
 });
 
-const ecosystem = useEcosystemStore();
+const box = ref(true);
 </script>
 
 <template>
@@ -23,6 +23,12 @@ const ecosystem = useEcosystemStore();
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-m);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: green;
 }
 </style>
 

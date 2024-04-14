@@ -1,19 +1,19 @@
 <script setup>
-import { gsap } from "gsap";
-
-gsap.fromTo(
-  "picture.loading-triangle path",
-  {
-    strokeDashoffset: "888",
-    strokeDasharray: "888",
-  },
-  {
-    duration: 3,
-    strokeDashoffset: 0,
-    ease: "power2.in",
-    stagger: 0.05,
-  }
-);
+useGsap((gsap) => {
+  gsap.fromTo(
+    "picture.loading-triangle path",
+    {
+      strokeDashoffset: "888",
+      strokeDasharray: "888",
+    },
+    {
+      duration: 3,
+      strokeDashoffset: 0,
+      ease: "power2.in",
+      stagger: 0.05,
+    }
+  );
+});
 </script>
 
 <template>
