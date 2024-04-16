@@ -166,11 +166,12 @@ article.main {
   section {
     align-self: start;
     display: grid;
-    gap: calc(var(--space-s) * 1.2);
+    gap: var(--space-s);
 
     p {
       line-height: 1.8;
       color: var(--gray-light);
+      margin-top: 0;
     }
   }
 
