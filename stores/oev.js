@@ -23,6 +23,20 @@ export const useOEVStore = defineStore("oev", function () {
     });
 
     protocols.value = parsed;
+
+    //  add user protocol
+    const userProtocol = {
+      id: `userAdded`,
+      name: `Your dApp`,
+      chainId: 1,
+      totalLiquidated: 0,
+      totalSentToBuilderUSD: 0,
+      totalProfitUSD: 0,
+      totalIncentiveUSD: 0,
+      trueHide: true,
+      hide: true,
+    };
+    addProtocol(userProtocol);
   }
 
   //computed
@@ -77,6 +91,12 @@ export const useOEVStore = defineStore("oev", function () {
     checkHideCount(protocol);
   }
 
+  function hideAll() {
+    protocols.value.forEach((protocol) => {
+      protocol.hide = true;
+    });
+  }
+
   function checkHideCount(protocol) {
     const count = protocols.value.filter((protocol) => !protocol.hide).length;
 
@@ -121,6 +141,7 @@ export const useOEVStore = defineStore("oev", function () {
     getProtocolById,
     getTotals,
     toggleHide,
+    hideAll,
     addProtocol,
   };
 });
