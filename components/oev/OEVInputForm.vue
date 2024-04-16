@@ -3,54 +3,74 @@ import { reset } from "@formkit/core";
 // Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
 
+//get the index of the userAdded protocol
+const userDappIndex = oev.protocols.findIndex(
+  (protocol) => protocol.id === "userAdded"
+);
+
+const liquidationRate = 0.05; // 5% liquidation rate
+
 // Define reactive variables
-const formSubmitted = ref(false); // Controls the visibility of the output section
 const form = ref({}); // Reference to the form element
-
-// Function to add the user's input to the chart
-function addToChart(totalLiquidated, incentiveRate) {
-  // Create a new protocol object and push it to the protocols array in the OEV store
-
-  const totalIncentiveUSD = totalLiquidated * incentiveRate;
-  const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
-  const totalProfitUSD = totalIncentiveUSD * 0.25;
-
-  const userProtocol = {
-    id: `userAdded`,
-    chainId: 1,
-    totalLiquidated,
-    totalSentToBuilderUSD,
-    totalProfitUSD,
-    totalIncentiveUSD,
-    name: `You`,
-    trueHide: true,
-  };
-  oev.addProtocol(userProtocol);
-
-  // Scroll to the next section
-  const section = document.querySelector(".chart-grid");
-  section.scrollIntoView({ behavior: "smooth" });
-}
 
 // Function to handle the button click event
 function buttonHandle(event) {
-  const liquidationRate = 0.05; // 5% liquidation rate
-
-  const tvl = event.tvl.split(",").join("");
+  const tvl = event.tvl.split(",").join("").replace("$", "");
   const incentive = event.incentive;
 
   oev.userTvl = tvl;
   oev.userIncentive = incentive;
 
-  const totalLiquidated = tvl * liquidationRate;
+  // Calculate the total liquidated value, total incentive, total sent to builder, and total profit
   const incentiveRate = incentive / 100;
+  const totalLiquidated = tvl * liquidationRate;
+  const totalIncentiveUSD = totalLiquidated * incentiveRate;
+  const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
+  const totalProfitUSD = totalIncentiveUSD * 0.25;
 
-  addToChart(totalLiquidated, incentiveRate); // Add the user's input to the chart
+  // Update the userAdded protocol with the new values
+  oev.protocols[userDappIndex].totalLiquidated = totalLiquidated;
+  oev.protocols[userDappIndex].totalIncentiveUSD = totalIncentiveUSD;
+  oev.protocols[userDappIndex].totalSentToBuilderUSD = totalSentToBuilderUSD;
+  oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
 
-  reset("oev-form"); // Reset the form
+  //
+  oev.hideAll(); // Hide all protocols
+  oev.protocols[userDappIndex].hide = false; // Unhide the userAdded protocol
 
-  formSubmitted.value = true; // Show the output section
+  // Scroll to the next section
+  const section = document.querySelector(".chart-grid");
+  section.scrollIntoView({ behavior: "smooth" });
+
+  //   reset("oev-form"); // Reset the form
 }
+
+//watch
+
+watch(
+  form,
+  (newForm) => {
+    const tvl = newForm.tvl.split(",").join("").replace("$", "");
+    const incentive = newForm.incentive;
+
+    oev.userTvl = tvl;
+    oev.userIncentive = incentive;
+
+    // Calculate the total liquidated value, total incentive, total sent to builder, and total profit
+    const incentiveRate = incentive / 100;
+    const totalLiquidated = tvl * liquidationRate;
+    const totalIncentiveUSD = totalLiquidated * incentiveRate;
+    const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
+    const totalProfitUSD = totalIncentiveUSD * 0.25;
+
+    // Update the userAdded protocol with the new values
+    oev.protocols[userDappIndex].totalLiquidated = totalLiquidated;
+    oev.protocols[userDappIndex].totalIncentiveUSD = totalIncentiveUSD;
+    oev.protocols[userDappIndex].totalSentToBuilderUSD = totalSentToBuilderUSD;
+    oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
+  },
+  { deep: true }
+);
 </script>
 
 <template>
@@ -60,10 +80,6 @@ function buttonHandle(event) {
       type="form"
       @submit="buttonHandle"
       submit-label="Visualize your dApp"
-      :submit-attrs="{
-        inputClass: '$reset button' + (formSubmitted ? ' disabled' : ''),
-      }"
-      :disabled="formSubmitted"
     >
       <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
       <form-field>
@@ -78,9 +94,9 @@ function buttonHandle(event) {
           max="100"
           step="0.5"
           placeholder="5%"
+          prefix-icon="percent"
           id="incentive"
           v-model.number="form.incentive"
-          :show-validation="formSubmitted"
           help="Enter the TVL percentage sent as a liquidation incentive."
           validation="required|numeric|min:0.5|max:100"
           validation-label="Incentive Rate"
@@ -94,8 +110,9 @@ function buttonHandle(event) {
             label: '$reset calm-voice',
           }"
           name="tvl"
-          placeholder="5000000"
-          mask="{###,|repeat}"
+          placeholder="$5,000,000"
+          prefix-icon="dollar"
+          mask="${###,|repeat}###"
           reverse
           allow-incomplete="true"
           show-mask="false"
@@ -105,7 +122,6 @@ function buttonHandle(event) {
           step="100000"
           min="0"
           validation-label="TVL"
-          :show-validation="formSubmitted"
           validation="required"
         />
       </form-field>
