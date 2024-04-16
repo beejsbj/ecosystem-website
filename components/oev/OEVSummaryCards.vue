@@ -23,7 +23,7 @@ const cards = [
   //     value: `$${formatNumber(totalSentToBuilderUSD)}*`,
   //   },
   {
-    title: "AMOUNT LOST TO OEV",
+    title: "OEV Lost",
     value: `$${formatNumber(totalIncentiveUSD)}*`,
   },
   //   {
