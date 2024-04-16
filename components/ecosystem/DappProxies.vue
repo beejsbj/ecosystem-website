@@ -151,7 +151,7 @@ section.proxy-table {
   }
   .table-row {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
     gap: var(--space-s);
     padding: var(--space-s);
     border-bottom: var(--border-dark);
@@ -173,6 +173,10 @@ section.proxy-table {
 
     .chain picture.chain-icon {
       flex-grow: 1;
+    }
+
+    :deep(.feed-icon) {
+      justify-content: unset;
     }
 
     .feed-link {
