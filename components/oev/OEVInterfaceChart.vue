@@ -168,7 +168,7 @@ const gridStarts = computed(() => {
                   v-tooltip.top-end="`$${protocol.totalLiquidated}`"
                 >
                   <span class="number solid-voice">
-                    {{ formatNumber(protocol.totalLiquidated) }}
+                    ${{ formatNumber(protocol.totalLiquidated) }}
                   </span>
                 </span>
                 <span
@@ -177,7 +177,7 @@ const gridStarts = computed(() => {
                   v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
                 >
                   <span class="number solid-voice">
-                    {{ formatNumber(protocol.totalSentToBuilderUSD) }}
+                    ${{ formatNumber(protocol.totalSentToBuilderUSD) }}
                   </span>
                 </span>
                 <span
@@ -186,7 +186,7 @@ const gridStarts = computed(() => {
                   v-tooltip.top-end="`$${protocol.totalProfitUSD}`"
                 >
                   <span class="number solid-voice">
-                    {{ formatNumber(protocol.totalProfitUSD) }}
+                    ${{ formatNumber(protocol.totalProfitUSD) }}
                   </span>
                 </span>
                 <span
@@ -195,7 +195,7 @@ const gridStarts = computed(() => {
                   v-tooltip.top-end="`$${protocol.totalIncentiveUSD}`"
                 >
                   <span class="number solid-voice">
-                    {{ formatNumber(protocol.totalIncentiveUSD) }}
+                    ${{ formatNumber(protocol.totalIncentiveUSD) }}
                   </span>
                 </span>
               </div>
@@ -272,7 +272,8 @@ text-content {
 }
 
 .legend {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-2xs);
   padding: var(--space-m);
   grid-column: 2/-1;

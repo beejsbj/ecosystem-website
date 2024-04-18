@@ -16,15 +16,15 @@ const {
 const cards = [
   {
     title: "TOTAL LIQUIDATED",
-    value: `$${formatNumber(totalLiquidated)}*`,
+    value: `$${formatNumber(totalLiquidated)}`,
   },
   //   {
   //     title: "TOTAL SENT TO BUILDER",
   //     value: `$${formatNumber(totalSentToBuilderUSD)}*`,
   //   },
   {
-    title: "AMOUNT LOST TO OEV",
-    value: `$${formatNumber(totalIncentiveUSD)}*`,
+    title: "OEV Lost",
+    value: `$${formatNumber(totalIncentiveUSD)}`,
   },
   //   {
   //     title: "TOTAL Searcher PROFIT",
