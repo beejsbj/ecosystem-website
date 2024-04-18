@@ -18,6 +18,11 @@ const props = defineProps(["dapp", "proxy"]);
         <p class="solid-voice">Chainlink</p>
       </div>
     </div>
+
+    <text-content>
+      <h2 class="teaser-voice">OEV Value</h2>
+      <p class="value attention-voice">$176.2</p>
+    </text-content>
   </div>
 </template>
 
