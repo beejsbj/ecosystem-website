@@ -35,7 +35,7 @@ function handleReset() {
       v-if="showReset"
       key="reset-button"
     >
-      Reset To Feed List
+      Reset To dApp List
     </button>
 
     <NuxtLink
