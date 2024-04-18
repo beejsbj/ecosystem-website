@@ -42,6 +42,14 @@ const ui = useInterfaceStore();
 
 const options = computed(() => {
   const defaultOptions = {
+    elements: {
+      point: {
+        pointStyle: "rectRot",
+        backgroundColor: "black",
+        radius: 4,
+      },
+    },
+
     plugins: {
       title: {
         display: true,
