@@ -32,6 +32,49 @@ const mockData = [
     transactionId:
       "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabbd",
   },
+  {
+    value: 2982.14,
+    timestamp: "2024-04-17 10:45:12",
+    transactionId:
+      "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabbe",
+  },
+  {
+    value: 2962.4,
+    timestamp: "2024-04-17 10:15:34",
+    transactionId:
+      "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabbf",
+  },
+
+  {
+    value: 2965.7,
+    timestamp: "2024-04-17 09:45:34",
+    transactionId:
+      "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabc0",
+  },
+  {
+    value: 2970.3,
+    timestamp: "2024-04-17 09:15:34",
+    transactionId:
+      "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabc1",
+  },
+  {
+    value: 2992.1,
+    timestamp: "2024-04-17 08:45:34",
+    transactionId:
+      "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabc2",
+  },
+  {
+    value: 3190.3,
+    timestamp: "2024-04-17 08:15:34",
+    transactionId:
+      "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabc3",
+  },
+  {
+    value: 2899.3,
+    timestamp: "2024-04-17 07:45:34",
+    transactionId:
+      "0x9b5eca6dc54dc48b727ad85c85dac876df7e9c40926ba6399b3b2049200fabc4",
+  },
 ];
 
 function getTime(timestamp) {
@@ -47,7 +90,7 @@ function getDate(timestamp) {
   return date.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
-    year: "numeric",
+    //  year: "numeric",
   });
 }
 
@@ -87,8 +130,8 @@ function getScannerLink(transactionId) {
         :key="transaction.transactionId"
       >
         <div class="cell">
-          <p class="time whisper-voice">{{ getTime(transaction.timestamp) }}</p>
-          <p class="date solid-voice">{{ getDate(transaction.timestamp) }}</p>
+          <p class="date whisper-voice">{{ getDate(transaction.timestamp) }}</p>
+          <p class="time solid-voice">{{ getTime(transaction.timestamp) }}</p>
         </div>
 
         <div class="cell">
