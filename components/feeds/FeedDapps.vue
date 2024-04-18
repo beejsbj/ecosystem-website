@@ -45,6 +45,7 @@ const filteredDapps = computed(() => {
       <div class="display-card-section" v-if="!ui.loadingDone">
         <SkeletonCard />
         <SkeletonCard />
+        <SkeletonCard />
       </div>
       <div class="display-card-section" v-else v-auto-animate>
         <FeedDappCard
@@ -54,11 +55,7 @@ const filteredDapps = computed(() => {
           class="display-card"
         />
 
-        <FeedChainValueCard
-          :dapp="displayDapp"
-          :proxy="proxy"
-          key="chain-value-card"
-        />
+        <FeedDisplayProxyDetails :dapp="displayDapp" :proxy="proxy" />
       </div>
     </template>
 
