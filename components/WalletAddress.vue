@@ -27,7 +27,7 @@ export default {
     getShortWallet(address) {
       if (address.length <= 8) return address; // If the address is already short, return it as is
       const firstPart = address.substring(0, 6);
-      const lastPart = address.substring(address.length - 2);
+      const lastPart = address.substring(address.length - 3);
       return `${firstPart}...${lastPart}`;
     },
   },
