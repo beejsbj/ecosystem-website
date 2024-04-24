@@ -377,11 +377,12 @@ li {
     }
   }
 
-  & > p {
+  & > .protocol-name {
     text-align: center;
     white-space: nowrap;
     font-size: var(--step--2);
     scale: 1.8;
+    transition: 0.2s ease-in-out;
 
     @media (max-width: 1170px) {
       scale: 1.3;
@@ -389,6 +390,11 @@ li {
 
     @media (max-width: 850px) {
       scale: unset;
+
+      &:hover {
+        scale: 1.3;
+        translate: 0 12px;
+      }
     }
   }
 
@@ -459,6 +465,7 @@ li {
 
         @media (max-width: 768px) {
           font-size: var(--step--1);
+          rotate: 25deg;
         }
       }
       &.liquidated {
