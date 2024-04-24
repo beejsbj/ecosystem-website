@@ -1390,26 +1390,24 @@ picture.curves-decoration-3 {
     pointer-events: none;
     position: absolute;
     top: 0px;
-    left: 60vw;
-    width: 800px;
-    aspect-ratio: 1;
+    left: 0;
+    width: 100%;
+    max-height: 500px;
+    aspect-ratio: 1 / 1;
     z-index: 1;
-    background: linear-gradient(
-      135deg,
-      hsla(0, 0%, 0%, 0.45) 20%,
-      transparent 50% 100%
-    );
+    background: linear-gradient(135deg, hsla(0, 0%, 0%, 0.55) 35%, transparent);
 
     @media (min-width: 768px) {
       top: 0px;
       left: 500px;
-    }
+      width: 25%;
+      max-height: unset;
+      // border: var(--border);
 
-    @media (min-width: 1324px) {
       background: linear-gradient(
-        135deg,
-        hsla(0, 0%, 0%, 0.65) 20%,
-        transparent 50% 100%
+        315deg,
+        hsla(0, 0%, 0%, 0.4) 65%,
+        transparent
       );
     }
   }
