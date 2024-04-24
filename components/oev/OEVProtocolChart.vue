@@ -8,12 +8,6 @@ const isLogarithmic = ref(false);
 
 const periods = ["daily", "weekly", "monthly", "cumulative"];
 
-const enableZoom = computed(() => {
-  return (
-    selectedPeriod.value === "cumulative" || selectedPeriod.value === "daily"
-  );
-});
-
 //
 const metadata = {
   title: "Historic Liquidation Data",
@@ -38,7 +32,7 @@ const options = computed(() => {
       // },
 
       zoom: {
-        enabled: enableZoom.value,
+        enabled: true,
         //   pan: {
         //     enabled: true,
         //     mode: 'x',
@@ -46,7 +40,7 @@ const options = computed(() => {
         //   },
         zoom: {
           drag: {
-            enabled: enableZoom.value,
+            enabled: true,
           },
           mode: "x",
         },

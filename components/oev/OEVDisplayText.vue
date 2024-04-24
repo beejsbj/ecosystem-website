@@ -20,15 +20,15 @@ const userSaving = computed(() =>
         <span v-if="!oev.userTvl">
           and a <span class="gradient-text-color">5%</span> incentive rate
         </span>
-        you would capture
+        you would recapture
         <span class="gradient-text-color">
           ${{ oev.userTvl ? formatNumber(userSaving) : "1.9M" }}
         </span>
-        per year through the OEV Network**
+        per year through the OEV Network
       </p>
       <p class="whisper-voice">
-        **This is an estimate based on the current Liquidation rate of 5% of
-        TVL.
+        **This is an estimate based on the current Liquidation rate of 5% of TVL
+        annually.
       </p>
     </div>
   </SectionColumn>
