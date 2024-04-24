@@ -16,9 +16,16 @@ export const useOEVStore = defineStore("oev", function () {
     if (!raw) return;
 
     const parsed = raw?.map((protocol, i) => {
+      let hide = i >= protocolCount.value;
+      const isAave = protocol.name.includes("Aave");
+
+      if (isAave) {
+        hide = true;
+      }
+
       return {
         ...protocol,
-        hide: i >= protocolCount.value,
+        hide,
       };
     });
 
