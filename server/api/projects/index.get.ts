@@ -1,5 +1,6 @@
 import { isNumber } from "../../services/helper";
 import { Project } from "~/server/models/Project";
+import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   try {
@@ -95,14 +96,28 @@ export default defineEventHandler(async (event) => {
 
     const finalFilter = { $and: [searchFilters, selectionFilters] };
 
-    const totalProjects = await Project.countDocuments(finalFilter);
+    // check cache with the final filter
+    const cacheKey = JSON.stringify(finalFilter);
 
-    let projects = await Project.find(finalFilter).sort({ year: -1 });
+    const cachedProjects: string | undefined = queryCache.get(cacheKey);
+
+    // console.log("cached ", cachedProjects);
+    let projects;
+    if (cachedProjects === undefined) {
+      projects = await Project.find(finalFilter).sort({ year: -1 });
+
+      if (projects.length > 0) {
+        queryCache.set(cacheKey, JSON.stringify(projects), cacheInterval);
+      }
+    } else {
+      projects = JSON.parse(cachedProjects);
+    }
 
     const filteredList = projects?.slice(skips, limit);
 
-    return { projects: filteredList, total: totalProjects };
+    return { projects: filteredList, total: projects.length };
   } catch (err: any) {
+    console.log("get projects  error ", err);
     event.node.res.statusCode = 500;
     return {
       code: "ERROR",

@@ -1,4 +1,5 @@
 import { Project } from "~/server/models/Project";
+import { cacheInterval, queryCache } from "~/server/services/cache";
 
 export default defineEventHandler(async (event) => {
   const projectSlug = event.context?.params?.slug;
@@ -11,10 +12,19 @@ export default defineEventHandler(async (event) => {
         message: "Invalid project name slug",
       };
     }
-    const project = await Project.findOne({
-      slug: projectSlug,
-      status: "active",
-    });
+
+    const cacheKey = `project-${projectSlug}`;
+    const cachedProject: string | undefined = queryCache.get(cacheKey);
+    let project;
+    if (cachedProject === undefined) {
+      project = await Project.findOne({
+        slug: projectSlug,
+        status: "active",
+      });
+      queryCache.set(cacheKey, JSON.stringify(project), cacheInterval);
+    } else {
+      project = JSON.parse(cachedProject);
+    }
 
     if (!project) {
       event.node.res.statusCode = 404;
@@ -26,7 +36,7 @@ export default defineEventHandler(async (event) => {
 
     return project;
   } catch (err) {
-    console.dir(err);
+    console.dir("get project error ", err);
     event.node.res.statusCode = 500;
     return {
       code: "ERROR",
