@@ -252,6 +252,14 @@ h2 {
   }
 }
 
+.protocol-list-wrapper {
+  order: 2;
+
+  @media (min-width: 768px) {
+    order: unset;
+  }
+}
+
 text-content {
   grid-column: 1 / span 3;
   display: grid;
