@@ -182,7 +182,7 @@ const inputProtocols = computed(() => {
           :options="inputProtocols"
         >
           <template #option="{ option }">
-            <div class="protocol-option">
+            <div class="icon-option">
               <ChainIcon v-if="option.chainId" :id="option.chainId" />
               <DynamicIcon v-else icon="dapp" />
               <span class="whisper-voice">
@@ -272,14 +272,5 @@ div.actions {
       text-transform: capitalize;
     }
   }
-}
-
-.protocol-option {
-  display: grid;
-  align-items: center;
-
-  grid-template-columns: 24px 1fr;
-  gap: var(--space-3xs);
-  padding: var(--space-2xs);
 }
 </style>

@@ -53,7 +53,7 @@ onMounted(() => {
         popover
       >
         <template #option="{ option }">
-          <div class="chain-option">
+          <div class="icon-option">
             <ChainIcon :id="option.value" />
             <span>
               {{ option.label }}
@@ -102,7 +102,7 @@ onMounted(() => {
         popover
       >
         <template #option="{ option }">
-          <div class="chain-option">
+          <div class="icon-option">
             <DynamicIcon :icon="option.label" />
             <span>
               {{ option.label }}
