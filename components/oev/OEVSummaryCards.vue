@@ -15,7 +15,7 @@ const {
 
 const cards = [
   {
-    title: "TOTAL LIQUIDATED",
+    title: "Total Liquidated",
     value: `$${formatNumber(totalLiquidated)}`,
   },
   //   {
@@ -44,7 +44,7 @@ const gridCount = computed(() => {
   <ul class="summary-cards">
     <!-- Display the OEV Saving Rate -->
     <li class="summary-card" v-for="card in cards">
-      <h3 class="teaser-voice">{{ card.title }}</h3>
+      <h3 class="calm-voice">{{ card.title }}</h3>
       <p class="attention-voice">
         {{ card.value }}
       </p>
