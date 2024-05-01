@@ -279,13 +279,15 @@ a.router-link-exact-active:not(.site-logo, .button)::after {
 }
 /* This part is for the scrollbar track / */
 *::-webkit-scrollbar {
-  width: var(--line-width);
-  height: calc(var(--line-width) * 4);
+  width: calc(var(--line-width) * 2);
+  height: calc(var(--line-width) * 2);
 }
 
 /* / This part is for the track (the part that the thumb slides across) / */
 ::-webkit-scrollbar-track {
   box-shadow: var(--shadow);
+
+  background: var(--gray-dark);
   border-radius: var(--corners);
 }
 
