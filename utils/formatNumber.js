@@ -1,4 +1,5 @@
-export default function formatNumber(value) {
+export default function formatNumber(valueInc) {
+  const value = Number(valueInc);
   const thresholds = [
     { limit: 1e9, suffix: "B" },
     { limit: 1e6, suffix: "M" },
