@@ -14,7 +14,7 @@ function buttonHandle(protocol) {
       class="whisper-voice"
       :class="{ hideOpacity: oev.isAllHidden && false }"
     >
-      Select Protocols to Compare
+      Select upto 3 Protocols to Compare
     </h3>
 
     <ul class="protocol-list">
@@ -58,14 +58,10 @@ function buttonHandle(protocol) {
   max-height: 300px;
 
   @media (min-width: 768px) {
-    direction: rtl;
-
     max-height: 600px;
   }
 
   .box-card {
-    direction: ltr;
-
     :deep(picture) {
       width: 50px;
     }
