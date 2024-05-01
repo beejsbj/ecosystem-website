@@ -80,6 +80,10 @@ watch(
       type="form"
       @submit="buttonHandle"
       submit-label="Visualize your dApp"
+      :submit-attrs="{
+        inputClass: '$reset button',
+      }"
+      :config="{ validationVisibility: 'submit' }"
     >
       <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
       <form-field>
@@ -90,15 +94,11 @@ watch(
             label: '$reset calm-voice',
           }"
           name="incentive"
-          min="0.5"
-          max="100"
-          step="0.5"
           placeholder="5%"
-          prefix-icon="percent"
-          id="incentive"
+          id="incentive-percent"
           v-model.number="form.incentive"
           help="Enter the TVL percentage sent as a liquidation incentive."
-          validation="required|numeric|min:0.5|max:100"
+          validation="required|numeric|between:1,100"
           validation-label="Incentive Rate"
         />
       </form-field>
@@ -111,13 +111,12 @@ watch(
           }"
           name="tvl"
           placeholder="$5,000,000"
-          prefix-icon="dollar"
           mask="${###,|repeat}###"
           reverse
           allow-incomplete="true"
           show-mask="false"
           help="Optimal results are achieved with larger numerical values."
-          id="tvl"
+          id="tvl-input"
           v-model="form.tvl"
           step="100000"
           min="0"
