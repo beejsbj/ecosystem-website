@@ -274,9 +274,10 @@ text-content {
 .legend {
   display: flex;
   flex-wrap: wrap;
+  white-space: nowrap;
   gap: var(--space-2xs);
   padding: var(--space-m);
-  grid-column: 2/-1;
+  grid-column: 1/-1;
   justify-content: end;
 
   & > button {
