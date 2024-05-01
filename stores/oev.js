@@ -87,6 +87,12 @@ export const useOEVStore = defineStore("oev", function () {
   }
 
   function toggleHide(protocol) {
+    //if this is the last visible protocol, don't hide it
+
+    if (!protocol.hide && protocols.value.filter((p) => !p.hide).length === 1) {
+      return;
+    }
+
     protocol.hide = !protocol.hide;
     checkHideCount(protocol);
   }
