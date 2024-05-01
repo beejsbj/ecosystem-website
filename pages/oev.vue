@@ -34,17 +34,16 @@ setTimeout(() => {
   <ContentsWrapper>
     <!-- Page Title component with heading and notice voice -->
     <PageTitle heading="OEV Watchtower">
-      <p class="calm-voice">
-        OEV Watchtower helps you understand how much you can capture with the
-        OEV Network.
-      </p>
+      <h2 class="notice-voice">
+        Understand how much you can capture with OEV Network*
+      </h2>
 
       <!-- OEV Summary Cards component -->
       <OEVSummaryCards class="summary-cards" />
 
       <p class="whisper-voice disclamer">
         <!-- data starts frpm 2021 -->
-        *All data is based on records from 2021 onwards.
+        *All data is based on records from 2021 onwards
       </p>
     </PageTitle>
 
@@ -63,10 +62,10 @@ setTimeout(() => {
     <!--  displaying a message about data verification -->
     <SectionColumn>
       <text-content>
-        <p class="firm-voice">
+        <p class="notice-voice">
           You can verify this data by
           <NuxtLink
-            class="text green"
+            class="text green external-link"
             to="https://github.com/AamirAlam/aave-extract-mev-funds"
           >
             heading to our GitHub.
@@ -88,8 +87,9 @@ setTimeout(() => {
   text-align: center;
 }
 
-.page-title p {
+.page-title h2 {
   text-align: center;
+  margin-top: var(--space-s);
 }
 
 text-content {
@@ -110,5 +110,6 @@ text-content {
 
 .disclamer {
   margin-top: var(--space-2xs);
+  text-align: center;
 }
 </style>
