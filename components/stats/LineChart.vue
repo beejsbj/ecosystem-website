@@ -177,19 +177,19 @@ const handleZoomReset = () => {
 
 <template>
   <div class="chart-container">
+    <button
+      v-if="isZoomEnabled"
+      @click="handleZoomReset"
+      class="whisper-voice text zoom-reset-button"
+    >
+      Reset Zoom
+    </button>
     <Line
       :data="props.data"
       :options="options"
       :metadata="props.metadata"
       ref="chart"
     />
-    <button
-      v-if="isZoomEnabled"
-      @click="handleZoomReset"
-      class="whisper-voice button outline"
-    >
-      Reset Zoom
-    </button>
   </div>
 </template>
 
@@ -198,5 +198,11 @@ const handleZoomReset = () => {
   position: relative;
   height: 100%;
   width: 100%;
+
+  display: grid;
+}
+
+.zoom-reset-button {
+  justify-self: end;
 }
 </style>
