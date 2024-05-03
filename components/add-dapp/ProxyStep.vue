@@ -13,12 +13,6 @@ async function handleUpdateProxy() {
   message.value = "";
   loading.value = false;
 
-  console.log("props.dappForm?.proxyAddress", props.dappForm?.proxyAddress);
-  console.log("props.dappForm?.proxyChain", props.dappForm?.proxyChain);
-  console.log("props.dappForm?.feedName", props.dappForm?.feedName);
-  console.log("props.dappForm?.proxies", props.dappForm?.proxies);
-  console.log("props.dappForm", props.dappForm);
-
   if (!props.dappForm?.proxyAddress) {
     message.value = "Please add valid proxy address!";
     return;
