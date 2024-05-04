@@ -62,7 +62,6 @@ const options = computed(() => {
 
       datalabels: {
         formatter: function (value, context) {
-          //   console.log(value);
           return value.value;
         },
 
@@ -164,13 +163,10 @@ const options = computed(() => {
 });
 
 const isZoomEnabled = computed(() => {
-  console.log(options.value.plugins.zoom);
   return props.options.plugins.zoom.enabled;
 });
 
 const handleZoomReset = () => {
-  console.log("reset zoom");
-  //   console.log(chart.value.chart);
   chart.value.chart.resetZoom();
 };
 </script>

@@ -155,7 +155,6 @@ const inputProtocols = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
 
   protocols.map((protocol) => {
-    //  console.log(protocol);
     protocol.value = protocol.id;
     protocol.label = protocol.name;
     protocol.chainId = protocol.chainId;

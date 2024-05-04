@@ -22,14 +22,10 @@ export const useMint = () => {
         chainId: chainId.value,
       });
 
-      console.log("mint submitted ", hash);
-
       const data = await waitForTransaction({
         hash: hash,
         chainId: chainId.value,
       });
-
-      console.log("nft minted ", data);
 
       return { success: true, data: data };
     } catch (error) {

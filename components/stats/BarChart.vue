@@ -55,7 +55,6 @@ const options = {
 
     datalabels: {
       formatter: function (value, context) {
-        //   console.log(value);
         return value.value;
       },
 
@@ -112,9 +111,7 @@ const options = {
   hoverBackgroundColor: color.value,
   pointHoverBorderWidth: 10,
 
-  onClick: function (evt, item) {
-    console.log("item", item);
-  },
+  onClick: function (evt, item) {},
 };
 </script>
 

@@ -27,20 +27,11 @@ export default authenticated(
           event.node.res.statusCode = 400;
 
           errors.push("Failed to upload logo");
-
-          //  return {
-          //    code: "REQ_FAILED",
-          //    message: "Failed to upload logo",
-          //  };
         }
         if (!event.node.req?.files?.cover?.[0]?.location) {
           event.node.res.statusCode = 400;
 
           errors.push("Failed to upload cover image");
-          //  return {
-          //    code: "REQ_FAILED",
-          //    message: "Failed to upload cover image",
-          //  };
         }
 
         const screenshots = [];
@@ -60,10 +51,6 @@ export default authenticated(
         if (screenshots.length < 2) {
           event.node.res.statusCode = 400;
           errors.push("Please upload atleast 2 screenshots");
-          //  return {
-          //    code: "REQ_FAILED",
-          //    message: "Please upload atleast 2 screenshots",
-          //  };
         }
 
         const uploadedImages = {
@@ -77,11 +64,6 @@ export default authenticated(
           Object.keys(JSON.parse(proxies)).length === 0
         ) {
           event.node.res.statusCode = 400;
-          //  errors.push("Please add valid proxy information");
-          //  return {
-          //    code: "REQ_FAILED",
-          //    message: "Please add valid proxy information!",
-          //  };
         }
 
         const payload: ProjectType =
@@ -120,16 +102,11 @@ export default authenticated(
         if (existingProject) {
           event.node.res.statusCode = 400;
           errors.push(`Project with name ${payload.name} already submitted`);
-          //  return {
-          //    code: "REQ_FAILED",
-          //    message: `Project with name ${payload.name} already submitted`,
-          //  };
         }
 
         if (errors.length > 0) {
           return {
             code: "REQ_FAILED",
-            // newline
             message: errors,
           };
         }

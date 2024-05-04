@@ -21,7 +21,6 @@ async function updateArticleView(
       await newView.save();
       await Article.findByIdAndUpdate(articleId, { $inc: { views: 1 } });
     }
-    console.log("views updating");
   } catch (error) {
     console.log("updateArticleView: error", error);
   }
