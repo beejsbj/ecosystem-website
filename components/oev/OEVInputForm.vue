@@ -50,8 +50,9 @@ function buttonHandle(event) {
 watch(
   form,
   (newForm) => {
-    const tvl = newForm.tvl.split(",").join("").replace("$", "");
-    const incentive = newForm.incentive;
+    console.log(newForm);
+    const tvl = Number(newForm.tvl);
+    const incentive = Number(newForm.incentive);
 
     oev.userTvl = tvl;
     oev.userIncentive = incentive;
@@ -88,7 +89,12 @@ watch(
       <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
       <form-field>
         <FormKit
-          type="number"
+          type="mask"
+          suffix="%"
+          mask="{##}#"
+          show-mask="false"
+          unmask-value="true"
+          allow-incomplete="true"
           label="What is the liquidation incentive rate?"
           :classes="{
             label: '$reset calm-voice',
@@ -96,32 +102,34 @@ watch(
           name="incentive"
           placeholder="5%"
           id="incentive-percent"
-          v-model.number="form.incentive"
+          v-model="form.incentive"
           help="Enter the TVL percentage sent as a liquidation incentive."
-          validation="required|numeric|between:1,100"
+          validation="required|numeric|between:1.00,100.00"
           validation-label="Incentive Rate"
         />
       </form-field>
       <form-field>
         <FormKit
           type="mask"
+          prefix="$"
+          mask="{#,##|repeat}#"
+          show-mask="false"
+          unmask-value="true"
+          allow-incomplete="true"
+          reverse
           label="What is the total value locked of your protocol?"
           :classes="{
             label: '$reset calm-voice',
           }"
           name="tvl"
           placeholder="$5,000,000"
-          mask="${###,|repeat}###"
-          reverse
-          allow-incomplete="true"
-          show-mask="false"
           help="Optimal results are achieved with larger numerical values."
           id="tvl-input"
           v-model="form.tvl"
           step="100000"
           min="0"
           validation-label="TVL"
-          validation="required"
+          validation="required|numeric"
         />
       </form-field>
     </FormKit>
@@ -153,5 +161,9 @@ form {
 
 h2 {
   text-align: center;
+}
+
+form > :deep(.formkit-messages) {
+  display: none !important;
 }
 </style>
