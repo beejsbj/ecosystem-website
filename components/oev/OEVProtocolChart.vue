@@ -155,7 +155,6 @@ const inputProtocols = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
 
   protocols.map((protocol) => {
-    //  console.log(protocol);
     protocol.value = protocol.id;
     protocol.label = protocol.name;
     protocol.chainId = protocol.chainId;
@@ -182,7 +181,7 @@ const inputProtocols = computed(() => {
           :options="inputProtocols"
         >
           <template #option="{ option }">
-            <div class="protocol-option">
+            <div class="icon-option">
               <ChainIcon v-if="option.chainId" :id="option.chainId" />
               <DynamicIcon v-else icon="dapp" />
               <span class="whisper-voice">
@@ -272,14 +271,5 @@ div.actions {
       text-transform: capitalize;
     }
   }
-}
-
-.protocol-option {
-  display: grid;
-  align-items: center;
-
-  grid-template-columns: 24px 1fr;
-  gap: var(--space-3xs);
-  padding: var(--space-2xs);
 }
 </style>

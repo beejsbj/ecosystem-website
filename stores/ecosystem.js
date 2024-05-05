@@ -66,9 +66,7 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
       onRequestError({ request, options, error }) {
         console.log("fetch test error", error);
       },
-      onRequest({ request, options }) {
-        console.log("fetch test request");
-      },
+      onRequest({ request, options }) {},
     }
   );
 
