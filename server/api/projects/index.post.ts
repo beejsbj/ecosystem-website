@@ -59,13 +59,6 @@ export default authenticated(
           screenshots: screenshots,
         };
 
-        if (
-          productType === "datafeed" &&
-          Object.keys(JSON.parse(proxies)).length === 0
-        ) {
-          event.node.res.statusCode = 400;
-        }
-
         const payload: ProjectType =
           productType === "qrng"
             ? {
