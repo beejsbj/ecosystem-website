@@ -101,7 +101,6 @@ export default defineEventHandler(async (event) => {
 
     const cachedProjects: string | undefined = queryCache.get(cacheKey);
 
-    // console.log("cached ", cachedProjects);
     let projects;
     if (cachedProjects === undefined) {
       projects = await Project.find(finalFilter).sort({ year: -1 });

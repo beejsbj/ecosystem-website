@@ -54,8 +54,6 @@ async function submitForm() {
 
   const data = await response.json();
 
-  console.log("data", data);
-
   if (data.success) {
     // reset form by id
     reset("contact-form");
@@ -67,7 +65,7 @@ async function submitForm() {
         data.message +
         ". Thank you for your interest in the API3 Affiliate Program. We will be in touch soon.",
     };
-    console.log(message);
+
     serverMessages.value.push(message);
   } else {
     serverMessages.value.push({

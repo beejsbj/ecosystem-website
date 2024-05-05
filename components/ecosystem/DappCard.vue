@@ -7,19 +7,16 @@ const ecosystem = useEcosystemStore();
 
 function filterBy(event) {
   if (event.target.classList.contains("category")) {
-    console.log("category");
     ecosystem.filterQuery.categories[event.target.dataset.category] =
       !ecosystem.filterQuery.categories[event.target.dataset.category];
   }
 
   if (event.target.closest("li.chain")) {
-    console.log("chain");
     ecosystem.filterQuery.chains[event.target.closest("li").dataset.chain] =
       !ecosystem.filterQuery.chains[event.target.closest("li").dataset.chain];
   }
 
   if (event.target.closest("div.productType")) {
-    console.log("productType");
     ecosystem.filterQuery.productTypes[
       event.target.closest("div.productType").dataset.producttype
     ] =

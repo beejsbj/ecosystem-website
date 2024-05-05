@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
 
     if (cachedData !== undefined) {
       event.node.res.statusCode = 200;
-      console.log("cached");
+
       return JSON.parse(cachedData);
     }
 

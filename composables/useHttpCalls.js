@@ -125,7 +125,7 @@ export const useHttpCalls = () => {
         error: error,
       });
       const errorMessage = error?.response?.data?.response?.response?.message;
-      return { success: false, message: errorMessage };
+      return { success: false, messages: errorMessage };
     }
   };
 

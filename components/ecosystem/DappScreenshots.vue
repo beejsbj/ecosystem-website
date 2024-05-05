@@ -9,8 +9,6 @@ const indexRef = ref(0); // default 0
 const onHide = () => (visibleRef.value = false);
 const onShow = (index) => {
   indexRef.value = index;
-  console.log(indexRef.value);
-
   visibleRef.value = true;
 };
 </script>

@@ -137,7 +137,7 @@ export async function createPR(
     };
   } catch (err) {
     // delete created branch if something went wrong
-    console.log("private key in catch", config.gitAppPrivateKey);
+
     console.error("Something went wrong during pr creation: ", err);
 
     // delete the branch if it was created and an error occurred

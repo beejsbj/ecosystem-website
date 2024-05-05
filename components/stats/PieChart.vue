@@ -48,7 +48,6 @@ function hoverState(chart, datasetIndex, dataIndex) {
   chart.setActiveElements([item]);
   tooltip.setActiveElements([item]);
 
-  console.log(chart);
   chart.update();
 }
 

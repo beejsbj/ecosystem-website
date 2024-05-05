@@ -28,13 +28,10 @@ export const useBlogStore = defineStore("blog", () => {
     onRequestError({ request, options, error }) {
       console.log("fetch articles error", error);
     },
-    onRequest({ request, options }) {
-      console.log("fetch articles");
-    },
+    onRequest({ request, options }) {},
   });
 
   watch([filterQuery, data], ([newQuery, newData], [oldQuery, prevData]) => {
-    //  console.log("blog store ", { newQuery, newData });
     if (!newData) return;
     totalArticles.value = newData.total;
     if (newQuery.page === 1) {

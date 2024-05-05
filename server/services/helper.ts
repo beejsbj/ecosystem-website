@@ -16,11 +16,9 @@ export const isValidTelegramUrl = (url: string): boolean => {
     return false;
   }
 
-  console.log("url ", url);
   const pattern = /^(?:https?:\/\/)?t\.me\/(?!joinchat\/)[a-zA-Z0-9_]+$/;
   const flag = pattern.test(url);
 
-  console.log("flag ", flag);
   return flag;
 };
 

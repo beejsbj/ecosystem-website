@@ -43,7 +43,7 @@ export default handleWebhookAuth(
         );
 
         // The pull request was merged
-        console.log("Pull request was merged!");
+
         event.node.res.statusCode = 201;
         return { code: "OK", message: "Project published to live" };
       } else if (

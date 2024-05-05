@@ -21,19 +21,17 @@ export default authenticated(
           year,
         } = await (event.node?.req?.body || readBody(event));
 
+        const errors = [];
+
         if (!event.node.req?.files?.logo?.[0]?.location) {
           event.node.res.statusCode = 400;
-          return {
-            code: "REQ_FAILED",
-            message: "Failed to upload logo",
-          };
+
+          errors.push("Failed to upload logo");
         }
         if (!event.node.req?.files?.cover?.[0]?.location) {
           event.node.res.statusCode = 400;
-          return {
-            code: "REQ_FAILED",
-            message: "Failed to upload cover image",
-          };
+
+          errors.push("Failed to upload cover image");
         }
 
         const screenshots = [];
@@ -52,10 +50,7 @@ export default authenticated(
 
         if (screenshots.length < 2) {
           event.node.res.statusCode = 400;
-          return {
-            code: "REQ_FAILED",
-            message: "Please upload atleast 2 screenshots",
-          };
+          errors.push("Please upload atleast 2 screenshots");
         }
 
         const uploadedImages = {
@@ -69,10 +64,6 @@ export default authenticated(
           Object.keys(JSON.parse(proxies)).length === 0
         ) {
           event.node.res.statusCode = 400;
-          return {
-            code: "REQ_FAILED",
-            message: "Please add valid proxy information!",
-          };
         }
 
         const payload: ProjectType =
@@ -110,9 +101,13 @@ export default authenticated(
 
         if (existingProject) {
           event.node.res.statusCode = 400;
+          errors.push(`Project with name ${payload.name} already submitted`);
+        }
+
+        if (errors.length > 0) {
           return {
             code: "REQ_FAILED",
-            message: `Project with name ${payload.name} already submitted`,
+            message: errors,
           };
         }
 
