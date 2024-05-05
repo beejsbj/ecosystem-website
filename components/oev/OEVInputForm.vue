@@ -50,7 +50,6 @@ function buttonHandle(event) {
 watch(
   form,
   (newForm) => {
-    console.log(newForm);
     const tvl = Number(newForm.tvl);
     const incentive = Number(newForm.incentive);
 
@@ -72,6 +71,15 @@ watch(
   },
   { deep: true }
 );
+
+onMounted(() => {
+  const form = document.getElementById("oev-form");
+  const incentive = document.getElementById("incentive-percent");
+  const tvl = document.getElementById("tvl-input");
+
+  console.clear();
+  console.dir(incentive);
+});
 </script>
 
 <template>
