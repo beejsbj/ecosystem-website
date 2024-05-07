@@ -15,6 +15,10 @@ export const useOEVStore = defineStore("oev", function () {
   function setProtocols(raw) {
     if (!raw) return;
 
+    const sorted = raw.sort((a, b) => {
+      return a.totalLiquidated - b.totalLiquidated;
+    });
+
     const parsed = raw?.map((protocol, i) => {
       return {
         ...protocol,
@@ -43,6 +47,10 @@ export const useOEVStore = defineStore("oev", function () {
 
   const isAllHidden = computed(() => {
     return protocols.value.every((protocol) => protocol.hide);
+  });
+
+  const isUserVisible = computed(() => {
+    return !getProtocolById("userAdded").hide;
   });
 
   // Helper functions
@@ -136,6 +144,7 @@ export const useOEVStore = defineStore("oev", function () {
     // variables
     userTvl,
     userIncentive,
+    isUserVisible,
     oevRaw,
     protocols,
 
