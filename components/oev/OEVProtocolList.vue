@@ -2,44 +2,90 @@
 // Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
 
-const checkboxes = computed(() => {
-  return oev.protocols.map((protocol) => {
+const protocolOptions = computed(() => {
+  const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
+
+  return protocols.map((protocol) => {
     return {
       label: protocol.name,
-      value: !protocol.hide,
+      value: protocol.id,
+      icon: protocol.icon,
+      chainId: protocol.chainId,
+      checked: !protocol.hide,
+
+      attrs: {
+        onchange: () => {
+          buttonHandle(protocol);
+        },
+      },
     };
   });
 });
 
+// const protocolOptions = computed(() => {
+//   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
+
+//   protocols.map((protocol) => {
+//     protocol.value = protocol.id;
+//     protocol.label = protocol.name;
+
+//     return protocol;
+//   });
+
+//   protocols.push({
+//     value: "all",
+//     label: "Total",
+//   });
+//   return protocols;
+// });
+
+const modeledCheckboxes = computed(() => {
+  const filtered = protocolOptions.value.filter((checkbox) => checkbox.checked);
+
+  return filtered.map((checkbox) => checkbox.value);
+});
+
 const areChecked = computed(() => {
-  return checkboxes.value.filter((checkbox) => checkbox.value).length > 3;
+  return (
+    protocolOptions.value.filter((checkbox) => checkbox.checked).length > 3
+  );
 });
 
 async function buttonHandle(protocol) {
   // Call the toggleHide method
-  console.log(protocol.hide);
   oev.toggleHide(protocol);
-  console.log(protocol.hide);
-  await nextTick();
 }
 </script>
 
 <template>
   <div class="protocol-list-wrapper">
-    <h3
-      class="whisper-voice"
-      :class="{ hideOpacity: oev.isAllHidden && false }"
+    <FormKit
+      type="checkbox"
+      :label="`Select upto ${
+        oev.isUserVisible ? '3' : '4'
+      } Protocols to Compare`"
+      :options="protocolOptions"
+      v-model="modeledCheckboxes"
+      options-class="protocol-list"
+      :options-class="{ enabled: areChecked }"
     >
-      Select upto {{ oev.isUserVisible ? "3" : "4" }} Protocols to Compare
-    </h3>
+      <template #label="{ option }">
+        <div class="icon-option">
+          <IconWithChain :image="option?.icon" :id="option?.chainId" />
+          <span class="formkit-label">
+            {{ option.label }}
+          </span>
+        </div>
+      </template>
+    </FormKit>
 
-    <ul class="protocol-list" :class="{ enabled: areChecked }">
-      <!-- Loop through each protocol in the oev.protocols array -->
+    <!-- Loop through each protocol in the oev.protocols array -->
+    <!-- <ul class="protocol-list" :class="{ enabled: areChecked }">
 
       <template v-for="(protocol, i) in oev.protocols">
-        <!-- Render a list item if the protocol's "trueHide" property is false -->
+       
         <li v-if="!protocol.trueHide" :key="protocol.id">
-          <!-- Render a button with an event listener that calls the buttonHandle function and passes the protocol as an argument -->
+
 
           <FormKit
             type="checkbox"
@@ -58,7 +104,7 @@ async function buttonHandle(protocol) {
           </FormKit>
         </li>
       </template>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -70,49 +116,11 @@ async function buttonHandle(protocol) {
   gap: var(--space-s);
   align-content: start;
 }
-.protocol-list {
-  display: grid;
-  gap: var(--space-2xs);
-  overflow-y: scroll;
-  position: relative;
+
+:deep(.formkit-fieldset) {
   max-height: 300px;
-
-  @media (min-width: 768px) {
-    max-height: min(600px, 100%);
-  }
-
-  .box-card {
-    :deep(picture) {
-      width: 50px;
-    }
-  }
-}
-:deep(.box-card .teaser-voice) {
-  @media (max-width: 768px) {
-    font-size: var(--step-0);
-  }
-}
-
-h3 {
-  text-align: center;
-  position: sticky;
-  top: 0;
-  padding-top: var(--space-m);
-  z-index: 1;
-  background: var(--paper);
-  transition: all 0.3s ease-in-out, scale 0.2s 0.3s ease-in-out;
-  font-weight: var(--weight-heavy);
-  color: var(--ink);
-
-  &.large {
-    scale: 3;
-    position: absolute;
-    transform: translate(-12cqw, 10cqh);
-
-    /* &::after {
-      content: "       --->";
-    } */
-  }
+  overflow-y: scroll;
+  overscroll-behavior: contain;
 }
 
 li {
@@ -120,7 +128,7 @@ li {
   padding: 0 var(--space-s);
 }
 
-ul.enabled {
+:deep(ul.enabled) {
   li:not(:has(input:checked)) {
     filter: grayscale(0.8) opacity(0.6);
   }
