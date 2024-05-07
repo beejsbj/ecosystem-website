@@ -27,7 +27,7 @@ const userSaving = computed(() =>
         per year through the OEV Network**
       </p>
       <p class="whisper-voice">
-        **This is an estimate based on the current Liquidation rate of 5% of TVL
+        **This is an estimate based on the current liquidation rate of 5% of TVL
         annually
       </p>
     </div>
