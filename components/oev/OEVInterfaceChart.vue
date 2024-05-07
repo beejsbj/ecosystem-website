@@ -8,6 +8,57 @@ const showIncentives = ref(true);
 const showProfits = ref(true);
 const showSentToBuilderBar = ref(true);
 
+const visibleBars = ref([
+  "totalSentToBuilderUSD",
+  "totalProfitUSD",
+  "totalIncentiveUSD",
+]);
+
+const bars = [
+  {
+    label: "Total Sent to Builder",
+    value: "totalSentToBuilderUSD",
+    color: "hsla(160, 69%, 69%, 1)",
+    attrs: {
+      label: "Total Sent to Builder",
+      onchange: () => {
+        toggleSentToBuilder();
+      },
+    },
+  },
+  {
+    label: "Total Profits",
+    value: "totalProfitUSD",
+    color: "hsla(255, 34%, 70%, 1)",
+
+    attrs: {
+      onchange: () => {
+        toggleProfits();
+      },
+    },
+  },
+  {
+    label: "Total Incentives",
+    value: "totalIncentiveUSD",
+    color: "hsla(226, 100%, 70%, 1)",
+    attrs: {
+      onchange: () => {
+        toggleIncentives();
+      },
+    },
+  },
+  {
+    label: "Total Liquidated",
+    value: "totalLiquidated",
+    color: "hsla(0, 85%, 65%, 1)",
+    attrs: {
+      onchange: () => {
+        toggleLiquidated();
+      },
+    },
+  },
+];
+
 function toggleLiquidated() {
   showLiquidatedBar.value = !showLiquidatedBar.value;
 }
@@ -41,13 +92,10 @@ const maxHeight = computed(() => {
   //   sort the values by highest
   const values = [
     {
-      isShown: showLiquidatedBar.value,
-      value: liquidatedMax,
-    },
-    {
       isShown: showSentToBuilderBar.value,
       value: sentToBuilderMax,
     },
+
     {
       isShown: showProfits.value,
       value: profitsMax,
@@ -55,6 +103,10 @@ const maxHeight = computed(() => {
     {
       isShown: showIncentives.value,
       value: incentivesMax,
+    },
+    {
+      isShown: showLiquidatedBar.value,
+      value: liquidatedMax,
     },
   ];
 
@@ -98,60 +150,39 @@ const gridStarts = computed(() => {
     <div class="chart-grid">
       <h2 class="attention-voice">Protocol Performance Comparison</h2>
       <!-- OEV Protocol List component -->
-      <LazyOEVProtocolList />
-      <!-- OEV Interface Chart component -->
-      <div class="chart-container bars">
+      <div class="chart-actions">
+        <LazyOEVProtocolList />
         <div class="legend">
-          <button
-            @click="toggleLiquidated"
-            :class="{
-              dimmed: !showLiquidatedBar,
-            }"
-          >
-            <div class="liquidated"></div>
-            <p class="whisper-voice">Total Liquidated</p>
-          </button>
-
           <!--  -->
-          <button
-            @click="toggleIncentives"
-            :class="{
-              dimmed: !showIncentives,
-            }"
-          >
-            <div class="incentives"></div>
-            <p class="whisper-voice">Total Incentives</p>
-          </button>
 
-          <!--  -->
-          <button
-            @click="toggleProfits"
-            :class="{
-              dimmed: !showProfits,
-            }"
+          <FormKit
+            type="checkbox"
+            label="Legend"
+            :options="bars"
+            v-model="visibleBars"
           >
-            <div class="profits"></div>
-            <p class="whisper-voice">Total Searcher Profits</p>
-          </button>
+            <template #option-label="context">
+              <div class="icon-option">
+                <div class="legend-icon" :class="context.value"></div>
+                <span class="whisper-voice">
+                  {{ context.label }}
 
-          <!--  -->
-          <button
-            @click="toggleSentToBuilder"
-            :class="{
-              dimmed: !showSentToBuilderBar,
-            }"
-          >
-            <div class="totalSentToBuilderUSD"></div>
-            <p class="whisper-voice">Total Sent to Builder</p>
-          </button>
+                  {{ console.log(context) }}
+                </span>
+              </div>
+            </template>
+          </FormKit>
         </div>
-        <ul class="bars" v-auto-animate>
-          <template v-for="(protocol, i) in oev.protocols">
-            <li v-if="!protocol.hide" :key="protocol.id">
-              <div
-                class="bar"
-                :class="{ userAdded: protocol.id === 'userAdded' }"
-                :style="`
+      </div>
+      <!-- OEV Interface Chart component -->
+      <!-- <div class="chart-container bars"> -->
+      <ul class="bars" v-auto-animate>
+        <template v-for="(protocol, i) in oev.protocols">
+          <li v-if="!protocol.hide" :key="protocol.id">
+            <div
+              class="bar"
+              :class="{ userAdded: protocol.id === 'userAdded' }"
+              :style="`
 							 --bar-liquidated-height: ${barHeight(protocol.totalLiquidated)};
 							 --bar-totalSentToBuilderUSD-height: ${barHeight(
                  protocol.totalSentToBuilderUSD
@@ -161,61 +192,60 @@ const gridStarts = computed(() => {
 
 
 						 `"
+            >
+              <span
+                class="totalSentToBuilderUSD"
+                :class="{ hide: !showSentToBuilderBar }"
+                v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
               >
-                <span
-                  class="liquidated"
-                  :class="{ hide: !showLiquidatedBar }"
-                  v-tooltip.top-end="`$${protocol.totalLiquidated}`"
-                >
-                  <span class="number solid-voice">
-                    ${{ formatNumber(protocol.totalLiquidated) }}
-                  </span>
+                <span class="number solid-voice">
+                  ${{ formatNumber(protocol.totalSentToBuilderUSD) }}
                 </span>
-                <span
-                  class="totalSentToBuilderUSD"
-                  :class="{ hide: !showSentToBuilderBar }"
-                  v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
-                >
-                  <span class="number solid-voice">
-                    ${{ formatNumber(protocol.totalSentToBuilderUSD) }}
-                  </span>
+              </span>
+              <span
+                class="profits"
+                :class="{ hide: !showProfits }"
+                v-tooltip.top-end="`$${protocol.totalProfitUSD}`"
+              >
+                <span class="number solid-voice">
+                  ${{ formatNumber(protocol.totalProfitUSD) }}
                 </span>
-                <span
-                  class="profits"
-                  :class="{ hide: !showProfits }"
-                  v-tooltip.top-end="`$${protocol.totalProfitUSD}`"
-                >
-                  <span class="number solid-voice">
-                    ${{ formatNumber(protocol.totalProfitUSD) }}
-                  </span>
+              </span>
+              <span
+                class="incentives"
+                :class="{ hide: !showIncentives }"
+                v-tooltip.top-end="`$${protocol.totalIncentiveUSD}`"
+              >
+                <span class="number solid-voice">
+                  ${{ formatNumber(protocol.totalIncentiveUSD) }}
                 </span>
-                <span
-                  class="incentives"
-                  :class="{ hide: !showIncentives }"
-                  v-tooltip.top-end="`$${protocol.totalIncentiveUSD}`"
-                >
-                  <span class="number solid-voice">
-                    ${{ formatNumber(protocol.totalIncentiveUSD) }}
-                  </span>
+              </span>
+              <span
+                class="liquidated"
+                :class="{ hide: !showLiquidatedBar }"
+                v-tooltip.top-end="`$${protocol.totalLiquidated}`"
+              >
+                <span class="number solid-voice">
+                  ${{ formatNumber(protocol.totalLiquidated) }}
                 </span>
-              </div>
-              <picture class="protocol-logo" v-if="protocol.icon">
-                <NuxtImg
-                  :src="protocol.icon"
-                  :alt="protocol.name"
-                  loading="lazy"
-                />
-              </picture>
+              </span>
+            </div>
 
-              <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-              <ChainIcon :id="protocol.chainId" />
-              <p class="solid-voice protocol-name">
-                {{ protocol.name }}
-              </p>
-            </li>
-          </template>
-        </ul>
-      </div>
+            <IconWithChain
+              v-if="protocol.icon"
+              class="protocol-logo"
+              :image="protocol.icon ? protocol.icon : '/images/icons/dapp.svg'"
+              :id="protocol.chainId"
+            />
+
+            <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
+            <p class="solid-voice protocol-name">
+              {{ protocol.name }}
+            </p>
+          </li>
+        </template>
+      </ul>
+      <!-- </div> -->
     </div>
   </SectionColumn>
 </template>
@@ -226,30 +256,32 @@ const gridStarts = computed(() => {
   gap: var(--space-xl);
   position: relative;
 
+  .chart-actions {
+    order: 2;
+  }
+
   @media (min-width: 768px) {
     grid-template-columns: repeat(12, 1fr);
 
-    .chart-container {
+    .bars {
       grid-column: span 9;
     }
-    .protocol-list-wrapper {
+    .chart-actions {
       grid-column: span 3;
+      order: unset;
     }
   }
+}
+
+.chart-actions {
+  display: grid;
+  gap: var(--space-s);
+  align-content: start;
 }
 
 h2 {
   text-align: center;
   grid-column: 1 / -1;
-}
-.chart-container {
-  display: grid;
-  gap: var(--space-m);
-  grid-template-rows: 120px 1fr;
-
-  @media (min-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 text-content {
@@ -262,6 +294,7 @@ text-content {
 
 .protocol-logo {
   width: 50px;
+  max-width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
   justify-self: center;
@@ -272,14 +305,6 @@ text-content {
 }
 
 .legend {
-  display: flex;
-  flex-wrap: wrap;
-  white-space: nowrap;
-  gap: var(--space-2xs);
-  padding: var(--space-m);
-  grid-column: 1/-1;
-  justify-content: end;
-
   & > button {
     display: flex;
     gap: var(--space-xs);
@@ -288,16 +313,16 @@ text-content {
     &.dimmed {
       filter: brightness(0.5) saturate(0.5);
     }
+  }
 
-    & > div {
-      aspect-ratio: 1/1;
-      width: 25px;
-      background: var(--background);
-    }
+  .legend-icon {
+    aspect-ratio: 1/1;
+    width: 25px;
+    background: var(--background);
   }
 }
 
-.liquidated {
+.totalSentToBuilderUSD {
   --background: linear-gradient(
     to bottom,
     hsla(160, 69%, 69%, 0.3),
@@ -311,7 +336,7 @@ text-content {
   );
 }
 
-.incentives {
+.profits {
   --background: linear-gradient(
     to bottom,
     hsla(255, 34%, 54%, 0.5),
@@ -325,7 +350,7 @@ text-content {
   );
 }
 
-.profits {
+.incentives {
   --background: linear-gradient(
     to bottom,
     hsla(226, 100%, 50%, 0.3),
@@ -339,7 +364,7 @@ text-content {
   );
 }
 
-.totalSentToBuilderUSD {
+.liquidated {
   --background: linear-gradient(
     to bottom,
     hsla(0, 85%, 65%, 0.3),
@@ -365,8 +390,8 @@ ul.bars {
 
 li {
   display: grid;
-  gap: var(--space-2xs);
-  //   align-items: center;
+  gap: var(--space-m);
+  align-content: end;
 
   & > :is(p, picture) {
     justify-self: center;
@@ -396,7 +421,7 @@ li {
   .bar {
     --grid-count: v-bind(gridCount);
 
-    height: 400px;
+    height: 100%;
     position: relative;
     display: grid;
     gap: var(--space-3xs);
@@ -453,6 +478,7 @@ li {
         text-align: center;
         position: absolute;
         font-size: var(--step--1);
+        color: var(--light-gray);
 
         left: 50%;
         top: calc(var(--space-l) * -1);
