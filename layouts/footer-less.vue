@@ -60,6 +60,22 @@ useHead({
       width: 200vw;
       z-index: -10;
     }
+    @media (min-width: 1000px) {
+      display: block;
+      top: -50px;
+      left: -500px;
+
+      width: 250vw;
+      z-index: -10;
+    }
+    //  @media (min-width: 1400px) {
+    //    display: block;
+    //    top: -50px;
+    //    left: -500px;
+
+    //    width: 200vw;
+    //    z-index: -10;
+    //  }
   }
 }
 </style>
