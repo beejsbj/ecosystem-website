@@ -1,4 +1,6 @@
 <script setup>
+import { Chart } from "chart.js";
+
 const oev = useOEVStore();
 const ui = useInterfaceStore();
 
@@ -26,10 +28,10 @@ const options = computed(() => {
       title: {
         display: false,
       },
-      // legend: {
-      //   position: "right",
-      //   align: "start",
-      // },
+
+      legend: {
+        display: false,
+      },
 
       zoom: {
         enabled: true,
@@ -123,33 +125,27 @@ const parsed = computed(() => {
     labels,
     datasets: [
       {
-        data: dataLiquidated,
-        label: "Total Liquidated",
-      },
-      {
-        data: dataIncentive,
-        label: "Total Incentive",
+        data: dataSentToBuilder,
+        label: "Total Sent to Builder",
+        hidden: true,
       },
       {
         data: dataProfit,
         label: "Total Profit",
         hidden: true,
       },
+
       {
-        data: dataSentToBuilder,
-        label: "Total Sent to Builder",
-        hidden: true,
+        data: dataIncentive,
+        label: "Total Incentive",
+      },
+      {
+        data: dataLiquidated,
+        label: "Total Liquidated",
       },
     ],
   };
 });
-
-// const inputProtocols = oev.protocols.filter((protocol) => !protocol.trueHide);
-// inputProtocols.push({
-//   id: "all",
-//   name: "Total",
-// });
-// change it to value and label
 
 const inputProtocols = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
@@ -157,7 +153,6 @@ const inputProtocols = computed(() => {
   protocols.map((protocol) => {
     protocol.value = protocol.id;
     protocol.label = protocol.name;
-    protocol.chainId = protocol.chainId;
 
     return protocol;
   });
@@ -167,6 +162,38 @@ const inputProtocols = computed(() => {
     label: "Total",
   });
   return protocols;
+});
+
+// legend items
+
+const legendItems = ref([]);
+const legendCheckboxes = ref([2, 3]);
+
+function toggleDataset(index) {
+  const chart = Chart.getChart("line-chart");
+  chart.setDatasetVisibility(index, !chart.isDatasetVisible(index));
+  chart.update();
+}
+
+onMounted(() => {
+  const chart = Chart.getChart("line-chart");
+  const items = chart.options.plugins.legend.labels.generateLabels(chart);
+
+  const options = items.map((item, index) => {
+    return {
+      label: item.text,
+      value: item.datasetIndex,
+      datasetIndex: item.datasetIndex,
+      fillStyle: item.fillStyle,
+      attrs: {
+        onchange: () => {
+          toggleDataset(item.datasetIndex);
+        },
+      },
+    };
+  });
+
+  legendItems.value = options;
 });
 </script>
 
@@ -182,37 +209,34 @@ const inputProtocols = computed(() => {
         >
           <template #option="{ option }">
             <div class="icon-option">
-              <ChainIcon v-if="option.chainId" :id="option.chainId" />
-              <DynamicIcon v-else icon="dapp" />
+              <IconWithChain
+                v-if="option.icon"
+                :image="option.icon"
+                :id="option.chainId"
+              />
               <span class="whisper-voice">
                 {{ option.label }}
               </span>
             </div>
           </template>
         </FormKit>
-        <div class="buttons-content">
-          <template v-for="period in periods">
-            <button
-              class="button outline"
-              @click="selectedPeriod = period"
-              :class="{
-                hover: selectedPeriod === period,
-              }"
-            >
-              <span>{{ ui.isMobile ? period.slice(0, 1) : period }}</span>
-            </button>
-          </template>
-          <button
-            class="button outline log"
-            @click="isLogarithmic = !isLogarithmic"
-            :class="{
-              hover: isLogarithmic,
-            }"
-          >
-            <span>
-              {{ ui.isMobile ? "log" : "logarithmic" }}
-            </span>
-          </button>
+        <!-- <div class="buttons-content"> -->
+        <FormKit
+          type="radio"
+          label="Select Period"
+          v-model="selectedPeriod"
+          :options="periods"
+        />
+
+        <FormKit type="checkbox" label="Logarithmic" v-model="isLogarithmic" />
+
+        <div id="legend-container">
+          <FormKit
+            type="checkbox"
+            label="Legend"
+            :options="legendItems"
+            v-model="legendCheckboxes"
+          />
         </div>
       </div>
       <div class="chart-container lines">
@@ -271,5 +295,11 @@ div.actions {
       text-transform: capitalize;
     }
   }
+}
+
+.legend-icon {
+  aspect-ratio: 1/1;
+  width: 25px;
+  background: var(--background);
 }
 </style>
