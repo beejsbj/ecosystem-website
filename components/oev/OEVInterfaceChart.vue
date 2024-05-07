@@ -28,7 +28,7 @@ const bars = [
   },
   {
     label: "Total Profits",
-    value: "totalProfitUSD",
+    value: "profits",
     color: "hsla(255, 34%, 70%, 1)",
 
     attrs: {
@@ -39,7 +39,7 @@ const bars = [
   },
   {
     label: "Total Incentives",
-    value: "totalIncentiveUSD",
+    value: "incentives",
     color: "hsla(226, 100%, 70%, 1)",
     attrs: {
       onchange: () => {
@@ -49,7 +49,7 @@ const bars = [
   },
   {
     label: "Total Liquidated",
-    value: "totalLiquidated",
+    value: "liquidated",
     color: "hsla(0, 85%, 65%, 1)",
     attrs: {
       onchange: () => {
@@ -161,13 +161,11 @@ const gridStarts = computed(() => {
             :options="bars"
             v-model="visibleBars"
           >
-            <template #option-label="context">
+            <template #label="{ option }">
               <div class="icon-option">
-                <div class="legend-icon" :class="context.value"></div>
-                <span class="whisper-voice">
-                  {{ context.label }}
-
-                  {{ console.log(context) }}
+                <div class="legend-icon" :class="option.value"></div>
+                <span class="formkit-label">
+                  {{ option.label }}
                 </span>
               </div>
             </template>

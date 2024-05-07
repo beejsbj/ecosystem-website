@@ -236,7 +236,19 @@ onMounted(() => {
             label="Legend"
             :options="legendItems"
             v-model="legendCheckboxes"
-          />
+          >
+            <template #label="{ option }">
+              <div class="icon-option">
+                <div
+                  class="legend-icon"
+                  :style="`background-color: ${option.fillStyle}`"
+                ></div>
+                <span class="formkit-label">
+                  {{ option.label }}
+                </span>
+              </div>
+            </template>
+          </FormKit>
         </div>
       </div>
       <div class="chart-container lines">
