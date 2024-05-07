@@ -2,9 +2,25 @@
 // Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
 
-function buttonHandle(protocol) {
+const checkboxes = computed(() => {
+  return oev.protocols.map((protocol) => {
+    return {
+      label: protocol.name,
+      value: !protocol.hide,
+    };
+  });
+});
+
+const areChecked = computed(() => {
+  return checkboxes.value.filter((checkbox) => checkbox.value).length > 3;
+});
+
+async function buttonHandle(protocol) {
   // Call the toggleHide method
+  console.log(protocol.hide);
   oev.toggleHide(protocol);
+  console.log(protocol.hide);
+  await nextTick();
 }
 </script>
 
@@ -14,29 +30,32 @@ function buttonHandle(protocol) {
       class="whisper-voice"
       :class="{ hideOpacity: oev.isAllHidden && false }"
     >
-      Select upto 3 Protocols to Compare
+      Select upto {{ oev.isUserVisible ? "3" : "4" }} Protocols to Compare
     </h3>
 
-    <ul class="protocol-list">
+    <ul class="protocol-list" :class="{ enabled: areChecked }">
       <!-- Loop through each protocol in the oev.protocols array -->
+
       <template v-for="(protocol, i) in oev.protocols">
         <!-- Render a list item if the protocol's "trueHide" property is false -->
         <li v-if="!protocol.trueHide" :key="protocol.id">
           <!-- Render a button with an event listener that calls the buttonHandle function and passes the protocol as an argument -->
-          <button @click="buttonHandle(protocol)">
-            <!-- Render a BoxCard component with the following props -->
 
-            <BoxCard
-              :teaser="protocol.name"
-              layout="flex"
-              :class="{
-                'border-gradient-green': !protocol.hide,
-                'border-gradient-blue': protocol.hide,
-              }"
-            >
-              <ChainIcon :id="protocol.chainId" />
-            </BoxCard>
-          </button>
+          <FormKit
+            type="checkbox"
+            :label="protocol.name"
+            v-model="checkboxes[i].value"
+            @change="buttonHandle(protocol)"
+          >
+            <template #label="context">
+              <div class="icon-option">
+                <IconWithChain :image="protocol.icon" :id="protocol.chainId" />
+                <span class="whisper-voice">
+                  {{ context.label }}
+                </span>
+              </div>
+            </template>
+          </FormKit>
         </li>
       </template>
     </ul>
@@ -48,7 +67,8 @@ function buttonHandle(protocol) {
 
 .protocol-list-wrapper {
   display: grid;
-  gap: var(--space-xs);
+  gap: var(--space-s);
+  align-content: start;
 }
 .protocol-list {
   display: grid;
@@ -58,7 +78,7 @@ function buttonHandle(protocol) {
   max-height: 300px;
 
   @media (min-width: 768px) {
-    max-height: 600px;
+    max-height: min(600px, 100%);
   }
 
   .box-card {
@@ -81,6 +101,8 @@ h3 {
   z-index: 1;
   background: var(--paper);
   transition: all 0.3s ease-in-out, scale 0.2s 0.3s ease-in-out;
+  font-weight: var(--weight-heavy);
+  color: var(--ink);
 
   &.large {
     scale: 3;
@@ -95,5 +117,12 @@ h3 {
 
 li {
   display: grid;
+  padding: 0 var(--space-s);
+}
+
+ul.enabled {
+  li:not(:has(input:checked)) {
+    filter: grayscale(0.8) opacity(0.6);
+  }
 }
 </style>
