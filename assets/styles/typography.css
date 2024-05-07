@@ -46,7 +46,7 @@ article.body h2 a {
   font-family: var(--font);
   font-size: var(--step-1);
   line-height: 1.2;
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-medium);
   color: var(--gray-lighter);
 }
 .firm-voice {

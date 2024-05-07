@@ -527,7 +527,7 @@
   background-color: var(--fk-dropdown-bg);
   color: var(--gray);
 }
-.formkit-listitem[aria-selected="true"] {
+.formkit-listitem[aria-selected="true"] .whisper-voice {
   color: var(--paper) !important;
 }
 
@@ -552,7 +552,7 @@
 .icon-option {
   display: flex;
   align-items: center;
-  gap: var(--space-3xs);
+  gap: var(--space-2xs);
   padding: var(--space-2xs);
 }
 
