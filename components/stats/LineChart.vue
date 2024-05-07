@@ -154,7 +154,9 @@ const options = computed(() => {
       ];
       gradient.addColorStop(0, startColor);
       gradient.addColorStop(1, endColor);
-      return gradient;
+
+      // return gradient
+      return color;
     },
   };
   const merged = _Merge(defaultOptions, props.options);
@@ -184,6 +186,7 @@ const handleZoomReset = () => {
       :data="props.data"
       :options="options"
       :metadata="props.metadata"
+      id="line-chart"
       ref="chart"
     />
   </div>
