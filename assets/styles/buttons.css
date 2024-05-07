@@ -71,7 +71,7 @@ p :is(button, a).text {
   padding: 0;
 }
 .text:is(:hover, :focus-visible) {
-  color: var(--link-hover) !important;
+  color: var(--ink) !important;
 }
 .text:active {
   color: var(--link-active) !important;
@@ -79,17 +79,14 @@ p :is(button, a).text {
 
 .text.green {
   color: var(--green);
-  --link-hover: var(--green-lighter) !important;
   --link-active: var(--green-dark);
 }
 .text.violet {
   color: var(--violet) !important;
-  --link-hover: var(--violet-light);
   --link-active: var(--violet-dark);
 }
 .text.indigo {
   color: var(--indigo-lighter) !important;
-  --link-hover: var(--indigo-light);
   --link-active: var(--indigo);
 }
 
