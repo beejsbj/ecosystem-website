@@ -90,7 +90,7 @@
   --fk-border-width-decorator: var(--fk-border-width);
   --fk-border-width-focus: calc(var(--fk-border-width) * 2);
   --fk-border-width-checked: var(--fk-border-width);
-  --fk-border-width-decorator-checked: var(--fk-border-width-focus);
+  --fk-border-width-decorator-checked: var(--fk-border-width);
   --fk-border-width-decorator-focus: var(--fk-border-width-decorator-checked);
   --fk-border-width-decorator-focus-visible: var(--fk-border-width-focus);
 
@@ -125,11 +125,11 @@
   --fk-border-box-shadow-invalid-focus: 0 0 0
     var(--fk-border-width-decorator-focus-visible)
     var(--fk-error-ring-focus-color);
-  --fk-border-radius-tl: calc(var(--corners) / 2);
-  --fk-border-radius-tr: calc(var(--corners) / 2);
-  --fk-border-radius-bl: calc(var(--corners) / 2);
-  --fk-border-radius-br: calc(var(--corners) / 2);
-  --fk-border-radius: var(--fk-border-radius-tl, 0.25em)
+  --fk-border-radius-tl: 1px;
+  --fk-border-radius-tr: 1px;
+  --fk-border-radius-bl: 1px;
+  --fk-border-radius-br: 1px;
+  --fk-border-radius: var(--fk-border-radius-tl, 1px)
     var(--fk-border-radius-tr, 0.25em) var(--fk-border-radius-br, 0.25em)
     var(--fk-border-radius-bl, 0.25em);
   --fk-border-radius-full: 999em;
@@ -350,8 +350,8 @@
     PHBhdGggZD0iTTEyLjUsMTZIMi41Yy0uODMsMC0xLjUtLjY3LTEuNS0xLjVWMS41YzAtLjgzLC42Ny0xLjUsMS41LTEuNWg3LjA5Yy40LDAsLjc4LC4xNiwxLjA2LC40NGwyLjkxLDIuOTFjLjI4LC4yOCwuNDQsLjY2LC40NCwxLjA2VjE0LjVjMCwuODMtLjY3LDEuNS0xLjUsMS41Wk0yLjUsMWMtLjI4LDAtLjUsLjIyLS41LC41VjE0LjVjMCwuMjgsLjIyLC41LC41LC41SDEyLjVjLjI4LDAsLjUtLjIyLC41LS41VjQuNDFjMC0uMTMtLjA1LS4yNi0uMTUtLjM1bC0yLjkxLTIuOTFjLS4wOS0uMDktLjIyLS4xNS0uMzUtLjE1SDIuNVoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjxwYXRoIGQ9Ik0xMy4zOCw1aC0yLjkxYy0uODEsMC0xLjQ3LS42Ni0xLjQ3LTEuNDdWLjYyYzAtLjI4LC4yMi0uNSwuNS0uNXMuNSwuMjIsLjUsLjVWMy41M2MwLC4yNiwuMjEsLjQ3LC40NywuNDdoMi45MWMuMjgsMCwuNSwuMjIsLjUsLjVzLS4yMiwuNS0uNSwuNVoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjxwYXRoIGQ9Ik0xMCwxM0g1Yy0uMjgsMC0uNS0uMjItLjUtLjVzLjIyLS41LC41LS41aDVjLjI4LDAsLjUsLjIyLC41LC41cy0uMjIsLjUtLjUsLjVaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz48cGF0aCBkPSJNMTAsMTBINWMtLjI4LDAtLjUtLjIyLS41LS41cy4yMi0uNSwuNS0uNWg1Yy4yOCwwLC41LC4yMiwuNSwuNXMtLjIyLC41LS41LC41WiIgZmlsbD0iY3VycmVudENvbG9yIi8 +
     PHBhdGggZD0iTTcsN2gtMmMtLjI4LDAtLjUtLjIyLS41LS41cy4yMi0uNSwuNS0uNWgyYy4yOCwwLC41LC4yMiwuNSwuNXMtLjIyLC41LS41LC41WiIgZmlsbD0iY3VycmVudENvbG9yIi8 +
     PC9zdmc + Cg==;
-  --fk-icon-check: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAyNyI +
-    PHBvbHlnb24gZmlsbD0iY3VycmVudENvbG9yIiBwb2ludHM9IjI2Ljk5IDAgMTAuMTMgMTcuMTcgNC42OSAxMS42MyAwIDE2LjQxIDEwLjQgMjcgMTUuMDUgMjIuMjcgMTUuMDkgMjIuMzEgMzIgNS4xIDI2Ljk5IDAiLz48L3N2Zz4=;
+  --fk-icon-check: PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc +
+    Cg==;
   --fk-icon-circle: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI +
     PGNpcmNsZSBmaWxsPSJjdXJyZW50Q29sb3IiIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIvPjwvc3ZnPg==;
 
