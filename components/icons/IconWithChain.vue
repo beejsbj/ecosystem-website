@@ -14,6 +14,7 @@ const props = defineProps(["image", "id"]);
 <style scoped lang="scss">
 div {
   position: relative;
+  min-width: 24px;
   max-width: 32px;
 }
 
@@ -36,5 +37,6 @@ picture.chain-icon {
   max-width: 60%;
   border-radius: 50%;
   background: var(--ink);
+  display: none;
 }
 </style>
