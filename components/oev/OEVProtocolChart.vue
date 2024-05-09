@@ -311,7 +311,7 @@ div.actions {
 
 .legend-icon {
   aspect-ratio: 1/1;
-  width: 25px;
+  width: 24px;
   background: var(--background);
 }
 </style>
