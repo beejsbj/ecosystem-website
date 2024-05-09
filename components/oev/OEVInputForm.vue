@@ -71,15 +71,6 @@ watch(
   },
   { deep: true }
 );
-
-onMounted(() => {
-  const form = document.getElementById("oev-form");
-  const incentive = document.getElementById("incentive-percent");
-  const tvl = document.getElementById("tvl-input");
-
-  console.clear();
-  console.dir(incentive);
-});
 </script>
 
 <template>
