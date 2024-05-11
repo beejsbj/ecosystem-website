@@ -63,7 +63,7 @@ a {
   padding: 0.5em 1em;
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--ink);
   --link-hover: var(--green-lighter);
   --link-active: var(--green);
 }
@@ -71,7 +71,7 @@ p :is(button, a).text {
   padding: 0;
 }
 .text:is(:hover, :focus-visible) {
-  color: var(--ink) !important;
+  color: var(--link-hover) !important;
 }
 .text:active {
   color: var(--link-active) !important;

@@ -226,14 +226,12 @@
 
 /* Hover underline */
 
-.hover-underline,
-.router-link-exact-active:not(.site-logo, .button) {
+.hover-underline {
   --underline-width: 0;
   position: relative;
 }
 
-.hover-underline::after,
-.router-link-exact-active:not(.site-logo, .button)::after {
+.hover-underline::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -245,8 +243,7 @@
   border-radius: var(--corners);
 }
 
-.hover-underline:is(:hover, :focus-visible)::after,
-a.router-link-exact-active:not(.site-logo, .button)::after {
+.hover-underline:is(:hover, :focus-visible)::after {
   --underline-width: 100%;
 }
 
