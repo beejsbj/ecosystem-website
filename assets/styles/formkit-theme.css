@@ -21,7 +21,7 @@
 
   --fk-font-weight: var(--weight-medium);
   --fk-font-weight-input: var(--fk-font-weight);
-  --fk-font-weight-label: var(--weight-heavy);
+  --fk-font-weight-label: var(--weight-medium);
   --fk-font-weight-legend: var(--fk-font-weight-label, bold);
   --fk-font-weight-help: var(--fk-font-weight);
   --fk-font-weight-option: var(--fk-font-weight);
@@ -29,8 +29,8 @@
 
   --fk-font-size: var(--step-0);
   --fk-font-size-input: var(--fk-font-size);
-  --fk-font-size-label: 0.875em;
-  --fk-font-size-legend: 0.875em;
+  --fk-font-size-label: 0.9em;
+  --fk-font-size-legend: 0.9em;
   --fk-font-size-help: var(--step--1);
   --fk-font-size-remove: var(--step--1);
   --fk-font-size-option: 0.9em;
@@ -57,8 +57,9 @@
   --fk-color-checked: var(--fk-color-primary);
   --fk-color-input: var(--ink);
   --fk-color-input-selection: var(--green-darker);
-  --fk-color-border: var(--gray);
-  --fk-color-border-focus: var(--gray-light);
+  --fk-color-border: var(--gray-dark);
+  --fk-color-border-hover: var(--color-emerald-400);
+  --fk-color-border-focus: var(--color-emerald-500);
   --fk-color-danger: var(--color-action-error-500);
   --fk-color-error: var(--fk-color-danger);
   --fk-color-placeholder: var(--gray-darker);
@@ -80,6 +81,9 @@
   --fk-bg-input: var(--paper);
   --fk-bg-disabled: rgba(0 0 0 / 5%);
   --fk-bg-decorator: linear-gradient(0deg, rgba(0, 0, 0, 0.07), transparent);
+  --fk-bg-decorator-checked: var(--ink);
+  --fk-bg-decorator-hover: var(--fk-bg-decorator);
+
   --fk-bg-button: var(--fk-color-secondary);
   --fk-bg-button-hover: var(--fk-bg-button);
   --fk-bg-submit: var(--fk-bg-button);
@@ -103,23 +107,25 @@
     var(--fk-color-border);
   --fk-border-decorator-focus: var(--fk-border-width-focus)
     var(--fk-border-style) var(--fk-color-border-focus);
+
   --fk-border-decorator-focus-visible: var(
       --fk-border-width-decorator-focus-visible
     )
-    var(--fk-border-style) var(--fk-color-border-focus);
+    var(--fk-border-style) var(--fk-color-border-hover);
+
   --fk-border-decorator-checked: var(--fk-border-width-checked)
-    var(--fk-border-style) var(--fk-color-primary);
+    var(--fk-border-style) var(--ink);
   --fk-border-box-shadow: 0 0 0 var(--fk-border-width) var(--fk-color-border);
   --fk-border-box-shadow-focus: 0 0 0 var(--fk-border-width-focus)
     var(--fk-color-border-focus);
 
   --fk-border-box-shadow-decorator: 0 0 0 var(--fk-border-width-decorator);
   --fk-border-box-shadow-decorator-focus: 0 0 0
-    var(--fk-border-width-decorator-focus) var(--green-light);
+    var(--fk-border-width-decorator-focus) var(--fk-color-border-focus);
   --fk-border-box-shadow-decorator-focus-visible: 0 0 0
-    var(--fk-border-width-decorator-focus-visible) var(--green-light);
+    var(--fk-border-width-decorator-focus-visible) var(--fk-color-border-hover);
   --fk-border-box-shadow-decorator-checked: 0 0 0
-    var(--fk-border-width-decorator-checked) var(--fk-color-primary);
+    var(--fk-border-width-decorator-checked) var(--ink);
   --fk-border-box-shadow-invalid: 0 0 0
     var(--fk-border-width-decorator-focus-visible) var(--fk-error-ring-color);
   --fk-border-box-shadow-invalid-focus: 0 0 0
@@ -195,7 +201,7 @@
   --fk-padding-message: var(--fk-padding-message-t) var(--fk-padding-message-r)
     var(--fk-padding-message-b) var(--fk-padding-message-l);
 
-  --fk-padding-legend-x: 0.25em;
+  --fk-padding-legend-x: 0em;
   --fk-padding-legend-y: 0.25em;
   --fk-padding-legend-t: var(--fk-padding-legend-y);
   --fk-padding-legend-r: var(--fk-padding-legend-x);
@@ -376,6 +382,11 @@
   max-height: 1.2em;
   max-width: 1.2em;
 }
+.formkit-outer .formkit-icon :is(circle, path, rect, polygon, ellipse, line) {
+  max-height: 1.2em;
+  max-width: 1.2em;
+  stroke-width: 2;
+}
 /* pro */
 :root {
   --fk-nested-border-color: var(--fk-color-border);
@@ -449,6 +460,15 @@
 
 /* checkbox or radio */
 
+.formkit-outer:is([data-type="checkbox"], [data-type="radio"]) fieldset {
+  border: none;
+  padding: 0;
+
+  ul {
+    padding: var(--fk-padding-fieldset);
+  }
+}
+
 .formkit-outer:is([data-type="checkbox"], [data-type="radio"])
   fieldset:focus-within {
   border-color: var(--fk-color-border-focus);
@@ -477,9 +497,25 @@
 
 :is([data-type="checkbox"], [data-type="radio"])
   .formkit-input:checked
+  ~ .formkit-decorator {
+  background: var(--fk-bg-decorator-checked);
+  color: var(--paper);
+}
+
+:is([data-type="checkbox"], [data-type="radio"])
+  .formkit-input:checked
   ~ .formkit-decorator
   .formkit-icon {
+  color: inherit;
+}
+
+/* hover */
+:is([data-type="checkbox"], [data-type="radio"])
+  .formkit-input
+  ~ .formkit-decorator:is(:hover, :focus-within) {
   color: var(--fk-color-primary);
+  background: var(--fk-bg-decorator-hover);
+  box-shadow: var(--fk-border-box-shadow-decorator-focus-visible);
 }
 
 /* prefix icon */
