@@ -8,7 +8,24 @@ const selectedDataset = ref("aaveV2Eth-1");
 const selectedPeriod = ref("cumulative");
 const isLogarithmic = ref(false);
 
-const periods = ["daily", "weekly", "monthly", "cumulative"];
+const periodOptions = [
+  {
+    value: "daily",
+    label: "Daily",
+  },
+  {
+    value: "weekly",
+    label: "Weekly",
+  },
+  {
+    value: "monthly",
+    label: "Monthly",
+  },
+  {
+    value: "cumulative",
+    label: "Cumulative",
+  },
+];
 
 //
 const metadata = {
@@ -202,6 +219,7 @@ onMounted(() => {
     <div class="chart-grid">
       <h2 class="attention-voice">Historic Liquidation Data</h2>
       <div class="actions">
+        <!--  -->
         <FormKit
           type="dropdown"
           v-model="selectedDataset"
@@ -220,36 +238,36 @@ onMounted(() => {
             </div>
           </template>
         </FormKit>
-        <!-- <div class="buttons-content"> -->
+
+        <!--  -->
+        <FormKit type="checkbox" label="Logarithmic" v-model="isLogarithmic" />
+
+        <!--  -->
         <FormKit
           type="radio"
           label="Select Period"
           v-model="selectedPeriod"
-          :options="periods"
+          :options="periodOptions"
         />
 
-        <FormKit type="checkbox" label="Logarithmic" v-model="isLogarithmic" />
-
-        <div id="legend-container">
-          <FormKit
-            type="checkbox"
-            label="Legend"
-            :options="legendItems"
-            v-model="legendCheckboxes"
-          >
-            <template #label="{ option }">
-              <div class="icon-option">
-                <div
-                  class="legend-icon"
-                  :style="`background-color: ${option.fillStyle}`"
-                ></div>
-                <span class="formkit-label">
-                  {{ option.label }}
-                </span>
-              </div>
-            </template>
-          </FormKit>
-        </div>
+        <FormKit
+          type="checkbox"
+          label="Legend"
+          :options="legendItems"
+          v-model="legendCheckboxes"
+        >
+          <template #label="{ option }">
+            <div class="icon-option">
+              <div
+                class="legend-icon"
+                :style="`background-color: ${option.fillStyle}`"
+              ></div>
+              <span class="formkit-label">
+                {{ option.label }}
+              </span>
+            </div>
+          </template>
+        </FormKit>
       </div>
       <div class="chart-container lines">
         <LineChart :data="parsed" :options="options" :metadata="metadata" />
@@ -282,6 +300,7 @@ h2 {
 
 div.actions {
   display: grid;
+  gap: var(--space-m);
   align-content: center;
 
   @media (min-width: 768px) {

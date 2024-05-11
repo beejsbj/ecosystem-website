@@ -8,11 +8,7 @@ const showIncentives = ref(true);
 const showProfits = ref(true);
 const showSentToBuilderBar = ref(true);
 
-const visibleBars = ref([
-  "totalSentToBuilderUSD",
-  "totalProfitUSD",
-  "totalIncentiveUSD",
-]);
+const visibleBars = ref(["totalSentToBuilderUSD", "profits", "incentives"]);
 
 const bars = [
   {
