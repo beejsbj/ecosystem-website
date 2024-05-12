@@ -224,6 +224,7 @@ onMounted(() => {
           type="dropdown"
           v-model="selectedDataset"
           :options="inputProtocols"
+          label="Select a Protocol"
         >
           <template #option="{ option }">
             <div class="icon-option">
@@ -232,17 +233,15 @@ onMounted(() => {
                 :image="option.icon"
                 :id="option.chainId"
               />
-              <span class="whisper-voice">
+              <span class="">
                 {{ option.label }}
               </span>
             </div>
           </template>
         </FormKit>
-
         <!--  -->
         <FormKit type="checkbox" label="Logarithmic" v-model="isLogarithmic" />
 
-        <!--  -->
         <FormKit
           type="radio"
           label="Select Period"
@@ -282,7 +281,11 @@ onMounted(() => {
   gap: var(--space-xl);
   position: relative;
 
-  @media (min-width: 768px) {
+  .actions {
+    order: 2;
+  }
+
+  @media (min-width: 1000px) {
     grid-template-columns: repeat(12, 1fr);
 
     .chart-container {
@@ -290,6 +293,7 @@ onMounted(() => {
     }
     .actions {
       grid-column: span 3;
+      order: unset;
     }
   }
 }
@@ -302,9 +306,6 @@ div.actions {
   display: grid;
   gap: var(--space-m);
   align-content: center;
-
-  @media (min-width: 768px) {
-  }
 
   .buttons-content {
     display: flex;

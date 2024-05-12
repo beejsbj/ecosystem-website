@@ -55,37 +55,6 @@ export const useOEVStore = defineStore("oev", function () {
 
   // Helper functions
 
-  // Calculate the OEV rate for a protocol
-  function getOEVRate(protocol) {
-    return (
-      Number(protocol.totalSentToBuilderUSD) / Number(protocol.totalLiquidated)
-    );
-  }
-
-  // Calculate the OEV for a protocol
-  function getOEV(protocol) {
-    return (
-      Number(protocol.totalLiquidated) - Number(protocol.totalSentToBuilderUSD)
-    );
-  }
-
-  // Calculate the total liquidated value for a protocol
-  function getTotalLiquidated(protocol) {
-    return protocol.data.reduce(
-      (total, dataPoint) => Number(total) + Number(dataPoint.totalLiquidated),
-      0
-    );
-  }
-
-  // Calculate the total sent to builder value for a protocol
-  function getTotalSentToBuilder(protocol) {
-    return protocol.data.reduce(
-      (total, dataPoint) =>
-        Number(total) + Number(dataPoint.totalSentToBuilderUSD),
-      0
-    );
-  }
-
   function getProtocolById(id) {
     return protocols.value.find((protocol) => protocol.id === id);
   }
