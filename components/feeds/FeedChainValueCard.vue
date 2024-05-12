@@ -3,7 +3,7 @@ const props = defineProps(["dapp", "proxy"]);
 </script>
 
 <template>
-  <div class="chain-value-card" v-if="proxy.proxyId && proxy.feedId">
+  <div class="chain-value-card">
     <text-content>
       <h2 class="teaser-voice">Chain Value</h2>
       <p class="value attention-voice">$176.2</p>

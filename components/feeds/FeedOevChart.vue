@@ -96,10 +96,9 @@ const options = computed(() => {
       title: {
         display: false,
       },
-      // legend: {
-      //   position: "right",
-      //   align: "start",
-      // },
+      legend: {
+        display: false,
+      },
 
       zoom: {
         enabled: true,
