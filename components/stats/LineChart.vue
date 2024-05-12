@@ -99,11 +99,17 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.x.title,
-          color: "hsla(160, 64%, 69%, 1)",
+          color: "#fafafa",
         },
         ticks: {
           autoSkip: true,
           maxTicksLimit: 10,
+          color: "#C3C4C3",
+        },
+
+        grid: {
+          display: false,
+          color: "#C3C4C3",
         },
       },
       y: {
@@ -112,15 +118,21 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.y.title,
-          color: "hsla(160, 64%, 69%, 1)",
+          color: "#fafafa",
           position: "left",
         },
         ticks: {
           //   autoSkip: true,
           maxTicksLimit: 10,
+          color: "#C3C4C3",
           callback: function (value, index, values) {
             return formatNumber(value);
           },
+        },
+
+        grid: {
+          display: true,
+          color: "#404141",
         },
       },
     },
