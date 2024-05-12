@@ -69,7 +69,7 @@ const plugins = [
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
   addPrefixIconPlugin,
-  hideSuffixIfNoHelpPlugin,
+  addSuffixHelpTooltipPlugin,
   //  proPlugin,
 ];
 
@@ -92,41 +92,100 @@ export default defineFormKitConfig(() => {
     props: {
       selectIcon: "down",
       suffixIcon: "info",
-
-      onSuffixIconClick: handleSuffixClick,
     },
   };
 });
 
 // functions
 
-function handleSuffixClick(node, event) {
-  if (!node.props.help) return;
-  const el = event.target;
+// function handleSuffixClick(node, event) {
+//   if (!node.props.help) return;
+//   const el = event.target;
 
-  const tooltip = createTooltip(el, {
-    triggers: [],
-    content: node.props.help,
-  });
+//   const tooltip = createTooltip(el, {
+//     triggers: [],
+//     content: node.props.help,
+//   });
 
-  tooltip.show();
+//   tooltip.show();
 
-  setTimeout(() => {
-    tooltip.hide();
-    // Transition
-    setTimeout(() => {
-      destroyTooltip(el);
-    }, 400);
-  }, 3000);
-}
+//   setTimeout(() => {
+//     tooltip.hide();
+//     // Transition
+//     setTimeout(() => {
+//       destroyTooltip(el);
+//     }, 400);
+//   }, 3000);
+// }
+
+// function showTooltip(content, el) {
+// 	  const tooltip = createTooltip(el, {
+// 	 triggers: [],
+// 	 content,
+//   });
+
+//   tooltip.show();
+// }
+
+// function hideTooltip(el) {
+// 	tooltip.hide();
+
+//   setTimeout(() => {
+// 	 destroyTooltip(el);
+//   }, 400);
+// }
 
 // plugins ////////////////
 //
-function hideSuffixIfNoHelpPlugin(node) {
+function addSuffixHelpTooltipPlugin(node) {
   if (!node.props.help) {
     node.props.suffixIcon = null;
     return;
   }
+
+  let tooltip;
+
+  const mouseEnter = node.props.onMouseEnter;
+  node.context.handlers.mouseEnter = (e) => {
+    const el = e.target;
+
+    //
+    tooltip = createTooltip(el, {
+      triggers: [],
+      content: node.props.help,
+    });
+
+    //
+    tooltip.show();
+
+    mouseEnter?.(e);
+  };
+
+  const mouseLeave = node.props.onMouseLeave;
+  node.context.handlers.mouseLeave = (e) => {
+    const el = e.target;
+
+    //
+    tooltip.hide();
+
+    setTimeout(() => {
+      destroyTooltip(el);
+    }, 400);
+
+    mouseLeave?.(e);
+  };
+
+  const schemaFn = node.props.definition.schema;
+  node.props.definition.schema = (sectionsSchema = {}) => {
+    sectionsSchema.suffixIcon = {
+      attrs: {
+        onmouseenter: "$handlers.mouseEnter",
+        onmouseleave: "$handlers.mouseLeave",
+      },
+    };
+
+    return schemaFn(sectionsSchema);
+  };
 }
 
 function addPrefixIconPlugin(node) {
