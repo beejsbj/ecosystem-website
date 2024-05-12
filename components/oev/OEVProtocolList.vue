@@ -19,23 +19,6 @@ const protocolOptions = computed(() => {
   });
 });
 
-// const protocolOptions = computed(() => {
-//   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
-
-//   protocols.map((protocol) => {
-//     protocol.value = protocol.id;
-//     protocol.label = protocol.name;
-
-//     return protocol;
-//   });
-
-//   protocols.push({
-//     value: "all",
-//     label: "Total",
-//   });
-//   return protocols;
-// });
-
 const modeledCheckboxes = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
   const filtered = protocols.filter((protocol) => !protocol.hide);
@@ -114,7 +97,7 @@ async function buttonHandle(protocol) {
   align-content: start;
 }
 
-:deep(.formkit-wrapper) {
+:deep(.formkit-outer) {
   /* max-height: 300px; */
   /* overflow-y: scroll; */
   /* overscroll-behavior: contain; */
