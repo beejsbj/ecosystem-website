@@ -169,7 +169,6 @@ const gridStarts = computed(() => {
         </div>
       </div>
       <!-- OEV Interface Chart component -->
-      <!-- <div class="chart-container bars"> -->
       <ul class="bars" v-auto-animate>
         <template v-for="(protocol, i) in oev.protocols">
           <li v-if="!protocol.hide" :key="protocol.id">
@@ -254,7 +253,7 @@ const gridStarts = computed(() => {
     order: 2;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1000px) {
     grid-template-columns: repeat(12, 1fr);
 
     .bars {
@@ -287,8 +286,8 @@ text-content {
 }
 
 .protocol-logo {
-  width: 50px;
-  max-width: 50px;
+  width: 30px;
+  max-width: 30px;
   aspect-ratio: 1;
   border-radius: 50%;
   justify-self: center;
@@ -376,9 +375,11 @@ ul.bars {
   display: grid;
   gap: var(--space-s);
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  //   border-left: var(--border-dark);
 
   @media (min-width: 1000px) {
     grid-column: 1 / -1;
+    min-height: 500px;
   }
 }
 

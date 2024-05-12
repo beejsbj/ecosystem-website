@@ -12,11 +12,8 @@ const protocolOptions = computed(() => {
       icon: protocol.icon,
       chainId: protocol.chainId,
       checked: !protocol.hide,
-
-      attrs: {
-        onchange: () => {
-          buttonHandle(protocol);
-        },
+      toggle: () => {
+        buttonHandle(protocol);
       },
     };
   });
@@ -40,9 +37,10 @@ const protocolOptions = computed(() => {
 // });
 
 const modeledCheckboxes = computed(() => {
-  const filtered = protocolOptions.value.filter((checkbox) => checkbox.checked);
+  const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
+  const filtered = protocols.filter((protocol) => !protocol.hide);
 
-  return filtered.map((checkbox) => checkbox.value);
+  return filtered.map((protocol) => protocol.id);
 });
 
 const areChecked = computed(() => {
@@ -59,7 +57,7 @@ async function buttonHandle(protocol) {
 
 <template>
   <div class="protocol-list-wrapper">
-    <FormKit
+    <!-- <FormKit
       type="checkbox"
       :label="`Select upto ${
         oev.isUserVisible ? '3' : '4'
@@ -77,34 +75,33 @@ async function buttonHandle(protocol) {
           </span>
         </div>
       </template>
-    </FormKit>
+    </FormKit> -->
 
-    <!-- Loop through each protocol in the oev.protocols array -->
-    <!-- <ul class="protocol-list" :class="{ enabled: areChecked }">
-
-      <template v-for="(protocol, i) in oev.protocols">
-       
-        <li v-if="!protocol.trueHide" :key="protocol.id">
-
-
-          <FormKit
-            type="checkbox"
-            :label="protocol.name"
-            v-model="checkboxes[i].value"
-            @change="buttonHandle(protocol)"
-          >
-            <template #label="context">
-              <div class="icon-option">
-                <IconWithChain :image="protocol.icon" :id="protocol.chainId" />
-                <span class="whisper-voice">
-                  {{ context.label }}
-                </span>
-              </div>
-            </template>
-          </FormKit>
-        </li>
+    <FormKit
+      type="dropdown"
+      popover
+      multiple
+      :label="`Select upto ${
+        oev.isUserVisible ? '3' : '4'
+      } Protocols to Compare`"
+      :options="protocolOptions"
+      :key="protocolOptions"
+      options-appearance="checkbox"
+      v-model="modeledCheckboxes"
+    >
+      <template #option="{ option }">
+        <div class="icon-option" @click="option.toggle">
+          <IconWithChain
+            v-if="option.icon"
+            :image="option.icon"
+            :id="option.chainId"
+          />
+          <span class="">
+            {{ option.label }}
+          </span>
+        </div>
       </template>
-    </ul> -->
+    </FormKit>
   </div>
 </template>
 
@@ -117,10 +114,15 @@ async function buttonHandle(protocol) {
   align-content: start;
 }
 
-:deep(.formkit-fieldset) {
-  max-height: 300px;
-  overflow-y: scroll;
-  overscroll-behavior: contain;
+:deep(.formkit-wrapper) {
+  /* max-height: 300px; */
+  /* overflow-y: scroll; */
+  /* overscroll-behavior: contain; */
+  max-width: 250px;
+
+  @media (min-width: 768px) {
+    max-width: 270px;
+  }
 }
 
 li {
@@ -133,4 +135,8 @@ li {
     filter: grayscale(0.8) opacity(0.6);
   }
 }
+
+/* :deep(.formkit-fieldset, .formkit-wrapper) {
+  max-width: 350px;
+} */
 </style>
