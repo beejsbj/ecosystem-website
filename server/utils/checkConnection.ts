@@ -13,7 +13,7 @@ export const checkConnection = (handler: EventHandler) =>
 
       const response = await handler(event);
 
-      return { response };
+      return response;
     } catch (err: any) {
       console.log("db reconnect error ", err);
       event.node.res.statusCode = 500;
