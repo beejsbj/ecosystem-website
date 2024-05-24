@@ -17,11 +17,11 @@ export default defineEventHandler(async (event) => {
 
     const cachedData: any = await queryCache.get(cacheKey);
 
-    if (cachedData !== undefined) {
-      event.node.res.statusCode = 200;
-      console.log("getting from cache");
-      return JSON.parse(cachedData);
-    }
+    // if (cachedData !== undefined) {
+    //   event.node.res.statusCode = 200;
+    //   console.log("getting from cache");
+    //   return JSON.parse(cachedData);
+    // }
 
     if (type === "total") {
       const result = await OevChart.findOne({

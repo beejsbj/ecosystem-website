@@ -6,11 +6,11 @@ export default defineEventHandler(async (event) => {
     const cacheKey = "oev-totals";
     let cachedData: any = queryCache.get(cacheKey);
 
-    if (cachedData !== undefined) {
-      event.node.res.statusCode = 200;
+    // if (cachedData !== undefined) {
+    //   event.node.res.statusCode = 200;
 
-      return JSON.parse(cachedData);
-    }
+    //   return JSON.parse(cachedData);
+    // }
 
     const protocols = await OevTotal.find({});
 
