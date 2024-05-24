@@ -1,3 +1,6 @@
+import mongoose from "mongoose";
+import { syncProjectsToMongodb } from "./syncDb";
+
 export const isNumber = (n: string): boolean => {
   return !isNaN(parseFloat(n)) && isFinite(Number(n));
 };
@@ -166,3 +169,27 @@ export interface Status {
   message: string;
   data?: any | undefined;
 }
+
+export const connectDB = async () => {
+  const config = useRuntimeConfig();
+
+  try {
+    const dbUrl =
+      config.nodeEnv === "production"
+        ? config.mongodbUri
+        : config.mongodbUriDev;
+
+    await mongoose.connect(dbUrl, { connectTimeoutMS: 3000 });
+
+    // sync projects on server startup
+    console.log(`db connected: on ${config.nodeEnv}`);
+
+    if (config.nodeEnv === "production") {
+      console.log("syncing projects");
+      await syncProjectsToMongodb();
+      console.log("projects synced");
+    }
+  } catch (err) {
+    console.log("mongodb connection error ", err);
+  }
+};
