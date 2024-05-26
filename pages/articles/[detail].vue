@@ -136,15 +136,6 @@ inner-column.article {
   }
 
   article.body {
-    h2 {
-      margin-top: var(--space-2xl);
-      margin-bottom: var(--space-m);
-    }
-
-    h3 {
-      margin-top: var(--space-l);
-      margin-bottom: var(--space-m);
-    }
     ul {
       margin-top: var(--space-s);
       display: grid;
