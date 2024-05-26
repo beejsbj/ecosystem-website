@@ -2,6 +2,7 @@
 
 @import "forms.css";
 @import "buttons.css";
+@import "toastify.css";
 
 [data-color] {
   color: var(--data-color);

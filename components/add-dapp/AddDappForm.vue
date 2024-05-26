@@ -1,7 +1,7 @@
 <script setup>
 import { useStorage } from "@vueuse/core";
 import { setErrors, FormKitMessages } from "@formkit/vue";
-import { getValidationMessages } from "@formkit/validation";
+import { reset } from "@formkit/core";
 
 const { verifyWallet } = useSiwe();
 const { submitProject, fetchFeedNames } = useHttpCalls();
@@ -60,6 +60,7 @@ const submitHandler = async (event) => {
 
   successData.value.message =
     "Please wait for this to process — it will take about 1-2 mins!";
+  notify.info(successData.value.message);
   const submitResult = await submitProject(
     dappForm,
     images,
@@ -71,11 +72,25 @@ const submitHandler = async (event) => {
     successData.value.pr_url = submitResult.data;
     submitSuccess.value = true;
 
-    delete dappForm.value;
+    notify.success(successData.value.message);
+
+    //  notify(
+    //    `<a href='${successData.value.pr_url}' target='_blank'> Visit the PR</a>`,
+    //    {
+    //      autoClose: false,
+    //      dangerouslyHTMLString: true,
+    //    }
+    //  );
+
+    setTimeout(() => {
+      reset("add-form", {});
+      navigateTo("/");
+    }, 2000);
   } else {
     successData.value.message = "";
 
     setErrors("add-form", submitResult?.messages);
+    notify.error(submitResult?.messages);
   }
   loading.value = false;
 };
@@ -166,11 +181,11 @@ onMounted(async () => {
           <div class="messages">
             <FormKitMessages :node="formRef?.node" v-auto-animate />
 
-            <text-content v-if="submitSuccess">
+            <!-- <text-content v-if="submitSuccess">
               <p class="success-indicator">
                 {{ successData.message }}
               </p>
-            </text-content>
+            </text-content> -->
           </div>
         </template>
       </FormKit>

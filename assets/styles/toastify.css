@@ -1,0 +1,55 @@
+@import url("vue3-toastify/dist/index.css");
+
+:root {
+  --toastify-color-light: var(--gray-darker);
+  --toastify-color-dark: var(--gray-darker);
+  --toastify-color-info: var(--info);
+  --toastify-color-success: var(--success);
+  --toastify-color-warning: var(--warning);
+  --toastify-color-error: var(--error);
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+
+  --toastify-toast-width: 320px;
+  --toastify-toast-background: var(--paper);
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: var(--font);
+  --toastify-z-index: 9999999;
+
+  --toastify-text-color-light: var(--ink);
+  --toastify-text-color-dark: var(--ink);
+
+  /* //Used only for colored theme */
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+
+  --toastify-spinner-color: var(--gray-lighter);
+  --toastify-spinner-color-empty-area: #e0e0e0;
+
+  /* // Used when no type is provided
+	// toast("**hello**") */
+  --toastify-color-progress-light: linear-gradient(
+    to right,
+    var(--green),
+    var(--violet),
+    var(--indigo)
+  );
+  /* // Used when no type is provided */
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+.Toastify__close-button--light {
+  color: currentColor;
+  opacity: 0.5;
+}
