@@ -30,16 +30,12 @@
   }
 }
 
-.attention-voice,
-article.body :is(h2, h3) a {
+.attention-voice {
   --font-size: var(--step-2);
   font-family: var(--font);
   font-size: var(--font-size);
   font-weight: var(--weight-medium);
   line-height: 1.2;
-}
-article.body h2 a {
-  font-size: var(--step-2);
 }
 
 .notice-voice {
@@ -105,6 +101,15 @@ button {
   /* text-decoration: underline; */
   display: inline;
   font-size: inherit;
+}
+
+:is(h1, h2, h3, h4, h5, h6) a {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 em {
