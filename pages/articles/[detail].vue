@@ -136,32 +136,6 @@ inner-column.article {
   }
 
   article.body {
-    ul {
-      margin-top: var(--space-s);
-      display: grid;
-      gap: var(--space-2xs);
-
-      li {
-        position: relative;
-        letter-spacing: 0.02em;
-
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 8px;
-          height: 8px;
-
-          position: relative;
-          margin-right: var(--space-xs);
-
-          background-size: cover;
-          background-position: center;
-          background: var(--gradient-color);
-          border-radius: 50%;
-        }
-      }
-    }
-
     p {
       margin-top: var(--space-s);
       letter-spacing: 0.02em;
