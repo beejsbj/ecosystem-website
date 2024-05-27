@@ -1,7 +1,7 @@
 <script setup>
 import { FormKitIcon } from "@formkit/vue";
 
-const { currentTutorial, currentStep, currentStepNum, stepsCount } =
+const { currentTutorial, currentStep, stepsCount, initTutorial } =
   await useTutorial();
 
 const ui = useInterfaceStore();
@@ -28,10 +28,10 @@ const ui = useInterfaceStore();
 
         <TutorialSteps />
 
-        <p class="step-counter">{{ currentStepNum }} / {{ stepsCount }}</p>
+        <p class="step-counter">{{ currentStep }} / {{ stepsCount }}</p>
       </div>
 
-      <button class="button outline whisper-voice">Reset</button>
+      <button class="text whisper-voice" @click="initTutorial">Reset</button>
     </div>
   </footer>
 </template>
