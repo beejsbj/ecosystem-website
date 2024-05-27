@@ -18,6 +18,13 @@ export default defineNuxtConfig({
       ssr: false,
       prerender: false,
     },
+    "/tutorials": {
+      ssr: false,
+      prerender: false,
+    },
+    "/tutorials/**": {
+      ssr: false,
+    },
     "/style-guide": {
       ssr: false,
     },
