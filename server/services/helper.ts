@@ -179,7 +179,7 @@ export const connectDB = async () => {
         ? config.mongodbUri
         : config.mongodbUriDev;
 
-    await mongoose.connect(dbUrl, { connectTimeoutMS: 3000 });
+    await mongoose.connect(dbUrl);
 
     // sync projects on server startup
     console.log(`db connected: on ${config.nodeEnv}`);

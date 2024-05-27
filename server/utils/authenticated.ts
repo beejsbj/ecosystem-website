@@ -2,7 +2,7 @@ import type { EventHandler } from "h3";
 import { ROLE } from "../types";
 import { User } from "..//models/User";
 import { SiweMessage } from "siwe";
-import { UserType } from "../types/User";
+import type { UserType } from "../types/User";
 
 export const authenticated = (
   handler: EventHandler,
