@@ -5,13 +5,13 @@ const { currentTutorial, currentStep, currentStepNum, steps } =
   await useTutorial();
 
 function cleanName(step) {
-  console.log(step);
+  const name = step.name.toLowerCase();
 
-  const path = step._path.split("/");
-  const stepArr = path[path.length - 1].split("-");
-  const cleaned = stepArr.join(" ");
+  if (name.includes("readme")) {
+    return "Introduction";
+  }
 
-  return cleaned;
+  return name.replace("-", " ");
 }
 </script>
 
@@ -19,8 +19,8 @@ function cleanName(step) {
   <ModalSlot>
     <nav>
       <ul>
-        <li v-for="step in steps">
-          <NuxtLink class="calm-voice text" :to="step._path">
+        <li v-for="(step, i) in steps">
+          <NuxtLink class="calm-voice text" :to="`?step-${i}`">
             {{ cleanName(step) }}
           </NuxtLink>
         </li>
