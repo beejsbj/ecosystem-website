@@ -1,30 +1,21 @@
 import { OevTotal } from "~/server/models/OevTotal";
-import { cacheInterval, queryCache } from "~/server/services/cache";
+import { LiquidationTotalModel } from "~/server/models/common";
 import { checkConnection } from "~/server/utils/checkConnection";
+import { useRouteCache } from "#nuxt-multi-cache/composables";
 
 export default checkConnection(
   defineEventHandler(async (event) => {
+    useRouteCache((helper) => {
+      helper.setCacheable();
+    }, event);
+
     try {
-      const cacheKey = "oev-totals";
-      let cachedData: any = queryCache.get(cacheKey);
-
-      if (cachedData !== undefined) {
-        event.node.res.statusCode = 200;
-
-        return JSON.parse(cachedData);
-      }
-
-      const protocols = await OevTotal.find({});
-
-      const filtered = protocols.filter(
-        (protocol) => protocol.totalProfitUSD !== 0
-      );
-
-      // cache result with new queries
-      queryCache.set(cacheKey, JSON.stringify(filtered), cacheInterval);
+      const protocols = await LiquidationTotalModel.find({
+        totalLiquidated: { $gt: 0 },
+      });
 
       event.node.req.statusCode = 200;
-      return filtered;
+      return protocols;
     } catch (err: any) {
       console.log("fetch oev data error  ", err);
       event.node.req.statusCode = 500;

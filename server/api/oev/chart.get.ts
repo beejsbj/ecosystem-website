@@ -1,8 +1,12 @@
 import { OevChart } from "~/server/models/OevChart";
-import { cacheInterval, queryCache } from "~/server/services/cache";
+import { useRouteCache } from "#nuxt-multi-cache/composables";
 
 export default checkConnection(
   defineEventHandler(async (event) => {
+    useRouteCache((helper) => {
+      helper.setCacheable();
+    }, event);
+
     try {
       const { protocolId, period, type, fromDate, toDate }: any =
         getQuery(event);
@@ -13,16 +17,6 @@ export default checkConnection(
           code: "ERROR",
           message: "Invalid protocolId in query params",
         };
-      }
-
-      const cacheKey = `charts-${protocolId}-${period}-${type}-${fromDate}-${toDate}`;
-
-      const cachedData: any = await queryCache.get(cacheKey);
-
-      if (cachedData !== undefined) {
-        event.node.res.statusCode = 200;
-        console.log("getting from cache");
-        return JSON.parse(cachedData);
       }
 
       if (type === "total") {
@@ -82,7 +76,6 @@ export default checkConnection(
           totalMadeBySearcher,
           totalOevLost,
         };
-        queryCache.set(cacheKey, JSON.stringify(response), cacheInterval);
 
         event.node.req.statusCode = 200;
         return response;
@@ -99,8 +92,6 @@ export default checkConnection(
       }
 
       const response = result.data;
-      // cache result with new queries
-      queryCache.set(cacheKey, JSON.stringify(response), cacheInterval);
 
       event.node.req.statusCode = 200;
       return response;

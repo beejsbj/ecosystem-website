@@ -81,7 +81,6 @@ export default defineNuxtConfig({
   modules: [
     // tooltip
     ["floating-vue/nuxt", {}],
-
     //formkit
     [
       "@formkit/nuxt",
@@ -140,7 +139,18 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "storeToRefs"],
       },
     ],
+    "nuxt-multi-cache",
   ],
+  multiCache: {
+    route: {
+      enabled: true,
+    },
+    api: {
+      enabled: true,
+      cacheTagInvalidationDelay: 5000,
+      authorization: false,
+    },
+  },
 
   //   plugins: ["~/plugins/gsap.ts", "~/plugins/floating-vue.ts"],
 
