@@ -108,7 +108,7 @@ export const useOEVStore = defineStore("oev", function () {
 
     if (count > protocolCount.value) {
       const excessCount = count - protocolCount.value;
-      hideExcessProtocols(excessCount, protocol.id);
+      hideExcessProtocols(excessCount, protocol.slug);
     }
   }
 
@@ -117,7 +117,7 @@ export const useOEVStore = defineStore("oev", function () {
     let hiddenCount = 0;
     for (const protocol of protocols.value) {
       if (
-        protocol.id !== exemptedProtocolId &&
+        protocol.slug !== exemptedProtocolId &&
         !protocol.hide &&
         hiddenCount < excessCount
       ) {
