@@ -413,9 +413,26 @@ export async function prepareSingleLiquidationChart() {
   };
 }
 
-export async function batchUpdateCharts(items: any[]) {
+export async function batchUpdateCharts(charts: any[]) {
   try {
-    await LiquidationChartModel.insertMany(items);
+    for (let i = 0; i < charts.length; i++) {
+      const chart = charts[i];
+      const filter = {
+        slug: chart.slug,
+        period: chart.period,
+        chainId: chart.chainId,
+      };
+      const existingDoc = await LiquidationChartModel.findOne(filter);
+
+      if (existingDoc) {
+        await LiquidationChartModel.findByIdAndUpdate(existingDoc.id, {
+          $set: { data: chart.data },
+        });
+      } else {
+        await new LiquidationChartModel(chart).save();
+      }
+    }
+
     console.log("Batch write successful:");
   } catch (error) {
     console.log("db error batchUpdateCharts");
@@ -425,8 +442,6 @@ export async function batchUpdateCharts(items: any[]) {
 export async function prepareLiquidationTotals(): Promise<LiquidationTotal[]> {
   try {
     const indexingProtocols: any[] = await IndexingProgress.find({});
-
-    console.log({ indexingProtocols });
 
     if (indexingProtocols.length === 0) {
       console.log("no protocols found to parse");
@@ -498,6 +513,8 @@ export async function prepareLiquidationTotals(): Promise<LiquidationTotal[]> {
       hide: true,
       trueHide: true,
       name: "Total",
+      icon: "none",
+      chainId: 1,
       totalLiquidated,
       totalSentToBuilderUSD,
       totalProfitUSD,
@@ -517,7 +534,24 @@ export async function prepareLiquidationTotals(): Promise<LiquidationTotal[]> {
 
 export async function updateTotalsInDb(totals: LiquidationTotal[]) {
   try {
-    await LiquidationTotalModel.insertMany(totals);
+    const totalDocs = await LiquidationTotalModel.find({}).countDocuments();
+    if (totalDocs > 0) {
+      for (let i = 0; i < totals.length; i++) {
+        const total = totals[i];
+        const filter = { slug: total.slug };
+        const existingDoc = await LiquidationTotalModel.findOne(filter);
+
+        if (existingDoc) {
+          await LiquidationTotalModel.findByIdAndUpdate(existingDoc.id, {
+            $set: total,
+          });
+        } else {
+          await new LiquidationTotalModel(total).save();
+        }
+      }
+    } else {
+      await LiquidationTotalModel.insertMany(totals);
+    }
 
     console.log("Batch write totals successful:");
   } catch (error) {

@@ -19,12 +19,6 @@ export const prepareStats = async (cacheKey: string) => {
     cumulativeCharts,
     combinedCharts,
   } = await prepareSingleLiquidationChart();
-  // const charts: any[] = [];
-  // const table = getLiquidationModel("aavev3");
-  // await getCumulativeData(table);
-  // console.log({  });
-
-  // update totals in db
 
   console.log("##### Updating totals ########");
   await updateTotalsInDb(totals);
@@ -39,8 +33,6 @@ export const prepareStats = async (cacheKey: string) => {
   await batchUpdateCharts(cumulativeCharts);
   console.log("##### Updating Combined charts ########");
   await batchUpdateCharts(combinedCharts);
-
-  // update charts in db
 
   console.log("########### All Stats updated ##############");
 

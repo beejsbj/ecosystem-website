@@ -41,10 +41,12 @@ export const LiquidationSchema = new mongoose.Schema({
 });
 
 const LiquidationTotalSchema = new mongoose.Schema({
-  slug: String,
+  slug: { type: String, required: true },
   hide: Boolean,
   trueHide: Boolean,
-  name: String,
+  name: { type: String, required: true },
+  chainId: { type: Number, required: true },
+  icon: { type: String, required: true },
   totalLiquidated: String,
   totalSentToBuilderUSD: String,
   totalProfitUSD: String,

@@ -4,7 +4,7 @@
   "protocols": [
     {
       "subgraph": "https://gateway.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/84CvqQHYhydZzr2KSth8s1AFYpBRzUbVJXq6PWuZm9U9",
-      "name": "Aave V2 ethereum",
+      "name": "Aave V2",
       "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
       "chainId": 1,
       "startDate": "2/4/2024",
@@ -21,7 +21,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/JCNWRypm7FYwV8fx5HhzZPSFaMxgkPuw4TnR3Gpi81zk",
-      "name": "Aave V3 ethereum",
+      "name": "Aave V3",
       "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
       "chainId": 1,
       "startDate": "2/3/2024",
@@ -38,7 +38,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/AwoxEZbiWLvv6e3QdvdMZw4WDURdGbvPfHmZRc8Dpfz9",
-      "name": "Compound V3 Ethereum",
+      "name": "Compound V3",
       "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
       "chainId": 1,
       "startDate": "3/20/2024",
@@ -55,7 +55,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/4TbqVA8p2DoBd5qDbPMwmDZv3CsJjWtxo8nVSqF2tA9a",
-      "name": "Compound V2 Ethereum",
+      "name": "Compound V2",
       "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
       "chainId": 1,
       "startDate": "3/25/2024",
@@ -73,7 +73,7 @@
 
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/8sE6rTNkPhzZXZC6c8UQy2ghFTu5PPdGauwUBm4t7HZ1",
-      "name": "MakerDao Ethereum",
+      "name": "MakerDAO",
       "icon": "https://icons.llamao.fi/icons/protocols/maker?w=48&h=48",
       "chainId": 1,
       "startDate": "3/20/2024",
@@ -90,7 +90,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/DsznTYxGdsqxWB6a474rSksvB7qWSth5Ff1PcxW28vZy",
-      "name": "Morpho Aave Ethereum",
+      "name": "Morpho Aave V2",
       "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
       "chainId": 1,
       "startDate": "3/24/2024",
@@ -107,7 +107,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/9dTy23tkahyiap1THgwnJuMwxNHVnQM57jFQQiUzjcY6",
-      "name": "Morpho Compound Ethereum",
+      "name": "Morpho Compound",
       "icon": "https://icons.llamao.fi/icons/protocols/morpho?w=48&h=48",
       "chainId": 1,
       "startDate": "12/9/2023",
@@ -124,7 +124,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/4xyasjQeREe7PxnF6wVdobZvCw5mhoHZq3T7guRpuNPf",
-      "name": "Aave V3 Arbitrum",
+      "name": "Aave V3",
       "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
       "chainId": 42161,
       "startDate": "4/16/2024",
@@ -141,7 +141,7 @@
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/compound-v3-arbitrum",
-      "name": "Compound V3 Arbitrum",
+      "name": "Compound V3",
       "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
       "chainId": 42161,
       "startDate": "4/13/2024",
@@ -158,7 +158,7 @@
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/aave-v3-avalanche",
-      "name": "Aave V3 Avalanche",
+      "name": "Aave V3",
       "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
       "chainId": 43114,
       "startDate": "4/16/2024",
@@ -173,7 +173,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/99XPkR9F1exRDdCNyfXrCfEon4K34YoTDn6dgXKmxC72",
-      "name": "Compound V3 Base",
+      "name": "Compound V3",
       "icon": "https://api.thegraph.com/ipfs/api/v0/cat?arg=QmSiawxRVatPRptnNoWL49aN2aonoyCLCqw8y61du9EeQQ",
       "chainId": 8453,
       "startDate": "4/13/2024",
@@ -189,7 +189,7 @@
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/venus-protocol-bsc",
-      "name": "Venus Protocol BSC",
+      "name": "Venus Protocol",
       "icon": "https://icons.llamao.fi/icons/protocols/venus?w=48&h=48",
       "chainId": 56,
       "startDate": "4/9/2024",
@@ -205,7 +205,7 @@
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/aave-v3-optimism",
-      "name": "Aave V3 optimism",
+      "name": "Aave V3",
       "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
       "chainId": 10,
       "startDate": "4/16/2024",
@@ -222,7 +222,7 @@
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/compound-v3-polygon",
-      "name": "Compound V3 Polygon",
+      "name": "Compound V3",
       "icon": "https://icons.llamao.fi/icons/protocols/compound-finance?w=48&h=48",
       "chainId": 137,
       "startDate": "4/13/2024",
@@ -238,7 +238,7 @@
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/6yuf1C49aWEscgk5n9D1DekeG1BCk5Z9imJYJT3sVmAT",
-      "name": "Aave V3 Polygon",
+      "name": "Aave V3",
       "icon": "https://icons.llamao.fi/icons/protocols/aave?w=48&h=48",
       "chainId": 137,
       "startDate": "4/16/2024",
