@@ -74,13 +74,13 @@ const submitHandler = async (event) => {
 
     notify.success(successData.value.message);
 
-    //  notify(
-    //    `<a href='${successData.value.pr_url}' target='_blank'> Visit the PR</a>`,
-    //    {
-    //      autoClose: false,
-    //      dangerouslyHTMLString: true,
-    //    }
-    //  );
+     notify(
+       `<a class='external-link' href='${successData.value.pr_url}' target='_blank'> Visit the PR</a>`,
+       {
+         autoClose: false,
+         dangerouslyHTMLString: true,
+       }
+     );
 
     setTimeout(() => {
       reset("add-form", {});
