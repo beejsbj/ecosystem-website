@@ -7,8 +7,6 @@ export default checkConnection(
       const { protocolId, period, type, fromDate, toDate }: any =
         getQuery(event);
 
-      console.log({ protocolId, period });
-
       if (!protocolId) {
         event.node.res.statusCode = 400;
         return {

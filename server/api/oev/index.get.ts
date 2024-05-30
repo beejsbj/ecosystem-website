@@ -1,4 +1,3 @@
-import { OevTotal } from "~/server/models/OevTotal";
 import { LiquidationTotalModel } from "~/server/models/common";
 import { checkConnection } from "~/server/utils/checkConnection";
 import { useRouteCache } from "#nuxt-multi-cache/composables";
