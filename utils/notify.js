@@ -1,6 +1,3 @@
-//   const options = {
-//     autoClose: 1000,
-//   };
 
 function notify(message, options) {
   const { $toast } = useNuxtApp();
