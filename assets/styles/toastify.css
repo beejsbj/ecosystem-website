@@ -33,8 +33,7 @@
   --toastify-spinner-color: var(--gray-lighter);
   --toastify-spinner-color-empty-area: #e0e0e0;
 
-  /* // Used when no type is provided
-	// toast("**hello**") */
+  /* // Used when no type is provided */
   --toastify-color-progress-light: linear-gradient(
     to right,
     var(--green),
