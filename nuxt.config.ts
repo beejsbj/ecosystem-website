@@ -188,6 +188,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mongodbUri: process.env.NUXT_MONGODB_URI,
     mongodbUriDev: process.env.NUXT_MONGODB_URI_DEV,
+    serviceApiKey: process.env.NUXT_SERVICE_API_KEY,
     awsAccessKeyId: process.env.NUXT_AWS_ACCESS_KEY_ID,
     awsSecretAccessKey: process.env.NUXT_AWS_SECRET_ACCESS_KEY,
     rootBucket: process.env.NUXT_ROOT_BUCKET,

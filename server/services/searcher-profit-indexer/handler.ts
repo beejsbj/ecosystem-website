@@ -44,7 +44,7 @@ export const indexLiquidations = async (cacheKey: string) => {
     lastCheckedProtocolIndex >= 0 ? (lastCheckedProtocolIndex + 1) % 14 : 0;
 
   console.log(
-    `######### Indexing Protocol ${config.protocols[currentProtocolIndex].name} ###############`
+    `######### Indexing Protocol ${config.protocols[currentProtocolIndex].name}  Chain: ${config.protocols[currentProtocolIndex].chainId} ###############`
   );
 
   const startTime =

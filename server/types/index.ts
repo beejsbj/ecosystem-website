@@ -5,6 +5,7 @@ export const ROLE = {
   WEBHOOK: "webhook",
   MODERATOR: "moderator",
   USER: "user",
+  SERVICE_WEBHOOK: "SERVICE_WEBHOOK",
 } as const;
 
 export const UPLOAD_TYPE = {

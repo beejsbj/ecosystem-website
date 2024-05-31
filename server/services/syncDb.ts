@@ -84,7 +84,7 @@ export async function syncProjectsToMongodb() {
             $set: { ...projectData, slug: slug(projectData.name) },
           });
 
-          console.log(`File '${filePath}' updated into MongoDB.`);
+          console.log(`File '${filePath}' exists into MongoDB.`);
         }
       }
     } else {

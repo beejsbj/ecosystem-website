@@ -10,7 +10,24 @@ export const authenticated = (
 ) =>
   defineEventHandler(async (event: any) => {
     try {
-      const { signature, message, address, nonce } = event.node.req.headers;
+      const { signature, message, address, nonce, api_key } =
+        event.node.req.headers;
+
+      if (role === ROLE.SERVICE_WEBHOOK) {
+        const config = useRuntimeConfig();
+
+        if (config.serviceApiKey !== api_key) {
+          event.node.res.statusCode = 401;
+          return {
+            code: "AuthorizationFailed",
+            message: "Invalid service API Key.",
+          };
+        }
+
+        const response = await handler(event);
+
+        return { response };
+      }
 
       const siweMessage = new SiweMessage(JSON.parse(message));
       const verificationResult = await siweMessage.verify({ signature });
