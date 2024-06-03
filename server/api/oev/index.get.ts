@@ -16,7 +16,7 @@ export default checkConnection(
       event.node.req.statusCode = 200;
       return protocols;
     } catch (err: any) {
-      console.log("fetch oev data error  ", err);
+      console.log("fetch oev totals data error  ", err);
       event.node.req.statusCode = 500;
       return {
         code: "ERROR",
