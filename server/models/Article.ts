@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { ArticleType } from "../types/Article";
+import type { ArticleType } from "../types/Article";
 const Schema = mongoose.Schema;
 
 // Define the nested schema

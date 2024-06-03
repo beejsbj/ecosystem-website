@@ -2,7 +2,7 @@
 const oev = useOEVStore();
 const ui = useInterfaceStore();
 
-const selectedDataset = ref("aaveV2Eth-1");
+const selectedDataset = ref("aaveV2-1");
 const selectedPeriod = ref("cumulative");
 const isLogarithmic = ref(false);
 
@@ -155,7 +155,7 @@ const inputProtocols = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
 
   protocols.map((protocol) => {
-    protocol.value = protocol.id;
+    protocol.value = protocol.slug;
     protocol.label = protocol.name;
     protocol.chainId = protocol.chainId;
 
@@ -163,7 +163,7 @@ const inputProtocols = computed(() => {
   });
 
   protocols.push({
-    value: "all",
+    value: "Total-1",
     label: "Total",
   });
   return protocols;

@@ -1,34 +1,27 @@
-import { OevTotal } from "~/server/models/OevTotal";
-import { cacheInterval, queryCache } from "~/server/services/cache";
+import { LiquidationTotalModel } from "~/server/models/common";
+import { checkConnection } from "~/server/utils/checkConnection";
+import { useRouteCache } from "#nuxt-multi-cache/composables";
 
-export default defineEventHandler(async (event) => {
-  try {
-    const cacheKey = "oev-totals";
-    let cachedData: any = queryCache.get(cacheKey);
+export default checkConnection(
+  defineEventHandler(async (event) => {
+    useRouteCache((helper) => {
+      helper.setCacheable();
+    }, event);
 
-    if (cachedData !== undefined) {
-      event.node.res.statusCode = 200;
+    try {
+      const protocols = await LiquidationTotalModel.find({
+        totalLiquidated: { $gt: 0 },
+      });
 
-      return JSON.parse(cachedData);
+      event.node.req.statusCode = 200;
+      return protocols;
+    } catch (err: any) {
+      console.log("fetch oev totals data error  ", err);
+      event.node.req.statusCode = 500;
+      return {
+        code: "ERROR",
+        message: "Something went wrong.",
+      };
     }
-
-    const protocols = await OevTotal.find({});
-
-    const filtered = protocols.filter(
-      (protocol) => protocol.totalProfitUSD !== 0
-    );
-
-    // cache result with new queries
-    queryCache.set(cacheKey, JSON.stringify(filtered), cacheInterval);
-
-    event.node.req.statusCode = 200;
-    return filtered;
-  } catch (err: any) {
-    console.log("fetch oev data error  ", err);
-    event.node.req.statusCode = 500;
-    return {
-      code: "ERROR",
-      message: "Something went wrong.",
-    };
-  }
-});
+  })
+);

@@ -7,139 +7,141 @@ import { createPR } from "~/server/services/github";
 
 export default authenticated(
   imageUploadHandler(
-    defineEventHandler(async (event: any) => {
-      try {
-        const {
-          name,
-          tagline,
-          categories,
-          productType,
-          description,
-          chains,
-          links,
-          proxies,
-          year,
-        } = await (event.node?.req?.body || readBody(event));
+    checkConnection(
+      defineEventHandler(async (event: any) => {
+        try {
+          const {
+            name,
+            tagline,
+            categories,
+            productType,
+            description,
+            chains,
+            links,
+            proxies,
+            year,
+          } = await (event.node?.req?.body || readBody(event));
 
-        const errors = [];
+          const errors = [];
 
-        if (!event.node.req?.files?.logo?.[0]?.location) {
-          event.node.res.statusCode = 400;
+          if (!event.node.req?.files?.logo?.[0]?.location) {
+            event.node.res.statusCode = 400;
 
-          errors.push("Failed to upload logo");
-        }
-        if (!event.node.req?.files?.cover?.[0]?.location) {
-          event.node.res.statusCode = 400;
+            errors.push("Failed to upload logo");
+          }
+          if (!event.node.req?.files?.cover?.[0]?.location) {
+            event.node.res.statusCode = 400;
 
-          errors.push("Failed to upload cover image");
-        }
+            errors.push("Failed to upload cover image");
+          }
 
-        const screenshots = [];
-        if (event.node.req?.files?.screenshot1?.[0]?.location) {
-          screenshots.push(event.node.req?.files?.screenshot1?.[0]?.location);
-        }
-        if (event.node.req?.files?.screenshot2?.[0]?.location) {
-          screenshots.push(event.node.req?.files?.screenshot2?.[0]?.location);
-        }
-        if (event.node.req?.files?.screenshot3?.[0]?.location) {
-          screenshots.push(event.node.req?.files?.screenshot3?.[0]?.location);
-        }
-        if (event.node.req?.files?.screenshot4?.[0]?.location) {
-          screenshots.push(event.node.req?.files?.screenshot4?.[0]?.location);
-        }
+          const screenshots = [];
+          if (event.node.req?.files?.screenshot1?.[0]?.location) {
+            screenshots.push(event.node.req?.files?.screenshot1?.[0]?.location);
+          }
+          if (event.node.req?.files?.screenshot2?.[0]?.location) {
+            screenshots.push(event.node.req?.files?.screenshot2?.[0]?.location);
+          }
+          if (event.node.req?.files?.screenshot3?.[0]?.location) {
+            screenshots.push(event.node.req?.files?.screenshot3?.[0]?.location);
+          }
+          if (event.node.req?.files?.screenshot4?.[0]?.location) {
+            screenshots.push(event.node.req?.files?.screenshot4?.[0]?.location);
+          }
 
-        if (screenshots.length < 2) {
-          event.node.res.statusCode = 400;
-          errors.push("Please upload atleast 2 screenshots");
-        }
+          if (screenshots.length < 2) {
+            event.node.res.statusCode = 400;
+            errors.push("Please upload atleast 2 screenshots");
+          }
 
-        const uploadedImages = {
-          logo: event.node.req?.files?.logo?.[0]?.location,
-          cover: event.node.req?.files?.cover?.[0]?.location,
-          screenshots: screenshots,
-        };
+          const uploadedImages = {
+            logo: event.node.req?.files?.logo?.[0]?.location,
+            cover: event.node.req?.files?.cover?.[0]?.location,
+            screenshots: screenshots,
+          };
 
-        const payload: ProjectType =
-          productType === "qrng"
-            ? {
-                name,
-                tagline,
-                description,
-                status: "inactive",
-                images: uploadedImages,
-                categories: JSON.parse(categories),
-                productType: productType,
-                chains: JSON.parse(chains),
-                links: JSON.parse(links),
-                year: parseInt(year),
-              }
-            : {
-                name,
-                tagline,
-                description,
-                status: "inactive",
-                images: uploadedImages,
-                categories: JSON.parse(categories),
-                productType: productType,
-                chains: JSON.parse(chains),
-                proxies: JSON.parse(proxies),
-                links: JSON.parse(links),
-                year: parseInt(year),
-              };
+          const payload: ProjectType =
+            productType === "qrng"
+              ? {
+                  name,
+                  tagline,
+                  description,
+                  status: "inactive",
+                  images: uploadedImages,
+                  categories: JSON.parse(categories),
+                  productType: productType,
+                  chains: JSON.parse(chains),
+                  links: JSON.parse(links),
+                  year: parseInt(year),
+                }
+              : {
+                  name,
+                  tagline,
+                  description,
+                  status: "inactive",
+                  images: uploadedImages,
+                  categories: JSON.parse(categories),
+                  productType: productType,
+                  chains: JSON.parse(chains),
+                  proxies: JSON.parse(proxies),
+                  links: JSON.parse(links),
+                  year: parseInt(year),
+                };
 
-        // check if project with same name already active
-        const existingProject = await Project.findOne({
-          name: payload.name,
-        });
+          // check if project with same name already active
+          const existingProject = await Project.findOne({
+            name: payload.name,
+          });
 
-        if (existingProject) {
-          event.node.res.statusCode = 400;
-          errors.push(`Project with name ${payload.name} already submitted`);
-        }
+          if (existingProject) {
+            event.node.res.statusCode = 400;
+            errors.push(`Project with name ${payload.name} already submitted`);
+          }
 
-        if (errors.length > 0) {
+          if (errors.length > 0) {
+            return {
+              code: "REQ_FAILED",
+              message: errors,
+            };
+          }
+
+          // add slug field in  mongodb project collection to implement find by name slug
+          const createdProject = await new Project({
+            ...payload,
+            slug: slug(payload.name),
+          }).save();
+
+          // project json will be stored with active status in pull request for review
+          payload.status = "active";
+          // verify schema and create pr
+          const prStatus = await createPR(payload, createdProject.id);
+
+          if (!prStatus.success) {
+            // remove project data from db when build failed
+            await Project.findByIdAndDelete(createdProject.id);
+
+            event.res.statusCode = 400;
+            return {
+              code: "BUILD_FAILED",
+              message: prStatus.message,
+            };
+          }
+
+          event.node.res.statusCode = 201;
           return {
-            code: "REQ_FAILED",
-            message: errors,
+            code: "OK",
+            message: "Project submitted successfully!",
+            data: prStatus.data,
+          };
+        } catch (err: any) {
+          console.log("create project error ", err);
+          event.node.res.statusCode = 500;
+          return {
+            code: "ERROR",
+            message: "Something went wrong.",
           };
         }
-
-        // add slug field in  mongodb project collection to implement find by name slug
-        const createdProject = await new Project({
-          ...payload,
-          slug: slug(payload.name),
-        }).save();
-
-        // project json will be stored with active status in pull request for review
-        payload.status = "active";
-        // verify schema and create pr
-        const prStatus = await createPR(payload, createdProject.id);
-
-        if (!prStatus.success) {
-          // remove project data from db when build failed
-          await Project.findByIdAndDelete(createdProject.id);
-
-          event.res.statusCode = 400;
-          return {
-            code: "BUILD_FAILED",
-            message: prStatus.message,
-          };
-        }
-
-        event.node.res.statusCode = 201;
-        return {
-          code: "OK",
-          message: "Project submitted successfully!",
-          data: prStatus.data,
-        };
-      } catch (err: any) {
-        console.log("create project error ", err);
-        event.node.res.statusCode = 500;
-        return {
-          code: "ERROR",
-          message: "Something went wrong.",
-        };
-      }
-    })
+      })
+    )
   )
 );
