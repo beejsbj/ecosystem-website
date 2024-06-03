@@ -46,6 +46,7 @@ html {
   --success: hsla(148, 76%, 41%, 1);
   --warning: hsla(40, 100%, 55%, 1);
   --error: hsla(15, 99%, 55%, 1);
+  --info: var(--color-action-info-500);
 
   --paper: var(--black);
   --ink: var(--white);

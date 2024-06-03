@@ -13,6 +13,13 @@ const ecosystem = useEcosystemStore();
     <PageTitle heading="test ground" />
     <SectionColumn>
       <NuxtLink to="/style-guide">style guide</NuxtLink>
+      <button class="button" @click="notify('hello world')">default</button>
+      <button class="button" @click="notify.success('hello world')">
+        sucess
+      </button>
+      <button class="button" @click="notify.error('hello world')">error</button>
+      <button class="button" @click="notify.warn('hello world')">warn</button>
+      <button class="button" @click="notify.info('hello world')">info</button>
     </SectionColumn>
   </ContentsWrapper>
 </template>
