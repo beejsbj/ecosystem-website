@@ -649,7 +649,7 @@ export async function prepareFinalLiquidationData(
     } else {
     }
 
-    finalList.push({
+    const liquidationPayload = {
       date: date,
       timestamp: list[i].timestamp,
       user: list[i].liquidatee.id,
@@ -666,9 +666,10 @@ export async function prepareFinalLiquidationData(
       builder: !builder
         ? "0x0000000000000000000000000000000000000000"
         : builder,
-    });
+    };
+    finalList.push(liquidationPayload);
 
-    console.log(finalList);
+    console.log({ preparedLiq: liquidationPayload });
 
     i += 1;
   }

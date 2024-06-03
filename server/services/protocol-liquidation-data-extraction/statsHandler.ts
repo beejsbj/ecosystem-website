@@ -8,7 +8,7 @@ import {
 } from "./db";
 
 export const prepareStats = async (cacheKey: string) => {
-  console.log("####### Starting Indexer ##########");
+  console.log("####### Starting Stats generation ##########");
 
   const totals: LiquidationTotal[] = await prepareLiquidationTotals();
 

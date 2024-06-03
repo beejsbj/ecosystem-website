@@ -1,6 +1,5 @@
 {
-  "interval": 10,
-  "serviceName": "searcher-profit-indexer",
+  "serviceName": "protocol-liquidation-data-extraction",
   "protocols": [
     {
       "subgraph": "https://gateway.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/84CvqQHYhydZzr2KSth8s1AFYpBRzUbVJXq6PWuZm9U9",

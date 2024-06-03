@@ -1,5 +1,5 @@
 import { queryCache } from "~/server/services/cache";
-import { indexLiquidations } from "~/server/services/searcher-profit-indexer/handler";
+import { indexLiquidations } from "~/server/services/protocol-liquidation-data-extraction/liquidationHandler";
 import { ROLE } from "~/server/types";
 
 export default authenticated(

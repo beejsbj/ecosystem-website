@@ -1,5 +1,5 @@
 import { queryCache } from "~/server/services/cache";
-import { prepareStats } from "~/server/services/liquidation-stats-generator/handler";
+import { prepareStats } from "~/server/services/protocol-liquidation-data-extraction/statsHandler";
 import { ROLE } from "~/server/types";
 
 export default authenticated(
@@ -15,7 +15,7 @@ export default authenticated(
 
       queryCache.set(cacheKey, "stats-syncing", 100000);
 
-      const response = prepareStats(cacheKey);
+      prepareStats(cacheKey);
 
       event.node.req.statusCode = 200;
       return { message: "Stats sync started" };

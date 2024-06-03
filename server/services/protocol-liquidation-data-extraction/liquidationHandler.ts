@@ -32,7 +32,7 @@ async function doUpdate(
 }
 
 export const indexLiquidations = async (cacheKey: string) => {
-  console.log("####### Starting Indexer ##########");
+  console.log("####### Starting Liquidation Extraction ##########");
 
   const lastCheckedProtocolIndex = await getLastProtocolIndex();
 
@@ -75,7 +75,7 @@ export const indexLiquidations = async (cacheKey: string) => {
     liquidations,
     currentProtocolIndex
   );
-  console.log({ finalLiquidationData });
+  // console.log({ finalLiquidationData });
 
   console.log(
     `######### Updating ${finalLiquidationData.length} liquidations to db`

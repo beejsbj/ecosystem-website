@@ -175,7 +175,9 @@ export const connectDB = async () => {
 
   try {
     const dbUrl =
-      config.nodeEnv === "production" ? config.mongodbUri : config.mongodbUri;
+      config.nodeEnv === "production"
+        ? config.mongodbUri
+        : config.mongodbUriDev;
 
     await mongoose.connect(dbUrl);
 

@@ -1,16 +1,11 @@
-## Searcher Profit indexer from liquidations
+## Protocol Liquidation data extraction service
 
-## setup guide
-
-1. Install dependencies `npm install`
-2. Install aws serverless cli `npm install -g serverless`
-3. Login to serverless cli `sls login`
+- Add protocol configuration in config.json to start extracting liquidation history for the protocol
 
 ### example config for Aave V2
 
 ```{
-  "interval": 10,
-  "serviceName": "searcher-profit-indexer",
+  "serviceName": "protocol-liquidation-data-extraction",
   "protocols": [
     {
       "subgraph": "https://gateway.thegraph.com/api/{GraphAPIKEY}/subgraphs/id/84CvqQHYhydZzr2KSth8s1AFYpBRzUbVJXq6PWuZm9U9",
@@ -24,11 +19,9 @@
       "lendingPool": "xxxx",
       "aaveOracle": "xxxx",
       "rpcs": ["https://eth.llamarpc.com"]
+      "active": true
     },
     ...
   ]
 }
 ```
-
-4. Invoke Lambda locally for testing `sls invoke local -f indexBlock`
-5. Deploy Lambda to aws `sls deploy`
