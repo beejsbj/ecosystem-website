@@ -22,12 +22,6 @@ const { data: overview } = await useFetch("/api/oev");
 
 // Set the fetched OEV data to the OEV store
 oev.setProtocols(overview.value);
-
-const loading = ref(true);
-
-setTimeout(() => {
-  loading.value = false;
-}, 2000);
 </script>
 
 <template>
