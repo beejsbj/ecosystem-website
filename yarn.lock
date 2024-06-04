@@ -2757,9 +2757,9 @@
     "@parcel/watcher-win32-x64" "2.4.1"
 
 "@phase21/logos@^2.10.2":
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/@phase21/logos/-/logos-2.10.2.tgz#66391847deeabe1eccb3e087a64f8d0496578ba7"
-  integrity sha512-qfTUfwtIcK/7yv3692i+nVp6Zu4Tdi5YaOcEefIT2GJAs3gNJ66PGiIC+OLk3sa7FJYZymOTe6Vty3U8HFZ6UA==
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/@phase21/logos/-/logos-2.11.1.tgz#3767d64057d598ea7fe260265ef0a91c3004e36b"
+  integrity sha512-euYaT1rIOt11c4BGk2LaAh11/vMFxpZyn0HsXXo9SITU9JpWjuD5aNcgQuPIbpfL2WNWWq9+y1lVrQ3viynFIw==
   dependencies:
     camelcase "^6.3.0"
 
