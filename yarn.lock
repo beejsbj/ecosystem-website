@@ -1401,11 +1401,11 @@
     "@formkit/validation" "1.5.9"
 
 "@formkit/icons@^1.5.5":
-  version "1.5.9"
-  resolved "https://registry.yarnpkg.com/@formkit/icons/-/icons-1.5.9.tgz#7c8925545b7cc6676c2d9a7711cfae099cc0bf96"
-  integrity sha512-NcFjfHLsINsE5i8Iv5qVv1Lf6sXd0zDWJWsp6lDKXQfE1iITUU8Wpbty1XkQkDqD+Ius9ssq4xk36qBI3ZU3ug==
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/@formkit/icons/-/icons-1.6.5.tgz#90a751350f8fd8da3a3acd687ed2b8b263ab98f8"
+  integrity sha512-Owlw/aGi8R5koMKwq2j5bz59H/4bwscmGdgmRpAns7Fgm9ceZmbrYLcbV4t2m0NYnb+1X7IySP5UutEKt6yuPw==
   dependencies:
-    "@formkit/core" "1.5.9"
+    "@formkit/core" "1.6.5"
 
 "@formkit/inputs@1.5.9", "@formkit/inputs@^1.5.9":
   version "1.5.9"
