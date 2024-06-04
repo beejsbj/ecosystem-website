@@ -7,6 +7,7 @@ export const useOEVStore = defineStore("oev", function () {
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
   const protocols = ref([]);
+  const oevTotals = ref({});
 
   // this variable defines the number of protocols to show in the chart
   const protocolCount = ref(4);
@@ -28,9 +29,11 @@ export const useOEVStore = defineStore("oev", function () {
 
     protocols.value = parsed;
 
+    oevTotals.value = parsed.find((protocol) => protocol.slug === "total");
+
     //  add user protocol
     const userProtocol = {
-      id: `userAdded`,
+      slug: `userAdded`,
       name: `Your dApp`,
       chainId: 1,
       totalLiquidated: 0,
@@ -56,7 +59,10 @@ export const useOEVStore = defineStore("oev", function () {
   // Helper functions
 
   function getProtocolById(id) {
-    return protocols.value.find((protocol) => protocol.id === id);
+    if (protocols.value.length === 0) {
+      return {};
+    }
+    return protocols.value.find((protocol) => protocol.slug === id);
   }
 
   function getTotals() {
@@ -85,7 +91,7 @@ export const useOEVStore = defineStore("oev", function () {
 
     if (count > protocolCount.value) {
       const excessCount = count - protocolCount.value;
-      hideExcessProtocols(excessCount, protocol.id);
+      hideExcessProtocols(excessCount, protocol.slug);
     }
   }
 
@@ -94,7 +100,7 @@ export const useOEVStore = defineStore("oev", function () {
     let hiddenCount = 0;
     for (const protocol of protocols.value) {
       if (
-        protocol.id !== exemptedProtocolId &&
+        protocol.slug !== exemptedProtocolId &&
         !protocol.hide &&
         hiddenCount < excessCount
       ) {
@@ -116,6 +122,7 @@ export const useOEVStore = defineStore("oev", function () {
     isUserVisible,
     oevRaw,
     protocols,
+    oevTotals,
 
     // computed
     isAllHidden,

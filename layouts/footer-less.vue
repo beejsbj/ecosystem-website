@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 
-const loadingDone = ref(false);
+const loadingDone = ref(true);
 
 onMounted(() => {
   setTimeout(() => {
