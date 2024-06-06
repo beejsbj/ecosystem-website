@@ -1,5 +1,5 @@
 import { queryCache } from "~/server/services/cache";
-import { indexLiquidations } from "~/server/services/protocol-liquidation-data-extraction/liquidationHandler";
+import { indexLiquidations } from "../../../services/protocol-liquidation-data-extraction/liquidationHandler";
 import { ROLE } from "~/server/types";
 
 export default authenticated(
@@ -21,7 +21,7 @@ export default authenticated(
       return { message: "Indexing started" };
     } catch (err: any) {
       queryCache.del(cacheKey);
-      console.log("fetch oev data error  ", err);
+      console.log("/api/ecosystem-services/index-liquidation error  ", err);
       event.node.req.statusCode = 500;
       return {
         code: "ERROR",
