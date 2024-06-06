@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { syncProjectsToMongodb } from "./syncDb";
 
 export const isNumber = (n: string): boolean => {
   return !isNaN(parseFloat(n)) && isFinite(Number(n));
@@ -181,15 +180,8 @@ export const connectDB = async () => {
 
     await mongoose.connect(dbUrl);
 
-    // sync projects on server startup
     console.log(`db connected: on ${config.nodeEnv}`);
-
-    if (config.nodeEnv === "production") {
-      console.log("syncing projects");
-      await syncProjectsToMongodb();
-      console.log("projects synced");
-    }
   } catch (err) {
-    console.log("mongodb connection error ", err);
+    console.log("db connection error ", err);
   }
 };

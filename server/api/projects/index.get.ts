@@ -71,7 +71,7 @@ function applyFilters(
 
   if (chains && chains?.split(",")?.length > 0) {
     const chainsArray = chains.split(",").map((ele) => ele);
-    console.log("chainsArray ", chainsArray);
+
     selectionFilters.chains = (item) =>
       isItemsIncludes(chainsArray, item.chains);
   }

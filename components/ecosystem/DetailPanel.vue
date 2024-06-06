@@ -9,42 +9,10 @@ const showShareBox = ref(false);
 const loading = ref(false);
 
 const { verifyWallet } = useSiwe();
-const { submitUpvote } = useHttpCalls();
 const web3Store = useWeb3Store();
 
 const handleShare = async () => {
   showShareBox.value = !showShareBox.value;
-};
-
-const handleUpvote = async () => {
-  if (!web3Store.state?.isConnected) {
-    web3Store.func?.openModal();
-    return;
-  }
-
-  loading.value = true;
-  const { success: verificationSuccess, data: verificationPayload } =
-    await verifyWallet();
-
-  if (!verificationSuccess) {
-    loading.value = false;
-
-    return;
-  }
-
-  loading.value = true;
-
-  const payload = {};
-  const submitResult = await submitUpvote(
-    props.dapp?._id,
-    payload,
-    verificationPayload
-  );
-  if (submitResult.success) {
-    upvotes.value += 1;
-  }
-
-  loading.value = false;
 };
 
 onMounted(() => {

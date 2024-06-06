@@ -129,50 +129,6 @@ export const useHttpCalls = () => {
     }
   };
 
-  const submitArticle = async (articleForm, verificationPayload) => {
-    try {
-      const res = await axios.post("/api/articles", articleForm, {
-        headers: verificationPayload,
-      });
-
-      if (res.status === 201) {
-        return { success: true, message: "Article submitted" };
-      }
-
-      return { success: false, message: "Failed to uplaod article" };
-    } catch (error) {
-      console.log("submit response error ", {
-        error: error,
-      });
-      const errorMessage = error?.response?.data?.response?.response?.message;
-      return { success: false, message: errorMessage };
-    }
-  };
-
-  const submitUpvote = async (projectId, payload, verificationPayload) => {
-    try {
-      const res = await axios.post(
-        `/api/projects/project/${projectId}`,
-        payload,
-        {
-          headers: verificationPayload,
-        }
-      );
-
-      if (res.status === 201) {
-        return { success: true, message: "Upvote success" };
-      }
-
-      return { success: false, message: "Failed to perform upvote" };
-    } catch (error) {
-      console.log("upvote response error ", {
-        error: error,
-      });
-      const errorMessage = error?.response?.data?.response?.response?.message;
-      return { success: false, message: errorMessage };
-    }
-  };
-
   const fetchFeedNames = async () => {
     try {
       const response = await axios.get(FEED_NAME_API_ENDPOINT);
@@ -206,8 +162,6 @@ export const useHttpCalls = () => {
 
   return {
     submitProject,
-    submitArticle,
-    submitUpvote,
     fetchFeedNames,
     subscribeNewsletter,
   };

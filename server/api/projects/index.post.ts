@@ -1,9 +1,7 @@
-import { Project } from "~/server/models/Project";
 import { imageUploadHandler } from "../../utils/imageUpload";
 import { authenticated } from "../../utils/authenticated";
 import { type ProjectType } from "~/server/types";
-import slug from "slug";
-import { createPR } from "~/server/services/github";
+import { createPR, isProjectExists } from "~/server/services/github";
 
 export default authenticated(
   imageUploadHandler(
@@ -88,12 +86,9 @@ export default authenticated(
                   year: parseInt(year),
                 };
 
-          // check if project with same name already active
-          const existingProject = await Project.findOne({
-            name: payload.name,
-          });
+          const isExists = await isProjectExists(payload);
 
-          if (existingProject) {
+          if (isExists) {
             event.node.res.statusCode = 400;
             errors.push(`Project with name ${payload.name} already submitted`);
           }
@@ -105,21 +100,11 @@ export default authenticated(
             };
           }
 
-          // add slug field in  mongodb project collection to implement find by name slug
-          const createdProject = await new Project({
-            ...payload,
-            slug: slug(payload.name),
-          }).save();
-
-          // project json will be stored with active status in pull request for review
           payload.status = "active";
           // verify schema and create pr
-          const prStatus = await createPR(payload, createdProject.id);
+          const prStatus = await createPR(payload);
 
           if (!prStatus.success) {
-            // remove project data from db when build failed
-            await Project.findByIdAndDelete(createdProject.id);
-
             event.res.statusCode = 400;
             return {
               code: "BUILD_FAILED",
@@ -138,7 +123,7 @@ export default authenticated(
           event.node.res.statusCode = 500;
           return {
             code: "ERROR",
-            message: "Something went wrong.",
+            message: "Something went while adding your project!.",
           };
         }
       })
