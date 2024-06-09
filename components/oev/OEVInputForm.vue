@@ -47,37 +47,39 @@ function buttonHandle(event) {
 
 //watch
 
-watch(
-  form,
-  (newForm) => {
-    const tvl = Number(newForm.tvl);
-    const incentive = Number(newForm.incentive);
+// watch(
+//   form,
+//   (newForm) => {
+//     const tvl = Number(newForm.tvl);
+//     const incentive = Number(newForm.incentive);
 
-    oev.userTvl = tvl;
-    oev.userIncentive = incentive;
+//     oev.userTvl = tvl;
+//     oev.userIncentive = incentive;
 
-    // Calculate the total liquidated value, total incentive, total sent to builder, and total profit
-    const incentiveRate = incentive / 100;
-    const totalLiquidated = tvl * liquidationRate;
-    const totalIncentiveUSD = totalLiquidated * incentiveRate;
-    const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
-    const totalProfitUSD = totalIncentiveUSD * 0.25;
+//     // Calculate the total liquidated value, total incentive, total sent to builder, and total profit
+//     const incentiveRate = incentive / 100;
+//     const totalLiquidated = tvl * liquidationRate;
+//     const totalIncentiveUSD = totalLiquidated * incentiveRate;
+//     const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
+//     const totalProfitUSD = totalIncentiveUSD * 0.25;
 
-    if (!oev?.protocols) {
-      return;
-    }
-    // Update the userAdded protocol with the new values
-    oev.protocols[userDappIndex].totalLiquidated = totalLiquidated;
-    oev.protocols[userDappIndex].totalIncentiveUSD = totalIncentiveUSD;
-    oev.protocols[userDappIndex].totalSentToBuilderUSD = totalSentToBuilderUSD;
-    oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
-  },
-  { deep: true }
-);
+//     if (!oev?.protocols) {
+//       return;
+//     }
+//     // Update the userAdded protocol with the new values
+//     oev.protocols[userDappIndex].totalLiquidated = totalLiquidated;
+//     oev.protocols[userDappIndex].totalIncentiveUSD = totalIncentiveUSD;
+//     oev.protocols[userDappIndex].totalSentToBuilderUSD = totalSentToBuilderUSD;
+//     oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
+//   },
+//   { deep: true }
+// );
 </script>
 
 <template>
-  <SectionColumn>
+  <ContentsWrapper>
+    <h2 class="attention-voice">Calculate Your Protocol's Potential</h2>
+
     <FormKit
       id="oev-form"
       type="form"
@@ -88,7 +90,6 @@ watch(
       }"
       :config="{ validationVisibility: 'submit' }"
     >
-      <h2 class="solid-voice">Calculate Your Protocol's Potential</h2>
       <form-field>
         <FormKit
           type="mask"
@@ -135,7 +136,7 @@ watch(
         />
       </form-field>
     </FormKit>
-  </SectionColumn>
+  </ContentsWrapper>
 </template>
 
 <style scoped lang="scss">
@@ -143,18 +144,12 @@ form {
   display: grid;
   gap: var(--space-m);
   justify-content: center;
+  margin-top: var(--space-2xl);
 
-  --fk-font-size-input: var(--step-0);
+  :deep(.formkit-actions) {
+    margin-top: var(--space-m);
 
-  :deep(.formkit-wrapper) {
-    max-width: unset !important;
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-
-    h2,
-    :deep(.formkit-actions) {
+    @media (min-width: 768px) {
       grid-column: 1 / -1;
       justify-self: center;
     }

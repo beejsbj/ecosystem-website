@@ -142,40 +142,38 @@ const gridStarts = computed(() => {
 </script>
 
 <template>
-  <SectionColumn inner-class="wide">
-    <div class="chart-grid">
-      <h2 class="attention-voice">Protocol Performance Comparison</h2>
-      <!-- OEV Protocol List component -->
-      <div class="chart-actions">
-        <LazyOEVProtocolList />
-        <div class="legend">
-          <!--  -->
+  <div class="chart-grid">
+    <h2 class="attention-voice">Protocol Performance Comparison</h2>
+    <!-- OEV Protocol List component -->
+    <div class="chart-actions">
+      <div class="legend">
+        <!--  -->
 
-          <FormKit
-            type="checkbox"
-            label="Legend"
-            :options="bars"
-            v-model="visibleBars"
-          >
-            <template #label="{ option }">
-              <div class="icon-option">
-                <div class="legend-icon" :class="option.value"></div>
-                <span class="formkit-label">
-                  {{ option.label }}
-                </span>
-              </div>
-            </template>
-          </FormKit>
-        </div>
+        <FormKit
+          type="checkbox"
+          label="Legend"
+          :options="bars"
+          v-model="visibleBars"
+        >
+          <template #label="{ option }">
+            <div class="icon-option">
+              <div class="legend-icon" :class="option.value"></div>
+              <span class="formkit-label">
+                {{ option.label }}
+              </span>
+            </div>
+          </template>
+        </FormKit>
       </div>
-      <!-- OEV Interface Chart component -->
-      <ul class="bars" v-auto-animate>
-        <template v-for="(protocol, i) in oev.protocols">
-          <li v-if="!protocol.hide" :key="protocol.id">
-            <div
-              class="bar"
-              :class="{ userAdded: protocol.id === 'userAdded' }"
-              :style="`
+    </div>
+    <!-- OEV Interface Chart component -->
+    <ul class="bars" v-auto-animate>
+      <template v-for="(protocol, i) in oev.protocols">
+        <li v-if="!protocol.hide" :key="protocol.id">
+          <div
+            class="bar"
+            :class="{ userAdded: protocol.id === 'userAdded' }"
+            :style="`
 							 --bar-liquidated-height: ${barHeight(protocol.totalLiquidated)};
 							 --bar-totalSentToBuilderUSD-height: ${barHeight(
                  protocol.totalSentToBuilderUSD
@@ -185,62 +183,61 @@ const gridStarts = computed(() => {
 
 
 						 `"
+          >
+            <span
+              class="totalSentToBuilderUSD"
+              :class="{ hide: !showSentToBuilderBar }"
+              v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
             >
-              <span
-                class="totalSentToBuilderUSD"
-                :class="{ hide: !showSentToBuilderBar }"
-                v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
-              >
-                <span class="number solid-voice">
-                  ${{ formatNumber(protocol.totalSentToBuilderUSD) }}
-                </span>
+              <span class="number solid-voice">
+                ${{ formatNumber(protocol.totalSentToBuilderUSD) }}
               </span>
-              <span
-                class="profits"
-                :class="{ hide: !showProfits }"
-                v-tooltip.top-end="`$${protocol.totalProfitUSD}`"
-              >
-                <span class="number solid-voice">
-                  ${{ formatNumber(protocol.totalProfitUSD) }}
-                </span>
+            </span>
+            <span
+              class="profits"
+              :class="{ hide: !showProfits }"
+              v-tooltip.top-end="`$${protocol.totalProfitUSD}`"
+            >
+              <span class="number solid-voice">
+                ${{ formatNumber(protocol.totalProfitUSD) }}
               </span>
-              <span
-                class="incentives"
-                :class="{ hide: !showIncentives }"
-                v-tooltip.top-end="`$${protocol.totalIncentiveUSD}`"
-              >
-                <span class="number solid-voice">
-                  ${{ formatNumber(protocol.totalIncentiveUSD) }}
-                </span>
+            </span>
+            <span
+              class="incentives"
+              :class="{ hide: !showIncentives }"
+              v-tooltip.top-end="`$${protocol.totalIncentiveUSD}`"
+            >
+              <span class="number solid-voice">
+                ${{ formatNumber(protocol.totalIncentiveUSD) }}
               </span>
-              <span
-                class="liquidated"
-                :class="{ hide: !showLiquidatedBar }"
-                v-tooltip.top-end="`$${protocol.totalLiquidated}`"
-              >
-                <span class="number solid-voice">
-                  ${{ formatNumber(protocol.totalLiquidated) }}
-                </span>
+            </span>
+            <span
+              class="liquidated"
+              :class="{ hide: !showLiquidatedBar }"
+              v-tooltip.top-end="`$${protocol.totalLiquidated}`"
+            >
+              <span class="number solid-voice">
+                ${{ formatNumber(protocol.totalLiquidated) }}
               </span>
-            </div>
+            </span>
+          </div>
 
-            <IconWithChain
-              v-if="protocol.icon"
-              class="protocol-logo"
-              :image="protocol.icon ? protocol.icon : '/images/icons/dapp.svg'"
-              :id="protocol.chainId"
-            />
+          <IconWithChain
+            v-if="protocol.icon"
+            class="protocol-logo"
+            :image="protocol.icon ? protocol.icon : '/images/icons/dapp.svg'"
+            :id="protocol.chainId"
+          />
 
-            <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-            <p class="solid-voice protocol-name">
-              {{ protocol.name }}
-            </p>
-          </li>
-        </template>
-      </ul>
-      <!-- </div> -->
-    </div>
-  </SectionColumn>
+          <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
+          <p class="solid-voice protocol-name">
+            {{ protocol.name }}
+          </p>
+        </li>
+      </template>
+    </ul>
+    <!-- </div> -->
+  </div>
 </template>
 
 <style scoped lang="scss">

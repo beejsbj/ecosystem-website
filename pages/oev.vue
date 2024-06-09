@@ -27,34 +27,40 @@ oev.setProtocols(overview.value);
 <template>
   <ContentsWrapper>
     <!-- Page Title component with heading and notice voice -->
-    <PageTitle heading="OEV Watchtower">
-      <h2 class="notice-voice">
+
+    <OEVHero />
+
+    <SectionColumn class="form-chart-section">
+      <Transition name="fade" mode="out-in">
+        <LazyOEVInputForm v-if="!oev.userIncentive || !oev.userTvl" />
+        <LazyOEVDisplayText v-else />
+      </Transition>
+
+      <LazyOEVProtocolList />
+
+      <LazyOEVInterfaceChart />
+    </SectionColumn>
+
+    <!-- <PageTitle heading="OEV Watchtower"> -->
+    <!-- <h2 class="notice-voice">
         Understand how much you can capture with OEV Network*
-      </h2>
+      </h2> -->
 
-      <!-- OEV Summary Cards component -->
-      <OEVSummaryCards class="summary-cards" />
-
-      <p class="whisper-voice disclamer">
-        <!-- data starts frpm 2021 -->
-        *All data is based on records from 2021 onwards
-      </p>
-    </PageTitle>
+    <!-- </PageTitle> -->
 
     <!--  -->
-    <LazyOEVInputForm />
+    <!-- <LazyOEVInputForm /> -->
 
-    <LazyOEVInterfaceChart />
+    <!-- <LazyOEVInterfaceChart /> -->
 
     <!-- displaying user's TVL and savings -->
-    <LazyOEVDisplayText />
 
-    <ClientOnly>
-      <LazyOEVProtocolChart />
-    </ClientOnly>
+    <!-- <ClientOnly> -->
+    <!-- <LazyOEVProtocolChart /> -->
+    <!-- </ClientOnly> -->
 
     <!--  displaying a message about data verification -->
-    <SectionColumn>
+    <!-- <SectionColumn>
       <text-content>
         <p class="notice-voice">
           You can verify this data by
@@ -66,7 +72,7 @@ oev.setProtocols(overview.value);
           </NuxtLink>
         </p>
       </text-content>
-    </SectionColumn>
+    </SectionColumn> -->
   </ContentsWrapper>
 </template>
 
@@ -77,13 +83,9 @@ oev.setProtocols(overview.value);
   }
 }
 
-:deep(h1) {
-  text-align: center;
-}
-
-.page-title h2 {
-  text-align: center;
-  margin-top: var(--space-s);
+.form-chart-section :deep(inner-column) {
+  background: var(--gradient-radial-green);
+  border-radius: calc(var(--corners) * 2);
 }
 
 text-content {
@@ -100,10 +102,5 @@ text-content {
       --font-size: var(--step-2);
     }
   }
-}
-
-.disclamer {
-  margin-top: var(--space-2xs);
-  text-align: center;
 }
 </style>

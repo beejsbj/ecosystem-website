@@ -1,4 +1,6 @@
 <script setup>
+import { button } from "@formkit/icons";
+
 const oev = useOEVStore();
 
 // Compute the user's total liquidated value (tvl) and total savings using OEV
@@ -7,31 +9,41 @@ const userSaving = computed(() =>
     ? 0
     : oev.getProtocolById("userAdded").totalSentToBuilderUSD
 );
+
+function buttonHandle() {
+  oev.userIncentive = 0;
+  oev.userTvl = 0;
+}
 </script>
 
 <template>
-  <SectionColumn class="user-tvl-text">
+  <ContentsWrapper class="user-tvl-text">
     <div>
-      <p class="loud-voice">
-        With a TVL of
+      <p class="attention-voice">
+        With a
+        <span class="highlight-green">
+          ${{ oev.userIncentive ? oev.userIncentive : "5%" }}</span
+        >
+        incentive rate and TVL of
         <span class="highlight-green">
           ${{ oev.userTvl ? formatNumber(oev.userTvl) : "1B" }}
         </span>
-        <span v-if="!oev.userTvl">
-          and a <span class="highlight-green">5%</span> incentive rate
-        </span>
         you would recapture
-        <span class="highlight-green">
-          ${{ oev.userTvl ? formatNumber(userSaving) : "1.9M" }}
-        </span>
-        per year through the OEV Network**
       </p>
-      <p class="whisper-voice">
+      <p class="booming-voice highlight-green">
+        ${{ oev.userTvl ? formatNumber(userSaving) : "1.9M" }} per year
+      </p>
+      <p class="notice-voice">Through the OEV Network**</p>
+
+      <p class="calm-voice">
         **This is an estimate based on the current liquidation rate of 5% of TVL
         annually
       </p>
+      <button class="button outline firm-voice" @click="buttonHandle">
+        Calculate Again
+      </button>
     </div>
-  </SectionColumn>
+  </ContentsWrapper>
 </template>
 
 <style lang="scss" scoped>
@@ -40,9 +52,6 @@ div {
   display: grid;
   place-items: center;
   text-align: center;
-  @media (min-width: 768px) {
-    padding: var(--space-3xl);
-  }
 
   .loud-voice {
     @media (max-width: 400px) {
@@ -53,5 +62,18 @@ div {
 
 p {
   line-height: 1.3;
+  text-wrap: balance;
+
+  + .booming-voice {
+    margin-top: 0;
+  }
+}
+
+.calm-voice {
+  color: var(--gray);
+}
+
+button {
+  margin-top: var(--space-m);
 }
 </style>

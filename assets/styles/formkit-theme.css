@@ -135,9 +135,7 @@
   --fk-border-radius-tr: 1px;
   --fk-border-radius-bl: 1px;
   --fk-border-radius-br: 1px;
-  --fk-border-radius: var(--fk-border-radius-tl, 1px)
-    var(--fk-border-radius-tr, 0.25em) var(--fk-border-radius-br, 0.25em)
-    var(--fk-border-radius-bl, 0.25em);
+  --fk-border-radius: calc(var(--corners) / 2);
   --fk-border-radius-full: 999em;
   --fk-focus-ring: var(--fk-border-width-focus);
   --fk-error-ring: var(--fk-border-width-focus);

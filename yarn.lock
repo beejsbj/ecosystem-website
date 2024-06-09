@@ -1299,7 +1299,12 @@
     "@formkit/inputs" "1.6.2"
     "@formkit/utils" "1.6.2"
 
-"@formkit/auto-animate@^0.8.1", "@formkit/auto-animate@latest":
+"@formkit/auto-animate@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@formkit/auto-animate/-/auto-animate-0.8.2.tgz#24a56e816159fd5585405dcee6bb992f81c27585"
+  integrity sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ==
+
+"@formkit/auto-animate@latest":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@formkit/auto-animate/-/auto-animate-0.8.1.tgz#bcaba2969609ca3a7453eacd42b383a2739dfa35"
   integrity sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig==
@@ -2121,7 +2126,7 @@
     unimport "^3.7.1"
     untyped "^1.4.2"
 
-"@nuxt/kit@^3.10.3":
+"@nuxt/kit@^3.10.3", "@nuxt/kit@^3.6.5":
   version "3.11.2"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.11.2.tgz#dfc43c05992691bcd6aa58c14f88cf43e3abb788"
   integrity sha512-yiYKP0ZWMW7T3TCmsv4H8+jEsB/nFriRAR8bKoSqSV9bkVYWPE36sf7JDux30dQ91jSlQG6LQkB3vCHYTS2cIg==
@@ -3645,6 +3650,11 @@
     "@tufjs/canonical-json" "2.0.0"
     minimatch "^9.0.3"
 
+"@tusbar/cache-control@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tusbar/cache-control/-/cache-control-1.0.1.tgz#f5ddf0f8def4de487901dff2c55970c3aee61e2a"
+  integrity sha512-2X0JN3qtmEKb8Xzref5eP5PefejMjwxNhsSRFCoYAt5j0XreFdE5HD37/JRL2/ywolGrL8LTvQ91jUmBgvYbXQ==
+
 "@types/body-parser@*":
   version "1.19.5"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.5.tgz#04ce9a3b677dc8bd681a17da1ab9835dc9d3ede4"
@@ -3947,20 +3957,6 @@
     "@unhead/shared" "1.8.10"
     hookable "^5.5.3"
     unhead "1.8.10"
-
-"@upstash/redis@1.24.3":
-  version "1.24.3"
-  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.24.3.tgz#0247250f7e26b6923e6ce4f348ce08f7bbdc6222"
-  integrity sha512-gw6d4IA1biB4eye5ESaXc0zOlVQI94aptsBvVcTghYWu1kRmOrJFoMFEDCa8p5uzluyYAOFCuY2GWLR6O4ZoIw==
-  dependencies:
-    crypto-js "^4.2.0"
-
-"@vercel/kv@^0.2.2":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@vercel/kv/-/kv-0.2.4.tgz#87b1a187d737330583b3c308c0f0f9cb2ca24a25"
-  integrity sha512-wbIOOXhg6MzmNMzKFSWbbLAS65hCZcJN33z1coENzI1M0fOX55yE9v9LwVGqkzdItp3eZsv6pYvwcmGtllyLTw==
-  dependencies:
-    "@upstash/redis" "1.24.3"
 
 "@vercel/nft@^0.24.3":
   version "0.24.4"
@@ -5693,11 +5689,6 @@ crossws@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/crossws/-/crossws-0.1.1.tgz#3a85a8140568e4828d9747a884171ea7e6a8bbe2"
   integrity sha512-c9c/o7bS3OjsdpSkvexpka0JNlesBF2JU9B2V1yNsYGwRbAafxhJQ7VI9b48D5bpONz/oxbPGMzBojy9sXoQIQ==
-
-crypto-js@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
-  integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
 
 css-declaration-sorter@^7.1.1:
   version "7.1.1"
@@ -9259,6 +9250,14 @@ nuxt-lodash@^2.5.3:
     "@types/lodash-es" "^4.17.10"
     lodash-es "^4.17.21"
 
+nuxt-multi-cache@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/nuxt-multi-cache/-/nuxt-multi-cache-3.1.1.tgz#2b21d48e60c6f99f96ad7e973a069d6acc8909de"
+  integrity sha512-dwffggur9HFz49CsneMgIn5AFhxyqTzrwqvZcI5ODKKuOLsId3xI3XKSQsBk/Ue5E32LXqJdyKPdhyKoEpsU8g==
+  dependencies:
+    "@nuxt/kit" "^3.6.5"
+    "@tusbar/cache-control" "^1.0.1"
+
 nuxt@^3.10.1:
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.10.2.tgz#ce5a655808dcefff62dadef3a8f34cb010a69c37"
@@ -12018,6 +12017,11 @@ vue-virtual-scroller@2.0.0-beta.8:
     mitt "^2.1.0"
     vue-observe-visibility "^2.0.0-alpha.1"
     vue-resize "^2.0.0-alpha.1"
+
+vue3-toastify@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/vue3-toastify/-/vue3-toastify-0.2.1.tgz#d3999c9f29add53416b0bc23f3ede81cf724b654"
+  integrity sha512-u4i5LCu1q5qs4L4Kbjb4u8NipCS8ox1fCHQ6XFS62676xnA6Q/AJRpZEkAurTMp723LeH6eQX6k9+24bKf1T4Q==
 
 vue@^3.4.19:
   version "3.4.19"

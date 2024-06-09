@@ -96,45 +96,6 @@ export default defineFormKitConfig(() => {
   };
 });
 
-// functions
-
-// function handleSuffixClick(node, event) {
-//   if (!node.props.help) return;
-//   const el = event.target;
-
-//   const tooltip = createTooltip(el, {
-//     triggers: [],
-//     content: node.props.help,
-//   });
-
-//   tooltip.show();
-
-//   setTimeout(() => {
-//     tooltip.hide();
-//     // Transition
-//     setTimeout(() => {
-//       destroyTooltip(el);
-//     }, 400);
-//   }, 3000);
-// }
-
-// function showTooltip(content, el) {
-// 	  const tooltip = createTooltip(el, {
-// 	 triggers: [],
-// 	 content,
-//   });
-
-//   tooltip.show();
-// }
-
-// function hideTooltip(el) {
-// 	tooltip.hide();
-
-//   setTimeout(() => {
-// 	 destroyTooltip(el);
-//   }, 400);
-// }
-
 // plugins ////////////////
 //
 function addSuffixHelpTooltipPlugin(node) {
@@ -261,7 +222,7 @@ function addAsteriskPlugin(node) {
             attrs: {
               class: "text-action-error-500",
             },
-            children: ["*"],
+            children: [" *"],
           },
         ],
       };
