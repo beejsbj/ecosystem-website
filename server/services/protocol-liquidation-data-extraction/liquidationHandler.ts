@@ -62,7 +62,7 @@ export const indexLiquidations = async (cacheKey: string) => {
     lastGraphDocId,
     currentProtocolIndex
   );
-  console.log({ liquidations, nextLastDocId });
+  console.log({ liquidationCount: liquidations.length, nextLastDocId });
   if (liquidations.length === 0) {
     await updateLambdaProgress(currentProtocolIndex);
     queryCache.del(cacheKey);
@@ -75,7 +75,6 @@ export const indexLiquidations = async (cacheKey: string) => {
     liquidations,
     currentProtocolIndex
   );
-  // console.log({ finalLiquidationData });
 
   console.log(
     `######### Updating ${finalLiquidationData.length} liquidations to db`
