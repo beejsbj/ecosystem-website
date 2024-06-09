@@ -5,86 +5,72 @@ const oev = useOEVStore();
 const protocolOptions = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
 
-  return protocols.map((protocol) => {
-    return {
+  const groupedByChain = protocols.reduce((acc, protocol) => {
+    const chainId = protocol.chainId;
+    if (!acc[chainId]) {
+      acc[chainId] = {};
+      acc[chainId].group = chainId;
+      acc[chainId].options = [];
+    }
+    acc[chainId].options.push({
       label: protocol.name,
-      value: protocol.id,
+      value: protocol.slug,
       icon: protocol.icon,
       chainId: protocol.chainId,
       checked: !protocol.hide,
-      toggle: () => {
-        buttonHandle(protocol);
-      },
-    };
-  });
+    });
+    return acc;
+  }, {});
+
+  const options = Object.values(groupedByChain);
+
+  return options;
 });
-
-const modeledCheckboxes = computed(() => {
-  const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
-  const filtered = protocols.filter((protocol) => !protocol.hide);
-
-  return filtered.map((protocol) => protocol.id);
-});
-
-const areChecked = computed(() => {
-  return (
-    protocolOptions.value.filter((checkbox) => checkbox.checked).length > 3
-  );
-});
-
-async function buttonHandle(protocol) {
-  // Call the toggleHide method
-  oev.toggleHide(protocol);
-}
 </script>
 
 <template>
   <div class="protocol-list-wrapper">
-    <!-- <FormKit
-      type="checkbox"
-      :label="`Select upto ${
-        oev.isUserVisible ? '3' : '4'
-      } Protocols to Compare`"
-      :options="protocolOptions"
-      v-model="modeledCheckboxes"
-      options-class="protocol-list"
-      :options-class="{ enabled: areChecked }"
-    >
-      <template #label="{ option }">
-        <div class="icon-option">
-          <IconWithChain :image="option?.icon" :id="option?.chainId" />
-          <span class="formkit-label">
-            {{ option.label }}
-          </span>
-        </div>
-      </template>
-    </FormKit> -->
+    <h2 class="attention-voice">How your dApp Compares</h2>
 
-    <FormKit
-      type="dropdown"
-      popover
-      multiple
-      :label="`Select upto ${
-        oev.isUserVisible ? '3' : '4'
-      } Protocols to Compare`"
-      :options="protocolOptions"
-      :key="protocolOptions"
-      options-appearance="checkbox"
-      v-model="modeledCheckboxes"
-    >
-      <template #option="{ option }">
-        <div class="icon-option" @click="option.toggle">
-          <IconWithChain
-            v-if="option.icon"
-            :image="option.icon"
-            :id="option.chainId"
-          />
-          <span class="">
-            {{ option.label }}
-          </span>
-        </div>
-      </template>
-    </FormKit>
+    <h3 class="notice-voice">
+      Select {{ oev.isUserVisible ? "3" : "4" }} dApps to Compare
+    </h3>
+    <div class="dropdown-group">
+      <FormKit type="group" v-model="oev.userSelectedProtocols">
+        <FormKit
+          v-for="i in oev.isUserVisible ? 3 : 4"
+          type="dropdown"
+          popover
+          :label="`dApp ${i}`"
+          :name="`dApp-${i}`"
+          :options="protocolOptions"
+          :key="protocolOptions"
+          options-appearance="checkbox"
+        >
+          <template #groupLabel="{ option }">
+            <div class="icon-option">
+              <ChainIcon :id="option.group" />
+
+              <span> {{ getChainName(option.group) }} </span>
+            </div>
+          </template>
+
+          <template #option="{ option }">
+            <div class="icon-option">
+              <IconWithChain
+                v-if="option.icon"
+                :image="option.icon"
+                :id="option.chainId"
+              />
+              <span class="">
+                {{ option.label }}
+                <!-- {{ getChainName(option.chainId) }} -->
+              </span>
+            </div>
+          </template>
+        </FormKit>
+      </FormKit>
+    </div>
   </div>
 </template>
 
@@ -92,19 +78,30 @@ async function buttonHandle(protocol) {
 /* Apply styles only to this component */
 
 .protocol-list-wrapper {
+  margin-top: var(--space-3xl);
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-l);
   align-content: start;
+}
+
+.dropdown-group {
+  display: grid;
+  gap: var(--space-l);
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 :deep(.formkit-outer) {
   /* max-height: 300px; */
   /* overflow-y: scroll; */
   /* overscroll-behavior: contain; */
-  max-width: 250px;
+  /* max-width: 250px; */
+  border-bottom: var(--border-dark);
 
   @media (min-width: 768px) {
-    max-width: 270px;
+    /* max-width: 270px; */
   }
 }
 
@@ -117,6 +114,11 @@ li {
   li:not(:has(input:checked)) {
     filter: grayscale(0.8) opacity(0.6);
   }
+}
+
+h2,
+h3 {
+  text-align: center;
 }
 
 /* :deep(.formkit-fieldset, .formkit-wrapper) {

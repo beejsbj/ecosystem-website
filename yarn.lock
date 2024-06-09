@@ -30,13 +30,20 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.7.tgz#26ea493a831b4f3a85475e7157be02fb4eab51fb"
   integrity sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==
 
-"@api3/chains@^4.13.1":
-  version "4.13.1"
-  resolved "https://registry.yarnpkg.com/@api3/chains/-/chains-4.13.1.tgz#a45cdcf476638cca1992779026c74680e1605f1a"
-  integrity sha512-JvvZBsZT0WcfrbXJAWd9ha7JPqOcXiP9uJfa7vqRD65WNbm5H8R91QR6at7JQyIi9HzSwTeiOaKVKGjrfHaUsg==
+"@api3/chains@^7.1.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@api3/chains/-/chains-7.2.0.tgz#f1bc87481f5fd14859ff2cd9e6d46f3371e6ee31"
+  integrity sha512-AYF7zWIwgtiF4e8CFEsAu/gviZ9bT/JZHwIdzHOiYl9W9nLgVJEJL8gpv3YNzFbYqLuu94VlbaWjQOqm22gr/A==
   dependencies:
-    viem "^2.7.18"
-    zod "^3.22.4"
+    viem "^2.13.3"
+    zod "^3.23.8"
+
+"@api3/logos@^0.1.30":
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/@api3/logos/-/logos-0.1.31.tgz#60fcc18cab61e933b2bf81888dfd5fb4c8e4f188"
+  integrity sha512-lTAUkTmE7ydeLf0jjhB+YM/Lv5Ykn1PkV4jr2OQgcnraMEHVe1xWwcLjk68iEXjC+O2YSmfPgIF/blfh1utEIQ==
+  dependencies:
+    camelcase "^6.3.0"
 
 "@aws-crypto/crc32@3.0.0":
   version "3.0.0"
@@ -2695,13 +2702,6 @@
     "@parcel/watcher-win32-arm64" "2.4.0"
     "@parcel/watcher-win32-ia32" "2.4.0"
     "@parcel/watcher-win32-x64" "2.4.0"
-
-"@phase21/logos@^2.10.2":
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/@phase21/logos/-/logos-2.10.2.tgz#66391847deeabe1eccb3e087a64f8d0496578ba7"
-  integrity sha512-qfTUfwtIcK/7yv3692i+nVp6Zu4Tdi5YaOcEefIT2GJAs3gNJ66PGiIC+OLk3sa7FJYZymOTe6Vty3U8HFZ6UA==
-  dependencies:
-    camelcase "^6.3.0"
 
 "@pinia/nuxt@^0.4.9":
   version "0.4.11"
@@ -7689,6 +7689,11 @@ isows@1.0.3:
   resolved "https://registry.yarnpkg.com/isows/-/isows-1.0.3.tgz#93c1cf0575daf56e7120bab5c8c448b0809d0d74"
   integrity sha512-2cKei4vlmg2cxEjm3wVSqn8pcoRF/LX/wpifuuNquFO4SQmPwarClT+SUCA2lt+l581tTeZIPIZuIDo2jWN1fg==
 
+isows@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/isows/-/isows-1.0.4.tgz#810cd0d90cc4995c26395d2aa4cfa4037ebdf061"
+  integrity sha512-hEzjY+x9u9hPmBom9IIAqdJCwNLax+xrPb51vEPpERoFlIxgmZcHzsT5jKG06nvInKOBGvReAVz80Umed5CczQ==
+
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
@@ -11813,10 +11818,10 @@ viem@^1.0.0, viem@^1.4.2, viem@^1.6.0:
     isows "1.0.3"
     ws "8.13.0"
 
-viem@^2.7.18:
-  version "2.8.13"
-  resolved "https://registry.yarnpkg.com/viem/-/viem-2.8.13.tgz#9ca35d41524fce9f80f48a4e1b2328b2745af773"
-  integrity sha512-jEbRUjsiBwmoDr3fnKL1Bh1GhK5ERhmZcPLeARtEaQoBTPB6bcO2siKhNPVOF8qrYRnGHGQrZHncBWMQhTjGYg==
+viem@^2.13.3:
+  version "2.13.7"
+  resolved "https://registry.yarnpkg.com/viem/-/viem-2.13.7.tgz#c1153c02f7ffaf0263d784fc1d4e4ffa3f66c24a"
+  integrity sha512-SZWn9LPrz40PHl4PM2iwkPTTtjWPDFsnLr32UwpqC/Z5f0AwxitjLyZdDKcImvbWZ3vLQ0oPggR1aLlqvTcUug==
   dependencies:
     "@adraffy/ens-normalize" "1.10.0"
     "@noble/curves" "1.2.0"
@@ -11824,7 +11829,7 @@ viem@^2.7.18:
     "@scure/bip32" "1.3.2"
     "@scure/bip39" "1.2.1"
     abitype "1.0.0"
-    isows "1.0.3"
+    isows "1.0.4"
     ws "8.13.0"
 
 vite-hot-client@^0.2.3:
@@ -12302,10 +12307,15 @@ zip-stream@^5.0.1:
     compress-commons "^5.0.1"
     readable-stream "^3.6.0"
 
-zod@^3.21.4, zod@^3.22.4:
+zod@^3.21.4:
   version "3.22.4"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
   integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
+
+zod@^3.23.8:
+  version "3.23.8"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
+  integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==
 
 zustand@^4.3.1:
   version "4.5.0"

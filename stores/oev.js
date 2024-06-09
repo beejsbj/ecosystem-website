@@ -4,6 +4,8 @@ export const useOEVStore = defineStore("oev", function () {
   const userTvl = ref(0);
   const userIncentive = ref(0);
 
+  const userSelectedProtocols = ref({});
+
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
   const protocols = ref([]);
@@ -119,6 +121,7 @@ export const useOEVStore = defineStore("oev", function () {
     // variables
     userTvl,
     userIncentive,
+    userSelectedProtocols,
     isUserVisible,
     oevRaw,
     protocols,

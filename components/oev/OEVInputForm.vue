@@ -35,8 +35,8 @@ function buttonHandle(event) {
   oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
 
   //
-  oev.hideAll(); // Hide all protocols
-  oev.protocols[userDappIndex].hide = false; // Unhide the userAdded protocol
+  oev.userSelectedProtocols = {}; // Hide all protocols
+  oev.userSelectedProtocols["dApp-1"] = "userAdded";
 
   // Scroll to the next section
   const section = document.querySelector(".chart-grid");
@@ -148,11 +148,9 @@ form {
 
   :deep(.formkit-actions) {
     margin-top: var(--space-m);
+    justify-self: center;
 
-    @media (min-width: 768px) {
-      grid-column: 1 / -1;
-      justify-self: center;
-    }
+    grid-column: 1 / -1;
   }
 }
 

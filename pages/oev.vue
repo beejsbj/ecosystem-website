@@ -86,6 +86,8 @@ oev.setProtocols(overview.value);
 .form-chart-section :deep(inner-column) {
   background: var(--gradient-radial-green);
   border-radius: calc(var(--corners) * 2);
+  display: grid;
+  gap: var(--space-l);
 }
 
 text-content {
