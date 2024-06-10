@@ -1,8 +1,5 @@
 import axios from "axios";
-import localFeedNames from "../stores/feedNames.json";
-
-const FEED_NAME_API_ENDPOINT =
-  "https://db-api-prod.api3.org/api/dapis-grouped?take=300&currentPage=1&sort=&sortDirection=&search=&categories=&chains=&sources=&statuses=";
+import { dapis } from "@api3/dapi-management";
 
 export const useHttpCalls = () => {
   const submitProject = async (dappForm, images, verificationPayload) => {
@@ -175,14 +172,12 @@ export const useHttpCalls = () => {
 
   const fetchFeedNames = async () => {
     try {
-      const response = await axios.get(FEED_NAME_API_ENDPOINT);
+      const response = dapis?.map((el) => el.name);
 
-      const feedNames = response.data?.dapis?.map((el) => el?.name);
-
-      return feedNames;
+      return response;
     } catch (error) {
-      console.log("failed to fetch feed names", error);
-      return localFeedNames;
+      console.log("failed to laod feed names", error);
+      return [];
     }
   };
 
