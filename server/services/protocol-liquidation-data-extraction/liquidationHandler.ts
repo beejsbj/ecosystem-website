@@ -10,6 +10,8 @@ import { fetchLiquidationDataFromGraph } from "./graph";
 import config from "./config.json";
 import type { Liquidation } from "../types";
 import { queryCache } from "../cache";
+import mongoose from "mongoose";
+import { connectDB } from "../helper";
 
 async function doUpdate(
   liquidations: Liquidation[],
@@ -33,6 +35,8 @@ async function doUpdate(
 
 export const indexLiquidations = async (cacheKey: string) => {
   console.log("####### Starting Liquidation Extraction ##########");
+
+  await connectDB();
 
   const lastCheckedProtocolIndex = await getLastProtocolIndex();
 
@@ -63,6 +67,7 @@ export const indexLiquidations = async (cacheKey: string) => {
     currentProtocolIndex
   );
   console.log({ liquidationCount: liquidations.length, nextLastDocId });
+  await connectDB();
   if (liquidations.length === 0) {
     await updateLambdaProgress(currentProtocolIndex);
     queryCache.del(cacheKey);
@@ -79,6 +84,7 @@ export const indexLiquidations = async (cacheKey: string) => {
   console.log(
     `######### Updating ${finalLiquidationData.length} liquidations to db`
   );
+  await connectDB();
   await doUpdate(finalLiquidationData, nextLastDocId, currentProtocolIndex);
   console.log("########### All liquidations updated ##############");
 

@@ -172,6 +172,11 @@ export interface Status {
 export const connectDB = async () => {
   const config = useRuntimeConfig();
 
+  if (mongoose.connection.readyState === 1) {
+    console.log(`db already connected: on ${config.nodeEnv}`);
+    return;
+  }
+
   try {
     const dbUrl =
       config.nodeEnv === "production"

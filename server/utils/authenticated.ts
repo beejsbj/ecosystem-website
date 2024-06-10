@@ -10,13 +10,13 @@ export const authenticated = (
 ) =>
   defineEventHandler(async (event: any) => {
     try {
-      const { signature, message, address, nonce, api_key } =
+      const { signature, message, address, nonce, apikey } =
         event.node.req.headers;
 
       if (role === ROLE.SERVICE_WEBHOOK) {
         const config = useRuntimeConfig();
 
-        if (config.serviceApiKey !== api_key) {
+        if (config.serviceApiKey !== apikey) {
           event.node.res.statusCode = 401;
           return {
             code: "AuthorizationFailed",
