@@ -218,9 +218,29 @@ onMounted(() => {
   <SectionColumn inner-class="wide">
     <div class="chart-grid">
       <h2 class="attention-voice">Historic Liquidation Data</h2>
+      <FormKit
+        type="checkbox"
+        label="Legend"
+        :options="legendItems"
+        v-model="legendCheckboxes"
+        v-if="ui.isDesktop"
+      >
+        <template #label="{ option }">
+          <div class="icon-option">
+            <div
+              class="legend-icon"
+              :style="`background-color: ${option.fillStyle}`"
+            ></div>
+            <span class="formkit-label">
+              {{ option.label }}
+            </span>
+          </div>
+        </template>
+      </FormKit>
       <div class="actions">
         <!--  -->
         <FormKit
+          id="dapp-dropdown"
           type="dropdown"
           v-model="selectedDataset"
           :options="inputProtocols"
@@ -240,20 +260,26 @@ onMounted(() => {
           </template>
         </FormKit>
         <!--  -->
-        <FormKit type="checkbox" label="Logarithmic" v-model="isLogarithmic" />
-
+        <FormKit
+          name="logarithmic-checkbox"
+          type="checkbox"
+          label="Logarithmic"
+          v-model="isLogarithmic"
+        />
+        <!--  -->
         <FormKit
           type="radio"
           label="Select Period"
           v-model="selectedPeriod"
           :options="periodOptions"
         />
-
+        <!--  -->
         <FormKit
           type="checkbox"
           label="Legend"
           :options="legendItems"
           v-model="legendCheckboxes"
+          v-if="!ui.isDesktop"
         >
           <template #label="{ option }">
             <div class="icon-option">
@@ -285,6 +311,17 @@ onMounted(() => {
     order: 2;
   }
 
+  > .formkit-outer {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    :deep(.formkit-options) {
+      display: flex;
+      gap: var(--space-m);
+      // justify-content: center;
+    }
+  }
+
   @media (min-width: 1000px) {
     grid-template-columns: repeat(12, 1fr);
 
@@ -305,7 +342,17 @@ h2 {
 div.actions {
   display: grid;
   gap: var(--space-m);
-  align-content: center;
+  align-content: start;
+  grid-template-columns: 1fr 1.5fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: unset;
+  }
+
+  .formkit-outer:nth-child(1),
+  .formkit-outer:nth-child(2) {
+    grid-column: 1 / -1;
+  }
 
   .buttons-content {
     display: flex;
@@ -327,11 +374,16 @@ div.actions {
       text-transform: capitalize;
     }
   }
+
+  .formkit-outer:nth-child(4) :deep(.icon-option) {
+    padding: 0;
+  }
 }
 
 .legend-icon {
   aspect-ratio: 1/1;
-  width: 24px;
+  min-width: 18px;
+  max-width: 18px;
   background: var(--background);
 }
 </style>

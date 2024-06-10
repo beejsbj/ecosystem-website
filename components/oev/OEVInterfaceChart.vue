@@ -4,26 +4,26 @@ import formatNumber from "@/utils/formatNumber";
 const oev = useOEVStore();
 
 const showLiquidatedBar = ref(false);
-const showIncentives = ref(true);
+const showIncentives = ref(false);
 const showProfits = ref(true);
 const showSentToBuilderBar = ref(true);
 
-const visibleBars = ref(["totalSentToBuilderUSD", "profits", "incentives"]);
+const visibleBars = ref(["totalSentToBuilderUSD", "profits"]);
 
 const bars = [
   {
-    label: "Total Sent to Builder",
+    label: "blockspace auction bribes",
     value: "totalSentToBuilderUSD",
     color: "hsla(160, 69%, 69%, 1)",
     attrs: {
-      label: "Total Sent to Builder",
+      label: "Blockspace auction bribes",
       onchange: () => {
         toggleSentToBuilder();
       },
     },
   },
   {
-    label: "Total Profits",
+    label: "liquidator profits",
     value: "profits",
     color: "hsla(255, 34%, 70%, 1)",
 
@@ -55,22 +55,15 @@ const bars = [
   },
 ];
 
-function toggleLiquidated() {
-  showLiquidatedBar.value = !showLiquidatedBar.value;
-}
-function toggleSentToBuilder() {
-  showSentToBuilderBar.value = !showSentToBuilderBar.value;
-}
-function toggleProfits() {
-  showProfits.value = !showProfits.value;
-}
-function toggleIncentives() {
-  showIncentives.value = !showIncentives.value;
-}
+const visibleProtocols = computed(() => {
+  return oev.protocols.filter((protocol) => {
+    return oev.isProtocolVisible(protocol);
+  });
+});
 
 const maxHeight = computed(() => {
   //check if protocols have hide, use the protocol with the highest value
-  const protocols = oev.protocols.filter((protocol) => !protocol.hide);
+  const protocols = visibleProtocols.value;
 
   let liquidatedMax = Math.max(
     ...protocols.map((protocol) => protocol.totalLiquidated)
@@ -113,10 +106,6 @@ const maxHeight = computed(() => {
   );
 });
 
-function barHeight(value) {
-  return (value / maxHeight.value) * 150;
-}
-
 const gridCount = computed(() => {
   let count = 0;
   showLiquidatedBar.value ? count++ : count;
@@ -139,11 +128,29 @@ const gridStarts = computed(() => {
 
   return starts;
 });
+
+//
+
+function toggleLiquidated() {
+  showLiquidatedBar.value = !showLiquidatedBar.value;
+}
+function toggleSentToBuilder() {
+  showSentToBuilderBar.value = !showSentToBuilderBar.value;
+}
+function toggleProfits() {
+  showProfits.value = !showProfits.value;
+}
+function toggleIncentives() {
+  showIncentives.value = !showIncentives.value;
+}
+
+function barHeight(value) {
+  return (value / maxHeight.value) * 150;
+}
 </script>
 
 <template>
   <div class="chart-grid">
-    <h2 class="attention-voice">Protocol Performance Comparison</h2>
     <!-- OEV Protocol List component -->
     <div class="chart-actions">
       <div class="legend">
@@ -168,11 +175,11 @@ const gridStarts = computed(() => {
     </div>
     <!-- OEV Interface Chart component -->
     <ul class="bars" v-auto-animate>
-      <template v-for="(protocol, i) in oev.protocols">
-        <li v-if="!protocol.hide" :key="protocol.id">
+      <template v-for="(protocol, i) in visibleProtocols" :key="protocol.slug">
+        <li>
           <div
             class="bar"
-            :class="{ userAdded: protocol.id === 'userAdded' }"
+            :class="{ userAdded: protocol.slug === 'userAdded' }"
             :style="`
 							 --bar-liquidated-height: ${barHeight(protocol.totalLiquidated)};
 							 --bar-totalSentToBuilderUSD-height: ${barHeight(
@@ -243,30 +250,27 @@ const gridStarts = computed(() => {
 <style scoped lang="scss">
 .chart-grid {
   display: grid;
-  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+
+  gap: var(--space-s);
   position: relative;
-
-  .chart-actions {
-    order: 2;
-  }
-
-  @media (min-width: 1000px) {
-    grid-template-columns: repeat(12, 1fr);
-
-    .bars {
-      grid-column: span 9;
-    }
-    .chart-actions {
-      grid-column: span 3;
-      order: unset;
-    }
-  }
 }
 
 .chart-actions {
   display: grid;
   gap: var(--space-s);
   align-content: start;
+
+  order: 2;
+
+  @media (min-width: 768px) {
+    order: unset;
+
+    :deep(.formkit-options) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
 }
 
 h2 {
@@ -419,6 +423,7 @@ li {
     gap: var(--space-3xs);
     align-items: end;
     grid-template-columns: repeat(var(--grid-count), 1fr);
+    isolation: isolate;
 
     transition: 0.2s ease-in-out;
 

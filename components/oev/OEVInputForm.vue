@@ -15,8 +15,12 @@ const form = ref({}); // Reference to the form element
 
 // Function to handle the button click event
 function buttonHandle(event) {
-  const tvl = event.tvl.split(",").join("").replace("$", "");
-  const incentive = event.incentive;
+  const tvl = event.tvl
+    ? event.tvl.split(",").join("").replace("$", "")
+    : 5000000;
+  const incentive = event.incentive ? event.incentive : 5;
+
+  console.log(tvl);
 
   oev.userTvl = tvl;
   oev.userIncentive = incentive;
@@ -36,7 +40,7 @@ function buttonHandle(event) {
 
   //
   oev.userSelectedProtocols = {}; // Hide all protocols
-  oev.userSelectedProtocols["dApp-1"] = "userAdded";
+  oev.userSelectedProtocols["dApp-4"] = "userAdded";
 
   // Scroll to the next section
   const section = document.querySelector(".chart-grid");
@@ -107,7 +111,7 @@ function buttonHandle(event) {
           id="incentive-percent"
           v-model="form.incentive"
           help="Enter the TVL percentage sent as a liquidation incentive."
-          validation="required|numeric|between:1.00,100.00"
+          validation="numeric|between:1.00,100.00"
           validation-label="Incentive Rate"
         />
       </form-field>
@@ -132,7 +136,7 @@ function buttonHandle(event) {
           step="100000"
           min="0"
           validation-label="TVL"
-          validation="required|numeric"
+          validation="numeric"
         />
       </form-field>
     </FormKit>

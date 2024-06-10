@@ -12,12 +12,16 @@ const protocolOptions = computed(() => {
       acc[chainId].group = chainId;
       acc[chainId].options = [];
     }
+
     acc[chainId].options.push({
       label: protocol.name,
       value: protocol.slug,
       icon: protocol.icon,
       chainId: protocol.chainId,
-      checked: !protocol.hide,
+      attrs: {
+        disabled: oev.isProtocolVisible(protocol),
+        key: protocol.slug,
+      },
     });
     return acc;
   }, {});
@@ -38,14 +42,17 @@ const protocolOptions = computed(() => {
     <div class="dropdown-group">
       <FormKit type="group" v-model="oev.userSelectedProtocols">
         <FormKit
-          v-for="i in oev.isUserVisible ? 3 : 4"
+          v-for="i in 4"
+          :key="`dApp-${i}`"
           type="dropdown"
           popover
           :label="`dApp ${i}`"
           :name="`dApp-${i}`"
           :options="protocolOptions"
-          :key="protocolOptions"
           options-appearance="checkbox"
+          selection-removable
+          open-on-remove
+          :disabled="oev.userSelectedProtocols[`dApp-${i}`] === 'userAdded'"
         >
           <template #groupLabel="{ option }">
             <div class="icon-option">
@@ -98,7 +105,6 @@ const protocolOptions = computed(() => {
   /* overflow-y: scroll; */
   /* overscroll-behavior: contain; */
   /* max-width: 250px; */
-  border-bottom: var(--border-dark);
 
   @media (min-width: 768px) {
     /* max-width: 270px; */
