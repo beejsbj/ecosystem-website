@@ -3,7 +3,6 @@
 ///
 ///
 definePageMeta({
-  layout: "footer-less",
   title: "OEV",
   description:
     "The OEV Watchtower helps you understand the impact of the OEV Network on your protocol.",
@@ -16,6 +15,7 @@ definePageMeta({
 
 // Import the OEV store and initialize it
 const oev = useOEVStore();
+const ui = useInterfaceStore();
 
 // Fetch the OEV data from the server
 const { data: overview } = await useFetch("/api/oev");
@@ -37,32 +37,24 @@ oev.setProtocols(overview.value);
       </Transition>
 
       <LazyOEVProtocolList />
-
       <LazyOEVInterfaceChart />
     </SectionColumn>
 
-    <!-- <PageTitle heading="OEV Watchtower"> -->
-    <!-- <h2 class="notice-voice">
-        Understand how much you can capture with OEV Network*
-      </h2> -->
+    <ClientOnly>
+      <!-- <LazyOEVProtocolChart /> -->
+    </ClientOnly>
 
-    <!-- </PageTitle> -->
-
-    <!--  -->
-    <!-- <LazyOEVInputForm /> -->
-
-    <!-- <LazyOEVInterfaceChart /> -->
-
-    <!-- displaying user's TVL and savings -->
-
-    <!-- <ClientOnly> -->
-    <!-- <LazyOEVProtocolChart /> -->
-    <!-- </ClientOnly> -->
+    <!-- <OEVExplainerCarosel /> -->
 
     <!--  displaying a message about data verification -->
-    <!-- <SectionColumn>
+    <!-- <SectionColumn class="github-link-section">
       <text-content>
-        <p class="notice-voice">
+        <p
+          :class="{
+            'notice-voice': ui.isMobile,
+            'attention-voice': !ui.isMobile,
+          }"
+        >
           You can verify this data by
           <NuxtLink
             class="text green external-link"
@@ -77,9 +69,9 @@ oev.setProtocols(overview.value);
 </template>
 
 <style scoped lang="scss">
-:deep(inner-column:not(.page-title)) {
+:deep(inner-column) {
   @media (min-width: 768px) {
-    padding: var(--space-2xl) var(--space-s);
+    padding: var(--space-3xl) var(--space-s);
   }
 }
 
@@ -103,6 +95,19 @@ text-content {
     @media (max-width: 400px) {
       --font-size: var(--step-2);
     }
+  }
+}
+
+.github-link-section {
+  background: url("@/assets/images/github-graphic.svg"),
+    radial-gradient(circle at bottom, transparent 20%, black 100%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 300px;
+  background-position: center;
+
+  @media (min-width: 1000px) {
+    background-position: center 10%;
   }
 }
 </style>
