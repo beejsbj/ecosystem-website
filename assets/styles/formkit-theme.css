@@ -395,7 +395,7 @@
   --fk-active-selection-color: var(--ink);
   --fk-color-placeholder-light: var(--gray-dark);
 
-  --fk-dropdown-bg: var(--paper);
+  --fk-dropdown-bg: var(--ink);
   --fk-dropdown-margin: 0.5em;
   --fk-dropdown-active-bg: var(--gray-darker);
   --fk-dropdown-shadow: 0 0 1.25em rgba(0, 0, 0, 0.25);
@@ -430,6 +430,12 @@
   --fk-colorpicker-bg: var(--ink);
 }
 
+.formkit-inner {
+  background: var(--fk-bg-input);
+}
+.formkit-input {
+  /* padding: var(--space-xs); */
+}
 [data-type="toggle"] .formkit-inner {
   border-radius: var(--fk-toggle-width);
 }
@@ -479,10 +485,10 @@
   )
   fieldset {
   border-color: var(--fk-error-ring-color);
+}
 
-  span {
-    --fk-border-radius: 1px;
-  }
+.formkit-decorator {
+  --fk-border-radius: 1px;
 }
 
 .formkit-outer[data-invalid="true"]:is(
@@ -558,17 +564,38 @@
 }
 
 .formkit-listbox {
-  background-color: var(--fk-dropdown-bg);
+  /* background-color: var(--fk-dropdown-bg); */
+  /* color: var(--gray); */
+}
+.formkit-listitem {
+  /* color: var(--ink) !important; */
+  &[aria-selected="false"] {
+    color: var(--paper);
+    background: var(--gray-light);
+  }
+  &[aria-selected="true"] {
+    color: blue;
+    background: var(--ink);
+  }
+  &[data-is-active="true"] {
+    color: var(--ink);
+    background: var(--green-dark);
+  }
+
+  &[data-disabled="true"] {
+    filter: grayscale(0.8) opacity(0.6) saturate(0.5);
+  }
+
+  .formkit-icon {
+    color: var(--green) !important;
+  }
+}
+
+.formkit-listitem-group {
+  /* margin: var(--space-xs); */
+  background: var(--gray-darker);
   color: var(--gray);
 }
-.formkit-listitem[aria-selected="true"] .whisper-voice {
-  color: var(--paper) !important;
-}
-
-.formkit-listitem[aria-selected="true"] .formkit-selected-icon {
-  color: var(--paper);
-}
-
 .formkit-tag {
   background-color: var(--gray-dark) !important;
   color: var(--ink) !important;
@@ -592,6 +619,10 @@
   align-items: center;
   gap: var(--space-2xs);
   padding: var(--space-xs);
+
+  picture {
+    max-width: 24px;
+  }
 }
 
 /* disable parts */
