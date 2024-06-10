@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ["gsap", "@api3/logos"],
+    transpile: ["gsap", "@api3/logos", "@api3/dapi-management"],
   },
 
   vite: {
