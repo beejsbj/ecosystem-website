@@ -4,7 +4,12 @@ export const useOEVStore = defineStore("oev", function () {
   const userTvl = ref(0);
   const userIncentive = ref(0);
 
-  const userSelectedProtocols = ref({});
+  const userSelectedProtocols = ref({
+    "dApp-1": "morphoAaveV2-1",
+    "dApp-2": "venusBsc-56",
+    "dApp-3": "morphoComp-1",
+    "dApp-4": "compoundV3Base-8453",
+  });
 
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
@@ -55,7 +60,7 @@ export const useOEVStore = defineStore("oev", function () {
   });
 
   const isUserVisible = computed(() => {
-    return !getProtocolById("userAdded").hide;
+    return isProtocolVisible("userAdded");
   });
 
   // Helper functions
@@ -117,6 +122,16 @@ export const useOEVStore = defineStore("oev", function () {
     checkHideCount(protocol);
   }
 
+  function isProtocolVisible(protocol) {
+    const isVisible = Object.values(userSelectedProtocols.value).includes(
+      protocol.slug
+    );
+    if (isVisible) {
+      return true;
+    }
+    return false;
+  }
+
   return {
     // variables
     userTvl,
@@ -137,5 +152,6 @@ export const useOEVStore = defineStore("oev", function () {
     toggleHide,
     hideAll,
     addProtocol,
+    isProtocolVisible,
   };
 });
