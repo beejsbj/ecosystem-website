@@ -68,6 +68,12 @@ oev.setProtocols(overview.value);
   </ContentsWrapper>
 </template>
 
+<style>
+.curves-wrapper {
+  display: none;
+}
+</style>
+
 <style scoped lang="scss">
 :deep(inner-column) {
   @media (min-width: 768px) {
@@ -102,15 +108,16 @@ text-content {
   background: url("@/assets/images/github-graphic.svg"),
     radial-gradient(circle at bottom, transparent 20%, var(--paper) 100%);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 150%;
   padding-bottom: 300px;
   background-position: center;
 
   @media (min-width: 1000px) {
     background-position: center 10%;
+    background-size: 100%;
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1700px) {
     background-size: 70%;
   }
 }

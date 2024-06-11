@@ -30,7 +30,6 @@ export const useOEVStore = defineStore("oev", function () {
     const parsed = raw?.map((protocol, i) => {
       return {
         ...protocol,
-        hide: i >= protocolCount.value,
       };
     });
 

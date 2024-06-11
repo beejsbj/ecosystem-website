@@ -54,6 +54,7 @@ const protocolOptions = computed(() => {
           open-on-remove
           :disabled="oev.userSelectedProtocols[`dApp-${i}`] === 'userAdded'"
         >
+          <!-- Group label -->
           <template #groupLabel="{ option }">
             <div class="icon-option">
               <ChainIcon :id="option.group" />
@@ -62,6 +63,7 @@ const protocolOptions = computed(() => {
             </div>
           </template>
 
+          <!-- Option -->
           <template #option="{ option }">
             <div class="icon-option">
               <IconWithChain
@@ -71,6 +73,23 @@ const protocolOptions = computed(() => {
               />
               <span class="">
                 {{ option.label }}
+                <!-- {{ getChainName(option.chainId) }} -->
+              </span>
+            </div>
+          </template>
+
+          <!-- Selection -->
+
+          <template #selection="{ option }">
+            <div class="icon-option">
+              <IconWithChain
+                v-if="option.icon"
+                :image="option.icon"
+                :id="option.chainId"
+              />
+              <span class="">
+                {{ option.label }}
+                t
                 <!-- {{ getChainName(option.chainId) }} -->
               </span>
             </div>
@@ -94,6 +113,7 @@ const protocolOptions = computed(() => {
 .dropdown-group {
   display: grid;
   gap: var(--space-l);
+  justify-self: center;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;

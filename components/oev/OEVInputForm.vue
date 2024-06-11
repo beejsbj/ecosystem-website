@@ -39,45 +39,11 @@ function buttonHandle(event) {
   oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
 
   //
-  oev.userSelectedProtocols = {}; // Hide all protocols
-  oev.userSelectedProtocols["dApp-4"] = "userAdded";
-
-  // Scroll to the next section
-  const section = document.querySelector(".chart-grid");
-  section.scrollIntoView({ behavior: "smooth" });
+  //   oev.userSelectedProtocols = {}; // Hide all protocols
+  oev.userSelectedProtocols["dApp-1"] = "userAdded";
 
   //   reset("oev-form"); // Reset the form
 }
-
-//watch
-
-// watch(
-//   form,
-//   (newForm) => {
-//     const tvl = Number(newForm.tvl);
-//     const incentive = Number(newForm.incentive);
-
-//     oev.userTvl = tvl;
-//     oev.userIncentive = incentive;
-
-//     // Calculate the total liquidated value, total incentive, total sent to builder, and total profit
-//     const incentiveRate = incentive / 100;
-//     const totalLiquidated = tvl * liquidationRate;
-//     const totalIncentiveUSD = totalLiquidated * incentiveRate;
-//     const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
-//     const totalProfitUSD = totalIncentiveUSD * 0.25;
-
-//     if (!oev?.protocols) {
-//       return;
-//     }
-//     // Update the userAdded protocol with the new values
-//     oev.protocols[userDappIndex].totalLiquidated = totalLiquidated;
-//     oev.protocols[userDappIndex].totalIncentiveUSD = totalIncentiveUSD;
-//     oev.protocols[userDappIndex].totalSentToBuilderUSD = totalSentToBuilderUSD;
-//     oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
-//   },
-//   { deep: true }
-// );
 </script>
 
 <template>
