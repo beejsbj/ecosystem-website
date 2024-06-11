@@ -41,13 +41,13 @@ oev.setProtocols(overview.value);
     </SectionColumn>
 
     <ClientOnly>
-      <!-- <LazyOEVProtocolChart /> -->
+      <LazyOEVProtocolChart />
     </ClientOnly>
 
-    <!-- <OEVExplainerCarosel /> -->
+    <OEVExplainerCarosel />
 
     <!--  displaying a message about data verification -->
-    <!-- <SectionColumn class="github-link-section">
+    <SectionColumn class="github-link-section">
       <text-content>
         <p
           :class="{
@@ -64,7 +64,7 @@ oev.setProtocols(overview.value);
           </NuxtLink>
         </p>
       </text-content>
-    </SectionColumn> -->
+    </SectionColumn>
   </ContentsWrapper>
 </template>
 
@@ -100,7 +100,7 @@ text-content {
 
 .github-link-section {
   background: url("@/assets/images/github-graphic.svg"),
-    radial-gradient(circle at bottom, transparent 20%, black 100%);
+    radial-gradient(circle at bottom, transparent 20%, var(--paper) 100%);
   background-repeat: no-repeat;
   background-size: 100%;
   padding-bottom: 300px;
@@ -108,6 +108,10 @@ text-content {
 
   @media (min-width: 1000px) {
     background-position: center 10%;
+  }
+
+  @media (min-width: 1600px) {
+    background-size: 70%;
   }
 }
 </style>
