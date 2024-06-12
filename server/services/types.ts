@@ -1,5 +1,3 @@
-import type { Mixed } from "mongoose";
-
 export interface Liquidation {
   date: String;
   timestamp: String;
