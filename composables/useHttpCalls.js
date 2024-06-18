@@ -1,5 +1,5 @@
 import axios from "axios";
-import { dapis } from "@api3/dapi-management";
+import dapis from "@api3/dapi-management/dist/data/dapis.json";
 
 export const useHttpCalls = () => {
   const submitProject = async (dappForm, images, verificationPayload) => {
