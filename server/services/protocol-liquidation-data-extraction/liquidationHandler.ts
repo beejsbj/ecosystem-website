@@ -10,7 +10,6 @@ import { fetchLiquidationDataFromGraph } from "./graph";
 import config from "./config.json";
 import type { Liquidation } from "../types";
 import { queryCache } from "../cache";
-import mongoose from "mongoose";
 import { connectDB } from "../helper";
 
 async function doUpdate(
