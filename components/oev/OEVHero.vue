@@ -29,6 +29,7 @@ const ui = useInterfaceStore();
         *All data is based on records from 2021 onwards
       </p>
     </div>
+    <OEVHeroCurvesDecoration />
   </SectionColumn>
 </template>
 
@@ -48,14 +49,14 @@ section {
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(12, 1fr);
-    row-gap: var(--space-m);
+    row-gap: var(--space-s);
     align-items: unset;
   }
 }
 
 h1 {
   @media (min-width: 768px) {
-    grid-column: span 9;
+    grid-column: span 8;
   }
 
   @media (min-width: 1100px) {
@@ -67,10 +68,23 @@ p {
   grid-column: 1 / -1;
 
   @media (min-width: 768px) {
-    grid-column: span 9;
+    grid-column: span 8;
   }
   @media (min-width: 1100px) {
     grid-column: span 6;
+  }
+}
+
+.summary-cards {
+  grid-column: 1 / -1;
+
+  @media (min-width: 768px) {
+    grid-column: span 8;
+  }
+  @media (min-width: 1100px) {
+    grid-column: span 6;
+    scale: 1.1;
+    transform-origin: left;
   }
 }
 
@@ -79,24 +93,11 @@ p {
   grid-row: 1;
 
   @media (min-width: 768px) {
-    grid-column: span 3 / -1;
+    grid-column: span 4 / -1;
     grid-row: 1 / span 5;
   }
   @media (min-width: 1100px) {
     grid-column: span 6 / -1;
-  }
-}
-
-.summary-cards {
-  grid-column: 1 / -1;
-
-  @media (min-width: 768px) {
-    grid-column: span 9;
-  }
-  @media (min-width: 1100px) {
-    grid-column: span 6;
-    scale: 1.1;
-    transform-origin: left;
   }
 }
 </style>
