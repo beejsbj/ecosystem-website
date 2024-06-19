@@ -1,10 +1,4 @@
-import {
-  Contract,
-  Interface,
-  JsonRpcProvider,
-  formatEther,
-  formatUnits,
-} from "ethers";
+import { Contract, ethers } from "ethers";
 import config from "./config.json";
 import BigNumber from "bignumber.js";
 
@@ -12,11 +6,13 @@ import builders from "./builders.json";
 import { default as axios } from "axios";
 import LendingPoolABI from "./abis/lendingPoolABI.json";
 import type { Liquidation } from "../types";
-const lendingPoolInterface = new Interface(LendingPoolABI);
+
+const { formatEther, formatUnits } = ethers.utils;
+const lendingPoolInterface = new ethers.utils.Interface(LendingPoolABI);
 
 function getProvider(currentProtocolIndex: number) {
   const rpc = config.protocols[currentProtocolIndex].rpcs[0];
-  const provider = new JsonRpcProvider(rpc);
+  const provider = new ethers.providers.JsonRpcProvider(rpc);
   return provider;
 }
 
@@ -31,26 +27,20 @@ function getLendingPoolContract(currentProtocolIndex: number) {
   return lendingPool;
 }
 
-const getTokenDecimals = async (
-  tokenAddress: string,
-  currentProtocolIndex: number
-) => {
-  const provider = getProvider(currentProtocolIndex);
-  const contract = new Contract(
-    tokenAddress,
-    ["function decimals() returns (uint8)"],
-    provider
-  );
-  return await contract.decimals.staticCall();
-};
-
 async function fetchPriceFromAaveV2Oracle(
   asset: string,
   blockNumber: string,
   aaveV2OracleAddress: string,
-  currentProtocolIndex: number
+  currentProtocolIndex: number,
+  retries: number = 0
 ) {
   try {
+    if (retries > 20) {
+      throw new Error(
+        "failed fetchPriceFromAaveV2Oracle func after max retries!"
+      );
+    }
+
     const abi = [
       {
         inputs: [{ internalType: "address", name: "asset", type: "address" }],
@@ -62,7 +52,7 @@ async function fetchPriceFromAaveV2Oracle(
     ];
 
     const provider = getProvider(currentProtocolIndex);
-    const aaveOracleInterface = new Interface(abi);
+    const aaveOracleInterface = new ethers.utils.Interface(abi);
     const aaveOracleContract = new Contract(
       aaveV2OracleAddress,
       aaveOracleInterface,
@@ -96,7 +86,8 @@ async function fetchPriceFromAaveV2Oracle(
       asset,
       blockNumber,
       aaveV2OracleAddress,
-      currentProtocolIndex
+      currentProtocolIndex,
+      retries + 1
     );
   }
 }
@@ -105,9 +96,16 @@ async function fetchPriceFromAaveV3Oracle(
   asset: any,
   blockNumber: string,
   aaveV3OracleAddress: string,
-  currentProtocolIndex: number
+  currentProtocolIndex: number,
+  retries: number = 0
 ) {
   try {
+    if (retries > 20) {
+      throw new Error(
+        "failed fetchPriceFromAaveV3Oracle func after max retries!"
+      );
+    }
+
     const abi = [
       {
         inputs: [{ internalType: "address", name: "asset", type: "address" }],
@@ -119,7 +117,7 @@ async function fetchPriceFromAaveV3Oracle(
     ];
 
     const provider = getProvider(currentProtocolIndex);
-    const aaveOracleInterface = new Interface(abi);
+    const aaveOracleInterface = new ethers.utils.Interface(abi);
     const aaveOracleContract = new Contract(
       aaveV3OracleAddress,
       aaveOracleInterface,
@@ -139,22 +137,28 @@ async function fetchPriceFromAaveV3Oracle(
       asset,
       blockNumber,
       aaveV3OracleAddress,
-      currentProtocolIndex
+      currentProtocolIndex,
+      retries + 1
     );
   }
 }
 
 const getLiquidationIncetivePercentage = async (
   collateral: any,
-  currentProtocolIndex: number
+  currentProtocolIndex: number,
+  retries: number = 0
 ): Promise<any> => {
   try {
+    if (retries > 20) {
+      throw new Error(
+        "failed getLiquidationIncetivePercentage func after max retries!"
+      );
+    }
     const lendingPool = getLendingPoolContract(currentProtocolIndex);
-    const configuration = await lendingPool.getConfiguration.staticCall(
-      collateral
-    );
-    let number = configuration[0];
-    let shiftedNumber = number >> BigInt(32);
+    const configuration = await lendingPool.getConfiguration(collateral);
+
+    let number = configuration[0]?.toString();
+    let shiftedNumber = BigInt(number) >> BigInt(32); // Convert 'number' to BigInt explicitly
     let extractedBits = shiftedNumber & BigInt(0xffff);
     return Number(extractedBits) / 100 - 100;
   } catch (error) {
@@ -163,77 +167,83 @@ const getLiquidationIncetivePercentage = async (
       error
     );
     await sleep(500);
-    getLiquidationIncetivePercentage(collateral, currentProtocolIndex);
+    getLiquidationIncetivePercentage(
+      collateral,
+      currentProtocolIndex,
+      retries + 1
+    );
   }
 };
 
 const getLiquidationCall = async (
   txHash: string,
-  currentProtocolIndex: number
+  currentProtocolIndex: number,
+  retries: number = 0
 ): Promise<any> => {
   try {
+    if (retries > 20) {
+      throw new Error("failed getLiquidationCall func after max retries!");
+    }
+
     const lendingPool = getLendingPoolContract(currentProtocolIndex);
-    const filter = await lendingPool.filters
-      .LiquidationCall(null, null, null)
-      .getTopicFilter();
+    const filter = lendingPool.filters.LiquidationCall(null, null, null);
 
     console.log({ txHash });
 
     const provider = getProvider(currentProtocolIndex);
-
     const transaction = await provider.getTransactionReceipt(txHash);
 
     const logs = await provider.getLogs({
-      fromBlock: transaction?.blockNumber,
-      toBlock: transaction?.blockNumber,
+      fromBlock: transaction.blockNumber,
+      toBlock: transaction.blockNumber,
       address: config.protocols[currentProtocolIndex].lendingPool,
-      topics: filter,
+      topics: filter.topics,
     });
 
-    const [
-      collateralAsset,
-      debtAsset,
-      user,
-      debtToCover,
-      collateralAmount,
-    ]: any = lendingPoolInterface?.parseLog(logs?.[0])?.args;
+    const decodedLogs = logs.map((log) => lendingPool.interface.parseLog(log));
 
-    const { gasUsed, gasPrice }: any = transaction;
+    const { collateralAsset, debtAsset, user, debtToCover, collateralAmount } =
+      decodedLogs[0].args;
 
-    const txCost = gasPrice * gasUsed;
+    const { gasUsed, effectiveGasPrice } = transaction;
+    const txCost = formatEther(effectiveGasPrice.mul(gasUsed));
 
     return [
-      formatEther(txCost),
+      txCost,
       collateralAsset,
       debtAsset,
       user,
       debtToCover,
-      transaction?.blockNumber,
+      transaction.blockNumber,
     ];
   } catch (error) {
-    await sleep(500);
     console.log("getLiquidationCall error retrying... ", error);
-    return getLiquidationCall(txHash, currentProtocolIndex);
+    await sleep(500);
+    return getLiquidationCall(txHash, currentProtocolIndex, retries + 1);
   }
 };
-
 const getGasCost = async (
   txHash: string,
-  currentProtocolIndex: number
+  currentProtocolIndex: number,
+  retries: number = 0
 ): Promise<any> => {
   try {
+    if (retries > 20) {
+      throw new Error("failed getGasCost func after max retries!");
+    }
+
     const provider = getProvider(currentProtocolIndex);
     const transaction = await provider.getTransactionReceipt(txHash);
 
-    const { gasUsed, gasPrice }: any = transaction;
-    console.log(gasPrice, gasUsed);
-    const txCost = formatEther(gasPrice * gasUsed);
+    const { gasUsed, effectiveGasPrice }: any = transaction;
+    console.log(effectiveGasPrice, gasUsed);
+    const txCost = formatEther(effectiveGasPrice.mul(gasUsed));
     console.log({ txCost });
     return { txCost, blockNumber: transaction?.blockNumber };
   } catch (error) {
     console.log("rpc call failed getTransactionReceipt", error);
     await sleep(500);
-    return getGasCost(txHash, currentProtocolIndex);
+    return getGasCost(txHash, currentProtocolIndex, retries + 1);
   }
 };
 
@@ -363,7 +373,7 @@ const getPriceFromChainLink = async (
   const contract = new Contract(oracle, abi, provider);
 
   console.log({ tokenAddress, blockNumber });
-  const result = await contract.getPrice.staticCall(tokenAddress, {
+  const result = await contract.getPrice(tokenAddress, {
     blockTag: blockNumber,
   });
 
@@ -438,8 +448,17 @@ export function sleep(ms: number | undefined) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchFundsMovedToBuilder(hash: any): Promise<any> {
+async function fetchFundsMovedToBuilder(
+  hash: any,
+  retries: number = 0
+): Promise<any> {
   try {
+    if (retries > 20) {
+      throw new Error(
+        "failed fetchFundsMovedToBuilder func after max retries!"
+      );
+    }
+
     const apiUrl = `https://api.etherscan.io/api?module=account&action=txlistinternal&txhash=${hash}&apikey=${config?.protocols?.[0]?.etherscanApiKey}`;
     const response = await axios.get(apiUrl);
     const internalTransactions = response?.data?.result;
@@ -467,12 +486,19 @@ async function fetchFundsMovedToBuilder(hash: any): Promise<any> {
     console.log("error fetchFundsMovedToBuilder", error);
     await sleep(500);
     console.log("retrying fetchInternaltrx");
-    return fetchFundsMovedToBuilder(hash);
+    return fetchFundsMovedToBuilder(hash, retries + 1);
   }
 }
 
-async function getEthereumBlock(timestamp: number): Promise<any> {
+async function getEthereumBlock(
+  timestamp: number,
+  retries: number = 0
+): Promise<any> {
   try {
+    if (retries > 20) {
+      throw new Error("failed getEthereumBlock func after max retries!");
+    }
+
     const YourApiKeyToken = "36QV5RR1WHHYWBH81P4V3KY2DKCZ7RR4ZH";
     const api = `https://api.etherscan.io/api?module=block&action=getblocknobytime&timestamp=${timestamp}&closest=before&apikey=${YourApiKeyToken}`;
     const result = await axios.get(api);
@@ -483,7 +509,7 @@ async function getEthereumBlock(timestamp: number): Promise<any> {
   } catch (error) {
     console.log("call failed getEthereumBlock", error);
     await sleep(500);
-    return getEthereumBlock(timestamp);
+    return getEthereumBlock(timestamp, retries + 1);
   }
 }
 
@@ -535,7 +561,7 @@ export async function prepareFinalLiquidationData(
 
     // find liquidation info and searcher profit for different protocols
     if (_config.protocolVersion === protocolVersions.aaveV2) {
-      console.log("Aave V2");
+      console.log(`########## ${_config.protocolVersion} #############`);
       const liqInfo = await getAaveV2LiquidationInfo(
         list[i].hash,
         list[i].amountUSD,
@@ -561,7 +587,7 @@ export async function prepareFinalLiquidationData(
       ].includes(_config.protocolVersion)
     ) {
       // profit calculations for aave v3
-      console.log("aave v3");
+      console.log(`########## ${_config.protocolVersion} #############`);
       const liqInfo = await getAaveV3LiquidationInfo(
         list[i].hash,
         list[i].amountUSD,

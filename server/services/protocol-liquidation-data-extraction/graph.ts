@@ -24,7 +24,7 @@ async function extractLiquidations(
   if (!lastDocId) {
     query = gql`
       query {
-        liquidates(first:20  where: { timestamp_gte: "${startTime}" }  orderBy: blockNumber) {
+        liquidates(first:100  where: { timestamp_gte: "${startTime}" }  orderBy: blockNumber) {
           id
           amount
           amountUSD
@@ -49,7 +49,7 @@ async function extractLiquidations(
     query = gql`
     query {
       liquidates(
-        first: 20
+        first: 100
         where: { id_gt: "${lastDocId}",  timestamp_gt: "${startTime}"}  orderBy: blockNumber
       ) {
         id

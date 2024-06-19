@@ -7,8 +7,11 @@ import {
 } from "~/server/models/common";
 import type { Liquidation, LiquidationTotal } from "../types";
 import config from "./config.json";
-import { sleep } from "./contractCalls";
 import mongoose from "mongoose";
+
+export function sleep(ms: number | undefined) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 export function getLiquidationModel(protocol: string) {
   return mongoose.model(`${protocol}-liquidations`, LiquidationSchema);
@@ -103,10 +106,15 @@ export async function updateLambdaProgress(currentProtocolIndex: number) {
 
 export async function updateLiquidationData(
   liquidation: Liquidation,
-  currentProtocolIndex: number
+  currentProtocolIndex: number,
+  retries: number = 0
 ) {
   try {
     // check if liquidation entry already exists update the entry or add new entry to table
+
+    if (retries > 20) {
+      throw new Error("Failed updateLiquidationData func after max retries");
+    }
 
     const protocol = config.protocols[currentProtocolIndex].protocolVersion;
     const Model = getLiquidationModel(protocol?.toLowerCase());
@@ -130,7 +138,11 @@ export async function updateLiquidationData(
     await sleep(500);
     console.log("retying...");
 
-    return updateLiquidationData(liquidation, currentProtocolIndex);
+    return updateLiquidationData(
+      liquidation,
+      currentProtocolIndex,
+      retries + 1
+    );
   }
 }
 
