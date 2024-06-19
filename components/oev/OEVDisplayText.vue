@@ -5,14 +5,15 @@ const oev = useOEVStore();
 
 // Compute the user's total liquidated value (tvl) and total savings using OEV
 const userSaving = computed(() =>
-  oev.getProtocolById("userAdded") === undefined
+  oev.getProtocolBySlug("userAdded") === undefined
     ? 0
-    : oev.getProtocolById("userAdded").totalSentToBuilderUSD
+    : oev.getProtocolBySlug("userAdded").totalSentToBuilderUSD
 );
 
 function buttonHandle() {
   oev.userIncentive = 0;
   oev.userTvl = 0;
+  oev.userSelectedProtocols["dApp-1"] = "";
 }
 </script>
 

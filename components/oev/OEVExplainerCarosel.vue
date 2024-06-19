@@ -28,17 +28,19 @@ h2 {
   text-align: center;
 }
 ul {
-  display: none;
-  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-template-columns: repeat(5, 175px);
   margin-top: var(--space-xl);
-  max-width: 400px;
+  max-width: 320px;
+  overflow-x: scroll;
 }
 
 li:has(+ li) {
-  padding-right: 2rem;
+  --arrow-size: 1.5rem;
+  padding-right: var(--arrow-size);
   background-image: url("/images/oev/explainer-steps/arrow.svg");
   background-repeat: no-repeat;
   background-position: right 30%;
-  background-size: 2rem;
+  background-size: var(--arrow-size);
 }
 </style>

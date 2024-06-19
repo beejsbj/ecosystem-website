@@ -88,7 +88,7 @@ const { data: rawData } = await useFetch(apiString);
 
 // data manipulation
 const parsed = computed(() => {
-  const protocol = oev.getProtocolById(selectedDataset.value);
+  const protocol = oev.getProtocolBySlug(selectedDataset.value);
 
   const dataLiquidated = rawData.value.map((dataPoint) => {
     return {

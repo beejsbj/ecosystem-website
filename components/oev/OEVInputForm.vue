@@ -48,7 +48,7 @@ function buttonHandle(event) {
 
 <template>
   <ContentsWrapper>
-    <h2 class="attention-voice">Calculate Your Protocol's Potential</h2>
+    <h2 class="attention-voice">Calculate Your dApp's Potential</h2>
 
     <FormKit
       id="oev-form"
@@ -114,7 +114,7 @@ form {
   display: grid;
   gap: var(--space-m);
   justify-content: center;
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-l);
 
   :deep(.formkit-actions) {
     margin-top: var(--space-m);
