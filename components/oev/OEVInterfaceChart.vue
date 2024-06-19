@@ -33,26 +33,26 @@ const bars = [
       },
     },
   },
-  {
-    label: "Total Incentives",
-    value: "incentives",
-    color: "hsla(226, 100%, 70%, 1)",
-    attrs: {
-      onchange: () => {
-        toggleIncentives();
-      },
-    },
-  },
-  {
-    label: "Total Liquidated",
-    value: "liquidated",
-    color: "hsla(0, 85%, 65%, 1)",
-    attrs: {
-      onchange: () => {
-        toggleLiquidated();
-      },
-    },
-  },
+  //   {
+  //     label: "Total Incentives",
+  //     value: "incentives",
+  //     color: "hsla(226, 100%, 70%, 1)",
+  //     attrs: {
+  //       onchange: () => {
+  //         toggleIncentives();
+  //       },
+  //     },
+  //   },
+  //   {
+  //     label: "Total Liquidated",
+  //     value: "liquidated",
+  //     color: "hsla(0, 85%, 65%, 1)",
+  //     attrs: {
+  //       onchange: () => {
+  //         toggleLiquidated();
+  //       },
+  //     },
+  //   },
 ];
 
 const visibleProtocols = computed(() => {
@@ -155,7 +155,6 @@ function barHeight(value) {
     <div class="chart-actions">
       <div class="legend">
         <!--  -->
-
         <FormKit
           type="checkbox"
           label="Legend"
@@ -267,8 +266,8 @@ function barHeight(value) {
     order: unset;
 
     :deep(.formkit-options) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
+      gap: var(--space-l);
     }
   }
 }

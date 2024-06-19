@@ -164,21 +164,33 @@ const parsed = computed(() => {
   };
 });
 
-const inputProtocols = computed(() => {
+const protocolOptions = computed(() => {
   const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
 
-  protocols.map((protocol) => {
-    protocol.value = protocol.slug;
-    protocol.label = protocol.name;
+  const groupedByChain = protocols.reduce((acc, protocol) => {
+    const chainId = protocol.chainId;
+    if (!acc[chainId]) {
+      acc[chainId] = {};
+      acc[chainId].group = chainId;
+      acc[chainId].options = [];
+    }
 
-    return protocol;
-  });
+    acc[chainId].options.push({
+      label: protocol.name,
+      value: protocol.slug,
+      icon: protocol.icon,
+      chainId: protocol.chainId,
+      attrs: {
+        disabled: oev.isProtocolVisible(protocol),
+        key: protocol.slug,
+      },
+    });
+    return acc;
+  }, {});
 
-  protocols.push({
-    value: "Total-1",
-    label: "Total",
-  });
-  return protocols;
+  const options = Object.values(groupedByChain);
+
+  return options;
 });
 
 // legend items
@@ -243,15 +255,44 @@ onMounted(() => {
           id="dapp-dropdown"
           type="dropdown"
           v-model="selectedDataset"
-          :options="inputProtocols"
-          label="Select a Protocol"
+          :options="protocolOptions"
+          label="Select a dApp"
         >
+          <!-- Group label -->
+          <template #groupLabel="{ option }">
+            <div class="icon-option">
+              <ChainIcon :id="option.group" />
+
+              <span> {{ getChainName(option.group) }} </span>
+            </div>
+          </template>
+
+          <!-- Option -->
           <template #option="{ option }">
             <div class="icon-option">
               <IconWithChain
                 v-if="option.icon"
                 :image="option.icon"
                 :id="option.chainId"
+              />
+              <span class="">
+                {{ option.label }}
+              </span>
+            </div>
+          </template>
+
+          <!-- Selection -->
+
+          <template #selection="{ option }">
+            <div class="icon-option">
+              <DoubleIcon
+                v-if="option.icon"
+                :icon1="{
+                  chainId: option.chainId,
+                }"
+                :icon2="{
+                  src: option.icon,
+                }"
               />
               <span class="">
                 {{ option.label }}

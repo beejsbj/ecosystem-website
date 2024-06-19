@@ -6,26 +6,18 @@ const router = useRouter();
 
 const showMenu = ref(false);
 
-let context;
-
-onMounted(() => {
-  context = gsap.context(() => {
-    const pageLoad = gsap.timeline();
-    if (ui.firstLoad) {
-      pageLoad.from(".site-header", {
-        delay: "0.5",
-        duration: 0.5,
-        y: -50,
-        opacity: 0,
-        ease: "power4.out",
-      });
-      ui.firstLoad = false;
-    }
-  });
-});
-
-onUnmounted(() => {
-  context.kill();
+useGsap((gsap) => {
+  const pageLoad = gsap.timeline();
+  if (ui.firstLoad) {
+    pageLoad.from(".site-header", {
+      delay: "0.5",
+      duration: 0.5,
+      y: -50,
+      opacity: 0,
+      ease: "power4.out",
+    });
+    ui.firstLoad = false;
+  }
 });
 </script>
 

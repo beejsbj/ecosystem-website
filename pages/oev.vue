@@ -31,7 +31,6 @@ oev.setProtocols(overview.value);
     <OEVHero />
 
     <SectionColumn class="form-chart-section">
-      {{ oev.isUserVisible }}
       <Transition name="fade" mode="out-in">
         <LazyOEVInputForm v-if="!oev.isUserVisible" />
         <LazyOEVDisplayText v-else />
@@ -43,10 +42,9 @@ oev.setProtocols(overview.value);
 
     <ClientOnly>
       <LazyOEVProtocolChart />
+
+      <LazyOEVExplainerCarosel />
     </ClientOnly>
-
-    <LazyOEVExplainerCarosel />
-
     <!--  displaying a message about data verification -->
     <SectionColumn class="github-link-section">
       <text-content>
@@ -87,6 +85,7 @@ oev.setProtocols(overview.value);
   border-radius: calc(var(--corners) * 2);
   display: grid;
   gap: var(--space-l);
+  padding-inline: calc(var(--space-l) * 5);
 }
 
 text-content {
@@ -112,6 +111,11 @@ text-content {
   background-size: 150%;
   padding-bottom: 300px;
   background-position: center;
+
+  @media (min-width: 768px) {
+    background-position: center 80%;
+    background-size: 100%;
+  }
 
   @media (min-width: 1000px) {
     background-position: center 10%;

@@ -1,5 +1,26 @@
 <script setup>
 const ui = useInterfaceStore();
+
+useGsap((gsap, scrollTrigger) => {
+  //scroll ul as we scroll
+
+  if (ui.isDesktop) {
+    return;
+  }
+
+  gsap.to(".explainer-carousel li", {
+    scrollTrigger: {
+      trigger: "ul.explainer-carousel",
+      start: "top 60%",
+      end: "80% 40%",
+      scrub: true,
+      markers: true,
+    },
+    //  x: "-100%",
+
+    x: -100 * 5,
+  });
+});
 </script>
 
 <template>
@@ -13,7 +34,7 @@ const ui = useInterfaceStore();
       How does it all work?
     </h2>
 
-    <ul>
+    <ul class="explainer-carousel">
       <li v-for="step in 5">
         <picture :class="`step-${step}`">
           <img :src="`/images/oev/explainer-steps/step-${step}.png`" />
@@ -23,16 +44,30 @@ const ui = useInterfaceStore();
   </SectionColumn>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 h2 {
   text-align: center;
+}
+
+section {
+  container: inline-size;
 }
 ul {
   display: grid;
   grid-template-columns: repeat(5, 175px);
   margin-top: var(--space-xl);
-  max-width: 320px;
-  overflow-x: scroll;
+  max-width: 91cqw;
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(5, 250px);
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: unset;
+    overflow-x: unset;
+  }
 }
 
 li:has(+ li) {
