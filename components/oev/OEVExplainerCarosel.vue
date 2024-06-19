@@ -57,7 +57,7 @@ function handleButton(direction) {
         'attention-voice': !ui.isMobile,
       }"
     >
-      How does it all work?
+      How does it all work together?
     </h2>
 
     <ul class="explainer-carousel">
@@ -93,10 +93,14 @@ function handleButton(direction) {
 <style scoped lang="scss">
 h2 {
   text-align: center;
+  margin-top: 20px;
 }
 
 section {
   container: inline-size;
+  background-image: url("/images/oev/explainer-steps/explainer-bg.svg");
+  background-size: 200%;
+  background-position:  20% -1%;
 }
 ul {
   display: grid;
