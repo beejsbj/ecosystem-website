@@ -31,8 +31,9 @@ oev.setProtocols(overview.value);
     <OEVHero />
 
     <SectionColumn class="form-chart-section">
+      {{ oev.isUserVisible }}
       <Transition name="fade" mode="out-in">
-        <LazyOEVInputForm v-if="!oev.userIncentive || !oev.userTvl" />
+        <LazyOEVInputForm v-if="!oev.isUserVisible" />
         <LazyOEVDisplayText v-else />
       </Transition>
 
@@ -44,7 +45,7 @@ oev.setProtocols(overview.value);
       <LazyOEVProtocolChart />
     </ClientOnly>
 
-    <OEVExplainerCarosel />
+    <LazyOEVExplainerCarosel />
 
     <!--  displaying a message about data verification -->
     <SectionColumn class="github-link-section">
