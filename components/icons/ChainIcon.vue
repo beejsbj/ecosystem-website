@@ -1,6 +1,4 @@
 <script setup>
-// import * as Logos from "@api3/logos";
-
 const { $chainLogo } = useNuxtApp();
 
 const props = defineProps(["id"]);
