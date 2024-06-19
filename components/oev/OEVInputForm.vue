@@ -11,7 +11,10 @@ const userDappIndex = oev.protocols.findIndex(
 const liquidationRate = 0.05; // 5% liquidation rate
 
 // Define reactive variables
-const form = ref({}); // Reference to the form element
+const form = ref({
+  tvl: 5000000,
+  incentive: 5,
+}); // Reference to the form element
 
 // Function to handle the button click event
 function buttonHandle(event) {
@@ -19,8 +22,6 @@ function buttonHandle(event) {
     ? event.tvl.split(",").join("").replace("$", "")
     : 5000000;
   const incentive = event.incentive ? event.incentive : 5;
-
-  console.log(tvl);
 
   oev.userTvl = tvl;
   oev.userIncentive = incentive;
