@@ -1,14 +1,19 @@
 <script setup>
+import { FormKitIcon } from "@formkit/vue";
 const ui = useInterfaceStore();
 
-useGsap((gsap, scrollTrigger) => {
+const { gsap } = useGsap();
+
+const scrollPosition = ref(0);
+
+useGsap((gsap) => {
   //scroll ul as we scroll
 
   if (ui.isDesktop) {
     return;
   }
 
-  gsap.to(".explainer-carousel li", {
+  gsap.to(".explainer-carousel ", {
     scrollTrigger: {
       trigger: "ul.explainer-carousel",
       start: "top 60%",
@@ -16,11 +21,32 @@ useGsap((gsap, scrollTrigger) => {
       scrub: true,
       markers: true,
     },
-    //  x: "-100%",
 
-    x: -100 * 5,
+    scrollTo: {
+      x: "max",
+    },
   });
 });
+
+function handleButton(direction) {
+  scrollPosition.value += direction;
+  let distance = ui.isMobile ? 350 : 250;
+  let x = scrollPosition.value * distance;
+
+  if (direction) {
+    gsap.to(".explainer-carousel", {
+      scrollTo: {
+        x,
+      },
+    });
+  } else {
+    gsap.to(".explainer-carousel", {
+      scrollTo: {
+        x,
+      },
+    });
+  }
+}
 </script>
 
 <template>
@@ -41,6 +67,26 @@ useGsap((gsap, scrollTrigger) => {
         </picture>
       </li>
     </ul>
+    <div class="actions">
+      <button
+        class="icon prev"
+        @click="handleButton(-1)"
+        :disabled="scrollPosition === 0"
+      >
+        <picture>
+          <FormKitIcon icon="left" />
+        </picture>
+      </button>
+      <button
+        class="icon next"
+        @click="handleButton(1)"
+        :disabled="scrollPosition === 2"
+      >
+        <picture>
+          <FormKitIcon icon="right" />
+        </picture>
+      </button>
+    </div>
   </SectionColumn>
 </template>
 
@@ -57,7 +103,7 @@ ul {
   grid-template-columns: repeat(5, 175px);
   margin-top: var(--space-xl);
   max-width: 91cqw;
-  overflow-x: hidden;
+  overflow-x: scroll;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(5, 250px);
@@ -68,6 +114,10 @@ ul {
     max-width: unset;
     overflow-x: unset;
   }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 li:has(+ li) {
@@ -77,5 +127,20 @@ li:has(+ li) {
   background-repeat: no-repeat;
   background-position: right 30%;
   background-size: var(--arrow-size);
+}
+
+.actions {
+  justify-content: center;
+
+  picture {
+    max-width: 16px;
+    :deep(svg) {
+      color: var(--green);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 }
 </style>
