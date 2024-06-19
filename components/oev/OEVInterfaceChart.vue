@@ -3,145 +3,78 @@ import formatNumber from "@/utils/formatNumber";
 
 const oev = useOEVStore();
 
-const showLiquidatedBar = ref(false);
-const showIncentives = ref(false);
-const showProfits = ref(true);
-const showSentToBuilderBar = ref(true);
-
-const visibleBars = ref(["totalSentToBuilderUSD", "profits"]);
+const visibleBars = ref([
+  "totalLiquidated",
+  "totalProfitUSD",
+  "totalSentToBuilderUSD",
+]);
 
 const bars = [
   {
-    label: "blockspace auction bribes",
+    label: "Total Liquidated",
+    value: "totalLiquidated",
+    color: "hsla(4, 68%, 15%, 1.00)",
+  },
+  {
+    label: "Potential Profits",
+    value: "totalProfitUSD",
+    color: "hsla(226, 100%, 70%, 1)",
+    help: "(Blockspace auction bribes + Liquidated totalProfitUSD)",
+  },
+  {
+    label: "Total Sent to Builder",
     value: "totalSentToBuilderUSD",
-    color: "hsla(160, 69%, 69%, 1)",
+    color: "hsla(354, 98%, 24%, 1)",
     attrs: {
-      label: "Blockspace auction bribes",
-      onchange: () => {
-        toggleSentToBuilder();
-      },
+      label: "Total Sent to Builder",
     },
   },
   {
-    label: "liquidator profits",
-    value: "profits",
-    color: "hsla(255, 34%, 70%, 1)",
-
-    attrs: {
-      onchange: () => {
-        toggleProfits();
-      },
-    },
+    label: "Total Incentives",
+    value: "totalIncentiveUSD",
+    color: "hsla(226, 100%, 70%, 1)",
   },
-  //   {
-  //     label: "Total Incentives",
-  //     value: "incentives",
-  //     color: "hsla(226, 100%, 70%, 1)",
-  //     attrs: {
-  //       onchange: () => {
-  //         toggleIncentives();
-  //       },
-  //     },
-  //   },
-  //   {
-  //     label: "Total Liquidated",
-  //     value: "liquidated",
-  //     color: "hsla(0, 85%, 65%, 1)",
-  //     attrs: {
-  //       onchange: () => {
-  //         toggleLiquidated();
-  //       },
-  //     },
-  //   },
 ];
 
-const visibleProtocols = computed(() => {
-  return Object.values(oev.userSelectedProtocols).map((protocolSlug) => {
-    return oev.getProtocolBySlug(protocolSlug);
-  });
-});
+const visibleProtocols = computed(() =>
+  Object.values(oev.userSelectedProtocols).map((protocolSlug) =>
+    oev.getProtocolBySlug(protocolSlug)
+  )
+);
 
 const maxHeight = computed(() => {
-  //check if protocols have hide, use the protocol with the highest value
-  const protocols = visibleProtocols.value;
-
-  let liquidatedMax = Math.max(
-    ...protocols.map((protocol) => protocol.totalLiquidated)
-  );
-  let sentToBuilderMax = Math.max(
-    ...protocols.map((protocol) => protocol.totalSentToBuilderUSD)
-  );
-  let profitsMax = Math.max(
-    ...protocols.map((protocol) => protocol.totalProfitUSD)
-  );
-  let incentivesMax = Math.max(
-    ...protocols.map((protocol) => protocol.totalIncentiveUSD)
-  );
-
   //   sort the values by highest
   const values = [
     {
-      isShown: showSentToBuilderBar.value,
-      value: sentToBuilderMax,
-    },
-
-    {
-      isShown: showProfits.value,
-      value: profitsMax,
+      isShown: visibleBars.value.includes("totalSentToBuilderUSD"),
+      value: getMaxValue("totalSentToBuilderUSD"),
     },
     {
-      isShown: showIncentives.value,
-      value: incentivesMax,
+      isShown: visibleBars.value.includes("totalProfitUSD"),
+      value: getMaxValue("totalProfitUSD"),
     },
     {
-      isShown: showLiquidatedBar.value,
-      value: liquidatedMax,
+      isShown: visibleBars.value.includes("totalIncentiveUSD"),
+      value: getMaxValue("totalIncentiveUSD"),
+    },
+    {
+      isShown: visibleBars.value.includes("totalLiquidated"),
+      value: getMaxValue("totalLiquidated"),
     },
   ];
 
   //based on what is showm, get the highest value, excluding the hidden protocols
-
   return Math.max(
     ...values.filter((value) => value.isShown).map((value) => value.value)
   );
 });
 
-const gridCount = computed(() => {
-  let count = 0;
-  showLiquidatedBar.value ? count++ : count;
-  showSentToBuilderBar.value ? count++ : count;
-  showProfits.value ? count++ : count;
-  showIncentives.value ? count++ : count;
-
-  return count;
-});
-
-const gridStarts = computed(() => {
-  //   based on the grid count, and if the bars are shown, calculate the grid start
-
-  let starts = [];
-  let count = 1;
-  showLiquidatedBar.value ? starts.push(count) : count;
-  showSentToBuilderBar.value ? starts.push(count + 1) : count;
-  showProfits.value ? starts.push(count + 2) : count;
-  showIncentives.value ? starts.push(count + 3) : count;
-
-  return starts;
-});
+const gridCount = computed(() => visibleBars.value.length);
 
 //
 
-function toggleLiquidated() {
-  showLiquidatedBar.value = !showLiquidatedBar.value;
-}
-function toggleSentToBuilder() {
-  showSentToBuilderBar.value = !showSentToBuilderBar.value;
-}
-function toggleProfits() {
-  showProfits.value = !showProfits.value;
-}
-function toggleIncentives() {
-  showIncentives.value = !showIncentives.value;
+function getMaxValue(key) {
+  return Math.max(...visibleProtocols.value.map((protocol) => protocol[key]));
 }
 
 function barHeight(value) {
@@ -172,6 +105,7 @@ function barHeight(value) {
         </FormKit>
       </div>
     </div>
+
     <!-- OEV Interface Chart component -->
     <ul class="bars" v-auto-animate>
       <template v-for="(protocol, i) in visibleProtocols" :key="protocol.slug">
@@ -180,59 +114,36 @@ function barHeight(value) {
             class="bar"
             :class="{ userAdded: protocol.slug === 'userAdded' }"
             :style="`
-							 --bar-liquidated-height: ${barHeight(protocol.totalLiquidated)};
+							 --bar-totalLiquidated-height: ${barHeight(protocol.totalLiquidated)};
 							 --bar-totalSentToBuilderUSD-height: ${barHeight(
                  protocol.totalSentToBuilderUSD
                )};
-							 --bar-profits-height: ${barHeight(protocol.totalProfitUSD)};
-							 --bar-incentives-height: ${barHeight(protocol.totalIncentiveUSD)};
+							 --bar-totalProfitUSD-height: ${barHeight(protocol.totalProfitUSD)};
+							 --bar-totalIncentiveUSD-height: ${barHeight(protocol.totalIncentiveUSD)};
 
 
 						 `"
           >
             <span
-              class="totalSentToBuilderUSD"
-              :class="{ hide: !showSentToBuilderBar }"
-              v-tooltip.top-end="`$${protocol.totalSentToBuilderUSD}`"
+              v-for="bar in visibleBars"
+              :key="bar"
+              :class="bar"
+              v-tooltip.top-end="`$${protocol[bar]}`"
             >
               <span class="number solid-voice">
-                ${{ formatNumber(protocol.totalSentToBuilderUSD) }}
-              </span>
-            </span>
-            <span
-              class="profits"
-              :class="{ hide: !showProfits }"
-              v-tooltip.top-end="`$${protocol.totalProfitUSD}`"
-            >
-              <span class="number solid-voice">
-                ${{ formatNumber(protocol.totalProfitUSD) }}
-              </span>
-            </span>
-            <span
-              class="incentives"
-              :class="{ hide: !showIncentives }"
-              v-tooltip.top-end="`$${protocol.totalIncentiveUSD}`"
-            >
-              <span class="number solid-voice">
-                ${{ formatNumber(protocol.totalIncentiveUSD) }}
-              </span>
-            </span>
-            <span
-              class="liquidated"
-              :class="{ hide: !showLiquidatedBar }"
-              v-tooltip.top-end="`$${protocol.totalLiquidated}`"
-            >
-              <span class="number solid-voice">
-                ${{ formatNumber(protocol.totalLiquidated) }}
+                ${{ formatNumber(protocol[bar]) }}
               </span>
             </span>
           </div>
 
-          <IconWithChain
+          <DoubleIcon
             v-if="protocol.icon"
-            class="protocol-logo"
-            :image="protocol.icon ? protocol.icon : '/images/icons/dapp.svg'"
-            :id="protocol.chainId"
+            :icon1="{
+              chainId: protocol.chainId,
+            }"
+            :icon2="{
+              src: protocol.icon,
+            }"
           />
 
           <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
@@ -242,7 +153,6 @@ function barHeight(value) {
         </li>
       </template>
     </ul>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -310,8 +220,12 @@ text-content {
 
   .legend-icon {
     aspect-ratio: 1/1;
-    width: 24px;
+    width: 18px;
     background: var(--background);
+  }
+
+  .formkit-label {
+    white-space: nowrap;
   }
 }
 
@@ -329,7 +243,7 @@ text-content {
   );
 }
 
-.profits {
+.totalProfitUSD {
   --background: linear-gradient(
     to bottom,
     hsla(255, 34%, 54%, 0.5),
@@ -343,7 +257,7 @@ text-content {
   );
 }
 
-.incentives {
+.totalIncentiveUSD {
   --background: linear-gradient(
     to bottom,
     hsla(226, 100%, 50%, 0.3),
@@ -357,7 +271,7 @@ text-content {
   );
 }
 
-.liquidated {
+.totalLiquidated {
   --background: linear-gradient(
     to bottom,
     hsla(0, 85%, 65%, 0.3),
@@ -441,10 +355,10 @@ li {
       background: var(--gray);
     }
 
-    /*  totalSentToBuilderUSD and liquidated halves of the bar*/
+    /*  totalSentToBuilderUSD and totalLiquidated halves of the bar*/
     & > span {
       transition: 0.2s ease-in-out;
-      border-radius: var(--corners);
+      border-radius: calc(var(--corners) / 2);
       position: relative;
       background: var(--background);
 
@@ -484,9 +398,9 @@ li {
           font-size: var(--step--1);
         }
       }
-      &.liquidated {
+      &.totalLiquidated {
         grid-column: span 1;
-        height: calc(var(--bar-liquidated-height) * 1.5px);
+        height: calc(var(--bar-totalLiquidated-height) * 1.5px);
       }
 
       &.totalSentToBuilderUSD {
@@ -494,14 +408,14 @@ li {
         height: calc(var(--bar-totalSentToBuilderUSD-height) * 1.5px);
       }
 
-      &.profits {
+      &.totalProfitUSD {
         grid-column: span 1;
-        height: calc(var(--bar-profits-height) * 1.5px);
+        height: calc(var(--bar-totalProfitUSD-height) * 1.5px);
       }
 
-      &.incentives {
+      &.totalIncentiveUSD {
         grid-column: span 1;
-        height: calc(var(--bar-incentives-height) * 1.5px);
+        height: calc(var(--bar-totalIncentiveUSD-height) * 1.5px);
       }
     }
   }
