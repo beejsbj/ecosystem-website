@@ -14,11 +14,31 @@ export const useOEVStore = defineStore("oev", function () {
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
   const protocols = ref([]);
-  const oevTotals = ref({});
 
   // this variable defines the number of protocols to show in the chart
   const protocolCount = ref(4);
 
+  //computed
+
+  const oevTotals = computed(() => {
+    return getProtocolBySlug("total");
+  });
+
+  const isAllHidden = computed(() => {
+    return protocols.value.every((protocol) => protocol.hide);
+  });
+
+  const isUserVisible = computed(() => {
+    const isVisible = Object.values(userSelectedProtocols.value).includes(
+      "userAdded"
+    );
+    if (isVisible) {
+      return true;
+    }
+    return false;
+  });
+
+  //functions
   // Set the protocols data
   function setProtocols(raw) {
     if (!raw) return;
@@ -35,8 +55,6 @@ export const useOEVStore = defineStore("oev", function () {
 
     protocols.value = parsed;
 
-    oevTotals.value = parsed.find((protocol) => protocol.slug === "total");
-
     //  add user protocol
     const userProtocol = {
       slug: `userAdded`,
@@ -52,27 +70,17 @@ export const useOEVStore = defineStore("oev", function () {
     addProtocol(userProtocol);
   }
 
-  //computed
-
-  const isAllHidden = computed(() => {
-    return protocols.value.every((protocol) => protocol.hide);
-  });
-
-  const isUserVisible = computed(() => {
-    return isProtocolVisible("userAdded");
-  });
-
   // Helper functions
 
-  function getProtocolById(id) {
+  function getProtocolBySlug(slug) {
     if (protocols.value.length === 0) {
       return {};
     }
-    return protocols.value.find((protocol) => protocol.slug === id);
+    return protocols.value.find((protocol) => protocol.slug === slug);
   }
 
   function getTotals() {
-    return getProtocolById("total");
+    return getProtocolBySlug("total");
   }
 
   function toggleHide(protocol) {
@@ -146,7 +154,7 @@ export const useOEVStore = defineStore("oev", function () {
 
     // helpers
     setProtocols,
-    getProtocolById,
+    getProtocolBySlug,
     getTotals,
     toggleHide,
     hideAll,
