@@ -34,25 +34,22 @@ useGsap((gsap) => {
             />
           </picture>
         </NuxtLink>
-        <SiteNav v-if="!ui.isMobile" />
+        <SiteNav v-if="ui.isDesktop" />
 
         <!-- menu icon -->
-        <button
-          :class="` menu icon ${showMenu ? 'menuOpen' : ''}`"
-          v-if="ui.isMobile"
-          @click="showMenu = !showMenu"
-        >
-          <picture>
-            <MenuIcon />
-          </picture>
-        </button>
-        <SidePanelSlot
-          v-if="ui.isMobile"
-          :showPanel="showMenu"
-          @toggle="showMenu = !showMenu"
-        >
-          <SiteNav class="panel-menu" />
-        </SidePanelSlot>
+        <template v-else>
+          <button
+            :class="` menu icon ${showMenu ? 'menuOpen' : ''}`"
+            @click="showMenu = !showMenu"
+          >
+            <picture>
+              <MenuIcon />
+            </picture>
+          </button>
+          <SidePanelSlot :showPanel="showMenu" @toggle="showMenu = !showMenu">
+            <SiteNav class="panel-menu" />
+          </SidePanelSlot>
+        </template>
       </mast-head>
     </SectionColumn>
   </header>
