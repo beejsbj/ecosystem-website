@@ -14,7 +14,7 @@ export const useInterfaceStore = defineStore("interface", function () {
     green: "hsla(166, 64%, 69%, 1)",
     violet: "hsla(256, 34%, 54%, 1)",
     blue: "hsla(226, 100%, 50%, 1)",
-    red: "hsla(0, 85%, 65%, 1)",
+    red: "hsla(4, 68%, 15%, 1.00)",
     yellow: "hsla(44, 85%, 65%, 1)",
   };
 
