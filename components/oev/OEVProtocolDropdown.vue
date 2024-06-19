@@ -21,7 +21,6 @@ const protocolOptions = computed(() => {
       icon: protocol.icon,
       chainId: protocol.chainId,
       attrs: {
-        disabled: oev.isProtocolVisible(protocol),
         key: protocol.slug,
       },
     });
