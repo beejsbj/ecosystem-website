@@ -1,6 +1,4 @@
 <script setup>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 definePageMeta({
   layout: "home",
   meta: [
@@ -15,13 +13,13 @@ useSeoMeta({
   title: "API3 Ecosystem",
 });
 
-onMounted(() => {
-  //   document.body.scrollTop = document.documentElement.scrollTop = 0;
-  //   window.scroll({
-  //     top: 0,
-  //     left: 0,
-  //   });
-});
+// onMounted(() => {
+//   document.body.scrollTop = document.documentElement.scrollTop = 0;
+//   window.scroll({
+//     top: 0,
+//     left: 0,
+//   });
+// });
 </script>
 
 <template>

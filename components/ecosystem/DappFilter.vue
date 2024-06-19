@@ -1,6 +1,5 @@
 <script setup>
 import { useEcosystemStore } from "~/stores/ecosystem";
-import { gsap } from "gsap";
 
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
@@ -42,27 +41,27 @@ const years = computed(() => {
   }
 });
 
-onMounted(() => {
-  //   const pageLoad = gsap.timeline();
-  //   pageLoad.fromTo(
-  //     "dapp-filter",
-  //     {
-  //       delay: "0.5",
-  //       y: "10vw",
-  //       opacity: 0,
-  //       duration: 0,
-  //     },
-  //     {
-  //       y: "0vw",
-  //       opacity: 1,
-  //       duration: 0.5,
-  //       stagger: {
-  //         each: 0.15,
-  //         from: "start",
-  //       },
-  //     }
-  //   );
-});
+// useGsap((gsap) => {
+//   const pageLoad = gsap.timeline();
+//   pageLoad.fromTo(
+//     "dapp-filter",
+//     {
+//       delay: "0.5",
+//       y: "10vw",
+//       opacity: 0,
+//       duration: 0,
+//     },
+//     {
+//       y: "0vw",
+//       opacity: 1,
+//       duration: 0.5,
+//       stagger: {
+//         each: 0.15,
+//         from: "start",
+//       },
+//     }
+//   );
+// });
 
 const handleFilter = (event) => {
   ecosystem.filterQuery.page = 1;

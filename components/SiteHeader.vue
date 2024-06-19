@@ -1,6 +1,5 @@
 <script setup>
 import { useInterfaceStore } from "~/stores/interface";
-import { gsap } from "gsap";
 
 const ui = useInterfaceStore();
 const router = useRouter();

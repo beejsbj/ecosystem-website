@@ -1,10 +1,6 @@
 <script setup>
-import { gsap } from "gsap";
-
-const ui = useInterfaceStore();
-function animate() {
-  let context = gsap.context(() => {
-    const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
+function animateCurvesWaves(gsap) {
+  //   const pageLoad = gsap.timeline();
 
     const curvesLength = 4100;
 
@@ -23,15 +19,15 @@ function animate() {
       strokeDashoffset: 0,
       ease: easing,
     });
-  });
+
 
   setTimeout(() => {
     context.kill();
   }, 2000);
 }
 
-onMounted(() => {
-  animate();
+useGsap((gsap) => {
+  //   animateCurvesWaves();
 });
 </script>
 
