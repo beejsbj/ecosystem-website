@@ -1,35 +1,6 @@
 <script setup>
 // Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
-
-const protocolOptions = computed(() => {
-  const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
-
-  const groupedByChain = protocols.reduce((acc, protocol) => {
-    const chainId = protocol.chainId;
-    if (!acc[chainId]) {
-      acc[chainId] = {};
-      acc[chainId].group = chainId;
-      acc[chainId].options = [];
-    }
-
-    acc[chainId].options.push({
-      label: protocol.name,
-      value: protocol.slug,
-      icon: protocol.icon,
-      chainId: protocol.chainId,
-      attrs: {
-        disabled: oev.isProtocolVisible(protocol),
-        key: protocol.slug,
-      },
-    });
-    return acc;
-  }, {});
-
-  const options = Object.values(groupedByChain);
-
-  return options;
-});
 </script>
 
 <template>
@@ -41,61 +12,16 @@ const protocolOptions = computed(() => {
     </h3>
     <div class="dropdown-group">
       <FormKit type="group" v-model="oev.userSelectedProtocols">
-        <FormKit
+        <OEVProtocolDropdown
           v-for="i in 4"
           :key="`dApp-${i}`"
-          type="dropdown"
-          popover
           :label="`dApp ${i}`"
           :name="`dApp-${i}`"
-          :options="protocolOptions"
           options-appearance="checkbox"
           selection-removable
           open-on-remove
           :disabled="oev.userSelectedProtocols[`dApp-${i}`] === 'userAdded'"
-        >
-          <!-- Group label -->
-          <template #groupLabel="{ option }">
-            <div class="icon-option">
-              <ChainIcon :id="option.group" />
-
-              <span> {{ getChainName(option.group) }} </span>
-            </div>
-          </template>
-
-          <!-- Option -->
-          <template #option="{ option }">
-            <div class="icon-option">
-              <IconWithChain
-                v-if="option.icon"
-                :image="option.icon"
-                :id="option.chainId"
-              />
-              <span class="">
-                {{ option.label }}
-              </span>
-            </div>
-          </template>
-
-          <!-- Selection -->
-
-          <template #selection="{ option }">
-            <div class="icon-option">
-              <DoubleIcon
-                v-if="option.icon"
-                :icon1="{
-                  chainId: option.chainId,
-                }"
-                :icon2="{
-                  src: option.icon,
-                }"
-              />
-              <span class="">
-                {{ option.label }}
-              </span>
-            </div>
-          </template>
-        </FormKit>
+        />
       </FormKit>
     </div>
   </div>
@@ -114,7 +40,6 @@ const protocolOptions = computed(() => {
 .dropdown-group {
   display: grid;
   gap: var(--space-l);
-  justify-self: center;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
