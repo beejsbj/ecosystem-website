@@ -56,8 +56,8 @@ const bars = [
 ];
 
 const visibleProtocols = computed(() => {
-  return oev.protocols.filter((protocol) => {
-    return oev.isProtocolVisible(protocol);
+  return Object.values(oev.userSelectedProtocols).map((protocolSlug) => {
+    return oev.getProtocolBySlug(protocolSlug);
   });
 });
 
