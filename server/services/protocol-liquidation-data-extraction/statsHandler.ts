@@ -40,6 +40,5 @@ export const prepareStats = async (cacheKey: string) => {
 
   return {
     message: "Stats updated",
-    cumulativeCharts,
   };
 };

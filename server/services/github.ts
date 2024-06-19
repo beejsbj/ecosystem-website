@@ -1,9 +1,9 @@
 import { Octokit } from "@octokit/rest";
 import { createAppAuth } from "@octokit/auth-app";
 import { prepareMarkdown } from "./helper";
-
 import type { ProjectType } from "../types";
 import type { Status } from "./helper";
+import axios from "axios";
 
 const config = useRuntimeConfig();
 
@@ -44,15 +44,12 @@ const octoKitProd = new Octokit({
   },
 });
 
-const owner = config.nodeEnv === "production" ? "api3dao" : "AamirAlam";
+const repoOwner = config.nodeEnv === "production" ? "api3dao" : "AamirAlam";
 const repo = "dapp-registry";
 
-export async function createPR(
-  projectData: ProjectType,
-  projectId: string
-): Promise<Status> {
+export async function createPR(projectData: ProjectType): Promise<Status> {
   const title = projectData.name?.split(" ")?.join("-");
-  const branch = `${title}-${projectId}`;
+  const branch = `${title}`;
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
 
@@ -64,7 +61,7 @@ export async function createPR(
 
     // get the SHA of the latest commit on the base branch
     const { data: refData } = await octokit.git.getRef({
-      owner,
+      owner: repoOwner,
       repo,
       ref: `heads/${base}`,
     });
@@ -73,7 +70,7 @@ export async function createPR(
 
     // create new branch from the SHA
     const { data: newBranch } = await octokit.git.createRef({
-      owner,
+      owner: repoOwner,
       repo,
       ref: `refs/heads/${branch}`,
       sha: baseSha,
@@ -83,7 +80,7 @@ export async function createPR(
 
     // create blob for new file content
     const { data: jsonBlob } = await octokit.git.createBlob({
-      owner,
+      owner: repoOwner,
       repo,
       content: projectJsonData,
       encoding: "utf-8",
@@ -91,7 +88,7 @@ export async function createPR(
 
     // create new tree
     const { data: newTree } = await octokit.git.createTree({
-      owner,
+      owner: repoOwner,
       repo,
       base_tree: baseSha,
       tree: [
@@ -106,7 +103,7 @@ export async function createPR(
 
     // create new commit
     const { data: newCommit } = await octokit.git.createCommit({
-      owner,
+      owner: repoOwner,
       repo,
       message: `add: ${title} listing request`,
       tree: newTree.sha,
@@ -115,7 +112,7 @@ export async function createPR(
 
     // update reference to new commit
     await octokit.git.updateRef({
-      owner,
+      owner: repoOwner,
       repo,
       ref: `heads/${branch}`,
       sha: newCommit.sha,
@@ -123,7 +120,7 @@ export async function createPR(
 
     // create the PR
     const { data: prData } = await octokit.pulls.create({
-      owner,
+      owner: repoOwner,
       repo,
       title,
       head: branch,
@@ -144,7 +141,7 @@ export async function createPR(
     if (branchCreated) {
       try {
         await octokit.git.deleteRef({
-          owner,
+          owner: repoOwner,
           repo,
           ref: `heads/${branch}`,
         });
@@ -154,5 +151,43 @@ export async function createPR(
     }
 
     return { success: false, message: "Failed to create pull request" };
+  }
+}
+
+/**
+ * Checks if project with the same name already submitted to dapp-registry repo
+ * @param projectData
+ * @returns bool
+ */
+export async function isProjectExists(
+  projectData: ProjectType
+): Promise<Boolean> {
+  try {
+    const fileListEndpoint = `https://api.github.com/repos/${repoOwner}/${repo}/contents/projects`;
+
+    const projectList = [];
+
+    const data = await axios.get(fileListEndpoint);
+    const repoItems: any[] = await data.data;
+
+    // Batch processing
+    const batchSize = 20;
+    for (let i = 0; i < repoItems.length; i += batchSize) {
+      const batch = repoItems.slice(i, i + batchSize);
+      const batchPromises = batch.map((item) => axios.get(item.download_url));
+
+      const batchResults = await Promise.all(batchPromises);
+      const batchProjects = batchResults.map((res) => res.data);
+
+      projectList.push(...batchProjects);
+    }
+
+    const isExists =
+      projectList.findIndex((el) => el.name === projectData.name) >= 0;
+
+    return isExists;
+  } catch (err: any) {
+    console.log("failed to read git repo in func: isProjectExists ", err);
+    return false;
   }
 }
