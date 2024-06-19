@@ -45,7 +45,12 @@ const gridCount = computed(() => {
     <!-- Display the OEV Saving Rate -->
     <li class="summary-card" v-for="card in cards">
       <h3 class="calm-voice">{{ card.title }}</h3>
-      <p class="firm-voice">
+      <p
+        :class="{
+          'firm-voice': !ui.isDesktop,
+          'attention-voice': ui.isDesktop,
+        }"
+      >
         {{ card.value }}
       </p>
     </li>
