@@ -73,7 +73,6 @@ const protocolOptions = computed(() => {
               />
               <span class="">
                 {{ option.label }}
-                <!-- {{ getChainName(option.chainId) }} -->
               </span>
             </div>
           </template>
@@ -82,15 +81,17 @@ const protocolOptions = computed(() => {
 
           <template #selection="{ option }">
             <div class="icon-option">
-              <IconWithChain
+              <DoubleIcon
                 v-if="option.icon"
-                :image="option.icon"
-                :id="option.chainId"
+                :icon1="{
+                  chainId: option.chainId,
+                }"
+                :icon2="{
+                  src: option.icon,
+                }"
               />
               <span class="">
                 {{ option.label }}
-                t
-                <!-- {{ getChainName(option.chainId) }} -->
               </span>
             </div>
           </template>
