@@ -1,6 +1,8 @@
 <script setup>
 useGsap((gsap) => {
-  const timeline = gsap.timeline();
+  const timeline = gsap.timeline({
+    repeat: -1,
+  });
 
   timeline.fromTo(
     ".datafeed-first-party .digit",
