@@ -6,7 +6,7 @@ const props = defineProps({
   },
 });
 
-onMounted(() => {
+useGsap((gsap) => {
   const pageLoad = gsap.timeline();
   pageLoad.fromTo(
     "article-card",

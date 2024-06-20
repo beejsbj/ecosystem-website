@@ -1,7 +1,4 @@
 <script setup>
-import { useEcosystemStore } from "~/stores/ecosystem";
-const { gsap, ScrollTrigger } = useGsap();
-
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
 
@@ -16,32 +13,22 @@ const handleLoadMore = () => {
   }
 };
 
-let gsapContext = null;
-
-onMounted(() => {
+useGsap((gsap) => {
   setTimeout(() => {
     if (!ecosystem.hasMoreItems) return;
-    gsapContext = gsap.context(() => {
-      //   scroll trigger, when the bottom of dapp grid comes into view call handleloadmore
-      ScrollTrigger.create({
-        trigger: ".dapp-grid",
-        start: "80% 50%",
-        end: "85% 45%",
-        onEnter: () => {
-          handleLoadMore();
-        },
-        onLeaveBack: () => {
-          ScrollTrigger.refresh();
-        },
-      });
+    //   scroll trigger, when the bottom of dapp grid comes into view call handleloadmore
+    ScrollTrigger.create({
+      trigger: ".dapp-grid",
+      start: "80% 50%",
+      end: "85% 45%",
+      onEnter: () => {
+        handleLoadMore();
+      },
+      onLeaveBack: () => {
+        ScrollTrigger.refresh();
+      },
     });
   }, 3000);
-});
-
-onUnmounted(() => {
-  if (gsapContext) {
-    gsapContext.kill();
-  }
 });
 </script>
 
