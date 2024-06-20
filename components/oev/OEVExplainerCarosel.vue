@@ -100,6 +100,7 @@ section {
   container: inline-size;
   background-image: url("/images/oev/explainer-steps/explainer-bg.svg");
   background-size: 200%;
+  background-repeat: no-repeat;
   background-position:  20% -1%;
 }
 ul {

@@ -235,6 +235,7 @@ onMounted(() => {
         <FormKit
           type="radio"
           label="Select Period"
+          legend-class="$reset firm-voice-smaller"
           v-model="selectedPeriod"
           :options="periodOptions"
         />
