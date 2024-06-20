@@ -20,7 +20,6 @@ useGsap((gsap) => {
         start: "top 60%",
         end: "80% 40%",
         scrub: true,
-        markers: true,
       },
 
       scrollTo: {

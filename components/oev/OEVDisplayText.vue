@@ -23,7 +23,7 @@ function buttonHandle() {
       <p class="attention-voice">
         With a
         <span class="highlight-green">
-          ${{ oev.userIncentive ? oev.userIncentive : "5%" }}</span
+          {{ oev.userIncentive ? oev.userIncentive : "5%" }}%</span
         >
         incentive rate and TVL of
         <span class="highlight-green">
