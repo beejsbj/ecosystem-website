@@ -63,7 +63,7 @@ useGsap((gsap) => {
             />
             <path
               d="M394.01,282.135L394.01,314.503L366.005,330.737L366.005,298.369L394.01,282.135Z"
-              style="fill: url(#_Linear1); fill-rule: nonzero"
+              style="fill: url(#_DaoLinear1); fill-rule: nonzero"
             />
             <path
               d="M366.005,266.001L338,282.134L366.005,298.369L394.009,282.134L366.005,266.001Z"
@@ -121,7 +121,7 @@ useGsap((gsap) => {
             />
             <path
               d="M200.126,182.742L200.126,202.325L183.182,212.167L183.182,192.584L200.126,182.742Z"
-              style="fill: url(#_Linear2); fill-rule: nonzero"
+              style="fill: url(#_DaoLinear2); fill-rule: nonzero"
             />
             <path
               d="M183.183,173.001L166.238,182.742L183.183,192.584L200.128,182.742L183.183,173.001Z"
@@ -179,7 +179,7 @@ useGsap((gsap) => {
             />
             <path
               d="M206.624,73.006L206.624,99.996L183.186,113.491L183.186,86.501L206.624,73.006Z"
-              style="fill: url(#_Linear3); fill-rule: nonzero"
+              style="fill: url(#_DaoLinear3); fill-rule: nonzero"
             />
             <path
               d="M183.185,59.51L159.848,73.005L183.185,86.5L206.623,73.005L183.185,59.51Z"
@@ -240,7 +240,7 @@ useGsap((gsap) => {
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
           <path
             d="M297.777,20.497L297.777,47.487L274.338,60.982L274.338,33.992L297.777,20.497Z"
-            style="fill: url(#_Linear4); fill-rule: nonzero"
+            style="fill: url(#_DaoLinear4); fill-rule: nonzero"
           />
         </g>
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
@@ -318,7 +318,7 @@ useGsap((gsap) => {
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
           <path
             d="M292.058,129.624L292.058,150.526L273.997,160.977L273.997,140.075L292.058,129.624Z"
-            style="fill: url(#_Linear5); fill-rule: nonzero"
+            style="fill: url(#_DaoLinear5); fill-rule: nonzero"
           />
         </g>
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
@@ -363,7 +363,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear6);
+              stroke: url(#_DaoLinear6);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -375,7 +375,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear7);
+              stroke: url(#_DaoLinear7);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -387,7 +387,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear8);
+              stroke: url(#_DaoLinear8);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -399,7 +399,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear9);
+              stroke: url(#_DaoLinear9);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -411,7 +411,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear10);
+              stroke: url(#_DaoLinear10);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -423,7 +423,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear11);
+              stroke: url(#_DaoLinear11);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -435,7 +435,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear12);
+              stroke: url(#_DaoLinear12);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -447,7 +447,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear13);
+              stroke: url(#_DaoLinear13);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -459,7 +459,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear14);
+              stroke: url(#_DaoLinear14);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -483,7 +483,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear15);
+              stroke: url(#_DaoLinear15);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -495,7 +495,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear16);
+              stroke: url(#_DaoLinear16);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -523,7 +523,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear19);
+              stroke: url(#_DaoLinear19);
               stroke-width: 2px;
               stroke-linejoin: round;
             "
@@ -535,7 +535,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear20);
+              stroke: url(#_DaoLinear20);
               stroke-width: 2px;
               stroke-linejoin: round;
             "
@@ -547,7 +547,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear21);
+              stroke: url(#_DaoLinear21);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -559,7 +559,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear22);
+              stroke: url(#_DaoLinear22);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -571,7 +571,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear23);
+              stroke: url(#_DaoLinear23);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -583,7 +583,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear24);
+              stroke: url(#_DaoLinear24);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -595,7 +595,7 @@ useGsap((gsap) => {
             style="
               fill: none;
               fill-rule: nonzero;
-              stroke: url(#_Linear25);
+              stroke: url(#_DaoLinear25);
               stroke-width: 1.67px;
               stroke-linejoin: round;
             "
@@ -628,7 +628,7 @@ useGsap((gsap) => {
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
           <path
             d="M126.973,119.173L126.973,160.977L90.75,181.879L90.75,140.075L126.973,119.173Z"
-            style="fill: url(#_Linear26); fill-rule: nonzero"
+            style="fill: url(#_DaoLinear26); fill-rule: nonzero"
           />
         </g>
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
@@ -771,7 +771,7 @@ useGsap((gsap) => {
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
           <path
             d="M309.979,224.008L309.979,265.812L273.756,286.714L273.756,244.91L309.979,224.008Z"
-            style="fill: url(#_Linear27); fill-rule: nonzero"
+            style="fill: url(#_DaoLinear27); fill-rule: nonzero"
           />
         </g>
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
@@ -911,7 +911,7 @@ useGsap((gsap) => {
             />
             <path
               d="M389.471,178.396L389.471,205.183L366.235,218.678L366.235,191.789L389.471,178.396Z"
-              style="fill: url(#_Linear28); fill-rule: nonzero"
+              style="fill: url(#_DaoLinear28); fill-rule: nonzero"
             />
             <path
               d="M366.236,165.001L343,178.395L366.236,191.788L389.471,178.395L366.236,165.001Z"
@@ -972,7 +972,7 @@ useGsap((gsap) => {
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
           <path
             d="M493.446,225.902L493.446,267.706L457.223,288.609L457.223,246.804L493.446,225.902Z"
-            style="fill: url(#_Linear29); fill-rule: nonzero"
+            style="fill: url(#_DaoLinear29); fill-rule: nonzero"
           />
         </g>
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
@@ -1038,7 +1038,7 @@ useGsap((gsap) => {
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
           <path
             d="M401.865,66.012L401.865,107.816L365.642,128.718L365.642,86.914L401.865,66.012Z"
-            style="fill: url(#_Linear30); fill-rule: nonzero"
+            style="fill: url(#_DaoLinear30); fill-rule: nonzero"
           />
         </g>
         <g transform="matrix(1,0,0,1,55028.5,26699.4)">
@@ -1178,7 +1178,7 @@ useGsap((gsap) => {
             />
             <path
               d="M110.507,21.645L110.507,45.052L90.253,56.817L90.253,33.409L110.507,21.645Z"
-              style="fill: url(#_Linear31); fill-rule: nonzero"
+              style="fill: url(#_DaoLinear31); fill-rule: nonzero"
             />
             <path
               d="M90.254,10.001L70,21.644L90.254,33.409L110.509,21.644L90.254,10.001Z"
@@ -1236,7 +1236,7 @@ useGsap((gsap) => {
             />
             <path
               d="M203.507,286.645L203.507,310.052L183.253,321.817L183.253,298.409L203.507,286.645Z"
-              style="fill: url(#_Linear32); fill-rule: nonzero"
+              style="fill: url(#_DaoLinear32); fill-rule: nonzero"
             />
             <path
               d="M183.254,275.001L163,286.644L183.254,298.409L203.509,286.644L183.254,275.001Z"
@@ -1274,7 +1274,7 @@ useGsap((gsap) => {
     </g>
     <defs>
       <linearGradient
-        id="_Linear1"
+        id="_DaoLinear1"
         x1="0"
         y1="0"
         x2="1"
@@ -1292,7 +1292,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear2"
+        id="_DaoLinear2"
         x1="0"
         y1="0"
         x2="1"
@@ -1310,7 +1310,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear3"
+        id="_DaoLinear3"
         x1="0"
         y1="0"
         x2="1"
@@ -1328,7 +1328,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear4"
+        id="_DaoLinear4"
         x1="0"
         y1="0"
         x2="1"
@@ -1346,7 +1346,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear5"
+        id="_DaoLinear5"
         x1="0"
         y1="0"
         x2="1"
@@ -1364,7 +1364,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear6"
+        id="_DaoLinear6"
         x1="0"
         y1="0"
         x2="1"
@@ -1386,7 +1386,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear7"
+        id="_DaoLinear7"
         x1="0"
         y1="0"
         x2="1"
@@ -1404,7 +1404,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear8"
+        id="_DaoLinear8"
         x1="0"
         y1="0"
         x2="1"
@@ -1426,7 +1426,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear9"
+        id="_DaoLinear9"
         x1="0"
         y1="0"
         x2="1"
@@ -1448,7 +1448,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear10"
+        id="_DaoLinear10"
         x1="0"
         y1="0"
         x2="1"
@@ -1470,7 +1470,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear11"
+        id="_DaoLinear11"
         x1="0"
         y1="0"
         x2="1"
@@ -1488,7 +1488,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear12"
+        id="_DaoLinear12"
         x1="0"
         y1="0"
         x2="1"
@@ -1510,7 +1510,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear13"
+        id="_DaoLinear13"
         x1="0"
         y1="0"
         x2="1"
@@ -1532,7 +1532,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear14"
+        id="_DaoLinear14"
         x1="0"
         y1="0"
         x2="1"
@@ -1554,7 +1554,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear15"
+        id="_DaoLinear15"
         x1="0"
         y1="0"
         x2="1"
@@ -1572,7 +1572,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear16"
+        id="_DaoLinear16"
         x1="0"
         y1="0"
         x2="1"
@@ -1600,7 +1600,7 @@ useGsap((gsap) => {
         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAgCAYAAAA40qkZAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAGElEQVQYlWNMSbxjzMDAwMDEAAWjDGQGAC84AhQlJKCOAAAAAElFTkSuQmCC"
       />
       <linearGradient
-        id="_Linear19"
+        id="_DaoLinear19"
         x1="0"
         y1="0"
         x2="1"
@@ -1618,7 +1618,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear20"
+        id="_DaoLinear20"
         x1="0"
         y1="0"
         x2="1"
@@ -1640,7 +1640,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear21"
+        id="_DaoLinear21"
         x1="0"
         y1="0"
         x2="1"
@@ -1662,7 +1662,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear22"
+        id="_DaoLinear22"
         x1="0"
         y1="0"
         x2="1"
@@ -1680,7 +1680,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear23"
+        id="_DaoLinear23"
         x1="0"
         y1="0"
         x2="1"
@@ -1698,7 +1698,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear24"
+        id="_DaoLinear24"
         x1="0"
         y1="0"
         x2="1"
@@ -1716,7 +1716,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear25"
+        id="_DaoLinear25"
         x1="0"
         y1="0"
         x2="1"
@@ -1734,7 +1734,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear26"
+        id="_DaoLinear26"
         x1="0"
         y1="0"
         x2="1"
@@ -1752,7 +1752,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear27"
+        id="_DaoLinear27"
         x1="0"
         y1="0"
         x2="1"
@@ -1770,7 +1770,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear28"
+        id="_DaoLinear28"
         x1="0"
         y1="0"
         x2="1"
@@ -1788,7 +1788,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear29"
+        id="_DaoLinear29"
         x1="0"
         y1="0"
         x2="1"
@@ -1806,7 +1806,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear30"
+        id="_DaoLinear30"
         x1="0"
         y1="0"
         x2="1"
@@ -1824,7 +1824,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear31"
+        id="_DaoLinear31"
         x1="0"
         y1="0"
         x2="1"
@@ -1842,7 +1842,7 @@ useGsap((gsap) => {
         />
       </linearGradient>
       <linearGradient
-        id="_Linear32"
+        id="_DaoLinear32"
         x1="0"
         y1="0"
         x2="1"

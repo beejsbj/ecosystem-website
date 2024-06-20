@@ -1,33 +1,23 @@
 <script setup>
-function animateCurvesWaves(gsap) {
-  //   animation of the curves making waves
-  const tl = gsap.timeline({
+useGsap((gsap) => {
+  //   animate Curves Waves
+  const timeline = gsap.timeline({
     repeat: -1,
-    repeatDelay: 0,
-    defaults: {
-      duration: 1,
-      ease: "power1.inOut",
-      stagger: { each: 0.5, repeat: "-1", from: "end", yoyo: true },
-    },
   });
 
-  tl.fromTo(
+  timeline.fromTo(
     "#curve-decoration-2 path",
     {
-      // strokeDashoffset: "1100",
-      // strokeDasharray: "1100",
+      y: 10,
     },
     {
       duration: 5,
-      // strokeDashoffset: 0,
-      scaleY: 0.95,
+      y: -10,
       transformOrigin: "center center",
+      ease: "power1.inOut",
+      stagger: { each: 0.5, repeat: "-1", from: "start", yoyo: true },
     }
   );
-}
-
-useGsap((gsap) => {
-  //   animateCurvesWaves(gsap);
 });
 </script>
 

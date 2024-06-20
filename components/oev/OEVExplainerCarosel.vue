@@ -14,7 +14,7 @@ useGsap((gsap) => {
   }
 
   setTimeout(() => {
-    gsap.to(".explainer-carousel ", {
+    gsap.to(".explainer-carousel", {
       scrollTrigger: {
         trigger: "ul.explainer-carousel",
         start: "top 60%",
