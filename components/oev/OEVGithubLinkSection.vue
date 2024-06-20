@@ -61,7 +61,7 @@ text-content {
   }
 
   @media (min-width: 1000px) {
-    background-position: center 10%;
+    background-position: center -10%;
     background-size: 100%;
   }
 
