@@ -201,7 +201,7 @@ onMounted(() => {
 <template>
   <SectionColumn inner-class="wide">
     <div class="chart-grid">
-      <h2 class="attention-voice">Historic Liquidation Data</h2>
+      <h2 class="firm-voice">Historic Liquidation Data</h2>
       <FormKit
         type="checkbox"
         label="Legend"
