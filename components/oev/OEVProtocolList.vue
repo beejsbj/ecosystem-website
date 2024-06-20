@@ -5,9 +5,9 @@ const oev = useOEVStore();
 
 <template>
   <div class="protocol-list-wrapper">
-    <h2 class="attention-voice">How your dApp Compares</h2>
+    <h2 class="firm-voice">How your dApp Compares</h2>
 
-    <h3 class="notice-voice">
+    <h3 class="calm-voice">
       Select {{ oev.isUserVisible ? "3" : "4" }} dApps to Compare
     </h3>
     <div class="dropdown-group">
