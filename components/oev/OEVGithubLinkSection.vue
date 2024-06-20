@@ -51,8 +51,8 @@ text-content {
   background: url("@/assets/images/github-graphic.svg"),
     radial-gradient(circle at bottom, transparent 20%, var(--paper) 100%);
   background-repeat: no-repeat;
-  background-size: 150%;
-  padding-bottom: 300px;
+  background-size: 75%;
+  padding-bottom: 150px;
   background-position: center;
 
   @media (min-width: 768px) {

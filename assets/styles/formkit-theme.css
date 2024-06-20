@@ -275,7 +275,7 @@
   --fk-margin-label-y: 0;
   --fk-margin-label-t: var(--fk-margin-label-y, 0);
   --fk-margin-label-r: var(--fk-margin-label-x, 0);
-  --fk-margin-label-b: var(--fk-margin-label-y, var(--fk-margin-base));
+  --fk-margin-label-b: var(--space-2xs);
   --fk-margin-label-l: var(--fk-margin-label-x, 0);
   --fk-margin-label: var(--fk-margin-label-t) var(--fk-margin-label-r)
     var(--fk-margin-label-b) var(--fk-margin-label-l);

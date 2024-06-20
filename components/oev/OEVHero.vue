@@ -34,9 +34,6 @@ const ui = useInterfaceStore();
 </template>
 
 <style scoped lang="scss">
-section {
-  //   background: ;
-}
 
 :deep(inner-column) {
   padding-top: 0;
