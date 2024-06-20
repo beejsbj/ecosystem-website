@@ -136,9 +136,10 @@ li:has(+ li) {
 
 .actions {
   justify-content: center;
+  gap: var(--space-xl);
 
   picture {
-    max-width: 16px;
+    max-width: 12px;
     :deep(svg) {
       color: var(--green);
     }
