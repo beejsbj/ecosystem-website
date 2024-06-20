@@ -43,13 +43,7 @@ oev.setProtocols(overview.value);
   </ContentsWrapper>
 </template>
 
-<style>
-.curves-wrapper {
-  display: none;
-}
-</style>
-
-<style scoped lang="scss">
+<style scoped>
 :deep(inner-column) {
   @media (min-width: 768px) {
     padding: var(--space-3xl) var(--space-s);
