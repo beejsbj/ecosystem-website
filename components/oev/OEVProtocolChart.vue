@@ -284,7 +284,7 @@ onMounted(() => {
     :deep(.formkit-options) {
       display: flex;
       gap: var(--space-m);
-      // justify-content: center;
+
     }
   }
 

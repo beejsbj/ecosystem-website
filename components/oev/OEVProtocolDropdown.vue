@@ -80,4 +80,3 @@ const protocolOptions = computed(() => {
   </FormKit>
 </template>
 
-<style scoped></style>
