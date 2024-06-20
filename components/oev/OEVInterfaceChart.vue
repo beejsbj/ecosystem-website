@@ -284,7 +284,7 @@ text-content {
 
 ul.bars {
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-m);
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   //   border-left: var(--border-dark);
 
