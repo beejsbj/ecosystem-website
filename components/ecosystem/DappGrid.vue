@@ -13,7 +13,7 @@ const handleLoadMore = () => {
   }
 };
 
-useGsap((gsap) => {
+useGsap((gsap, ScrollTrigger) => {
   setTimeout(() => {
     if (!ecosystem.hasMoreItems) return;
     //   scroll trigger, when the bottom of dapp grid comes into view call handleloadmore

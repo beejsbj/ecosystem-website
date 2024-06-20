@@ -23,6 +23,10 @@ const ui = useInterfaceStore();
         </NuxtLink>
       </p>
     </text-content>
+
+    <picture class="github-graphic">
+      <img src="@/assets/images/github-graphic.svg" alt="GitHub graphic" />
+    </picture>
   </SectionColumn>
 </template>
 
@@ -44,29 +48,6 @@ text-content {
 
   a {
     display: block;
-  }
-}
-
-.github-link-section {
-  background: url("@/assets/images/github-graphic.svg"),
-    radial-gradient(circle at bottom, transparent 20%, var(--paper) 100%);
-  background-repeat: no-repeat;
-  background-size: 75%;
-  padding-bottom: 150px;
-  background-position: center;
-
-  @media (min-width: 768px) {
-    background-position: center 80%;
-    background-size: 100%;
-  }
-
-  @media (min-width: 1000px) {
-    background-position: center -10%;
-    background-size: 100%;
-  }
-
-  @media (min-width: 1700px) {
-    background-size: 70%;
   }
 }
 </style>

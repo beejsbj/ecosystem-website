@@ -1,12 +1,14 @@
 <script setup>
-function animateCurvesWaves(gsap) {
+function animateIntro(gsap) {
   //   const pageLoad = gsap.timeline();
+  const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
 
-    const curvesLength = 4100;
+  const curvesLength = curvesPath[0].getTotalLength();
 
-    const duration = 3;
-    const easing = "linear";
+  const duration = 3;
+  const easing = "linear";
 
+  let context = gsap.context(() => {
     const timeline = gsap.timeline();
 
     timeline.set(curvesPath, {
@@ -19,7 +21,7 @@ function animateCurvesWaves(gsap) {
       strokeDashoffset: 0,
       ease: easing,
     });
-
+  });
 
   setTimeout(() => {
     context.kill();
@@ -27,7 +29,25 @@ function animateCurvesWaves(gsap) {
 }
 
 useGsap((gsap) => {
-  //   animateCurvesWaves();
+  animateIntro(gsap);
+
+  const timeline = gsap.timeline({
+    repeat: -1,
+  });
+
+  timeline.fromTo(
+    "#curve-decoration-3 path",
+    {
+      y: 5,
+    },
+    {
+      duration: 5,
+      y: -5,
+      transformOrigin: "center center",
+      ease: "power1.inOut",
+      stagger: { each: 0.5, repeat: "-1", from: "start", yoyo: true },
+    }
+  );
 });
 </script>
 
