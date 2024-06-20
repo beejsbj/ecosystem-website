@@ -13,19 +13,21 @@ useGsap((gsap) => {
     return;
   }
 
-  gsap.to(".explainer-carousel ", {
-    scrollTrigger: {
-      trigger: "ul.explainer-carousel",
-      start: "top 60%",
-      end: "80% 40%",
-      scrub: true,
-      markers: true,
-    },
+  setTimeout(() => {
+    gsap.to(".explainer-carousel ", {
+      scrollTrigger: {
+        trigger: "ul.explainer-carousel",
+        start: "top 60%",
+        end: "80% 40%",
+        scrub: true,
+        markers: true,
+      },
 
-    scrollTo: {
-      x: "max",
-    },
-  });
+      scrollTo: {
+        x: "max",
+      },
+    });
+  }, 3000);
 });
 
 function handleButton(direction) {
@@ -101,7 +103,7 @@ section {
   background-image: url("/images/oev/explainer-steps/explainer-bg.svg");
   background-size: 200%;
   background-repeat: no-repeat;
-  background-position:  20% -1%;
+  background-position: 20% -1%;
 }
 ul {
   display: grid;
