@@ -53,7 +53,7 @@ function handleButton(direction) {
   <SectionColumn>
     <h2
       :class="{
-        'notice-voice': ui.isMobile,
+        'firm-voice': ui.isMobile,
         'attention-voice': !ui.isMobile,
       }"
     >
@@ -98,10 +98,12 @@ h2 {
 
 section {
   container: inline-size;
+@media (min-width: 1000px){
   background-image: url("/images/oev/explainer-steps/explainer-bg.svg");
   background-size: 200%;
   background-repeat: no-repeat;
   background-position:  20% -1%;
+}
 }
 ul {
   display: grid;
@@ -139,7 +141,7 @@ li:has(+ li) {
   gap: var(--space-xl);
 
   picture {
-    max-width: 12px;
+    max-width: 10px;
     :deep(svg) {
       color: var(--green);
     }
