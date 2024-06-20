@@ -3,11 +3,7 @@ import formatNumber from "@/utils/formatNumber";
 
 const oev = useOEVStore();
 
-const visibleBars = ref([
-  "totalLiquidated",
-  "totalProfitUSD",
-  "totalSentToBuilderUSD",
-]);
+const visibleBars = ref(["totalLiquidated", "totalProfitUSD"]);
 
 const bars = [
   {
@@ -16,31 +12,32 @@ const bars = [
     color: "hsla(4, 68%, 15%, 1.00)",
   },
   {
-    label: "Potential Profits",
+    label: "Potential OEV Lost",
     value: "totalProfitUSD",
-    color: "hsla(226, 100%, 70%, 1)",
+    color: "hsla(230, 53%, 32%, 1.00)",
     help: "(Blockspace auction bribes + Liquidated totalProfitUSD)",
   },
-  {
-    label: "Total Sent to Builder",
-    value: "totalSentToBuilderUSD",
-    color: "hsla(354, 98%, 24%, 1)",
-    attrs: {
-      label: "Total Sent to Builder",
-    },
-  },
-  {
-    label: "Total Incentives",
-    value: "totalIncentiveUSD",
-    color: "hsla(226, 100%, 70%, 1)",
-  },
+  //   {
+  //     label: "Total Sent to Builder",
+  //     value: "totalSentToBuilderUSD",
+  //     color: "hsla(354, 98%, 24%, 1)",
+  //     attrs: {
+  //       label: "Total Sent to Builder",
+  //     },
+  //   },
+  //   {
+  //     label: "Total Incentives",
+  //     value: "totalIncentiveUSD",
+  //     color: "hsla(226, 100%, 70%, 1)",
+  //   },
 ];
 
-const visibleProtocols = computed(() =>
-  Object.values(oev.userSelectedProtocols).map((protocolSlug) =>
+const visibleProtocols = computed(() => {
+  const mapped = Object.values(oev.userSelectedProtocols).map((protocolSlug) =>
     oev.getProtocolBySlug(protocolSlug)
-  )
-);
+  );
+  return mapped.filter((protocol) => protocol !== undefined);
+});
 
 const maxHeight = computed(() => {
   //   sort the values by highest
@@ -105,7 +102,6 @@ function barHeight(value) {
         </FormKit>
       </div>
     </div>
-
     <!-- OEV Interface Chart component -->
     <ul class="bars" v-auto-animate>
       <template v-for="(protocol, i) in visibleProtocols" :key="protocol.slug">
@@ -246,14 +242,15 @@ text-content {
 .totalProfitUSD {
   --background: linear-gradient(
     to bottom,
-    hsla(255, 34%, 54%, 0.5),
-    hsla(255, 34%, 54%, 00)
+
+    hsla(230, 53%, 32%, 0.5),
+    hsla(230, 53%, 32%, 00)
   );
 
   --after-background: linear-gradient(
     to bottom,
-    hsla(255, 34%, 70%, 1),
-    hsla(255, 34%, 0%, 0)
+    hsla(230, 53%, 70%, 1),
+    hsla(230, 53%, 0%, 0)
   );
 }
 
@@ -287,7 +284,7 @@ text-content {
 
 ul.bars {
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-m);
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   //   border-left: var(--border-dark);
 
