@@ -6,6 +6,37 @@ const { gsap } = useGsap();
 
 const scrollPosition = ref(0);
 
+
+const steps = [
+  {
+    count: 1,
+    text: 'Oracle updates'
+  },
+  {
+    count: 2,
+    text: 'Health Factor'
+  },
+  {
+    count: 3,
+    text: 'Searchers see the liquidable position'
+  },
+  {
+    count: 4,
+    text: 'Competition in block space auctions'
+  },
+  {
+    heading: 'User liquidated',
+    count: 5,
+    text: 'Profits',
+    list: [
+      'Searchers',
+      'Validators'
+      ]
+  }
+
+
+] 
+
 useGsap((gsap) => {
   //scroll ul as we scroll
 
@@ -62,10 +93,16 @@ function handleButton(direction) {
     </h2>
 
     <ul class="explainer-carousel">
-      <li v-for="step in 5">
-        <picture :class="`step-${step}`">
-          <img :src="`/images/oev/explainer-steps/step-${step}.png`" />
+      <li v-for="step in steps">
+        <h3 class='whisper-voice'>
+          {{step.heading}}
+        </h3>
+        <picture :class="`step-${step.count}`">
+          <img :src="`/images/oev/explainer-steps/step-${step.count}.svg`" />
         </picture>
+        <p class="solid-voice">
+          {{step.text}}
+        </p>
       </li>
     </ul>
     <div class="actions">
@@ -88,6 +125,9 @@ function handleButton(direction) {
         </picture>
       </button>
     </div>
+    <picture class="explain-bg-curves">
+      <img src="/images/oev/explainer-steps/explainer-bg.svg" alt="BG Curve Image">
+    </picture>
   </SectionColumn>
 </template>
 
@@ -98,14 +138,24 @@ h2 {
 }
 
 section {
-  container: inline-size;
-@media (min-width: 1000px){
-  background-image: url("/images/oev/explainer-steps/explainer-bg.svg");
-  background-size: 200%;
-  background-repeat: no-repeat;
-  background-position: 20% -1%;
+  position: relative;
+  overflow: hidden;
+
+
 }
+
+.explain-bg-curves {
+  position: absolute;
+  top: 0vw; left: -40vw;
+  width: 250vw;
+  height: 80vw;
+  z-index: -1;
+
 }
+
+
+
+
 ul {
   display: grid;
   grid-template-columns: repeat(5, 175px);
@@ -126,7 +176,14 @@ ul {
   &::-webkit-scrollbar {
     display: none;
   }
+
+  picture{
+    max-width: 100px;
+
+  }
+
 }
+
 
 li:has(+ li) {
   --arrow-size: 1.5rem;
