@@ -91,9 +91,21 @@ function scrollToDisplayCard() {
           :alt="`Logo of ${dapp?.name}`"
         />
       </picture>
-      <h2 class="firm-voice-smaller">
-        {{ dapp?.name ?? "dApp Name" }}
-      </h2>
+      <div class="text-content">
+        <h2 class="firm-voice-smaller">
+          {{ dapp?.name ?? "dApp Name" }}
+        </h2>
+        <ul class="categories-list">
+          <li
+            class="micro-voice category"
+            v-for="category in dapp?.categories ?? [1, 2]"
+            :data-category="category"
+          >
+            {{ ecosystem?.categoryToLabel?.[category] ?? "Category" }}
+            <!-- <DynamicIcon :icon="category" /> -->
+          </li>
+        </ul>
+      </div>
     </text-content>
     <ul class="proxy-list" v-auto-animate>
       <h3 class="solid-voice">Proxy Address</h3>
@@ -144,22 +156,22 @@ function scrollToDisplayCard() {
   overflow: hidden;
 
   &.display-card {
-    background: var(--gradient-radial-green);
+    //  background: var(--gradient-radial-green);
     grid-template-columns: 0.2fr 0.8fr 1fr;
     grid-column: 1;
     grid-row: 1/-1;
     h2 {
-      font-size: var(--step-2);
+      font-size: var(--step-1);
       grid-column: span 2;
     }
 
     picture.logo {
-      max-width: 60px;
+      max-width: 50px;
     }
   }
 
   &:hover {
-    background: var(--gradient-radial-green-hover);
+    //  background: var(--gradient-radial-green-hover);
   }
 
   text-content {
@@ -170,10 +182,11 @@ function scrollToDisplayCard() {
     align-items: center;
 
     picture.logo {
-      max-width: 40px;
+      width: 50px;
       border-radius: 50%;
       aspect-ratio: 1/1;
-      padding: 1%;
+      // padding: 1%;
+      margin-right: var(--space-2xs);
 
       img {
         width: 100%;
@@ -186,8 +199,34 @@ function scrollToDisplayCard() {
       white-space: nowrap;
     }
   }
-  ul {
-    grid-column: 2/-1;
+
+  .categories-list {
+    display: flex;
+    gap: var(--space-2xs);
+    justify-content: start;
+    margin-top: var(--space-2xs);
+
+    li {
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      gap: var(--space-3xs);
+      white-space: nowrap;
+      padding: calc(var(--space-2xs) / 5) var(--space-2xs);
+
+      border: var(--border-dark);
+      border-radius: var(--corners);
+      background: var(--gradient-dark);
+
+      :deep(picture) {
+        max-width: var(--step-0);
+      }
+    }
+  }
+
+  .proxy-list {
+    grid-column: 1/-1;
 
     display: grid;
     gap: var(--space-3xs);

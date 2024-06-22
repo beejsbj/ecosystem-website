@@ -25,12 +25,13 @@ const { data: feedProjects, pending } = await useFetch("/api/projects", {
     <!--  -->
 
     <SectionColumn class="header">
+      <h1 class="loud-voice">dApps using</h1>
       <div class="feed-icon-heading">
         <FeedIcon :feed="feedName" />
 
-        <h1 class="loud-voice">
+        <h2 class="firm-voice">
           <strong>{{ feedName }}</strong>
-        </h1>
+        </h2>
       </div>
       <FeedHeaderInfo :proxy="proxy" />
     </SectionColumn>
@@ -45,13 +46,20 @@ const { data: feedProjects, pending } = await useFetch("/api/projects", {
   </article>
 </template>
 
+<style>
+html {
+  /* --paper: var(--gradient-radial-green); */
+}
+</style>
+
 <style scoped lang="scss">
 .feed-icon-heading {
   display: flex;
   align-items: center;
+  margin-top: var(--space-s);
 
   :deep(.feed-icon) picture {
-    --width: 60px;
+    --width: 40px;
   }
 }
 </style>
