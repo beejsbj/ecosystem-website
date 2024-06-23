@@ -14,46 +14,7 @@ const decorations = ref([
   },
 ]);
 
-const icons = ref([
-  {
-    name: "Logo Full",
-    component: "LogoFull",
-  },
-  {
-    name: "Logo Icon",
-    component: "LogoIcon",
-  },
-  {
-    name: "Menu Icon",
-    component: "MenuIcon",
-  },
-  {
-    name: "Dao Icon",
-    component: "DaoIcon",
-  },
-  {
-    name: "Datafeed Icon",
-    component: "DatafeedIcon",
-  },
-  {
-    name: "Airnode Icon",
-    component: "AirnodeIcon",
-  },
-  {
-    name: "Developer Tool Icon",
-    component: "DeveloperToolIcon",
-  },
-  {
-    name: "Social Icon",
-    component: "SocialIcon",
-    social: "twitter",
-  },
-  {
-    name: "Chain Icon",
-    component: "ChainIcon",
-    social: "twitter",
-  },
-]);
+const icons = ref([]);
 
 const socialIcons = ref([
   "twitter",
