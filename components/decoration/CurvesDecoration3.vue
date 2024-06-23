@@ -1,16 +1,14 @@
 <script setup>
-const ui = useInterfaceStore();
+function animateIntro(gsap) {
+  //   const pageLoad = gsap.timeline();
+  const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
 
-useGsap((gsap) => {
+  const curvesLength = curvesPath[0].getTotalLength();
+
+  const duration = 3;
+  const easing = "linear";
+
   let context = gsap.context(() => {
-    const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
-    //   const pageLoad = gsap.timeline();
-
-    const curvesLength = 4100;
-
-    const duration = 3;
-    const easing = "linear";
-
     const timeline = gsap.timeline();
 
     timeline.set(curvesPath, {
@@ -28,6 +26,28 @@ useGsap((gsap) => {
   setTimeout(() => {
     context.kill();
   }, 2000);
+}
+
+useGsap((gsap) => {
+  animateIntro(gsap);
+
+  const timeline = gsap.timeline({
+    repeat: -1,
+  });
+
+  timeline.fromTo(
+    "#curve-decoration-3 path",
+    {
+      y: 5,
+    },
+    {
+      duration: 5,
+      y: -5,
+      transformOrigin: "center center",
+      ease: "power1.inOut",
+      stagger: { each: 0.5, repeat: "-1", from: "start", yoyo: true },
+    }
+  );
 });
 </script>
 
@@ -1390,25 +1410,19 @@ picture.curves-decoration-3 {
     pointer-events: none;
     position: absolute;
     top: 0px;
-    left: 0;
-    width: 100%;
-    max-height: 500px;
-    aspect-ratio: 1 / 1;
+    left: 200px;
+    width: 800px;
+    aspect-ratio: 1;
     z-index: 1;
-    background: linear-gradient(135deg, hsla(0, 0%, 0%, 0.55) 35%, transparent);
+    background: linear-gradient(
+      135deg,
+      hsla(0, 0%, 0%, 0.8) 20%,
+      transparent 50% 100%
+    );
 
     @media (min-width: 768px) {
-      top: 0px;
+      top: 50px;
       left: 500px;
-      width: 25%;
-      max-height: unset;
-      // border: var(--border);
-
-      background: linear-gradient(
-        315deg,
-        hsla(0, 0%, 0%, 0.4) 65%,
-        transparent
-      );
     }
   }
 }

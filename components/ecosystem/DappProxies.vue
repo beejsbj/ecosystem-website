@@ -135,6 +135,7 @@ section.proxy-table {
     max-height: 400px;
 
     overflow-y: scroll;
+    overscroll-behavior: contain;
     position: relative;
     scroll-behavior: smooth;
 

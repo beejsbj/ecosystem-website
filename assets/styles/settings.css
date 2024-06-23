@@ -3,8 +3,8 @@
 html {
   /* Black and white */
   --hue: 166;
-  --black: hsla(0, 0%, 1%, 1);
-  --white: hsla(var(--hue), 0%, 95%, 1);
+  --black: var(--color-base-dark);
+  --white: var(--color-base-light);
 
   --gray: hsla(var(--hue), 0%, 50%, 1);
   --gray-light: color-mix(in hsl, var(--gray), var(--white));

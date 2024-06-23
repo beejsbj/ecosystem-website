@@ -29,9 +29,7 @@ useSeoMeta({
     <MissionComponent />
 
     <section class="curves-wrapper">
-      <picture class="curves-decoration-3">
-        <CurvesDecoration3 />
-      </picture>
+      <CurvesDecoration3 />
     </section>
 
     <CallToAction />

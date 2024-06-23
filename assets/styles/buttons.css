@@ -63,7 +63,7 @@ a {
   padding: 0.5em 1em;
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--ink);
   --link-hover: var(--green-lighter);
   --link-active: var(--green);
   transition: 0.2s ease-in-out;
@@ -87,17 +87,14 @@ p :is(button, a).text {
 
 .text.green {
   color: var(--green);
-  --link-hover: var(--green-lighter) !important;
   --link-active: var(--green-dark);
 }
 .text.violet {
   color: var(--violet) !important;
-  --link-hover: var(--violet-light);
   --link-active: var(--violet-dark);
 }
 .text.indigo {
   color: var(--indigo-lighter) !important;
-  --link-hover: var(--indigo-light);
   --link-active: var(--indigo);
 }
 

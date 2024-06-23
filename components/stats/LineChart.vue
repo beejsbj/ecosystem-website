@@ -107,11 +107,17 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.x.title,
-          color: "hsla(160, 64%, 69%, 1)",
+          color: "#fafafa",
         },
         ticks: {
           autoSkip: true,
           maxTicksLimit: 10,
+          color: "#C3C4C3",
+        },
+
+        grid: {
+          display: false,
+          color: "#C3C4C3",
         },
       },
       y: {
@@ -120,15 +126,21 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.y.title,
-          color: "hsla(160, 64%, 69%, 1)",
+          color: "#fafafa",
           position: "left",
         },
         ticks: {
           //   autoSkip: true,
           maxTicksLimit: 10,
+          color: "#C3C4C3",
           callback: function (value, index, values) {
             return formatNumber(value);
           },
+        },
+
+        grid: {
+          display: true,
+          color: "#404141",
         },
       },
     },
@@ -162,7 +174,9 @@ const options = computed(() => {
       ];
       gradient.addColorStop(0, startColor);
       gradient.addColorStop(1, endColor);
-      return gradient;
+
+      // return gradient
+      return color;
     },
   };
   const merged = _Merge(defaultOptions, props.options);
@@ -181,19 +195,20 @@ const handleZoomReset = () => {
 
 <template>
   <div class="chart-container">
+    <button
+      v-if="isZoomEnabled"
+      @click="handleZoomReset"
+      class="whisper-voice text zoom-reset-button"
+    >
+      Reset Zoom
+    </button>
     <Line
       :data="props.data"
       :options="options"
       :metadata="props.metadata"
+      id="line-chart"
       ref="chart"
     />
-    <button
-      v-if="isZoomEnabled"
-      @click="handleZoomReset"
-      class="whisper-voice button outline"
-    >
-      Reset Zoom
-    </button>
   </div>
 </template>
 
@@ -202,5 +217,11 @@ const handleZoomReset = () => {
   position: relative;
   height: 100%;
   width: 100%;
+
+  display: grid;
+}
+
+.zoom-reset-button {
+  justify-self: end;
 }
 </style>

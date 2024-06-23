@@ -70,7 +70,7 @@ const plugins = [
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
   addPrefixIconPlugin,
-  hideSuffixIfNoHelpPlugin,
+  addSuffixHelpTooltipPlugin,
   //  proPlugin,
 ];
 
@@ -93,40 +93,61 @@ export default defineFormKitConfig(() => {
     props: {
       selectIcon: "down",
       suffixIcon: "info",
-
-      onSuffixIconClick: handleSuffixClick,
     },
   };
 });
 
-// functions
+// plugins ////////////////
+//
+function addSuffixHelpTooltipPlugin(node) {
+  if (!node.props.help) {
+    node.props.suffixIcon = null;
+    return;
+  }
 
-function handleSuffixClick(node, event) {
-  if (!node.props.help) return;
-  const el = event.target;
+  let tooltip;
 
-  const tooltip = createTooltip(el, {
-    triggers: [],
-    content: node.props.help,
-  });
+  const mouseEnter = node.props.onMouseEnter;
+  node.context.handlers.mouseEnter = (e) => {
+    const el = e.target;
 
-  tooltip.show();
+    //
+    tooltip = createTooltip(el, {
+      triggers: [],
+      content: node.props.help,
+    });
 
-  setTimeout(() => {
+    //
+    tooltip.show();
+
+    mouseEnter?.(e);
+  };
+
+  const mouseLeave = node.props.onMouseLeave;
+  node.context.handlers.mouseLeave = (e) => {
+    const el = e.target;
+
+    //
     tooltip.hide();
-    // Transition
+
     setTimeout(() => {
       destroyTooltip(el);
     }, 400);
-  }, 3000);
-}
 
-// plugins ////////////////
-//
-function hideSuffixIfNoHelpPlugin(node) {
-  if (!node.props.help) {
-    node.props.suffixIcon = null;
-  }
+    mouseLeave?.(e);
+  };
+
+  const schemaFn = node.props.definition.schema;
+  node.props.definition.schema = (sectionsSchema = {}) => {
+    sectionsSchema.suffixIcon = {
+      attrs: {
+        onmouseenter: "$handlers.mouseEnter",
+        onmouseleave: "$handlers.mouseLeave",
+      },
+    };
+
+    return schemaFn(sectionsSchema);
+  };
 }
 
 function addPrefixIconPlugin(node) {
@@ -202,7 +223,7 @@ function addAsteriskPlugin(node) {
             attrs: {
               class: "text-action-error-500",
             },
-            children: ["*"],
+            children: [" *"],
           },
         ],
       };

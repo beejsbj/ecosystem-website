@@ -46,9 +46,10 @@ article.body h2 a {
   font-family: var(--font);
   font-size: var(--step-1);
   line-height: 1.2;
-  font-weight: var(--weight-light);
-  color: var(--gray);
+  font-weight: var(--weight-medium);
+  color: var(--gray-light);
 }
+
 .firm-voice {
   font-family: var(--font);
   font-size: var(--step-1);
@@ -140,7 +141,7 @@ p + p {
 }
 
 :is(h1, h2) + p {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 h3 + p {
@@ -177,4 +178,8 @@ pre code {
 .highlight {
   background-color: var(--violet);
   color: var(--ink);
+}
+
+.highlight-green {
+  color: var(--green);
 }
