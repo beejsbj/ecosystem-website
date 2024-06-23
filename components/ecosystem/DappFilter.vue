@@ -95,9 +95,10 @@ const handleFilter = (event) => {
             loading="lazy"
             class="caret"
             :class="{ down: showAll.chains }"
-            src="@/assets/images/interface/caret.svg"
+            src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
+          <!-- <FormKitIcon icon="down" /> -->
         </button>
       </div>
       <ul class="pills" v-auto-animate>
@@ -150,7 +151,7 @@ const handleFilter = (event) => {
             loading="lazy"
             class="caret"
             :class="{ down: showAll.productTypes }"
-            src="@/assets/images/interface/caret.svg"
+            src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
         </button>
@@ -204,7 +205,7 @@ const handleFilter = (event) => {
             loading="lazy"
             class="caret"
             :class="{ down: showAll.categories }"
-            src="@/assets/images/interface/caret.svg"
+            src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
         </button>
@@ -256,7 +257,7 @@ const handleFilter = (event) => {
             loading="lazy"
             class="caret"
             :class="{ down: showAll.years }"
-            src="@/assets/images/interface/caret.svg"
+            src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
         </button>
@@ -343,10 +344,6 @@ dapp-filter {
     gap: var(--space-s);
 
     padding: 0 var(--space-m);
-
-    .chain-option {
-      padding: 0;
-    }
   }
 }
 

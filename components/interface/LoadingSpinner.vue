@@ -1,5 +1,5 @@
 <script setup>
-import gsap from "gsap";
+const { gsap } = useGsap();
 
 onMounted(() => {
   gsap.set("body", {

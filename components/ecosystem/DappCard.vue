@@ -38,7 +38,7 @@ function filterBy(event) {
           </li>
           <li v-else-if="i == 4">
             <picture class="plus-icon">
-              <img src="@/assets/images/interface/plus.svg" alt="" />
+              <img src="@/assets/images/icons/interface/plus.svg" alt="" />
             </picture>
           </li>
         </template>

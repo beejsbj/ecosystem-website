@@ -116,7 +116,7 @@ function getFeedQuery(proxy) {
             <picture class="cross">
               <img
                 loading="lazy"
-                src="@/assets/images/interface/cross.svg"
+                src="@/assets/images/icons/interface/cross.svg"
                 alt="cross icon"
               />
             </picture>

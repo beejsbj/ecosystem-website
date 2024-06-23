@@ -1,4 +1,5 @@
 <script setup>
+import { FormKitIcon } from "@formkit/vue";
 const props = defineProps(["feedProjects", "pending", "proxy"]);
 const router = useRouter();
 const ui = useInterfaceStore();
@@ -74,7 +75,13 @@ const filteredDapps = computed(() => {
         v-auto-animate
         v-else-if="filteredDapps.length > 0"
       >
-        <h3 class="teaser-voice">dApps that use this Feed</h3>
+        <button class="calm-voice text green export-button">
+          <picture>
+            <FormKitIcon icon="download-csv-alt" />
+          </picture>
+
+          Export CSV
+        </button>
         <template v-for="dapp in filteredDapps">
           <li v-if="displayDapp !== dapp" :key="dapp.slug">
             <SkeletonCard v-if="pending" />
@@ -127,8 +134,16 @@ const filteredDapps = computed(() => {
 
   transition: 0.5s;
 
-  h3 {
+  button.export-button {
     grid-column: 1/-1;
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-3xs);
+    picture {
+      max-width: 32px;
+    }
   }
 
   @media (min-width: 768px) {

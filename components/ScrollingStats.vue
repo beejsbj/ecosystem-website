@@ -1,7 +1,5 @@
 <script setup>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// const {gsap} = useGsap();
 
 const ui = useInterfaceStore();
 const graph = ref(null);

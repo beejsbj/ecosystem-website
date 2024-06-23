@@ -129,7 +129,7 @@ async function handleUpdateProxy() {
             <picture>
               <img
                 loading="lazy"
-                src="@/assets/images/interface/plus.svg"
+                src="@/assets/images/icons/interface/plus.svg"
                 alt="plus icon"
               />
             </picture>
@@ -233,6 +233,4 @@ async function handleUpdateProxy() {
     color: var(--error, red);
   }
 }
-
-
 </style>

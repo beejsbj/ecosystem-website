@@ -47,7 +47,7 @@ export default {
       <picture>
         <img
           loading="lazy"
-          src="@/assets/images/interface/copy.svg"
+          src="@/assets/images/icons/interface/copy.svg"
           alt="Copy icon"
         />
       </picture>

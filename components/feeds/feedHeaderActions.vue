@@ -41,7 +41,7 @@ function handleReset() {
     <NuxtLink
       v-if="showMarket"
       :to="`https://market.api3.org/dapis/${chainSlug}/${feedSlug}`"
-      class="button outline whisper-voice"
+      class="button whisper-voice"
       :target="`${chainSlug}-${feedSlug}`"
       key="market-button"
     >

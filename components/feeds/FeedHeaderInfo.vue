@@ -65,9 +65,9 @@ function handleChainChange(chain) {
             selection-removable
           >
             <template #option="{ option }">
-              <div class="chain-option">
+              <div class="icon-option">
                 <ChainIcon :id="option.value" />
-                <span class="whisper-voice">
+                <span class="calm-voice">
                   {{ option.label }}
                 </span>
               </div>
@@ -114,14 +114,20 @@ function handleChainChange(chain) {
   .skeleton {
     margin: 0 !important;
     flex-basis: 220px;
-    background-color: var(--paper);
+    background-color: transparent;
 
     @media (max-width: 500px) {
       flex-basis: 100%;
     }
   }
   :deep(.formkit-inner) {
-    padding-left: var(--space-2xs);
+    padding-left: 0;
+    --fk-border-box-shadow: none;
+    --fk-color-placeholder: var(--gray);
+
+    .icon-option {
+      padding-inline-start: 0;
+    }
   }
 
   .feed-id,
