@@ -41,9 +41,7 @@ useGsap((gsap) => {
           v-if="ui.isMobile"
           @click="showMenu = !showMenu"
         >
-          <picture>
-            <MenuIcon />
-          </picture>
+          <DynamicIcon icon="hamburger" width="32px" />
         </button>
         <SidePanelSlot
           v-if="ui.isMobile"
