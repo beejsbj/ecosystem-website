@@ -66,12 +66,20 @@ a {
   color: var(--white);
   --link-hover: var(--green-lighter);
   --link-active: var(--green);
+  transition: 0.2s ease-in-out;
+
+  background-position: 90% center;
 }
 p :is(button, a).text {
   padding: 0;
 }
 .text:is(:hover, :focus-visible) {
   color: var(--link-hover) !important;
+  background: url("@/assets/images/icons/interface/arrow-right.svg") no-repeat;
+  background-position: right;
+  background-size: 24px;
+
+  padding-right: 1.5em;
 }
 .text:active {
   color: var(--link-active) !important;
@@ -124,7 +132,7 @@ img.caret.right {
 
 :is(button, a, span).external-link {
   --size: 16px;
-  background-image: url("@/assets/images/interface/diagonal-arrow.svg");
+  background-image: url("@/assets/images/icons/interface/diagonal-arrow.svg");
   background-repeat: no-repeat;
   padding-right: calc(var(--size) + var(--space-3xs));
   background-size: var(--size);
