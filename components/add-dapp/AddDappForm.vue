@@ -1,7 +1,7 @@
 <script setup>
 import { useStorage } from "@vueuse/core";
 import { setErrors, FormKitMessages } from "@formkit/vue";
-import { getValidationMessages } from "@formkit/validation";
+import { reset } from "@formkit/core";
 
 const { verifyWallet } = useSiwe();
 const { submitProject, fetchFeedNames } = useHttpCalls();
@@ -9,6 +9,8 @@ const web3Store = useWeb3Store();
 const ui = useInterfaceStore();
 
 const dappForm = useStorage("dapp-form", {});
+
+const formRef = ref(null);
 
 const nextClasses = {
   inputClass: "$reset button outline",
@@ -20,20 +22,10 @@ const prevClasses = {
 };
 
 const loading = ref(false);
-const messages = ref([]);
+
 const successData = ref({ message: "", pr_url: "" });
 const submitSuccess = ref(false);
 const feedNameOptions = ref([]);
-
-function showErrors(node) {
-  messages.value = [];
-  const validations = getValidationMessages(node);
-  validations.forEach((inputMessages) => {
-    messages.value = messages.value.concat(
-      inputMessages.map((message) => message.value)
-    );
-  });
-}
 
 const submitHandler = async (event) => {
   if (!web3Store.state?.isConnected) {
@@ -55,18 +47,6 @@ const submitHandler = async (event) => {
   );
   const images = { logo, cover, screenshots };
 
-  // check correct proxy info for datafeed service
-  if (
-    dappForm?.value.productType === "datafeed" &&
-    !dappForm?.value?.proxies?.length
-  ) {
-    setErrors("add-form", [
-      "Please add atleast 1 proxy for data feed service!",
-    ]);
-
-    return;
-  }
-
   const { success: verificationSuccess, data: verificationPayload } =
     await verifyWallet();
 
@@ -80,6 +60,7 @@ const submitHandler = async (event) => {
 
   successData.value.message =
     "Please wait for this to process — it will take about 1-2 mins!";
+  notify.info(successData.value.message);
   const submitResult = await submitProject(
     dappForm,
     images,
@@ -91,10 +72,25 @@ const submitHandler = async (event) => {
     successData.value.pr_url = submitResult.data;
     submitSuccess.value = true;
 
-    delete dappForm.value;
+    notify.success(successData.value.message);
+
+     notify(
+       `<a class='external-link' href='${successData.value.pr_url}' target='_blank'> Visit the PR</a>`,
+       {
+         autoClose: false,
+         dangerouslyHTMLString: true,
+       }
+     );
+
+    setTimeout(() => {
+      reset("add-form", {});
+      navigateTo("/");
+    }, 2000);
   } else {
     successData.value.message = "";
-    setErrors("add-form", [submitResult?.message]);
+
+    setErrors("add-form", submitResult?.messages);
+    notify.error(submitResult?.messages);
   }
   loading.value = false;
 };
@@ -114,8 +110,8 @@ onMounted(async () => {
   <FormKit
     type="form"
     id="add-form"
+    ref="formRef"
     @submit="submitHandler"
-    @submit-invalid="showErrors"
     :actions="false"
     #default="{ state: { valid: isValid } }"
   >
@@ -170,35 +166,17 @@ onMounted(async () => {
         :next-attrs="nextClasses"
       >
         <LinksStep :dappForm="dappForm" />
+
         <template #stepNext>
           <FormSubmit :isLastStep="true" />
           <div class="messages">
-            <ul class="validation-errors" v-auto-animate>
-              <FormKitMessages v-auto-animate />
-              <template
-                v-if="!isValid"
-                v-for="(message, i) in messages"
-                :key="i"
-              >
-                <li class="whisper-voice">
-                  {{ message }}
-                </li>
-              </template>
-            </ul>
+            <FormKitMessages :node="formRef?.node" v-auto-animate />
 
-            <!-- <div v-if="complete"> -->
-            <!-- <AddLoading :isLoading="true" :isWaiting="true" /> -->
-            <!-- </div> -->
-
-            <text-content v-if="submitSuccess">
+            <!-- <text-content v-if="submitSuccess">
               <p class="success-indicator">
                 {{ successData.message }}
               </p>
-
-              <!-- <a :href="successData.pr_url" target="_blank">
-                  View Pull request
-                </a> -->
-            </text-content>
+            </text-content> -->
           </div>
         </template>
       </FormKit>
@@ -227,6 +205,7 @@ form {
 :deep(.formkit-step-actions),
 div.actions {
   display: flex !important;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-m);
 

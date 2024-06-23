@@ -29,11 +29,9 @@ onMounted(() => {
         start: "80% 50%",
         end: "85% 45%",
         onEnter: () => {
-          console.log("scroll");
           handleLoadMore();
         },
         onLeaveBack: () => {
-          console.log("refresh");
           ScrollTrigger.refresh();
         },
       });

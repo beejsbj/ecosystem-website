@@ -1,6 +1,95 @@
 import { isNumber } from "../../services/helper";
-import { Project } from "~/server/models/Project";
-import { cacheInterval, queryCache } from "~/server/services/cache";
+import { PROJECTS } from "@api3-ecosystem/dapp-registry";
+import slug from "slug";
+import type { ProjectType } from "~/server/types";
+
+function isItemsIncludes<T>(array1: T[], array2: T[]): boolean {
+  return array1.every((element) => array2.includes(element));
+}
+
+function applySearchFilter(
+  jsonList: ProjectType[],
+  searchKey?: string
+): ProjectType[] {
+  if (!searchKey) {
+    return jsonList;
+  }
+
+  const searchFields: ((item: ProjectType) => boolean)[] = [
+    (item) => new RegExp(searchKey, "i").test(item.name),
+    (item) =>
+      item.chains.some((chain) => new RegExp(searchKey, "i").test(chain)),
+    (item) =>
+      item.categories.some((category) =>
+        new RegExp(searchKey, "i").test(category)
+      ),
+    (item) => new RegExp(searchKey, "i").test(item.productType),
+  ];
+
+  if (isNumber(searchKey)) {
+    searchFields.push((item) => item.year === parseInt(searchKey));
+  }
+
+  const filteredList = jsonList.filter((item) =>
+    searchFields.some((filter) => filter(item))
+  );
+
+  return filteredList;
+}
+
+function applyFilters(
+  jsonList: ProjectType[],
+  categories?: string,
+  productTypes?: string,
+  years?: string,
+  chains?: string
+): ProjectType[] {
+  let searchFilters: ((item: ProjectType) => boolean)[] = [];
+  let selectionFilters: {
+    [key: string]: ((item: ProjectType) => boolean) | string;
+  } = { status: "active" };
+
+  if (categories && categories?.split(",")?.length > 0) {
+    const categoriesArray = categories
+      .split(",")
+      ?.map((el) => el?.toLowerCase());
+    selectionFilters.categories = (item) =>
+      isItemsIncludes(categoriesArray, item?.categories);
+  }
+
+  if (productTypes && productTypes?.split(",")?.length > 0) {
+    const productTypesArray = productTypes.split(",");
+    selectionFilters.productType = (item) =>
+      isItemsIncludes([item?.productType], productTypesArray);
+  }
+
+  if (years && years?.split(",")?.length > 0) {
+    const yearsArray = years.split(",").map((ele) => ele);
+    selectionFilters.year = (item) =>
+      isItemsIncludes([item.year?.toString()], yearsArray);
+  }
+
+  if (chains && chains?.split(",")?.length > 0) {
+    const chainsArray = chains.split(",").map((ele) => ele);
+
+    selectionFilters.chains = (item) =>
+      isItemsIncludes(chainsArray, item.chains);
+  }
+
+  const combinedFilters = (item: any): boolean => {
+    const searchFilterPass =
+      searchFilters.length === 0 ||
+      searchFilters.some((filter) => filter(item));
+    const selectionFilterPass = Object.keys(selectionFilters).every((key) =>
+      typeof selectionFilters[key] === "function"
+        ? (selectionFilters[key] as (item: any) => boolean)(item)
+        : item[key] === selectionFilters[key]
+    );
+    return searchFilterPass && selectionFilterPass;
+  };
+
+  return jsonList.filter(combinedFilters);
+}
 
 export default defineEventHandler(async (event) => {
   try {
@@ -11,7 +100,6 @@ export default defineEventHandler(async (event) => {
       chains,
       productTypes,
       years,
-      ticker,
       orderBy,
       orderDirection,
     }: any = getQuery(event);
@@ -21,133 +109,24 @@ export default defineEventHandler(async (event) => {
     const limit = _page * 10;
     const skips = (_page - 1) * 10;
 
-    // input text key will seach in
-    // key string in
-    // . name
-    //.  key text includes in any category
-    // . key inludes in any chain name
-    // . key includes in any product types
-    // . key name includes in any year string
-    // .
+    let projects = PROJECTS;
 
-    // +and+
-
-    // option selection search in :
-    // . filter by project categories in
-    // . filter by project chains in
-    // . filter by product types in
-    // . filter by years in
-
-    // +and+
-
-    // order by keys
-    // name
-    // release date
-
-    let searchFilters: any = {};
-    let selectionFilters: any = {};
-
-    // search key query:
     if (searchKey) {
-      const searchFields: Array<any> = [
-        { name: { $regex: searchKey, $options: "i" } },
-        {
-          chains: { $regex: searchKey, $options: "i" },
-        },
-        { categories: { $regex: searchKey, $options: "i" } },
-        { productType: { $regex: searchKey, $options: "i" } },
-      ];
-
-      if (isNumber(searchKey)) {
-        searchFields.push({
-          year: parseInt(searchKey),
-        });
-      }
-
-      searchFilters = {
-        $or: searchFields,
-      };
+      projects = applySearchFilter(projects, searchKey);
     }
+    projects = applyFilters(projects, categories, productTypes, years, chains);
 
-    selectionFilters.status = "active";
+    projects = projects.sort((a, b) => b.year - a.year);
 
-    if (categories?.split(",")?.length > 0) {
-      const categoriesArray = categories?.split(",");
-      selectionFilters.categories = { $in: categoriesArray };
-    }
+    projects = projects.map((el) => {
+      return { ...el, slug: slug(el.name) };
+    });
 
-    // filter all selected product types
-    if (productTypes?.split(",")?.length > 0) {
-      const productTypesArray = productTypes?.split(",");
-      selectionFilters.productType = { $in: productTypesArray };
-    }
+    const filteredList = projects?.slice(skips, limit);
 
-    // filter all selected years
-    if (years?.split(",")?.length > 0) {
-      const yearsArray = years?.split(",")?.map((ele: string) => parseInt(ele));
-      selectionFilters.year = { $in: yearsArray };
-    }
-
-    if (chains?.split(",")?.length > 0) {
-      const chainsArray = chains
-        ?.split(",")
-        ?.map((ele: string) => parseInt(ele));
-      selectionFilters.chains = { $in: chainsArray };
-    }
-
-    const finalFilter = { $and: [searchFilters, selectionFilters] };
-
-    let cacheKey = `${JSON.stringify(finalFilter)}-${limit}-${skips}`;
-    if (ticker !== undefined) {
-      cacheKey = `${cacheKey}-${ticker}`;
-    }
-
-    const cachedData: any = queryCache.get(cacheKey);
-
-    if (cachedData !== undefined) {
-      event.node.res.statusCode = 200;
-      return JSON.parse(cachedData);
-    }
-
-    let projects = await Project.find(finalFilter).sort({ year: -1 });
-
-    let filteredList: any[] = projects;
-
-    // apply proxyAddress filter if any
-    if (ticker !== undefined) {
-      filteredList = projects?.filter((project: any) => {
-        const proxies = project.proxies;
-        if (!proxies) return false;
-        const proxyKeys = Object.keys(proxies);
-        for (let i = 0; i < proxyKeys.length; i++) {
-          const chainId = proxyKeys[i];
-          const proxyList = proxies[chainId];
-          for (let j = 0; j < proxyList.length; j++) {
-            const proxy = proxyList[j];
-
-            if (proxy.feedName === ticker) {
-              return true;
-            }
-          }
-        }
-        return false;
-      });
-    }
-    const totalProjects = filteredList.length;
-
-    const results = filteredList?.slice(skips, limit);
-
-    // cache result with new queries
-    queryCache.set(
-      cacheKey,
-      JSON.stringify({ projects: results, total: totalProjects }),
-      cacheInterval
-    );
-
-    event.node.res.statusCode = 200;
-    return { projects: results, total: totalProjects };
+    return { projects: filteredList, total: projects.length };
   } catch (err: any) {
-    console.log("get projects error", err);
+    console.log("get projects  error ", err);
     event.node.res.statusCode = 500;
     return {
       code: "ERROR",

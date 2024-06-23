@@ -97,12 +97,11 @@ async function handleUpdateProxy() {
           :label="`Proxy chain`"
           :id="`proxy-chain`"
           :options="ecosystem.chainOptions"
-          :v-model="dappForm.proxyChain"
-          :required="true"
+          v-model="dappForm.proxyChain"
           popover
         >
           <template #option="{ option }">
-            <div class="chain-option">
+            <div class="icon-option">
               <ChainIcon :id="option.value" />
               <span>
                 {{ option.label }}
@@ -118,8 +117,7 @@ async function handleUpdateProxy() {
           :label="`Proxy feed name`"
           :id="`feed-name`"
           :options="props?.feedNameOptions"
-          :v-model="dappForm.feedName"
-          :required="true"
+          v-model="dappForm.feedName"
           popover
         />
       </form-field>

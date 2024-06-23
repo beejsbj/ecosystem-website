@@ -1,5 +1,5 @@
 <script setup>
-// import * as Logos from "@phase21/logos";
+// import * as Logos from "@api3/logos";
 
 const { $chainLogo } = useNuxtApp();
 

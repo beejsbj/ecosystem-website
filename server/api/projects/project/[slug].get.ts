@@ -1,5 +1,5 @@
-import { Project } from "~/server/models/Project";
-import { cacheInterval, queryCache } from "~/server/services/cache";
+import { PROJECTS } from "@api3-ecosystem/dapp-registry";
+import slug from "slug";
 
 export default defineEventHandler(async (event) => {
   const projectSlug = event.context?.params?.slug;
@@ -13,19 +13,8 @@ export default defineEventHandler(async (event) => {
       };
     }
 
-    const cacheKey = "project-" + projectSlug + "-details";
-    const cachedData: any = queryCache.get(cacheKey);
-
-    if (cachedData !== undefined) {
-      console.log("getting from cache");
-
-      event.node.res.statusCode = 200;
-      return JSON.parse(cachedData);
-    }
-
-    const project = await Project.findOne({
-      slug: projectSlug,
-      status: "active",
+    const project = PROJECTS.find((project) => {
+      return slug(project.name) === projectSlug;
     });
 
     if (!project) {
@@ -36,12 +25,9 @@ export default defineEventHandler(async (event) => {
       };
     }
 
-    // cache result with new queries
-    queryCache.set(cacheKey, JSON.stringify(project), cacheInterval);
-
-    return project;
+    return { ...project, slug: projectSlug };
   } catch (err) {
-    console.dir(err);
+    console.dir("get project error ", err);
     event.node.res.statusCode = 500;
     return {
       code: "ERROR",

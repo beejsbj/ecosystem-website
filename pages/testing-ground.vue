@@ -5,7 +5,7 @@ definePageMeta({
   alias: ["/testing"],
 });
 
-const box = ref(true);
+const ecosystem = useEcosystemStore();
 </script>
 
 <template>
@@ -13,7 +13,13 @@ const box = ref(true);
     <PageTitle heading="test ground" />
     <SectionColumn>
       <NuxtLink to="/style-guide">style guide</NuxtLink>
-      <FeedIcon feed="aapl/usd" />
+      <button class="button" @click="notify('hello world')">default</button>
+      <button class="button" @click="notify.success('hello world')">
+        sucess
+      </button>
+      <button class="button" @click="notify.error('hello world')">error</button>
+      <button class="button" @click="notify.warn('hello world')">warn</button>
+      <button class="button" @click="notify.info('hello world')">info</button>
     </SectionColumn>
   </ContentsWrapper>
 </template>
@@ -23,12 +29,6 @@ const box = ref(true);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-m);
-}
-
-.box {
-  width: 100px;
-  height: 100px;
-  background: green;
 }
 </style>
 

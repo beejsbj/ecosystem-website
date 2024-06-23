@@ -74,7 +74,7 @@ const imageRatio = async function (node) {
         validation-label="dApp URL"
         id="dapp"
         v-model="dappForm.links.dapp"
-        label="Where can someone find your dApp?*"
+        label="Where can someone find your dApp?"
         placeholder="https://yourdapp.com"
       />
     </form-field>
@@ -107,7 +107,7 @@ const imageRatio = async function (node) {
         v-auto-animate
         id="coverForm"
         type="file"
-        label="Upload a branded cover*"
+        label="Upload a branded cover"
         name="cover"
         no-files-icon="fileImage"
         fileName="cover"

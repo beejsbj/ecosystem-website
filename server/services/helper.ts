@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 export const isNumber = (n: string): boolean => {
   return !isNaN(parseFloat(n)) && isFinite(Number(n));
 };
@@ -16,11 +18,9 @@ export const isValidTelegramUrl = (url: string): boolean => {
     return false;
   }
 
-  console.log("url ", url);
   const pattern = /^(?:https?:\/\/)?t\.me\/(?!joinchat\/)[a-zA-Z0-9_]+$/;
   const flag = pattern.test(url);
 
-  console.log("flag ", flag);
   return flag;
 };
 
@@ -168,3 +168,25 @@ export interface Status {
   message: string;
   data?: any | undefined;
 }
+
+export const connectDB = async () => {
+  const config = useRuntimeConfig();
+
+  if (mongoose.connection.readyState === 1) {
+    console.log(`db already connected: on ${config.nodeEnv}`);
+    return;
+  }
+
+  try {
+    const dbUrl =
+      config.nodeEnv === "production"
+        ? config.mongodbUri
+        : config.mongodbUriDev;
+
+    await mongoose.connect(dbUrl);
+
+    console.log(`db connected: on ${config.nodeEnv}`);
+  } catch (err) {
+    console.log("db connection error ", err);
+  }
+};

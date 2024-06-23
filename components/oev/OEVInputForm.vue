@@ -5,7 +5,7 @@ const oev = useOEVStore();
 
 //get the index of the userAdded protocol
 const userDappIndex = oev.protocols.findIndex(
-  (protocol) => protocol.id === "userAdded"
+  (protocol) => protocol.slug === "userAdded"
 );
 
 const liquidationRate = 0.05; // 5% liquidation rate
@@ -63,6 +63,9 @@ watch(
     const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
     const totalProfitUSD = totalIncentiveUSD * 0.25;
 
+    if (!oev?.protocols) {
+      return;
+    }
     // Update the userAdded protocol with the new values
     oev.protocols[userDappIndex].totalLiquidated = totalLiquidated;
     oev.protocols[userDappIndex].totalIncentiveUSD = totalIncentiveUSD;

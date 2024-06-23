@@ -37,8 +37,8 @@ onMounted(() => {
         type="taglist"
         v-model="dappForm.categories"
         :options="ecosystem.categoryOptions"
-        :label="`Select up to x categories that your dApp serves.*`"
-        :required="true"
+        :label="`Select up to x categories that your dApp serves.`"
+        validation="required"
         popover
       />
     </form-field>
@@ -48,12 +48,12 @@ onMounted(() => {
         type="taglist"
         v-model="dappForm.chains"
         :options="ecosystem.chainOptions"
-        :label="`Select the networks your dApp supports.*`"
-        :required="true"
+        :label="`Select the networks your dApp supports.`"
+        validation="required"
         popover
       >
         <template #option="{ option }">
-          <div class="chain-option">
+          <div class="icon-option">
             <ChainIcon :id="option.value" />
             <span>
               {{ option.label }}
@@ -83,8 +83,9 @@ onMounted(() => {
                   <path
                     d="M2,12.5c-.13,0-.26-.05-.35-.15-.2-.2-.2-.51,0-.71L9.65,3.65c.2-.2,.51-.2,.71,0,.2,.2,.2,.51,0,.71L2.35,12.35c-.1,.1-.23,.15-.35,.15Z"
                     fill="currentColor"
-                  ></path></svg
-              ></span>
+                  ></path>
+                </svg>
+              </span>
             </button>
           </div>
         </template>
@@ -96,12 +97,12 @@ onMounted(() => {
         type="dropdown"
         v-model="dappForm.productType"
         :options="ecosystem.productTypeOptions"
-        :label="`Select the service your dApp uses.*`"
-        :required="true"
+        :label="`Select the service your dApp uses.`"
+        validation="required"
         popover
       >
         <template #option="{ option }">
-          <div class="chain-option">
+          <div class="icon-option">
             <DynamicIcon :icon="option.label" />
             <span>
               {{ option.label }}
@@ -116,8 +117,8 @@ onMounted(() => {
         type="dropdown"
         v-model="dappForm.year"
         :options="yearOptions"
-        :label="`When was your dApp released?*`"
-        :required="true"
+        :label="`When was your dApp released?`"
+        validation="required"
         popover
       />
     </form-field>

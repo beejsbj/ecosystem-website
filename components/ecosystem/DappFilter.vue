@@ -122,7 +122,7 @@ const handleFilter = (event) => {
               v-auto-animate
             >
               <template #label="context">
-                <div class="chain-option">
+                <div class="icon-option">
                   <ChainIcon :id="chain.value" />
                   <span class="whisper-voice">
                     {{ context.label }}
@@ -176,7 +176,7 @@ const handleFilter = (event) => {
               v-auto-animate
             >
               <template #label="context">
-                <div class="chain-option">
+                <div class="icon-option">
                   <DynamicIcon :icon="productType.name" />
                   <span class="whisper-voice">
                     {{ context.label }}
@@ -354,7 +354,8 @@ button.icon.caret {
   max-width: var(--space-l);
 }
 
-:deep(.formkit-outer) {
-  margin: unset;
+.icon-option {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 </style>

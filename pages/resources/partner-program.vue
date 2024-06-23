@@ -65,6 +65,7 @@ async function submitForm() {
         data.message +
         ". Thank you for your interest in the API3 Affiliate Program. We will be in touch soon.",
     };
+
     serverMessages.value.push(message);
   } else {
     serverMessages.value.push({
