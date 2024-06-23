@@ -18,6 +18,13 @@ const params = computed(() => {
 const { data: feedProjects, pending } = await useFetch("/api/projects", {
   params,
 });
+
+//
+definePageMeta({
+  layout: "feed-layout",
+  //   title: feedSlug,
+  //   description: "dApps using the " + feedSlug,
+});
 </script>
 
 <template>

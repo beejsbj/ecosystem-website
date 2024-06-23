@@ -4,6 +4,13 @@ const { data, pending } = await useFetch("/api/projects/stats/", {
 });
 
 const getSlug = (feedName) => feedName.replace("/", "-");
+
+//
+definePageMeta({
+  layout: "feed-layout",
+  //   title: feedSlug,
+  //   description: "dApps using the " + feedSlug,
+});
 </script>
 
 <template>

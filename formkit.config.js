@@ -32,6 +32,7 @@ const icons = {
   ...inputIcons,
   ...fileIcons,
   ...brandIcons,
+  ...registerCustomIcons(),
 };
 
 //classes
@@ -209,4 +210,25 @@ function addAsteriskPlugin(node) {
       return schemaFn(sectionsSchema);
     };
   });
+}
+
+function registerCustomIcons() {
+  // Import all SVG files from the directory using import.meta.glob
+  const icons = import.meta.glob("@/assets/images/icons/**/*.svg", {
+    eager: true,
+    query: "?raw",
+  });
+
+  // Transform the imported modules into a more usable format
+  const formattedIcons = {};
+  Object.keys(icons).forEach((key) => {
+    const iconName = key.split("/").pop().replace(".svg", "");
+    formattedIcons[iconName] = icons[key].default;
+  });
+
+  //   console.log("icons", formattedIcons);
+
+  // Example of how you might use the icons (e.g., registering them with a library)
+  // IconLibrary.register(formattedIcons);
+  return formattedIcons;
 }
