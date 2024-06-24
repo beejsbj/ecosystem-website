@@ -1,7 +1,6 @@
 <script setup>
 import { FormKitIcon } from "@formkit/vue";
 const props = defineProps(["feedProjects", "pending", "proxy"]);
-const router = useRouter();
 const ui = useInterfaceStore();
 
 // #todo get more dapps on scroll
@@ -11,13 +10,17 @@ const dapps = computed(() => {
   }
 
   return props.feedProjects.projects.filter((dapp) => {
-    if (dapp.proxies[props.proxy.chainId]) {
+    if (!dapp.proxies) return false;
+    const proxyKeys = Object.keys(dapp.proxies);
+    const foundProxy = proxyKeys.find(
+      (proxyKey) => proxyKey === props.proxy.chainId
+    );
+    if (foundProxy) {
       return true;
     }
+    return false;
   });
 });
-
-console.log(dapps.value);
 
 const displayDapp = computed(() => {
   if (!dapps.value || !props.proxy.dappSlug) {
