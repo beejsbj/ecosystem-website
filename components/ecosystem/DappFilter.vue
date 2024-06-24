@@ -76,7 +76,7 @@ const handleFilter = (event) => {
       <search-bar>
         <FormKit
           type="search"
-          placeholder="Filter"
+          placeholder="Search"
           v-model="ecosystem.filterQuery.searchKey"
         />
       </search-bar>
