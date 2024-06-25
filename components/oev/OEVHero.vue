@@ -37,6 +37,15 @@ const ui = useInterfaceStore();
 :deep(inner-column) {
   padding-top: 0;
 }
+
+section {
+  position: relative;
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    overflow-x: unset;
+  }
+}
 .hero-container {
   display: grid;
   row-gap: var(--space-s);

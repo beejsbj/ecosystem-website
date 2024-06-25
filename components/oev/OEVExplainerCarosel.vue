@@ -148,7 +148,7 @@ p {
 
 section {
   position: relative;
-  //   overflow: hidden;
+  overflow: hidden;
 }
 
 .explain-bg-curves {
