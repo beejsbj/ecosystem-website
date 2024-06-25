@@ -1,5 +1,10 @@
 <script setup>
 import formatNumber from "@/utils/formatNumber";
+const ui = useInterfaceStore();
+
+const { gsap } = useGsap();
+
+const scrollPosition = ref(0);
 
 const oev = useOEVStore();
 
@@ -77,6 +82,26 @@ function getMaxValue(key) {
 function barHeight(value) {
   return (value / maxHeight.value) * 150;
 }
+
+function handleButton(direction) {
+  scrollPosition.value += direction;
+  let distance = ui.isMobile ? 350 : 250;
+  let x = scrollPosition.value * distance;
+
+  if (direction) {
+    gsap.to(".bars", {
+      scrollTo: {
+        x,
+      },
+    });
+  } else {
+    gsap.to(".bars", {
+      scrollTo: {
+        x,
+      },
+    });
+  }
+}
 </script>
 
 <template>
@@ -149,6 +174,26 @@ function barHeight(value) {
         </li>
       </template>
     </ul>
+    <div class="actions">
+      <button
+        class="icon prev"
+        @click="handleButton(-1)"
+        :disabled="scrollPosition === 0"
+      >
+        <picture>
+          <DynamicIcon icon="left" />
+        </picture>
+      </button>
+      <button
+        class="icon next"
+        @click="handleButton(1)"
+        :disabled="scrollPosition === 2"
+      >
+        <picture>
+          <DynamicIcon icon="right" />
+        </picture>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -286,7 +331,10 @@ ul.bars {
   display: grid;
   margin-bottom: 20px;
   gap: var(--space-m);
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(4, 150px);
+  overflow-x: scroll;
+  min-height: 350px;
+  //   max-width: 92vw;
   //   border-left: var(--border-dark);
 
   @media (min-width: 1000px) {
@@ -416,6 +464,22 @@ li {
         height: calc(var(--bar-totalIncentiveUSD-height) * 1.5px);
       }
     }
+  }
+}
+
+.actions {
+  justify-content: center;
+  gap: var(--space-xl);
+
+  picture {
+    max-width: 10px;
+    :deep(svg) {
+      color: var(--green);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    display: none;
   }
 }
 </style>

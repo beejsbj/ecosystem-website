@@ -588,11 +588,18 @@
 <style lang="scss" scoped>
 picture {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -300px;
+  left: -50px;
+  width: 220%;
   z-index: -1;
+  transform: rotate(15deg);
+
+  @media (min-width: 768px) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   //   background: linear-gradient(
   //     45deg,
   //     rgba(0, 0, 0, 0) 95%,
