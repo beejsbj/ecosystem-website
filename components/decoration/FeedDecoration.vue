@@ -1,4 +1,56 @@
-<script setup></script>
+<script setup>
+function animateIntro(gsap) {
+  //   const pageLoad = gsap.timeline();
+  const curvesPath = document.querySelectorAll(".feed-decoration path");
+
+  const curvesLength = curvesPath[0].getTotalLength();
+
+  const duration = 3;
+  const easing = "linear";
+
+  let context = gsap.context(() => {
+    const timeline = gsap.timeline();
+
+    timeline.set(curvesPath, {
+      strokeDashoffset: 1 * curvesLength,
+      strokeDasharray: curvesLength,
+    });
+
+    timeline.to(curvesPath, {
+      duration: duration,
+      strokeDashoffset: 0,
+      ease: easing,
+    });
+  });
+
+  setTimeout(() => {
+    context.kill();
+  }, 2000);
+}
+
+useGsap((gsap) => {
+  //   animateIntro(gsap);
+  return;
+
+  const timeline = gsap.timeline({
+    repeat: -1,
+  });
+
+  timeline.fromTo(
+    ".feed-decoration path",
+    {
+      y: 10,
+    },
+    {
+      duration: 5,
+      y: -10,
+      transformOrigin: "center center",
+      ease: "power1.inOut",
+      stagger: { each: 0.5, repeat: "-1", from: "start", yoyo: true },
+    }
+  );
+});
+</script>
 
 <template>
   <picture class="feed-decoration">

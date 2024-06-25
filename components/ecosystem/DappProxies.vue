@@ -82,12 +82,13 @@ function getFeedQuery(proxy) {
 
         <!-- proxy address -->
         <div class="proxy-address">
-          <WalletAddress :walletAddress="proxy?.proxyAddress" />
+          <WalletAddress class="whisper-voice" :walletAddress="proxy?.proxyAddress" />
         </div>
 
         <!-- id / dapi based address -->
         <div class="address">
           <WalletAddress
+			 class="whisper-voice"
             :walletAddress="
               proxy?.proxyType === 'datafeedId'
                 ? proxy?.datafeedId

@@ -40,18 +40,10 @@ export default {
     v-tooltip="showCopyTooltip ? 'Copied!' : 'Copy'"
     @click="copyToClipboard"
   >
-    <p class="whisper-voice">
+    <span class="">
       {{ shortWallet }}
-    </p>
-    <div class="icon copy">
-      <picture>
-        <img
-          loading="lazy"
-          src="@/assets/images/icons/interface/copy.svg"
-          alt="Copy icon"
-        />
-      </picture>
-    </div>
+    </span>
+    <DynamicIcon icon="copy" />
   </button>
 </template>
 
@@ -62,16 +54,17 @@ export default {
   cursor: pointer; /* Show pointer cursor when hovering */
   display: flex;
   align-items: center;
-  gap: var(--space-3xs);
-  padding: 0;
-}
-
-.whisper-voice {
+  gap: var(--space-2xs);
   padding: 0;
   color: var(--green);
 }
 
-.copy picture {
-  max-width: var(--space-s);
+.whisper-voice {
+  padding: 0;
+}
+
+:deep(picture) {
+  min-width: var(--space-s);
+  width: 1em;
 }
 </style>

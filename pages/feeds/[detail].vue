@@ -4,6 +4,7 @@ const router = useRouter();
 
 const feedSlug = route.params.detail;
 const feedName = feedSlug.replace("-", "/");
+
 const proxy = computed(() => {
   let proxy = { ...route.query };
   proxy.feedName = feedName;
@@ -13,6 +14,7 @@ const proxy = computed(() => {
 const params = computed(() => {
   return {
     ticker: feedName,
+    chains: proxy.value.chainId ? [proxy.value.chainId] : [],
   };
 });
 
@@ -25,11 +27,16 @@ const showMarket = computed(() => {
   return route.query.chainId;
 });
 
-const { data: feedProjects, pending } = await useFetch("/api/projects", {
+//
+const { data: feedProjects, status } = await useFetch("/api/projects", {
   params,
 });
 
 //
+
+const pending = computed(() => {
+  return status.value != "success";
+});
 
 function handleReset() {
   router.push({
@@ -47,7 +54,6 @@ definePageMeta({
 <template>
   <article>
     <!--  -->
-
     <SectionColumn class="header">
       <button
         @click="handleReset"

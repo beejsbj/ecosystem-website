@@ -3,101 +3,69 @@ import { FormKitIcon } from "@formkit/vue";
 const props = defineProps(["feedProjects", "pending", "proxy"]);
 const ui = useInterfaceStore();
 
-// #todo get more dapps on scroll
+//  get more dapps on scroll
 const dapps = computed(() => {
-  if (!props.proxy.chainId) {
-    return props.feedProjects.projects;
-  }
-
-  return props.feedProjects.projects.filter((dapp) => {
-    if (!dapp.proxies) return false;
-    const proxyKeys = Object.keys(dapp.proxies);
-    const foundProxy = proxyKeys.find(
-      (proxyKey) => proxyKey === props.proxy.chainId
-    );
-    if (foundProxy) {
-      return true;
-    }
-    return false;
-  });
+  return props.feedProjects.projects;
 });
 
-const displayDapp = computed(() => {
-  if (!dapps.value || !props.proxy.dappSlug) {
-    return null;
-  }
-
-  return dapps.value.find((dapp) => dapp.slug == props.proxy.dappSlug);
-});
-
-const filteredDapps = computed(() => {
-  if (!dapps.value) {
+function formattedProxies(dapp) {
+  if (!dapp?.proxies) {
     return [];
   }
 
-  if (!displayDapp.value) {
-    return dapps.value;
-  }
+  const formattedProxyItems = [];
+  Object.keys(dapp?.proxies).forEach((chain) => {
+    let chainItems = dapp?.proxies?.[chain]?.map((el) => {
+      return { ...el, chainId: chain };
+    });
+    formattedProxyItems.push(...chainItems);
+  });
 
-  return dapps.value.filter((dapp) => dapp.slug !== displayDapp.value.slug);
-});
+  return formattedProxyItems.filter((proxy) => {
+    if (props.proxy.chainId == undefined) {
+      return proxy.feedName == props.proxy.feedName;
+    } else
+      return (
+        proxy.feedName == props.proxy.feedName &&
+        proxy.chainId == props.proxy.chainId
+      );
+  });
+}
+
+//
+
+function exportCSV() {
+  console.log("export csv");
+  console.log(dapps.value);
+}
 </script>
 
 <template>
   <SectionColumn class="main">
-    <template v-if="displayDapp">
-      <div class="display-card-section" v-if="!ui.loadingDone">
-        <SkeletonCard />
-        <SkeletonCard />
-        <SkeletonCard />
-      </div>
-      <div class="display-card-section" v-else v-auto-animate>
-        <FeedDappCard
-          :dapp="displayDapp"
-          :proxy="proxy"
-          :key="displayDapp.slug"
-          class="display-card"
-        />
+    <ul class="feed-dapp-cards" v-auto-animate>
+      <SkeletonListItem v-for="i in 6" v-if="!ui.loadingDone" />
 
-        <FeedDisplayProxyDetails :dapp="displayDapp" :proxy="proxy" />
-      </div>
-    </template>
-
-    <template v-if="filteredDapps">
-      <ul
-        class="feed-dapp-cards"
-        :class="{ 'is-display': !displayDapp }"
-        v-if="!ui.loadingDone"
-      >
-        <SkeletonListItem v-for="i in 6" />
-      </ul>
-
-      <ul
-        class="feed-dapp-cards"
-        :class="{ 'is-display': !displayDapp }"
-        v-auto-animate
-        v-else-if="filteredDapps.length > 0"
-      >
-        <button class="calm-voice text green export-button">
+      <template v-else-if="dapps.length > 0">
+        <button class="calm-voice text green export-button" @click="exportCSV">
           <picture>
             <FormKitIcon icon="download-csv-alt" />
           </picture>
 
           Export CSV
         </button>
-        <template v-for="dapp in filteredDapps">
-          <li v-if="displayDapp !== dapp" :key="dapp.slug">
+        <template v-for="dapp in dapps">
+          <li v-for="dAppProxy in formattedProxies(dapp)" :key="dAppProxy">
             <SkeletonCard v-if="pending" />
             <FeedDappCard
+              v-else
               :dapp="dapp"
               :proxy="proxy"
-              :key="dapp.slug"
-              :class="{ 'display-card': !displayDapp }"
+              :dappProxy="dAppProxy"
             />
           </li>
         </template>
-      </ul>
-    </template>
+      </template>
+    </ul>
 
     <p class="notice-voice" v-if="!dapps">
       There are no dApps on this Feed and Chain.
@@ -109,14 +77,6 @@ const filteredDapps = computed(() => {
 .main :deep(inner-column) {
   display: grid;
   gap: var(--space-l);
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 0.5fr;
-
-    &:has(.feed-dapp-cards.is-display) {
-      grid-template-columns: unset;
-    }
-  }
 }
 
 .display-card-section {
@@ -150,12 +110,7 @@ const filteredDapps = computed(() => {
   }
 
   @media (min-width: 768px) {
-    grid-column: 2;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
-}
-
-.feed-dapp-cards.is-display {
-  grid-column: 1;
 }
 </style>

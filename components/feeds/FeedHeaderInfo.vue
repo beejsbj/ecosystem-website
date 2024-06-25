@@ -1,7 +1,7 @@
 <script setup>
 import { Skeletor } from "vue-skeletor";
 const props = defineProps(["proxy"]);
-const ecosystem = useEcosystemStore();
+
 const ui = useInterfaceStore();
 const router = useRouter();
 
@@ -10,9 +10,10 @@ const { data: stats, pending } = await useFetch("/api/projects/stats/", {
 });
 
 const currentFeedChains = computed(() => {
-  let chains = stats.value.feeds.find(
-    (feed) => feed.feedName == props.proxy.feedName
-  )?.chainIds;
+  let chains = stats.value.feeds.find((feed) => {
+    console.log(feed);
+    return feed.feedName == props.proxy.feedName;
+  })?.chainIds;
 
   if (!chains) {
     return [];
@@ -20,7 +21,7 @@ const currentFeedChains = computed(() => {
 
   return chains.map((chain) => {
     return {
-      label: ecosystem.chainNames(chain),
+      label: getChainName(chain),
       value: chain,
     };
   });
@@ -60,7 +61,6 @@ function handleChainChange(chain) {
             :options="currentFeedChains"
             @input="handleChainChange"
             placeholder="Select Chain"
-            select-icon="down"
             popover
             selection-removable
           >
@@ -79,12 +79,10 @@ function handleChainChange(chain) {
         </p>
         <div class="feed-id" v-if="proxy.feedId">
           <p class="whisper-voice">Data Feed ID:&nbsp;</p>
-          <WalletAddress :walletAddress="proxy.feedId" />
+          <WalletAddress class="whisper-voice" :walletAddress="proxy.feedId" />
         </div>
       </template>
     </div>
-
-    <FeedHeaderActions />
   </div>
 </template>
 

@@ -1,86 +1,15 @@
 <script setup>
-const props = defineProps(["dapp", "proxy"]);
-const router = useRouter();
+const props = defineProps(["dapp", "proxy", "dappProxy"]);
+const ecosystem = useEcosystemStore();
 
-const formattedProxies = computed(() => {
-  if (!props.dapp?.proxies) {
-    return [];
-  }
-
-  const formattedProxyItems = [];
-  Object.keys(props.dapp?.proxies).forEach((chain) => {
-    let chainItems = props.dapp?.proxies?.[chain]?.map((el) => {
-      return { ...el, chainId: chain };
-    });
-    formattedProxyItems.push(...chainItems);
-  });
-
-  return formattedProxyItems.filter((proxy) => {
-    if (props.proxy.chainId == undefined) {
-      return proxy.feedName == props.proxy.feedName;
-    } else
-      return (
-        proxy.feedName == props.proxy.feedName &&
-        proxy.chainId == props.proxy.chainId
-      );
-  });
-});
-
+//   check if dapp is proxy enabled
 const isOevEnabled = computed(() => {
-  //   check if dapp is proxy enabled
-  const isTrue = formattedProxies.value.some((proxy) => proxy.oev.enabled);
-  return isTrue;
+  return props.dappProxy.oev.enabled;
 });
-
-function handleProxyClick(currentProxy) {
-  //change query params
-
-  router.push({
-    query: {
-      dappSlug: props.dapp.slug,
-      chainId: currentProxy.chainId,
-      proxyId: currentProxy.proxyAddress,
-      feedId: currentProxy.datafeedId ?? currentProxy.dapiNameHash,
-      type: currentProxy.proxyType,
-    },
-  });
-
-  scrollToDisplayCard();
-}
-
-function handleCardClick() {
-  //   move  card to top of the list
-  const isButton = event.target.closest("button");
-  const card = event.target.closest(".feed-dapp-card");
-
-  if (isButton || card.classList.contains("display-card")) {
-    return;
-  }
-
-  if (formattedProxies.value.length === 1) {
-    handleProxyClick(formattedProxies.value[0]);
-    return;
-  }
-
-  //change query params
-  router.push({
-    query: {
-      dappSlug: props.dapp.slug,
-      chainId: props.proxy.chainId,
-    },
-  });
-
-  scrollToDisplayCard();
-}
-
-function scrollToDisplayCard() {
-  const displayCard = document.querySelector(".feed-icon-heading");
-  displayCard.scrollIntoView({ behavior: "smooth", block: "start" });
-}
 </script>
 
 <template>
-  <div class="feed-dapp-card" @click="handleCardClick">
+  <div class="feed-dapp-card">
     <div class="oev-tag absolute solid-voice" v-if="isOevEnabled">OEV</div>
     <text-content>
       <picture class="logo">
@@ -102,34 +31,30 @@ function scrollToDisplayCard() {
             :data-category="category"
           >
             {{ ecosystem?.categoryToLabel?.[category] ?? "Category" }}
-            <!-- <DynamicIcon :icon="category" /> -->
           </li>
         </ul>
       </div>
     </text-content>
-    <ul class="proxy-list" v-auto-animate>
+
+    <!-- proxy list -->
+    <div class="proxy-address" v-auto-animate>
       <h3 class="solid-voice">Proxy Address</h3>
-      <template v-for="proxy in formattedProxies">
-        <li>
-          <p>
-            <WalletAddress :walletAddress="proxy.proxyAddress" />
-          </p>
-          <div>
-            <p v-if="proxy.oev.enabled" class="oev-tag whisper-voice">
-              OEV Enabled
-            </p>
-          </div>
-          <button
-            class="button outline whisper-voice"
-            @click="handleProxyClick(proxy)"
-            v-if="props.proxy.proxyId !== proxy.proxyAddress"
-            :key="proxy.proxyAddress"
-          >
-            View Proxy
-          </button>
-        </li>
-      </template>
-    </ul>
+      <p>
+        <WalletAddress
+          :walletAddress="dappProxy.proxyAddress"
+          class="calm-voice"
+        />
+      </p>
+    </div>
+    <div v-if="isOevEnabled" class="beneficiary-address" v-auto-animate>
+      <h3 class="solid-voice">Beneficiary Address</h3>
+      <p>
+        <WalletAddress
+          :walletAddress="dappProxy.oev.beneficiary"
+          class="calm-voice"
+        />
+      </p>
+    </div>
 
     <NuxtLink
       :to="`/ecosystem/${dapp?.slug}`"
@@ -144,48 +69,31 @@ function scrollToDisplayCard() {
 <style scoped lang="scss">
 .feed-dapp-card {
   display: grid;
-  gap: var(--space-s);
+  gap: var(--space-l);
+  grid-template-columns: 1fr 1fr 1fr;
 
   padding: var(--space-m);
   border-radius: var(--corners);
   background: var(--paper);
-  border: var(--border-dark);
-  min-height: 250px;
+  border: var(--line-width) solid var(--green-darker);
 
   position: relative;
   overflow: hidden;
 
-  &.display-card {
-    //  background: var(--gradient-radial-green);
-    grid-template-columns: 0.2fr 0.8fr 1fr;
-    grid-column: 1;
-    grid-row: 1/-1;
-    h2 {
-      font-size: var(--step-1);
-      grid-column: span 2;
-    }
-
-    picture.logo {
-      max-width: 50px;
-    }
-  }
-
   &:hover {
-    //  background: var(--gradient-radial-green-hover);
+    background: var(--gradient-radial-green-hover);
   }
 
   text-content {
-    display: grid;
-    grid-column: 1/-1;
-    grid-template-columns: subgrid;
-    gap: var(--space-2xs);
+    display: flex;
     align-items: center;
+    grid-column: 1/-1;
+    gap: var(--space-2xs);
 
     picture.logo {
       width: 50px;
       border-radius: 50%;
       aspect-ratio: 1/1;
-      // padding: 1%;
       margin-right: var(--space-2xs);
 
       img {
@@ -194,10 +102,11 @@ function scrollToDisplayCard() {
         object-fit: cover;
       }
     }
+  }
 
-    h2 {
-      white-space: nowrap;
-    }
+  h2,
+  h3 {
+    white-space: nowrap;
   }
 
   .categories-list {
@@ -225,31 +134,19 @@ function scrollToDisplayCard() {
     }
   }
 
-  .proxy-list {
-    grid-column: 1/-1;
-
+  .proxy-address,
+  .beneficiary-address {
+    //  grid-column: 1/3;
     display: grid;
     gap: var(--space-3xs);
 
-    li {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      align-items: center;
-      gap: var(--space-xs);
-      min-height: 26px;
-
-      p {
-        margin-top: unset;
-      }
-
-      .button {
-        padding: 0.2em 0.75em;
-      }
+    p {
+      margin-top: unset;
     }
   }
 
   a {
-    grid-column: 1/-1;
+    grid-column: 3;
     display: flex;
     align-items: center;
 
@@ -261,8 +158,46 @@ function scrollToDisplayCard() {
     padding: 0.25em 0.75em;
     border-radius: var(--corners);
     font-weight: 800;
-    font-size: calc((var(--step--2) + var(--step--1)) / 2);
-    background: var(--green-lighter);
+    font-size: var(--step--1);
+    background: linear-gradient(
+        90deg,
+        #1a4fde 0.02%,
+        #5effd7 51.06%,
+        #f3f3f3 67.57%,
+        rgba(26, 79, 222, 0.5) 100.09%
+      ),
+      linear-gradient(
+        90deg,
+        #fff 7.12%,
+        #000 21.04%,
+        #fff 34.05%,
+        #000 48.56%,
+        #fff 63.56%,
+        #000 82.58%,
+        #fff 98.09%
+      ),
+      linear-gradient(
+        90deg,
+        #fff 7.12%,
+        #000 21.04%,
+        #fff 34.05%,
+        #000 48.56%,
+        #fff 63.56%,
+        #000 82.58%,
+        #fff 98.09%
+      ),
+      linear-gradient(
+        180deg,
+        #1af8e8 -105.65%,
+        #9bffe6 -30.6%,
+        #2e69ff 22.19%,
+        #fff 64.44%,
+        rgba(245, 245, 245, 0.6) 105.65%
+      );
+
+    background-blend-mode: plus-darker, screen, difference, normal;
+
+    backdrop-filter: blur(0.75px);
     color: var(--paper);
     text-align: center;
 
@@ -279,31 +214,6 @@ function scrollToDisplayCard() {
       top: 0;
       right: 0;
     }
-  }
-}
-
-.feed-dapp-card:not(.display-card) {
-  min-height: unset;
-  display: grid;
-  grid-column: 2;
-  gap: var(--space-3xs);
-  align-items: center;
-  padding: var(--space-s) var(--space-m);
-  cursor: pointer;
-
-  text-content {
-    display: flex;
-    align-items: center;
-
-    p {
-      display: none;
-    }
-  }
-
-  ul,
-  h3,
-  a {
-    display: none;
   }
 }
 </style>
