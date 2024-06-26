@@ -1,5 +1,9 @@
 <script setup>
-import gsap from "gsap";
+const { gsap } = useGsap();
+
+const route = useRoute();
+
+const page = ref(route.name);
 
 onMounted(() => {
   gsap.set("body", {
@@ -15,9 +19,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="mask">
+  <div class="mask" v-if="route.name !== 'oev'">
     <div class="loader"></div>
   </div>
+  <OEVLoader v-else />
 </template>
 
 <style scoped lang="scss">
