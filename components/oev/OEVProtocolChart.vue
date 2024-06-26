@@ -143,23 +143,22 @@ const parsed = computed(() => {
     labels,
     datasets: [
       {
+        data: dataLiquidated,
+        label: "Total Liquidated",
+      },
+      {
+        data: dataProfit,
+        label: "Potential OEV Lost",
+      },
+      {
         data: dataSentToBuilder,
         label: "Total Sent to Builder",
         hidden: true,
       },
       {
-        data: dataProfit,
-        label: "Total Profit",
-        hidden: true,
-      },
-
-      {
         data: dataIncentive,
         label: "Total Incentive",
-      },
-      {
-        data: dataLiquidated,
-        label: "Total Liquidated",
+        hidden: true,
       },
     ],
   };
@@ -168,7 +167,7 @@ const parsed = computed(() => {
 // legend items
 
 const legendItems = ref([]);
-const legendCheckboxes = ref([2, 3]);
+const legendCheckboxes = ref([0, 1]);
 
 function toggleDataset(index) {
   const chart = Chart.getChart("line-chart");

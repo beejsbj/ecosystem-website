@@ -149,7 +149,7 @@ function handleButton(direction) {
               v-for="bar in visibleBars"
               :key="bar"
               :class="bar"
-              v-tooltip.top-end="`$${protocol[bar]}`"
+              v-tooltip.top-end="`$${Number(protocol[bar]).toFixed(2)}`"
             >
               <span class="number solid-voice">
                 ${{ formatNumber(protocol[bar]) }}
