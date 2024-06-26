@@ -11,10 +11,7 @@ const userDappIndex = oev.protocols.findIndex(
 const liquidationRate = 0.05; // 5% liquidation rate
 
 // Define reactive variables
-const form = ref({
-  tvl: 5000000,
-  incentive: 5,
-}); // Reference to the form element
+const form = ref({}); // Reference to the form element
 
 // Function to handle the button click event
 function buttonHandle(event) {
@@ -63,16 +60,10 @@ function buttonHandle(event) {
     >
       <form-field>
         <FormKit
-          type="mask"
+          type="number"
+          number
           suffix="%"
-          mask="{##}#"
-          show-mask="false"
-          unmask-value="true"
-          allow-incomplete="true"
           label="What is the liquidation incentive rate?"
-          :classes="{
-            label: '$reset calm-voice',
-          }"
           name="incentive"
           placeholder="5%"
           id="incentive-percent"
@@ -84,19 +75,13 @@ function buttonHandle(event) {
       </form-field>
       <form-field>
         <FormKit
-          type="mask"
-          prefix="$"
-          mask="{#,##|repeat}#"
-          show-mask="false"
-          unmask-value="true"
-          allow-incomplete="true"
-          reverse
+          type="currency"
+          number
+          currency="USD"
+          decimals="0"
           label="What is the total value locked of your protocol?"
-          :classes="{
-            label: '$reset calm-voice',
-          }"
           name="tvl"
-          placeholder="$5,000,000"
+          placeholder="5,000,000"
           help="Optimal results are achieved with larger numerical values."
           id="tvl-input"
           v-model="form.tvl"

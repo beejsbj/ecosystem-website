@@ -235,7 +235,6 @@ onMounted(() => {
         <FormKit
           type="radio"
           label="Select Period"
-          legend-class="$reset firm-voice-smaller"
           v-model="selectedPeriod"
           :options="periodOptions"
         />
@@ -284,7 +283,6 @@ onMounted(() => {
     :deep(.formkit-options) {
       display: flex;
       gap: var(--space-m);
-
     }
   }
 
@@ -312,7 +310,7 @@ div.actions {
   grid-template-columns: 1fr 1.5fr;
 
   @media (min-width: 768px) {
-    grid-template-columns: unset;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .formkit-outer:nth-child(1),

@@ -337,9 +337,11 @@ ul.bars {
   //   max-width: 92vw;
   //   border-left: var(--border-dark);
 
-  @media (min-width: 1000px) {
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-column: 1 / -1;
     min-height: 500px;
+    overflow-x: unset;
   }
 }
 

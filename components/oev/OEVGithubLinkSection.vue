@@ -37,7 +37,7 @@ text-content {
   place-items: center;
   text-align: center;
   @media (min-width: 768px) {
-    padding: var(--space-3xl);
+    padding: var(--space-2xl);
   }
 
   .loud-voice {
@@ -50,6 +50,9 @@ text-content {
     display: block;
   }
 }
+
+picture {
+  max-width: 80%;
+  margin-inline: auto;
+}
 </style>
-
-

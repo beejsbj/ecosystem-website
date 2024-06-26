@@ -140,6 +140,11 @@ h2 {
   margin-top: 20px;
 }
 
+h3 {
+  position: absolute;
+  top: calc(var(--space-s) * -1);
+}
+
 h3,
 p {
   text-align: center;
@@ -163,7 +168,7 @@ section {
 ul.explainer-carousel {
   display: grid;
   grid-template-columns: repeat(5, 175px);
-  margin-top: var(--space-xl);
+  margin-top: var(--space-2xl);
   max-width: 91cqw;
   overflow-x: scroll;
 
@@ -185,14 +190,15 @@ ul.explainer-carousel {
     max-width: 100px;
   }
 
-  li {
+  & > li {
     display: grid;
     gap: var(--space-s);
     justify-items: center;
     align-content: start;
+    position: relative;
   }
 
-  li:has(+ li) {
+  & > li:has(+ li) {
     --arrow-size: 1.5rem;
     padding-right: var(--arrow-size);
     background-image: url("/images/oev/explainer-steps/arrow.svg");
