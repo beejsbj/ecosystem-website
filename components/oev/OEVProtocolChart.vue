@@ -209,11 +209,8 @@ onMounted(() => {
         v-if="ui.isDesktop"
       >
         <template #label="{ option }">
-          <div class="icon-option">
-            <div
-              class="legend-icon"
-              :style="`background-color: ${option.fillStyle}`"
-            ></div>
+          <div class="icon-option" :style="`--color: ${option.fillStyle}`">
+            <div class="legend-icon"></div>
             <span class="formkit-label">
               {{ option.label }}
             </span>
@@ -249,7 +246,7 @@ onMounted(() => {
             <div class="icon-option">
               <div
                 class="legend-icon"
-                :style="`background-color: ${option.fillStyle}`"
+                :style="`--color: ${option.fillStyle}`"
               ></div>
               <span class="formkit-label">
                 {{ option.label }}
@@ -345,8 +342,14 @@ div.actions {
 
 .legend-icon {
   aspect-ratio: 1/1;
-  min-width: 18px;
-  max-width: 18px;
-  background: var(--background);
+  width: 18px;
+  background: var(--color);
+  border: 1px solid;
+  border-image: linear-gradient(
+      150deg,
+      color-mix(in hsl, var(--color), white 35%),
+      color-mix(in hsl, var(--color), black 85%)
+    )
+    1;
 }
 </style>

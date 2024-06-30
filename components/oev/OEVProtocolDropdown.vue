@@ -15,6 +15,8 @@ const protocolOptions = computed(() => {
       acc[chainId].options = [];
     }
 
+    if (protocol.slug === "userAdded") console.log(protocol);
+
     acc[chainId].options.push({
       label: protocol.name,
       value: protocol.slug,
@@ -72,10 +74,9 @@ const protocolOptions = computed(() => {
           }"
         />
         <span class="">
-          {{ option.label }}
+          {{ option.value == "userAdded" ? "Your dApp" : option.label }}
         </span>
       </div>
     </template>
   </FormKit>
 </template>
-

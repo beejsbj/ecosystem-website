@@ -16,17 +16,17 @@ const ui = useInterfaceStore();
       >
         You can verify this data by
         <NuxtLink
-          class="text green external-link"
+          class="tsext external-link"
           to="https://github.com/AamirAlam/aave-extract-mev-funds"
         >
-          heading to our GitHub.
+          <span class="gradient-text-color-light">
+            heading to our GitHub.
+          </span>
         </NuxtLink>
       </p>
     </text-content>
 
-    <picture class="github-graphic">
-      <img src="@/assets/images/github-graphic.svg" alt="GitHub graphic" />
-    </picture>
+    <GithubDecoration />
   </SectionColumn>
 </template>
 
@@ -51,8 +51,8 @@ text-content {
   }
 }
 
-picture {
-  max-width: 80%;
+picture.github-graphic {
+  max-width: 75%;
   margin-inline: auto;
 }
 </style>

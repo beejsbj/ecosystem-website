@@ -42,6 +42,15 @@ function buttonHandle(event) {
 
   //   reset("oev-form"); // Reset the form
 }
+
+function adjustIncentiveValue(value) {
+  console.log(value);
+  if (value < 1) {
+    form.value.incentive = 1;
+  } else if (value > 100) {
+    form.value.incentive = 100;
+  }
+}
 </script>
 
 <template>
@@ -56,7 +65,7 @@ function buttonHandle(event) {
       :submit-attrs="{
         inputClass: '$reset button',
       }"
-      :config="{ validationVisibility: 'submit' }"
+      :config="{ validationVisibility: 'blur' }"
     >
       <form-field>
         <FormKit
@@ -69,8 +78,9 @@ function buttonHandle(event) {
           id="incentive-percent"
           v-model="form.incentive"
           help="Enter the TVL percentage sent as a liquidation incentive."
-          validation="numeric|between:1.00,100.00"
+          validation="numeric|between:1,100"
           validation-label="Incentive Rate"
+          @input="adjustIncentiveValue"
         />
       </form-field>
       <form-field>

@@ -13,5 +13,5 @@ export default function formatNumber(valueInc) {
     }
   }
 
-  return value;
+  return value.toFixed(2);
 }
