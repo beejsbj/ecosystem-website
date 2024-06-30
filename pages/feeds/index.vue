@@ -3,6 +3,8 @@ const { data, pending } = await useFetch("/api/projects/stats/", {
   pick: ["feeds"],
 });
 
+console.log(data.value);
+
 const getSlug = (feedName) => feedName.replace("/", "-");
 
 //
@@ -23,7 +25,7 @@ definePageMeta({
 
       <ul class="feed-list">
         <li v-for="feed in data.feeds" class="border-gradient-green">
-          <NuxtLink :to="`${getSlug(feed.feedName)}`">
+          <NuxtLink :to="`feeds/${getSlug(feed.feedName)}`">
             <FeedIcon :feed="feed.feedName" />
             <h2 class="whisper-voice">
               {{ feed.feedName }}

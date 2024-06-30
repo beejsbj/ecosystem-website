@@ -3,71 +3,82 @@ import { FormKitIcon } from "@formkit/vue";
 const props = defineProps(["feedProjects", "pending", "proxy"]);
 const ui = useInterfaceStore();
 
-//  get more dapps on scroll
-const dapps = computed(() => {
-  return props.feedProjects.projects;
+// Computed property for filtered and formatted dapps
+const filteredDapps = computed(() => {
+  console.log("Starting filteredDapps computation");
+  console.log("feedProjects:", props.feedProjects);
+  console.log("proxy:", props.proxy);
+
+  const result = props.feedProjects.projects.flatMap((dapp) => {
+    console.log("Processing dapp:", dapp.name);
+
+    if (!dapp.proxies) {
+      console.log("No proxies for this dapp");
+      return [];
+    }
+
+    return Object.entries(dapp.proxies).flatMap(([chain, proxies]) => {
+      console.log(`Processing chain: ${chain}, proxies:`, proxies);
+
+      const chainProxies = proxies
+        .map((proxy) => {
+          const formattedProxy = {
+            ...proxy,
+            chainId: chain,
+            dapp: dapp,
+          };
+          console.log("Formatted proxy:", formattedProxy);
+          return formattedProxy;
+        })
+        .filter((proxy) => {
+          const match =
+            proxy.feedName.toLowerCase() === props.proxy.feedName.toLowerCase();
+          console.log(
+            `Filtering proxy ${proxy.feedName}: ${match ? "match" : "no match"}`
+          );
+          return match;
+        });
+
+      console.log(`Filtered proxies for chain ${chain}:`, chainProxies);
+      return chainProxies;
+    });
+  });
+
+  console.log("Final filtered dapps:", result);
+  return result;
 });
 
-function formattedProxies(dapp) {
-  if (!dapp?.proxies) {
-    return [];
-  }
-
-  const formattedProxyItems = [];
-  Object.keys(dapp?.proxies).forEach((chain) => {
-    let chainItems = dapp?.proxies?.[chain]?.map((el) => {
-      return { ...el, chainId: chain };
-    });
-    formattedProxyItems.push(...chainItems);
-  });
-
-  return formattedProxyItems.filter((proxy) => {
-    if (props.proxy.chainId == undefined) {
-      return proxy.feedName == props.proxy.feedName;
-    } else
-      return (
-        proxy.feedName == props.proxy.feedName &&
-        proxy.chainId == props.proxy.chainId
-      );
-  });
-}
-
-//
-
 function exportCSV() {
-  console.log("export csv");
-  console.log(dapps.value);
+  console.log("Exporting CSV");
+  console.log("Filtered dapps for export:", filteredDapps.value);
 }
 </script>
 
 <template>
   <SectionColumn class="main">
     <ul class="feed-dapp-cards" v-auto-animate>
-      <SkeletonListItem v-for="i in 6" v-if="!ui.loadingDone" />
+      <SkeletonListItem v-for="i in 6" v-if="!ui.loadingDone" :key="i" />
 
-      <template v-else-if="dapps.length > 0">
+      <template v-else-if="filteredDapps.length > 0">
         <button class="calm-voice text green export-button" @click="exportCSV">
           <picture>
             <FormKitIcon icon="download-csv-alt" />
           </picture>
-
           Export CSV
         </button>
-        <template v-for="dapp in dapps">
-          <li v-for="dAppProxy in formattedProxies(dapp)" :key="dAppProxy">
-            <SkeletonCard v-if="pending" />
-            <FeedDappCard
-              v-else
-              :dapp="dapp"
-              :proxy="proxy"
-              :dappProxy="dAppProxy"
-            />
-          </li>
-        </template>
+        <li v-for="item in filteredDapps" :key="item.id">
+          <SkeletonCard v-if="pending" />
+          <FeedDappCard
+            v-else
+            :dapp="item.dapp"
+            :proxy="props.proxy"
+            :dappProxy="item"
+          />
+        </li>
       </template>
     </ul>
 
-    <p class="notice-voice" v-if="!dapps">
+    <p class="notice-voice" v-if="filteredDapps.length === 0">
       There are no dApps on this Feed and Chain.
     </p>
   </SectionColumn>

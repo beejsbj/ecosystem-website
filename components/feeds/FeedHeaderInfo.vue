@@ -19,6 +19,10 @@ const currentFeedChains = computed(() => {
     return [];
   }
 
+  if (chains.length < 2) {
+    //  handleChainChange(chains[0]);
+  }
+
   return chains.map((chain) => {
     return {
       label: getChainName(chain),
