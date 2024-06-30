@@ -10,8 +10,10 @@ const isOevEnabled = computed(() => {
 
 <template>
   <div class="feed-dapp-card">
-    <div class="oev-tag absolute solid-voice" v-if="isOevEnabled">OEV</div>
-    <text-content>
+    <div class="oev-tag absolute solid-voice" v-if="isOevEnabled">
+      <DynamicIcon icon="oev" width="75px" />
+    </div>
+    <div class="dapp-header">
       <picture class="logo">
         <NuxtImg
           loading="lazy"
@@ -24,6 +26,7 @@ const isOevEnabled = computed(() => {
         <h2 class="firm-voice-smaller">
           {{ dapp?.name ?? "dApp Name" }}
         </h2>
+
         <ul class="categories-list">
           <li
             class="micro-voice category"
@@ -33,8 +36,11 @@ const isOevEnabled = computed(() => {
             {{ ecosystem?.categoryToLabel?.[category] ?? "Category" }}
           </li>
         </ul>
+        <p class="whisper-voice">
+          {{ dapp?.tagline }}
+        </p>
       </div>
-    </text-content>
+    </div>
 
     <!-- proxy list -->
     <div class="proxy-address" v-auto-animate>
@@ -84,7 +90,11 @@ const isOevEnabled = computed(() => {
     background: var(--gradient-radial-green-hover);
   }
 
-  text-content {
+  &:has(.oev) {
+    border: var(--line-width) solid var(--indigo-darkest);
+  }
+
+  .dapp-header {
     display: flex;
     align-items: center;
     grid-column: 1/-1;
@@ -113,7 +123,6 @@ const isOevEnabled = computed(() => {
     display: flex;
     gap: var(--space-2xs);
     justify-content: start;
-    margin-top: var(--space-2xs);
 
     li {
       z-index: 2;
@@ -155,51 +164,31 @@ const isOevEnabled = computed(() => {
   }
 
   .oev-tag {
-    padding: 0.25em 0.75em;
+    //  padding: 0.25em 0.75em;
     border-radius: var(--corners);
     font-weight: 800;
     font-size: var(--step--1);
-    background: linear-gradient(
-        90deg,
-        #1a4fde 0.02%,
-        #5effd7 51.06%,
-        #f3f3f3 67.57%,
-        rgba(26, 79, 222, 0.5) 100.09%
-      ),
-      linear-gradient(
-        90deg,
-        #fff 7.12%,
-        #000 21.04%,
-        #fff 34.05%,
-        #000 48.56%,
-        #fff 63.56%,
-        #000 82.58%,
-        #fff 98.09%
-      ),
-      linear-gradient(
-        90deg,
-        #fff 7.12%,
-        #000 21.04%,
-        #fff 34.05%,
-        #000 48.56%,
-        #fff 63.56%,
-        #000 82.58%,
-        #fff 98.09%
-      ),
-      linear-gradient(
-        180deg,
-        #1af8e8 -105.65%,
-        #9bffe6 -30.6%,
-        #2e69ff 22.19%,
-        #fff 64.44%,
-        rgba(245, 245, 245, 0.6) 105.65%
-      );
-
-    background-blend-mode: plus-darker, screen, difference, normal;
-
-    backdrop-filter: blur(0.75px);
     color: var(--paper);
     text-align: center;
+
+    background-image: linear-gradient(
+      to right,
+      #005fb8 0%,
+      #0067c1 10%,
+      #0072cd 20%,
+      #0080d6 30%,
+      #008fdd 40%,
+      #009ee2 50%,
+      #00aee5 60%,
+      #00bde6 70%,
+      #00cbe5 80%,
+      #00d6e2 90%,
+      #00dfde 100%
+    );
+
+    :deep(.dynamic-icon.oev) {
+      filter: invert(1);
+    }
 
     &:is(p) {
       background: unset;
@@ -214,6 +203,15 @@ const isOevEnabled = computed(() => {
       top: 0;
       right: 0;
     }
+  }
+}
+
+.text-content {
+  display: grid;
+  gap: var(--space-2xs);
+
+  p {
+    margin-top: var(--space-2xs);
   }
 }
 </style>

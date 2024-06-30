@@ -25,7 +25,7 @@ definePageMeta({
 
       <ul class="feed-list">
         <li v-for="feed in data.feeds" class="border-gradient-green">
-          <NuxtLink :to="`feeds/${getSlug(feed.feedName)}`">
+          <NuxtLink :to="`${getSlug(feed.feedName)}`">
             <FeedIcon :feed="feed.feedName" />
             <h2 class="whisper-voice">
               {{ feed.feedName }}
