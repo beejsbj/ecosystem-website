@@ -94,7 +94,7 @@ const handleFilter = (event) => {
           <img
             loading="lazy"
             class="caret"
-            :class="{ down: showAll.chains }"
+            :class="{ down: !showAll.chains }"
             src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
@@ -150,10 +150,11 @@ const handleFilter = (event) => {
           <img
             loading="lazy"
             class="caret"
-            :class="{ down: showAll.productTypes }"
+            :class="{ down: !showAll.productTypes }"
             src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
+          <!-- <DynamicIcon icon="caret-up" /> #todo -->
         </button>
       </div>
       <ul class="pills" v-auto-animate>
@@ -204,7 +205,7 @@ const handleFilter = (event) => {
           <img
             loading="lazy"
             class="caret"
-            :class="{ down: showAll.categories }"
+            :class="{ down: !showAll.categories }"
             src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
@@ -256,7 +257,7 @@ const handleFilter = (event) => {
           <img
             loading="lazy"
             class="caret"
-            :class="{ down: showAll.years }"
+            :class="{ down: !showAll.years }"
             src="@/assets/images/icons/interface/caret.svg"
             alt="caret icon"
           />
