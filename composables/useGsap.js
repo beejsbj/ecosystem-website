@@ -19,6 +19,7 @@ export default function useGsap(animationFunction) {
   onUnmounted(() => {
     // Kills all animations in the context, reverting their properties to the initial states
     //  console.log("killing animation");
+    context.revert();
     context.kill();
   });
 

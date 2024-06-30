@@ -1,19 +1,11 @@
 <script setup>
-const { gsap } = useGsap();
-
 const route = useRoute();
 
 const page = ref(route.name);
 
-onMounted(() => {
+useGsap((gsap) => {
   gsap.set("body", {
     overflowY: "hidden",
-  });
-});
-
-onUnmounted(() => {
-  gsap.set("body", {
-    overflowY: "auto",
   });
 });
 </script>
