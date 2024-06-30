@@ -17,7 +17,6 @@ useGsap((gsap) => {
         each: 0.1,
         from: "random",
       },
-      repeat: 3,
       ease: "power1.inOut",
     }
   );
@@ -28,7 +27,6 @@ useGsap((gsap) => {
       rotate: 360,
       transformOrigin: "center",
       duration: 1.5,
-      repeat: 2,
       ease: "power1.inOut",
     },
     "-=1"

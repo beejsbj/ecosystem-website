@@ -2,10 +2,6 @@
 useGsap((gsap) => {
   const timeline = gsap.timeline({ repeat: 0, repeatDelay: 0.1 });
 
-  timeline.set("body", {
-    overflowY: "hidden",
-  });
-
   timeline.set(".oev-loader :is(#O, #V) path", {
     scale: 0.5,
     y: 100,
@@ -84,7 +80,7 @@ useGsap((gsap) => {
   timeline.to(
     ".oev-loader",
     {
-      duration: 0.5,
+      duration: 1,
       opacity: 0,
       ease: "power4.inOut",
     },
@@ -93,10 +89,6 @@ useGsap((gsap) => {
 
   timeline.set(".oev-loader", {
     display: "none",
-  });
-
-  timeline.set("body", {
-    overflowY: "auto",
   });
 });
 </script>

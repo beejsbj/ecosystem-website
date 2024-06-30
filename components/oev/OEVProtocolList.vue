@@ -19,7 +19,6 @@ const oev = useOEVStore();
           :name="`dApp-${i}`"
           options-appearance="checkbox"
           selection-removable
-          open-on-remove
           :disabled="oev.userSelectedProtocols[`dApp-${i}`] === 'userAdded'"
         />
       </FormKit>

@@ -143,23 +143,22 @@ const parsed = computed(() => {
     labels,
     datasets: [
       {
+        data: dataLiquidated,
+        label: "Total Liquidated",
+      },
+      {
+        data: dataProfit,
+        label: "Potential OEV Lost",
+      },
+      {
         data: dataSentToBuilder,
         label: "Total Sent to Builder",
         hidden: true,
       },
       {
-        data: dataProfit,
-        label: "Total Profit",
-        hidden: true,
-      },
-
-      {
         data: dataIncentive,
         label: "Total Incentive",
-      },
-      {
-        data: dataLiquidated,
-        label: "Total Liquidated",
+        hidden: true,
       },
     ],
   };
@@ -168,7 +167,7 @@ const parsed = computed(() => {
 // legend items
 
 const legendItems = ref([]);
-const legendCheckboxes = ref([2, 3]);
+const legendCheckboxes = ref([0, 1]);
 
 function toggleDataset(index) {
   const chart = Chart.getChart("line-chart");
@@ -210,11 +209,8 @@ onMounted(() => {
         v-if="ui.isDesktop"
       >
         <template #label="{ option }">
-          <div class="icon-option">
-            <div
-              class="legend-icon"
-              :style="`background-color: ${option.fillStyle}`"
-            ></div>
+          <div class="icon-option" :style="`--color: ${option.fillStyle}`">
+            <div class="legend-icon"></div>
             <span class="formkit-label">
               {{ option.label }}
             </span>
@@ -235,7 +231,6 @@ onMounted(() => {
         <FormKit
           type="radio"
           label="Select Period"
-          legend-class="$reset firm-voice-smaller"
           v-model="selectedPeriod"
           :options="periodOptions"
         />
@@ -251,7 +246,7 @@ onMounted(() => {
             <div class="icon-option">
               <div
                 class="legend-icon"
-                :style="`background-color: ${option.fillStyle}`"
+                :style="`--color: ${option.fillStyle}`"
               ></div>
               <span class="formkit-label">
                 {{ option.label }}
@@ -284,7 +279,6 @@ onMounted(() => {
     :deep(.formkit-options) {
       display: flex;
       gap: var(--space-m);
-
     }
   }
 
@@ -312,7 +306,7 @@ div.actions {
   grid-template-columns: 1fr 1.5fr;
 
   @media (min-width: 768px) {
-    grid-template-columns: unset;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .formkit-outer:nth-child(1),
@@ -348,8 +342,14 @@ div.actions {
 
 .legend-icon {
   aspect-ratio: 1/1;
-  min-width: 18px;
-  max-width: 18px;
-  background: var(--background);
+  width: 18px;
+  background: var(--color);
+  border: 1px solid;
+  border-image: linear-gradient(
+      150deg,
+      color-mix(in hsl, var(--color), white 35%),
+      color-mix(in hsl, var(--color), black 85%)
+    )
+    1;
 }
 </style>

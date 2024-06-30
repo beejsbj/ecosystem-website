@@ -177,7 +177,7 @@ const miscLinks = [
               v-for="(link, linkIndex) in footerMenu.links"
               :key="linkIndex"
               :to="link.path"
-              class="text footer-link hover-underline"
+              class="calm-voice text footer-link"
               :class="link.external ? 'external-link' : ''"
             >
               <span>{{ link.label }}</span>

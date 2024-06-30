@@ -1,5 +1,10 @@
 <script setup>
 import formatNumber from "@/utils/formatNumber";
+const ui = useInterfaceStore();
+const colors = Object.values(ui.api3Colors);
+const { gsap } = useGsap();
+
+const scrollPosition = ref(0);
 
 const oev = useOEVStore();
 
@@ -9,12 +14,12 @@ const bars = [
   {
     label: "Total Liquidated",
     value: "totalLiquidated",
-    color: "hsla(4, 68%, 15%, 1.00)",
+    color: colors[0],
   },
   {
     label: "Potential OEV Lost",
     value: "totalProfitUSD",
-    color: "hsla(230, 53%, 32%, 1.00)",
+    color: colors[1],
     help: "(Blockspace auction bribes + Liquidated totalProfitUSD)",
   },
   //   {
@@ -40,7 +45,6 @@ const visibleProtocols = computed(() => {
 });
 
 const maxHeight = computed(() => {
-  //   sort the values by highest
   const values = [
     {
       isShown: visibleBars.value.includes("totalSentToBuilderUSD"),
@@ -60,7 +64,6 @@ const maxHeight = computed(() => {
     },
   ];
 
-  //based on what is showm, get the highest value, excluding the hidden protocols
   return Math.max(
     ...values.filter((value) => value.isShown).map((value) => value.value)
   );
@@ -74,8 +77,36 @@ function getMaxValue(key) {
   return Math.max(...visibleProtocols.value.map((protocol) => protocol[key]));
 }
 
+function getColorByValue(value) {
+  const bar = bars.find((bar) => bar.value === value);
+  return bar ? bar.color : "transparent";
+}
+
 function barHeight(value) {
-  return (value / maxHeight.value) * 150;
+  const minHeight = 15; // Minimum height for visibility
+  const maxHeightPixels = 150; // Maximum height in pixels
+  const scaledHeight = (value / maxHeight.value) * maxHeightPixels;
+  return Math.max(scaledHeight, minHeight);
+}
+
+function handleButton(direction) {
+  scrollPosition.value += direction;
+  let distance = ui.isMobile ? 350 : 250;
+  let x = scrollPosition.value * distance;
+
+  if (direction) {
+    gsap.to(".bars", {
+      scrollTo: {
+        x,
+      },
+    });
+  } else {
+    gsap.to(".bars", {
+      scrollTo: {
+        x,
+      },
+    });
+  }
 }
 </script>
 
@@ -92,7 +123,7 @@ function barHeight(value) {
           v-model="visibleBars"
         >
           <template #label="{ option }">
-            <div class="icon-option">
+            <div class="icon-option" :style="`--color: ${option.color}`">
               <div class="legend-icon" :class="option.value"></div>
               <span class="formkit-label">
                 {{ option.label }}
@@ -110,12 +141,12 @@ function barHeight(value) {
             class="bar"
             :class="{ userAdded: protocol.slug === 'userAdded' }"
             :style="`
-							 --bar-totalLiquidated-height: ${barHeight(protocol.totalLiquidated)};
+							 --bar-totalLiquidated-height: ${barHeight(protocol.totalLiquidated)}px;
 							 --bar-totalSentToBuilderUSD-height: ${barHeight(
                  protocol.totalSentToBuilderUSD
-               )};
-							 --bar-totalProfitUSD-height: ${barHeight(protocol.totalProfitUSD)};
-							 --bar-totalIncentiveUSD-height: ${barHeight(protocol.totalIncentiveUSD)};
+               )}px;
+							 --bar-totalProfitUSD-height: ${barHeight(protocol.totalProfitUSD)}px;
+							 --bar-totalIncentiveUSD-height: ${barHeight(protocol.totalIncentiveUSD)}px;
 
 
 						 `"
@@ -124,7 +155,8 @@ function barHeight(value) {
               v-for="bar in visibleBars"
               :key="bar"
               :class="bar"
-              v-tooltip.top-end="`$${protocol[bar]}`"
+              :style="`--color: ${getColorByValue(bar)}`"
+              v-tooltip.top-end="`$${Number(protocol[bar]).toFixed(2)}`"
             >
               <span class="number solid-voice">
                 ${{ formatNumber(protocol[bar]) }}
@@ -149,6 +181,26 @@ function barHeight(value) {
         </li>
       </template>
     </ul>
+    <div class="actions">
+      <button
+        class="icon prev"
+        @click="handleButton(-1)"
+        :disabled="scrollPosition === 0"
+      >
+        <picture>
+          <DynamicIcon icon="left" />
+        </picture>
+      </button>
+      <button
+        class="icon next"
+        @click="handleButton(1)"
+        :disabled="scrollPosition === 2"
+      >
+        <picture>
+          <DynamicIcon icon="right" />
+        </picture>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -225,7 +277,15 @@ text-content {
   .legend-icon {
     aspect-ratio: 1/1;
     width: 18px;
-    background: var(--background);
+    background: linear-gradient(to bottom, var(--color), transparent);
+    border-radius: 1px;
+    border: 1px solid;
+    border-image: linear-gradient(
+        150deg,
+        color-mix(in hsl, var(--color), white 35%),
+        color-mix(in hsl, var(--color), black 85%)
+      )
+      1;
   }
 
   .formkit-label {
@@ -294,12 +354,17 @@ ul.bars {
   display: grid;
   margin-bottom: 20px;
   gap: var(--space-m);
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  //   border-left: var(--border-dark);
+  grid-template-columns: repeat(4, 150px);
+  overflow-x: scroll;
+  min-height: 350px;
+  //   max-width: 92vw;
+  //   border-left: var(--border-dark);Zz
 
-  @media (min-width: 1000px) {
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-column: 1 / -1;
     min-height: 500px;
+    overflow-x: unset;
   }
 }
 
@@ -370,30 +435,17 @@ li {
     /*  totalSentToBuilderUSD and totalLiquidated halves of the bar*/
     & > span {
       transition: 0.2s ease-in-out;
-      border-radius: calc(var(--corners) / 2);
       position: relative;
-      background: var(--background);
 
-      /*styling to make the gradient border*/
-      &::before {
-        content: "";
-        border-radius: inherit;
-        position: absolute;
-        inset: 0px;
-        background: black; //!important
-        z-index: -1;
-      }
+      background: linear-gradient(to bottom, var(--color), transparent);
 
-      /*creates the gradient border*/
-      &::after {
-        content: "";
-        border-radius: inherit;
-        position: absolute;
-        inset: -1px;
-
-        background: var(--after-background);
-        z-index: -2;
-      }
+      border: 1px solid;
+      border-image: linear-gradient(
+          180deg,
+          color-mix(in hsl, var(--color), white 35%),
+          color-mix(in hsl, var(--color), black 85%)
+        )
+        1;
 
       /*hovering number value*/
       .number {
@@ -413,24 +465,40 @@ li {
       }
       &.totalLiquidated {
         grid-column: span 1;
-        height: calc(var(--bar-totalLiquidated-height) * 1.5px);
+        height: var(--bar-totalLiquidated-height);
       }
 
       &.totalSentToBuilderUSD {
         grid-column: span 1;
-        height: calc(var(--bar-totalSentToBuilderUSD-height) * 1.5px);
+        height: var(--bar-totalSentToBuilderUSD-height);
       }
 
       &.totalProfitUSD {
         grid-column: span 1;
-        height: calc(var(--bar-totalProfitUSD-height) * 1.5px);
+        height: var(--bar-totalProfitUSD-height);
       }
 
       &.totalIncentiveUSD {
         grid-column: span 1;
-        height: calc(var(--bar-totalIncentiveUSD-height) * 1.5px);
+        height: var(--bar-totalIncentiveUSD-height);
       }
     }
+  }
+}
+
+.actions {
+  justify-content: center;
+  gap: var(--space-xl);
+
+  picture {
+    max-width: 10px;
+    :deep(svg) {
+      color: var(--green);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    display: none;
   }
 }
 </style>

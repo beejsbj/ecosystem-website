@@ -202,7 +202,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.25em 0;
+  padding-block: 0.25em;
   max-width: max-content;
 }
 
@@ -212,7 +212,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.25em 0;
+  padding-block: 0.25em;
   max-width: max-content;
 }
 
@@ -221,7 +221,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.25em 0;
+  padding-block: 0.25em;
   max-width: max-content;
 }
 

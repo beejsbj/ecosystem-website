@@ -110,6 +110,7 @@ function addSuffixHelpTooltipPlugin(node) {
   const mouseEnter = node.props.onMouseEnter;
   node.context.handlers.mouseEnter = (e) => {
     const el = e.target;
+    console.log("hover over tooltip");
 
     //
     tooltip = createTooltip(el, {

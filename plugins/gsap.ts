@@ -17,7 +17,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
   return {
     provide: {
-      gsap: { gsap, plugins },
+      gsap: [gsap, ...plugins],
     },
   };
 });

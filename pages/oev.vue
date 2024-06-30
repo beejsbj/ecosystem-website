@@ -35,9 +35,8 @@ oev.setProtocols(overview.value);
 
     <ClientOnly>
       <LazyOEVProtocolChart />
-
-      <LazyOEVExplainerCarosel />
     </ClientOnly>
+    <LazyOEVExplainerCarosel />
 
     <OEVGithubLinkSection />
   </ContentsWrapper>
