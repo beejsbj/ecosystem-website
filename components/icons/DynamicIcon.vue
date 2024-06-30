@@ -28,4 +28,8 @@ picture {
   /* Calculate line width based on the width variable */
   --line-width: calc(var(--width) / 16);
 }
+
+:deep(span.formkit-icon) {
+  display: block;
+}
 </style>

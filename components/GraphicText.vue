@@ -80,4 +80,9 @@ graphic-text.reverse {
     }
   }
 }
+
+picture:has(svg) {
+  display: grid;
+  align-items: center;
+}
 </style>

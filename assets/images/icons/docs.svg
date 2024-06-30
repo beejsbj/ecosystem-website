@@ -6,10 +6,10 @@
             <g transform="matrix(1,0,0,1,195.718,12.0849)">
                 <rect x="55805.9" y="26640.7" width="79.985" height="79.985" style="fill:none;"/>
                 <g transform="matrix(1,0,0,1,55801.5,26638.8)">
-                    <clipPath id="_clip1">
+                    <clipPath id="docs_clip1">
                         <rect x="0" y="0.001" width="80" height="80"/>
                     </clipPath>
-                    <g clip-path="url(#_clip1)">
+                    <g clip-path="url(#docs_clip1)">
                         <rect x="8.75" y="8.751" width="48.75" height="1.25" style="fill:rgb(120,232,216);fill-rule:nonzero;"/>
                         <g opacity="0.87">
                             <rect x="8.75" y="13.664" width="48.75" height="1.25" style="fill:rgb(120,232,216);fill-rule:nonzero;"/>

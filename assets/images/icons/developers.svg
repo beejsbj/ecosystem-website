@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
 <svg width="100%" height="100%" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
     <g transform="matrix(1,0,0,1,-55736.1,-26674.7)">
         <g transform="matrix(1,0,0,1,-0.265107,-0.302452)">
             <g transform="matrix(1,0,0,1,-69.5063,34.2683)">
                 <rect x="55805.9" y="26640.7" width="79.985" height="79.985" style="fill:none;"/>
-                <clipPath id="_clip1">
+                <clipPath id="developers_clip1">
                     <rect x="55805.9" y="26640.7" width="79.985" height="79.985"/>
                 </clipPath>
-                <g clip-path="url(#_clip1)">
+                <g clip-path="url(#developers_clip1)">
                     <g transform="matrix(1,0,0,1,55808.4,26639.5)">
-                        <clipPath id="_clip2">
+                        <clipPath id="developers_clip2">
                             <rect x="0" y="0.001" width="80" height="80"/>
                         </clipPath>
-                        <g clip-path="url(#_clip2)">
+                        <g clip-path="url(#developers_clip2)">
                             <path d="M8.594,67.745L17.206,67.857C22.155,67.919 27.067,68.726 31.775,70.251L40.156,72.97" style="fill:none;fill-rule:nonzero;stroke:url(#developers_Linear3);stroke-width:1.25px;"/>
                             <path d="M40.156,67.307L32.069,64.601C27.237,62.95 22.174,62.079 17.069,62.02L8.619,61.926" style="fill:none;fill-rule:nonzero;stroke:url(#developers_Linear4);stroke-width:1.25px;"/>
                             <path d="M40.156,61.645L32.356,58.957C27.388,57.17 22.154,56.234 16.875,56.188L8.594,56.107" style="fill:none;fill-rule:nonzero;stroke:url(#developers_Linear5);stroke-width:1.25px;"/>
