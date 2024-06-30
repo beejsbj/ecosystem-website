@@ -21,10 +21,10 @@
                     </g>
                 </g>
             </g>
-            <circle cx="15" cy="15" r="14.25" style="fill:none;stroke:url(#_Linear3);stroke-width:1.14px;stroke-linecap:butt;"/>
+            <circle cx="15" cy="15" r="14.25" style="fill:none;stroke:url(#dapp_Linear3);stroke-width:1.14px;stroke-linecap:butt;"/>
         </g>
     </g>
     <defs>
-        <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(37.1881,20.4287,-20.4287,37.1881,7.64555,-4.043)"><stop offset="0" style="stop-color:rgb(243,243,243);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(75,199,154);stop-opacity:1"/></linearGradient>
+        <linearGradient id="dapp_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(37.1881,20.4287,-20.4287,37.1881,7.64555,-4.043)"><stop offset="0" style="stop-color:rgb(243,243,243);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(75,199,154);stop-opacity:1"/></linearGradient>
     </defs>
 </svg>
