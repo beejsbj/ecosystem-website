@@ -87,18 +87,14 @@ const handleFilter = (event) => {
       <div class="filter-header">
         <h4 class="calm-voice">Network</h4>
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.chains = !showAll.chains"
           v-if="ecosystem.stats?.chains?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: !showAll.chains }"
-            src="@/assets/images/icons/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.chains ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
-          <!-- <FormKitIcon icon="down" /> -->
         </button>
       </div>
       <ul class="pills" v-auto-animate>
@@ -143,18 +139,14 @@ const handleFilter = (event) => {
         <h4 class="calm-voice">Product</h4>
 
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.productTypes = !showAll.productTypes"
           v-if="productTypes?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: !showAll.productTypes }"
-            src="@/assets/images/icons/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.productTypes ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
-          <!-- <DynamicIcon icon="caret-up" /> #todo -->
         </button>
       </div>
       <ul class="pills" v-auto-animate>
@@ -198,16 +190,13 @@ const handleFilter = (event) => {
         <h4 class="calm-voice">Category</h4>
 
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.categories = !showAll.categories"
           v-if="categories?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: !showAll.categories }"
-            src="@/assets/images/icons/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.categories ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
         </button>
       </div>
@@ -250,16 +239,13 @@ const handleFilter = (event) => {
       <div class="filter-header">
         <h4 class="calm-voice">Year</h4>
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.years = !showAll.years"
           v-if="years?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: !showAll.years }"
-            src="@/assets/images/icons/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.years ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
         </button>
       </div>

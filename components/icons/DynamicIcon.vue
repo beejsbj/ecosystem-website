@@ -12,7 +12,9 @@ const props = defineProps(["icon", "width"]);
       :src="`/images/icons/${slug(props.icon)}.svg`"
       :alt="props.icon"
     /> -->
+    <!-- <Transition name="fade"> -->
     <FormKitIcon :icon="slug(props.icon)" />
+    <!-- </Transition> -->
   </picture>
 </template>
 
