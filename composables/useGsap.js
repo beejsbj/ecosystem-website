@@ -8,7 +8,7 @@ export default function useGsap(animationFunction) {
   let context;
 
   onMounted(() => {
-    context = $gsap.gsap.context(() => {
+    context = $gsap[0].context(() => {
       // Provide gsap and ScrollTrigger to the animation function
       if (animationFunction) animationFunction(...Object.values($gsap));
     });

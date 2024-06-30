@@ -1,30 +1,32 @@
-<script setup>
+<script setup lang="ts">
+interface Props {
+  id: string;
+}
+
 const { $chainLogo } = useNuxtApp();
 
-const props = defineProps(["id"]);
+const props = defineProps<Props>();
 
 const ecosystem = useEcosystemStore();
-
 const isTestnet = ref(false);
 const isFound = ref(true);
 
-const chain = computed(() => {
-  const chain = ecosystem.chainNames(props.id);
+const chain = computed((): string => {
+  const chainName = ecosystem.chainNames(props.id);
 
-  // if testnet, rename the chain
-  //   if (chain.includes("testnet")) {
-  //     isTestnet.value = true;
-  //   }
+  // Uncomment if you want to use the testnet logic
+  // if (chainName.includes("testnet")) {
+  //   isTestnet.value = true;
+  // }
 
-  return chain;
+  return chainName;
 });
 
-const imgSrc = computed(() => {
-  const src = $chainLogo(props.id);
-  return src;
+const imgSrc = computed((): string => {
+  return $chainLogo(props.id);
 });
 
-const onError = () => {
+const onError = (): void => {
   isFound.value = false;
 };
 </script>
