@@ -464,6 +464,12 @@
 
 /* checkbox or radio */
 
+/* makes help text align with label */
+.formkit-outer[data-family="box"] {
+  --fk-margin-help: var(--fk-margin-help-t) var(--fk-margin-help-r)
+    var(--fk-margin-help-b) 42px;
+}
+
 .formkit-outer:is([data-type="checkbox"], [data-type="radio"]) fieldset {
   border: none;
   padding: 0;

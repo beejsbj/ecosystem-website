@@ -152,12 +152,12 @@ const parsed = computed(() => {
       },
       {
         data: dataSentToBuilder,
-        label: "Total Sent to Builder",
+        label: "Blockspace Auction Bribes",
         hidden: true,
       },
       {
-        data: dataIncentive,
-        label: "Total Incentive",
+        data: dataIncentive, //#todo change to new dataset
+        label: "Liquidator Profits",
         hidden: true,
       },
     ],
@@ -185,6 +185,10 @@ onMounted(() => {
       value: item.datasetIndex,
       datasetIndex: item.datasetIndex,
       fillStyle: item.fillStyle,
+      help:
+        index === 3
+          ? "(Blockspace auction bribes + Liquidated totalProfitUSD)"
+          : null,
       attrs: {
         onchange: () => {
           toggleDataset(item.datasetIndex);
