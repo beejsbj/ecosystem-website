@@ -211,6 +211,8 @@ function handleButton(direction) {
 
   gap: var(--space-s);
   position: relative;
+
+  user-select: none;
 }
 
 .chart-actions {

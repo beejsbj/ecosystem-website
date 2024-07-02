@@ -55,6 +55,6 @@ path {
   stroke: var(--green);
 }
 path:hover {
-  stroke: var(--violet);
+  stroke: var(--purple);
 }
 </style>

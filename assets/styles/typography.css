@@ -75,7 +75,7 @@ article.body h2 a {
     color: var(--blue);
   }
   &.violet {
-    color: var(--violet);
+    color: var(--purple);
   }
 }
 
@@ -176,7 +176,7 @@ pre code {
 }
 
 .highlight {
-  background-color: var(--violet);
+  background-color: var(--purple);
   color: var(--ink);
 }
 

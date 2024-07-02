@@ -271,6 +271,7 @@ onMounted(() => {
   display: grid;
   gap: var(--space-xl);
   position: relative;
+  user-select: none;
 
   .actions {
     order: 2;

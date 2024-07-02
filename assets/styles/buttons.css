@@ -95,8 +95,9 @@ p :is(button, a).text {
   --link-active: var(--green-dark);
 }
 .text.violet {
-  color: var(--violet) !important;
-  --link-active: var(--violet-dark);
+  color: var(--purple) !important;
+  --link-hover: var(--purple-light);
+  --link-active: var(--purple-dark);
 }
 .text.indigo {
   color: var(--indigo-lighter) !important;

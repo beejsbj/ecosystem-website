@@ -15,7 +15,7 @@
   --data-color: var(--indigo);
 }
 [data-color="violet"] {
-  --data-color: var(--violet);
+  --data-color: var(--purple);
 }
 
 /* textures and patterns */
