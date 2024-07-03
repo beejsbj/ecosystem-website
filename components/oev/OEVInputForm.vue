@@ -55,7 +55,7 @@ function adjustIncentiveValue(value) {
 
 <template>
   <ContentsWrapper>
-    <h2 class="attention-voice">Calculate Your dApp's Potential</h2>
+    <h2 class="firm-voice">Calculate Your dApp's Potential</h2>
 
     <FormKit
       id="oev-form"

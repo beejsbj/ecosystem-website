@@ -1,14 +1,17 @@
 <script setup>
 import formatNumber from "@/utils/formatNumber";
+
 const ui = useInterfaceStore();
 const colors = Object.values(ui.api3Colors);
-const { gsap } = useGsap();
+const [gsap] = useGsap();
 
 const scrollPosition = ref(0);
 
 const oev = useOEVStore();
 
 const visibleBars = ref(["totalLiquidated", "totalProfitUSD"]);
+
+const barsList = ref(null);
 
 const bars = [
   {
@@ -70,6 +73,7 @@ const maxHeight = computed(() => {
 });
 
 const gridCount = computed(() => visibleBars.value.length);
+const protocolCount = computed(() => visibleProtocols.value.length);
 
 //
 
@@ -95,13 +99,13 @@ function handleButton(direction) {
   let x = scrollPosition.value * distance;
 
   if (direction) {
-    gsap.to(".bars", {
+    gsap.to(barsList.value, {
       scrollTo: {
         x,
       },
     });
   } else {
-    gsap.to(".bars", {
+    gsap.to(barsList.value, {
       scrollTo: {
         x,
       },
@@ -134,12 +138,11 @@ function handleButton(direction) {
       </div>
     </div>
     <!-- OEV Interface Chart component -->
-    <ul class="bars" v-auto-animate>
+    <ul class="bars" v-auto-animate ref="barsList">
       <template v-for="(protocol, i) in visibleProtocols" :key="protocol.slug">
-        <li>
+        <li :class="{ userAdded: protocol.slug === 'userAdded' }">
           <div
             class="bar"
-            :class="{ userAdded: protocol.slug === 'userAdded' }"
             :style="`
 							 --bar-totalLiquidated-height: ${barHeight(protocol.totalLiquidated)}px;
 							 --bar-totalSentToBuilderUSD-height: ${barHeight(
@@ -220,11 +223,7 @@ function handleButton(direction) {
   gap: var(--space-s);
   align-content: start;
 
-  order: 2;
-
   @media (min-width: 768px) {
-    order: unset;
-
     :deep(.formkit-options) {
       display: flex;
       gap: var(--space-l);
@@ -238,10 +237,10 @@ h2 {
 }
 
 .protocol-list-wrapper {
-  order: 2;
+  //   order: 2;
 
   @media (min-width: 768px) {
-    order: unset;
+    //  order: unset;
   }
 }
 
@@ -356,7 +355,7 @@ ul.bars {
   display: grid;
   margin-bottom: 20px;
   gap: var(--space-m);
-  grid-template-columns: repeat(4, 150px);
+  grid-template-columns: repeat(v-bind("protocolCount"), 150px);
   overflow-x: scroll;
   min-height: 350px;
   //   max-width: 92vw;
@@ -374,6 +373,19 @@ li {
   display: grid;
   gap: var(--space-m);
   align-content: end;
+
+  &.userAdded {
+    filter: brightness(1.2);
+
+    span.number,
+    .protocol-name {
+      color: var(--green) !important;
+    }
+
+    .bar::after {
+      background: var(--green);
+    }
+  }
 
   & > :is(p, picture) {
     justify-self: center;
@@ -419,10 +431,6 @@ li {
 
     transition: 0.2s ease-in-out;
 
-    &.userAdded {
-      filter: brightness(2) saturate(3);
-    }
-
     /*   seperator line */
     &:after {
       content: "";
@@ -462,7 +470,6 @@ li {
 
         @media (max-width: 768px) {
           font-size: var(--step--1);
-          rotate: 25deg;
         }
       }
       &.totalLiquidated {

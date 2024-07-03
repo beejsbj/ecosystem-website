@@ -1,7 +1,7 @@
 <script setup>
 const ui = useInterfaceStore();
 
-const { gsap } = useGsap();
+const [gsap] = useGsap();
 
 const scrollPosition = ref(0);
 

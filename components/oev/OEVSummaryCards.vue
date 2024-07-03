@@ -41,23 +41,32 @@ const gridCount = computed(() => {
 </script>
 
 <template>
-  <ul class="summary-cards">
-    <!-- Display the OEV Saving Rate -->
-    <li class="summary-card" v-for="card in cards">
-      <h3 class="calm-voice">{{ card.title }}</h3>
-      <p
-        :class="{
-          'firm-voice': !ui.isDesktop,
-          'attention-voice': ui.isDesktop,
-        }"
-      >
-        {{ card.value }}
-      </p>
-    </li>
-  </ul>
+  <div class="summary-cards">
+    <ul class="summary-cards-list">
+      <!-- Display the OEV Saving Rate -->
+      <li class="summary-card" v-for="card in cards">
+        <h3 class="calm-voice">{{ card.title }}</h3>
+        <p
+          :class="{
+            'firm-voice': !ui.isDesktop,
+            'attention-voice': ui.isDesktop,
+          }"
+        >
+          {{ card.value }}
+        </p>
+      </li>
+    </ul>
+    <p class="whisper-voice disclamer">
+      *All data is based on records from 2021 onwards
+    </p>
+  </div>
 </template>
 
 <style scoped>
+.summary-cards {
+  padding-inline: var(--space-s);
+}
+
 /* Style the summary cards container */
 ul {
   display: grid;
@@ -104,5 +113,9 @@ h3 {
 }
 p {
   margin-top: unset;
+}
+
+p.disclamer {
+  margin-top: var(--space-l);
 }
 </style>

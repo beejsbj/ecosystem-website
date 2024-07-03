@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps(["showPanel"]);
-const { gsap } = useGsap();
+const [gsap] = useGsap();
 
 watch(
   () => props.showPanel,

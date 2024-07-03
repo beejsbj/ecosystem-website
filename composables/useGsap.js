@@ -23,6 +23,8 @@ export default function useGsap(animationFunction) {
     context.kill();
   });
 
+  return $gsap;
+
   return {
     ...$gsap,
   };

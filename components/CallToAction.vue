@@ -1,6 +1,6 @@
 <script setup>
 import { useInterfaceStore } from "~/stores/interface";
-const { gsap } = useGsap();
+const [gsap] = useGsap();
 
 const ui = useInterfaceStore();
 

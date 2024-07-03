@@ -16,7 +16,7 @@ const oev = useOEVStore();
 
 <style scoped lang="scss">
 .form-chart-section {
-  padding-inline: var(--space-xs);
+  padding-inline: var(--space-l);
 
   :deep(inner-column) {
     background: var(--gradient-radial-green);

@@ -1,7 +1,6 @@
 <script setup>
 import { watchNetwork } from "@wagmi/core";
-
-const { gsap } = useGsap();
+const [gsap] = useGsap();
 
 const web3Store = useWeb3Store();
 const ui = useInterfaceStore();

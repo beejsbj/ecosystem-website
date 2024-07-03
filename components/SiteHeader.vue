@@ -58,7 +58,7 @@ useGsap((gsap) => {
     padding: var(--space-s) var(--space-l);
 
     @media (min-width: 768px) {
-      padding: var(--space-xl) var(--space-s);
+      padding: var(--space-s);
     }
   }
 }
@@ -78,7 +78,7 @@ mast-head {
     cursor: pointer;
 
     @media (min-width: 768px) {
-      width: 275px;
+      width: 215px;
     }
   }
 }

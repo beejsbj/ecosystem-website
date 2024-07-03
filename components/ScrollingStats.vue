@@ -1,5 +1,5 @@
 <script setup>
-// const {gsap} = useGsap();
+// const [ gsap ] = useGsap();
 
 const ui = useInterfaceStore();
 const graph = ref(null);

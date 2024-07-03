@@ -25,9 +25,6 @@ const ui = useInterfaceStore();
 
       <!-- OEV Summary Cards component -->
       <OEVSummaryCards class="summary-cards" />
-      <p class="whisper-voice disclamer">
-        *All data is based on records from 2021 onwards
-      </p>
     </div>
     <OEVHeroCurvesDecoration />
   </SectionColumn>
@@ -54,8 +51,9 @@ section {
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, fit-content);
     row-gap: var(--space-s);
-    align-items: unset;
+    //  align-items: unset;
   }
 }
 

@@ -273,10 +273,6 @@ onMounted(() => {
   position: relative;
   user-select: none;
 
-  .actions {
-    order: 2;
-  }
-
   > .formkit-outer {
     grid-column: 1 / -1;
     justify-self: center;
@@ -295,7 +291,6 @@ onMounted(() => {
     }
     .actions {
       grid-column: span 3;
-      order: unset;
     }
   }
 }
@@ -346,6 +341,7 @@ div.actions {
 }
 
 .legend-icon {
+  flex-shrink: 0;
   aspect-ratio: 1/1;
   width: 18px;
   background: var(--color);
