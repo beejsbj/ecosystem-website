@@ -4,7 +4,7 @@ const oev = useOEVStore();
 
 <template>
   <SectionColumn class="form-chart-section">
-    <Transition name="fade" mode="out-in">
+    <Transition name="page" mode="out-in">
       <LazyOEVInputForm v-if="!oev.isUserVisible" />
       <LazyOEVDisplayText v-else />
     </Transition>

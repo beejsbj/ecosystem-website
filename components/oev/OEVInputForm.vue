@@ -131,4 +131,13 @@ form > :deep(.formkit-messages) {
 :deep(.formkit-label, .formkit-input) {
   font-size: calc((var(--step-0) + var(--step-1)) / 2);
 }
+
+.contents-wrapper {
+  display: inherit;
+  gap: inherit;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
+  flex: inherit;
+  flex-wrap: inherit;
+}
 </style>
