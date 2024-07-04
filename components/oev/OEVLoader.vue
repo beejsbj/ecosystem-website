@@ -217,9 +217,13 @@ useGsap((gsap) => {
     color: var(--indigo, var(--blue));
     font-weight: 900;
     letter-spacing: 0.3em;
-    margin-top: -3rem;
+    margin-top: -1rem;
 
     opacity: 0;
+
+    @media (min-width: 768px) {
+      margin-top: -3rem;
+    }
   }
 }
 </style>
