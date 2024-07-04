@@ -204,7 +204,7 @@ onMounted(() => {
 <template>
   <SectionColumn inner-class="wide">
     <div class="chart-grid">
-      <h2 class="firm-voice">Historic Liquidation Data</h2>
+      <h2 class="attention-voice">Historic Liquidation Data</h2>
       <FormKit
         type="checkbox"
         label="Legend"
@@ -269,7 +269,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .chart-grid {
   display: grid;
-  gap: var(--space-xl);
+  gap: var(--space-l);
   position: relative;
   user-select: none;
 
@@ -304,14 +304,17 @@ div.actions {
   gap: var(--space-m);
   align-content: start;
   grid-template-columns: 1fr 1.5fr;
+  margin-top: var(--space-l);
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding-inline: var(--space-l);
   }
 
   .formkit-outer:nth-child(1),
   .formkit-outer:nth-child(2) {
     grid-column: 1 / -1;
+    max-width: 500px;
   }
 
   .buttons-content {

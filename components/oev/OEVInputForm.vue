@@ -55,7 +55,7 @@ function adjustIncentiveValue(value) {
 
 <template>
   <ContentsWrapper>
-    <h2 class="firm-voice">Calculate Your dApp's Potential</h2>
+    <h2 class="attention-voice">Calculate Your dApp's Potential</h2>
 
     <FormKit
       id="oev-form"
@@ -126,5 +126,9 @@ h2 {
 
 form > :deep(.formkit-messages) {
   display: none !important;
+}
+
+:deep(.formkit-label, .formkit-input) {
+  font-size: calc((var(--step-0) + var(--step-1)) / 2);
 }
 </style>

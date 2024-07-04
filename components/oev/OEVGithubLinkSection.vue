@@ -52,7 +52,11 @@ text-content {
 }
 
 picture.github-graphic {
-  max-width: 75%;
+  max-width: 218px;
   margin-inline: auto;
+
+  @media (min-width: 768px) {
+    max-width: 70%;
+  }
 }
 </style>

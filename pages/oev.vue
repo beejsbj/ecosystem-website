@@ -45,7 +45,7 @@ oev.setProtocols(overview.value);
 <style scoped>
 :deep(inner-column) {
   @media (min-width: 768px) {
-    padding: var(--space-3xl) var(--space-s);
+    padding: var(--space-2xl) var(--space-l);
   }
 }
 </style>

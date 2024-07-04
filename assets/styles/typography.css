@@ -45,21 +45,21 @@ article.body h2 a {
 .notice-voice {
   font-family: var(--font);
   font-size: var(--step-1);
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: var(--weight-medium);
-  color: var(--gray-light);
+  color: var(--gray-lighter);
 }
 
 .firm-voice {
   font-family: var(--font);
   font-size: var(--step-1);
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: var(--weight-heavy);
 }
 .firm-voice-smaller {
   font-family: var(--font);
   font-size: calc((var(--step-1) + var(--step-0)) / 2);
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: var(--weight-heavy);
 }
 

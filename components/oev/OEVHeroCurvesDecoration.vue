@@ -67,6 +67,7 @@ useGsap((gsap) => {
       viewBox="0 0 768 729"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      class="mobile"
       v-if="ui.isMobile"
     >
       <g clip-path="url(#clip0_550_41171)">
@@ -657,6 +658,7 @@ useGsap((gsap) => {
       viewBox="0 0 1660 1213"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      class="desktop"
       v-if="ui.isDesktop"
     >
       <path
@@ -1246,5 +1248,9 @@ picture {
   width: 150%;
   height: 100%;
   z-index: -1;
+
+  @media (min-width: 766px) {
+    width: 100%;
+  }
 }
 </style>

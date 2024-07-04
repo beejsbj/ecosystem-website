@@ -120,6 +120,7 @@ const options = computed(() => {
           color: "#C3C4C3",
         },
       },
+
       y: {
         alignToPixels: true,
         type: "logarithmic",
@@ -127,7 +128,6 @@ const options = computed(() => {
           display: true,
           text: props.metadata.y.title,
           color: "#fafafa",
-          position: "left",
         },
         ticks: {
           //   autoSkip: true,

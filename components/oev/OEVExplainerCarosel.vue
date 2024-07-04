@@ -4,6 +4,7 @@ const ui = useInterfaceStore();
 const [gsap] = useGsap();
 
 const scrollPosition = ref(0);
+const carouselWidth = ref(0);
 
 const steps = [
   {
@@ -11,16 +12,28 @@ const steps = [
     text: "Oracle updates",
   },
   {
+    arrow: true,
+  },
+  {
     count: 2,
     text: "Health Factor",
+  },
+  {
+    arrow: true,
   },
   {
     count: 3,
     text: "Searchers see the liquidable position",
   },
   {
+    arrow: true,
+  },
+  {
     count: 4,
     text: "Competition in block space auctions",
+  },
+  {
+    arrow: true,
   },
   {
     heading: "User liquidated",
@@ -30,47 +43,20 @@ const steps = [
   },
 ];
 
-useGsap((gsap) => {
-  //scroll ul as we scroll
-
-  if (ui.isDesktop) {
-    return;
-  }
-
-  setTimeout(() => {
-    gsap.to(".explainer-carousel", {
-      scrollTrigger: {
-        trigger: "ul.explainer-carousel",
-        start: "top 60%",
-        end: "80% 40%",
-        scrub: true,
-      },
-
-      scrollTo: {
-        x: "max",
-      },
-    });
-  }, 3000);
-});
-
 function handleButton(direction) {
-  scrollPosition.value += direction;
-  let distance = ui.isMobile ? 350 : 250;
-  let x = scrollPosition.value * distance;
+  const carousel = document.querySelector(".explainer-carousel");
+  scrollPosition.value = carousel.clientWidth;
+  const currentScroll = carousel.scrollLeft;
+  const newScroll =
+    direction > 0
+      ? currentScroll + scrollPosition.value
+      : currentScroll - scrollPosition.value;
 
-  if (direction) {
-    gsap.to(".explainer-carousel", {
-      scrollTo: {
-        x,
-      },
-    });
-  } else {
-    gsap.to(".explainer-carousel", {
-      scrollTo: {
-        x,
-      },
-    });
-  }
+  gsap.to(carousel, {
+    scrollTo: {
+      x: newScroll,
+    },
+  });
 }
 </script>
 
@@ -87,39 +73,41 @@ function handleButton(direction) {
 
     <ul class="explainer-carousel">
       <li v-for="step in steps">
-        <picture :class="`step-${step.count}`">
-          <h3 class="whisper-voice" v-if="step.heading">
-            {{ step.heading }}
-          </h3>
-          <img :src="`/images/oev/explainer-steps/step-${step.count}.svg`" />
-        </picture>
-        <p class="solid-voice">
-          {{ step.text }}
-        </p>
-        <ul class="step-list" v-if="step.list">
-          <li v-for="item in step.list">
-            <p class="whisper-voice">
-              {{ item }}
-            </p>
-          </li>
-        </ul>
+        <!--  -->
+        <template v-if="step.arrow">
+          <picture class="arrow">
+            <img src="/images/oev/explainer-steps/arrow.svg" alt="" />
+          </picture>
+        </template>
+
+        <!--  -->
+        <template v-else>
+          <picture :class="`step-${step.count}`">
+            <h3 class="whisper-voice" v-if="step.heading">
+              {{ step.heading }}
+            </h3>
+            <img :src="`/images/oev/explainer-steps/step-${step.count}.svg`" />
+          </picture>
+          <p class="solid-voice">
+            {{ step.text }}
+          </p>
+          <ul class="step-list" v-if="step.list">
+            <li v-for="item in step.list">
+              <p class="whisper-voice">
+                {{ item }}
+              </p>
+            </li>
+          </ul></template
+        >
       </li>
     </ul>
     <div class="actions">
-      <button
-        class="icon prev"
-        @click="handleButton(-1)"
-        :disabled="scrollPosition === 0"
-      >
+      <button class="icon prev" @click="handleButton(-1)">
         <picture>
           <DynamicIcon icon="left" />
         </picture>
       </button>
-      <button
-        class="icon next"
-        @click="handleButton(1)"
-        :disabled="scrollPosition === 2"
-      >
+      <button class="icon next" @click="handleButton(1)">
         <picture>
           <DynamicIcon icon="right" />
         </picture>
@@ -167,17 +155,16 @@ section {
 
 ul.explainer-carousel {
   display: grid;
-  grid-template-columns: repeat(5, 175px);
+  grid-template-columns: 175px 25px 175px 25px 175px 25px 175px 25px 175px;
+  gap: var(--space-s);
+  align-items: center;
+  //   justify-content: center;
   margin-top: var(--space-2xl);
   max-width: 91cqw;
   overflow-x: scroll;
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(5, 250px);
-  }
-
   @media (min-width: 1000px) {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     max-width: unset;
     overflow-x: unset;
   }
@@ -197,18 +184,10 @@ ul.explainer-carousel {
     align-content: start;
     position: relative;
   }
-
-  & > li:has(+ li) {
-    --arrow-size: 1.5rem;
-    padding-right: var(--arrow-size);
-    background-image: url("/images/oev/explainer-steps/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: right 30%;
-    background-size: var(--arrow-size);
-  }
 }
 .actions {
   justify-content: center;
+  margin-top: var(--space-m);
   gap: var(--space-xl);
 
   picture {

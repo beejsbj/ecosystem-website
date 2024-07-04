@@ -25,19 +25,20 @@ const bars = [
     color: colors[1],
     help: "(Blockspace auction bribes + Liquidated totalProfitUSD)",
   },
-  //   {
-  //     label: "Total Sent to Builder",
-  //     value: "totalSentToBuilderUSD",
-  //     color: "hsla(354, 98%, 24%, 1)",
-  //     attrs: {
-  //       label: "Total Sent to Builder",
-  //     },
-  //   },
-  //   {
-  //     label: "Total Incentives",
-  //     value: "totalIncentiveUSD",
-  //     color: "hsla(226, 100%, 70%, 1)",
-  //   },
+  {
+    label: "Blockspace Auction Bribes",
+    value: "totalSentToBuilderUSD",
+    color: colors[2],
+
+    attrs: {
+      label: "Blockspace Auction Bribes",
+    },
+  },
+  {
+    label: "Liquidator Profits",
+    value: "totalIncentiveUSD",
+    color: colors[3],
+  },
 ];
 
 const visibleProtocols = computed(() => {
@@ -95,7 +96,7 @@ function barHeight(value) {
 
 function handleButton(direction) {
   scrollPosition.value += direction;
-  let distance = ui.isMobile ? 350 : 250;
+  let distance = ui.isMobile ? 350 : 300;
   let x = scrollPosition.value * distance;
 
   if (direction) {
@@ -223,10 +224,18 @@ function handleButton(direction) {
   gap: var(--space-s);
   align-content: start;
 
-  @media (min-width: 768px) {
-    :deep(.formkit-options) {
+  :deep(.formkit-options) {
+    @media (min-width: 768px) {
       display: flex;
-      gap: var(--space-l);
+      gap: var(--space-3xs);
+      flex-wrap: wrap;
+
+      & > * {
+        flex: 1;
+      }
+    }
+    @media (min-width: 1000px) {
+      flex-wrap: unset;
     }
   }
 }
@@ -355,13 +364,16 @@ ul.bars {
   display: grid;
   margin-bottom: 20px;
   gap: var(--space-m);
-  grid-template-columns: repeat(v-bind("protocolCount"), 150px);
+  grid-template-columns: repeat(v-bind("protocolCount"), 200px);
   overflow-x: scroll;
   min-height: 350px;
   //   max-width: 92vw;
   //   border-left: var(--border-dark);Zz
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1000px) {
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-column: 1 / -1;
     min-height: 500px;
@@ -424,7 +436,7 @@ li {
     height: 100%;
     position: relative;
     display: grid;
-    gap: var(--space-3xs);
+    gap: var(--space-xs);
     align-items: end;
     grid-template-columns: repeat(var(--grid-count), 1fr);
     isolation: isolate;

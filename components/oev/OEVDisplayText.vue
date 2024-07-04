@@ -31,7 +31,7 @@ function buttonHandle() {
         </span>
         you would recapture
       </p>
-      <p class="booming-voice highlight-green">
+      <p class="loud-voice highlight-green">
         ${{ oev.userTvl ? formatNumber(userSaving) : "1.9M" }} per year
       </p>
       <p class="notice-voice">Through the OEV Network**</p>
@@ -40,7 +40,7 @@ function buttonHandle() {
         **This is an estimate based on the current liquidation rate of 5% of TVL
         annually
       </p>
-      <button class="button outline firm-voice" @click="buttonHandle">
+      <button class="button outline calm-voice" @click="buttonHandle">
         Calculate Again
       </button>
     </div>
@@ -70,11 +70,11 @@ p {
   }
 }
 
-.calm-voice {
+p.calm-voice {
   color: var(--gray);
 }
 
 button {
-  margin-top: var(--space-m);
+  margin-top: var(--space-xl);
 }
 </style>

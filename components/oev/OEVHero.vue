@@ -11,7 +11,7 @@ const ui = useInterfaceStore();
       >
         OEV Watchtower
       </h1>
-      <p :class="{ 'calm-voice': ui.isMobile, 'notice-voice': !ui.isMobile }">
+      <p class="notice-voice">
         Understand how much you can capture with OEV Network*
       </p>
       <picture class="hero-tower">
@@ -33,6 +33,10 @@ const ui = useInterfaceStore();
 <style scoped lang="scss">
 :deep(inner-column) {
   padding-top: 0;
+
+  @media (min-width: 768px) {
+    padding-top: var(--space-m) !important;
+  }
 }
 
 section {
@@ -60,6 +64,7 @@ section {
 h1 {
   @media (min-width: 768px) {
     grid-column: span 8;
+    grid-row: 2;
   }
 
   @media (min-width: 1100px) {
@@ -72,6 +77,7 @@ p {
 
   @media (min-width: 768px) {
     grid-column: span 8;
+    grid-row: 3;
   }
   @media (min-width: 1100px) {
     grid-column: span 6;
@@ -83,6 +89,7 @@ p {
 
   @media (min-width: 768px) {
     grid-column: span 8;
+    grid-row: 4;
   }
   @media (min-width: 1100px) {
     grid-column: span 6;
