@@ -49,7 +49,7 @@ const repo = "dapp-registry";
 
 export async function createPR(projectData: ProjectType): Promise<Status> {
   const title = projectData.name?.split(" ")?.join("-");
-  const branch = `${title}`;
+  const branch = `${title}-${Date.now()}`;
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
 

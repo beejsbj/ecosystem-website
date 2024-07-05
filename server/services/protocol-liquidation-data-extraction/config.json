@@ -136,7 +136,7 @@
       "rpcs": [
         "https://evocative-ancient-glitter.arbitrum-mainnet.quiknode.pro/885cf7da9d858542f73e13379952a08ee984170e/"
       ],
-      "active": true
+      "active": false
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/compound-v3-arbitrum",
@@ -153,7 +153,7 @@
       "rpcs": [
         "https://evocative-ancient-glitter.arbitrum-mainnet.quiknode.pro/885cf7da9d858542f73e13379952a08ee984170e/"
       ],
-      "active": true
+      "active": false
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/aave-v3-avalanche",
@@ -168,7 +168,7 @@
       "lendingPool": "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
       "aaveOracle": "0xEBd36016B3eD09D4693Ed4251c67Bd858c3c7C9C",
       "rpcs": ["https://1rpc.io/31sBCvq4UwMqYCWCg/avax/c"],
-      "active": true
+      "active": false
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/99XPkR9F1exRDdCNyfXrCfEon4K34YoTDn6dgXKmxC72",
@@ -200,7 +200,7 @@
       "rpcs": [
         "https://fragrant-sleek-snowflake.bsc.quiknode.pro/7d0c54b8f4e435d606e28e7af91677309e875aaa/"
       ],
-      "active": true
+      "active": false
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/aave-v3-optimism",
@@ -217,7 +217,7 @@
       "rpcs": [
         "https://capable-white-isle.optimism.quiknode.pro/7ebe2ea25ad132a70d0693b943aa5f7b753f64f5/"
       ],
-      "active": true
+      "active": false
     },
     {
       "subgraph": "https://api.thegraph.com/subgraphs/name/messari/compound-v3-polygon",
@@ -233,7 +233,7 @@
       "rpcs": [
         "https://newest-broken-cherry.matic.quiknode.pro/38b3e48f2689598601c628450d1a1cd4a0263f98/"
       ],
-      "active": true
+      "active": false
     },
     {
       "subgraph": "https://gateway-arbitrum.network.thegraph.com/api/dc1787b0d89892549f26838dc4a8946b/subgraphs/id/6yuf1C49aWEscgk5n9D1DekeG1BCk5Z9imJYJT3sVmAT",
