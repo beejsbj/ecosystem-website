@@ -104,9 +104,7 @@ export default authenticated(
           payload.status = "active";
           // verify schema
 
-          const verification = await validateProjectSchema(
-            JSON.stringify(payload)
-          );
+          const verification = await validateProjectSchema(payload);
 
           if (!verification.success) {
             event.res.statusCode = 400;
