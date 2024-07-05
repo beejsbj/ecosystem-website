@@ -1,36 +1,16 @@
-import { Contract, ethers } from "ethers";
 import config from "./config.json";
 import BigNumber from "bignumber.js";
-
 import builders from "./builders.json";
 import { default as axios } from "axios";
 import LendingPoolABI from "./abis/lendingPoolABI.json";
 import type { Liquidation } from "../types";
-
-const { formatEther, formatUnits } = ethers.utils;
-const lendingPoolInterface = new ethers.utils.Interface(LendingPoolABI);
-
-function getProvider(currentProtocolIndex: number) {
-  const rpc = config.protocols[currentProtocolIndex].rpcs[0];
-  const provider = new ethers.providers.JsonRpcProvider(rpc);
-  return provider;
-}
-
-function getLendingPoolContract(currentProtocolIndex: number) {
-  const provider = getProvider(currentProtocolIndex);
-
-  const lendingPool = new Contract(
-    config.protocols[currentProtocolIndex].lendingPool,
-    lendingPoolInterface,
-    provider
-  );
-  return lendingPool;
-}
+import { formatEther, formatUnits } from "viem";
+import { getPublicClient } from "../fetchProxyInfo.js";
 
 async function fetchPriceFromAaveV2Oracle(
   asset: string,
-  blockNumber: string,
-  aaveV2OracleAddress: string,
+  blockNumber: any,
+  aaveV2OracleAddress: any,
   currentProtocolIndex: number,
   retries: number = 0
 ) {
@@ -51,25 +31,29 @@ async function fetchPriceFromAaveV2Oracle(
       },
     ];
 
-    const provider = getProvider(currentProtocolIndex);
-    const aaveOracleInterface = new ethers.utils.Interface(abi);
-    const aaveOracleContract = new Contract(
-      aaveV2OracleAddress,
-      aaveOracleInterface,
-      provider
-    );
+    const _config = config.protocols[currentProtocolIndex];
+
+    const client = getPublicClient(_config.chainId, _config.rpcs[0]);
 
     // usdc address on ethereum mainnet
     const usdc = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
-    const usdcPrice = await aaveOracleContract.getAssetPrice(usdc, {
-      blockTag: parseInt(blockNumber),
-    });
 
-    // console.log("usdcPrice ", usdcPrice.toString());
+    const usdcPrice: any = await client.readContract({
+      address: aaveV2OracleAddress,
+      abi: abi,
+      functionName: "getAssetPrice",
+      args: [usdc],
+      blockNumber: blockNumber,
+    });
 
     const ethPrice = new BigNumber(1)
       .dividedBy(formatEther(usdcPrice.toString()))
       .toFixed(8);
+
+    console.log("####### fetchPriceFromAaveV2Oracle: #######", {
+      ethPrice,
+      usdcPrice,
+    });
 
     return ethPrice;
   } catch (error) {
@@ -94,8 +78,8 @@ async function fetchPriceFromAaveV2Oracle(
 
 async function fetchPriceFromAaveV3Oracle(
   asset: any,
-  blockNumber: string,
-  aaveV3OracleAddress: string,
+  blockNumber: any,
+  aaveV3OracleAddress: any,
   currentProtocolIndex: number,
   retries: number = 0
 ) {
@@ -116,22 +100,27 @@ async function fetchPriceFromAaveV3Oracle(
       },
     ];
 
-    const provider = getProvider(currentProtocolIndex);
-    const aaveOracleInterface = new ethers.utils.Interface(abi);
-    const aaveOracleContract = new Contract(
-      aaveV3OracleAddress,
-      aaveOracleInterface,
-      provider
-    );
+    const _config = config.protocols[currentProtocolIndex];
 
-    console.log({ asset, blockNumber });
-    const price = await aaveOracleContract.getAssetPrice(asset, {
-      blockTag: parseInt(blockNumber),
+    const client = getPublicClient(_config.chainId, _config.rpcs[0]);
+
+    const price: any = await client.readContract({
+      abi: abi,
+      address: aaveV3OracleAddress,
+      functionName: "getAssetPrice",
+      args: [asset],
+      blockNumber: blockNumber,
     });
 
     return formatUnits(price.toString(), 8);
   } catch (error) {
-    console.log("call failed fetchPriceFromAaveV3Oracle retrying...", error);
+    console.log("call failed fetchPriceFromAaveV3Oracle retrying...", {
+      asset,
+      blockNumber,
+      aaveV3OracleAddress,
+      currentProtocolIndex,
+      retries,
+    });
     await sleep(500);
     return fetchPriceFromAaveV3Oracle(
       asset,
@@ -154,10 +143,25 @@ const getLiquidationIncetivePercentage = async (
         "failed getLiquidationIncetivePercentage func after max retries!"
       );
     }
-    const lendingPool = getLendingPoolContract(currentProtocolIndex);
-    const configuration = await lendingPool.getConfiguration(collateral);
 
-    let number = configuration[0]?.toString();
+    const _config = config.protocols[currentProtocolIndex];
+    const client = getPublicClient(_config.chainId, _config.rpcs[0]);
+
+    const lendingPoolAddress: any = _config.lendingPool;
+    const configuration: any = await client.readContract({
+      abi: LendingPoolABI,
+      address: lendingPoolAddress,
+      functionName: "getConfiguration",
+      args: [collateral],
+    });
+
+    if (!configuration.data) {
+      throw new Error(
+        "failed getLiquidationIncetivePercentage configuration recieved undefined!"
+      );
+    }
+
+    let number = configuration.data?.toString();
     let shiftedNumber = BigInt(number) >> BigInt(32); // Convert 'number' to BigInt explicitly
     let extractedBits = shiftedNumber & BigInt(0xffff);
     return Number(extractedBits) / 100 - 100;
@@ -176,7 +180,7 @@ const getLiquidationIncetivePercentage = async (
 };
 
 const getLiquidationCall = async (
-  txHash: string,
+  txHash: `0x${string}`,
   currentProtocolIndex: number,
   retries: number = 0
 ): Promise<any> => {
@@ -185,37 +189,39 @@ const getLiquidationCall = async (
       throw new Error("failed getLiquidationCall func after max retries!");
     }
 
-    const lendingPool = getLendingPoolContract(currentProtocolIndex);
-    const filter = lendingPool.filters.LiquidationCall(null, null, null);
+    const _config = config.protocols[currentProtocolIndex];
 
-    console.log({ txHash });
+    const client = getPublicClient(_config.chainId, _config.rpcs[0]);
 
-    const provider = getProvider(currentProtocolIndex);
-    const transaction = await provider.getTransactionReceipt(txHash);
+    const transaction = await client.getTransactionReceipt({ hash: txHash });
 
-    const logs = await provider.getLogs({
+    const lendingPoolAddress: any = _config.lendingPool;
+
+    const filter = await client.createContractEventFilter({
+      abi: LendingPoolABI,
+      address: lendingPoolAddress,
+      eventName: "LiquidationCall",
+      args: { collateralAsset: null, debtAsset: null, user: null },
       fromBlock: transaction.blockNumber,
       toBlock: transaction.blockNumber,
-      address: config.protocols[currentProtocolIndex].lendingPool,
-      topics: filter.topics,
+      strict: true,
     });
 
-    const decodedLogs = logs.map((log) => lendingPool.interface.parseLog(log));
+    const logs: any = await client.getFilterLogs({ filter: filter });
 
-    const { collateralAsset, debtAsset, user, debtToCover, collateralAmount } =
-      decodedLogs[0].args;
+    const { collateralAsset, debtAsset, user } = logs[0]?.args;
 
     const { gasUsed, effectiveGasPrice } = transaction;
-    const txCost = formatEther(effectiveGasPrice.mul(gasUsed));
 
-    return [
+    const txCost = formatEther(effectiveGasPrice * gasUsed);
+
+    return {
       txCost,
       collateralAsset,
       debtAsset,
       user,
-      debtToCover,
-      transaction.blockNumber,
-    ];
+      blockNumber: transaction.blockNumber,
+    };
   } catch (error) {
     console.log("getLiquidationCall error retrying... ", error);
     await sleep(500);
@@ -223,7 +229,7 @@ const getLiquidationCall = async (
   }
 };
 const getGasCost = async (
-  txHash: string,
+  txHash: any,
   currentProtocolIndex: number,
   retries: number = 0
 ): Promise<any> => {
@@ -232,16 +238,25 @@ const getGasCost = async (
       throw new Error("failed getGasCost func after max retries!");
     }
 
-    const provider = getProvider(currentProtocolIndex);
-    const transaction = await provider.getTransactionReceipt(txHash);
+    const _config = config.protocols[currentProtocolIndex];
 
-    const { gasUsed, effectiveGasPrice }: any = transaction;
-    console.log(effectiveGasPrice, gasUsed);
-    const txCost = formatEther(effectiveGasPrice.mul(gasUsed));
-    console.log({ txCost });
+    const client = getPublicClient(_config.chainId, _config.rpcs[0]);
+
+    const transaction = await client.getTransactionReceipt({ hash: txHash });
+
+    const { gasUsed, effectiveGasPrice } = transaction;
+
+    const txCost = formatEther(effectiveGasPrice * gasUsed);
+
+    console.log("####### getGasCost #######", {
+      txCost,
+      effectiveGasPrice,
+      gasUsed,
+    });
+
     return { txCost, blockNumber: transaction?.blockNumber };
   } catch (error) {
-    console.log("rpc call failed getTransactionReceipt", error);
+    console.log("rpc call failed getGasCost", error);
     await sleep(500);
     return getGasCost(txHash, currentProtocolIndex, retries + 1);
   }
@@ -252,7 +267,7 @@ const getAaveV2LiquidationInfo = async (
   liquidatedCollateralUSD: BigNumber.Value,
   currentProtocolIndex: number
 ) => {
-  const [txCost, collateralAsset, debtAsset, user, debtToCover, blockNumber] =
+  const { txCost, collateralAsset, debtAsset, user, blockNumber } =
     await getLiquidationCall(txHash, currentProtocolIndex);
 
   const incentivePercentage = await getLiquidationIncetivePercentage(
@@ -293,14 +308,19 @@ const getAaveV3LiquidationInfo = async (
   liquidatedCollateralUSD: BigNumber.Value,
   currentProtocolIndex: number
 ) => {
-  const [txCost, collateralAsset, debtAsset, user, debtToCover, blockNumber] =
-    await getLiquidationCall(txHash, currentProtocolIndex);
+  const { txCost, collateralAsset, blockNumber } = await getLiquidationCall(
+    txHash,
+    currentProtocolIndex
+  );
 
   const incentivePercentage: number = await getLiquidationIncetivePercentage(
     collateralAsset,
     currentProtocolIndex
   );
-  // console.log({ incentivePercentage });
+  console.log(
+    "########### incentivePercentage ###########",
+    incentivePercentage
+  );
 
   const incentiveUSD = new BigNumber(liquidatedCollateralUSD)
     .multipliedBy(incentivePercentage)
@@ -368,16 +388,18 @@ const getPriceFromChainLink = async (
       type: "function",
     },
   ];
-  const provider = getProvider(currentProtocolIndex);
+  const _config = config.protocols[currentProtocolIndex];
   const oracle = "0x1B2103441A0A108daD8848D8F5d790e4D402921F";
-  const contract = new Contract(oracle, abi, provider);
 
-  console.log({ tokenAddress, blockNumber });
-  const result = await contract.getPrice(tokenAddress, {
-    blockTag: blockNumber,
+  const client = getPublicClient(_config.chainId, _config.rpcs[0]);
+  const result = await client.readContract({
+    abi: abi,
+    address: oracle,
+    functionName: "getPrice",
+    args: [tokenAddress],
+    blockNumber: blockNumber,
   });
 
-  console.log({ result });
   return result;
 };
 
@@ -392,14 +414,14 @@ const getBSCLiquidationInfo = async (
   );
 
   const WBNB = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
-  let bnbPrice = await getPriceFromChainLink(
+  let bnbPrice: any = await getPriceFromChainLink(
     WBNB,
     blockNumber,
     currentProtocolIndex
   );
   bnbPrice = formatUnits(bnbPrice, 18);
   const txCostUSD = new BigNumber(txCost).multipliedBy(bnbPrice).toString();
-  console.log({ bnbPrice });
+  console.log({ txCost, bnbPrice, txCostUSD });
 
   return {
     txCostUSD,
@@ -417,13 +439,15 @@ const getNonEthereumLiquidationInfo = async (
     currentProtocolIndex
   );
 
-  const provider = getProvider(currentProtocolIndex);
-  const blockDetail = await provider.getBlock(blockNumber);
-  const timestamp: any = blockDetail?.timestamp;
-  console.log({ timestamp });
+  // get timestamp of current network's  given block
+  const _config = config.protocols[currentProtocolIndex];
+  const client = getPublicClient(_config.chainId, _config.rpcs[0]);
+  const blockDetail = await client.getBlock();
+  const timestamp: any = blockDetail.timestamp;
+
+  // get respective eth block number near by the timestamp
   const ethBlock = await getEthereumBlock(timestamp);
 
-  console.log({ ethBlock });
   // v3 oracle
   const aaveOracle = config.protocols[1].aaveOracle;
   const WETH_ADDRESS = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
@@ -435,8 +459,9 @@ const getNonEthereumLiquidationInfo = async (
     aaveOracle,
     _currentProtocolIndex
   );
-  console.log({ ethPrice });
+
   const txCostUSD = new BigNumber(txCost).multipliedBy(ethPrice).toString();
+  console.log({ txCost, ethPrice, txCostUSD });
 
   return {
     txCostUSD,
