@@ -30,11 +30,20 @@ async function handleUpdateProxy() {
 
   loading.value = true;
   try {
-    const info = await fetchProxyInformation(
-      props.dappForm?.proxyAddress,
-      parseInt(props.dappForm?.proxyChain),
-      props.dappForm?.feedName
-    );
+    const { data } = await useFetch("/api/projects/project/proxy", {
+      query: {
+        proxyAddress: props.dappForm?.proxyAddress,
+        chainId: parseInt(props.dappForm?.proxyChain),
+        feedName: props.dappForm?.feedName,
+      },
+    });
+    const info = data.value;
+
+    if (!info) {
+      message.value =
+        "Failed to fetch proxy info! Make sure proxy address is active";
+      return;
+    }
 
     const finalProxyEntry = {
       proxyAddress: props.dappForm?.proxyAddress,

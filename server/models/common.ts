@@ -64,7 +64,7 @@ const LiquidationChartSchema = new mongoose.Schema({
   slug: { type: String, required: true },
   period: { type: String, required: true },
   chainId: { type: Number, required: true },
-  data: [[String, Number, Number, Number, Number]],
+  data: [[String, Number, Number, Number, Number]], // Day, totalLiquidatedCollateralUSD, totalSentToBuilderUSD, totalMadeBySearcherUSD, totalIncentiveUSD
 });
 
 export const LiquidationChartModel = mongoose.model(

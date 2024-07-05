@@ -75,7 +75,7 @@ export const useHttpCalls = () => {
         if (el.proxyType === "datafeedId") {
           proxyPayload[el?.chainId]?.push({
             proxyType: el?.proxyType,
-            feedName: !el?.feedName ? "ETH/USD" : el?.feedName,
+            feedName: el?.feedName,
             datafeedId: el?.datafeedId,
             proxyAddress: el?.proxyAddress,
             oev: { enabled: el?.isOEV, beneficiary: el?.oevBeneficiary },
@@ -83,7 +83,7 @@ export const useHttpCalls = () => {
         } else {
           proxyPayload[el?.chainId]?.push({
             proxyType: el?.proxyType,
-            feedName: !el?.feedName ? "ETH/USD" : el?.feedName,
+            feedName: el?.feedName,
             dapiNameHash: el?.dapiNameHash,
             proxyAddress: el?.proxyAddress,
             oev: { enabled: el?.isOEV, beneficiary: el?.oevBeneficiary },

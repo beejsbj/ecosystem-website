@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { projectSchema } from "../types";
 
 export const isNumber = (n: string): boolean => {
   return !isNaN(parseFloat(n)) && isFinite(Number(n));
@@ -188,5 +189,19 @@ export const connectDB = async () => {
     console.log(`db connected: on ${config.nodeEnv}`);
   } catch (err) {
     console.log("db connection error ", err);
+  }
+};
+
+export const validateProjectSchema = async (projectJsonString: Object) => {
+  // Validate using safeParse (returns result object)
+  const result = projectSchema.safeParse(projectJsonString);
+  if (result.success) {
+    return { success: true, result: result.data };
+  } else {
+    // parse error messages
+    const messages = result.error.errors.map((err) => {
+      return `${err.message} in ${err.path[0]} field`;
+    });
+    return { success: false, result: messages };
   }
 };

@@ -1,3 +1,4 @@
+import BigNumber from "bignumber.js";
 import { LiquidationChartModel } from "~/server/models/common";
 import { cacheInterval, queryCache } from "~/server/services/cache";
 
@@ -28,7 +29,7 @@ export default checkConnection(
 
       if (cachedData !== undefined) {
         event.node.res.statusCode = 200;
-        console.log("getting from cache");
+
         return JSON.parse(cachedData);
       }
 
@@ -48,11 +49,23 @@ export default checkConnection(
       }
 
       const response = result.data;
+
+      const finalChartData = response.map((el) => {
+        const sentToBuilderUSD = !el?.[1] ? 0 : el?.[1];
+        const madeBySearcherUSD = !el?.[2] ? 0 : el?.[2];
+        const totalOevLost = new BigNumber(sentToBuilderUSD)
+          .plus(madeBySearcherUSD)
+          .toString();
+        const item: any[] = el?.toObject();
+
+        return [...item, totalOevLost];
+      });
+
       // cache result with new queries
-      queryCache.set(cacheKey, JSON.stringify(response), cacheInterval);
+      queryCache.set(cacheKey, JSON.stringify(finalChartData), cacheInterval);
 
       event.node.req.statusCode = 200;
-      return response;
+      return finalChartData;
     } catch (err: any) {
       console.log("fetch chart data error  ", err);
       event.node.req.statusCode = 500;
