@@ -9,7 +9,7 @@ const scrollPosition = ref(0);
 
 const oev = useOEVStore();
 
-const visibleBars = ref(["totalLiquidated", "totalProfitUSD"]);
+const visibleBars = ref(["totalLiquidated", "totalOevLostUSD"]);
 
 const barsList = ref(null);
 
@@ -21,7 +21,7 @@ const bars = [
   },
   {
     label: "Potential OEV Lost",
-    value: "totalProfitUSD",
+    value: "totalOevLostUSD",
     color: colors[1],
     help: "(Blockspace auction bribes + Liquidated totalProfitUSD)",
   },
@@ -29,16 +29,17 @@ const bars = [
     label: "Blockspace Auction Bribes",
     value: "totalSentToBuilderUSD",
     color: colors[2],
-
-    attrs: {
-      label: "Blockspace Auction Bribes",
-    },
   },
   {
     label: "Liquidator Profits",
-    value: "totalIncentiveUSD",
+    value: "totalProfitUSD",
     color: colors[3],
   },
+  //   {
+  //     label: "Total Incentive",
+  //     value: "totalIncentiveUSD",
+  //     color: colors[4],
+  //   },
 ];
 
 const visibleProtocols = computed(() => {
@@ -66,6 +67,10 @@ const maxHeight = computed(() => {
       isShown: visibleBars.value.includes("totalLiquidated"),
       value: getMaxValue("totalLiquidated"),
     },
+    {
+      isShown: visibleBars.value.includes("totalOevLostUSD"),
+      value: getMaxValue("totalOevLostUSD"),
+    },
   ];
 
   return Math.max(
@@ -88,30 +93,28 @@ function getColorByValue(value) {
 }
 
 function barHeight(value) {
-  const minHeight = 15; // Minimum height for visibility
-  const maxHeightPixels = 150; // Maximum height in pixels
+  console.log(value);
+  let minHeight = 5; // Minimum height for visibility
+
+  const maxHeightPixels = 350; // Maximum height in pixels
   const scaledHeight = (value / maxHeight.value) * maxHeightPixels;
   return Math.max(scaledHeight, minHeight);
 }
 
 function handleButton(direction) {
-  scrollPosition.value += direction;
-  let distance = ui.isMobile ? 350 : 300;
-  let x = scrollPosition.value * distance;
+  const carousel = barsList.value;
+  scrollPosition.value = carousel.clientWidth;
+  const currentScroll = carousel.scrollLeft;
+  const newScroll =
+    direction > 0
+      ? currentScroll + scrollPosition.value
+      : currentScroll - scrollPosition.value;
 
-  if (direction) {
-    gsap.to(barsList.value, {
-      scrollTo: {
-        x,
-      },
-    });
-  } else {
-    gsap.to(barsList.value, {
-      scrollTo: {
-        x,
-      },
-    });
-  }
+  gsap.to(carousel, {
+    scrollTo: {
+      x: newScroll,
+    },
+  });
 }
 </script>
 
@@ -151,6 +154,8 @@ function handleButton(direction) {
                )}px;
 							 --bar-totalProfitUSD-height: ${barHeight(protocol.totalProfitUSD)}px;
 							 --bar-totalIncentiveUSD-height: ${barHeight(protocol.totalIncentiveUSD)}px;
+							 --bar-totalOevLostUSD-height: ${barHeight(protocol.totalOevLostUSD)}px;
+
 
 
 						 `"
@@ -303,6 +308,35 @@ text-content {
   }
 }
 
+.totalLiquidated {
+  --background: linear-gradient(
+    to bottom,
+    hsla(0, 85%, 65%, 0.3),
+    hsla(0, 85%, 65%, 0)
+  );
+
+  --after-background: linear-gradient(
+    to bottom,
+    hsla(0, 85%, 65%, 1),
+    hsla(0, 85%, 0%, 1)
+  );
+}
+
+.totalOevLostUSD {
+  --background: linear-gradient(
+    to bottom,
+
+    hsla(230, 53%, 32%, 0.5),
+    hsla(230, 53%, 32%, 00)
+  );
+
+  --after-background: linear-gradient(
+    to bottom,
+    hsla(230, 53%, 70%, 1),
+    hsla(230, 53%, 0%, 0)
+  );
+}
+
 .totalSentToBuilderUSD {
   --background: linear-gradient(
     to bottom,
@@ -320,15 +354,14 @@ text-content {
 .totalProfitUSD {
   --background: linear-gradient(
     to bottom,
-
-    hsla(230, 53%, 32%, 0.5),
-    hsla(230, 53%, 32%, 00)
+    hsla(44, 85%, 65%, 0.3),
+    hsla(44, 85%, 65%, 0)
   );
 
   --after-background: linear-gradient(
     to bottom,
-    hsla(230, 53%, 70%, 1),
-    hsla(230, 53%, 0%, 0)
+    hsla(44, 85%, 65%, 1),
+    hsla(44, 85%, 0%, 1)
   );
 }
 
@@ -343,20 +376,6 @@ text-content {
     to bottom,
     hsla(226, 100%, 70%, 1),
     hsla(226, 100%, 0%, 1)
-  );
-}
-
-.totalLiquidated {
-  --background: linear-gradient(
-    to bottom,
-    hsla(0, 85%, 65%, 0.3),
-    hsla(0, 85%, 65%, 0)
-  );
-
-  --after-background: linear-gradient(
-    to bottom,
-    hsla(0, 85%, 65%, 1),
-    hsla(0, 85%, 0%, 1)
   );
 }
 
@@ -502,6 +521,11 @@ li {
       &.totalIncentiveUSD {
         grid-column: span 1;
         height: var(--bar-totalIncentiveUSD-height);
+      }
+
+      &.totalOevLostUSD {
+        grid-column: span 1;
+        height: var(--bar-totalOevLostUSD-height);
       }
     }
   }

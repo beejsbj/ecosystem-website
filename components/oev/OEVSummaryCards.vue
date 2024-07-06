@@ -48,7 +48,7 @@ const gridCount = computed(() => {
         <h3 class="calm-voice">{{ card.title }}</h3>
         <p
           :class="{
-            'firm-voice': !ui.isDesktop,
+            'notice-voice': !ui.isDesktop,
             'attention-voice': ui.isDesktop,
           }"
         >

@@ -54,13 +54,11 @@ const options = computed(() => {
       title: {
         display: true,
         text: props.metadata.title,
-        color: "hsla(160, 64%, 69%, 1)",
       },
 
       subtitle: {
         display: true,
         text: props.metadata.subtitle,
-        color: "hsla(160, 64%, 69%, 1)",
       },
 
       legend: {
@@ -127,7 +125,6 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.y.title,
-          color: "#fafafa",
         },
         ticks: {
           //   autoSkip: true,

@@ -29,6 +29,10 @@ oev.setProtocols(overview.value);
   <ContentsWrapper>
     <!-- Page Title component with heading and notice voice -->
 
+    <ClientOnly>
+      <!-- <LazyOEVTotalsChart /> -->
+    </ClientOnly>
+
     <OEVHero />
 
     <OEVFormChartSection />
@@ -46,6 +50,18 @@ oev.setProtocols(overview.value);
 :deep(inner-column) {
   @media (min-width: 768px) {
     padding: var(--space-2xl) var(--space-l);
+  }
+}
+
+:deep(.attention-voice:not(h1)) {
+  @media (max-width: 768px) {
+    --font-size: var(--step-1);
+  }
+}
+
+:deep(.firm-voice) {
+  @media (max-width: 768px) {
+    font-size: calc((var(--step-1) + var(--step-0)) / 2);
   }
 }
 </style>

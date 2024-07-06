@@ -87,6 +87,8 @@ const apiString = computed(() => {
 });
 const { data: rawData } = await useFetch(apiString);
 
+console.log(rawData);
+
 // data manipulation
 const parsed = computed(() => {
   const protocol = oev.getProtocolBySlug(selectedDataset.value);
@@ -119,6 +121,13 @@ const parsed = computed(() => {
     };
   });
 
+  const dataOevLost = rawData.value.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint[0]),
+      y: dataPoint[5],
+    };
+  });
+
   let labels;
 
   if (
@@ -147,7 +156,7 @@ const parsed = computed(() => {
         label: "Total Liquidated",
       },
       {
-        data: dataProfit,
+        data: dataOevLost,
         label: "Potential OEV Lost",
       },
       {
@@ -156,10 +165,15 @@ const parsed = computed(() => {
         hidden: true,
       },
       {
-        data: dataIncentive, //#todo change to new dataset
+        data: dataProfit,
         label: "Liquidator Profits",
         hidden: true,
       },
+      // {
+      //   data: dataIncentive,
+      //   label: "Incentives",
+      //   hidden: true,
+      // },
     ],
   };
 });
@@ -186,7 +200,7 @@ onMounted(() => {
       datasetIndex: item.datasetIndex,
       fillStyle: item.fillStyle,
       help:
-        index === 3
+        index === 1
           ? "(Blockspace auction bribes + Liquidated totalProfitUSD)"
           : null,
       attrs: {

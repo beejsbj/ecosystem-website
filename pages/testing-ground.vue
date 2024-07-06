@@ -13,19 +13,11 @@ const ecosystem = useEcosystemStore();
   <ContentsWrapper>
     <PageTitle heading="test ground" />
     <SectionColumn>
-      <NuxtLink to="/style-guide">style guide</NuxtLink>
-
-      {{ ui.isTablet }}
+      <OEVTotalsChart />
     </SectionColumn>
   </ContentsWrapper>
 </template>
 
-<style scoped>
-:deep(ul) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-m);
-}
-</style>
+<style scoped></style>
 
 <style></style>
