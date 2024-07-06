@@ -13,3 +13,6 @@ dist
 dapp-registry
 
 .amplify-hosting
+
+bun.lockb
+package-lock.json
