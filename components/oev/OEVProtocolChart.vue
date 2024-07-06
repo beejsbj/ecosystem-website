@@ -128,25 +128,10 @@ const parsed = computed(() => {
     };
   });
 
-  let labels;
-
-  if (
-    selectedPeriod.value === "daily" ||
-    selectedPeriod.value === "cumulative"
-  ) {
-    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 10));
-  }
-
-  if (selectedPeriod.value === "weekly") {
-    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 15));
-  }
-
-  if (selectedPeriod.value === "monthly") {
-    labels = dataLiquidated.map(
-      (item) =>
-        item.x.toDateString().slice(4, 8) + item.x.toDateString().slice(10, 15)
-    );
-  }
+  let labels = dataLiquidated.map(
+    (item) =>
+      item.x.toDateString().slice(4, 8) + item.x.toDateString().slice(8, 15)
+  );
 
   return {
     labels,

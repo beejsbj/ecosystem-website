@@ -48,6 +48,9 @@ const options = computed(() => {
         backgroundColor: "black",
         radius: 4,
       },
+      line: {
+        tension: 0.4,
+      },
     },
 
     plugins: {
@@ -105,7 +108,7 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.x.title,
-          color: "#fafafa",
+          color: "white",
         },
         ticks: {
           autoSkip: true,
@@ -125,6 +128,7 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.y.title,
+          color: "white",
         },
         ticks: {
           //   autoSkip: true,
