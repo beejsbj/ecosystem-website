@@ -76,7 +76,7 @@
     "siwe": "^2.1.4",
     "slug": "^8.2.2",
     "uuid": "^9.0.0",
-    "viem": "^1.4.2",
+    "viem": "^2.16.5",
     "vue-chartjs": "^5.2.0",
     "vue-easy-lightbox": "^1.7.0",
     "vue-skeletor": "^1.0.6",
