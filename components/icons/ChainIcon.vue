@@ -51,7 +51,9 @@ const onError = (): void => {
 <style scoped lang="scss">
 picture {
   aspect-ratio: 1/1;
+  min-width: 18px;
   max-width: 24px;
+  flex: 1;
 
   img {
     width: 100%;

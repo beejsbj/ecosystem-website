@@ -38,12 +38,12 @@ export default {
   <button
     class="short-wallet"
     v-tooltip="showCopyTooltip ? 'Copied!' : 'Copy'"
-    @click="copyToClipboard"
+    @click.prevent="copyToClipboard"
   >
     <span class="">
       {{ shortWallet }}
     </span>
-    <DynamicIcon icon="copy" />
+    <DynamicIcon icon="copy" width="40px" />
   </button>
 </template>
 
@@ -54,7 +54,7 @@ export default {
   cursor: pointer; /* Show pointer cursor when hovering */
   display: flex;
   align-items: center;
-  gap: var(--space-2xs);
+  gap: var(--space-3xs);
   padding: 0;
   color: var(--green);
 }

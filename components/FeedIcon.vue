@@ -47,6 +47,7 @@ function imgSrc(symbol) {
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
 }
 
 picture {

@@ -4,9 +4,13 @@ import { useEcosystemStore } from "@/stores/ecosystem";
 
 const ecosystem = useEcosystemStore();
 
-const props = defineProps(["dapp", "isForm", "dappForm"]);
+const props = defineProps(["dapp", "isForm", "dappForm", "proxies"]);
 
 const formattedProxies = computed(() => {
+  if (props.isForm) {
+    return props.dappForm.proxies;
+  }
+
   if (!props.dapp?.proxies) {
     return [];
   }
@@ -53,11 +57,9 @@ function getFeedQuery(proxy) {
       <li class="table-row table-head">
         <div class="whisper-voice chain">Network</div>
         <div class="whisper-voice feedname">Feed Name</div>
-        <div class="whisper-voice type">Type</div>
+        <div class="whisper-voice type" v-if="!isForm">Type</div>
         <div class="whisper-voice proxy-address">Proxy Address</div>
         <div class="whisper-voice address">dAPI ID</div>
-        <div class="whisper-voice feed-link"></div>
-        <div class="" v-if="isForm"></div>
       </li>
 
       <!-- Dynamically rendered table based on data -->
@@ -76,19 +78,22 @@ function getFeedQuery(proxy) {
         </div>
 
         <!-- type -->
-        <div class="type">
+        <div class="type" v-if="!isForm">
           {{ proxy?.proxyType?.includes("datafeedId") ? "Data Feed" : "dAPI" }}
         </div>
 
         <!-- proxy address -->
         <div class="proxy-address">
-          <WalletAddress class="whisper-voice" :walletAddress="proxy?.proxyAddress" />
+          <WalletAddress
+            class="whisper-voice"
+            :walletAddress="proxy?.proxyAddress"
+          />
         </div>
 
         <!-- id / dapi based address -->
         <div class="address">
           <WalletAddress
-			 class="whisper-voice"
+            class="whisper-voice"
             :walletAddress="
               proxy?.proxyType === 'datafeedId'
                 ? proxy?.datafeedId
@@ -132,6 +137,9 @@ function getFeedQuery(proxy) {
 section.proxy-table {
   display: grid;
   ul {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+
     margin-top: var(--space-2xs);
     max-height: 400px;
 
@@ -152,8 +160,9 @@ section.proxy-table {
     }
   }
   .table-row {
+    grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: subgrid;
     gap: var(--space-s);
     padding: var(--space-s);
     border-bottom: var(--border-dark);
@@ -174,7 +183,7 @@ section.proxy-table {
     }
 
     .chain picture.chain-icon {
-      flex-grow: 1;
+      flex: 1;
     }
 
     :deep(.feed-icon) {
@@ -187,7 +196,12 @@ section.proxy-table {
     }
 
     picture.cross {
-      width: 10px;
+      width: 18px;
+    }
+
+    .address,
+    .proxy-address {
+      padding: 4px;
     }
   }
 }

@@ -9,7 +9,8 @@ props.dappForm.proxies = props.dappForm.proxies ?? [];
 const loading = ref(false);
 const message = ref("");
 
-async function handleUpdateProxy() {
+async function handleUpdateProxy(event) {
+  event.preventDefault();
   message.value = "";
   loading.value = false;
 
@@ -134,7 +135,7 @@ async function handleUpdateProxy() {
       <div class="actions">
         <div class="add-button">
           <LoadingSpinner v-if="loading" />
-          <button v-else class="text green" @click.prevent="handleUpdateProxy">
+          <button v-else class="text green" @click="handleUpdateProxy">
             <picture>
               <img
                 loading="lazy"
@@ -151,6 +152,8 @@ async function handleUpdateProxy() {
         </div>
       </div>
     </div>
+
+    <pre></pre>
 
     <div class="grid-item" v-show="dappForm?.proxies.length > 0">
       <DappProxies
@@ -183,7 +186,7 @@ async function handleUpdateProxy() {
     }
 
     .table-row {
-      grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.5fr 0.2fr;
+      grid-template-columns: 1fr 0.7fr 0.7fr 0.5fr 0.5fr 0.5;
 
       * {
         font-size: var(--step--1);
