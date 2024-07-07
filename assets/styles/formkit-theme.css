@@ -651,3 +651,13 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+*:has(> .required-star) {
+  position: relative;
+}
+
+.required-star {
+  position: absolute;
+  top: 0;
+  left: -1rem;
+}

@@ -217,15 +217,15 @@ function addAsteriskPlugin(node) {
     node.props.definition.schema = (sectionsSchema = {}) => {
       sectionsSchema[legendOrLabel] = {
         children: [
-          "$label",
           {
             $el: "span",
             if: "$state.required",
             attrs: {
-              class: "text-action-error-500",
+              class: "text-action-error-500 required-star",
             },
-            children: [" *"],
+            children: ["*"],
           },
+          "$label",
         ],
       };
 

@@ -32,6 +32,15 @@ picture {
 }
 
 :deep(span.formkit-icon) {
-  display: block;
+  display: contents;
+  margin: 0;
+  padding: 0;
+
+  svg {
+    margin: 0;
+    padding: 0;
+    max-height: unset;
+    max-width: unset;
+  }
 }
 </style>
