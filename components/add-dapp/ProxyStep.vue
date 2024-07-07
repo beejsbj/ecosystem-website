@@ -181,12 +181,16 @@ async function handleUpdateProxy(event) {
       display: none;
     }
 
+    ul {
+      grid-template-columns: 1fr 0.7fr 0.7fr 0.5fr 0.5fr 0.5fr;
+    }
+
     .table-head .whisper-voice {
       font-weight: var(--weight-heavy);
     }
 
     .table-row {
-      grid-template-columns: 1fr 0.7fr 0.7fr 0.5fr 0.5fr 0.5;
+      grid-template-columns: subgrid;
 
       * {
         font-size: var(--step--1);

@@ -103,11 +103,10 @@ function getFeedQuery(proxy) {
         </div>
 
         <!-- link -->
-        <div class="feed-link">
+        <div class="feed-link" v-if="!isForm">
           <NuxtLink
             class="text whisper-voice"
             :to="`/feeds/${getFeedQuery(proxy)}`"
-            v-if="!isForm"
           >
             Go to Feed
           </NuxtLink>
