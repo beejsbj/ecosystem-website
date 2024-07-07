@@ -171,20 +171,9 @@ const isOevEnabled = computed(() => {
     color: var(--paper);
     text-align: center;
 
-    background-image: linear-gradient(
-      to right,
-      #005fb8 0%,
-      #0067c1 10%,
-      #0072cd 20%,
-      #0080d6 30%,
-      #008fdd 40%,
-      #009ee2 50%,
-      #00aee5 60%,
-      #00bde6 70%,
-      #00cbe5 80%,
-      #00d6e2 90%,
-      #00dfde 100%
-    );
+    border: 1px solid hsla(238, 73%, 22%, 1);
+
+    background-color: hsla(235, 68%, 7%, 1);
 
     :deep(.dynamic-icon.oev) {
       filter: invert(1);

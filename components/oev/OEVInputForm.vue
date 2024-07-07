@@ -29,12 +29,14 @@ function buttonHandle(event) {
   const totalIncentiveUSD = totalLiquidated * incentiveRate;
   const totalSentToBuilderUSD = totalIncentiveUSD * 0.75;
   const totalProfitUSD = totalIncentiveUSD * 0.25;
+  const totalOevLostUSD = totalSentToBuilderUSD + totalProfitUSD;
 
   // Update the userAdded protocol with the new values
   oev.protocols[userDappIndex].totalLiquidated = totalLiquidated;
   oev.protocols[userDappIndex].totalIncentiveUSD = totalIncentiveUSD;
   oev.protocols[userDappIndex].totalSentToBuilderUSD = totalSentToBuilderUSD;
   oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
+  oev.protocols[userDappIndex].totalOevLostUSD = totalOevLostUSD;
 
   //
   //   oev.userSelectedProtocols = {}; // Hide all protocols
@@ -71,7 +73,7 @@ function adjustIncentiveValue(value) {
         <FormKit
           type="number"
           number
-          suffix="%"
+          :prefix-icon="false"
           label="What is the liquidation incentive rate?"
           name="incentive"
           placeholder="5%"
