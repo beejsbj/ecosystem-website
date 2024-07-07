@@ -23,7 +23,7 @@ const bars = [
     label: "Potential OEV Lost",
     value: "totalOevLostUSD",
     color: colors[1],
-    help: "(Blockspace auction bribes + Liquidated totalProfitUSD)",
+    help: "(Blockspace auction bribes + Liquidater Profits)",
   },
   {
     label: "Blockspace Auction Bribes",

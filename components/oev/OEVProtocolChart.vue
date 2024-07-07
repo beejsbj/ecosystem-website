@@ -185,9 +185,7 @@ onMounted(() => {
       datasetIndex: item.datasetIndex,
       fillStyle: item.fillStyle,
       help:
-        index === 1
-          ? "(Blockspace auction bribes + Liquidated totalProfitUSD)"
-          : null,
+        index === 1 ? "(Blockspace auction bribes + Liquidater Profits)" : null,
       attrs: {
         onchange: () => {
           toggleDataset(item.datasetIndex);
