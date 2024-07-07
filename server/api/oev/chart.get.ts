@@ -51,8 +51,8 @@ export default checkConnection(
       const response = result.data;
 
       const finalChartData = response.map((el) => {
-        const sentToBuilderUSD = !el?.[1] ? 0 : el?.[1];
-        const madeBySearcherUSD = !el?.[2] ? 0 : el?.[2];
+        const sentToBuilderUSD = !el?.[3] ? 0 : el?.[3];
+        const madeBySearcherUSD = !el?.[4] ? 0 : el?.[4];
         const totalOevLost = new BigNumber(sentToBuilderUSD)
           .plus(madeBySearcherUSD)
           .toString();
