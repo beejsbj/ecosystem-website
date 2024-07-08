@@ -176,7 +176,7 @@ const options = computed(() => {
       gradient.addColorStop(0, startColor);
       gradient.addColorStop(1, endColor);
 
-      // return gradient;
+      return gradient;
       return color;
     },
   };
