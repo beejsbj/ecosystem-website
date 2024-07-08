@@ -15,17 +15,6 @@ const barsList = ref(null);
 
 const bars = [
   {
-    label: "Total Liquidated",
-    value: "totalLiquidated",
-    color: colors[0],
-  },
-  {
-    label: "Potential OEV Lost",
-    value: "totalOevLostUSD",
-    color: colors[1],
-    help: "(Blockspace auction bribes + Liquidater Profits)",
-  },
-  {
     label: "Blockspace Auction Bribes",
     value: "totalSentToBuilderUSD",
     color: colors[2],
@@ -35,6 +24,19 @@ const bars = [
     value: "totalProfitUSD",
     color: colors[3],
   },
+
+  {
+    label: "Potential OEV Lost",
+    value: "totalOevLostUSD",
+    color: colors[1],
+    help: "(Blockspace auction bribes + Liquidater Profits)",
+  },
+  {
+    label: "Total Liquidated",
+    value: "totalLiquidated",
+    color: colors[0],
+  },
+
   //   {
   //     label: "Total Incentive",
   //     value: "totalIncentiveUSD",
@@ -93,7 +95,6 @@ function getColorByValue(value) {
 }
 
 function barHeight(value) {
-  console.log(value);
   let minHeight = 5; // Minimum height for visibility
 
   const maxHeightPixels = 350; // Maximum height in pixels
@@ -287,20 +288,6 @@ text-content {
     &.dimmed {
       filter: brightness(0.5) saturate(0.5);
     }
-  }
-
-  .legend-icon {
-    aspect-ratio: 1/1;
-    width: 18px;
-    background: linear-gradient(to bottom, var(--color), transparent);
-    border-radius: 1px;
-    border: 1px solid;
-    border-image: linear-gradient(
-        150deg,
-        color-mix(in hsl, var(--color), white 35%),
-        color-mix(in hsl, var(--color), black 85%)
-      )
-      1;
   }
 
   .formkit-label {

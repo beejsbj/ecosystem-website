@@ -64,4 +64,24 @@ oev.setProtocols(overview.value);
     font-size: calc((var(--step-1) + var(--step-0)) / 2);
   }
 }
+
+:deep(.legend-icon) {
+  --direction: 150deg;
+
+  aspect-ratio: 1/1;
+  width: 18px;
+  flex-shrink: 0;
+
+  border-radius: 1px;
+  border: 1px solid;
+
+  background: linear-gradient(var(--direction), var(--color), transparent);
+
+  border-image: linear-gradient(
+      var(--direction),
+      color-mix(in hsl, var(--color), white 35%),
+      color-mix(in hsl, var(--color), black 70%)
+    )
+    1;
+}
 </style>

@@ -344,18 +344,4 @@ div.actions {
     padding: 0;
   }
 }
-
-.legend-icon {
-  flex-shrink: 0;
-  aspect-ratio: 1/1;
-  width: 18px;
-  background: var(--color);
-  border: 1px solid;
-  border-image: linear-gradient(
-      150deg,
-      color-mix(in hsl, var(--color), white 35%),
-      color-mix(in hsl, var(--color), black 85%)
-    )
-    1;
-}
 </style>
