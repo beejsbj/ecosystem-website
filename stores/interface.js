@@ -11,11 +11,11 @@ export const useInterfaceStore = defineStore("interface", function () {
 
   // api3 colors /////////////////////////////
   const api3Colors = {
-    red: "hsla(4, 68%, 15%, 1.00)",
-    blue: "hsla(230, 53%, 32%, 1.00)",
-    green: "hsla(162, 30%, 22%, 1.00)",
+    red: "hsla(4, 68%, 15%, 1)",
+    blue: "hsla(230, 53%, 32%, 1)",
+    green: "hsla(162, 30%, 22%, 1)",
     yellow: "hsla(44, 85%, 65%, 1)",
-    violet: "hsla(251, 58%, 21%, 1.00)",
+    violet: "hsla(251, 58%, 21%, 1)",
   };
 
   //

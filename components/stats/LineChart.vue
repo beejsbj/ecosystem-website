@@ -46,7 +46,7 @@ const options = computed(() => {
       point: {
         pointStyle: "rectRot",
         backgroundColor: "black",
-        radius: 4,
+        radius: 1,
       },
       line: {
         tension: 0.4,
@@ -141,7 +141,7 @@ const options = computed(() => {
 
         grid: {
           display: true,
-          color: "#404141",
+          color: "hsla(0, 0%, 100%, .150)",
         },
       },
     },
@@ -170,7 +170,7 @@ const options = computed(() => {
         ? ui.api3Colors[dataset.color]
         : Object.values(ui.api3Colors)[datasetIndex];
       const [startColor, endColor] = [
-        color.replace("1)", "0.5)"),
+        color.replace("1)", "0.75)"),
         color.replace("1)", "0)"),
       ];
       gradient.addColorStop(0, startColor);

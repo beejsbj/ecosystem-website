@@ -43,8 +43,6 @@ export const useOEVStore = defineStore("oev", function () {
   function setProtocols(raw) {
     if (!raw) return;
 
-    console.log(raw);
-
     const sorted = raw.sort((a, b) => {
       return a.totalLiquidated - b.totalLiquidated;
     });
@@ -67,6 +65,7 @@ export const useOEVStore = defineStore("oev", function () {
       totalSentToBuilderUSD: 0,
       totalProfitUSD: 0,
       totalIncentiveUSD: 0,
+      totalOevLostUSD: 0,
       trueHide: true,
       hide: true,
     };

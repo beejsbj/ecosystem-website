@@ -19,7 +19,7 @@ const oev = useOEVStore();
 const ui = useInterfaceStore();
 
 // Fetch the OEV data from the server
-const { data: overview } = await useFetch("/api/oev");
+const { data: overview, error } = await useFetch("/api/oev");
 
 // Set the fetched OEV data to the OEV store
 oev.setProtocols(overview.value);

@@ -139,20 +139,24 @@ const parsed = computed(() => {
       {
         data: dataLiquidated,
         label: "Total Liquidated",
+        order: 4,
       },
       {
         data: dataOevLost,
         label: "Potential OEV Lost",
+        order: 3,
       },
       {
         data: dataSentToBuilder,
         label: "Blockspace Auction Bribes",
         hidden: true,
+        order: 1,
       },
       {
         data: dataProfit,
         label: "Liquidator Profits",
         hidden: true,
+        order: 2,
       },
       // {
       //   data: dataIncentive,
@@ -179,11 +183,12 @@ onMounted(() => {
   const items = chart.options.plugins.legend.labels.generateLabels(chart);
 
   const options = items.map((item, index) => {
+    const color = `${item.strokeStyle}`;
     return {
       label: item.text,
       value: item.datasetIndex,
       datasetIndex: item.datasetIndex,
-      fillStyle: item.fillStyle,
+      fillStyle: color,
       help:
         index === 1 ? "(Blockspace auction bribes + Liquidater Profits)" : null,
       attrs: {
