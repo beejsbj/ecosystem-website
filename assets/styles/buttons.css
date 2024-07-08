@@ -77,8 +77,10 @@ p :is(button, a).text {
   color: var(--link-hover) !important;
 }
 
-.text:not(.external-link, nav a, button):is(:hover, :focus-visible) {
-  color: var(--link-hover) !important;
+.text:not(.external-link, button, :is(article-card, nav, dapp-card) a):is(
+    :hover,
+    :focus-visible
+  ) {
   background: url("@/assets/images/icons/interface/arrow-right.svg") no-repeat;
   background-position: right;
   background-size: 24px;
