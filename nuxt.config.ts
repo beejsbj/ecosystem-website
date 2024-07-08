@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import type { Nuxt } from "nuxt/schema";
+import type { Nuxt, NuxtApp, NuxtPlugin } from "nuxt/schema";
 
 export default defineNuxtConfig({
   spaLoadingTemplate: "./app-loading.html",
@@ -140,6 +140,7 @@ export default defineNuxtConfig({
       },
     ],
     "nuxt-multi-cache",
+    "@nuxt/test-utils/module",
   ],
   multiCache: {
     route: {
@@ -183,6 +184,15 @@ export default defineNuxtConfig({
   hooks: {
     close: async (go: Nuxt) => {
       await mongoose.disconnect();
+    },
+    "app:resolve": (app: NuxtApp) => {
+      if (!process.env.VITEST) {
+        return;
+      }
+
+      app.plugins = app.plugins.filter(
+        (p: NuxtPlugin) => !p.src.includes("/plugins/logos")
+      );
     },
   },
   runtimeConfig: {
