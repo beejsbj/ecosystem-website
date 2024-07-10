@@ -9,67 +9,68 @@ const isOevEnabled = computed(() => {
 </script>
 
 <template>
-  <div class="feed-dapp-card">
-    <div class="oev-tag absolute solid-voice" v-if="isOevEnabled">
-      <DynamicIcon icon="oev" width="75px" />
-    </div>
-    <div class="dapp-header">
-      <picture class="logo">
-        <NuxtImg
-          loading="lazy"
-          :src="dapp?.images?.logo"
-          src="/images/square.jpg"
-          :alt="`Logo of ${dapp?.name}`"
-        />
-      </picture>
-      <div class="text-content">
-        <h2 class="firm-voice-smaller">
-          {{ dapp?.name ?? "dApp Name" }}
-        </h2>
+  <NuxtLink
+    :to="`/ecosystem/${dapp?.slug}`"
+    :target="dapp.slug"
+    class="link-wrap"
+  >
+    <div class="feed-dapp-card">
+      <div class="oev-tag absolute solid-voice" v-if="isOevEnabled">
+        <DynamicIcon icon="oev" width="75px" />
+      </div>
+      <div class="dapp-header">
+        <picture class="logo">
+          <NuxtImg
+            loading="lazy"
+            :src="dapp?.images?.logo"
+            src="/images/square.jpg"
+            :alt="`Logo of ${dapp?.name}`"
+          />
+        </picture>
+        <div class="text-content">
+          <h2 class="firm-voice-smaller">
+            {{ dapp?.name ?? "dApp Name" }}
+          </h2>
 
-        <ul class="categories-list">
-          <li
-            class="micro-voice category"
-            v-for="category in dapp?.categories ?? [1, 2]"
-            :data-category="category"
-          >
-            {{ ecosystem?.categoryToLabel?.[category] ?? "Category" }}
-          </li>
-        </ul>
-        <p class="whisper-voice">
-          {{ dapp?.tagline }}
-        </p>
+          <ul class="categories-list">
+            <li
+              class="micro-voice category"
+              v-for="category in dapp?.categories ?? [1, 2]"
+              :data-category="category"
+            >
+              {{ ecosystem?.categoryToLabel?.[category] ?? "Category" }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="span-all whisper-voice">
+        {{ dapp?.tagline }}
+      </p>
+
+      <!-- proxy list -->
+      <div class="address">
+        <div class="proxy-address" v-auto-animate>
+          <h3 class="whisper-voice">Proxy Address</h3>
+          <p>
+            <WalletAddress
+              :walletAddress="dappProxy.proxyAddress"
+              class="whisper-voice"
+            />
+          </p>
+        </div>
+        <div v-if="isOevEnabled" class="beneficiary-address" v-auto-animate>
+          <h3 class="whisper-voice">Beneficiary Address</h3>
+          <p>
+            <WalletAddress
+              :walletAddress="dappProxy.oev.beneficiary"
+              class="whisper-voice"
+            />
+          </p>
+        </div>
       </div>
     </div>
-
-    <!-- proxy list -->
-    <div class="proxy-address" v-auto-animate>
-      <h3 class="solid-voice">Proxy Address</h3>
-      <p>
-        <WalletAddress
-          :walletAddress="dappProxy.proxyAddress"
-          class="calm-voice"
-        />
-      </p>
-    </div>
-    <div v-if="isOevEnabled" class="beneficiary-address" v-auto-animate>
-      <h3 class="solid-voice">Beneficiary Address</h3>
-      <p>
-        <WalletAddress
-          :walletAddress="dappProxy.oev.beneficiary"
-          class="calm-voice"
-        />
-      </p>
-    </div>
-
-    <NuxtLink
-      :to="`/ecosystem/${dapp?.slug}`"
-      :target="dapp.slug"
-      class="text whisper-voice external-link green"
-    >
-      Go to dApp
-    </NuxtLink>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped lang="scss">
@@ -116,7 +117,7 @@ const isOevEnabled = computed(() => {
 
   h2,
   h3 {
-    white-space: nowrap;
+    //  white-space: nowrap;
   }
 
   .categories-list {
@@ -143,24 +144,20 @@ const isOevEnabled = computed(() => {
     }
   }
 
-  .proxy-address,
-  .beneficiary-address {
-    //  grid-column: 1/3;
-    display: grid;
+  .address {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
     gap: var(--space-3xs);
+
+    & > * {
+      flex: 1;
+    }
 
     p {
       margin-top: unset;
     }
-  }
-
-  a {
-    grid-column: 3;
-    display: flex;
-    align-items: center;
-
-    justify-self: flex-end;
-    align-self: end;
   }
 
   .oev-tag {
@@ -174,10 +171,6 @@ const isOevEnabled = computed(() => {
     border: 1px solid hsla(238, 73%, 22%, 1);
 
     background-color: hsla(235, 68%, 7%, 1);
-
-    :deep(.dynamic-icon.oev) {
-      filter: invert(1);
-    }
 
     &:is(p) {
       background: unset;
@@ -202,5 +195,8 @@ const isOevEnabled = computed(() => {
   p {
     margin-top: var(--space-2xs);
   }
+}
+
+a {
 }
 </style>

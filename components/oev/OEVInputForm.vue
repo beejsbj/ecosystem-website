@@ -110,7 +110,7 @@ function adjustIncentiveValue(value) {
 <style scoped lang="scss">
 form {
   display: grid;
-  gap: var(--space-m);
+  gap: var(--space-xl);
   justify-content: center;
   margin-top: var(--space-l);
 
@@ -131,7 +131,7 @@ form > :deep(.formkit-messages) {
 }
 
 :deep(.formkit-label, .formkit-input) {
-  font-size: calc((var(--step-0) + var(--step-1)) / 2);
+  font-size: var(--step-0);
 }
 
 .contents-wrapper {

@@ -225,7 +225,10 @@ onMounted(() => {
       </FormKit>
       <div class="actions">
         <!--  -->
-        <OEVProtocolDropdown v-model="selectedDataset" />
+        <OEVProtocolDropdown
+          v-model="selectedDataset"
+          label="Select Protocol"
+        />
         <!--  -->
         <FormKit
           name="logarithmic-checkbox"
@@ -303,13 +306,13 @@ h2 {
 
 div.actions {
   display: grid;
-  gap: var(--space-m);
+  gap: var(--space-xl);
   align-content: start;
   grid-template-columns: 1fr 1.5fr;
   margin-top: var(--space-l);
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     padding-inline: var(--space-l);
   }
 
@@ -317,6 +320,9 @@ div.actions {
   .formkit-outer:nth-child(2) {
     grid-column: 1 / -1;
     max-width: 500px;
+  }
+  .formkit-outer:nth-child(4) {
+    grid-column: 2 / span 2;
   }
 
   .buttons-content {
@@ -341,7 +347,7 @@ div.actions {
   }
 
   .formkit-outer:nth-child(4) :deep(.icon-option) {
-    padding: 0;
+    padding-block: 0;
   }
 }
 </style>

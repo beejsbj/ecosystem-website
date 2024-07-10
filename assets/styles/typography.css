@@ -46,7 +46,7 @@ article.body h2 a {
   font-family: var(--font);
   font-size: var(--step-1);
   line-height: 1.4;
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-light);
   color: var(--gray-lighter);
 }
 
@@ -100,7 +100,7 @@ button {
   color: var(--ink);
 }
 
-:is(li, p) a {
+:is(li, p) > a.text {
   color: var(--green);
   /* text-decoration: underline; */
   display: inline;

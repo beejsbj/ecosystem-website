@@ -2,7 +2,7 @@
 const route = useRoute();
 const ui = useInterfaceStore();
 
-const loadingDone = ref(ui.firstLoad ? false : true);
+const loadingDone = ref(ui.firstLoad ? true : true);
 
 onMounted(() => {
   setTimeout(() => {

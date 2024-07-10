@@ -19,9 +19,9 @@
   --fk-font-family-help: var(--fk-font-family);
   --fk-font-family-message: var(--fk-font-family);
 
-  --fk-font-weight: var(--weight-medium);
+  --fk-font-weight: var(--weight-light);
   --fk-font-weight-input: var(--fk-font-weight);
-  --fk-font-weight-label: var(--weight-medium);
+  --fk-font-weight-label: var(--weight-light);
   --fk-font-weight-legend: var(--fk-font-weight-label, bold);
   --fk-font-weight-help: var(--fk-font-weight);
   --fk-font-weight-option: var(--fk-font-weight);
@@ -29,11 +29,11 @@
 
   --fk-font-size: var(--step-0);
   --fk-font-size-input: var(--fk-font-size);
-  --fk-font-size-label: 0.9em;
-  --fk-font-size-legend: 0.9em;
+  --fk-font-size-label: 0.8em;
+  --fk-font-size-legend: 0.8em;
   --fk-font-size-help: var(--step--1);
   --fk-font-size-remove: var(--step--1);
-  --fk-font-size-option: 0.9em;
+  --fk-font-size-option: 0.8em;
   --fk-font-size-message: var(--step--1);
   --fk-font-size-button: var(--fk-font-size);
   --fk-font-size-summary: 1.25em;
@@ -625,6 +625,10 @@
   }
 }
 
+.formkit-listbox .formkit-listitem .formkit-selected-icon {
+  left: 0.65em;
+}
+
 /* disable parts */
 
 .formkit-help {
@@ -660,4 +664,8 @@ input[type="number"] {
   position: absolute;
   top: 0;
   left: -1rem;
+}
+
+.formkit-label {
+  color: var(--gray-light);
 }

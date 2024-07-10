@@ -130,7 +130,7 @@ h2 {
 
 h3 {
   position: absolute;
-  top: calc(var(--space-s) * -1);
+  top: calc(var(--space-s) * -2);
 }
 
 h3,
@@ -155,9 +155,9 @@ section {
 
 ul.explainer-carousel {
   display: grid;
-  grid-template-columns: 175px 25px 175px 25px 175px 25px 175px 25px 175px;
-  gap: var(--space-s);
-  align-items: center;
+  grid-template-columns: 96px 25px 96px 25px 96px 25px 96px 25px 96px;
+  gap: var(--space-l);
+  //   align-items: center;
   //   justify-content: center;
   margin-top: var(--space-2xl);
   max-width: 91cqw;
@@ -220,6 +220,19 @@ ul.explainer-carousel {
 
   & + li {
     margin-top: var(--space-3xs);
+  }
+}
+
+li:has(picture.arrow) {
+  align-self: center;
+}
+
+picture.arrow {
+  position: relative;
+  top: -550%;
+
+  @media (min-width: 1000px) {
+    top: -800%;
   }
 }
 </style>

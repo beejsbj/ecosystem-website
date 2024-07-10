@@ -84,4 +84,9 @@ oev.setProtocols(overview.value);
     )
     1;
 }
+
+:deep(fieldset.formkit-fieldset) {
+  display: flex;
+  align-items: center;
+}
 </style>

@@ -70,7 +70,7 @@ a {
 
   background-position: 90% center;
 }
-p :is(button, a).text {
+p :is(button, a).text:not(.external-link) {
   padding: 0;
 }
 .text:is(:hover, :focus-visible) {
@@ -136,7 +136,7 @@ img.caret.right {
 /* exeternal link */
 
 :is(button, a, span).external-link {
-  --size: 20px;
+  --size: 1em;
   background-image: url("@/assets/images/icons/interface/diagonal-arrow.svg");
   background-repeat: no-repeat;
   padding-right: calc(var(--size) + var(--space-3xs));

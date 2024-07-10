@@ -307,3 +307,7 @@
 .no-wrap {
   white-space: nowrap;
 }
+
+.span-all {
+  grid-column: 1/-1;
+}

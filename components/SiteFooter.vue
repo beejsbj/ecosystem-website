@@ -177,7 +177,7 @@ const miscLinks = [
               v-for="(link, linkIndex) in footerMenu.links"
               :key="linkIndex"
               :to="link.path"
-              class="calm-voice text footer-link"
+              class="whisper-voice text footer-link"
               :class="link.external ? 'external-link' : ''"
             >
               <span>{{ link.label }}</span>
@@ -199,7 +199,7 @@ const miscLinks = [
             <DynamicIcon :icon="social?.icon" />
           </NuxtLink>
         </nav>
-        <p class="calm-voice">
+        <p class="whisper-voice">
           © 2023 <span class="no-wrap">API3 Foundation</span>
         </p>
 
@@ -208,7 +208,7 @@ const miscLinks = [
             v-for="(link, index) in miscLinks"
             :key="index"
             :to="link.path"
-            class="text footer-link"
+            class="text footer-link whisper-voice"
             :class="link.external ? 'external-link' : ''"
           >
             <span>
@@ -239,6 +239,7 @@ a.text {
 
 nav {
   display: grid;
+  gap: var(--space-3xs);
 }
 
 .footer-link {
@@ -251,20 +252,16 @@ nav {
   gap: var(--space-l);
   justify-content: space-between;
 
-  @media (min-width: 768px) {
+  @media (min-width: 420px) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: start;
-  }
-
-  @media (min-width: 940px) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 1fr 1fr;
     align-items: start;
   }
 
@@ -272,21 +269,27 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
+
+    & > * {
+      flex: 1;
+    }
   }
 
   .site-logo {
     width: 200px;
+    margin-bottom: var(--space-s);
 
     grid-column: 1/ -1;
 
-    @media (min-width: 768px) {
-      grid-column: unset;
-      grid-row: 1/ -1;
+    @media (min-width: 1000px) {
+      flex: 2;
+      padding-right: var(--space-l);
     }
   }
 
   h5 {
     font-size: var(--step-0);
+    color: var(--gray);
     margin-bottom: var(--space-s);
     text-transform: uppercase;
     @media (min-width: 1024px) {

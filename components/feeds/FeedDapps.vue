@@ -1,5 +1,4 @@
 <script setup>
-import { FormKitIcon } from "@formkit/vue";
 const props = defineProps(["feedProjects", "pending", "proxy"]);
 const ui = useInterfaceStore();
 
@@ -48,9 +47,21 @@ const filteredDapps = computed(() => {
   return result;
 });
 
-function exportCSV() {
-  console.log("Exporting CSV");
+function exportJSON() {
+  console.log("Exporting JSON");
   console.log("Filtered dapps for export:", filteredDapps.value);
+
+  const json = JSON.stringify(filteredDapps.value);
+  console.log("JSON:", json);
+
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.setAttribute("download", "dapps.json");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 </script>
 
@@ -60,11 +71,9 @@ function exportCSV() {
       <SkeletonListItem v-for="i in 6" v-if="!ui.loadingDone" :key="i" />
 
       <template v-else-if="filteredDapps.length > 0">
-        <button class="calm-voice text green export-button" @click="exportCSV">
-          <picture>
-            <FormKitIcon icon="download-csv-alt" />
-          </picture>
-          Export CSV
+        <button class="calm-voice text export-button" @click="exportJSON">
+          <DynamicIcon icon="download-csv-alt" />
+          Export JSON
         </button>
         <li v-for="item in filteredDapps" :key="item.id">
           <SkeletonCard v-if="pending" />
@@ -88,6 +97,7 @@ function exportCSV() {
 .main :deep(inner-column) {
   display: grid;
   gap: var(--space-l);
+  padding-top: 0;
 }
 
 .display-card-section {
@@ -118,10 +128,14 @@ function exportCSV() {
     picture {
       max-width: 32px;
     }
+
+    &:hover {
+      stroke: currentColor;
+    }
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   }
 }
 </style>

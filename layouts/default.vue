@@ -46,6 +46,14 @@ useHead({
     left: var(--left);
 
     width: var(--width);
+    @media (min-width: 768px) {
+      display: block;
+      --top: -0px;
+      --left: -350px;
+
+      --width: 200vw;
+      z-index: -10;
+    }
 
     @media (min-width: 1024px) {
       display: block;

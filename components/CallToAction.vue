@@ -58,8 +58,11 @@ cta-module {
       }
     }
   }
-
   @media (min-width: 768px) {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  @media (min-width: 1300px) {
     padding: calc(var(--space-m) * 4) calc(var(--space-m) * 7);
   }
 }

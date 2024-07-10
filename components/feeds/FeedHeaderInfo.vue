@@ -71,7 +71,7 @@ function handleChainChange(chain) {
             <template #option="{ option }">
               <div class="icon-option">
                 <ChainIcon :id="option.value" />
-                <span class="calm-voice">
+                <span class="">
                   {{ option.label }}
                 </span>
               </div>

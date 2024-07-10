@@ -28,19 +28,15 @@ picture {
   max-width: var(--width);
 
   /* Calculate line width based on the width variable */
-  --line-width: calc(var(--width) / 16);
 }
 
 :deep(span.formkit-icon) {
   display: contents;
   margin: 0;
   padding: 0;
+}
 
-  svg {
-    margin: 0;
-    padding: 0;
-    max-height: unset;
-    max-width: unset;
-  }
+:deep(svg) {
+  --line-width: calc(70% / 16);
 }
 </style>

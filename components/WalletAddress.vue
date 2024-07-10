@@ -43,7 +43,7 @@ export default {
     <span class="">
       {{ shortWallet }}
     </span>
-    <DynamicIcon icon="copy" width="40px" />
+    <DynamicIcon icon="copy" />
   </button>
 </template>
 

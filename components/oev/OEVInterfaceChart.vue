@@ -293,6 +293,10 @@ text-content {
   .formkit-label {
     white-space: nowrap;
   }
+
+  .icon-option {
+    padding-block: 0;
+  }
 }
 
 .totalLiquidated {

@@ -16,7 +16,7 @@ const ui = useInterfaceStore();
       >
         You can verify this data by
         <NuxtLink
-          class="tsext external-link"
+          class="text external-link"
           to="https://github.com/AamirAlam/aave-extract-mev-funds"
         >
           <span class="gradient-text-color-light">
@@ -37,7 +37,7 @@ text-content {
   place-items: center;
   text-align: center;
   @media (min-width: 768px) {
-    padding: var(--space-2xl);
+    padding: var(--space-l);
   }
 
   .loud-voice {

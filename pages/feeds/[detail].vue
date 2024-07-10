@@ -23,8 +23,18 @@ const showReset = computed(() => {
   return hasQuery;
 });
 
+const marketLinkSlug = computed(() => {
+  if (!proxy.value.chainId) {
+    return false;
+  }
+
+  const chainSlug = getChainName(proxy.value.chainId);
+
+  return `${chainSlug}/${feedSlug}`.toLowerCase();
+});
+
 const showMarket = computed(() => {
-  return route.query.chainId;
+  return marketLinkSlug.value;
 });
 
 //
@@ -67,9 +77,9 @@ definePageMeta({
         <h1 class="loud-voice">dApps using</h1>
         <NuxtLink
           v-if="showMarket"
-          :to="`https://market.api3.org/dapis/${chainSlug}/${feedSlug}`"
+          :to="`https://market.api3.org/${marketLinkSlug}`"
           class="button market-button"
-          :target="`${chainSlug}-${feedSlug}`"
+          :target="marketLinkSlug"
         >
           <span class="external-link"> View on Market </span>
         </NuxtLink>
@@ -94,13 +104,16 @@ definePageMeta({
   </article>
 </template>
 
-<style>
-html {
-  /* --paper: var(--gradient-radial-green); */
-}
-</style>
-
 <style scoped lang="scss">
+.header > :deep(inner-column) {
+  padding-top: calc(var(--space-s) * 9);
+  padding-bottom: 0;
+}
+
+h1.loud-voice {
+  --font-size: calc(var(--step-0) + var(--step-3) / 2);
+}
+
 .feed-icon-heading {
   display: flex;
   align-items: center;

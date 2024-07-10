@@ -78,6 +78,9 @@ mast-head {
     cursor: pointer;
 
     @media (min-width: 768px) {
+      width: 166px;
+    }
+    @media (min-width: 1108px) {
       width: 215px;
     }
   }
