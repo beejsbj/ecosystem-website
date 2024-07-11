@@ -3,7 +3,8 @@
 
 const { $chainLogo, $symbolLogo } = useNuxtApp();
 
-const props = defineProps(["icon1", "icon2"]);
+const props = defineProps(["icon1", "icon2", "width"]);
+
 // icon1: object
 // icon2: object
 
@@ -41,7 +42,11 @@ function imgSrc(icon) {
 
 <template>
   <div class="double-icon">
-    <picture v-for="(icon, i) in props" :class="`icon-${i}`" :key="i">
+    <picture
+      v-for="(icon, i) in [props.icon1, props.icon2]"
+      :class="`icon-${i}`"
+      :key="i"
+    >
       <img
         loading="lazy"
         :src="imgSrc(icon)"
@@ -61,11 +66,12 @@ function imgSrc(icon) {
 }
 
 picture {
+  --props-width: v-bind("props.width ?? '24px'");
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: var(--gray-darker);
   width: 100%;
-  --width: 30px;
+  --width: var(--props-width, 24px);
   max-width: var(--width);
   isolation: isolate;
   position: relative;

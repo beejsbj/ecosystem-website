@@ -42,7 +42,7 @@ const protocolOptions = computed(() => {
       <div class="icon-option">
         <ChainIcon :id="option.group" />
 
-        <span class="label"> {{ getChainName(option.group) }} </span>
+        <span class="label group"> {{ getChainName(option.group) }} </span>
       </div>
     </template>
 
@@ -54,7 +54,7 @@ const protocolOptions = computed(() => {
           :image="option.icon"
           :id="option.chainId"
         />
-        <span class="label">
+        <span class="label option">
           {{ option.label }}
         </span>
       </div>
@@ -73,7 +73,7 @@ const protocolOptions = computed(() => {
             src: option.icon,
           }"
         />
-        <span class="label">
+        <span class="label selection">
           {{ option.value == "userAdded" ? "Your dApp" : option.label }}
         </span>
       </div>
@@ -84,5 +84,7 @@ const protocolOptions = computed(() => {
 <style scoped>
 .icon-option :deep(span.label) {
   font-weight: var(--weight-light) !important;
+
+  font-size: calc((var(--step--1) + var(--step-0)) / 2);
 }
 </style>

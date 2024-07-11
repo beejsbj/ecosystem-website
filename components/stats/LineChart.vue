@@ -46,7 +46,7 @@ const options = computed(() => {
       point: {
         pointStyle: "rectRot",
         backgroundColor: "black",
-        radius: 1,
+        radius: 3,
       },
       line: {
         tension: 0.4,
