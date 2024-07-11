@@ -1,12 +1,23 @@
-import {gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Flip } from "gsap/Flip";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 export default defineNuxtPlugin((nuxtApp) => {
-	nuxtApp.vueApp.use(gsap)
-	nuxtApp.provide('gsap', gsap)
-	nuxtApp.provide('ScrollTrigger', ScrollTrigger)
- })
+  const plugins = [
+    ScrollTrigger,
+    ScrollToPlugin,
+    // Flip,
+    MotionPathPlugin,
+  ];
+
+  if (process.client) {
+    gsap.registerPlugin(...plugins);
+  }
+  return {
+    provide: {
+      gsap: [gsap, ...plugins],
+    },
+  };
+});

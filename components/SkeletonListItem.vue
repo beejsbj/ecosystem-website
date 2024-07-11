@@ -13,6 +13,8 @@ import { Skeletor } from "vue-skeletor";
 .header {
   display: grid;
   align-items: center;
-  grid-template-columns: 0.1fr 1fr;
+  grid-template-columns: 0.2fr 1fr;
+  margin-top: var(--space-xs);
+  min-width: 100px;
 }
 </style>

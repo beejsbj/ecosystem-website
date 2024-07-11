@@ -47,12 +47,14 @@ const props = defineProps(["teaser", "solid", "hideImage", "layout"]);
   picture {
     width: 50px;
     border-radius: 50%;
+    flex-shrink: 0;
   }
 }
 
 .box-card .teaser-voice {
   font-size: var(--step--1);
-  white-space: nowrap;
+  //   white-space: nowrap;
+  text-align: start;
 }
 
 .box-card .solid-voice {

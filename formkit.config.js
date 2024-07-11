@@ -32,6 +32,7 @@ const icons = {
   ...inputIcons,
   ...fileIcons,
   ...brandIcons,
+  ...registerCustomIcons(),
 };
 
 //classes
@@ -69,7 +70,7 @@ const plugins = [
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
   addPrefixIconPlugin,
-  hideSuffixIfNoHelpPlugin,
+  addSuffixHelpTooltipPlugin,
   //  proPlugin,
 ];
 
@@ -92,40 +93,62 @@ export default defineFormKitConfig(() => {
     props: {
       selectIcon: "down",
       suffixIcon: "info",
-
-      onSuffixIconClick: handleSuffixClick,
     },
   };
 });
 
-// functions
+// plugins ////////////////
+//
+function addSuffixHelpTooltipPlugin(node) {
+  if (!node.props.help) {
+    node.props.suffixIcon = null;
+    return;
+  }
 
-function handleSuffixClick(node, event) {
-  if (!node.props.help) return;
-  const el = event.target;
+  let tooltip;
 
-  const tooltip = createTooltip(el, {
-    triggers: [],
-    content: node.props.help,
-  });
+  const mouseEnter = node.props.onMouseEnter;
+  node.context.handlers.mouseEnter = (e) => {
+    const el = e.target;
+    console.log("hover over tooltip");
 
-  tooltip.show();
+    //
+    tooltip = createTooltip(el, {
+      triggers: [],
+      content: node.props.help,
+    });
 
-  setTimeout(() => {
+    //
+    tooltip.show();
+
+    mouseEnter?.(e);
+  };
+
+  const mouseLeave = node.props.onMouseLeave;
+  node.context.handlers.mouseLeave = (e) => {
+    const el = e.target;
+
+    //
     tooltip.hide();
-    // Transition
+
     setTimeout(() => {
       destroyTooltip(el);
     }, 400);
-  }, 3000);
-}
 
-// plugins ////////////////
-//
-function hideSuffixIfNoHelpPlugin(node) {
-  if (!node.props.help) {
-    node.props.suffixIcon = null;
-  }
+    mouseLeave?.(e);
+  };
+
+  const schemaFn = node.props.definition.schema;
+  node.props.definition.schema = (sectionsSchema = {}) => {
+    sectionsSchema.suffixIcon = {
+      attrs: {
+        onmouseenter: "$handlers.mouseEnter",
+        onmouseleave: "$handlers.mouseLeave",
+      },
+    };
+
+    return schemaFn(sectionsSchema);
+  };
 }
 
 function addPrefixIconPlugin(node) {
@@ -194,19 +217,40 @@ function addAsteriskPlugin(node) {
     node.props.definition.schema = (sectionsSchema = {}) => {
       sectionsSchema[legendOrLabel] = {
         children: [
-          "$label",
           {
             $el: "span",
             if: "$state.required",
             attrs: {
-              class: "text-action-error-500",
+              class: "text-action-error-500 required-star",
             },
             children: ["*"],
           },
+          "$label",
         ],
       };
 
       return schemaFn(sectionsSchema);
     };
   });
+}
+
+function registerCustomIcons() {
+  // Import all SVG files from the directory using import.meta.glob
+  const icons = import.meta.glob("@/assets/images/icons/**/*.svg", {
+    eager: true,
+    query: "?raw",
+  });
+
+  // Transform the imported modules into a more usable format
+  const formattedIcons = {};
+  Object.keys(icons).forEach((key) => {
+    const iconName = key.split("/").pop().replace(".svg", "");
+    formattedIcons[iconName] = icons[key].default;
+  });
+
+  //   console.log("icons", formattedIcons);
+
+  // Example of how you might use the icons (e.g., registering them with a library)
+  // IconLibrary.register(formattedIcons);
+  return formattedIcons;
 }

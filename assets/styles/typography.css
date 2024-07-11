@@ -45,26 +45,27 @@ article.body h2 a {
 .notice-voice {
   font-family: var(--font);
   font-size: var(--step-1);
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: var(--weight-light);
-  color: var(--gray);
+  color: var(--gray-lighter);
 }
+
 .firm-voice {
   font-family: var(--font);
   font-size: var(--step-1);
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: var(--weight-heavy);
 }
 .firm-voice-smaller {
   font-family: var(--font);
   font-size: calc((var(--step-1) + var(--step-0)) / 2);
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: var(--weight-heavy);
 }
 
 .teaser-voice {
   font-family: var(--font);
-  font-size: var(--step-0);
+  font-size: var(--step--1);
   line-height: 1.4;
   font-weight: var(--weight-light);
   text-transform: uppercase;
@@ -74,7 +75,7 @@ article.body h2 a {
     color: var(--blue);
   }
   &.violet {
-    color: var(--violet);
+    color: var(--purple);
   }
 }
 
@@ -99,7 +100,7 @@ button {
   color: var(--ink);
 }
 
-:is(li, p) a {
+:is(li, p) > a.text {
   color: var(--green);
   /* text-decoration: underline; */
   display: inline;
@@ -140,7 +141,7 @@ p + p {
 }
 
 :is(h1, h2) + p {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 h3 + p {
@@ -155,6 +156,7 @@ code {
   border: unset;
   background: var(--gray-dark);
   padding: 0.125em 0.25em;
+  word-break: break-word;
 }
 pre code {
   padding: 0;
@@ -174,6 +176,10 @@ pre code {
 }
 
 .highlight {
-  background-color: var(--violet);
+  background-color: var(--purple);
   color: var(--ink);
+}
+
+.highlight-green {
+  color: var(--green);
 }

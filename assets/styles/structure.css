@@ -12,6 +12,10 @@ inner-column {
   margin-left: auto;
   /* padding: var(--space-l) var(--space-s); a loose default */
   padding: var(--space-xl) var(--space-s);
+
+  @media (min-width: 768px) and (max-width: 1000px) {
+    max-width: 640px;
+  }
 }
 
 inner-column.none {
@@ -30,7 +34,7 @@ inner-column.wide {
 body.index main inner-column {
   /* max-width: 1600px; */
 }
-@media (min-width: 1700px) {
+@media (min-width: 1+700px) {
   body.index inner-column {
     /* max-width: 1750px; */
   }

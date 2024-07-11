@@ -18,7 +18,7 @@ const links = [
   //   },
 
   { name: "Ecosystem", to: "/ecosystem" },
-  { name: "OEV", to: "/oev", class: "new" },
+  { name: "OEV Watchtower", to: "/oev", class: "new" },
   { name: "Articles", to: "/articles" },
   //   { name: "Guild", to: "/guild" },
 ];
@@ -27,7 +27,7 @@ const links = [
 <template>
   <nav>
     <template v-for="link in links" :key="link.name">
-      <NuxtLink :to="link.to" class="text hover-underline" :class="link.class">
+      <NuxtLink :to="link.to" class="text" :class="link.class">
         {{ link.name }}
       </NuxtLink>
     </template>

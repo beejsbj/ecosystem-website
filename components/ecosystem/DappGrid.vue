@@ -1,13 +1,9 @@
 <script setup>
-import { useEcosystemStore } from "~/stores/ecosystem";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
 
 const listRef = ref(null);
+const props = defineProps(["layout"]);
 
 const handleLoadMore = () => {
   if (
@@ -18,43 +14,34 @@ const handleLoadMore = () => {
   }
 };
 
-let gsapContext = null;
-
-onMounted(() => {
+useGsap((gsap, ScrollTrigger) => {
   setTimeout(() => {
     if (!ecosystem.hasMoreItems) return;
-    gsapContext = gsap.context(() => {
-      //   scroll trigger, when the bottom of dapp grid comes into view call handleloadmore
-      ScrollTrigger.create({
-        trigger: ".dapp-grid",
-        start: "80% 50%",
-        end: "85% 45%",
-        onEnter: () => {
-          handleLoadMore();
-        },
-        onLeaveBack: () => {
-          ScrollTrigger.refresh();
-        },
-      });
+    //   scroll trigger, when the bottom of dapp grid comes into view call handleloadmore
+    ScrollTrigger.create({
+      trigger: ".dapp-grid",
+      start: "80% 50%",
+      end: "85% 45%",
+      onEnter: () => {
+        handleLoadMore();
+      },
+      onLeaveBack: () => {
+        ScrollTrigger.refresh();
+      },
     });
   }, 3000);
-});
-
-onUnmounted(() => {
-  if (gsapContext) {
-    gsapContext.kill();
-  }
 });
 </script>
 
 <template>
-  <div class="dapp-grid" ref="listRef" v-auto-animate>
+  <ul class="dapp-grid" :class="layout" ref="listRef" v-auto-animate>
     <DappCard
       v-if="ui.loadingDone && ecosystem.list.length > 0"
       v-for="(dapp, index) in ecosystem.list"
       :dapp="dapp"
       :key="dapp?.name"
       :data-index="index"
+      :class="layout"
     />
     <SkeletonCard v-else v-for="index in 10" />
     <!-- <button
@@ -64,7 +51,7 @@ onUnmounted(() => {
     >
       how More
     </button> -->
-  </div>
+  </ul>
 </template>
 
 <style scoped>

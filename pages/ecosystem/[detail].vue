@@ -1,5 +1,4 @@
 <script setup>
-import { gsap } from "gsap";
 import { useInterfaceStore } from "~/stores/interface";
 
 const route = useRoute();
@@ -10,9 +9,9 @@ const { data: dapp } = await useFetch(`/api/projects/project/${dappSlug}`);
 
 useSeoMeta({
   //title
-  title: () => dapp.value.name,
-  ogTitle: () => dapp.value.name,
-  twitterTitle: () => dapp.value.name,
+  title: () => dapp?.value.name,
+  ogTitle: () => dapp?.value.name,
+  twitterTitle: () => dapp?.value.name,
 
   //website
   ogType: () => "article",
@@ -36,7 +35,7 @@ useSeoMeta({
   twitterCard: "summary_large_image",
 });
 
-onMounted(() => {
+useGsap((gsap) => {
   const pageLoad = gsap.timeline();
 
   pageLoad.to(".detail-page", { opacity: 1, duration: 0 }).fromTo(
@@ -62,91 +61,72 @@ onMounted(() => {
     }
   );
 });
-
-const formattedProxies = computed(() => {
-  if (!dapp.value?.proxies) {
-    return [];
-  }
-
-  const formattedProxyItems = [];
-  Object.keys(dapp.value?.proxies).forEach((chain) => {
-    let chainItems = dapp.value?.proxies?.[chain]?.map((el) => {
-      return { ...el, chainId: chain };
-    });
-    formattedProxyItems.push(...chainItems);
-  });
-
-  return formattedProxyItems;
-});
 </script>
 
 <template>
-    <article class="detail-page">
-      <DetailBanner :dapp="dapp" />
+  <article class="detail-page">
+    <DetailBanner :dapp="dapp" />
 
-      <SectionColumn class="detail-main">
-        <article class="main">
-          <PageTitle
-            class="dapp-title"
-            :heading="dapp?.name"
-            innerClass="none"
-            :voice="ui.isMobile ? 'attention-voice' : 'loud-voice'"
+    <SectionColumn class="detail-main">
+      <article class="main">
+        <PageTitle
+          class="dapp-title"
+          :heading="dapp?.name"
+          innerClass="none"
+          :voice="ui.isMobile ? 'attention-voice' : 'loud-voice'"
+        >
+          <picture class="logo">
+            <NuxtImg
+              loading="lazy"
+              :src="dapp?.images?.logo"
+              src="/images/square.jpg"
+              :alt="`Logo of ${dapp?.name}`"
+            />
+          </picture>
+        </PageTitle>
+        <div class="launch-button">
+          <NuxtLink
+            :to="dapp?.links?.dapp"
+            :target="`${dapp?.name}-app`"
+            class="button"
           >
-            <picture class="logo">
-              <NuxtImg
-                loading="lazy"
-                :src="dapp?.images?.logo"
-                src="/images/square.jpg"
-                :alt="`Logo of ${dapp?.name}`"
-              />
-            </picture>
-          </PageTitle>
-          <div class="launch-button">
+            Launch dApp
+          </NuxtLink>
+        </div>
+        <DetailPanel :dapp="dapp" v-if="dapp" />
+        <section class="about">
+          <h2 class="attention-voice">About</h2>
+          <p class="pre-line">
+            {{ dapp?.description?.replace(/\/n/g, "\n") }}
+          </p>
+
+          <div class="actions">
             <NuxtLink
-              :to="dapp?.links?.dapp"
-              :target="`${dapp?.name}-app`"
-              class="button"
+              :to="dapp?.links?.website"
+              :target="`${dapp?.name}-website`"
+              class="text green"
             >
-              Launch dApp
+              {{ dapp?.links?.website }}
             </NuxtLink>
+
+            <ul class="socials">
+              <li v-for="social in dapp?.links?.socials" :key="social.id">
+                <a :href="social.url" :target="social.label">
+                  <picture>
+                    <DynamicIcon :icon="social?.label" />
+                  </picture>
+                </a>
+              </li>
+            </ul>
           </div>
-          <DetailPanel :dapp="dapp" v-if="dapp" />
-          <section class="about">
-            <h2 class="attention-voice">About</h2>
-            <p class="pre-line">
-              {{ dapp?.description?.replace(/\/n/g, "\n") }}
-            </p>
+        </section>
 
-            <div class="actions">
-              <NuxtLink
-                :to="dapp?.links?.website"
-                :target="`${dapp?.name}-website`"
-                class="text green"
-              >
-                {{ dapp?.links?.website }}
-              </NuxtLink>
+        <DappProxies v-if="dapp?.productType != 'qrng'" :dapp="dapp" />
 
-              <ul class="socials">
-                <li v-for="social in dapp?.links?.socials" :key="social.id">
-                  <a :href="social.url" :target="social.label">
-                    <picture>
-                      <DynamicIcon :icon="social?.label" />
-                    </picture>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <DappProxies
-            :proxies="formattedProxies"
-            v-if="dapp?.productType != 'qrng'"
-          />
-
-          <DappScreenshots :dapp="dapp" />
-        </article>
-      </SectionColumn>
-    </article>
+        <DappScreenshots :dapp="dapp" />
+      </article>
+    </SectionColumn>
+  </article>
 </template>
 
 <style lang="scss" scoped>
@@ -186,11 +166,12 @@ article.main {
   section {
     align-self: start;
     display: grid;
-    gap: calc(var(--space-s) * 1.2);
+    gap: var(--space-s);
 
     p {
       line-height: 1.8;
       color: var(--gray-light);
+      margin-top: 0;
     }
   }
 

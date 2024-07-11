@@ -1,6 +1,5 @@
 <script setup>
 import { useEcosystemStore } from "~/stores/ecosystem";
-import { gsap } from "gsap";
 
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
@@ -42,27 +41,27 @@ const years = computed(() => {
   }
 });
 
-onMounted(() => {
-  //   const pageLoad = gsap.timeline();
-  //   pageLoad.fromTo(
-  //     "dapp-filter",
-  //     {
-  //       delay: "0.5",
-  //       y: "10vw",
-  //       opacity: 0,
-  //       duration: 0,
-  //     },
-  //     {
-  //       y: "0vw",
-  //       opacity: 1,
-  //       duration: 0.5,
-  //       stagger: {
-  //         each: 0.15,
-  //         from: "start",
-  //       },
-  //     }
-  //   );
-});
+// useGsap((gsap) => {
+//   const pageLoad = gsap.timeline();
+//   pageLoad.fromTo(
+//     "dapp-filter",
+//     {
+//       delay: "0.5",
+//       y: "10vw",
+//       opacity: 0,
+//       duration: 0,
+//     },
+//     {
+//       y: "0vw",
+//       opacity: 1,
+//       duration: 0.5,
+//       stagger: {
+//         each: 0.15,
+//         from: "start",
+//       },
+//     }
+//   );
+// });
 
 const handleFilter = (event) => {
   ecosystem.filterQuery.page = 1;
@@ -88,16 +87,13 @@ const handleFilter = (event) => {
       <div class="filter-header">
         <h4 class="calm-voice">Network</h4>
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.chains = !showAll.chains"
           v-if="ecosystem.stats?.chains?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: showAll.chains }"
-            src="@/assets/images/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.chains ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
         </button>
       </div>
@@ -143,16 +139,13 @@ const handleFilter = (event) => {
         <h4 class="calm-voice">Product</h4>
 
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.productTypes = !showAll.productTypes"
           v-if="productTypes?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: showAll.productTypes }"
-            src="@/assets/images/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.productTypes ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
         </button>
       </div>
@@ -197,16 +190,13 @@ const handleFilter = (event) => {
         <h4 class="calm-voice">Category</h4>
 
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.categories = !showAll.categories"
           v-if="categories?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: showAll.categories }"
-            src="@/assets/images/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.categories ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
         </button>
       </div>
@@ -249,16 +239,13 @@ const handleFilter = (event) => {
       <div class="filter-header">
         <h4 class="calm-voice">Year</h4>
         <button
-          class="icon caret"
+          class="icon"
           @click="showAll.years = !showAll.years"
           v-if="years?.length > defaultPillCount"
         >
-          <img
-            loading="lazy"
-            class="caret"
-            :class="{ down: showAll.years }"
-            src="@/assets/images/interface/caret.svg"
-            alt="caret icon"
+          <DynamicIcon
+            :icon="showAll.years ? 'caret-up' : 'caret-down'"
+            width="32px"
           />
         </button>
       </div>
@@ -310,8 +297,7 @@ dapp-filter {
     display: grid;
     gap: var(--space-m);
     padding: var(--space-s);
-    search-bar {
-    }
+
     text-content {
       display: flex;
       justify-content: space-between;
@@ -342,14 +328,9 @@ dapp-filter {
   .pills {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
+    gap: var(--space-s);
 
-    //  gap: calc(var(--space-m));
     padding: 0 var(--space-m);
-
-    :deep(picture) {
-      max-width: 24px;
-    }
   }
 }
 

@@ -27,7 +27,7 @@ export default {
     getShortWallet(address) {
       if (address.length <= 8) return address; // If the address is already short, return it as is
       const firstPart = address.substring(0, 6);
-      const lastPart = address.substring(address.length - 2);
+      const lastPart = address.substring(address.length - 3);
       return `${firstPart}...${lastPart}`;
     },
   },
@@ -38,20 +38,12 @@ export default {
   <button
     class="short-wallet"
     v-tooltip="showCopyTooltip ? 'Copied!' : 'Copy'"
-    @click="copyToClipboard"
+    @click.prevent="copyToClipboard"
   >
-    <p class="whisper-voice">
+    <span class="">
       {{ shortWallet }}
-    </p>
-    <div class="icon copy">
-      <picture>
-        <img
-          loading="lazy"
-          src="@/assets/images/interface/copy.svg"
-          alt="Copy icon"
-        />
-      </picture>
-    </div>
+    </span>
+    <DynamicIcon icon="copy" />
   </button>
 </template>
 
@@ -63,14 +55,16 @@ export default {
   display: flex;
   align-items: center;
   gap: var(--space-3xs);
-}
-
-.whisper-voice {
   padding: 0;
   color: var(--green);
 }
 
-.copy picture {
-  max-width: var(--space-s);
+.whisper-voice {
+  padding: 0;
+}
+
+:deep(picture) {
+  min-width: var(--space-s);
+  width: 1em;
 }
 </style>

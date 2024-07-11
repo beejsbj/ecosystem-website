@@ -1,4 +1,7 @@
 <script setup>
+import { Chart } from "chart.js";
+import OEVProtocolDropdown from "./OEVProtocolDropdown.vue";
+
 const oev = useOEVStore();
 const ui = useInterfaceStore();
 
@@ -6,7 +9,24 @@ const selectedDataset = ref("aaveV2-1");
 const selectedPeriod = ref("cumulative");
 const isLogarithmic = ref(false);
 
-const periods = ["daily", "weekly", "monthly", "cumulative"];
+const periodOptions = [
+  {
+    value: "daily",
+    label: "Daily",
+  },
+  {
+    value: "weekly",
+    label: "Weekly",
+  },
+  {
+    value: "monthly",
+    label: "Monthly",
+  },
+  {
+    value: "cumulative",
+    label: "Cumulative",
+  },
+];
 
 //
 const metadata = {
@@ -26,10 +46,10 @@ const options = computed(() => {
       title: {
         display: false,
       },
-      // legend: {
-      //   position: "right",
-      //   align: "start",
-      // },
+
+      legend: {
+        display: false,
+      },
 
       zoom: {
         enabled: true,
@@ -67,9 +87,11 @@ const apiString = computed(() => {
 });
 const { data: rawData } = await useFetch(apiString);
 
+console.log(rawData);
+
 // data manipulation
 const parsed = computed(() => {
-  const protocol = oev.getProtocolById(selectedDataset.value);
+  const protocol = oev.getProtocolBySlug(selectedDataset.value);
 
   const dataLiquidated = rawData.value.map((dataPoint) => {
     return {
@@ -99,25 +121,17 @@ const parsed = computed(() => {
     };
   });
 
-  let labels;
+  const dataOevLost = rawData.value.map((dataPoint) => {
+    return {
+      x: new Date(dataPoint[0]),
+      y: dataPoint[5],
+    };
+  });
 
-  if (
-    selectedPeriod.value === "daily" ||
-    selectedPeriod.value === "cumulative"
-  ) {
-    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 10));
-  }
-
-  if (selectedPeriod.value === "weekly") {
-    labels = dataLiquidated.map((item) => item.x.toDateString().slice(4, 15));
-  }
-
-  if (selectedPeriod.value === "monthly") {
-    labels = dataLiquidated.map(
-      (item) =>
-        item.x.toDateString().slice(4, 8) + item.x.toDateString().slice(10, 15)
-    );
-  }
+  let labels = dataLiquidated.map(
+    (item) =>
+      item.x.toDateString().slice(4, 8) + item.x.toDateString().slice(8, 15)
+  );
 
   return {
     labels,
@@ -125,48 +139,65 @@ const parsed = computed(() => {
       {
         data: dataLiquidated,
         label: "Total Liquidated",
+        order: 4,
       },
       {
         data: dataIncentive,
-        label: "Total Incentive",
-      },
-      {
-        data: dataProfit,
-        label: "Total Profit",
-        hidden: true,
+        label: "Potential OEV Lost",
+        order: 3,
       },
       {
         data: dataSentToBuilder,
-        label: "Total Sent to Builder",
+        label: "Blockspace Auction Bribes",
         hidden: true,
+        order: 1,
       },
+      {
+        data: dataProfit,
+        label: "Liquidator Profits",
+        hidden: true,
+        order: 2,
+      },
+      // {
+      //   data: dataIncentive,
+      //   label: "Incentives",
+      //   hidden: true,
+      // },
     ],
   };
 });
 
-// const inputProtocols = oev.protocols.filter((protocol) => !protocol.trueHide);
-// inputProtocols.push({
-//   id: "all",
-//   name: "Total",
-// });
-// change it to value and label
+// legend items
 
-const inputProtocols = computed(() => {
-  const protocols = oev.protocols.filter((protocol) => !protocol.trueHide);
+const legendItems = ref([]);
+const legendCheckboxes = ref([0, 1]);
 
-  protocols.map((protocol) => {
-    protocol.value = protocol.slug;
-    protocol.label = protocol.name;
-    protocol.chainId = protocol.chainId;
+function toggleDataset(index) {
+  const chart = Chart.getChart("line-chart");
+  chart.setDatasetVisibility(index, !chart.isDatasetVisible(index));
+  chart.update();
+}
 
-    return protocol;
+onMounted(() => {
+  const chart = Chart.getChart("line-chart");
+  const items = chart.options.plugins.legend.labels.generateLabels(chart);
+
+  const options = items.map((item, index) => {
+    const color = `${item.strokeStyle}`;
+    return {
+      label: item.text,
+      value: item.datasetIndex,
+      datasetIndex: item.datasetIndex,
+      fillStyle: color,
+      attrs: {
+        onchange: () => {
+          toggleDataset(item.datasetIndex);
+        },
+      },
+    };
   });
 
-  protocols.push({
-    value: "Total-1",
-    label: "Total",
-  });
-  return protocols;
+  legendItems.value = options;
 });
 </script>
 
@@ -174,46 +205,62 @@ const inputProtocols = computed(() => {
   <SectionColumn inner-class="wide">
     <div class="chart-grid">
       <h2 class="attention-voice">Historic Liquidation Data</h2>
+      <FormKit
+        type="checkbox"
+        label="Legend"
+        :options="legendItems"
+        v-model="legendCheckboxes"
+        v-if="ui.isDesktop"
+      >
+        <template #label="{ option }">
+          <div class="icon-option" :style="`--color: ${option.fillStyle}`">
+            <div class="legend-icon"></div>
+            <span class="formkit-label">
+              {{ option.label }}
+            </span>
+          </div>
+        </template>
+      </FormKit>
       <div class="actions">
-        <FormKit
-          type="dropdown"
+        <!--  -->
+        <OEVProtocolDropdown
           v-model="selectedDataset"
-          :options="inputProtocols"
+          label="Select Protocol"
+        />
+        <!--  -->
+        <FormKit
+          name="logarithmic-checkbox"
+          type="checkbox"
+          label="Logarithmic"
+          v-model="isLogarithmic"
+        />
+        <!--  -->
+        <FormKit
+          type="radio"
+          label="Select Period"
+          v-model="selectedPeriod"
+          :options="periodOptions"
+        />
+        <!--  -->
+        <FormKit
+          type="checkbox"
+          label="Legend"
+          :options="legendItems"
+          v-model="legendCheckboxes"
+          v-if="!ui.isDesktop"
         >
-          <template #option="{ option }">
+          <template #label="{ option }">
             <div class="icon-option">
-              <ChainIcon v-if="option.chainId" :id="option.chainId" />
-              <DynamicIcon v-else icon="dapp" />
-              <span class="whisper-voice">
+              <div
+                class="legend-icon"
+                :style="`--color: ${option.fillStyle}`"
+              ></div>
+              <span class="formkit-label">
                 {{ option.label }}
               </span>
             </div>
           </template>
         </FormKit>
-        <div class="buttons-content">
-          <template v-for="period in periods">
-            <button
-              class="button outline"
-              @click="selectedPeriod = period"
-              :class="{
-                hover: selectedPeriod === period,
-              }"
-            >
-              <span>{{ ui.isMobile ? period.slice(0, 1) : period }}</span>
-            </button>
-          </template>
-          <button
-            class="button outline log"
-            @click="isLogarithmic = !isLogarithmic"
-            :class="{
-              hover: isLogarithmic,
-            }"
-          >
-            <span>
-              {{ ui.isMobile ? "log" : "logarithmic" }}
-            </span>
-          </button>
-        </div>
       </div>
       <div class="chart-container lines">
         <LineChart :data="parsed" :options="options" :metadata="metadata" />
@@ -225,10 +272,21 @@ const inputProtocols = computed(() => {
 <style scoped lang="scss">
 .chart-grid {
   display: grid;
-  gap: var(--space-xl);
+  gap: var(--space-l);
   position: relative;
+  user-select: none;
 
-  @media (min-width: 768px) {
+  > .formkit-outer {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    :deep(.formkit-options) {
+      display: flex;
+      gap: var(--space-m);
+    }
+  }
+
+  @media (min-width: 1000px) {
     grid-template-columns: repeat(12, 1fr);
 
     .chart-container {
@@ -246,9 +304,23 @@ h2 {
 
 div.actions {
   display: grid;
-  align-content: center;
+  gap: var(--space-xl);
+  align-content: start;
+  grid-template-columns: 1fr 1.5fr;
+  margin-top: var(--space-l);
 
   @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-inline: var(--space-l);
+  }
+
+  .formkit-outer:nth-child(1),
+  .formkit-outer:nth-child(2) {
+    grid-column: 1 / -1;
+    max-width: 500px;
+  }
+  .formkit-outer:nth-child(4) {
+    grid-column: 2 / span 2;
   }
 
   .buttons-content {
@@ -270,6 +342,10 @@ div.actions {
     span {
       text-transform: capitalize;
     }
+  }
+
+  .formkit-outer:nth-child(4) :deep(.icon-option) {
+    padding-block: 0;
   }
 }
 </style>

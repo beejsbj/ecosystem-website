@@ -12,16 +12,22 @@ const colors = ref([
   ],
   [
     {
-      name: "Gray",
-      variable: "--gray",
+      name: "Gray Lightest",
+      variable: "--gray-lightest",
+    },
+    {
+      name: "Gray Lighter",
+      variable: "--gray-lighter",
     },
     {
       name: "Gray Light",
       variable: "--gray-light",
     },
+
     {
-      name: "Gray Lighter",
-      variable: "--gray-lighter",
+      name: "Gray",
+      variable: "--gray",
+      isBase: true,
     },
     {
       name: "Gray Dark",
@@ -31,29 +37,31 @@ const colors = ref([
       name: "Gray Darker",
       variable: "--gray-darker",
     },
+    {
+      name: "Gray Darkest",
+      variable: "--gray-darkest",
+    },
   ],
 
   [
     {
-      name: "Primary",
-      variable: "--green",
-    },
-  ],
-  [
-    {
-      name: "Primary Light",
-      variable: "--green-light",
+      name: "Primary Lightest",
+      variable: "--green-lightest",
     },
     {
       name: "Primary Lighter",
       variable: "--green-lighter",
     },
+
     {
-      name: "Primary Lightest",
-      variable: "--green-lightest",
+      name: "Primary Light",
+      variable: "--green-light",
     },
-  ],
-  [
+    {
+      name: "Primary",
+      variable: "--green",
+      isBase: true,
+    },
     {
       name: "Primary Dark",
       variable: "--green-dark",
@@ -69,59 +77,55 @@ const colors = ref([
   ],
   [
     {
-      name: "Secondary",
-      variable: "--violet",
-    },
-  ],
-  [
-    {
-      name: "Secondary Light",
-      variable: "--violet-light",
+      name: "Secondary Lightest",
+      variable: "--purple-lightest",
     },
     {
       name: "Secondary Lighter",
-      variable: "--violet-lighter",
+      variable: "--purple-lighter",
     },
     {
-      name: "Secondary Lightest",
-      variable: "--violet-lightest",
+      name: "Secondary Light",
+      variable: "--purple-light",
     },
-  ],
-  [
+    {
+      name: "Secondary",
+      variable: "--purple",
+      isBase: true,
+    },
+
     {
       name: "Secondary Dark",
-      variable: "--violet-dark",
+      variable: "--purple-dark",
     },
     {
       name: "Secondary Darker",
-      variable: "--violet-darker",
+      variable: "--purple-darker",
     },
     {
       name: "Secondary Darkest",
-      variable: "--violet-darkest",
+      variable: "--purple-darkest",
     },
   ],
   [
     {
-      name: "Tertiary",
-      variable: "--indigo",
-    },
-  ],
-  [
-    {
-      name: "Tertiary Light",
-      variable: "--indigo-light",
+      name: "Tertiary Lightest",
+      variable: "--indigo-lightest",
     },
     {
       name: "Tertiary Lighter",
       variable: "--indigo-lighter",
     },
     {
-      name: "Tertiary Lightest",
-      variable: "--indigo-lightest",
+      name: "Tertiary Light",
+      variable: "--indigo-light",
     },
-  ],
-  [
+    {
+      name: "Tertiary",
+      variable: "--indigo",
+      isBase: true,
+    },
+
     {
       name: "Tertiary Dark",
       variable: "--indigo-dark",
@@ -232,16 +236,6 @@ const colors = ref([
     },
   ],
 ]);
-
-const hue = ref(160);
-
-watch(hue, (newVal, oldVal) => {
-  document.documentElement.style.setProperty("--hue", `${newVal}`);
-  document.documentElement.style.setProperty(
-    "--hue-rotate",
-    `${newVal - 160}deg`
-  );
-});
 </script>
 
 <template>
@@ -256,7 +250,11 @@ watch(hue, (newVal, oldVal) => {
     <ul class="colors" v-for="colorGroup in colors">
       <li v-for="color in colorGroup" :key="color.name">
         <template v-if="!color.class">
-          <div class="pallete" :style="`background: var(${color.variable})`" />
+          <div
+            class="pallete"
+            :style="`background: var(${color.variable})`"
+            :class="{ 'base-color': color.isBase }"
+          />
           <div class="color-name">
             <code>{{ color.variable }}</code>
           </div>
@@ -270,20 +268,6 @@ watch(hue, (newVal, oldVal) => {
       </li>
     </ul>
   </div>
-  <div class="color slider">
-    <form-field>
-      <FormKit
-        type="range"
-        v-model="hue"
-        min="0"
-        max="360"
-        step="1"
-        :label="`Hue: ${hue}`"
-        label-class="$reset notice-voice"
-        help="You can change the hue of the colors by using the slider below."
-      />
-    </form-field>
-  </div>
 </template>
 
 <style scoped lang="scss">
@@ -292,7 +276,7 @@ watch(hue, (newVal, oldVal) => {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 }
 div.pallete {
@@ -304,5 +288,13 @@ div.pallete {
 }
 form-field {
   max-width: 50%;
+}
+
+.color-name code {
+  font-size: var(--step--1);
+}
+
+.base-color {
+  border: 5px solid var(--ink);
 }
 </style>
