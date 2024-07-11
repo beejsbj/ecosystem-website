@@ -8,8 +8,8 @@ const [gsap] = useGsap();
 const scrollPosition = ref(0);
 
 const oev = useOEVStore();
-
-const visibleBars = ref(["totalLiquidated", "totalOevLostUSD"]);
+// totalOevLostUSD
+const visibleBars = ref(["totalLiquidated", "totalIncentiveUSD"]);
 
 const barsList = ref(null);
 
@@ -27,9 +27,8 @@ const bars = [
 
   {
     label: "Potential OEV Lost",
-    value: "totalOevLostUSD",
+    value: "totalIncentiveUSD",
     color: colors[1],
-    help: "(Blockspace auction bribes + Liquidater Profits)",
   },
   {
     label: "Total Liquidated",

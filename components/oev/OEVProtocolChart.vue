@@ -142,7 +142,7 @@ const parsed = computed(() => {
         order: 4,
       },
       {
-        data: dataOevLost,
+        data: dataIncentive,
         label: "Potential OEV Lost",
         order: 3,
       },
@@ -189,8 +189,6 @@ onMounted(() => {
       value: item.datasetIndex,
       datasetIndex: item.datasetIndex,
       fillStyle: color,
-      help:
-        index === 1 ? "(Blockspace auction bribes + Liquidater Profits)" : null,
       attrs: {
         onchange: () => {
           toggleDataset(item.datasetIndex);
