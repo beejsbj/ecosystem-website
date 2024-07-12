@@ -3,6 +3,7 @@ import { ROLE } from "../types";
 import { User } from "..//models/User";
 import { SiweMessage } from "siwe";
 import type { UserType } from "../types/User";
+import { connectDB } from "../services/helper";
 
 export const authenticated = (
   handler: EventHandler,
@@ -65,6 +66,8 @@ export const authenticated = (
           message: "Wrong uri!",
         };
       }
+
+      await connectDB();
 
       // verify wallet role
       let user = await User.findOne({ address: fields.address });

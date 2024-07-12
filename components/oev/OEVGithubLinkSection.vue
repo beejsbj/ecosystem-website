@@ -17,7 +17,8 @@ const ui = useInterfaceStore();
         You can verify this data by
         <NuxtLink
           class="text external-link"
-          to="https://github.com/AamirAlam/aave-extract-mev-funds"
+          target="_blank"
+          to="https://github.com/api3-ecosystem/protocol-liquidation-data-extraction"
         >
           <span class="gradient-text-color-light">
             heading to our GitHub.
