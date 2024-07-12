@@ -47,12 +47,11 @@ body > div:last-child {
   display: none !important;
 }
 
-body > w3m-modal {
+body:not(.add-dapp) > w3m-modal {
   display: none;
 }
 
-body:has(form) > w3m-modal {
-  display: block;
+body.add-dapp > w3m-modal {
   position: absolute;
 }
 

@@ -2,10 +2,6 @@
 const {} = useWeb3Store();
 const route = useRoute();
 
-const routeName = computed(() => {
-  return route.name;
-});
-
 //default metadata
 const meta = {
   title: "API3 Ecosystem",
@@ -37,7 +33,7 @@ useHead({
     lang: "en",
   },
   bodyAttrs: {
-    class: routeName.value,
+    class: () => route.name,
   },
 });
 
