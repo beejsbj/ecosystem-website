@@ -2,6 +2,10 @@
 const {} = useWeb3Store();
 const route = useRoute();
 
+const routeName = computed(() => {
+  return route.name;
+});
+
 //default metadata
 const meta = {
   title: "API3 Ecosystem",
@@ -31,6 +35,9 @@ function setClientAppVersion(version) {
 useHead({
   htmlAttrs: {
     lang: "en",
+  },
+  bodyAttrs: {
+    class: routeName.value,
   },
 });
 
@@ -85,15 +92,3 @@ onMounted(() => {
     <NuxtPage />
   </NuxtLayout>
 </template>
-
-<style>
-/* disable the w3m-modal break without disabling devtools for dev env */
-body
-  > div[data-v-app]:not(
-    #vue-inspector-container,
-    #nuxt-devtools-container,
-    #__nuxt
-  ) {
-  display: none;
-}
-</style>

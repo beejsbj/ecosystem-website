@@ -35,6 +35,27 @@ body {
   overflow-x: hidden;
 }
 
+/* disable the w3m-modal break without disabling devtools for dev env */
+body
+  > div[data-v-app]:not(
+    #vue-inspector-container,
+    #nuxt-devtools-container,
+    #__nuxt,
+
+  ),
+body > div:last-child {
+  display: none !important;
+}
+
+body > w3m-modal {
+  display: none;
+}
+
+body:has(form) > w3m-modal {
+  display: block;
+  position: absolute;
+}
+
 #__nuxt,
 .display-contents {
   display: contents;
