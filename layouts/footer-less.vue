@@ -10,15 +10,6 @@ onMounted(() => {
   }, 2000);
 });
 
-useHead({
-  htmlAttrs: {
-    lang: "en",
-  },
-  bodyAttrs: {
-    class: route.name,
-  },
-});
-
 function hideCurvesOnPages() {
   const pages = ["oev"];
 
