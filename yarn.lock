@@ -25,10 +25,10 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.10.tgz#ae829f170158e297a9b6a28f161a8e487d00814d"
   integrity sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==
 
-"@api3-ecosystem/dapp-registry@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@api3-ecosystem/dapp-registry/-/dapp-registry-1.0.3.tgz#d064116c28c527d94620e970f37fe509bbac43a8"
-  integrity sha512-zBacjFRgpi2wod21BZn8x3Pr1ZfVFb6f9SWLlKbp5HPmvm/31FcG3v7di6wQl5Y34q3hPAxS47QrnmOItTqZaA==
+"@api3-ecosystem/dapp-registry@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@api3-ecosystem/dapp-registry/-/dapp-registry-1.0.4.tgz#2ba69621e1d45fc111831d76665d400a8e48c459"
+  integrity sha512-c1oTU5sEfsqWBi5QjSf2PztlimhhLmKDalaSd420Ch83Wp63p0VN3zeMRqiyt0nTzExryENaeNrmmM/+fdKi5A==
   dependencies:
     zod "^3.22.3"
 
@@ -48,14 +48,6 @@
     "@api3/airnode-abi" "^0.14.1"
     "@api3/ois" "^2.3.2"
     ethers "^5.7.2"
-    zod "^3.23.8"
-
-"@api3/chains@^7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@api3/chains/-/chains-7.2.1.tgz#2603f0b3174b63a76c85137965e6447a9eb0f2fc"
-  integrity sha512-UQC5PUS0S4eI3oigC+AmyaBWzAybyl7Bf54NHldbZP/xUpVoJW9nYJWbQf//s/3m7sxEr4phbmOsqzwpmSr/pg==
-  dependencies:
-    viem "^2.13.3"
     zod "^3.23.8"
 
 "@api3/chains@^8.1.0":
@@ -81,7 +73,7 @@
     winston-console-format "^1.0.8"
     zod "^3.23.8"
 
-"@api3/dapi-management@^1.46.0":
+"@api3/dapi-management@^1.55.0":
   version "1.55.0"
   resolved "https://registry.yarnpkg.com/@api3/dapi-management/-/dapi-management-1.55.0.tgz#dd3e3e3a59d2002223f5cead562b549cbacfad62"
   integrity sha512-U+7cssvYFH0nUQbhbXJLOgGfajpzKzbk1ZEoaq0hn7C6281vRGtmeUOaWqS8pmQuq8B1L/G/BJ01ox6W8HvI+w==
@@ -92,10 +84,10 @@
     ethers "^6.13.1"
     zod "^3.23.8"
 
-"@api3/logos@^0.1.33":
-  version "0.1.39"
-  resolved "https://registry.yarnpkg.com/@api3/logos/-/logos-0.1.39.tgz#181debae994d14b3f56ef9926bd2eb47ac18f89e"
-  integrity sha512-dVeAzoucwsNY+m2aZLJCYnZdYY4fcSx0HPW0LwlWNLiMsJ+6XIXFi3PNjcxk7oPUdARfPea3riBxaDgHn7uWPA==
+"@api3/logos@^0.1.41":
+  version "0.1.41"
+  resolved "https://registry.yarnpkg.com/@api3/logos/-/logos-0.1.41.tgz#80a42b1fde2a08de73cc3f9e0341e455061bcfea"
+  integrity sha512-SzVc5Blhpu3Sjmd2+5PBursL83VLAa4qtml5JkaG2yMOYxdc3X/uDaDZokigIfsiKCsVYyb1Y/oErsmCXoRqiQ==
   dependencies:
     camelcase "^6.3.0"
 
@@ -1846,7 +1838,7 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.4.tgz#1d459cee5031893a08a0e064c406ad2130cced7c"
   integrity sha512-dWO2pw8hhi+WrXq1YJy2yCuWoL20PddgGaqTgVe4cOS9Q6qklXCiA1tJEqX6BEwRNSCP84/afac9hd4MS+zEUA==
 
-"@formkit/addons@^1.5.5":
+"@formkit/addons@^1.6.2":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@formkit/addons/-/addons-1.6.5.tgz#1fc5e41196bdda5a721c96efd016ee610fffa8e5"
   integrity sha512-lI42uFX0a1UV/0J4ZzfuBAdoPykpDLOpH/fPNn6vI8hAKtkbOiStNZDex0r3aam0z3O1vPCtgUtsBCdWBVzxkw==
@@ -1856,12 +1848,12 @@
     "@formkit/inputs" "1.6.5"
     "@formkit/utils" "1.6.5"
 
-"@formkit/auto-animate@^0.8.1", "@formkit/auto-animate@latest":
+"@formkit/auto-animate@^0.8.2", "@formkit/auto-animate@latest":
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/@formkit/auto-animate/-/auto-animate-0.8.2.tgz#24a56e816159fd5585405dcee6bb992f81c27585"
   integrity sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ==
 
-"@formkit/core@1.6.5", "@formkit/core@^1.5.9":
+"@formkit/core@1.6.5":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@formkit/core/-/core-1.6.5.tgz#f6f75ad98ad95198507986c674dfbf2f211a0971"
   integrity sha512-LLq8+vLd9ddPYA0NkyvnKycN4ESU8Wqcl9TrllPyU/axduJunSIJMZz4LHzlwK8G26b0pQNegXF/hXaj4wbmng==
@@ -1876,10 +1868,10 @@
     "@formkit/core" "1.6.5"
     "@formkit/utils" "1.6.5"
 
-"@formkit/drag-and-drop@0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@formkit/drag-and-drop/-/drag-and-drop-0.0.11.tgz#fe4da94df476d6febabcd34edcc78a7d32542c1f"
-  integrity sha512-6iH9Y71P3Id0FfG0N4M/P6KM84GU1gJHokKzKc4SMZvWe6b0O8Ev25tsVv35jDsWMTLI+frjsEt1CsJvV6Es/Q==
+"@formkit/drag-and-drop@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@formkit/drag-and-drop/-/drag-and-drop-0.0.30.tgz#fdc93d3824c0923c2a6990fb784b43093a0636b5"
+  integrity sha512-2DjdagW6ibG/SfTwOxH1y/NBK50nSV2tfZ0iXMbdI/NCAsXr4UrKI/ytjm38qunpzb1w68r4b5iODV7YE/lbgA==
 
 "@formkit/i18n@1.6.5":
   version "1.6.5"
@@ -1890,14 +1882,14 @@
     "@formkit/utils" "1.6.5"
     "@formkit/validation" "1.6.5"
 
-"@formkit/icons@^1.5.5":
+"@formkit/icons@^1.6.2":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@formkit/icons/-/icons-1.6.5.tgz#90a751350f8fd8da3a3acd687ed2b8b263ab98f8"
   integrity sha512-Owlw/aGi8R5koMKwq2j5bz59H/4bwscmGdgmRpAns7Fgm9ceZmbrYLcbV4t2m0NYnb+1X7IySP5UutEKt6yuPw==
   dependencies:
     "@formkit/core" "1.6.5"
 
-"@formkit/inputs@1.6.5", "@formkit/inputs@^1.5.9":
+"@formkit/inputs@1.6.5":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@formkit/inputs/-/inputs-1.6.5.tgz#8a61bf4540f5371e6d6e27ce55c8674456cef984"
   integrity sha512-mHLMF0JMFZL/JC6NYrG4xaIdi7lUNE+tdC+QMipBdhobUhND0EJSpO6QNPGF6OLd9Zm9MDgqAzNXEtc05/nvow==
@@ -1905,7 +1897,7 @@
     "@formkit/core" "1.6.5"
     "@formkit/utils" "1.6.5"
 
-"@formkit/nuxt@^1.5.5":
+"@formkit/nuxt@^1.6.2":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@formkit/nuxt/-/nuxt-1.6.5.tgz#d6eb799793e2397a9646469c8bee1875dbbc05c7"
   integrity sha512-/jzQ833DoUmD3qWc7RHxJDpfT1kRQBi4oqRzwKIzOJ1+s0/Q1p11m1XAWayF4io/kEs3rHEnIn6X+nzpxzjICw==
@@ -1927,14 +1919,13 @@
     "@formkit/core" "1.6.5"
     "@formkit/utils" "1.6.5"
 
-"@formkit/pro@^0.121.0":
-  version "0.121.10"
-  resolved "https://registry.yarnpkg.com/@formkit/pro/-/pro-0.121.10.tgz#db2a238094983f22ba0abdea6738907966084deb"
-  integrity sha512-JpRtaSdaGtHr3En+MjrZzJX8P9trvAn5p+I/FCk9SVObBPbalgV5etmP30DVeWcNjT9JLaJ2UkHGNl+YY1rdRg==
+"@formkit/pro@^0.124.0":
+  version "0.124.2"
+  resolved "https://registry.yarnpkg.com/@formkit/pro/-/pro-0.124.2.tgz#ff40365d0e5f1972f669d724260a00297b1e82b7"
+  integrity sha512-65sIy2oBWLGWB0uL/ck3CwmZFIumsOiup5Hf7yxHS+ykYx2Yvgpwu5+dRIy6deuvNFlQieXiv22ZofhaaZf+yw==
   dependencies:
-    "@formkit/core" "^1.5.9"
-    "@formkit/drag-and-drop" "0.0.11"
-    "@formkit/inputs" "^1.5.9"
+    "@formkit/drag-and-drop" "^0.0.30"
+    "@formkit/tempo" "^0.0.8"
 
 "@formkit/rules@1.6.5":
   version "1.6.5"
@@ -1945,7 +1936,12 @@
     "@formkit/utils" "1.6.5"
     "@formkit/validation" "1.6.5"
 
-"@formkit/themes@1.6.5", "@formkit/themes@^1.5.5":
+"@formkit/tempo@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@formkit/tempo/-/tempo-0.0.8.tgz#2ec9e6180813bce01a2093ced3840a01c4c4958c"
+  integrity sha512-q9Ch3Epjb5yFVNV2vAruHyPwcvZujiPcBQ7r6if+HmOciMhwkQccL9NOm9LNmN23hNk2y3+El/ygUH2/x539sg==
+
+"@formkit/themes@1.6.5", "@formkit/themes@^1.6.2":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@formkit/themes/-/themes-1.6.5.tgz#b964932cf8e8b50933f37f690d7598916509eecb"
   integrity sha512-C+ANzH6qw4zS7niv+RamJAqpASOPfrZvMURVj5HQcT1XlcYB7ULvA9UmDW/AKOqP/OGf/OL6WvOzA7B16UkiiA==
@@ -9255,7 +9251,7 @@ nuxt-multi-cache@^3.1.1:
     "@nuxt/kit" "^3.12.2"
     "@tusbar/cache-control" "^1.0.2"
 
-nuxt@^3.10.1:
+nuxt@^3.11.1:
   version "3.12.3"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.12.3.tgz#7cb5dc07b3e45203637e276cccaa327557254a61"
   integrity sha512-Qdkc+ucWwFcKsiL/OTF87jbgyFSymwPRKiiu0mvzsd/RXTn4hGiBduAlF3f7Yy0F9pDjSj8XHKDSnHYsDzm6rA==
@@ -11866,7 +11862,7 @@ viem@^1.0.0:
     isows "1.0.3"
     ws "8.13.0"
 
-viem@^2.1.1, viem@^2.13.3, viem@^2.16.5:
+viem@^2.1.1, viem@^2.16.5:
   version "2.17.1"
   resolved "https://registry.yarnpkg.com/viem/-/viem-2.17.1.tgz#33447c1ab1b0875a0ab7276139400c4fd6b1ed0d"
   integrity sha512-iLwFAfn7aWfvc1KY176YNTJQpPdepRhvaltae6TomZ+DU5M7LdASP2ywdAHw/rezdEmrH/ytwG2WWnjWioE0fA==
