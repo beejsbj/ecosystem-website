@@ -16,9 +16,7 @@
           feeds.
         </p>
 
-        <button class="button" @click="navigateTo('/add-dapp')">
-          Join The Ecosystem
-        </button>
+        <NuxtLink class="button" to="/add-dapp"> Join The Ecosystem </NuxtLink>
       </text-content>
       <HeroCards />
     </hero-landing>
