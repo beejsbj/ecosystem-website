@@ -1,6 +1,5 @@
 <script setup>
 import { useEcosystemStore } from "@/stores/ecosystem";
-import slug from "slug";
 
 const props = defineProps(["dapp"]);
 const ecosystem = useEcosystemStore();
@@ -28,19 +27,21 @@ function filterBy(event) {
 </script>
 
 <template>
-  <dapp-card class="list-move">
+  <li class="dapp-card list-move">
     <header>
       <ul class="chain-list">
-        <li
-          class="chain"
-          v-for="chain in dapp?.chains"
-          :data-chain="chain"
-          @click="filterBy"
-        >
-          <!-- #todo clean up -->
+        <template v-for="(chain, i) in dapp?.chains">
+          <li class="chain" :data-chain="chain" @click="filterBy" v-if="i < 3">
+            <!-- #todo clean up -->
 
-          <ChainIcon :id="chain" />
-        </li>
+            <ChainIcon :id="chain" />
+          </li>
+          <li v-else-if="i == 4">
+            <picture class="plus-icon">
+              <img src="@/assets/images/icons/interface/plus.svg" alt="" />
+            </picture>
+          </li>
+        </template>
       </ul>
 
       <div class="productType" :data-productType="dapp?.productType">
@@ -60,11 +61,11 @@ function filterBy(event) {
       <h2
         :class="dapp?.name.length <= 16 ? 'firm-voice' : 'firm-voice-smaller'"
       >
-        {{ dapp?.name ?? "Dapp Name" }}
+        {{ dapp?.name ?? "dApp Name" }}
       </h2>
 
       <p class="whisper-voice">
-        {{ dapp?.tagline ?? "This is the Dapp Tagline" }}
+        {{ dapp?.tagline ?? "This is the dApp Tagline" }}
       </p>
     </text-content>
 
@@ -80,16 +81,13 @@ function filterBy(event) {
           <!-- <DynamicIcon :icon="category" /> -->
         </li>
       </ul>
-      <NuxtLink
-        :to="`/ecosystem/${slug(dapp?.name ?? '#')}`"
-        class="card-link"
-      />
+      <NuxtLink :to="`/ecosystem/${dapp.slug}`" class="card-link" />
     </footer>
-  </dapp-card>
+  </li>
 </template>
 
 <style lang="scss" scoped>
-dapp-card {
+.dapp-card {
   display: grid;
   grid-template-rows: 0.1fr 1fr 0.1fr;
   gap: var(--space-s);
@@ -115,13 +113,25 @@ dapp-card {
 
     .chain-list {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       gap: var(--space-2xs);
+
+      .plus-icon {
+        max-width: 10px;
+      }
     }
 
-    picture.chain-icon {
-      width: 20px;
-    }
+    //  .chain-list {
+    //    display: flex;
+    //    max-width: 50%;
+    //    overflow-x: scroll;
+    //    gap: var(--space-2xs);
+
+    //    li {
+    //      flex-shrink: 0;
+    //    }
+    //  }
 
     .productType {
       display: flex;
@@ -131,9 +141,9 @@ dapp-card {
 
   text-content {
     display: grid;
-    column-gap: var(--space-2xs);
+    column-gap: var(--space-3xs);
 
-    grid-template-columns: 0.1fr 1fr;
+    grid-template-columns: 0.2fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
 

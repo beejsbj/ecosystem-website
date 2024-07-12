@@ -43,12 +43,29 @@ export const indexLiquidations = async (cacheKey: string) => {
     throw Error("Failed to read last checked protocol index from db");
   }
 
-  const currentProtocolIndex =
+  let currentProtocolIndex =
     lastCheckedProtocolIndex >= 0 ? (lastCheckedProtocolIndex + 1) % 14 : 0;
 
   console.log(
     `######### Indexing Protocol ${config.protocols[currentProtocolIndex].name}  Chain: ${config.protocols[currentProtocolIndex].chainId} ###############`
   );
+
+  while (true) {
+    if (!config.protocols[currentProtocolIndex].active) {
+      console.log(
+        `Inactive Protocol ${config.protocols[currentProtocolIndex].name} skipping `
+      );
+      await updateLambdaProgress(currentProtocolIndex);
+
+      currentProtocolIndex = (currentProtocolIndex + 1) % 14;
+
+      console.log(
+        `######### Starting Protocol ${config.protocols[currentProtocolIndex].name}  Chain: ${config.protocols[currentProtocolIndex].chainId} ###############`
+      );
+    } else {
+      break;
+    }
+  }
 
   const startTime =
     new Date(config.protocols[currentProtocolIndex].startDate).getTime() / 1000;

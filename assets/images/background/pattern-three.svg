@@ -5,10 +5,10 @@
         <g transform="matrix(1,0,0,1,10635.3,-0.349104)">
             <g transform="matrix(0.961699,0,0,1.00134,-10481.7,-31.6372)">
                 <rect x="3832.19" y="23576.2" width="347.237" height="296.097" style="fill:none;"/>
-                <clipPath id="_clip1">
+                <clipPath id="pat3_clip1">
                     <rect x="3832.19" y="23576.2" width="347.237" height="296.097"/>
                 </clipPath>
-                <g clip-path="url(#_clip1)">
+                <g clip-path="url(#pat3_clip1)">
                     <g transform="matrix(1.03983,0,0,0.998662,10889.6,34.3438)">
                         <g transform="matrix(3.19702,0,0,1.83798,11304.8,16528)">
                             <g transform="matrix(0.177261,0,0,0.309657,-7476.08,-681.082)">

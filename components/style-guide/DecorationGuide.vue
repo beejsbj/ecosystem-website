@@ -1,6 +1,4 @@
 <script setup>
-import gsap from "gsap";
-
 const decorations = ref([
   {
     name: "Line Decoration",
@@ -16,46 +14,7 @@ const decorations = ref([
   },
 ]);
 
-const icons = ref([
-  {
-    name: "Logo Full",
-    component: "LogoFull",
-  },
-  {
-    name: "Logo Icon",
-    component: "LogoIcon",
-  },
-  {
-    name: "Menu Icon",
-    component: "MenuIcon",
-  },
-  {
-    name: "Dao Icon",
-    component: "DaoIcon",
-  },
-  {
-    name: "Datafeed Icon",
-    component: "DatafeedIcon",
-  },
-  {
-    name: "Airnode Icon",
-    component: "AirnodeIcon",
-  },
-  {
-    name: "Developer Tool Icon",
-    component: "DeveloperToolIcon",
-  },
-  {
-    name: "Social Icon",
-    component: "SocialIcon",
-    social: "twitter",
-  },
-  {
-    name: "Chain Icon",
-    component: "ChainIcon",
-    social: "twitter",
-  },
-]);
+const icons = ref([]);
 
 const socialIcons = ref([
   "twitter",
@@ -107,25 +66,6 @@ function indexTimer() {
     }
   }, 1000);
 }
-
-function animateBackground() {
-  //   gsap.fromTo(
-  //     ".decoration-guide :not(#curve-decoration) path",
-  //     {
-  //       strokeDashoffset: "900",
-  //       strokeDasharray: "900",
-  //     },
-  //     {
-  //       duration: 1,
-  //       strokeDashoffset: 0,
-  //       ease: "power2.in",
-  //       stagger: { each: 0.05, repeat: "-1" },
-  //     }
-  //   );
-  //   indexTimer();
-}
-
-onMounted(() => {});
 </script>
 
 <template>
@@ -143,7 +83,7 @@ onMounted(() => {});
       </li>
     </ul>
 
-    <ul v-auto-animate>
+    <ul>
       <li v-for="icon in icons" :key="icon.name">
         <component
           :is="loadIcon(icon.component)"
@@ -152,7 +92,6 @@ onMounted(() => {});
           :key="icon.name"
           stroke="var(--green)"
           fill="none"
-          v-auto-animate
           v-tooltip="icon.name"
         />
       </li>

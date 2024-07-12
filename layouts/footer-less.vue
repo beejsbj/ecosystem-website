@@ -1,7 +1,8 @@
 <script setup>
 const route = useRoute();
+const ui = useInterfaceStore();
 
-const loadingDone = ref(true);
+const loadingDone = ref(ui.firstLoad ? false : true);
 
 onMounted(() => {
   setTimeout(() => {
@@ -17,6 +18,16 @@ useHead({
     class: route.name,
   },
 });
+
+function hideCurvesOnPages() {
+  const pages = ["oev"];
+
+  if (!pages.includes(route.name)) {
+    return true;
+  }
+
+  return false;
+}
 </script>
 
 <template>
@@ -24,12 +35,11 @@ useHead({
     <LoadingSpinner v-if="!loadingDone" />
 
     <template v-else>
-      <div class="curves-wrapper">
+      <div class="curves-wrapper" v-if="hideCurvesOnPages()">
         <LazyCurvesDecoration3 />
       </div>
 
       <SiteHeader />
-
       <main>
         <slot />
       </main>
@@ -60,6 +70,22 @@ useHead({
       width: 200vw;
       z-index: -10;
     }
+    @media (min-width: 1000px) {
+      display: block;
+      top: -50px;
+      left: -500px;
+
+      width: 250vw;
+      z-index: -10;
+    }
+    //  @media (min-width: 1400px) {
+    //    display: block;
+    //    top: -50px;
+    //    left: -500px;
+
+    //    width: 200vw;
+    //    z-index: -10;
+    //  }
   }
 }
 </style>

@@ -1,5 +1,7 @@
 <script setup>
 import { Bar } from "vue-chartjs";
+import zoom from "chartjs-plugin-zoom";
+
 import {
   Chart as ChartJS,
   Title,
@@ -20,10 +22,15 @@ ChartJS.register(
   BarElement,
   CategoryScale,
   LinearScale,
-  Colors
+  Colors,
+  zoom
 );
 
 const props = defineProps(["data", "options", "metadata"]);
+
+const chart = ref(null);
+
+const ui = useInterfaceStore();
 
 //
 const color = computed(() => {
@@ -34,87 +41,172 @@ const color = computed(() => {
 
 //
 
-const options = {
-  plugins: {
-    title: {
-      display: true,
-      text: props.metadata.title,
-      color: color.value,
-    },
-
-    subtitle: {
-      display: true,
-      text: props.metadata.subtitle,
-      color: color.value,
-    },
-
-    legend: {
-      display: false,
-      position: "right",
-    },
-
-    datalabels: {
-      formatter: function (value, context) {
-        return value.value;
-      },
-
-      display: false,
-
-      anchor: "end",
-      color: "white",
-      backgroundColor: "hsla(178, 12%, 3%, 1.00)",
-      borderRadius: 16,
-      padding: {
-        top: 4,
-        right: 8,
-        bottom: 4,
-        left: 8,
-      },
-    },
-  },
-
-  scales: {
-    x: {
+const options = computed(() => {
+  const defaultOptions = {
+    plugins: {
       title: {
         display: true,
-        text: props.metadata.x.title,
-        color: color.value,
+        text: props.metadata.title,
       },
-      ticks: {
-        autoSkip: true,
-        maxTicksLimit: 10,
-      },
-    },
-    y: {
-      title: {
+
+      subtitle: {
         display: true,
-        text: props.metadata.y.title,
-        color: color.value,
+        text: props.metadata.subtitle,
       },
-      ticks: {
-        autoSkip: true,
-        maxTicksLimit: 10,
+
+      legend: {
+        display: true,
+        position: "top",
+      },
+
+      datalabels: {
+        formatter: function (value, context) {
+          return value.value;
+        },
+
+        display: false,
+
+        anchor: "end",
+        color: "white",
+        backgroundColor: "hsla(178, 12%, 3%, 1.00)",
+        borderRadius: 16,
+        padding: {
+          top: 4,
+          right: 8,
+          bottom: 4,
+          left: 8,
+        },
+      },
+
+      // zoom: {
+      //   //   pan: {
+      //   //     enabled: true,
+      //   //     mode: 'x',
+      //   //     modifierKey: 'ctrl',
+      //   //   },
+      //   zoom: {
+      //     drag: {
+      //       enabled: true,
+      //     },
+      //     mode: "x",
+      //   },
+      // },
+    },
+
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: props.metadata.x.title,
+          color: color.value,
+        },
+        ticks: {
+          autoSkip: true,
+          maxTicksLimit: 10,
+          color: "#C3C4C3",
+        },
+
+        grid: {
+          display: false,
+          color: "#C3C4C3",
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: props.metadata.y.title,
+        },
+        ticks: {
+          //   autoSkip: true,
+          maxTicksLimit: 10,
+          color: "#C3C4C3",
+          callback: function (value, index, values) {
+            return formatNumber(value);
+          },
+        },
       },
     },
-  },
 
-  responsive: true,
-  maintainAspectRatio: true,
+    responsive: true,
+    maintainAspectRatio: true,
 
-  //  backgroundColor: color.value,
-  barPercentage: 0.4,
-  borderRadius: 16,
-  borderColor: color.value,
-  borderWidth: 1,
+    //  backgroundColor: color.value,
+    barPercentage: 0.4,
+    borderRadius: 16,
 
-  hoverOffset: 5,
-  hoverBackgroundColor: color.value,
-  pointHoverBorderWidth: 10,
+    borderWidth: 1.1,
+    borderColor: function (context, options) {
+      const datasetIndex = context.datasetIndex;
 
-  onClick: function (evt, item) {},
+      return context.dataset.color
+        ? ui.api3Colors[context.dataset.color]
+        : Object.values(ui.api3Colors)[datasetIndex];
+    },
+
+    backgroundColor: function (context, options) {
+      const { datasetIndex, chart, dataset } = context;
+      const { width, height, ctx } = chart;
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      const color = dataset.color
+        ? ui.api3Colors[dataset.color]
+        : Object.values(ui.api3Colors)[datasetIndex];
+      const [startColor, endColor] = [
+        color.replace("1)", "0.5)"),
+        color.replace("1)", "0)"),
+      ];
+      gradient.addColorStop(0, startColor);
+      gradient.addColorStop(1, endColor);
+
+      // return gradient;
+      return color;
+    },
+
+    hoverOffset: 5,
+    pointHoverBorderWidth: 10,
+  };
+
+  const merged = _Merge(defaultOptions, props.options);
+
+  return merged;
+});
+
+const isZoomEnabled = computed(() => {
+  return props.options.plugins.zoom.enabled;
+});
+
+const handleZoomReset = () => {
+  chart.value.chart.resetZoom();
 };
 </script>
 
 <template>
-  <Bar id="my-chart-id" :options="options" :data="data" />
+  <div class="chart-container">
+    <button
+      v-if="isZoomEnabled"
+      @click="handleZoomReset"
+      class="whisper-voice text zoom-reset-button"
+    >
+      Reset Zoom
+    </button>
+    <Bar
+      :data="props.data"
+      id="bar-chart"
+      ref="chart"
+      :options="options"
+      :metadata="props.metadata"
+    />
+  </div>
 </template>
+<style scoped>
+.chart-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+}
+
+.zoom-reset-button {
+  justify-self: end;
+}
+</style>

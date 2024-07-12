@@ -42,17 +42,26 @@ const ui = useInterfaceStore();
 
 const options = computed(() => {
   const defaultOptions = {
+    elements: {
+      point: {
+        pointStyle: "rectRot",
+        backgroundColor: "black",
+        radius: 3,
+      },
+      line: {
+        tension: 0.4,
+      },
+    },
+
     plugins: {
       title: {
         display: true,
         text: props.metadata.title,
-        color: "hsla(160, 64%, 69%, 1)",
       },
 
       subtitle: {
         display: true,
         text: props.metadata.subtitle,
-        color: "hsla(160, 64%, 69%, 1)",
       },
 
       legend: {
@@ -99,28 +108,40 @@ const options = computed(() => {
         title: {
           display: true,
           text: props.metadata.x.title,
-          color: "hsla(160, 64%, 69%, 1)",
+          color: "white",
         },
         ticks: {
           autoSkip: true,
           maxTicksLimit: 10,
+          color: "#C3C4C3",
+        },
+
+        grid: {
+          display: false,
+          color: "#C3C4C3",
         },
       },
+
       y: {
         alignToPixels: true,
         type: "logarithmic",
         title: {
           display: true,
           text: props.metadata.y.title,
-          color: "hsla(160, 64%, 69%, 1)",
-          position: "left",
+          color: "white",
         },
         ticks: {
           //   autoSkip: true,
           maxTicksLimit: 10,
+          color: "#C3C4C3",
           callback: function (value, index, values) {
             return formatNumber(value);
           },
+        },
+
+        grid: {
+          display: true,
+          color: "hsla(0, 0%, 100%, .150)",
         },
       },
     },
@@ -149,12 +170,14 @@ const options = computed(() => {
         ? ui.api3Colors[dataset.color]
         : Object.values(ui.api3Colors)[datasetIndex];
       const [startColor, endColor] = [
-        color.replace("1)", "0.5)"),
+        color.replace("1)", "0.75)"),
         color.replace("1)", "0)"),
       ];
       gradient.addColorStop(0, startColor);
       gradient.addColorStop(1, endColor);
+
       return gradient;
+      return color;
     },
   };
   const merged = _Merge(defaultOptions, props.options);
@@ -173,19 +196,20 @@ const handleZoomReset = () => {
 
 <template>
   <div class="chart-container">
+    <button
+      v-if="isZoomEnabled"
+      @click="handleZoomReset"
+      class="whisper-voice text zoom-reset-button"
+    >
+      Reset Zoom
+    </button>
     <Line
       :data="props.data"
       :options="options"
       :metadata="props.metadata"
+      id="line-chart"
       ref="chart"
     />
-    <button
-      v-if="isZoomEnabled"
-      @click="handleZoomReset"
-      class="whisper-voice button outline"
-    >
-      Reset Zoom
-    </button>
   </div>
 </template>
 
@@ -194,5 +218,11 @@ const handleZoomReset = () => {
   position: relative;
   height: 100%;
   width: 100%;
+
+  display: grid;
+}
+
+.zoom-reset-button {
+  justify-self: end;
 }
 </style>

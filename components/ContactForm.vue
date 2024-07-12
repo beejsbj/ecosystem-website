@@ -15,13 +15,7 @@ function submitForm() {}
 </script>
 
 <template>
-  <FormKit
-    type="form"
-    id="contact-form"
-    :actions="false"
-    v-auto-animate
-    @submit="submitForm"
-  >
+  <FormKit type="form" id="contact-form" :actions="false" @submit="submitForm">
     <form-field>
       <FormKit
         type="text"
@@ -98,12 +92,13 @@ function submitForm() {}
     </form-field>
     <ul class="validation-errors" v-auto-animate v-if="serverMessages">
       <li
-        v-for="message in serverMessages"
+        v-for="(message, i) in serverMessages"
         class="solid-voice"
         :class="{
           success: message.success,
           error: !message.success,
         }"
+        :key="i"
       >
         {{ message.message }}
       </li>

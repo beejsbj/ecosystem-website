@@ -6,6 +6,7 @@ interface Stats {
   categories: { name: string; count: number }[];
   productTypes: { name: string; count: number }[];
   years: { name: number; count: number }[];
+  feeds: Array<any>;
 }
 
 function computeStats(projects: ProjectType[]): Stats {
@@ -54,7 +55,39 @@ function computeStats(projects: ProjectType[]): Stats {
     count: yearCount[name],
   }));
 
-  return { chains, categories, productTypes, years };
+  // prepare feed stats
+  const allProjects: ProjectType[] = PROJECTS;
+
+  // get preare a list with feedNames as keys and list of chainIds as values
+  const feedStats: any[] = [];
+  allProjects.forEach((project: any) => {
+    if (!project.proxies) {
+      return;
+    }
+    const chainIds = Object.keys(project.proxies);
+
+    chainIds.forEach((chainId) => {
+      const proxies = project.proxies[chainId];
+
+      proxies.forEach((proxy: any) => {
+        const existingFeedStat = feedStats.find(
+          (feedStat) => feedStat.feedName === proxy.feedName
+        );
+        if (existingFeedStat) {
+          if (!existingFeedStat.chainIds.includes(chainId)) {
+            existingFeedStat.chainIds.push(chainId);
+          }
+        } else {
+          feedStats.push({
+            feedName: proxy.feedName,
+            chainIds: [chainId],
+          });
+        }
+      });
+    });
+  });
+
+  return { chains, categories, productTypes, years, feeds: feedStats };
 }
 
 export default checkConnection(

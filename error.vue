@@ -25,7 +25,7 @@ useHead({
       <NuxtLink class="button firm-voice" to="/"> Go Home </NuxtLink>
     </div>
 
-    <details v-auto-animate>
+    <details>
       <summary class="solid-voice">See Error Details</summary>
       <pre>
 		<code v-html="error.stack"></code>

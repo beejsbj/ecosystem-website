@@ -9,7 +9,8 @@ props.dappForm.proxies = props.dappForm.proxies ?? [];
 const loading = ref(false);
 const message = ref("");
 
-async function handleUpdateProxy() {
+async function handleUpdateProxy(event) {
+  event.preventDefault();
   message.value = "";
   loading.value = false;
 
@@ -30,11 +31,20 @@ async function handleUpdateProxy() {
 
   loading.value = true;
   try {
-    const info = await fetchProxyInformation(
-      props.dappForm?.proxyAddress,
-      parseInt(props.dappForm?.proxyChain),
-      props.dappForm?.feedName
-    );
+    const { data } = await useFetch("/api/projects/project/proxy", {
+      query: {
+        proxyAddress: props.dappForm?.proxyAddress,
+        chainId: parseInt(props.dappForm?.proxyChain),
+        feedName: props.dappForm?.feedName,
+      },
+    });
+    const info = data.value;
+
+    if (!info) {
+      message.value =
+        "Failed to fetch proxy info! Make sure proxy address is active";
+      return;
+    }
 
     const finalProxyEntry = {
       proxyAddress: props.dappForm?.proxyAddress,
@@ -125,11 +135,11 @@ async function handleUpdateProxy() {
       <div class="actions">
         <div class="add-button">
           <LoadingSpinner v-if="loading" />
-          <button v-else class="text green" @click.prevent="handleUpdateProxy">
+          <button v-else class="text green" @click="handleUpdateProxy">
             <picture>
               <img
                 loading="lazy"
-                src="@/assets/images/interface/plus.svg"
+                src="@/assets/images/icons/interface/plus.svg"
                 alt="plus icon"
               />
             </picture>
@@ -142,6 +152,8 @@ async function handleUpdateProxy() {
         </div>
       </div>
     </div>
+
+    <pre></pre>
 
     <div class="grid-item" v-show="dappForm?.proxies.length > 0">
       <DappProxies
@@ -169,12 +181,16 @@ async function handleUpdateProxy() {
       display: none;
     }
 
+    ul {
+      grid-template-columns: 1fr 0.7fr 0.7fr 0.5fr 0.5fr 0.5fr;
+    }
+
     .table-head .whisper-voice {
       font-weight: var(--weight-heavy);
     }
 
     .table-row {
-      grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.5fr 0.2fr;
+      grid-template-columns: subgrid;
 
       * {
         font-size: var(--step--1);

@@ -123,19 +123,13 @@ onMounted(async () => {
       valid-step-icon=""
     >
       <!-- Step 1 -->
-      <FormKit
-        type="step"
-        v-auto-animate
-        name="content"
-        :next-attrs="nextClasses"
-      >
+      <FormKit type="step" name="content" :next-attrs="nextClasses">
         <ContentStep :dappForm="dappForm" />
       </FormKit>
 
       <!-- Step 2 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="images"
         :next-attrs="nextClasses"
         :previous-attrs="prevClasses"
@@ -146,7 +140,6 @@ onMounted(async () => {
       <!-- Step 3 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="tags"
         :next-attrs="nextClasses"
         :previous-attrs="prevClasses"
@@ -157,7 +150,6 @@ onMounted(async () => {
       <!-- Step 4 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="proxy"
         v-if="dappForm.productType === 'datafeed'"
         :next-attrs="nextClasses"
@@ -169,7 +161,6 @@ onMounted(async () => {
       <!-- Step 5 -->
       <FormKit
         type="step"
-        v-auto-animate
         name="links"
         :previous-attrs="prevClasses"
         :next-attrs="nextClasses"

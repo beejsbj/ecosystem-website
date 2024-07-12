@@ -1,5 +1,6 @@
 <script setup>
 const hello = "hello";
+const ui = useInterfaceStore();
 
 definePageMeta({
   alias: ["/testing"],
@@ -12,24 +13,11 @@ const ecosystem = useEcosystemStore();
   <ContentsWrapper>
     <PageTitle heading="test ground" />
     <SectionColumn>
-      <NuxtLink to="/style-guide">style guide</NuxtLink>
-      <button class="button" @click="notify('hello world')">default</button>
-      <button class="button" @click="notify.success('hello world')">
-        sucess
-      </button>
-      <button class="button" @click="notify.error('hello world')">error</button>
-      <button class="button" @click="notify.warn('hello world')">warn</button>
-      <button class="button" @click="notify.info('hello world')">info</button>
+      <OEVTotalsChart />
     </SectionColumn>
   </ContentsWrapper>
 </template>
 
-<style scoped>
-:deep(ul) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-m);
-}
-</style>
+<style scoped></style>
 
 <style></style>

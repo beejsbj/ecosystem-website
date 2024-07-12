@@ -1,5 +1,4 @@
 <script setup>
-import { useInterfaceStore } from "~/stores/interface";
 const ui = useInterfaceStore();
 
 const showcaseCards = ref([
@@ -8,14 +7,14 @@ const showcaseCards = ref([
     paragraph: "Discover and explore API3's Ecosystem partners.",
     cta: "Explore Ecosystem",
     link: "/ecosystem",
-    image: "/images/icons/docs.svg",
+    image: "docs",
   },
   {
     heading: "Developers",
     paragraph: "Learn to use oracles for your blockchain applications.",
     cta: "Get Started",
     link: "http://docs.api3.org",
-    image: "/images/icons/developers.svg",
+    image: "developers",
   },
 
   {
@@ -23,7 +22,7 @@ const showcaseCards = ref([
     paragraph: "Stay up to date with the API3 Ecosystem and our partners",
     cta: "Discover Updates",
     link: "/articles",
-    image: "/images/icons/article.svg",
+    image: "article",
   },
 ]);
 </script>
@@ -35,7 +34,7 @@ const showcaseCards = ref([
     >
       <!-- @mouseover="ui.changeHeroImage(card)" -->
       <picture class="">
-        <NuxtImg loading="lazy" :src="card.image" :alt="card.heading" />
+        <DynamicIcon :icon="card.image" />
       </picture>
       <text-content>
         <h2 class="firm-voice">

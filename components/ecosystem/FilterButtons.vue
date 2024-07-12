@@ -16,7 +16,7 @@ const ecosystem = useEcosystemStore();
       <picture>
         <img
           loading="lazy"
-          src="@/assets/images/interface/filter.svg"
+          src="@/assets/images/icons/interface/filter.svg"
           alt="filter icon"
         />
       </picture>

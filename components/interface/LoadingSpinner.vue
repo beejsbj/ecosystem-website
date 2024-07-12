@@ -1,23 +1,20 @@
 <script setup>
-import gsap from "gsap";
+const route = useRoute();
 
-onMounted(() => {
+const page = ref(route.name);
+
+useGsap((gsap) => {
   gsap.set("body", {
     overflowY: "hidden",
-  });
-});
-
-onUnmounted(() => {
-  gsap.set("body", {
-    overflowY: "auto",
   });
 });
 </script>
 
 <template>
-  <div class="mask">
+  <div class="mask" v-if="route.name !== 'oev'">
     <div class="loader"></div>
   </div>
+  <OEVLoader v-else />
 </template>
 
 <style scoped lang="scss">

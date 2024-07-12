@@ -2,6 +2,7 @@ import { imageUploadHandler } from "../../utils/imageUpload";
 import { authenticated } from "../../utils/authenticated";
 import { type ProjectType } from "~/server/types";
 import { createPR, isProjectExists } from "~/server/services/github";
+import { validateProjectSchema } from "~/server/services/helper";
 
 export default authenticated(
   imageUploadHandler(
@@ -101,7 +102,19 @@ export default authenticated(
           }
 
           payload.status = "active";
-          // verify schema and create pr
+          // verify schema
+
+          const verification = await validateProjectSchema(payload);
+
+          if (!verification.success) {
+            event.res.statusCode = 400;
+            return {
+              code: "REQ_FAILED",
+              message: verification.result,
+            };
+          }
+
+          // Create pull request
           const prStatus = await createPR(payload);
 
           if (!prStatus.success) {

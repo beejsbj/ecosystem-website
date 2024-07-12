@@ -15,7 +15,7 @@
   --data-color: var(--indigo);
 }
 [data-color="violet"] {
-  --data-color: var(--violet);
+  --data-color: var(--purple);
 }
 
 /* textures and patterns */
@@ -202,7 +202,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.25em 0;
+  padding-block: 0.25em;
   max-width: max-content;
 }
 
@@ -212,7 +212,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.25em 0;
+  padding-block: 0.25em;
   max-width: max-content;
 }
 
@@ -221,20 +221,18 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 0.25em 0;
+  padding-block: 0.25em;
   max-width: max-content;
 }
 
 /* Hover underline */
 
-.hover-underline,
-.router-link-exact-active:not(.site-logo, .button) {
+.hover-underline {
   --underline-width: 0;
   position: relative;
 }
 
-.hover-underline::after,
-.router-link-exact-active:not(.site-logo, .button)::after {
+.hover-underline::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -246,8 +244,7 @@
   border-radius: var(--corners);
 }
 
-.hover-underline:is(:hover, :focus-visible)::after,
-a.router-link-exact-active:not(.site-logo, .button)::after {
+.hover-underline:is(:hover, :focus-visible)::after {
   --underline-width: 100%;
 }
 
@@ -280,13 +277,15 @@ a.router-link-exact-active:not(.site-logo, .button)::after {
 }
 /* This part is for the scrollbar track / */
 *::-webkit-scrollbar {
-  width: var(--line-width);
-  height: calc(var(--line-width) * 4);
+  width: calc(var(--line-width) * 2);
+  height: calc(var(--line-width) * 2);
 }
 
 /* / This part is for the track (the part that the thumb slides across) / */
 ::-webkit-scrollbar-track {
   box-shadow: var(--shadow);
+
+  background: var(--gray-dark);
   border-radius: var(--corners);
 }
 
@@ -307,4 +306,8 @@ a.router-link-exact-active:not(.site-logo, .button)::after {
 
 .no-wrap {
   white-space: nowrap;
+}
+
+.span-all {
+  grid-column: 1/-1;
 }

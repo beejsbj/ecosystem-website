@@ -29,7 +29,7 @@ html {
   scroll-padding-top: var(--space-2xl);
 }
 body {
-  background-color: var(--paper);
+  background: var(--paper);
   color: var(--ink);
   position: relative;
   overflow-x: hidden;

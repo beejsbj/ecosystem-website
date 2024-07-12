@@ -1,6 +1,4 @@
 <script setup>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 definePageMeta({
   layout: "home",
   meta: [
@@ -15,13 +13,13 @@ useSeoMeta({
   title: "API3 Ecosystem",
 });
 
-onMounted(() => {
-  //   document.body.scrollTop = document.documentElement.scrollTop = 0;
-  //   window.scroll({
-  //     top: 0,
-  //     left: 0,
-  //   });
-});
+// onMounted(() => {
+//   document.body.scrollTop = document.documentElement.scrollTop = 0;
+//   window.scroll({
+//     top: 0,
+//     left: 0,
+//   });
+// });
 </script>
 
 <template>
@@ -31,9 +29,7 @@ onMounted(() => {
     <MissionComponent />
 
     <section class="curves-wrapper">
-      <picture class="curves-decoration-3">
-        <CurvesDecoration3 />
-      </picture>
+      <CurvesDecoration3 />
     </section>
 
     <CallToAction />
@@ -73,7 +69,6 @@ main.index {
     transform: translate(-50%, -50%) rotate(10deg) scaleY(1.8);
 
     width: 500vw;
-    //   display: none;
 
     @media (min-width: 768px) {
       display: block;
@@ -89,8 +84,6 @@ main.index {
       width: 100vw;
       transform: translate(-50%, -50%) scaleX(2);
     }
-
-    //  display: none;
   }
 }
 </style>
