@@ -3,7 +3,6 @@ import formatNumber from "@/utils/formatNumber";
 
 const ui = useInterfaceStore();
 const colors = Object.values(ui.api3Colors);
-const [gsap] = useGsap();
 
 const scrollPosition = ref(0);
 
@@ -101,21 +100,24 @@ function barHeight(value) {
   return Math.max(scaledHeight, minHeight);
 }
 
-function handleButton(direction) {
-  const carousel = barsList.value;
-  scrollPosition.value = carousel.clientWidth;
-  const currentScroll = carousel.scrollLeft;
-  const newScroll =
-    direction > 0
-      ? currentScroll + scrollPosition.value
-      : currentScroll - scrollPosition.value;
+let handleButton;
+useGsap((gsap) => {
+  handleButton = (direction) => {
+    const carousel = barsList.value;
+    scrollPosition.value = carousel.clientWidth;
+    const currentScroll = carousel.scrollLeft;
+    const newScroll =
+      direction > 0
+        ? currentScroll + scrollPosition.value
+        : currentScroll - scrollPosition.value;
 
-  gsap.to(carousel, {
-    scrollTo: {
-      x: newScroll,
-    },
-  });
-}
+    gsap.to(carousel, {
+      scrollTo: {
+        x: newScroll,
+      },
+    });
+  };
+});
 </script>
 
 <template>

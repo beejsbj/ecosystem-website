@@ -1,6 +1,5 @@
 <script setup>
 const props = defineProps(["showPanel"]);
-const [gsap] = useGsap();
 
 watch(
   () => props.showPanel,
@@ -13,35 +12,40 @@ watch(
   }
 );
 
-function onBeforeEnter(el, done) {
-  gsap.fromTo(
-    el,
-    {
-      x: "100%",
-    },
-    {
-      x: "0%",
-      ease: "power4.out",
-      duration: 0.3,
-      onComplete: done,
-    }
-  );
-}
+let onBeforeEnter;
+let onLeave;
 
-function onLeave(el, done) {
-  gsap.fromTo(
-    el,
-    {
-      x: "0%",
-    },
-    {
-      x: "100%",
-      duration: 0.3,
-      ease: "power4.out",
-      onComplete: done,
-    }
-  );
-}
+useGsap((gsap) => {
+  onBeforeEnter = (el, done) => {
+    gsap.fromTo(
+      el,
+      {
+        x: "100%",
+      },
+      {
+        x: "0%",
+        ease: "power4.out",
+        duration: 0.3,
+        onComplete: done,
+      }
+    );
+  };
+
+  onLeave = (el, done) => {
+    gsap.fromTo(
+      el,
+      {
+        x: "0%",
+      },
+      {
+        x: "100%",
+        duration: 0.3,
+        ease: "power4.out",
+        onComplete: done,
+      }
+    );
+  };
+});
 </script>
 
 <template>

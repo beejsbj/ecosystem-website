@@ -1,17 +1,21 @@
 <script setup>
 import { useInterfaceStore } from "~/stores/interface";
-const [gsap] = useGsap();
 
 const ui = useInterfaceStore();
 
-function onMouseover(event) {
-  //   change axis x to 90% and reverse it back to 50% on mouseout
-  gsap.to(event.target, {
-    "--axis-x": "90%",
-    duration: 3,
-    ease: "back.out",
-  });
-}
+let onMouseover;
+useGsap((gsap) => {
+  onMouseover = (event) => {
+    //   change axis x to 90% and reverse it back to 50% on mouseout
+
+    const randomX = Math.random() * 100; // Generates a random number between 0 and 100
+    gsap.to(event.target, {
+      "--axis-x": `${randomX}%`,
+      duration: 3,
+      ease: "back.out",
+    });
+  };
+});
 </script>
 
 <template>
