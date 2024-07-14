@@ -186,7 +186,7 @@ useGsap((gsap) => {
           />
 
           <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-          <p class="solid-voice protocol-name">
+          <p class="calm-voice protocol-name">
             {{ protocol.name }}
           </p>
         </li>
@@ -218,7 +218,7 @@ useGsap((gsap) => {
 <style scoped lang="scss">
 .chart-grid {
   display: grid;
-  margin-top: var(--space-3xl);
+  margin-top: var(--space-l);
 
   gap: var(--space-s);
   position: relative;
@@ -423,19 +423,19 @@ li {
   & > .protocol-name {
     text-align: center;
     white-space: nowrap;
-    font-size: var(--step--2);
-    scale: 1.8;
+    //  font-size: var(--step--2);
+    //  scale: 1.8;
     transition: 0.2s ease-in-out;
 
     @media (max-width: 1170px) {
-      scale: 1.3;
+      // scale: 1.3;
     }
 
     @media (max-width: 850px) {
-      scale: unset;
+      // scale: unset;
 
       &:hover {
-        scale: 1.3;
+        //   scale: 1.3;
         translate: 0 12px;
       }
     }

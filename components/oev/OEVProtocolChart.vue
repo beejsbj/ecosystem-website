@@ -320,7 +320,9 @@ div.actions {
     max-width: 500px;
   }
   .formkit-outer:nth-child(4) {
-    grid-column: 2 / span 2;
+    @media (min-width: 768px) {
+      grid-column: 2 / span 2;
+    }
   }
 
   .buttons-content {

@@ -42,8 +42,7 @@ body
     #nuxt-devtools-container,
     #__nuxt,
 
-  ),
-body > div:last-child {
+  ) {
   display: none !important;
 }
 
