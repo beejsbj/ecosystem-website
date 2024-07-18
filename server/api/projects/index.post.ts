@@ -2,7 +2,11 @@ import { imageUploadHandler } from "../../utils/imageUpload";
 import { authenticated } from "../../utils/authenticated";
 import { type ProjectType } from "~/server/types";
 import { createPR, isProjectExists } from "~/server/services/github";
-import { validateProjectSchema } from "~/server/services/helper";
+import {
+  alertMailMarkup,
+  validateProjectSchema,
+} from "~/server/services/helper";
+import { sendEmail } from "~/server/services/email";
 
 export default authenticated(
   imageUploadHandler(
@@ -118,6 +122,12 @@ export default authenticated(
           const prStatus = await createPR(payload);
 
           if (!prStatus.success) {
+            // send alert email whan failed to add project
+            const mail = {
+              subject: "Failed to create pr during project submission",
+              html: alertMailMarkup(JSON.stringify(prStatus.message)),
+            };
+            await sendEmail(mail);
             event.res.statusCode = 400;
             return {
               code: "BUILD_FAILED",
@@ -133,6 +143,13 @@ export default authenticated(
           };
         } catch (err: any) {
           console.log("create project error ", err);
+          // send alert email whan failed to add project
+          const mail = {
+            subject: "Server error while submitting project",
+            html: alertMailMarkup(JSON.stringify(err)),
+          };
+          await sendEmail(mail);
+
           event.node.res.statusCode = 500;
           return {
             code: "ERROR",
