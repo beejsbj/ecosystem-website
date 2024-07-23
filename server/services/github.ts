@@ -4,6 +4,7 @@ import { prepareMarkdown } from "./helper";
 
 import type { ProjectType } from "../types";
 import type { Status } from "./helper";
+import axios from "axios";
 
 const config = useRuntimeConfig();
 
@@ -154,5 +155,31 @@ export async function createPR(
     }
 
     return { success: false, message: "Failed to create pull request" };
+  }
+}
+
+// Function to read commit history from a specific branch
+export async function getGuideCodeWithSteps(branch: string) {
+  try {
+    const repoOwner = "vanshwassan";
+    const repoName = "read-a-dapi-interactive-guide";
+
+    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?sha=${branch}`;
+
+    const res = await axios.get(url);
+
+    const commits = res?.data?.map((commit: any) => {
+      return {
+        hash: commit.sha,
+        message: commit.commit.message,
+        codeUrl: `https://github.com/${repoOwner}/${repoName}/tree/${commit.sha}`,
+        markdown: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${commit.sha}/README.md`,
+      };
+    });
+
+    return commits.reverse();
+  } catch (error) {
+    console.error("Error reading commit history:", error);
+    return [];
   }
 }
