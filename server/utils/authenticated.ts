@@ -67,6 +67,7 @@ export const authenticated = (
         };
       }
 
+      // check and reconnect db
       await connectDB();
 
       // verify wallet role
