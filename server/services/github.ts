@@ -154,40 +154,28 @@ export async function createPR(projectData: ProjectType): Promise<Status> {
   }
 }
 
-/**
- * Checks if project with the same name already submitted to dapp-registry repo
- * @param projectData
- * @returns bool
- */
-export async function isProjectExists(
-  projectData: ProjectType
-): Promise<Boolean> {
+// Function to read commit history from a specific branch
+export async function getGuideCodeWithSteps(branch: string) {
   try {
-    const fileListEndpoint = `https://api.github.com/repos/${repoOwner}/${repo}/contents/projects`;
+    const repoOwner = "vanshwassan";
+    const repoName = "read-a-dapi-interactive-guide";
 
-    const projectList = [];
+    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?sha=${branch}`;
 
-    const data = await axios.get(fileListEndpoint);
-    const repoItems: any[] = await data.data;
+    const res = await axios.get(url);
 
-    // Batch processing
-    const batchSize = 20;
-    for (let i = 0; i < repoItems.length; i += batchSize) {
-      const batch = repoItems.slice(i, i + batchSize);
-      const batchPromises = batch.map((item) => axios.get(item.download_url));
+    const commits = res?.data?.map((commit: any) => {
+      return {
+        hash: commit.sha,
+        message: commit.commit.message,
+        codeUrl: `https://github.com/${repoOwner}/${repoName}/tree/${commit.sha}`,
+        markdown: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${commit.sha}/README.md`,
+      };
+    });
 
-      const batchResults = await Promise.all(batchPromises);
-      const batchProjects = batchResults.map((res) => res.data);
-
-      projectList.push(...batchProjects);
-    }
-
-    const isExists =
-      projectList.findIndex((el) => el.name === projectData.name) >= 0;
-
-    return isExists;
-  } catch (err: any) {
-    console.log("failed to read git repo in func: isProjectExists ", err);
-    return false;
+    return commits.reverse();
+  } catch (error) {
+    console.error("Error reading commit history:", error);
+    return [];
   }
 }
