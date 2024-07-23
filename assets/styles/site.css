@@ -36,14 +36,7 @@ body {
 }
 
 /* disable the w3m-modal break without disabling devtools for dev env */
-body
-  > div[data-v-app]:not(
-    #vue-inspector-container,
-    #nuxt-devtools-container,
-    #__nuxt,
-
-  ),
-body > div:last-child {
+body > div[data-v-app]:not(#__nuxt) {
   display: none !important;
 }
 

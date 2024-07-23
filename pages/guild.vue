@@ -1,6 +1,5 @@
 <script setup>
 import { watchNetwork } from "@wagmi/core";
-const [gsap] = useGsap();
 
 const web3Store = useWeb3Store();
 const ui = useInterfaceStore();
@@ -38,37 +37,41 @@ function buttonHandle(event, text, index) {
   animateHeading();
 }
 
-function animateHeading() {
-  if (!selected.value) {
-    gsap.fromTo(
-      "div.panel",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power4.out",
-      }
-    );
-  } else {
-    gsap.fromTo(
-      "div.panel h2",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power4.out",
-      }
-    );
-  }
-}
+let animateHeading;
+
+useGsap((gsap) => {
+  animateHeading = () => {
+    if (!selected.value) {
+      gsap.fromTo(
+        "div.panel",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power4.out",
+        }
+      );
+    } else {
+      gsap.fromTo(
+        "div.panel h2",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power4.out",
+        }
+      );
+    }
+  };
+});
 
 watch(selectedProductId, async (productId, prevProductId) => {
   if (productId === undefined) {

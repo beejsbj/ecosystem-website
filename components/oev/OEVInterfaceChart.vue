@@ -3,7 +3,6 @@ import formatNumber from "@/utils/formatNumber";
 
 const ui = useInterfaceStore();
 const colors = Object.values(ui.api3Colors);
-const [gsap] = useGsap();
 
 const scrollPosition = ref(0);
 
@@ -101,21 +100,24 @@ function barHeight(value) {
   return Math.max(scaledHeight, minHeight);
 }
 
-function handleButton(direction) {
-  const carousel = barsList.value;
-  scrollPosition.value = carousel.clientWidth;
-  const currentScroll = carousel.scrollLeft;
-  const newScroll =
-    direction > 0
-      ? currentScroll + scrollPosition.value
-      : currentScroll - scrollPosition.value;
+let handleButton;
+useGsap((gsap) => {
+  handleButton = (direction) => {
+    const carousel = barsList.value;
+    scrollPosition.value = carousel.clientWidth;
+    const currentScroll = carousel.scrollLeft;
+    const newScroll =
+      direction > 0
+        ? currentScroll + scrollPosition.value
+        : currentScroll - scrollPosition.value;
 
-  gsap.to(carousel, {
-    scrollTo: {
-      x: newScroll,
-    },
-  });
-}
+    gsap.to(carousel, {
+      scrollTo: {
+        x: newScroll,
+      },
+    });
+  };
+});
 </script>
 
 <template>
@@ -184,7 +186,7 @@ function handleButton(direction) {
           />
 
           <DynamicIcon v-else icon="dapp" class="protocol-logo user" />
-          <p class="solid-voice protocol-name">
+          <p class="calm-voice protocol-name">
             {{ protocol.name }}
           </p>
         </li>
@@ -216,7 +218,7 @@ function handleButton(direction) {
 <style scoped lang="scss">
 .chart-grid {
   display: grid;
-  margin-top: var(--space-3xl);
+  margin-top: var(--space-l);
 
   gap: var(--space-s);
   position: relative;
@@ -421,19 +423,19 @@ li {
   & > .protocol-name {
     text-align: center;
     white-space: nowrap;
-    font-size: var(--step--2);
-    scale: 1.8;
+    //  font-size: var(--step--2);
+    //  scale: 1.8;
     transition: 0.2s ease-in-out;
 
     @media (max-width: 1170px) {
-      scale: 1.3;
+      // scale: 1.3;
     }
 
     @media (max-width: 850px) {
-      scale: unset;
+      // scale: unset;
 
       &:hover {
-        scale: 1.3;
+        //   scale: 1.3;
         translate: 0 12px;
       }
     }

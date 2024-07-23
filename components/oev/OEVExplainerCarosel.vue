@@ -1,8 +1,6 @@
 <script setup>
 const ui = useInterfaceStore();
 
-const [gsap] = useGsap();
-
 const scrollPosition = ref(0);
 const carouselWidth = ref(0);
 
@@ -42,22 +40,25 @@ const steps = [
     list: ["Searchers", "Validators"],
   },
 ];
+///
+let handleButton;
+useGsap((gsap) => {
+  handleButton = (direction) => {
+    const carousel = document.querySelector(".explainer-carousel");
+    scrollPosition.value = carousel.clientWidth;
+    const currentScroll = carousel.scrollLeft;
+    const newScroll =
+      direction > 0
+        ? currentScroll + scrollPosition.value
+        : currentScroll - scrollPosition.value;
 
-function handleButton(direction) {
-  const carousel = document.querySelector(".explainer-carousel");
-  scrollPosition.value = carousel.clientWidth;
-  const currentScroll = carousel.scrollLeft;
-  const newScroll =
-    direction > 0
-      ? currentScroll + scrollPosition.value
-      : currentScroll - scrollPosition.value;
-
-  gsap.to(carousel, {
-    scrollTo: {
-      x: newScroll,
-    },
-  });
-}
+    gsap.to(carousel, {
+      scrollTo: {
+        x: newScroll,
+      },
+    });
+  };
+});
 </script>
 
 <template>

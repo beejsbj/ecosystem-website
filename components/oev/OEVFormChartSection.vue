@@ -34,7 +34,7 @@ const oev = useOEVStore();
     }
 
     & > * {
-      max-width: 560px;
+      // max-width: 560px;
       margin-inline: auto;
 
       @media (min-width: 1000px) {

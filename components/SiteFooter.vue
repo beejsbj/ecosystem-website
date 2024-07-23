@@ -177,7 +177,7 @@ const miscLinks = [
               v-for="(link, linkIndex) in footerMenu.links"
               :key="linkIndex"
               :to="link.path"
-              class="whisper-voice text footer-link"
+              class="calm-voice text footer-link"
               :class="link.external ? 'external-link' : ''"
             >
               <span>{{ link.label }}</span>
@@ -318,10 +318,11 @@ section.other inner-column {
     display: grid;
     justify-content: end;
     flex-wrap: wrap;
-    text-align: right;
 
     a {
+      text-align: right;
       white-space: nowrap;
+      justify-self: end;
     }
 
     @media (min-width: 768px) {
@@ -357,6 +358,8 @@ section.other inner-column {
     color: var(--gray);
     align-self: end;
     text-align: left;
+
+    padding-bottom: 0.5em;
   }
 }
 
