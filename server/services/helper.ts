@@ -37,11 +37,9 @@ export const emailMarkup = (formData: any): string => {
         font-family: Arial, sans-serif;
         margin: 20px;
       }
-  
       h2 {
         color: #333;
       }
-  
       p {
         margin-bottom: 10px;
       }
