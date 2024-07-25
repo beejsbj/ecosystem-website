@@ -1,23 +1,21 @@
 import { cacheInterval, queryCache } from "~/server/services/cache";
-import { getGuideCodeWithSteps } from "~/server/services/github";
+import { getGuideCodeWithSteps, getGuides } from "~/server/services/github";
 
 export default defineEventHandler(async (event) => {
   try {
     const {}: any = getQuery(event);
 
-    const branch = "main";
+    let guides: any[] | undefined = queryCache.get("guides");
 
-    let commits: any[] | undefined = queryCache.get("guides");
-
-    if (commits === undefined) {
-      commits = await getGuideCodeWithSteps(branch);
-      queryCache.set("guides", commits, cacheInterval);
+    if (guides === undefined) {
+      guides = await getGuides();
+      queryCache.set("guides", guides, cacheInterval);
     }
 
     event.node.req.statusCode = 200;
-    return { steps: commits };
+    return { guides: guides };
   } catch (err: any) {
-    console.log("get tutorial guide steps  error  ", err);
+    console.log("get guides  error  ", err);
     event.node.req.statusCode = 500;
     return {
       code: "ERROR",
