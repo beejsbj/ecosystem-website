@@ -161,8 +161,8 @@ export async function createPR(
 // Function to read commit history from a specific branch
 export async function getGuideCodeWithSteps(branch: string) {
   try {
-    const repoOwner = "vanshwassan";
-    const repoName = "read-a-dapi-interactive-guide";
+    const repoOwner = "api3-ecosystem";
+    const repoName = "interactive-guides";
 
     const url = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?sha=${branch}`;
 
@@ -180,6 +180,30 @@ export async function getGuideCodeWithSteps(branch: string) {
     return commits.reverse();
   } catch (error) {
     console.error("Error reading commit history:", error);
+    return [];
+  }
+}
+
+// Fetch all branch name with guides
+export async function getGuides() {
+  try {
+    const repoOwner = "api3-ecosystem";
+    const repoName = "interactive-guides";
+
+    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/branches`;
+
+    const res = await axios.get(url);
+
+    const branches = res?.data?.map((branch: any) => {
+      return {
+        slug: branch.name,
+        title: branch.name.split("-").join(" "),
+      };
+    });
+
+    return branches.filter((el: any) => el.slug !== "main");
+  } catch (error) {
+    console.error("Error reading branches:", error);
     return [];
   }
 }
