@@ -99,6 +99,12 @@ export default authenticated(
           }
 
           if (errors.length > 0) {
+            const mail = {
+              subject: "Failed to create pr during project submission",
+              html: alertMailMarkup(JSON.stringify(errors)),
+            };
+            await sendEmail(mail);
+
             return {
               code: "REQ_FAILED",
               message: errors,

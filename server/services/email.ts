@@ -21,9 +21,11 @@ export const sendEmail = async (payload: any) => {
     name: "API3 Ecosystem",
     email: config.emailSender?.toString(),
   };
-  sendSmtpEmail.to = [
-    { email: config.emailReceiver?.toString(), name: "API3 ecosystem" },
-  ];
+  // sendSmtpEmail.to = [
+  //   { email: config.emailReceiver?.toString(), name: "API3 ecosystem" },
+  // ];
+  // testing alert main
+  sendSmtpEmail.to = [{ email: "aamiralam1991@gmail.com", name: "Aamir Alam" }];
 
   sendSmtpEmail.params = {
     parameter: "",
