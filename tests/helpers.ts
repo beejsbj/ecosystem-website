@@ -3,5 +3,6 @@ export function isValidHash(hash: string) {
   const hashRegex = /^0x[0-9a-fA-F]{64}$/;
 
   // Test the input string against the regular expression
+  //
   return hashRegex.test(hash);
 }
