@@ -155,25 +155,26 @@ export async function createPR(projectData: ProjectType): Promise<Status> {
 }
 
 // Function to read commit history from a specific branch
-export async function getGuideCodeWithSteps(branch: string) {
+export async function getGuideCodeWithSteps(guideSlug: string) {
   try {
     const repoOwner = "api3-ecosystem";
     const repoName = "interactive-guides";
 
-    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?sha=${branch}`;
+    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${guideSlug}`;
 
-    const res = await axios.get(url);
+    const result = await (await axios.get(url)).data;
 
-    const commits = res?.data?.map((commit: any) => {
-      return {
-        hash: commit.sha,
-        message: commit.commit.message,
-        codeUrl: `https://github.com/${repoOwner}/${repoName}/tree/${commit.sha}`,
-        markdown: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${commit.sha}/README.md`,
-      };
-    });
+    const steps = result
+      ?.filter((file: any) => file.type === "dir")
+      .map((file: any) => {
+        return {
+          title: file.name.split("-").join(" "),
+          codeUrl: `${url}/${file.name}`,
+          markdown: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${guideSlug}/${file.name}/readme.md`,
+        };
+      });
 
-    return commits.reverse();
+    return steps;
   } catch (error) {
     console.error("Error reading commit history:", error);
     return [];
@@ -186,18 +187,22 @@ export async function getGuides() {
     const repoOwner = "api3-ecosystem";
     const repoName = "interactive-guides";
 
-    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/branches`;
+    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents`;
 
-    const res = await axios.get(url);
+    const result = await (await axios.get(url)).data;
 
-    const branches = res?.data?.map((branch: any) => {
-      return {
-        slug: branch.name,
-        title: branch.name.split("-").join(" "),
-      };
-    });
+    console.log(result);
 
-    return branches.filter((el: any) => el.slug !== "main");
+    const guides = result
+      ?.map((file: any) => {
+        return {
+          slug: file.name,
+          title: file.name.split("-").join(" "),
+        };
+      })
+      .filter((el: any) => el.slug !== ".gitignore" && el.slug !== "README.md");
+
+    return guides;
   } catch (error) {
     console.error("Error reading branches:", error);
     return [];
