@@ -5,6 +5,7 @@ export const sendEmail = async (payload: any) => {
   let apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
   if (!config.brevoMailApi || !config.emailReceiver || !config.emailSender) {
+    console.log("failed to send email: missing mail env config");
     return null;
   }
 

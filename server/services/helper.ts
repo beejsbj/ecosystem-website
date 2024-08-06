@@ -37,11 +37,9 @@ export const emailMarkup = (formData: any): string => {
         font-family: Arial, sans-serif;
         margin: 20px;
       }
-  
       h2 {
         color: #333;
       }
-  
       p {
         margin-bottom: 10px;
       }
@@ -57,6 +55,31 @@ export const emailMarkup = (formData: any): string => {
   
     <p><strong>Message:</strong></p>
     <p>${formData?.message}</p>
+  </body>
+  </html>
+  `;
+  return content;
+};
+
+export const alertMailMarkup = (stringContent: string): string => {
+  const content = `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p><strong>Name:</strong>   ${stringContent}</p>
+
   </body>
   </html>
   `;
