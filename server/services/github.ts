@@ -154,6 +154,44 @@ export async function createPR(projectData: ProjectType): Promise<Status> {
   }
 }
 
+/**
+ * Checks if project with the same name already submitted to dapp-registry repo
+ * @param projectData
+ * @returns bool
+ */
+export async function isProjectExists(
+  projectData: ProjectType
+): Promise<Boolean> {
+  try {
+    const fileListEndpoint = `https://api.github.com/repos/${repoOwner}/${repo}/contents/projects`;
+
+    const projectList = [];
+
+    const data = await axios.get(fileListEndpoint);
+    const repoItems: any[] = await data.data;
+
+    // Batch processing
+    const batchSize = 20;
+    for (let i = 0; i < repoItems.length; i += batchSize) {
+      const batch = repoItems.slice(i, i + batchSize);
+      const batchPromises = batch.map((item) => axios.get(item.download_url));
+
+      const batchResults = await Promise.all(batchPromises);
+      const batchProjects = batchResults.map((res) => res.data);
+
+      projectList.push(...batchProjects);
+    }
+
+    const isExists =
+      projectList.findIndex((el) => el.name === projectData.name) >= 0;
+
+    return isExists;
+  } catch (err: any) {
+    console.log("failed to read git repo in func: isProjectExists ", err);
+    return false;
+  }
+}
+
 // Function to read commit history from a specific branch
 export async function getGuideCodeWithSteps(guideSlug: string) {
   try {
@@ -167,10 +205,12 @@ export async function getGuideCodeWithSteps(guideSlug: string) {
     const steps = result
       ?.filter((file: any) => file.type === "dir")
       .map((file: any) => {
+        console.log(file);
         return {
           title: file.name.split("-").join(" "),
-          codeUrl: `${url}/${file.name}`,
+          codeUrl: file.path,
           markdown: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${guideSlug}/${file.name}/readme.md`,
+          config: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${guideSlug}/${file.name}/config.tutorial.json`,
         };
       });
 
