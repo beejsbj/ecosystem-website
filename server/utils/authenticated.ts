@@ -2,7 +2,8 @@ import type { EventHandler } from "h3";
 import { ROLE } from "../types";
 import { User } from "..//models/User";
 import { SiweMessage } from "siwe";
-import { UserType } from "../types/User";
+import type { UserType } from "../types/User";
+import { connectDB } from "../services/helper";
 
 export const authenticated = (
   handler: EventHandler,
@@ -10,7 +11,24 @@ export const authenticated = (
 ) =>
   defineEventHandler(async (event: any) => {
     try {
-      const { signature, message, address, nonce } = event.node.req.headers;
+      const { signature, message, address, nonce, apikey } =
+        event.node.req.headers;
+
+      if (role === ROLE.SERVICE_WEBHOOK) {
+        const config = useRuntimeConfig();
+
+        if (config.serviceApiKey !== apikey) {
+          event.node.res.statusCode = 401;
+          return {
+            code: "AuthorizationFailed",
+            message: "Invalid service API Key.",
+          };
+        }
+
+        const response = await handler(event);
+
+        return { response };
+      }
 
       const siweMessage = new SiweMessage(JSON.parse(message));
       const verificationResult = await siweMessage.verify({ signature });
@@ -48,6 +66,9 @@ export const authenticated = (
           message: "Wrong uri!",
         };
       }
+
+      // check and reconnect db
+      await connectDB();
 
       // verify wallet role
       let user = await User.findOne({ address: fields.address });

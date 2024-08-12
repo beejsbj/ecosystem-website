@@ -1,14 +1,5 @@
 <script setup>
 const route = useRoute();
-
-useHead({
-  htmlAttrs: {
-    lang: "en",
-  },
-  bodyAttrs: {
-    class: route.name,
-  },
-});
 </script>
 
 <template>
@@ -38,15 +29,24 @@ useHead({
   :deep(picture.curves-decoration-3) {
     position: absolute;
 
-    --top: 100px;
-    --left: -200px;
+    --top: 0px;
+    --left: -250px;
+    --left: -60vw;
     --width: 300vw;
     top: var(--top);
     left: var(--left);
 
     width: var(--width);
-
     @media (min-width: 768px) {
+      display: block;
+      --top: -0px;
+      --left: -350px;
+
+      --width: 200vw;
+      z-index: -10;
+    }
+
+    @media (min-width: 1024px) {
       display: block;
       --top: -50px;
       --left: -500px;

@@ -4,10 +4,10 @@
     <g transform="matrix(1,0,0,1,-2.27374e-13,-22847.6)">
         <g transform="matrix(0.510667,0,0,0.449031,1090.65,12629.9)">
             <rect id="Artboard21" x="-2135.73" y="22755" width="334.989" height="334.989" style="fill:none;"/>
-            <clipPath id="_clip1">
+            <clipPath id="pat2_clip1">
                 <rect id="Artboard211" serif:id="Artboard21" x="-2135.73" y="22755" width="334.989" height="334.989"/>
             </clipPath>
-            <g clip-path="url(#_clip1)">
+            <g clip-path="url(#pat2_clip1)">
                 <g transform="matrix(6.26048,0,0,4.09322,33293.5,7065.3)">
                     <g transform="matrix(0.177261,0,0,0.309657,-7476.08,-681.082)">
                         <path d="M10400.7,14585.1L10545.6,14838.8L10255.9,14838.8L10400.7,14585.1Z" style="fill:none;stroke:rgb(36,100,79);stroke-width:7.04px;"/>

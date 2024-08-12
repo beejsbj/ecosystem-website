@@ -1,16 +1,14 @@
 <script setup>
-import { gsap } from "gsap";
+function animateIntro(gsap) {
+  //   const pageLoad = gsap.timeline();
+  const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
 
-const ui = useInterfaceStore();
-function animate() {
+  const curvesLength = curvesPath[0].getTotalLength();
+
+  const duration = 3;
+  const easing = "linear";
+
   let context = gsap.context(() => {
-    const curvesPath = document.querySelectorAll(".curves-decoration-3 path");
-
-    const curvesLength = 4100;
-
-    const duration = 3;
-    const easing = "linear";
-
     const timeline = gsap.timeline();
 
     timeline.set(curvesPath, {
@@ -30,8 +28,26 @@ function animate() {
   }, 2000);
 }
 
-onMounted(() => {
-  animate();
+useGsap((gsap) => {
+  animateIntro(gsap);
+
+  const timeline = gsap.timeline({
+    repeat: -1,
+  });
+
+  timeline.fromTo(
+    "#curve-decoration-3 path",
+    {
+      y: 5,
+    },
+    {
+      duration: 5,
+      y: -5,
+      transformOrigin: "center center",
+      ease: "power1.inOut",
+      stagger: { each: 0.5, repeat: "-1", from: "start", yoyo: true },
+    }
+  );
 });
 </script>
 
@@ -57,7 +73,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear1);
+                stroke: url(#curve-deco-3_Linear1);
                 stroke-width: 0.85px;
               "
             />
@@ -66,7 +82,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear2);
+                stroke: url(#curve-deco-3_Linear2);
                 stroke-width: 0.85px;
               "
             />
@@ -75,7 +91,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear3);
+                stroke: url(#curve-deco-3_Linear3);
                 stroke-width: 0.85px;
               "
             />
@@ -84,7 +100,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear4);
+                stroke: url(#curve-deco-3_Linear4);
                 stroke-width: 0.85px;
               "
             />
@@ -93,7 +109,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear5);
+                stroke: url(#curve-deco-3_Linear5);
                 stroke-width: 0.85px;
               "
             />
@@ -102,7 +118,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear6);
+                stroke: url(#curve-deco-3_Linear6);
                 stroke-width: 0.85px;
               "
             />
@@ -111,7 +127,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear7);
+                stroke: url(#curve-deco-3_Linear7);
                 stroke-width: 0.85px;
               "
             />
@@ -120,7 +136,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear8);
+                stroke: url(#curve-deco-3_Linear8);
                 stroke-width: 0.85px;
               "
             />
@@ -129,7 +145,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear9);
+                stroke: url(#curve-deco-3_Linear9);
                 stroke-width: 0.85px;
               "
             />
@@ -138,7 +154,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear10);
+                stroke: url(#curve-deco-3_Linear10);
                 stroke-width: 0.85px;
               "
             />
@@ -147,7 +163,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear11);
+                stroke: url(#curve-deco-3_Linear11);
                 stroke-width: 0.85px;
               "
             />
@@ -156,7 +172,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear12);
+                stroke: url(#curve-deco-3_Linear12);
                 stroke-width: 0.85px;
               "
             />
@@ -165,7 +181,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear13);
+                stroke: url(#curve-deco-3_Linear13);
                 stroke-width: 0.85px;
               "
             />
@@ -174,7 +190,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear14);
+                stroke: url(#curve-deco-3_Linear14);
                 stroke-width: 0.85px;
               "
             />
@@ -183,7 +199,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear15);
+                stroke: url(#curve-deco-3_Linear15);
                 stroke-width: 0.85px;
               "
             />
@@ -192,7 +208,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear16);
+                stroke: url(#curve-deco-3_Linear16);
                 stroke-width: 0.85px;
               "
             />
@@ -201,7 +217,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear17);
+                stroke: url(#curve-deco-3_Linear17);
                 stroke-width: 0.85px;
               "
             />
@@ -210,7 +226,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear18);
+                stroke: url(#curve-deco-3_Linear18);
                 stroke-width: 0.85px;
               "
             />
@@ -219,7 +235,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear19);
+                stroke: url(#curve-deco-3_Linear19);
                 stroke-width: 0.85px;
               "
             />
@@ -228,7 +244,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear20);
+                stroke: url(#curve-deco-3_Linear20);
                 stroke-width: 0.85px;
               "
             />
@@ -237,7 +253,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear21);
+                stroke: url(#curve-deco-3_Linear21);
                 stroke-width: 0.85px;
               "
             />
@@ -246,7 +262,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear22);
+                stroke: url(#curve-deco-3_Linear22);
                 stroke-width: 0.85px;
               "
             />
@@ -255,7 +271,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear23);
+                stroke: url(#curve-deco-3_Linear23);
                 stroke-width: 0.85px;
               "
             />
@@ -264,7 +280,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear24);
+                stroke: url(#curve-deco-3_Linear24);
                 stroke-width: 0.85px;
               "
             />
@@ -273,7 +289,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear25);
+                stroke: url(#curve-deco-3_Linear25);
                 stroke-width: 0.85px;
               "
             />
@@ -282,7 +298,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear26);
+                stroke: url(#curve-deco-3_Linear26);
                 stroke-width: 0.85px;
               "
             />
@@ -291,7 +307,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear27);
+                stroke: url(#curve-deco-3_Linear27);
                 stroke-width: 0.85px;
               "
             />
@@ -300,7 +316,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear28);
+                stroke: url(#curve-deco-3_Linear28);
                 stroke-width: 0.85px;
               "
             />
@@ -309,7 +325,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear29);
+                stroke: url(#curve-deco-3_Linear29);
                 stroke-width: 0.85px;
               "
             />
@@ -318,7 +334,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear30);
+                stroke: url(#curve-deco-3_Linear30);
                 stroke-width: 0.85px;
               "
             />
@@ -327,7 +343,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear31);
+                stroke: url(#curve-deco-3_Linear31);
                 stroke-width: 0.85px;
               "
             />
@@ -336,7 +352,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear32);
+                stroke: url(#curve-deco-3_Linear32);
                 stroke-width: 0.85px;
               "
             />
@@ -345,7 +361,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear33);
+                stroke: url(#curve-deco-3_Linear33);
                 stroke-width: 0.85px;
               "
             />
@@ -354,7 +370,7 @@ onMounted(() => {
               style="
                 fill: none;
                 fill-rule: nonzero;
-                stroke: url(#_Linear34);
+                stroke: url(#curve-deco-3_Linear34);
                 stroke-width: 0.85px;
               "
             />
@@ -363,7 +379,7 @@ onMounted(() => {
       </g>
       <defs>
         <linearGradient
-          id="_Linear1"
+          id="curve-deco-3_Linear1"
           x1="0"
           y1="0"
           x2="1"
@@ -393,7 +409,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear2"
+          id="curve-deco-3_Linear2"
           x1="0"
           y1="0"
           x2="1"
@@ -423,7 +439,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear3"
+          id="curve-deco-3_Linear3"
           x1="0"
           y1="0"
           x2="1"
@@ -453,7 +469,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear4"
+          id="curve-deco-3_Linear4"
           x1="0"
           y1="0"
           x2="1"
@@ -483,7 +499,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear5"
+          id="curve-deco-3_Linear5"
           x1="0"
           y1="0"
           x2="1"
@@ -513,7 +529,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear6"
+          id="curve-deco-3_Linear6"
           x1="0"
           y1="0"
           x2="1"
@@ -543,7 +559,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear7"
+          id="curve-deco-3_Linear7"
           x1="0"
           y1="0"
           x2="1"
@@ -573,7 +589,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear8"
+          id="curve-deco-3_Linear8"
           x1="0"
           y1="0"
           x2="1"
@@ -603,7 +619,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear9"
+          id="curve-deco-3_Linear9"
           x1="0"
           y1="0"
           x2="1"
@@ -633,7 +649,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear10"
+          id="curve-deco-3_Linear10"
           x1="0"
           y1="0"
           x2="1"
@@ -663,7 +679,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear11"
+          id="curve-deco-3_Linear11"
           x1="0"
           y1="0"
           x2="1"
@@ -693,7 +709,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear12"
+          id="curve-deco-3_Linear12"
           x1="0"
           y1="0"
           x2="1"
@@ -723,7 +739,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear13"
+          id="curve-deco-3_Linear13"
           x1="0"
           y1="0"
           x2="1"
@@ -753,7 +769,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear14"
+          id="curve-deco-3_Linear14"
           x1="0"
           y1="0"
           x2="1"
@@ -783,7 +799,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear15"
+          id="curve-deco-3_Linear15"
           x1="0"
           y1="0"
           x2="1"
@@ -813,7 +829,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear16"
+          id="curve-deco-3_Linear16"
           x1="0"
           y1="0"
           x2="1"
@@ -843,7 +859,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear17"
+          id="curve-deco-3_Linear17"
           x1="0"
           y1="0"
           x2="1"
@@ -873,7 +889,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear18"
+          id="curve-deco-3_Linear18"
           x1="0"
           y1="0"
           x2="1"
@@ -903,7 +919,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear19"
+          id="curve-deco-3_Linear19"
           x1="0"
           y1="0"
           x2="1"
@@ -933,7 +949,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear20"
+          id="curve-deco-3_Linear20"
           x1="0"
           y1="0"
           x2="1"
@@ -963,7 +979,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear21"
+          id="curve-deco-3_Linear21"
           x1="0"
           y1="0"
           x2="1"
@@ -993,7 +1009,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear22"
+          id="curve-deco-3_Linear22"
           x1="0"
           y1="0"
           x2="1"
@@ -1023,7 +1039,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear23"
+          id="curve-deco-3_Linear23"
           x1="0"
           y1="0"
           x2="1"
@@ -1053,7 +1069,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear24"
+          id="curve-deco-3_Linear24"
           x1="0"
           y1="0"
           x2="1"
@@ -1083,7 +1099,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear25"
+          id="curve-deco-3_Linear25"
           x1="0"
           y1="0"
           x2="1"
@@ -1113,7 +1129,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear26"
+          id="curve-deco-3_Linear26"
           x1="0"
           y1="0"
           x2="1"
@@ -1143,7 +1159,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear27"
+          id="curve-deco-3_Linear27"
           x1="0"
           y1="0"
           x2="1"
@@ -1173,7 +1189,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear28"
+          id="curve-deco-3_Linear28"
           x1="0"
           y1="0"
           x2="1"
@@ -1203,7 +1219,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear29"
+          id="curve-deco-3_Linear29"
           x1="0"
           y1="0"
           x2="1"
@@ -1233,7 +1249,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear30"
+          id="curve-deco-3_Linear30"
           x1="0"
           y1="0"
           x2="1"
@@ -1263,7 +1279,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear31"
+          id="curve-deco-3_Linear31"
           x1="0"
           y1="0"
           x2="1"
@@ -1293,7 +1309,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear32"
+          id="curve-deco-3_Linear32"
           x1="0"
           y1="0"
           x2="1"
@@ -1323,7 +1339,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear33"
+          id="curve-deco-3_Linear33"
           x1="0"
           y1="0"
           x2="1"
@@ -1353,7 +1369,7 @@ onMounted(() => {
           />
         </linearGradient>
         <linearGradient
-          id="_Linear34"
+          id="curve-deco-3_Linear34"
           x1="0"
           y1="0"
           x2="1"
@@ -1389,25 +1405,6 @@ onMounted(() => {
 
 <style lang="scss">
 picture.curves-decoration-3 {
-  &::after {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    width: 800px;
-    aspect-ratio: 1;
-    z-index: 1;
-    background: linear-gradient(
-      135deg,
-      hsla(0, 0%, 0%, 0.8) 20%,
-      transparent 50% 100%
-    );
-
-    @media (min-width: 768px) {
-      top: 50px;
-      left: 500px;
-    }
-  }
+  opacity: 0.5;
 }
 </style>

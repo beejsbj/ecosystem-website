@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { gsap } from "gsap";
+
 import { onMounted, onUnmounted } from "vue";
 
 export const useInterfaceStore = defineStore("interface", function () {
@@ -11,11 +11,11 @@ export const useInterfaceStore = defineStore("interface", function () {
 
   // api3 colors /////////////////////////////
   const api3Colors = {
-    green: "hsla(166, 64%, 69%, 1)",
-    violet: "hsla(256, 34%, 54%, 1)",
-    blue: "hsla(226, 100%, 50%, 1)",
-    red: "hsla(0, 85%, 65%, 1)",
+    red: "hsla(4, 68%, 15%, 1)",
+    blue: "hsla(230, 53%, 32%, 1)",
+    green: "hsla(162, 30%, 22%, 1)",
     yellow: "hsla(44, 85%, 65%, 1)",
+    violet: "hsla(251, 58%, 21%, 1)",
   };
 
   //
@@ -55,7 +55,7 @@ export const useInterfaceStore = defineStore("interface", function () {
 
   setTimeout(() => {
     loadingDone.value = true;
-  }, 2000);
+  }, 2500);
 
   //
   //page transition	/////////////////////////////
@@ -63,32 +63,33 @@ export const useInterfaceStore = defineStore("interface", function () {
     transitionComplete: false,
   });
 
-  const pageTransitionConfig = {
-    name: "page-transiton",
-    mode: "out-in",
-    onEnter: (el, done) => {
-      gsap.set(el, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
-      gsap
-        .timeline({
-          paused: true,
-          onComplete() {
-            toggleTransitionComplete(true);
-            done();
-          },
-        })
-        .to(el, { autoAlpha: 1, xPercent: 0, duration: 0.25 })
-        .to(el, { scale: 1, duration: 0.25 })
-        .play();
-    },
-    onLeave: (el, done) => {
-      toggleTransitionComplete(false);
-      gsap
-        .timeline({ paused: true, onComplete: done })
-        .to(el, { scale: 0.8, duration: 0.2 })
-        .to(el, { xPercent: 100, autoAlpha: 0, duration: 0.2 })
-        .play();
-    },
-  };
+  //   const pageTransitionConfig = {
+  //     name: "page-transiton",
+  //     mode: "out-in",
+  //     onEnter: (el, done) => {
+  //       console.log("onEnter");
+  //       gsap.set(el, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
+  //       gsap
+  //         .timeline({
+  //           paused: true,
+  //           onComplete() {
+  //             toggleTransitionComplete(true);
+  //             done();
+  //           },
+  //         })
+  //         .to(el, { autoAlpha: 1, xPercent: 0, duration: 0.25 })
+  //         .to(el, { scale: 1, duration: 0.25 })
+  //         .play();
+  //     },
+  //     onLeave: (el, done) => {
+  //       toggleTransitionComplete(false);
+  //       gsap
+  //         .timeline({ paused: true, onComplete: done })
+  //         .to(el, { scale: 0.8, duration: 0.2 })
+  //         .to(el, { xPercent: 100, autoAlpha: 0, duration: 0.2 })
+  //         .play();
+  //     },
+  //   };
 
   function toggleTransitionComplete(value) {
     transitionState.transitionComplete = value;

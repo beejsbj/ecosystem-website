@@ -67,14 +67,14 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ["gsap", "@phase21/logos"],
+    transpile: ["gsap", "@api3/logos"],
   },
 
   vite: {
     optimizeDeps: {
       // This fixes a 500 error when running in dev mode after adding the build.transpile option above.
       // e.g: The requested module '/_nuxt/node_modules/mypackage/dist/index.js?v=85eb31b5' does not provide an export named 'default'
-      include: ["@phase21/logos > @phase21/logos"],
+      include: ["@api3/logos > @api3/logos"],
     },
   },
 
@@ -88,7 +88,6 @@ export default defineNuxtConfig({
   modules: [
     // tooltip
     ["floating-vue/nuxt", {}],
-
     //formkit
     [
       "@formkit/nuxt",
@@ -118,7 +117,7 @@ export default defineNuxtConfig({
     [
       "@nuxt/devtools",
       {
-        enabled: true, // Enable only in development
+        enabled: false, // Enable only in development
       },
     ],
 
@@ -147,7 +146,18 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "storeToRefs"],
       },
     ],
+    "nuxt-multi-cache",
   ],
+  multiCache: {
+    route: {
+      enabled: true,
+    },
+    api: {
+      enabled: true,
+      cacheTagInvalidationDelay: 5000,
+      authorization: false,
+    },
+  },
 
   //   plugins: ["~/plugins/gsap.ts", "~/plugins/floating-vue.ts"],
 
@@ -185,6 +195,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mongodbUri: process.env.NUXT_MONGODB_URI,
     mongodbUriDev: process.env.NUXT_MONGODB_URI_DEV,
+    serviceApiKey: process.env.NUXT_SERVICE_API_KEY,
     awsAccessKeyId: process.env.NUXT_AWS_ACCESS_KEY_ID,
     awsSecretAccessKey: process.env.NUXT_AWS_SECRET_ACCESS_KEY,
     rootBucket: process.env.NUXT_ROOT_BUCKET,

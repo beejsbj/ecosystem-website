@@ -9,42 +9,10 @@ const showShareBox = ref(false);
 const loading = ref(false);
 
 const { verifyWallet } = useSiwe();
-const { submitUpvote } = useHttpCalls();
 const web3Store = useWeb3Store();
 
 const handleShare = async () => {
   showShareBox.value = !showShareBox.value;
-};
-
-const handleUpvote = async () => {
-  if (!web3Store.state?.isConnected) {
-    web3Store.func?.openModal();
-    return;
-  }
-
-  loading.value = true;
-  const { success: verificationSuccess, data: verificationPayload } =
-    await verifyWallet();
-
-  if (!verificationSuccess) {
-    loading.value = false;
-
-    return;
-  }
-
-  loading.value = true;
-
-  const payload = {};
-  const submitResult = await submitUpvote(
-    props.dapp?._id,
-    payload,
-    verificationPayload
-  );
-  if (submitResult.success) {
-    upvotes.value += 1;
-  }
-
-  loading.value = false;
 };
 
 onMounted(() => {
@@ -124,10 +92,6 @@ aside {
     li {
       display: flex;
       gap: var(--space-3xs);
-
-      :deep(picture) {
-        max-width: 2rem;
-      }
     }
   }
 
@@ -163,14 +127,9 @@ aside {
 
 .chain {
   ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: var(--space-s);
-
-    picture.chain-icon {
-      aspect-ratio: 1/1;
-      width: 16px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
   }
 }
 

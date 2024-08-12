@@ -30,7 +30,5 @@ div.card {
   display: grid;
   align-items: center;
   grid-template-columns: 0.1fr 1fr;
-  //   justify-content: start;
-  //   gap: var(--space-l);
 }
 </style>

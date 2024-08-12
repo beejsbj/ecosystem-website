@@ -10,7 +10,9 @@ const ui = useInterfaceStore();
   <graphic-text>
     <text-content>
       <picture v-if="!ui.isDesktop">
-        <NuxtImg loading="lazy" :src="image" :alt="heading" />
+        <slot>
+          <NuxtImg loading="lazy" :src="image" :alt="heading" />
+        </slot>
       </picture>
       <h3 class="attention-voice">
         {{ heading }}
@@ -25,7 +27,9 @@ const ui = useInterfaceStore();
     </text-content>
 
     <picture v-if="ui.isDesktop">
-      <NuxtImg loading="lazy" :src="image" :alt="heading" />
+      <slot>
+        <NuxtImg loading="lazy" :src="image" :alt="heading" />
+      </slot>
     </picture>
   </graphic-text>
 </template>
@@ -40,6 +44,13 @@ graphic-text {
 
   picture {
     max-width: 80%;
+    aspect-ratio: 1/1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }
 
@@ -68,5 +79,10 @@ graphic-text.reverse {
       order: 2;
     }
   }
+}
+
+picture:has(svg) {
+  display: grid;
+  align-items: center;
 }
 </style>

@@ -12,14 +12,13 @@ function submitHandler(event) {
     <text-content>
       <h3 class="attention-voice gradient-text-color">Join our Newsletter</h3>
       <p>Get the latest news and updates from the API3 ecosystem.</p>
-      <FormKit type="form" id="join-newsletter" :actions="false" v-auto-animate>
+      <FormKit type="form" id="join-newsletter" :actions="false">
         <FormKit
           type="email"
           placeholder="johndoe@email.com"
           id="email-newsletter"
           name="email"
           validation="required|email"
-          v-auto-animate
         />
         <FormKit
           type="submit"

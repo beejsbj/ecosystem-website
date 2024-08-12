@@ -1,8 +1,5 @@
 import axios from "axios";
-import localFeedNames from "../stores/feedNames.json";
-
-const FEED_NAME_API_ENDPOINT =
-  "https://db-api-prod.api3.org/api/dapis-grouped?take=300&currentPage=1&sort=&sortDirection=&search=&categories=&chains=&sources=&statuses=";
+import dapis from "@api3/dapi-management/dist/data/dapis.json";
 
 export const useHttpCalls = () => {
   const submitProject = async (dappForm, images, verificationPayload) => {
@@ -78,7 +75,7 @@ export const useHttpCalls = () => {
         if (el.proxyType === "datafeedId") {
           proxyPayload[el?.chainId]?.push({
             proxyType: el?.proxyType,
-            feedName: !el?.feedName ? "ETH/USD" : el?.feedName,
+            feedName: el?.feedName,
             datafeedId: el?.datafeedId,
             proxyAddress: el?.proxyAddress,
             oev: { enabled: el?.isOEV, beneficiary: el?.oevBeneficiary },
@@ -86,7 +83,7 @@ export const useHttpCalls = () => {
         } else {
           proxyPayload[el?.chainId]?.push({
             proxyType: el?.proxyType,
-            feedName: !el?.feedName ? "ETH/USD" : el?.feedName,
+            feedName: el?.feedName,
             dapiNameHash: el?.dapiNameHash,
             proxyAddress: el?.proxyAddress,
             oev: { enabled: el?.isOEV, beneficiary: el?.oevBeneficiary },
@@ -129,60 +126,14 @@ export const useHttpCalls = () => {
     }
   };
 
-  const submitArticle = async (articleForm, verificationPayload) => {
-    try {
-      const res = await axios.post("/api/articles", articleForm, {
-        headers: verificationPayload,
-      });
-
-      if (res.status === 201) {
-        return { success: true, message: "Article submitted" };
-      }
-
-      return { success: false, message: "Failed to uplaod article" };
-    } catch (error) {
-      console.log("submit response error ", {
-        error: error,
-      });
-      const errorMessage = error?.response?.data?.response?.response?.message;
-      return { success: false, message: errorMessage };
-    }
-  };
-
-  const submitUpvote = async (projectId, payload, verificationPayload) => {
-    try {
-      const res = await axios.post(
-        `/api/projects/project/${projectId}`,
-        payload,
-        {
-          headers: verificationPayload,
-        }
-      );
-
-      if (res.status === 201) {
-        return { success: true, message: "Upvote success" };
-      }
-
-      return { success: false, message: "Failed to perform upvote" };
-    } catch (error) {
-      console.log("upvote response error ", {
-        error: error,
-      });
-      const errorMessage = error?.response?.data?.response?.response?.message;
-      return { success: false, message: errorMessage };
-    }
-  };
-
   const fetchFeedNames = async () => {
     try {
-      const response = await axios.get(FEED_NAME_API_ENDPOINT);
+      const response = dapis?.map((el) => el.name);
 
-      const feedNames = response.data?.dapis?.map((el) => el?.name);
-
-      return feedNames;
+      return response;
     } catch (error) {
-      console.log("failed to fetch feed names", error);
-      return localFeedNames;
+      console.log("failed to laod feed names", error);
+      return [];
     }
   };
 
@@ -206,8 +157,6 @@ export const useHttpCalls = () => {
 
   return {
     submitProject,
-    submitArticle,
-    submitUpvote,
     fetchFeedNames,
     subscribeNewsletter,
   };

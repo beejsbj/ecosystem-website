@@ -1,32 +1,42 @@
 <script setup>
 import slug from "slug";
+import { FormKitIcon } from "@formkit/vue";
 
-const ecosystem = useEcosystemStore();
-
-const props = defineProps(["icon", "fill", "stroke"]);
+const props = defineProps(["icon", "width"]);
 </script>
 
 <template>
-  <picture v-tooltip="icon">
-    <NuxtImg
+  <picture class="dynamic-icon" :class="icon">
+    <!-- <NuxtImg
       loading="lazy"
       :src="`/images/icons/${slug(props.icon)}.svg`"
       :alt="props.icon"
-    />
+    /> -->
+    <!-- <Transition name="fade"> -->
+    <FormKitIcon :icon="slug(props.icon)" />
+    <!-- </Transition> -->
   </picture>
 </template>
 
 <style scoped>
 picture {
   filter: hue-rotate(var(--hue-rotate));
-  aspect-ratio: 1/1;
-  width: 24px;
-  height: 24px;
+  /* aspect-ratio: 1/1; */
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+  --width: v-bind("props.width ? props.width : '24px'");
+
+  max-width: var(--width);
+
+  /* Calculate line width based on the width variable */
+}
+
+:deep(span.formkit-icon) {
+  display: contents;
+  margin: 0;
+  padding: 0;
+}
+
+:deep(svg) {
+  --line-width: calc(70% / 16);
 }
 </style>

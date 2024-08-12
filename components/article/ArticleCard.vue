@@ -1,6 +1,4 @@
 <script setup>
-import { gsap } from "gsap";
-
 const props = defineProps({
   article: {
     type: Object,
@@ -8,7 +6,7 @@ const props = defineProps({
   },
 });
 
-onMounted(() => {
+useGsap((gsap) => {
   const pageLoad = gsap.timeline();
   pageLoad.fromTo(
     "article-card",
@@ -107,12 +105,12 @@ article-card {
     gap: 1rem;
 
     align-items: center;
-    min-height: 150px;
+    //  min-height: 150px;
 
     grid-column: 1/-1;
 
     @media (min-width: 768px) {
-      grid-column: span 6;
+      grid-column: span 12;
     }
 
     picture {
@@ -132,7 +130,7 @@ article-card {
     grid-column: span 2;
 
     @media (min-width: 768px) {
-      grid-column: span 3;
+      grid-column: span 4;
       .firm-voice {
         //   font-size: var(--step-0);
       }

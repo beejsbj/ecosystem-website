@@ -29,10 +29,23 @@ html {
   scroll-padding-top: var(--space-2xl);
 }
 body {
-  background-color: var(--paper);
+  background: var(--paper);
   color: var(--ink);
   position: relative;
   overflow-x: hidden;
+}
+
+/* disable the w3m-modal break without disabling devtools for dev env */
+body > div[data-v-app]:not(#__nuxt) {
+  display: none !important;
+}
+
+body:not(.add-dapp) > w3m-modal {
+  display: none;
+}
+
+body.add-dapp > w3m-modal {
+  position: absolute;
 }
 
 #__nuxt,

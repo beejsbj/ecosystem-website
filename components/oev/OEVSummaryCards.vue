@@ -15,7 +15,7 @@ const {
 
 const cards = [
   {
-    title: "TOTAL LIQUIDATED",
+    title: "Total Liquidated",
     value: `$${formatNumber(totalLiquidated)}`,
   },
   //   {
@@ -41,18 +41,32 @@ const gridCount = computed(() => {
 </script>
 
 <template>
-  <ul class="summary-cards">
-    <!-- Display the OEV Saving Rate -->
-    <li class="summary-card" v-for="card in cards">
-      <h3 class="teaser-voice">{{ card.title }}</h3>
-      <p class="attention-voice">
-        {{ card.value }}
-      </p>
-    </li>
-  </ul>
+  <div class="summary-cards">
+    <ul class="summary-cards-list">
+      <!-- Display the OEV Saving Rate -->
+      <li class="summary-card" v-for="card in cards">
+        <h3 class="calm-voice">{{ card.title }}</h3>
+        <p
+          :class="{
+            'notice-voice': !ui.isDesktop,
+            'attention-voice': ui.isDesktop,
+          }"
+        >
+          {{ card.value }}
+        </p>
+      </li>
+    </ul>
+    <p class="whisper-voice disclamer">
+      *All data is based on records from 2021 onwards
+    </p>
+  </div>
 </template>
 
 <style scoped>
+.summary-cards {
+  padding-inline: var(--space-s);
+}
+
 /* Style the summary cards container */
 ul {
   display: grid;
@@ -62,21 +76,46 @@ ul {
   padding-top: var(--space-m);
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(var(--grid-count), 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 /* Style each summary card */
 li {
+  display: grid;
+
   gap: var(--space-xs);
-  padding: var(--space-m);
-  border: var(--border-dark);
+  padding: var(--space-s);
+  padding-bottom: var(--space-m);
+  position: relative;
+  /* border: var(--border-dark); */
+
   border-radius: var(--corners);
   text-align: center;
-  background: var(--gradient-radial-dark);
+  background: var(--gradient-radial-green);
 
-  p {
-    margin-top: unset;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(
+      180deg,
+      rgba(94, 255, 215, 0.4) -25.46%,
+      rgba(94, 255, 215, 0) 79%
+    );
+    z-index: -1;
+    border-radius: var(--corners);
   }
+}
+
+h3 {
+  color: var(--green-lightest);
+}
+p {
+  margin-top: unset;
+}
+
+p.disclamer {
+  margin-top: var(--space-l);
 }
 </style>

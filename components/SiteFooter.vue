@@ -177,10 +177,10 @@ const miscLinks = [
               v-for="(link, linkIndex) in footerMenu.links"
               :key="linkIndex"
               :to="link.path"
-              class="calm-voice text footer-link hover-underline"
+              class="calm-voice text footer-link"
+              :class="link.external ? 'external-link' : ''"
             >
               <span>{{ link.label }}</span>
-              <ExternalLink v-if="link.external" />
             </NuxtLink>
           </nav>
         </section>
@@ -199,7 +199,7 @@ const miscLinks = [
             <DynamicIcon :icon="social?.icon" />
           </NuxtLink>
         </nav>
-        <p class="calm-voice">
+        <p class="whisper-voice">
           © 2023 <span class="no-wrap">API3 Foundation</span>
         </p>
 
@@ -208,13 +208,12 @@ const miscLinks = [
             v-for="(link, index) in miscLinks"
             :key="index"
             :to="link.path"
-            class="calm-voice text footer-link"
+            class="text footer-link whisper-voice"
+            :class="link.external ? 'external-link' : ''"
           >
             <span>
               {{ link.label }}
             </span>
-
-            <ExternalLink v-if="link.external" />
           </NuxtLink>
         </nav>
       </inner-column>
@@ -232,14 +231,15 @@ footer {
     padding-right: var(--space-l);
   }
 }
-.calm-voice {
-  font-size: var(--step-0);
-  padding: var(--space-2xs) 0;
+a.text {
+  padding-left: 0;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 nav {
   display: grid;
+  gap: var(--space-3xs);
 }
 
 .footer-link {
@@ -249,34 +249,47 @@ nav {
 
 .footer-navigation inner-column {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-l);
   justify-content: space-between;
 
+  @media (min-width: 420px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   @media (min-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     align-items: start;
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
+  @media (min-width: 1110px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+
+    & > * {
+      flex: 1;
+    }
   }
 
   .site-logo {
     width: 200px;
+    margin-bottom: var(--space-s);
 
     grid-column: 1/ -1;
 
-    @media (min-width: 768px) {
-      grid-column: unset;
-      grid-row: 1/ -1;
+    @media (min-width: 1000px) {
+      flex: 2;
+      padding-right: var(--space-l);
     }
   }
 
   h5 {
     font-size: var(--step-0);
+    color: var(--gray);
     margin-bottom: var(--space-s);
     text-transform: uppercase;
     @media (min-width: 1024px) {
@@ -305,10 +318,11 @@ section.other inner-column {
     display: grid;
     justify-content: end;
     flex-wrap: wrap;
-    text-align: right;
 
     a {
+      text-align: right;
       white-space: nowrap;
+      justify-self: end;
     }
 
     @media (min-width: 768px) {
@@ -319,6 +333,7 @@ section.other inner-column {
   .social-icons {
     grid-column: 1/-1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: var(--space-s);
@@ -343,6 +358,8 @@ section.other inner-column {
     color: var(--gray);
     align-self: end;
     text-align: left;
+
+    padding-bottom: 0.5em;
   }
 }
 

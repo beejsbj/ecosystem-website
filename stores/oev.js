@@ -2,7 +2,14 @@ import { defineStore } from "pinia";
 
 export const useOEVStore = defineStore("oev", function () {
   const userTvl = ref(0);
-  const userIncentive = ref(0.5);
+  const userIncentive = ref(0);
+
+  const userSelectedProtocols = ref({
+    "dApp-1": "morphoAaveV2-1",
+    "dApp-2": "venusBsc-56",
+    "dApp-3": "morphoComp-1",
+    "dApp-4": "compoundV3Base-8453",
+  });
 
   // Fetch data from the content/oev-data which contains the json files
   const oevRaw = ref([]);
@@ -11,14 +18,38 @@ export const useOEVStore = defineStore("oev", function () {
   // this variable defines the number of protocols to show in the chart
   const protocolCount = ref(4);
 
+  //computed
+
+  const oevTotals = computed(() => {
+    return getProtocolBySlug("total");
+  });
+
+  const isAllHidden = computed(() => {
+    return protocols.value.every((protocol) => protocol.hide);
+  });
+
+  const isUserVisible = computed(() => {
+    const isVisible = Object.values(userSelectedProtocols.value).includes(
+      "userAdded"
+    );
+    if (isVisible) {
+      return true;
+    }
+    return false;
+  });
+
+  //functions
   // Set the protocols data
   function setProtocols(raw) {
     if (!raw) return;
 
+    const sorted = raw.sort((a, b) => {
+      return a.totalLiquidated - b.totalLiquidated;
+    });
+
     const parsed = raw?.map((protocol, i) => {
       return {
         ...protocol,
-        hide: i >= protocolCount.value,
       };
     });
 
@@ -26,67 +57,41 @@ export const useOEVStore = defineStore("oev", function () {
 
     //  add user protocol
     const userProtocol = {
-      id: `userAdded`,
+      slug: `userAdded`,
       name: `Your dApp`,
+      icon: "/images/icons/dapp-icon.svg", //#todo add icon to public
       chainId: 1,
       totalLiquidated: 0,
       totalSentToBuilderUSD: 0,
       totalProfitUSD: 0,
       totalIncentiveUSD: 0,
+      totalOevLostUSD: 0,
       trueHide: true,
       hide: true,
     };
     addProtocol(userProtocol);
   }
 
-  //computed
-
-  const isAllHidden = computed(() => {
-    return protocols.value.every((protocol) => protocol.hide);
-  });
-
   // Helper functions
 
-  // Calculate the OEV rate for a protocol
-  function getOEVRate(protocol) {
-    return (
-      Number(protocol.totalSentToBuilderUSD) / Number(protocol.totalLiquidated)
-    );
-  }
-
-  // Calculate the OEV for a protocol
-  function getOEV(protocol) {
-    return (
-      Number(protocol.totalLiquidated) - Number(protocol.totalSentToBuilderUSD)
-    );
-  }
-
-  // Calculate the total liquidated value for a protocol
-  function getTotalLiquidated(protocol) {
-    return protocol.data.reduce(
-      (total, dataPoint) => Number(total) + Number(dataPoint.totalLiquidated),
-      0
-    );
-  }
-
-  // Calculate the total sent to builder value for a protocol
-  function getTotalSentToBuilder(protocol) {
-    return protocol.data.reduce(
-      (total, dataPoint) =>
-        Number(total) + Number(dataPoint.totalSentToBuilderUSD),
-      0
-    );
-  }
-
-  function getProtocolById(id) {
-    return protocols.value.find((protocol) => protocol.id === id);
+  function getProtocolBySlug(slug) {
+    if (protocols.value.length === 0) {
+      return {};
+    }
+    return protocols.value.find((protocol) => protocol.slug === slug);
   }
 
   function getTotals() {
-    return getProtocolById("total");
+    return getProtocolBySlug("total");
   }
 
   function toggleHide(protocol) {
+    //if this is the last visible protocol, don't hide it
+
+    if (!protocol.hide && protocols.value.filter((p) => !p.hide).length === 1) {
+      return;
+    }
+
     protocol.hide = !protocol.hide;
     checkHideCount(protocol);
   }
@@ -102,7 +107,7 @@ export const useOEVStore = defineStore("oev", function () {
 
     if (count > protocolCount.value) {
       const excessCount = count - protocolCount.value;
-      hideExcessProtocols(excessCount, protocol.id);
+      hideExcessProtocols(excessCount, protocol.slug);
     }
   }
 
@@ -111,7 +116,7 @@ export const useOEVStore = defineStore("oev", function () {
     let hiddenCount = 0;
     for (const protocol of protocols.value) {
       if (
-        protocol.id !== exemptedProtocolId &&
+        protocol.slug !== exemptedProtocolId &&
         !protocol.hide &&
         hiddenCount < excessCount
       ) {
@@ -126,22 +131,36 @@ export const useOEVStore = defineStore("oev", function () {
     checkHideCount(protocol);
   }
 
+  function isProtocolVisible(protocol) {
+    const isVisible = Object.values(userSelectedProtocols.value).includes(
+      protocol.slug
+    );
+    if (isVisible) {
+      return true;
+    }
+    return false;
+  }
+
   return {
     // variables
     userTvl,
     userIncentive,
+    userSelectedProtocols,
+    isUserVisible,
     oevRaw,
     protocols,
+    oevTotals,
 
     // computed
     isAllHidden,
 
     // helpers
     setProtocols,
-    getProtocolById,
+    getProtocolBySlug,
     getTotals,
     toggleHide,
     hideAll,
     addProtocol,
+    isProtocolVisible,
   };
 });

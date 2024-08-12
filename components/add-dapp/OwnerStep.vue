@@ -4,7 +4,7 @@ props.dappForm.owner = props.dappForm.owner ?? {};
 </script>
 
 <template>
-  <FormKit type="group" v-auto-animate name="owner">
+  <FormKit type="group" name="owner">
     <form-field>
       <FormKit
         type="text"

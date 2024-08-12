@@ -28,7 +28,9 @@ export const useBlogStore = defineStore("blog", () => {
     onRequestError({ request, options, error }) {
       console.log("fetch articles error", error);
     },
-    onRequest({ request, options }) {},
+    onRequest({ request, options }) {
+      // console.log("fetch articles");
+    },
   });
 
   watch([filterQuery, data], ([newQuery, newData], [oldQuery, prevData]) => {

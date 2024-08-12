@@ -24,27 +24,32 @@ export default defineEventHandler(async (event) => {
 
       articleListData = [];
 
-      let i = 0;
-      while (i < articleFolders?.length) {
-        const downloadUrl = `https://raw.githubusercontent.com/AamirAlam/ecosystem-articles/master/${articleFolders[i]?.path}/index.md`;
-        const articleMd = (await axios.get(downloadUrl)).data;
-        const parsedMd = await parseMarkdown({ content: articleMd });
+      // Batch processing
+      const batchSize = 20;
+      for (let i = 0; i < articleFolders.length; i += batchSize) {
+        const batch = articleFolders.slice(i, i + batchSize);
+        const batchPromises = batch.map(async (folder) => {
+          const downloadUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/master/${folder?.path}/index.md`;
+          const articleMd = (await axios.get(downloadUrl)).data;
+          const parsedMd = await parseMarkdown({ content: articleMd });
 
-        articleListData.push({
-          author: {
-            name: parsedMd?.author,
-            bio: parsedMd?.bio,
-          },
-          title: parsedMd?.title,
-          slug: articleFolders[i]?.path,
-          subtitle: parsedMd?.subtitle,
-          description: parsedMd?.description,
-          // content: parsedMd?.body,
-          cover: parsedMd?.image,
-          category: parsedMd?.category,
-          created_at: parsedMd?.date_published,
+          return {
+            author: {
+              name: parsedMd?.author,
+              bio: parsedMd?.bio,
+            },
+            title: parsedMd?.title,
+            slug: folder?.path,
+            subtitle: parsedMd?.subtitle,
+            description: parsedMd?.description,
+            cover: parsedMd?.image,
+            category: parsedMd?.category,
+            created_at: parsedMd?.date_published,
+          };
         });
-        i++;
+
+        const batchResults = await Promise.all(batchPromises);
+        articleListData.push(...batchResults);
       }
 
       queryCache.set("article-list", articleListData, cacheInterval);

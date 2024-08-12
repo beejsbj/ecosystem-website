@@ -1,98 +1,108 @@
-import { Project } from "~/server/models/Project";
+import { PROJECTS } from "@api3-ecosystem/dapp-registry";
+import type { ProjectType } from "~/server/types";
 
-export default defineEventHandler(async (event) => {
-  try {
-    const stats = await Project.aggregate([
-      {
-        $match: {
-          status: "active",
-        },
-      },
-      {
-        $facet: {
-          chains: [
-            { $unwind: "$chains" },
-            {
-              $group: {
-                _id: "$chains",
-                count: { $sum: 1 },
-              },
-            },
-          ],
-          categories: [
-            { $unwind: "$categories" },
-            {
-              $group: {
-                _id: "$categories",
-                count: { $sum: 1 },
-              },
-            },
-          ],
-          productTypes: [
-            { $unwind: "$productType" },
-            {
-              $group: {
-                _id: "$productType",
-                count: { $sum: 1 },
-              },
-            },
-          ],
-          years: [
-            { $unwind: "$year" },
-            {
-              $group: {
-                _id: "$year",
-                count: { $sum: 1 },
-              },
-            },
-          ],
-        },
-      },
-    ]);
+interface Stats {
+  chains: { chainId: string; count: number }[];
+  categories: { name: string; count: number }[];
+  productTypes: { name: string; count: number }[];
+  years: { name: number; count: number }[];
+  feeds: Array<any>;
+}
 
-    const statsObject = stats?.[0];
+function computeStats(projects: ProjectType[]): Stats {
+  const chainCount: Record<string, number> = {};
+  const categoryCount: Record<string, number> = {};
+  const productTypeCount: Record<string, number> = {};
+  const yearCount: Record<number, number> = {};
 
-    if (!statsObject) {
-      event.node.res.statusCode = 400;
+  projects.forEach((project) => {
+    // Count chains
+    project.chains.forEach((chain) => {
+      chainCount[chain] = (chainCount[chain] || 0) + 1;
+    });
+
+    // Count categories
+    project.categories.forEach((category) => {
+      categoryCount[category] = (categoryCount[category] || 0) + 1;
+    });
+
+    // Count product types
+    const productType = project.productType;
+    productTypeCount[productType] = (productTypeCount[productType] || 0) + 1;
+
+    // Count years
+    const year = project.year;
+    yearCount[year] = (yearCount[year] || 0) + 1;
+  });
+
+  const chains = Object.keys(chainCount).map((chainId) => ({
+    chainId,
+    count: chainCount[chainId],
+  }));
+
+  const categories = Object.keys(categoryCount).map((name) => ({
+    name,
+    count: categoryCount[name],
+  }));
+
+  const productTypes = Object.keys(productTypeCount).map((name) => ({
+    name,
+    count: productTypeCount[name],
+  }));
+
+  const years = Object.keys(yearCount).map((name: any) => ({
+    name: parseInt(name),
+    count: yearCount[name],
+  }));
+
+  // prepare feed stats
+  const allProjects: ProjectType[] = PROJECTS;
+
+  // get preare a list with feedNames as keys and list of chainIds as values
+  const feedStats: any[] = [];
+  allProjects.forEach((project: any) => {
+    if (!project.proxies) {
+      return;
+    }
+    const chainIds = Object.keys(project.proxies);
+
+    chainIds.forEach((chainId) => {
+      const proxies = project.proxies[chainId];
+
+      proxies.forEach((proxy: any) => {
+        const existingFeedStat = feedStats.find(
+          (feedStat) => feedStat.feedName === proxy.feedName
+        );
+        if (existingFeedStat) {
+          if (!existingFeedStat.chainIds.includes(chainId)) {
+            existingFeedStat.chainIds.push(chainId);
+          }
+        } else {
+          feedStats.push({
+            feedName: proxy.feedName,
+            chainIds: [chainId],
+          });
+        }
+      });
+    });
+  });
+
+  return { chains, categories, productTypes, years, feeds: feedStats };
+}
+
+export default checkConnection(
+  defineEventHandler(async (event) => {
+    try {
+      const stats = computeStats(PROJECTS);
+      event.node.res.statusCode = 200;
+      return stats;
+    } catch (err) {
+      console.log("get stats error ", err);
+      event.node.res.statusCode = 500;
       return {
-        code: "REQ_FAILED",
-        message: "Failed to fetch stats",
+        code: "ERROR",
+        message: "Something went wrong.",
       };
     }
-    const chains = statsObject?.chains?.map((el: any) => {
-      return {
-        chainId: el?._id,
-        count: el?.count,
-      };
-    });
-    const categories = statsObject.categories.map((el: any) => {
-      return {
-        name: el?._id,
-        count: el?.count,
-      };
-    });
-    const productTypes = statsObject.productTypes.map((el: any) => {
-      return {
-        name: el?._id,
-        count: el?.count,
-      };
-    });
-    const years = statsObject.years.map((el: any) => {
-      return {
-        name: el?._id,
-        count: el?.count,
-      };
-    });
-    const finalPayload = { chains, categories, productTypes, years };
-
-    event.node.res.statusCode = 200;
-    return finalPayload;
-  } catch (err) {
-    console.log(err);
-    event.node.res.statusCode = 500;
-    return {
-      code: "ERROR",
-      message: "Something went wrong.",
-    };
-  }
-});
+  })
+);

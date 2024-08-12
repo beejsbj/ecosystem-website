@@ -4,7 +4,7 @@ const wrapper = ref(null);
 onMounted(() => {
   setTimeout(() => {
     wrapper.value.classList.add("true");
-  }, 500);
+  }, 100);
 });
 
 onBeforeUnmount(() => {
@@ -13,7 +13,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="contents-wrapper" ref="wrapper">
+  <div class="contents-wrapper true" ref="wrapper">
     <slot />
   </div>
 </template>

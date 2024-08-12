@@ -1,3 +1,6 @@
+import mongoose from "mongoose";
+import { projectSchema } from "../types";
+
 export const isNumber = (n: string): boolean => {
   return !isNaN(parseFloat(n)) && isFinite(Number(n));
 };
@@ -166,3 +169,39 @@ export interface Status {
   message: string;
   data?: any | undefined;
 }
+
+export const connectDB = async () => {
+  const config = useRuntimeConfig();
+
+  if (mongoose.connection.readyState === 1) {
+    console.log(`db already connected: on ${config.nodeEnv}`);
+    return;
+  }
+
+  try {
+    const dbUrl =
+      config.nodeEnv === "production"
+        ? config.mongodbUri
+        : config.mongodbUriDev;
+
+    await mongoose.connect(dbUrl);
+
+    console.log(`db connected: on ${config.nodeEnv}`);
+  } catch (err) {
+    console.log("db connection error ", err);
+  }
+};
+
+export const validateProjectSchema = async (projectJsonString: Object) => {
+  // Validate using safeParse (returns result object)
+  const result = projectSchema.safeParse(projectJsonString);
+  if (result.success) {
+    return { success: true, result: result.data };
+  } else {
+    // parse error messages
+    const messages = result.error.errors.map((err) => {
+      return `${err.message} in ${err.path[0]} field`;
+    });
+    return { success: false, result: messages };
+  }
+};

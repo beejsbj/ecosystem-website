@@ -1,32 +1,22 @@
 <script setup>
-import { useInterfaceStore } from "~/stores/interface";
-import { gsap } from "gsap";
-
+//
 const ui = useInterfaceStore();
 const router = useRouter();
 
 const showMenu = ref(false);
 
-let context;
-
-onMounted(() => {
-  context = gsap.context(() => {
-    const pageLoad = gsap.timeline();
-    if (ui.firstLoad) {
-      pageLoad.from(".site-header", {
-        delay: "0.5",
-        duration: 0.5,
-        y: -50,
-        opacity: 0,
-        ease: "power4.out",
-      });
-      ui.firstLoad = false;
-    }
-  });
-});
-
-onUnmounted(() => {
-  context.kill();
+useGsap((gsap) => {
+  const pageLoad = gsap.timeline();
+  if (ui.firstLoad) {
+    pageLoad.from(".site-header", {
+      delay: "0.5",
+      duration: 0.5,
+      y: -50,
+      opacity: 0,
+      ease: "power4.out",
+    });
+    ui.firstLoad = false;
+  }
 });
 </script>
 
@@ -43,63 +33,63 @@ onUnmounted(() => {
             />
           </picture>
         </NuxtLink>
-        <SiteNav v-if="!ui.isMobile" />
+        <SiteNav v-if="ui.isDesktop" />
 
         <!-- menu icon -->
-        <button
-          :class="` menu icon ${showMenu ? 'menuOpen' : ''}`"
-          v-if="ui.isMobile"
-          @click="showMenu = !showMenu"
-        >
-          <picture>
-            <MenuIcon />
-          </picture>
-        </button>
-        <SidePanelSlot
-          v-if="ui.isMobile"
-          :showPanel="showMenu"
-          @toggle="showMenu = !showMenu"
-        >
-          <SiteNav class="panel-menu" />
-        </SidePanelSlot>
+        <template v-else>
+          <button
+            :class="` menu icon ${showMenu ? 'menuOpen' : ''}`"
+            @click="showMenu = !showMenu"
+          >
+            <DynamicIcon icon="hamburger" width="32px" />
+          </button>
+          <SidePanelSlot :showPanel="showMenu" @toggle="showMenu = !showMenu">
+            <SiteNav class="panel-menu" />
+          </SidePanelSlot>
+        </template>
       </mast-head>
     </SectionColumn>
   </header>
 </template>
 
-<style>
-.site-header inner-column {
-  padding: var(--space-m) var(--space-s);
-}
+<style scoped lang="scss">
+.site-header {
+  :deep(inner-column) {
+    padding: var(--space-s) var(--space-l);
 
-@media (min-width: 768px) {
-  .site-header inner-column {
-    padding: var(--space-xl) var(--space-s);
+    @media (min-width: 768px) {
+      padding: var(--space-s);
+    }
   }
 }
-</style>
 
-<style lang="scss" scoped>
 .mast-head-placeholder {
   height: 50px;
 }
+
 mast-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: center;
+
   .site-logo {
     width: 200px;
-
     cursor: pointer;
+
     @media (min-width: 768px) {
-      width: 275px;
+      width: 166px;
+    }
+    @media (min-width: 1108px) {
+      width: 215px;
     }
   }
 }
+
 button.menu {
-  max-width: 50px;
+  max-width: 40px;
   justify-self: end;
+  padding: 0;
 
   &.menuOpen {
     z-index: 9999;

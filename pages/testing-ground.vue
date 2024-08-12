@@ -1,28 +1,26 @@
 <script setup>
 const hello = "hello";
+const ui = useInterfaceStore();
 
 definePageMeta({
   alias: ["/testing"],
 });
 
 const ecosystem = useEcosystemStore();
+
+const showCta = ref(true);
 </script>
 
 <template>
   <ContentsWrapper>
     <PageTitle heading="test ground" />
     <SectionColumn>
-      <NuxtLink to="/style-guide">style guide</NuxtLink>
+      <button @click="showCta = !showCta">CLick</button>
+      <CallToAction v-if="showCta" />
     </SectionColumn>
   </ContentsWrapper>
 </template>
 
-<style scoped>
-:deep(ul) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-m);
-}
-</style>
+<style scoped></style>
 
 <style></style>

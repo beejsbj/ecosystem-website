@@ -3,49 +3,50 @@
 html {
   /* Black and white */
   --hue: 166;
-  --black: hsla(0, 0%, 1%, 1);
-  --white: hsla(var(--hue), 0%, 95%, 1);
+  --black: var(--color-base-dark);
+  --white: var(--color-base-light);
 
-  --gray: hsla(var(--hue), 0%, 50%, 1);
-  --gray-light: color-mix(in hsl, var(--gray), var(--white));
-  --gray-lighter: color-mix(in hsl, var(--gray-light), var(--white));
-  --gray-dark: color-mix(in hsl, var(--gray), var(--black));
-  --gray-darker: color-mix(in hsl, var(--gray-dark), var(--black));
-  --gray-darkest: color-mix(in hsl, var(--gray-darker), var(--black));
+  --gray: var(--color-gray-500);
+  --gray-light: var(--color-gray-300);
+  --gray-lighter: var(--color-gray-200);
+  --gray-lightest: var(--color-gray-100);
+  --gray-dark: var(--color-gray-700);
+  --gray-darker: var(--color-gray-800);
+  --gray-darkest: var(--color-gray-900);
 
-  --green: hsla(var(--hue), 64%, 69%, 1);
+  --green: var(--color-emerald-500);
 
-  --green-dark: hsla(var(--hue), 51%, 46%, 1);
-  --green-darker: hsla(var(--hue), 47%, 27%, 1);
-  --green-darkest: hsla(var(--hue), 40%, 5%, 1);
+  --green-dark: var(--color-emerald-700);
+  --green-darker: var(--color-emerald-800);
+  --green-darkest: var(--color-emerald-900);
 
-  --green-light: hsla(var(--hue), 65%, 75%, 1);
-  --green-lighter: hsla(var(--hue), 66%, 80%, 1);
-  --green-lightest: hsla(var(--hue), 64%, 85%, 1);
+  --green-light: var(--color-emerald-400);
+  --green-lighter: var(--color-emerald-200);
+  --green-lightest: var(--color-emerald-100);
 
-  --violet: hsla(calc(90 + var(--hue)), 34%, 54%, 1);
+  --purple: var(--color-purple-500);
+  --purple-light: var(--color-purple-400);
+  --purple-lighter: var(--color-purple-200);
+  --purple-lightest: var(--color-purple-50);
 
-  --violet-light: hsla(calc(90 + var(--hue)), 34%, 66%, 1);
-  --violet-lighter: hsla(calc(90 + var(--hue)), 34%, 77%, 1);
-  --violet-lightest: hsla(calc(90 + var(--hue)), 34%, 90%, 1);
+  --purple-dark: var(--color-purple-600);
+  --purple-darker: var(--color-purple-700);
+  --purple-darkest: var(--color-purple-800);
 
-  --violet-dark: hsla(calc(90 + var(--hue)), 34%, 44%, 1);
-  --violet-darker: hsla(calc(90 + var(--hue)), 34%, 34%, 1);
-  --violet-darkest: hsla(calc(90 + var(--hue)), 34%, 10%, 1);
+  --indigo: var(--color-indigo-400);
 
-  --indigo: hsla(calc(60 + var(--hue)), 100%, 55%, 1);
+  --indigo-light: var(--color-indigo-200);
+  --indigo-lighter: var(--color-indigo-100);
+  --indigo-lightest: var(--color-indigo-50);
 
-  --indigo-light: hsla(calc(60 + var(--hue)), 100%, 65%, 1);
-  --indigo-lighter: hsla(calc(60 + var(--hue)), 100%, 75%, 1);
-  --indigo-lightest: hsla(calc(60 + var(--hue)), 100%, 85%, 1);
+  --indigo-dark: var(--color-indigo-500);
+  --indigo-darker: var(--color-indigo-600);
+  --indigo-darkest: var(--color-indigo-700);
 
-  --indigo-dark: hsla(calc(60 + var(--hue)), 100%, 45%, 1);
-  --indigo-darker: hsla(calc(60 + var(--hue)), 100%, 35%, 1);
-  --indigo-darkest: hsla(calc(60 + var(--hue)), 100%, 25%, 1);
-
-  --success: hsla(148, 76%, 41%, 1);
-  --warning: hsla(40, 100%, 55%, 1);
-  --error: hsla(15, 99%, 55%, 1);
+  --success: var(--color-action-success-500);
+  --warning: var(--color-action-warning-500);
+  --error: var(--color-action-error-500);
+  --info: var(--color-action-info-500);
 
   --paper: var(--black);
   --ink: var(--white);
@@ -53,7 +54,7 @@ html {
   /* Gradients */
   --gradient-direction: 180deg;
 
-  --gradient-dark: linear-gradient(130deg, var(--gray-darker), var(--paper));
+  --gradient-dark: linear-gradient(45deg, var(--paper), var(--gray-darker));
 
   --gradient-light: linear-gradient(130deg, var(--white), var(--gray-light));
 
@@ -68,7 +69,7 @@ html {
     #040606
   );
 
-  --gradient-color: linear-gradient(130deg, var(--green), var(--violet));
+  --gradient-color: linear-gradient(130deg, var(--green), var(--purple));
 
   --gradient-color-light: linear-gradient(130deg, var(--ink), var(--green));
 
@@ -140,11 +141,6 @@ html {
 
   /* Backgrounds */
 
-  --checkers: url("@/assets/images/background/pattern-one.svg");
-
-  --diagnol: url("@/assets/images/background/pattern-diagnol.svg");
-  /* --points: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='hsla(256, 58%, 54%, 1.00)' fill-opacity='0.2' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
-
   --pattern-one: url("@/assets/images/background/pattern-one.svg");
   --pattern-two: url("@/assets/images/background/pattern-two.svg");
   --pattern-three: url("@/assets/images/background/pattern-three.svg");
@@ -176,14 +172,14 @@ html {
   --border-dark: var(--line-width) solid var(--gray-dark);
   --border-light: var(--line-width) solid var(--ink);
   --border-color: var(--line-width) solid var(--green);
-  --border-highlight: var(--line-width) solid var(--violet);
+  --border-highlight: var(--line-width) solid var(--purple);
 
   /* Shadows */
   --shadow-line-gap: var(--space-3xs);
 
   --shadow: 0px 4px 20px 0px hsla(150, 6%, 7%, 0.9);
 
-  --shadow-selected: 2px 2px 1px var(--violet);
+  --shadow-selected: 2px 2px 1px var(--purple);
 
   --spacing: "!spacing";
 
