@@ -33,7 +33,7 @@ export default async function useTutorial() {
 
   // fetch the steps for the current tutorial
   const { data: steps } = await useFetch(
-    `https://api.github.com/repos/api3-ecosystem/interactive-guides/contents/${currentTutorial.value}`
+    `/api/guides/guide/${currentTutorial.value}`
   );
 
   // the total number of steps in the tutorial
