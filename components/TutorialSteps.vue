@@ -5,7 +5,7 @@ const { currentTutorial, currentStep, currentStepNum, steps } =
   await useTutorial();
 
 function cleanName(step) {
-  const name = step.name.toLowerCase();
+  const name = step.title.toLowerCase();
 
   if (name.includes("readme")) {
     return "Introduction";
@@ -20,7 +20,7 @@ function cleanName(step) {
     <nav>
       <ul>
         <li v-for="(step, i) in steps">
-          <NuxtLink class="calm-voice text" :to="`?step-${i}`">
+          <NuxtLink class="calm-voice text" :to="`?step=${i}`">
             {{ cleanName(step) }}
           </NuxtLink>
         </li>
