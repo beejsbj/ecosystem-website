@@ -209,7 +209,7 @@ export async function getGuideCodeWithSteps(guideSlug: string) {
         return {
           title: file.name.split("-").join(" "),
           codeUrl: file.path,
-          markdown: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${guideSlug}/${file.name}/readme.md`,
+          markdown: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${guideSlug}/${file.name}/README.md`,
           config: `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${guideSlug}/${file.name}/config.tutorial.json`,
         };
       });
