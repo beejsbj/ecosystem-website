@@ -1,24 +1,27 @@
+<!--
+ Feed dApps Component
+
+ This component displays a list of dApps filtered based on the current feed and chain.
+ It also provides functionality to export the filtered dApps as a JSON file.
+
+ Props:
+ @prop {Object} feedProjects - Contains the projects data for the feed
+ @prop {boolean} pending - Indicates if data is still being loaded
+ @prop {Object} proxy - The current proxy object used for filtering
+-->
+
 <script setup>
 const props = defineProps(["feedProjects", "pending", "proxy"]);
 const ui = useInterfaceStore();
 
 // Computed property for filtered and formatted dapps
 const filteredDapps = computed(() => {
-  console.log("Starting filteredDapps computation");
-  console.log("feedProjects:", props.feedProjects);
-  console.log("proxy:", props.proxy);
-
   const result = props.feedProjects.projects.flatMap((dapp) => {
-    console.log("Processing dapp:", dapp.name);
-
     if (!dapp.proxies) {
-      console.log("No proxies for this dapp");
       return [];
     }
 
     return Object.entries(dapp.proxies).flatMap(([chain, proxies]) => {
-      console.log(`Processing chain: ${chain}, proxies:`, proxies);
-
       const chainProxies = proxies
         .map((proxy) => {
           const formattedProxy = {
@@ -26,33 +29,24 @@ const filteredDapps = computed(() => {
             chainId: chain,
             dapp: dapp,
           };
-          console.log("Formatted proxy:", formattedProxy);
           return formattedProxy;
         })
         .filter((proxy) => {
           const match =
             proxy.feedName.toLowerCase() === props.proxy.feedName.toLowerCase();
-          console.log(
-            `Filtering proxy ${proxy.feedName}: ${match ? "match" : "no match"}`
-          );
+
           return match;
         });
 
-      console.log(`Filtered proxies for chain ${chain}:`, chainProxies);
       return chainProxies;
     });
   });
 
-  console.log("Final filtered dapps:", result);
   return result;
 });
 
 function exportJSON() {
-  console.log("Exporting JSON");
-  console.log("Filtered dapps for export:", filteredDapps.value);
-
   const json = JSON.stringify(filteredDapps.value);
-  console.log("JSON:", json);
 
   const blob = new Blob([json], { type: "application/json" });
   const url = URL.createObjectURL(blob);

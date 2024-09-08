@@ -1,3 +1,19 @@
+<!--
+ FeedHeaderInfo Component
+
+ This component displays key information about a feed in a header section.
+ It includes a chain selector dropdown and shows additional feed details.
+
+ Props:
+ @prop {Object} proxy - Contains information about the current proxy, including chainId and feedName
+
+ Key Features:
+ - Displays a dropdown for selecting the blockchain for the current feed
+ - Shows feed type and data feed ID when available
+ - Updates the URL when a new chain is selected
+ - Uses skeleton loaders for better UX during data fetching
+-->
+
 <script setup>
 import { Skeletor } from "vue-skeletor";
 const props = defineProps(["proxy"]);
