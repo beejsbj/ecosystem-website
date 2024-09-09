@@ -1,4 +1,23 @@
 <script setup>
+/**
+ * SkeletonCard Component
+ *
+ * A placeholder component that displays a loading skeleton for a card layout.
+ *
+ * @component
+ *
+ * @example
+ * <SkeletonCard />
+ *
+ * @features
+ * - Displays a skeleton layout for a card with a header and content
+ * - Uses Skeletor component for animated loading placeholders
+ * - Responsive design that matches the actual card layout
+ *
+ * @dependencies
+ * - vue-skeletor: Provides the Skeletor component for skeleton UI
+ */
+
 import { Skeletor } from "vue-skeletor";
 </script>
 

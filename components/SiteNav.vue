@@ -1,26 +1,34 @@
 <script setup>
-// use runtime, get env
+/**
+ * SiteNav Component
+ *
+ * Navigation component for the API3 website, displaying main menu items
+ * and action buttons.
+ *
+ * @component
+ *
+ * @example
+ * <SiteNav />
+ *
+ * @features
+ * - Displays main navigation links (Ecosystem, OEV, Articles)
+ * - Includes a Discord icon link
+ * - Supports both desktop and mobile (panel) layouts
+ * - Highlights new sections with a 'new' class
+ *
+ * @data
+ * - links: Array of navigation link objects (name, to, class)
+ *
+ */
 
 const config = useRuntimeConfig();
 
 const isDev = config.public.nodeEnv === "development";
 
 const links = [
-  //   {
-  //     name: "Style Guide",
-  //     to: "/style-guide",
-  //     dev: true,
-  //   },
-  //   {
-  //     name: "Testing Ground",
-  //     to: "/testing",
-  //     dev: true,
-  //   },
-
   { name: "Ecosystem", to: "/ecosystem" },
   { name: "OEV", to: "/oev", class: "new" },
   { name: "Articles", to: "/articles" },
-  //   { name: "Guild", to: "/guild" },
 ];
 </script>
 

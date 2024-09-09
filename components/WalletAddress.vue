@@ -1,4 +1,29 @@
 <script>
+/**
+ * WalletAddress Component
+ *
+ * A component that displays a shortened version of a wallet address
+ * with copy-to-clipboard functionality.
+ *
+ * @component
+ *
+ * @example
+ * <WalletAddress walletAddress="0x1234567890abcdef1234567890abcdef12345678" />
+ *
+ * @props
+ * @prop {String} walletAddress - The full wallet address to display and copy
+ *
+ * @features
+ * - Displays a shortened version of the wallet address (e.g., "0x1234...678")
+ * - Allows copying the full address to clipboard on click
+ * - Shows a tooltip indicating "Copy" on hover and "Copied!" after clicking
+ * - Uses a copy icon from DynamicIcon component
+ *
+ * @methods
+ * - copyToClipboard: Copies the full wallet address to clipboard
+ * - getShortWallet: Shortens the wallet address for display
+ */
+
 export default {
   props: {
     walletAddress: {

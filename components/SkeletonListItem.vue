@@ -1,4 +1,21 @@
 <script setup>
+/**
+ * SkeletonListItem Component
+ *
+ * A placeholder component that displays a loading skeleton for a list item.
+ *
+ * @component
+ *
+ * @example
+ * <SkeletonListItem />
+ *
+ * @features
+ * - Displays a skeleton layout for a list item with a header and content
+ * - Uses Skeletor component for animated loading placeholders
+ *
+ * @dependencies
+ * - vue-skeletor: Provides the Skeletor component for skeleton UI
+ */
 import { Skeletor } from "vue-skeletor";
 </script>
 

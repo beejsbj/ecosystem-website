@@ -1,4 +1,30 @@
 <script setup>
+/**
+ * GraphicText Component
+ * 
+ * A responsive component that displays text content alongside an image.
+ *
+ * @component
+ *
+ * @example
+ * <GraphicText
+ *   heading="Title"
+ *   paragraph="Description text"
+ *   cta="Learn More"
+ *   link="/more-info"
+ *   image="/path/to/image.jpg"
+ * />
+ *
+ * @props
+ * @prop {string} heading - The main title text
+ * @prop {string} paragraph - The description or body text
+ * @prop {string} cta - Call-to-action text for the link
+ * @prop {string} link - URL for the CTA link
+ * @prop {string} image - URL of the image to display
+ *
+
+ */
+
 import { useInterfaceStore } from "~/stores/interface";
 
 const props = defineProps(["heading", "paragraph", "cta", "link", "image"]);

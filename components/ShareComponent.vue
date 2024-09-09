@@ -1,4 +1,20 @@
 <script setup>
+/**
+ * ShareComponent
+ *
+ * A component for sharing the current page on various social media platforms
+ * and copying the dApp's website URL.
+ *
+ * @component
+ *
+ * @example
+ * <ShareComponent :dappLinks="{ website: 'https://example.com' }" />
+ *
+ * @props
+ * @prop {Object} dappLinks - Contains the dApp's website URL
+ * @prop {string} dappLinks.website - The website URL of the dApp
+ */
+
 import { useClipboard } from "@vueuse/core";
 
 const props = defineProps(["dappLinks"]);

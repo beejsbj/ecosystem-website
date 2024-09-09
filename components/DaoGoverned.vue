@@ -1,4 +1,12 @@
 <script setup>
+/**
+ * DaoGovered Component
+ *
+ * An SVG component that displays dao governed graphics
+ *
+ * @component
+ */
+
 useGsap((gsap) => {
   const timeline = gsap.timeline({
     repeat: -1,

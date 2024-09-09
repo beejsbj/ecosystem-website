@@ -1,4 +1,21 @@
-<script setup></script>
+<script setup>
+/**
+ * HomeArticles Component
+ *
+ * Displays a section of featured articles on the home page.
+ *
+ * @component
+ *
+ * @example
+ * <HomeArticles />
+ *
+ * @features
+ * - Shows a "Articles" heading
+ * - Displays a grid of 4 featured articles using LazyArticleGrid
+ * - Includes a "See More" link to the full articles page
+ * - Responsive design with centered text elements
+ *
+</script>
 
 <template>
   <SectionColumn class="home-article-grid">

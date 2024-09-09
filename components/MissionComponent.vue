@@ -1,4 +1,21 @@
 <script setup>
+/**
+ * MissionComponent
+ *
+ * Displays API3's mission and key features in a series of graphical text sections.
+ *
+ * @component
+ *
+ * @example
+ * <MissionComponent />
+ *
+ * @features
+ * - Presents three key aspects of API3: First-Party Oracle Services, DAO Governance, and Developer Experience
+ * - Uses GraphicText component to display each feature with title, description, and image
+ * - Alternates layout direction for visual variety
+ * - Includes custom SVG components for each section
+ */
+
 const content = ref([
   {
     title: "First-Party Oracle Services",

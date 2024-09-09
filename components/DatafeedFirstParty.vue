@@ -1,4 +1,11 @@
 <script setup>
+/**
+ * DatafeedFirstParty Component
+ *
+ * An SVG component that displays graphics
+ *
+ * @component
+ */
 useGsap((gsap) => {
   const timeline = gsap.timeline({
     repeat: -1,

@@ -1,18 +1,35 @@
 <script setup>
-// import * as Logos from "@phase21/logos";
+/**
+ * DoubleIcon Component
+ *
+ * Displays two overlapping icons, typically used for representing
+ * cryptocurrency pairs or chain-token combinations.
+ *
+ * @component
+ *
+ * @example
+ * <DoubleIcon
+ *   :icon1="{ chainId: '1' }"
+ *   :icon2="{ symbol: 'BTC' }"
+ *   width="32px"
+ * />
+ *
+ * @props
+ * @prop {Object} icon1 - First icon object { src?, chainId?, symbol? }
+ * @prop {Object} icon2 - Second icon object { src?, chainId?, symbol? }
+ * @prop {string} [width='24px'] - Width of the icons
+ *
+ * @features
+ * - Supports direct image source, chain logos, or token symbols
+ * - Fallback display for not found images
+ * - Customizable width
+ * - Lazy loading of images
+ *
+ */
 
 const { $chainLogo, $symbolLogo } = useNuxtApp();
 
 const props = defineProps(["icon1", "icon2", "width"]);
-
-// icon1: object
-// icon2: object
-
-// {
-// src: "",
-// chainId: 0,
-// symbol: "",
-//}
 
 const isFound = ref(true);
 
@@ -33,11 +50,6 @@ function imgSrc(icon) {
     return $symbolLogo(icon.symbol);
   }
 }
-
-// const imgSrc = computed(() => {
-//   //   const src = "btc";
-//   return src;
-// });
 </script>
 
 <template>
@@ -85,7 +97,6 @@ picture {
   &:first-child {
     position: relative;
     z-index: 3;
-    //  left: calc(var(--width) * 0.1);
   }
 
   &:last-child {

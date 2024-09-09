@@ -1,5 +1,24 @@
 <script setup>
-//
+/**
+ * SiteHeader Component
+ * 
+ * The main header component for the API3 website, featuring the logo,
+ * navigation menu, and responsive design.
+ *
+ * @component
+ *
+ * @example
+ * <SiteHeader />
+ *
+ * @features
+ * - Displays the API3 logo with a link to the home page
+ * - Shows a full navigation menu on desktop
+ * - Implements a hamburger menu for mobile views
+ * - Uses a side panel for mobile navigation
+ * - Animated entry on first page load
+ 
+ */
+
 const ui = useInterfaceStore();
 const router = useRouter();
 

@@ -1,4 +1,32 @@
 <script setup>
+/**
+ * SiteFooter Component
+ *
+ * A comprehensive footer component for the API3 website, displaying various
+ * navigation menus, social media links, and legal information.
+ *
+ * @component
+ *
+ * @example
+ * <SiteFooter />
+ *
+ * @features
+ * - Displays the API3 logo
+ * - Provides multiple navigation menus categorized by topic
+ * - Includes social media links with icons
+ * - Shows copyright information and legal links
+ * - Responsive design adapting to different screen sizes
+ *
+ * @structure
+ * - Footer Navigation: Multiple columns of links categorized by topic
+ * - Other Section: Social icons, copyright notice, and miscellaneous links
+ *
+ * @data
+ * - socials: Array of social media platform objects (name, link, icon)
+ * - footerLinks: Array of menu objects, each containing a title and array of links
+ * - miscLinks: Array of miscellaneous link objects (privacy policy, terms, etc.)
+ */
+
 const socials = ref([
   {
     name: "Twitter",

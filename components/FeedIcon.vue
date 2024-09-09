@@ -1,10 +1,23 @@
 <script setup>
-// import * as Logos from "@phase21/logos";
+/**
+ * FeedIcon Component
+ *
+ * Displays icons for a cryptocurrency feed pair (e.g., DAI/USD).
+ *
+ * @component
+ *
+ * @example
+ * <FeedIcon feed="DAI/USD" />
+ *
+ * @props
+ * @prop {string} feed - A string representing the feed pair (e.g., "DAI/USD")
+ *
+ */
 
 const { $chainLogo, $symbolLogo } = useNuxtApp();
 
 const props = defineProps(["feed"]);
-// DAI/USD
+
 const symbols = props.feed.split("/");
 symbols.map((symbol) => symbol.toLowerCase());
 
@@ -18,11 +31,6 @@ function imgSrc(symbol) {
   const src = $symbolLogo(symbol);
   return src;
 }
-
-// const imgSrc = computed(() => {
-//   //   const src = "btc";
-//   return src;
-// });
 </script>
 
 <template>
@@ -69,7 +77,6 @@ picture {
   &:first-child {
     position: relative;
     z-index: 3;
-    //  left: calc(var(--width) * 0.1);
   }
 
   &:last-child {
