@@ -1,6 +1,7 @@
 <script setup>
 import { useStorage } from "@vueuse/core";
 import { useEcosystemStore } from "@/stores/ecosystem";
+import { getChainName } from "@/utils/getChainName";
 
 const ecosystem = useEcosystemStore();
 
@@ -69,7 +70,7 @@ function getFeedQuery(proxy) {
           <!-- #todo clean up -->
 
           <ChainIcon :id="proxy.chainId" />
-          {{ ecosystem.chainNames(proxy.chainId) }}
+          {{ getChainName(proxy.chainId) }}
         </div>
 
         <!-- feed name -->

@@ -1,5 +1,6 @@
 <script setup>
 import { useEcosystemStore } from "~/stores/ecosystem";
+import { getChainName } from "~/utils/getChainName";
 
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
@@ -16,7 +17,7 @@ const defaultPillCount = 5;
 const chains = computed(() => {
   const chains = ecosystem.stats?.chains?.map((chain) => {
     return {
-      label: ecosystem.chainNames(chain.chainId),
+      label: getChainName(chain.chainId),
       value: chain.chainId,
     };
   });

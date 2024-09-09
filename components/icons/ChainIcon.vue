@@ -26,6 +26,9 @@
  * - Testnet styling can be enabled by uncommenting the relevant CSS
  * - Tooltip functionality should be implemented separately (not shown in this component)
  */
+
+import { getChainName } from "@/utils/getChainName";
+
 interface Props {
   id: string;
 }
@@ -39,7 +42,7 @@ const isTestnet = ref(false);
 const isFound = ref(true);
 
 const chain = computed((): string => {
-  const chainName = ecosystem.chainNames(props.id);
+  const chainName = getChainName(props.id);
 
   // Uncomment if you want to use the testnet logic
   // if (chainName.includes("testnet")) {
