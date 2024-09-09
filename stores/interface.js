@@ -1,3 +1,56 @@
+/**
+ * Interface Store
+ *
+ * Manages the global UI state and provides utility functions for the application interface.
+ *
+ * @store
+ *
+ * @example
+ * // Usage in a component:
+ * import { useInterfaceStore } from '@/stores/interface';
+ *
+ * const interfaceStore = useInterfaceStore();
+ * const isMobile = computed(() => interfaceStore.isMobile);
+ *
+ * // Toggle main menu
+ * interfaceStore.toggleMenu();
+ *
+ * @features
+ * - Manages viewport size states (mobile, tablet, desktop)
+ * - Controls main menu and modal visibility
+ * - Handles page transition states
+ * - Provides utility functions for notifications and dev tools management
+ * - Stores API3 brand colors
+ * - Manages loading and first load states
+ *
+ * @state
+ * - isDev: Boolean indicating development environment
+ * - isMobile, isTablet, isDesktop: Viewport size indicators
+ * - mainMenuOpen: Main menu visibility state
+ * - showModal: Modal visibility state
+ * - firstLoad: Indicates if it's the first load of the application
+ * - loadingDone: Indicates if initial loading is complete
+ * - transitionState: Manages page transition states
+ * - api3Colors: Object containing API3 brand colors
+ *
+ * @methods
+ * - toggleMenu: Toggles main menu visibility
+ * - toggleModal: Toggles modal visibility
+ * - notify: Displays a toast notification
+ * - updateViewportSize: Updates viewport size states
+ * - disableDevTools: Disables Vue devtools in production
+ * - toggleTransitionComplete: Updates transition completion state
+ *
+ * @dependencies
+ * - pinia
+ * - vue (for lifecycle hooks)
+ * - vue3-toastify (assumed for notifications)
+ *
+ * @note
+ * This store uses the Composition API style of Pinia and manages various
+ * aspects of the application's UI state and behavior.
+ */
+
 import { defineStore } from "pinia";
 
 import { onMounted, onUnmounted } from "vue";

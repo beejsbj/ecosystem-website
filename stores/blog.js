@@ -1,3 +1,41 @@
+/**
+ * Blog Store
+ *
+ * Manages the state and operations related to blog articles in the application.
+ *
+ * @store
+ *
+ * @example
+ * // Usage in a component:
+ * import { useBlogStore } from '@/stores/blog';
+ *
+ * const blogStore = useBlogStore();
+ * const articles = computed(() => blogStore.list);
+ *
+ *
+ * @features
+ * - Fetches and stores blog articles with pagination
+ * - Manages filter queries for article search and categorization
+ * - Tracks total article count and whether more articles are available
+ * - Automatically updates article list based on filter changes
+ *
+ * @state
+ * - list: Array of fetched articles
+ * - totalArticles: Total number of articles available
+ * - hasMoreItems: Boolean indicating if more articles can be loaded
+ * - filterQuery: Object containing current filter parameters
+ *
+ * @computed
+ * - serverURL: Generates the API URL based on current filter query
+ *
+ * @dependencies
+ * - pinia
+ * - slug
+ * - vue-router (for useRoute)
+ * - nuxt/composition-api (for useFetch)
+ *
+ */
+
 import { defineStore } from "pinia";
 import slug from "slug";
 

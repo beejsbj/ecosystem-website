@@ -1,3 +1,49 @@
+/**
+ * Ecosystem Store
+ *
+ * Manages the state and operations related to ecosystem projects in the application.
+ *
+ * @store
+ *
+ * @example
+ * // Usage in a component:
+ * import { useEcosystemStore } from '@/stores/ecosystem';
+ *
+ * const ecosystemStore = useEcosystemStore();
+ * const projects = computed(() => ecosystemStore.list);
+ *
+ * @features
+ * - Fetches and stores ecosystem projects with pagination
+ * - Manages complex filter queries for project search and categorization
+ * - Provides options for categories, product types, and chains
+ * - Tracks total project count and whether more projects are available
+ * - Offers utility functions for data transformation and filter management
+ *
+ * @state
+ * - list: Array of fetched projects
+ * - totalProjects: Total number of projects available
+ * - hasMoreItems: Boolean indicating if more projects can be loaded
+ * - filterQuery: Object containing current filter parameters
+ * - stats: Project statistics
+ *
+ * @computed
+ * - serverURL: Generates the API URL based on current filter query
+ * - isFilterApplied: Checks if any filter is currently applied
+ *
+ * @methods
+ * - clearFilters: Resets all filters to their default state
+ *
+ * @dependencies
+ * - pinia
+ * - nuxt/app (for useFetch)
+ * - @api3/chains
+ * - @vueuse/core
+ *
+ * @note
+ * This store uses the Composition API style of Pinia and implements
+ * debounced searching for improved performance.
+ */
+
 import { defineStore } from "pinia";
 import { useFetch } from "nuxt/app";
 import { CHAINS } from "@api3/chains";
@@ -160,12 +206,6 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
     };
   });
 
-  // chain id to chain name mapping
-  const chainNames = (chainId) => {
-    const chain = CHAINS.find((chain) => chain.id == chainId);
-    return chain ? chain.name : chainId;
-  };
-
   function clearFilters() {
     filterQuery.value = {
       searchKey: "",
@@ -188,7 +228,6 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
     categoryToLabel,
     productTypeToLabel,
     filterQuery,
-    chainNames,
     clearFilters,
     isFilterApplied,
   };

@@ -1,3 +1,56 @@
+/**
+ * OEV Store
+ *
+ * Manages state and operations related to OEV protocols and user interactions
+ * in the application.
+ *
+ * @store
+ *
+ * @example
+ * // Usage in a component:
+ * import { useOEVStore } from '@/stores/oev';
+ *
+ * const oevStore = useOEVStore();
+ * const protocols = computed(() => oevStore.protocols);
+ *
+ * // Toggle protocol visibility
+ * oevStore.toggleHide(someProtocol);
+ *
+ * @features
+ * - Manages user-specific TVL and incentive data
+ * - Handles protocol data including visibility states
+ * - Provides functions for protocol manipulation (hide/show, add)
+ * - Computes totals and visibility states
+ * - Manages user-selected protocols
+ *
+ * @state
+ * - userTvl: User's Total Value Locked
+ * - userIncentive: User's incentive amount
+ * - userSelectedProtocols: Object of user-selected protocols
+ * - protocols: Array of protocol data
+ * - protocolCount: Number of protocols to show in the chart
+ *
+ * @computed
+ * - oevTotals: Total OEV data
+ * - isAllHidden: Boolean indicating if all protocols are hidden
+ * - isUserVisible: Boolean indicating if user-added protocol is visible
+ *
+ * @methods
+ * - setProtocols: Initializes protocol data
+ * - getProtocolBySlug: Retrieves a protocol by its slug
+ * - toggleHide: Toggles visibility of a protocol
+ * - hideAll: Hides all protocols
+ * - addProtocol: Adds a new protocol to the list
+ * - isProtocolVisible: Checks if a protocol is visible
+ *
+ * @dependencies
+ * - pinia
+ *
+ * @note
+ * This store uses the Composition API style of Pinia and manages
+ * complex state related to OEV protocols and user interactions.
+ */
+
 import { defineStore } from "pinia";
 
 export const useOEVStore = defineStore("oev", function () {

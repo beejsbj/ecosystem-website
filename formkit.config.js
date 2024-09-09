@@ -1,3 +1,44 @@
+/**
+ * FormKit Configuration
+ *
+ * Configures FormKit with custom plugins, icons, classes, and props for the application.
+ *
+ * @file
+ *
+ * @features
+ * - Integrates multiple FormKit plugins (multi-step, auto-height textarea, auto-animate)
+ * - Configures custom icons from various sources
+ * - Sets up custom CSS classes for form elements
+ * - Adds custom plugins for asterisks, prefix icons, and help tooltips
+ * - Integrates FormKit Pro features (when available)
+ *
+ * @plugins
+ * - createMultiStepPlugin
+ * - createAutoHeightTextareaPlugin
+ * - createAutoAnimatePlugin
+ * - addAsteriskPlugin (custom)
+ * - addPrefixIconPlugin (custom)
+ * - addSuffixHelpTooltipPlugin (custom)
+ * - createProPlugin (FormKit Pro)
+ *
+ * @customPlugins
+ * - addSuffixHelpTooltipPlugin: Adds tooltips to form fields with help text
+ * - addPrefixIconPlugin: Adds prefix icons to specific input types
+ * - addAsteriskPlugin: Adds asterisks to required fields
+ * - registerCustomIcons: Imports and registers custom SVG icons
+ *
+ * @dependencies
+ * - @formkit/vue
+ * - @formkit/addons
+ * - @formkit/icons
+ * - @formkit/pro (optional)
+ * - floating-vue
+ *
+ * @note
+ * This configuration file is used globally for all FormKit instances in the application.
+ * Ensure all dependencies are properly installed and the FormKit Pro key is set in the runtime config if using Pro features.
+ */
+
 import { createTooltip, destroyTooltip } from "floating-vue";
 
 // formkit.config.js
@@ -110,7 +151,6 @@ function addSuffixHelpTooltipPlugin(node) {
   const mouseEnter = node.props.onMouseEnter;
   node.context.handlers.mouseEnter = (e) => {
     const el = e.target;
-    console.log("hover over tooltip");
 
     //
     tooltip = createTooltip(el, {
@@ -153,8 +193,6 @@ function addSuffixHelpTooltipPlugin(node) {
 
 function addPrefixIconPlugin(node) {
   node.on("created", () => {
-    //  console.log(icons);
-
     const typesToApply = ["email", "password", "text", "url", "search"];
 
     if (node.props.prefixIcon) return; // return if already set
@@ -248,9 +286,5 @@ function registerCustomIcons() {
     formattedIcons[iconName] = icons[key].default;
   });
 
-  //   console.log("icons", formattedIcons);
-
-  // Example of how you might use the icons (e.g., registering them with a library)
-  // IconLibrary.register(formattedIcons);
   return formattedIcons;
 }

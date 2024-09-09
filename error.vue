@@ -1,3 +1,20 @@
+<!--
+/**
+ * Error Component
+ * 
+ * Displays a custom error page with error details and navigation options.
+ *
+ * @component
+ *
+ * @prop {Object} error - The error object containing statusCode, message, and stack
+ *
+
+ * @note
+ * This component is typically used by Nuxt.js as a global error page.
+ * Ensure that SectionColumn component is available in your project.
+ */
+-->
+
 <script setup>
 const props = defineProps(["error"]);
 
