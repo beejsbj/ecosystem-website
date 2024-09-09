@@ -1,3 +1,25 @@
+/**
+ * useGsap
+ *
+ * A composable for managing GSAP animations within a Vue component lifecycle.
+ *
+ * @param {Function} animationFunction - Function to define GSAP animations
+ * @returns {Object} GSAP instance
+ *
+ * @example
+ * useGsap((gsap, ScrollTrigger) => {
+ *   gsap.to('.element', { opacity: 0, duration: 1 });
+ * });
+ *
+ * @features
+ * - Automatically sets up and cleans up GSAP context
+ * - Provides GSAP and ScrollTrigger to the animation function
+ * - Reverts animations on component unmount
+ *
+ * @note
+ * Requires Nuxt and GSAP to be set up in the project.
+ */
+
 export default function useGsap(animationFunction) {
   // auto imported by nuxt
   const { $gsap } = useNuxtApp();

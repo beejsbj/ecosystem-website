@@ -1,4 +1,31 @@
 <script setup>
+/**
+ * Default Layout
+ *
+ * The main layout component for the application, providing a consistent
+ * structure across pages.
+ *
+ * @layout
+ *
+ * @example
+ * // Automatically applied to pages unless overridden
+ *
+ * @features
+ * - Includes a decorative curves background
+ * - Wraps content in a ContentsWrapper component
+ * - Provides consistent header and footer across pages
+ * - Responsive design with adjustments for different screen sizes
+ *
+ * @slots
+ * default - The main content area for page-specific components
+ *
+ * @dependencies
+ * - ContentsWrapper
+ * - CurvesDecoration3
+ * - SiteHeader
+ * - SiteFooter
+ */
+
 const route = useRoute();
 </script>
 

@@ -1,4 +1,26 @@
 <script setup>
+/**
+ * FooterLess Layout
+ *
+ * A layout component for pages that don't require a footer, with loading state and conditional curve decorations.
+ *
+ * @layout
+ *
+ * @example
+ * // In a page file:
+ * definePageMeta({
+ *   layout: "footer-less",
+ * });
+ *
+ * @features
+ * - Displays a loading spinner on initial load
+ * - Includes conditional decorative curves background
+ * - Wraps content in a ContentsWrapper component
+ * - Provides consistent header across pages
+ * - Hides curves on specific pages (e.g., 'oev')
+ * - Responsive design for decorative elements
+ */
+
 const route = useRoute();
 const ui = useInterfaceStore();
 
