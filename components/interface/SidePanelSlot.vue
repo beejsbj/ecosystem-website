@@ -1,4 +1,29 @@
 <script setup>
+/**
+ * SidePanelSlot Component
+ *
+ * A sliding side panel component with GSAP animations.
+ *
+ * @prop {boolean} showPanel - Controls the visibility of the panel
+ *
+ * @emits {Event} toggle - Emitted when the panel content is clicked
+ *
+ * @example
+ * <SidePanelSlot :showPanel="isPanelVisible" @toggle="togglePanel">
+ *   <YourPanelContent />
+ * </SidePanelSlot>
+ *
+ *
+ * @features
+ * - Teleports to body
+ * - Disables body scroll when open
+ * - Animated enter/leave transitions
+ * - Fullscreen overlay with gradient background
+ *
+ * @dependencies
+ * - Uses GSAP for animations
+ */
+
 const props = defineProps(["showPanel"]);
 
 watch(

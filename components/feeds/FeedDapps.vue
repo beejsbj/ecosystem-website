@@ -1,16 +1,38 @@
-<!--
- Feed dApps Component
-
- This component displays a list of dApps filtered based on the current feed and chain.
- It also provides functionality to export the filtered dApps as a JSON file.
-
- Props:
- @prop {Object} feedProjects - Contains the projects data for the feed
- @prop {boolean} pending - Indicates if data is still being loaded
- @prop {Object} proxy - The current proxy object used for filtering
--->
-
 <script setup>
+/**
+ * Feed dApps Component
+ *
+ * This component displays a list of dApps filtered based on the current feed and chain.
+ * It also provides functionality to export the filtered dApps as a JSON file.
+ *
+ * @vue-component
+ *
+ * @prop {Object} feedProjects - Contains the projects data for the feed
+ * @prop {boolean} pending - Indicates if data is still being loaded
+ * @prop {Object} proxy - The current proxy object used for filtering
+ *
+ * @example
+ * <FeedDapps :feedProjects="projectsData" :pending="isLoading" :proxy="currentProxy" />
+ *
+ * @features
+ * - Filters and displays dApps based on the current feed and chain
+ * - Shows loading skeletons while data is being fetched
+ * - Provides an "Export JSON" button to download filtered dApps data
+ * - Displays a message when no dApps are available for the current feed and chain
+ * - Responsive grid layout for dApp cards
+ *
+ * @computed
+ * - filteredDapps: Processes and filters the dApps based on the current proxy
+ *
+ * @methods
+ * - exportJSON: Generates and triggers download of filtered dApps data as JSON
+ *
+ * @dependencies
+ * - Uses SectionColumn, SkeletonListItem, SkeletonCard, and FeedDappCard components
+ * - Relies on useInterfaceStore for UI state management
+ * - Uses v-auto-animate directive for animations
+ */
+
 const props = defineProps(["feedProjects", "pending", "proxy"]);
 const ui = useInterfaceStore();
 

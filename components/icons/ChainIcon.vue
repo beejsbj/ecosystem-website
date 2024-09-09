@@ -1,4 +1,31 @@
 <script setup lang="ts">
+/**
+ * ChainIcon Component
+ *
+ * This component displays an icon for a specific blockchain. It handles cases where
+ * the icon might not be found and provides a fallback display using the chain's first letter.
+ *
+ * @vue-component
+ *
+ * @prop {string} id - The identifier for the blockchain
+ *
+ * @example
+ * <ChainIcon id="eth" />
+ *
+ * @features
+ * - Displays the blockchain icon based on the provided id
+ * - Uses a computed property to determine the image source
+ * - Provides a fallback display using the chain's first letter if the image fails to load
+ * - Includes special styling for testnet chains (currently commented out)
+ * - Uses a tooltip to display the full chain name on hover
+ * - Responsive design with fixed aspect ratio
+ *
+ * @implementation-details
+ * - The image source is computed based on the provided id
+ * - Fallback mechanism is implemented using the onerror event on the img element
+ * - Testnet styling can be enabled by uncommenting the relevant CSS
+ * - Tooltip functionality should be implemented separately (not shown in this component)
+ */
 interface Props {
   id: string;
 }

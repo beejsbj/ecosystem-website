@@ -1,4 +1,33 @@
 <script setup>
+/**
+ * ModalSlot Component
+ *
+ * This component provides a reusable modal structure that can be filled
+ * with custom content. It handles showing/hiding the modal, manages body
+ * scrolling, and provides a smooth transition effect.
+ *
+ * @vue-component
+ *
+ * @example
+ * <ModalSlot>
+ *   <YourCustomModalContent />
+ * </ModalSlot>
+ *
+ * @features
+ * - Uses Vue's Teleport to render the modal at the body level
+ * - Toggles body scrolling when the modal is shown/hidden
+ * - Provides a click-outside functionality to close the modal
+ * - Uses a transition effect for smooth appearance/disappearance
+ * - Responsive design with a maximum width and centered content
+ *
+ * @dependencies
+ * - Relies on useInterfaceStore for managing modal state
+ *
+ * @slots
+ * default - The content to be displayed inside the modal
+ *
+ */
+
 const ui = useInterfaceStore();
 
 watch(

@@ -1,4 +1,27 @@
 <script setup>
+/**
+ * DynamicIcon Component
+ *
+ * This component displays an icon using FormKitIcon, with options for customization.
+ * It converts the icon name to a slug for consistency and allows for width adjustment.
+ *
+ * @vue-component
+ *
+ * @prop {string} icon - The name of the icon to display
+ * @prop {string} [width='24px'] - The width of the icon (default is 24px)
+ *
+ * @example
+ * <DynamicIcon icon="user" width="32px" />
+ *
+ * @features
+ * - Uses FormKitIcon to render the icon
+ * - Converts the icon name to a slug for consistent naming
+ * - Allows customization of icon width
+ * - Applies a hue rotation filter for color adjustments
+ * - Calculates line width based on the icon's width
+ *
+ */
+
 import slug from "slug";
 import { FormKitIcon } from "@formkit/vue";
 
@@ -7,14 +30,7 @@ const props = defineProps(["icon", "width"]);
 
 <template>
   <picture class="dynamic-icon" :class="icon">
-    <!-- <NuxtImg
-      loading="lazy"
-      :src="`/images/icons/${slug(props.icon)}.svg`"
-      :alt="props.icon"
-    /> -->
-    <!-- <Transition name="fade"> -->
     <FormKitIcon :icon="slug(props.icon)" />
-    <!-- </Transition> -->
   </picture>
 </template>
 

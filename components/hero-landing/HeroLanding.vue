@@ -1,5 +1,31 @@
 <script setup>
-// const content = await queryContent("/home").findOne().heroLanding; #todo
+/**
+ * HeroLanding Component
+ *
+ * This component represents the main hero section of the API3 ecosystem landing page.
+ * It displays a headline, a brief description, a call-to-action button, and includes
+ * the HeroCards component.
+ *
+ * @vue-component
+ *
+ * @example
+ * <HeroLanding />
+ *
+ * @features
+ * - Displays a prominent headline highlighting the API3 ecosystem
+ * - Provides a brief description of the ecosystem
+ * - Includes a call-to-action button to join the ecosystem
+ * - Incorporates the HeroCards component for additional information
+ * - Uses decorative curved elements for visual appeal
+ * - Responsive design adapting to different screen sizes
+ *
+ * @note
+ * This component doesn't accept any props, as it uses hardcoded content.
+ *
+ *
+ * @dependencies
+ * - HeroCards component
+ */
 </script>
 
 <template>

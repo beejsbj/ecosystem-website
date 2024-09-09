@@ -1,4 +1,25 @@
 <script setup>
+/**
+ * HeroCards Component
+ *
+ * This component displays a grid of cards highlighting different sections
+ * or features of the API3 ecosystem.
+ *
+ * @vue-component
+ *
+ * @example
+ * <HeroCards />
+ *
+ * @features
+ * - Displays a set of cards with information about different API3 ecosystem areas
+ * - Each card includes an icon, heading, description, and a call-to-action link
+ * - Responsive grid layout adapting to different screen sizes
+ * - Uses custom styling for a cohesive look with the rest of the application
+ *
+ * @note
+ * This component doesn't accept any props, as it uses internal data.
+ */
+
 const ui = useInterfaceStore();
 
 const showcaseCards = ref([

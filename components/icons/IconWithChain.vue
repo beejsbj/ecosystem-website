@@ -1,4 +1,24 @@
 <script setup>
+/**
+ * IconWithChain Component
+ *
+ * This component displays an icon image with an associated chain icon overlay.
+ * It's designed to show a primary image (e.g., a dApp or token logo) along with
+ * a smaller chain icon to indicate the associated blockchain.
+ *
+ * @vue-component
+ *
+ * @prop {string} image - The URL of the main image to be displayed
+ * @prop {string} id - The identifier for the chain, used by the ChainIcon component
+ *
+ * @example
+ * <IconWithChain image="/path/to/dapp-logo.png" id="eth" />
+ *
+ * @note
+ * The chain icon overlay (picture.chain-icon) is styled but set to display: none.
+ * Adjust the CSS if you want to make the chain icon visible.
+ */
+
 const props = defineProps(["image", "id"]);
 </script>
 

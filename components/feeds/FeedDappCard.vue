@@ -1,17 +1,28 @@
-<!--
- Feed dApp Card Component
-
- This component displays a card with information about a single dApp,
- including its logo, name, categories, tagline, and proxy addresses.
- It also shows an OEV (Off-chain Event Validation) tag when applicable.
-
- Props:
- @prop {Object} dapp - The dApp object containing information like name, slug, images, categories, and tagline
- @prop {Object} proxy - The proxy object (usage not clear from the provided code)
- @prop {Object} dappProxy - Contains proxy information including OEV status and addresses
--->
-
 <script setup>
+/**
+ * Feed dApp Card Component
+ *
+ * Displays a card with information about a single dApp, including its logo,
+ * name, categories, tagline, and proxy addresses. Shows an OEV (Off-chain
+ * Event Validation) tag when applicable.
+ *
+ * @vue-component
+ *
+ * @prop {Object} dapp - The dApp object containing general information
+ * @prop {Object} proxy - The proxy object
+ * @prop {Object} dappProxy - Contains proxy information including OEV status and addresses
+ *
+ * @example
+ * <FeedDappCard :dapp="dappObject" :proxy="proxyObject" :dappProxy="dappProxyObject" />
+ *
+ * @features
+ * - Displays dApp logo, name, categories, and tagline
+ * - Lists proxy addresses associated with the dApp
+ * - Indicates OEV status with a special tag
+ * - Provides a link to more details about the dApp
+ *
+ */
+
 const props = defineProps(["dapp", "proxy", "dappProxy"]);
 const ecosystem = useEcosystemStore();
 
