@@ -1,4 +1,22 @@
 <script setup>
+/**
+ * OEVExplainerCarousel Component
+ * 
+ * A carousel component that explains the OEV (Optimistic Ethereum Validation) process step by step.
+ *
+ * @component
+ *
+ * @example
+ * <OEVExplainerCarousel />
+ *
+ * @features
+ * - Displays a series of steps explaining the OEV process
+ * - Includes interactive carousel functionality for mobile devices
+ * - Responsive design with different layouts for mobile and desktop
+ * - Custom styling for each step, including arrows between steps
+ * - Background decoration with curves
+ *
+ */
 const ui = useInterfaceStore();
 
 const scrollPosition = ref(0);

@@ -1,7 +1,4 @@
 <script setup>
-///
-///
-///
 definePageMeta({
   title: "OEV",
   layout: "footer-less",
@@ -10,9 +7,6 @@ definePageMeta({
 
   alias: ["/watchtower", "/oev-watchtower"],
 });
-///
-///
-///
 
 // Import the OEV store and initialize it
 const oev = useOEVStore();
@@ -28,10 +22,6 @@ oev.setProtocols(overview.value);
 <template>
   <ContentsWrapper>
     <!-- Page Title component with heading and notice voice -->
-
-    <ClientOnly>
-      <!-- <LazyOEVTotalsChart /> -->
-    </ClientOnly>
 
     <OEVHero />
 

@@ -1,5 +1,4 @@
 <script setup>
-// #todo update this
 useSeoMeta({
   title: "Style Guide",
   description:
@@ -58,10 +57,6 @@ useSeoMeta({
       <FormGuide />
     </SectionColumn>
 
-    <SectionColumn id="component-guide">
-      <!-- <ComponentGuide /> -->
-    </SectionColumn>
-
     <SectionColumn id="text-guide">
       <TextVoices />
     </SectionColumn>
@@ -90,6 +85,5 @@ useSeoMeta({
 <style>
 .style-guide main > div {
   display: grid;
-  /* gap: 8rem; */
 }
 </style>

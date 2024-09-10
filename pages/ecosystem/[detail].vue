@@ -145,11 +145,6 @@ useGsap((gsap) => {
   }
 }
 
-.detail-page,
-.banner {
-  //   opacity: 0;
-}
-
 article.main {
   display: grid;
   gap: var(--space-2xl);

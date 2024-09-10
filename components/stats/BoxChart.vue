@@ -2,7 +2,6 @@
 const props = defineProps(["data", "options", "metadata", "isChains"]);
 
 const gradientColors = [
-  // give me 7 colors from "hsla(160, 65%, 69%, 1.00)" to "hsla(256, 34%, 54%, 1)", by gradually increasing the hue, saturation, and lightness only, but keeping the alpha at 1
   "hsla(160, 65%, 69%, 1.00)",
   "hsla(180, 59%, 66%, 1.00)",
   "hsla(200, 53%, 63%, 1.00)",
@@ -13,13 +12,10 @@ const gradientColors = [
 
 const data = computed(() => {
   return {
-    //  labels: props.data.map((item) => item.key),
-
     datasets: [
       {
         data: props.data,
         borderColor: gradientColors,
-        //   hoverBackgroundColor: gradientColors,
       },
     ],
   };
@@ -37,7 +33,6 @@ const data = computed(() => {
         :solid="dataPoint.value"
       >
         <ChainIcon :id="dataPoint.key" v-if="isChains" />
-        <!-- {{ dataPoint.value }} #todo fix this component -->
       </BoxCard>
 
       <div
@@ -51,10 +46,6 @@ const data = computed(() => {
 </template>
 
 <style scoped>
-.group-heading {
-  /* margin: 2rem 0; */
-}
-
 .box-chart {
   display: grid;
   gap: 2rem;

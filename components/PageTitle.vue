@@ -44,8 +44,6 @@ const props = defineProps(["heading", "voice", "innerClass"]);
   justify-content: start;
   padding: var(--space-2xl) 15px;
 
-  //   opacity: 0;
-
   @media (min-width: 768px) {
     margin-top: var(--space-l);
   }

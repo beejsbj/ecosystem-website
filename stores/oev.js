@@ -112,7 +112,7 @@ export const useOEVStore = defineStore("oev", function () {
     const userProtocol = {
       slug: `userAdded`,
       name: `Your dApp`,
-      icon: "/images/icons/dapp-icon.svg", //#todo add icon to public
+      icon: "/images/icons/dapp-icon.svg",
       chainId: 1,
       totalLiquidated: 0,
       totalSentToBuilderUSD: 0,

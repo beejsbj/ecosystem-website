@@ -1,4 +1,27 @@
 <script setup>
+/**
+ * OEVLoader Component
+ *
+ * A loading animation component that displays the "OEV NETWORK" logo with animated effects.
+ *
+ * @component
+ *
+ * @example
+ * <OEVLoader />
+ *
+ * @features
+ * - Displays an animated SVG logo for "OEV"
+ * - Shows "NETWORK" text below the logo
+ * - Uses GSAP for complex animation sequences
+ * - Covers the entire viewport during loading
+ * - Automatically hides itself after animation completion
+ *
+ * @notes
+ * - Utilizes GSAP timeline for coordinated animations
+ * - Sets pointer-events to none to prevent interaction during loading
+ * - Positions itself fixed on top of other content
+ */
+
 useGsap((gsap) => {
   const timeline = gsap.timeline({ repeat: 0, repeatDelay: 0.1 });
 
@@ -8,7 +31,6 @@ useGsap((gsap) => {
     opacity: 1,
   });
 
-  //   E
   timeline.set(".oev-loader :is(#E) rect", {
     y: -100,
     scale: 0.5,

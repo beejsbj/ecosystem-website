@@ -1,4 +1,26 @@
 <script setup>
+/**
+ * DetailPanel Component
+ * 
+ * A component for displaying detailed information about a dApp in a side panel.
+ *
+ * @component
+ *
+ * @example
+ * <DetailPanel :dapp="dappObject" />
+ *
+ * @props
+ * @prop {Object} dapp - The dApp object containing detailed information
+ *
+ * @features
+ * - Displays chains associated with the dApp
+ * - Shows product type and categories
+ * - Presents the year of the dApp
+ * - Implements responsive design for various screen sizes
+ * - Uses dynamic icons for chains and product types
+ */
+
+ 
 import { useEcosystemStore } from "@/stores/ecosystem";
 
 const props = defineProps(["dapp"]);
@@ -27,8 +49,6 @@ onMounted(() => {
         <p>Chains</p>
         <ul>
           <li v-for="chain in dapp?.chains" :key="chain.id">
-            <!-- {{ chain }} -->
-            <!-- #todo clean up -->
             <ChainIcon :id="chain" />
           </li>
         </ul>
@@ -50,7 +70,6 @@ onMounted(() => {
             :key="category"
             class="whisper-voice"
           >
-            <!-- <DynamicIcon :icon="category" /> -->
             {{ ecosystem.categoryToLabel?.[category] }}
           </li>
         </ul>

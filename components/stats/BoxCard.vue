@@ -1,4 +1,38 @@
 <script setup>
+
+/**
+ * BoxCard Component
+ *
+ * A versatile card component that can display an image, teaser text, and/or solid text in either a grid or flex layout.
+ *
+ * @component
+ *
+ * @example
+ * <BoxCard teaser="Teaser Text" solid="Solid Text" layout="grid">
+ *   <img src="custom-image.jpg" alt="Custom Image" />
+ * </BoxCard>
+ *
+ * @props
+ * @prop {String} teaser - Teaser text to display in the card
+ * @prop {String} solid - Solid text to display in the card
+ * @prop {Boolean} hideImage - If true, hides the default image
+ * @prop {String} layout - Defines the layout of the card ('grid' or 'flex')
+ *
+ * @features
+ * - Flexible layout options (grid or flex)
+ * - Optional image display
+ * - Customizable teaser and solid text
+ * - Responsive design with CSS variables for sizing
+ * - Cursor pointer indicating interactivity
+ *
+ * @notes
+ * - Default image is sourced from '@/assets/images/background/square.jpg'
+ * - The component is designed to be interactive (cursor: pointer)
+ * - 'border-gradient-blue' class applies a filter to child elements
+ */
+
+
+
 const props = defineProps(["teaser", "solid", "hideImage", "layout"]);
 </script>
 
@@ -53,7 +87,6 @@ const props = defineProps(["teaser", "solid", "hideImage", "layout"]);
 
 .box-card .teaser-voice {
   font-size: var(--step--1);
-  //   white-space: nowrap;
   text-align: start;
 }
 

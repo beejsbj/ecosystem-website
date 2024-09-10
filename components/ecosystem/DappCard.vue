@@ -1,4 +1,25 @@
 <script setup>
+/**
+ * DappCard Component
+ *
+ * A card component for displaying decentralized application (dApp) information in the ecosystem.
+ *
+ * @component
+ *
+ * @example
+ * <DappCard :dapp="dappObject" />
+ *
+ * @props
+ * @prop {Object} dapp - Object containing dApp information (required)
+ *
+ * @features
+ * - Displays dApp logo, name, tagline, supported chains, product type, and categories
+ * - Interactive elements for filtering the ecosystem by chain, product type, and category
+ * - Responsive design with hover effects
+ * - Links to detailed dApp page
+ *
+ */
+
 import { useEcosystemStore } from "@/stores/ecosystem";
 
 const props = defineProps(["dapp"]);
@@ -32,8 +53,6 @@ function filterBy(event) {
       <ul class="chain-list">
         <template v-for="(chain, i) in dapp?.chains">
           <li class="chain" :data-chain="chain" @click="filterBy" v-if="i < 3">
-            <!-- #todo clean up -->
-
             <ChainIcon :id="chain" />
           </li>
           <li v-else-if="i == 4">
@@ -78,7 +97,6 @@ function filterBy(event) {
           :data-category="category"
         >
           {{ ecosystem?.categoryToLabel?.[category] ?? "Category" }}
-          <!-- <DynamicIcon :icon="category" /> -->
         </li>
       </ul>
       <NuxtLink :to="`/ecosystem/${dapp.slug}`" class="card-link" />
@@ -109,7 +127,6 @@ function filterBy(event) {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 0.1fr;
-    //  z-index: 2;
 
     .chain-list {
       display: flex;
@@ -121,17 +138,6 @@ function filterBy(event) {
         max-width: 10px;
       }
     }
-
-    //  .chain-list {
-    //    display: flex;
-    //    max-width: 50%;
-    //    overflow-x: scroll;
-    //    gap: var(--space-2xs);
-
-    //    li {
-    //      flex-shrink: 0;
-    //    }
-    //  }
 
     .productType {
       display: flex;
@@ -154,7 +160,6 @@ function filterBy(event) {
 
     h2 {
       text-wrap: balance;
-      // z-index: 2;
     }
 
     p {

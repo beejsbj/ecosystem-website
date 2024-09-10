@@ -284,7 +284,6 @@ div.pallete {
   height: 100px;
   border-radius: var(--corners);
   margin-bottom: var(--space-2xs);
-  //   text-align: center;
 }
 form-field {
   max-width: 50%;

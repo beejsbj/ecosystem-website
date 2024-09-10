@@ -29,10 +29,6 @@ export default defineNuxtConfig({
       name: "page",
       mode: "out-in",
     },
-    //  layoutTransition: {
-    //    name: "layout",
-    //    mode: "out-in",
-    //  },
 
     head: {
       title: "API3 Ecosystem",
@@ -85,7 +81,7 @@ export default defineNuxtConfig({
     [
       "@formkit/nuxt",
       {
-        //   autoImport: false, //#fixme
+        //   autoImport: false,
       },
     ],
     //lodash

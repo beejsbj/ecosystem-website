@@ -1,5 +1,50 @@
 <script setup>
-import { useStorage } from "@vueuse/core";
+/**
+ * DappProxies Component
+ *
+ * A component for displaying a table of proxy information for dApps, including network, feed name, type, addresses, and links.
+ *
+ * @component
+ *
+ * @example
+ * <DappProxies :dapp="dappObject" :isForm="false" />
+ *
+ * @props
+ * @prop {Object} dapp - The dApp object containing proxy information
+ * @prop {Boolean} isForm - Indicates if the component is being used in a form context
+ * @prop {Object} dappForm - Form data object when used in form context
+ * @prop {Array} proxies - Array of proxy objects (used when not accessing from dapp object)
+ *
+ * @features
+ * - Displays a table of proxy information including chain, feed name, type, addresses
+ * - Supports both form and display modes
+ * - Provides links to individual feed pages
+ * - Implements copy-to-clipboard functionality for addresses
+ * - Responsive design with scrollable table
+ *
+ * @computed
+ * - formattedProxies: Processes and formats proxy data for display
+ *
+ * @methods
+ * - getFeedQuery: Generates query string for feed page links
+ *
+ * @dependencies
+ * - useEcosystemStore: For accessing ecosystem data
+ * - getChainName: Utility function for resolving chain names
+ * - ChainIcon, FeedIcon, WalletAddress: Custom components for UI elements
+ * - v-auto-animate: For smooth list transitions
+ *
+ * @styling
+ * - Uses scoped SCSS for component-specific styling
+ * - Implements responsive table layout with sticky header
+ * - Custom styling for various table elements
+ *
+ * @notes
+ * - The component adapts its behavior based on the 'isForm' prop
+ * - In form mode, it allows removal of proxy entries
+ * - Utilizes custom components for chain and feed icons, and wallet addresses
+ */
+
 import { useEcosystemStore } from "@/stores/ecosystem";
 import { getChainName } from "@/utils/getChainName";
 
@@ -67,8 +112,6 @@ function getFeedQuery(proxy) {
       <li class="table-row" v-for="(proxy, index) in formattedProxies">
         <!-- chain -->
         <div class="chain">
-          <!-- #todo clean up -->
-
           <ChainIcon :id="proxy.chainId" />
           {{ getChainName(proxy.chainId) }}
         </div>

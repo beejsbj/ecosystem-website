@@ -1,4 +1,24 @@
 <script setup>
+/**
+ * DappScreenshots Component
+ *
+ * A component for displaying a grid of dApp screenshots with lightbox functionality.
+ *
+ * @component
+ *
+ * @example
+ * <DappScreenshots :dapp="dappObject" />
+ *
+ * @props
+ * @prop {Object} dapp - The dApp object containing screenshot images
+ *
+ * @features
+ * - Displays a responsive grid of dApp screenshots
+ * - Implements lightbox functionality for full-screen image viewing
+ * - Allows navigation through screenshots in lightbox mode
+ * - Responsive design adapting to different screen sizes
+ */
+
 import VueEasyLightbox from "vue-easy-lightbox";
 
 const props = defineProps(["dapp"]);

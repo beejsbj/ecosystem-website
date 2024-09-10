@@ -10,8 +10,6 @@ const getSlug = (feedName) => feedName.replace("/", "-");
 //
 definePageMeta({
   layout: "feed-layout",
-  //   title: feedSlug,
-  //   description: "dApps using the " + feedSlug,
 });
 </script>
 
@@ -56,9 +54,6 @@ li > a {
 
   h2 {
     margin-top: var(--space-xs);
-  }
-
-  &:hover {
   }
 }
 

@@ -1,4 +1,17 @@
 <script setup>
+/**
+ * FilterButtons Component
+ * 
+ * A component for displaying filter and clear buttons for dApp listings.
+ *
+ * @component
+ *
+ * @example
+ * <FilterButtons />
+ *
+ */
+
+ 
 import { useInterfaceStore } from "@/stores/interface";
 import { useEcosystemStore } from "@/stores/ecosystem";
 

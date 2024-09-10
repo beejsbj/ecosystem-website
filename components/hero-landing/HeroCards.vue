@@ -53,7 +53,6 @@ const showcaseCards = ref([
       class="item border-gradient-green background-radial-green"
       v-for="card in showcaseCards"
     >
-      <!-- @mouseover="ui.changeHeroImage(card)" -->
       <picture class="">
         <DynamicIcon :icon="card.image" />
       </picture>
@@ -83,18 +82,15 @@ hero-card {
   display: grid;
   gap: var(--space-m);
   justify-items: center;
-  //   align-content: space-between;
   padding: var(--space-xl) var(--space-l);
   text-align: center;
 
   picture {
     max-width: 80px;
     aspect-ratio: 1;
-    //  gap: var(--space-m);
   }
 
   text-content {
-    //  max-width: 80%;
     display: grid;
   }
 }

@@ -1,7 +1,28 @@
 <script setup>
+/**
+ * OEVSummaryCards Component
+ *
+ * A component that displays summary cards with key OEV (Oracle Extractable Value) metrics.
+ *
+ * @component
+ *
+ * @example
+ * <OEVSummaryCards />
+ *
+ * @features
+ * - Displays multiple summary cards with OEV-related statistics
+ * - Responsive design that adjusts layout based on screen size and number of cards
+ * - Utilizes data from the OEV store for calculations
+ * - Applies custom styling for visual appeal
+ * 
+ * @notes
+ * - Currently displays "Total Liquidated" and "OEV Lost" metrics
+ * - Includes a disclaimer about data source
+ * - Some card options are commented out in the current implementation
+ */
+
 import formatNumber from "@/utils/formatNumber";
 
-// Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
 const ui = useInterfaceStore();
 
@@ -18,18 +39,10 @@ const cards = [
     title: "Total Liquidated",
     value: `$${formatNumber(totalLiquidated)}`,
   },
-  //   {
-  //     title: "TOTAL SENT TO BUILDER",
-  //     value: `$${formatNumber(totalSentToBuilderUSD)}*`,
-  //   },
   {
     title: "OEV Lost",
     value: `$${formatNumber(totalIncentiveUSD)}`,
   },
-  //   {
-  //     title: "TOTAL Searcher PROFIT",
-  //     value: `$${formatNumber(totalProfitUSD)}*`,
-  //   },
 ];
 
 const gridCount = computed(() => {

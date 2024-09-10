@@ -1,4 +1,41 @@
 <script setup>
+/**
+ * BarChart Component
+ *
+ * A reusable bar chart component built with vue-chartjs and Chart.js.
+ *
+ * @component
+ *
+ * @example
+ * <BarChart :data="chartData" :options="chartOptions" :metadata="chartMetadata" />
+ *
+ * @props
+ * @prop {Object} data - The chart data object containing labels and datasets
+ * @prop {Object} options - Additional chart options to override defaults
+ * @prop {Object} metadata - Metadata for chart titles and axis labels
+ *
+ * @features
+ * - Renders a customizable bar chart using Chart.js
+ * - Supports zoom functionality with chartjs-plugin-zoom
+ * - Customizable colors, labels, and styling
+ * - Responsive design that maintains aspect ratio
+ * - Optional zoom reset button
+ * - Gradient or solid color bars with customizable opacity
+ *
+ * @computed
+ * @property {Object} options - Merged chart options combining defaults and provided options
+ * @property {String} color - Computed chart color based on props or default
+ * @property {Boolean} isZoomEnabled - Whether zoom functionality is enabled
+ *
+ * @methods
+ * @method handleZoomReset - Resets the chart zoom when the reset button is clicked
+ *
+ * @notes
+ * - Utilizes Chart.js plugins: Title, SubTitle, Tooltip, Legend, BarElement, CategoryScale, LinearScale, Colors
+ * - Some features (like data labels) are configured but disabled by default
+ * - Assumes the existence of a `formatNumber` function for Y-axis tick formatting
+ */
+
 import { Bar } from "vue-chartjs";
 import zoom from "chartjs-plugin-zoom";
 
@@ -32,14 +69,9 @@ const chart = ref(null);
 
 const ui = useInterfaceStore();
 
-//
 const color = computed(() => {
   return props.options.color ? props.options.color : "hsla(160, 64%, 69%, 1)";
 });
-
-//
-
-//
 
 const options = computed(() => {
   const defaultOptions = {
@@ -77,20 +109,6 @@ const options = computed(() => {
           left: 8,
         },
       },
-
-      // zoom: {
-      //   //   pan: {
-      //   //     enabled: true,
-      //   //     mode: 'x',
-      //   //     modifierKey: 'ctrl',
-      //   //   },
-      //   zoom: {
-      //     drag: {
-      //       enabled: true,
-      //     },
-      //     mode: "x",
-      //   },
-      // },
     },
 
     scales: {
@@ -130,7 +148,6 @@ const options = computed(() => {
     responsive: true,
     maintainAspectRatio: true,
 
-    //  backgroundColor: color.value,
     barPercentage: 0.4,
     borderRadius: 16,
 

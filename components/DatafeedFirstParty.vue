@@ -633,9 +633,3 @@ useGsap((gsap) => {
     </defs>
   </svg>
 </template>
-
-<style scoped lang="scss">
-.right-circle {
-  //   display: none;
-}
-</style>

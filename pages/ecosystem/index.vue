@@ -46,8 +46,6 @@ useSeoMeta({
 
 <style lang="scss">
 .ecosystem-header {
-  //   opacity: 0;
-
   inner-column {
     display: grid;
     gap: var(--space-s);

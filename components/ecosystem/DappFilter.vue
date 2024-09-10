@@ -1,4 +1,42 @@
 <script setup>
+/**
+ * DappFilter Component
+ * 
+ * A comprehensive filter component for the dApp ecosystem, allowing users to filter dApps by various criteria.
+ *
+ * @component
+ *
+ * @example
+ * <DappFilter />
+ *
+ * @features
+ * - Search functionality for dApps
+ * - Filters for networks (chains), product types, categories, and years
+ * - Expandable filter sections with show more/less functionality
+ * - Responsive design with mobile-specific actions
+ * - Integration with ecosystem store for state management
+ * - Skeleton loading states for better UX
+ *
+ * @computed
+ * - chains, categories, productTypes, years: Processed filter options from ecosystem stats
+ *
+ * @methods
+ * - handleFilter: Updates the filter query and resets pagination
+ *
+ * @dependencies
+ * - useEcosystemStore, useInterfaceStore: For state management
+ * - getChainName: Utility function for chain name resolution
+ * - FormKit: For form inputs
+ * - ChainIcon, DynamicIcon: For visual representations
+ * - FilterButtons, SkeletonListItem: Custom components for UI elements
+ *
+ * @notes
+ * - The component is tightly coupled with the ecosystem and interface stores
+ * - Mobile version includes apply and cancel buttons in a modal context
+ * - Utilizes v-auto-animate for smooth transitions when showing/hiding elements
+ */
+
+
 import { useEcosystemStore } from "~/stores/ecosystem";
 import { getChainName } from "~/utils/getChainName";
 
@@ -42,27 +80,6 @@ const years = computed(() => {
   }
 });
 
-// useGsap((gsap) => {
-//   const pageLoad = gsap.timeline();
-//   pageLoad.fromTo(
-//     "dapp-filter",
-//     {
-//       delay: "0.5",
-//       y: "10vw",
-//       opacity: 0,
-//       duration: 0,
-//     },
-//     {
-//       y: "0vw",
-//       opacity: 1,
-//       duration: 0.5,
-//       stagger: {
-//         each: 0.15,
-//         from: "start",
-//       },
-//     }
-//   );
-// });
 
 const handleFilter = (event) => {
   ecosystem.filterQuery.page = 1;
@@ -222,12 +239,7 @@ const handleFilter = (event) => {
               @change="handleFilter"
               v-auto-animate
             >
-              <!-- <template #label="context">
-                <DynamicIcon :icon="category.name" />
-                <span class="whisper-voice">
-                  {{ context.label }}
-                </span>
-              </template> -->
+     
             </FormKit>
           </li>
         </template>

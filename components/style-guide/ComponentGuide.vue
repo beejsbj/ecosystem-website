@@ -25,10 +25,6 @@ const components = ref([
     class: "text",
   },
 ]);
-
-// const dynamicComponent = defineAsyncComponent(() =>
-// //   import(`@/components/icons/socials/Icon.vue`)
-// );
 </script>
 
 <template>

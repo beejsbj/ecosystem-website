@@ -1,4 +1,29 @@
 <script setup>
+/**
+ * OEVProtocolChart Component
+ *
+ * A dynamic chart component for visualizing historic liquidation data for various protocols.
+ *
+ * @component
+ *
+ * @example
+ * <OEVProtocolChart />
+ *
+ * @features
+ * - Displays a line chart with multiple datasets (Total Liquidated, Potential OEV Lost, etc.)
+ * - Allows selection of different protocols and time periods
+ * - Supports logarithmic scale toggle
+ * - Implements interactive legend for showing/hiding datasets
+ * - Provides zoom functionality for detailed data exploration
+ * - Responsive design adapting to desktop and mobile views
+ *
+ * @notes
+ * - Uses Chart.js for rendering the line chart
+ * - Fetches data from an API based on selected protocol and period
+ * - Implements custom styling and layout for chart controls
+ * - Utilizes FormKit for form inputs and styling
+ */
+
 import { Chart } from "chart.js";
 import OEVProtocolDropdown from "./OEVProtocolDropdown.vue";
 
@@ -53,11 +78,7 @@ const options = computed(() => {
 
       zoom: {
         enabled: true,
-        //   pan: {
-        //     enabled: true,
-        //     mode: 'x',
-        //     modifierKey: 'ctrl',
-        //   },
+
         zoom: {
           drag: {
             enabled: true,
@@ -71,11 +92,6 @@ const options = computed(() => {
         type: isLogarithmic.value ? "logarithmic" : "linear",
       },
     },
-    //  elements: {
-    //    line: {
-    //      tension: 0,
-    //    },
-    //  },
   };
 });
 
@@ -158,11 +174,6 @@ const parsed = computed(() => {
         hidden: true,
         order: 2,
       },
-      // {
-      //   data: dataIncentive,
-      //   label: "Incentives",
-      //   hidden: true,
-      // },
     ],
   };
 });

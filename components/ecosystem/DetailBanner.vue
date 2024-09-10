@@ -1,6 +1,25 @@
 <script setup>
-// import { useEcosystemStore } from "~/stores/ecosystem";
-// const ecosystem = useEcosystemStore();
+/**
+ * DetailBanner Component
+ * 
+ * A component for displaying a large banner image for a dApp's detail page.
+ *
+ * @component
+ *
+ * @example
+ * <DetailBanner :dapp="dappObject" />
+ *
+ * @props
+ * @prop {Object} dapp - The dApp object containing image information
+ *
+ * @features
+ * - Displays a large cover image for the dApp
+ * - Uses NuxtImg for optimized image loading
+ * - Implements responsive design with aspect ratio maintenance
+ * - Applies border radius on larger screens for aesthetic appeal
+
+ */
+
 const props = defineProps(["dapp"]);
 </script>
 
@@ -19,9 +38,6 @@ const props = defineProps(["dapp"]);
 
 <style lang="scss" scoped>
 .banner {
-  //   position: relative;
-  //   top: 4rem;
-  //   z-index: -1;
   margin-top: var(--space-2xl);
   picture {
     overflow: hidden;

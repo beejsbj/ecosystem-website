@@ -56,8 +56,6 @@ function handleReset() {
 //
 definePageMeta({
   layout: "feed-layout",
-  //   title: feedSlug,
-  //   description: "dApps using the " + feedSlug,
 });
 </script>
 

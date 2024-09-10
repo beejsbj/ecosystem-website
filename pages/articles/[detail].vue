@@ -116,8 +116,6 @@ inner-column.article {
       grid-column: 1 / -1;
       @media (min-width: 768px) {
         grid-column: 4 / 12;
-        //     padding: var(--space-l);
-        //     gap: var(--space-l);
       }
 
       &.cover {
@@ -174,10 +172,6 @@ inner-column.article {
     p {
       margin-top: var(--space-s);
       letter-spacing: 0.02em;
-
-      &:has(> :is(a, code)) {
-        //   overflow: auto;
-      }
     }
 
     & > * {

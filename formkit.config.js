@@ -119,7 +119,6 @@ const plugins = [
 export default defineFormKitConfig(() => {
   const config = useRuntimeConfig();
 
-  //hide help by default #todo
   // pro
 
   const proPlugin = createProPlugin(config.public.formkitProKey, inputs);

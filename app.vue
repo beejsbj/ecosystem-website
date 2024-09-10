@@ -1,4 +1,53 @@
 <script setup>
+/**
+ * App Component
+ *
+ * The root component of the API3 Ecosystem application.
+ *
+ * @component
+ *
+ * @features
+ * - Sets up default metadata for SEO
+ * - Manages client-side app versioning
+ * - Configures global head and SEO meta tags
+ * - Handles automatic app reload on version change
+ *
+ * @uses
+ * - useWeb3Store - For web3 related functionality
+ * - useRoute - For accessing current route information
+ * - useHead - For setting global head tags
+ * - useSeoMeta - For setting SEO meta tags
+ *
+ * @data
+ * @property {Object} meta - Default metadata for the application
+ *
+ * @methods
+ * @method getClientAppVersion - Retrieves the client-side app version from localStorage
+ * @method setClientAppVersion - Sets the client-side app version in localStorage
+ *
+ * @lifecycle
+ * @hook onMounted - Checks for app version updates and reloads if necessary
+ *
+ * @seo
+ * - Dynamically sets title, description, og:image, and other meta tags based on route metadata
+ * - Falls back to default metadata if route-specific metadata is not provided
+ *
+ * @layout
+ * - Uses NuxtLayout for consistent page layout
+ * - Renders current page content using NuxtPage
+ *
+ * @versioning
+ * - Compares client-side version with server-side version
+ * - Triggers a page reload if a new version is detected
+ *
+ * @notes
+ * - Assumes the existence of a '/version.json' file for server-side version checking
+ * - Uses localStorage for persisting client-side version information
+ * - Configures global HTML and body attributes
+ */
+
+
+ 
 const {} = useWeb3Store();
 const route = useRoute();
 

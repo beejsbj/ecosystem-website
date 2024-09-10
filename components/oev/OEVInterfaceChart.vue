@@ -1,4 +1,42 @@
 <script setup>
+/**
+ * OEVInterfaceChart Component
+ *
+ * A dynamic chart component for visualizing OEV (Oracle Extractable Value) data across multiple protocols.
+ *
+ * @component
+ *
+ * @example
+ * <OEVInterfaceChart />
+ *
+ * @features
+ * - Displays bar charts for various OEV metrics (e.g., total liquidated, incentives, profits)
+ * - Allows toggling visibility of different metrics through a legend
+ * - Supports horizontal scrolling for mobile views
+ * - Dynamically calculates bar heights based on maximum values
+ * - Provides tooltips with exact values on hover
+ * - Highlights user-added protocols
+ * - Responsive design adapting to different screen sizes
+ *
+ * @computed
+ * @property {Array} visibleProtocols - Filtered list of protocols to display
+ * @property {Number} maxHeight - Maximum height value across all visible bars
+ * @property {Number} gridCount - Number of visible bar types
+ * @property {Number} protocolCount - Number of visible protocols
+ *
+ * @methods
+ * @method getMaxValue - Calculates the maximum value for a given metric across all visible protocols
+ * @method getColorByValue - Retrieves the color associated with a specific metric
+ * @method barHeight - Calculates the height of a bar based on its value and the maximum value
+ * @method handleButton - Handles horizontal scrolling of the chart on mobile views
+ *
+ * @notes
+ * - Relies on the OEV store and Interface store for data and styling
+ * - Uses custom icons and formatting utilities
+ * - Implements auto-animate for smooth transitions
+ * - Utilizes GSAP for scroll animations on mobile
+ */
+
 import formatNumber from "@/utils/formatNumber";
 
 const ui = useInterfaceStore();
@@ -35,11 +73,7 @@ const bars = [
     color: colors[0],
   },
 
-  //   {
-  //     label: "Total Incentive",
-  //     value: "totalIncentiveUSD",
-  //     color: colors[4],
-  //   },
+
 ];
 
 const visibleProtocols = computed(() => {
@@ -252,13 +286,7 @@ h2 {
   grid-column: 1 / -1;
 }
 
-.protocol-list-wrapper {
-  //   order: 2;
 
-  @media (min-width: 768px) {
-    //  order: unset;
-  }
-}
 
 text-content {
   grid-column: 1 / span 3;
@@ -378,8 +406,6 @@ ul.bars {
   grid-template-columns: repeat(v-bind("protocolCount"), 200px);
   overflow-x: scroll;
   min-height: 350px;
-  //   max-width: 92vw;
-  //   border-left: var(--border-dark);Zz
   &::-webkit-scrollbar {
     display: none;
   }
@@ -423,19 +449,13 @@ li {
   & > .protocol-name {
     text-align: center;
     white-space: nowrap;
-    //  font-size: var(--step--2);
-    //  scale: 1.8;
     transition: 0.2s ease-in-out;
 
-    @media (max-width: 1170px) {
-      // scale: 1.3;
-    }
+ 
 
     @media (max-width: 850px) {
-      // scale: unset;
 
       &:hover {
-        //   scale: 1.3;
         translate: 0 12px;
       }
     }

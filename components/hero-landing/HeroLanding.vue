@@ -85,14 +85,10 @@
       width: 90vw;
       transform: translate(-50%, -50%) scaleX(2);
     }
-
-    //  display: none;
   }
 }
 
 hero-landing {
-  //   opacity: 0;
-  //   height: 80vh;
   display: grid;
   align-content: center;
   padding: var(--space-m) 0;

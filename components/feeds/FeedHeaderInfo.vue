@@ -47,10 +47,6 @@ const currentFeedChains = computed(() => {
     return [];
   }
 
-  if (chains.length < 2) {
-    //  handleChainChange(chains[0]);
-  }
-
   return chains.map((chain) => {
     return {
       label: getChainName(chain),
@@ -59,11 +55,7 @@ const currentFeedChains = computed(() => {
   });
 });
 
-//
-
 function handleChainChange(chain) {
-  //   this should only triiger when the user changes the chain using the dropdown
-
   if (chain == props.proxy.chainId) {
     return;
   }

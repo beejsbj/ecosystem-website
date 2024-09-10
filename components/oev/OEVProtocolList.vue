@@ -1,5 +1,27 @@
 <script setup>
-// Import the useOEVStore function from the OEV store module
+/**
+ * OEVProtocolList Component
+ *
+ * A component for selecting and comparing multiple dApps (decentralized applications) in the context of OEV (Oracle Extractable Value).
+ *
+ * @component
+ *
+ * @example
+ * <OEVProtocolList />
+ *
+ * @features
+ * - Allows selection of up to 4 dApps for comparison
+ * - Utilizes OEVProtocolDropdown components for each dApp selection
+ * - Dynamically adjusts the number of selectable dApps based on user's dApp visibility
+ * - Disables selection for user-added dApps
+ * - Responsive design for different screen sizes
+ *
+ * @notes
+ * - The component title suggests a comparison feature: "How your dApp Compares"
+ * - Adjusts the number of selectable dApps based on `oev.isUserVisible`
+ * - Special handling for 'userAdded' protocol, making its dropdown non-removable
+ */
+
 const oev = useOEVStore();
 </script>
 

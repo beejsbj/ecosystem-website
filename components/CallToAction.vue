@@ -38,8 +38,6 @@ useGsap((gsap) => {
 
 <template>
   <SectionColumn class="cta-module">
-    <!-- <span class="line"></span> -->
-
     <cta-module @mouseover="onMouseover">
       <text-content>
         <h2 class="loud-voice">

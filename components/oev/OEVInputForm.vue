@@ -1,4 +1,29 @@
 <script setup>
+/**
+ * OEVInputForm Component
+ *
+ * A form component for calculating and visualizing a dApp's potential based on user input.
+ *
+ * @component
+ *
+ * @example
+ * <OEVInputForm />
+ *
+ * @features
+ * - Allows users to input liquidation incentive rate and total value locked (TVL)
+ * - Calculates various metrics based on user input (e.g., total liquidated value, total incentive, etc.)
+ * - Updates the OEV store with calculated values
+ * - Provides form validation and input constraints
+ * - Responsive design with custom styling
+ *
+
+ *
+ * @notes
+ * - Relies on the OEV store for state management
+ * - Uses FormKit for form handling and validation
+ * - Assumes the existence of a 'userAdded' protocol in the OEV store
+ */
+
 import { reset } from "@formkit/core";
 // Import the useOEVStore function to access the OEV store
 const oev = useOEVStore();
@@ -38,11 +63,7 @@ function buttonHandle(event) {
   oev.protocols[userDappIndex].totalProfitUSD = totalProfitUSD;
   oev.protocols[userDappIndex].totalOevLostUSD = totalOevLostUSD;
 
-  //
-  //   oev.userSelectedProtocols = {}; // Hide all protocols
   oev.userSelectedProtocols["dApp-1"] = "userAdded";
-
-  //   reset("oev-form"); // Reset the form
 }
 
 function adjustIncentiveValue(value) {

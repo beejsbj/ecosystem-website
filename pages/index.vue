@@ -12,14 +12,6 @@ definePageMeta({
 useSeoMeta({
   title: "API3 Ecosystem",
 });
-
-// onMounted(() => {
-//   document.body.scrollTop = document.documentElement.scrollTop = 0;
-//   window.scroll({
-//     top: 0,
-//     left: 0,
-//   });
-// });
 </script>
 
 <template>

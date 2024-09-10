@@ -1,6 +1,4 @@
 <script setup>
-//random number between 0 and 5
-
 useSeoMeta({
   ogUrl: "https://ecosystem.api3.org/articles",
 

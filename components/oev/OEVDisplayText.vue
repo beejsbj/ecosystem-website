@@ -1,4 +1,23 @@
 <script setup>
+/**
+ * OEVDisplayText Component
+ *
+ * A component for displaying user's OEV (Optimistic Ethernet Verification) statistics and savings.
+ *
+ * @component
+ *
+ * @example
+ * <OEVDisplayText />
+ *
+ * @features
+ * - Displays user's incentive rate and Total Value Locked (TVL)
+ * - Calculates and shows estimated annual savings through the OEV Network
+ * - Provides a "Calculate Again" button to reset calculations
+ * - Responsive design with adaptive font sizes for smaller screens
+ * - Uses the OEV store for state management
+ *
+ */
+
 import { button } from "@formkit/icons";
 
 const oev = useOEVStore();

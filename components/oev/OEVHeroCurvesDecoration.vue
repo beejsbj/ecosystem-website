@@ -1,4 +1,15 @@
 <script setup>
+/**
+ * OEVHeroCurvesDecoration Component
+ *
+ * A component for displaying a curved background decoration.
+ *
+ * @component
+ *
+ * @example
+ * <OEVHeroCurvesDecoration />
+ *
+ */
 const ui = useInterfaceStore();
 function animateIntro(gsap) {
   //   const pageLoad = gsap.timeline();

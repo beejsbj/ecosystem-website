@@ -108,13 +108,10 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
   const { data, error: listError } = useFetch(
     () => debouncedSearchQuery.value,
     {
-      // key: `ecosystem-list-${filterQuery.value.page}`,
       onRequestError({ request, options, error }) {
         console.log("fetch test error", error);
       },
-      onRequest({ request, options }) {
-        //   console.log("fetch test request");
-      },
+      onRequest({ request, options }) {},
     }
   );
 
@@ -125,7 +122,6 @@ export const useEcosystemStore = defineStore("ecosystem", () => {
     if (newQuery.page === 1) {
       projectList.value = newData.projects;
     } else {
-      // projectList.value = [...projectList.value, ...newData.projects]; #todo
       projectList.value = Array.from(
         new Set([...projectList.value, ...newData.projects])
       );

@@ -1,4 +1,24 @@
 <script setup>
+/**
+ * OEVHero Component
+ *
+ * A hero section component for the OEV Watchtower page, displaying the main title, description, and visual elements.
+ *
+ * @component
+ *
+ * @example
+ * <OEVHero />
+ *
+ * @features
+ * - Displays the main title "OEV Watchtower" with responsive font sizing
+ * - Shows a brief description of the OEV Network's purpose
+ * - Includes a hero image of a tower, with different versions for desktop and mobile
+ * - Incorporates an OEVSummaryCards component for displaying key information
+ * - Uses an OEVHeroCurvesDecoration component for visual enhancement
+ * - Implements a responsive layout that adjusts for different screen sizes
+ * - Utilizes the interface store for responsive design logic
+ */
+
 const ui = useInterfaceStore();
 </script>
 

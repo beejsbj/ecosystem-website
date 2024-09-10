@@ -139,11 +139,6 @@ const isOevEnabled = computed(() => {
     }
   }
 
-  h2,
-  h3 {
-    //  white-space: nowrap;
-  }
-
   .categories-list {
     display: flex;
     gap: var(--space-2xs);
@@ -185,7 +180,6 @@ const isOevEnabled = computed(() => {
   }
 
   .oev-tag {
-    //  padding: 0.25em 0.75em;
     border-radius: var(--corners);
     font-weight: 800;
     font-size: var(--step--1);

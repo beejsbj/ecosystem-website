@@ -1,4 +1,34 @@
 <script setup>
+/**
+ * OEVTotalsChart Component
+ *
+ * A component that displays a bar chart of historic liquidation data for selected protocols.
+ *
+ * @component
+ *
+ * @example
+ * <OEVTotalsChart />
+ *
+ * @features
+ * - Displays a bar chart with multiple datasets (Total Liquidated, Potential OEV Lost, etc.)
+ * - Allows selection of different protocols using a dropdown
+ * - Supports logarithmic scale toggle
+ * - Implements interactive legend for showing/hiding datasets
+ * - Provides zoom functionality for detailed data exploration
+ * - Responsive design adapting to desktop and mobile views
+ *
+ * @dependencies
+ * - Chart.js - For rendering the bar chart
+ * - useOEVStore - Store for managing OEV related data
+ * - useInterfaceStore - Store for managing interface-related states
+ * - OEVProtocolDropdown - Custom dropdown component for protocol selection
+ *
+ * @notes
+ * - Currently uses hardcoded data from the OEV store instead of fetching from an API
+ * - Some features (like period selection) are present in the code but not utilized
+ * - Includes commented-out code for potential future features or debugging
+ */
+
 import { Chart } from "chart.js";
 import OEVProtocolDropdown from "./OEVProtocolDropdown.vue";
 
@@ -53,11 +83,7 @@ const options = computed(() => {
 
       zoom: {
         enabled: true,
-        //   pan: {
-        //     enabled: true,
-        //     mode: 'x',
-        //     modifierKey: 'ctrl',
-        //   },
+      
         zoom: {
           drag: {
             enabled: true,
@@ -71,11 +97,7 @@ const options = computed(() => {
         type: isLogarithmic.value ? "logarithmic" : "linear",
       },
     },
-    //  elements: {
-    //    line: {
-    //      tension: 0,
-    //    },
-    //  },
+    
   };
 });
 
@@ -123,11 +145,7 @@ const parsed = computed(() => {
         label: "Liquidator Profits",
         //   hidden: true,
       },
-      // {
-      //   data: dataIncentive,
-      //   label: "Incentives",
-      //   hidden: true,
-      // },
+     
     ],
   };
 });

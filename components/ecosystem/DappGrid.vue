@@ -1,4 +1,33 @@
 <script setup>
+/**
+ * DappGrid Component
+ *
+ * A responsive grid component for displaying dApp cards in the ecosystem.
+ *
+ * @component
+ *
+ * @example
+ * <DappGrid layout="grid" />
+ *
+ * @props
+ * @prop {String} layout - Specifies the layout style for the grid
+ *
+ * @features
+ * - Displays a grid of DappCard components
+ * - Implements infinite scrolling with GSAP ScrollTrigger
+ * - Shows skeleton cards during loading state
+ * - Responsive grid layout adapting to screen sizes
+ * - Smooth animations for card transitions
+ *
+ * @dependencies
+ * - useEcosystemStore, useInterfaceStore: For state management
+ * - DappCard: Component for individual dApp display
+ * - SkeletonCard: Component for loading state
+ * - GSAP and ScrollTrigger: For infinite scrolling functionality
+ * - v-auto-animate: For smooth list transitions
+ *
+ */
+
 const ecosystem = useEcosystemStore();
 const ui = useInterfaceStore();
 

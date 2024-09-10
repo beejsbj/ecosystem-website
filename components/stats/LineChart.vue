@@ -1,4 +1,42 @@
 <script setup>
+/**
+ * LineChart Component
+ *
+ * A reusable line chart component built with vue-chartjs and Chart.js.
+ *
+ * @component
+ *
+ * @example
+ * <LineChart :data="chartData" :options="chartOptions" :metadata="chartMetadata" />
+ *
+ * @props
+ * @prop {Object} data - The chart data object containing labels and datasets
+ * @prop {Object} options - Additional chart options to override defaults
+ * @prop {Object} metadata - Metadata for chart titles and axis labels
+ *
+ * @features
+ * - Renders a customizable line chart using Chart.js
+ * - Supports logarithmic scale on Y-axis
+ * - Customizable colors, labels, and styling
+ * - Responsive design that maintains aspect ratio
+ * - Optional zoom functionality with reset button
+ * - Gradient fill below lines
+ * - Customizable point and line styles
+ *
+ * @computed
+ * @property {Object} options - Merged chart options combining defaults and provided options
+ * @property {Boolean} isZoomEnabled - Whether zoom functionality is enabled
+ *
+ * @methods
+ * @method handleZoomReset - Resets the chart zoom when the reset button is clicked
+ *
+ * @notes
+ * - Utilizes various Chart.js plugins and scales (including LogarithmicScale)
+ * - Some features (like data labels and zoom) are configured but may be disabled by default
+ * - Aspect ratio adjusts based on device type (mobile vs desktop)
+ * - Custom color handling for datasets, allowing for gradients
+ */
+
 import { useInterfaceStore } from "@/stores/interface";
 import { Line } from "vue-chartjs";
 import zoom from "chartjs-plugin-zoom";
@@ -87,20 +125,6 @@ const options = computed(() => {
           left: 8,
         },
       },
-
-      // zoom: {
-      //   //   pan: {
-      //   //     enabled: true,
-      //   //     mode: 'x',
-      //   //     modifierKey: 'ctrl',
-      //   //   },
-      //   zoom: {
-      //     drag: {
-      //       enabled: true,
-      //     },
-      //     mode: "x",
-      //   },
-      // },
     },
 
     scales: {

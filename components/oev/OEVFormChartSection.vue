@@ -1,4 +1,22 @@
 <script setup>
+/**
+ * OEVFormChartSection Component
+ * 
+ * A section component that combines OEV input form, display text, protocol list, and interface chart.
+ *
+ * @component
+ *
+ * @example
+ * <OEVFormChartSection />
+ *
+ * @features
+ * - Displays either an input form or display text based on user visibility state
+ * - Includes a protocol list and interface chart
+ * - Uses lazy loading for child components to improve performance
+ * - Implements a transition effect when switching between input form and display text
+ * - Responsive design with different layouts for mobile and desktop
+ */
+
 const oev = useOEVStore();
 </script>
 

@@ -1,4 +1,27 @@
 <script setup>
+/**
+ * OEVProtocolDropdown Component
+ *
+ * A custom dropdown component for selecting protocols, grouped by blockchain networks.
+ *
+ * @component
+ *
+ * @example
+ * <OEVProtocolDropdown v-model="selectedProtocol" />
+ *
+ * @features
+ * - Displays protocols grouped by their respective blockchain networks
+ * - Shows protocol icons and chain icons for easy identification
+ * - Customizes the appearance of group labels, options, and selected items
+ * - Filters out protocols marked for hiding
+ * - Handles special case for user-added protocols
+ *
+ * @notes
+ * - Relies on the OEV store for protocol data
+ * - Assumes the existence of a `getChainName` function for converting chain IDs to readable names
+ * - Special handling for 'userAdded' protocol, displaying it as "Your dApp"
+ */
+
 // Import the useOEVStore function from the OEV store module
 const oev = useOEVStore();
 
