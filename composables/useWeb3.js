@@ -1,6 +1,42 @@
-import { EthereumClient, w3mConnectors, w3mProvider } from "@web3modal/ethereum";
+/**
+ * useWeb3 Composable
+ *
+ * A composable function that sets up and manages Web3 functionality for the application.
+ *
+ * @function
+ *
+ * @returns {Object} An object containing Web3 related properties and methods
+ * @property {ComputedRef<string|undefined>} account - The current connected account address
+ * @property {ComputedRef<boolean>} isConnected - Whether a wallet is currently connected
+ * @property {ComputedRef<number|undefined>} chainId - The ID of the currently connected chain
+ * @property {Function} sign - Async function to sign a message
+ * @property {Function} switchChain - Async function to switch to a different blockchain network
+ *
+ * @example
+ * const { account, isConnected, chainId, sign, switchChain } = useWeb3();
+ *
+ * @notes
+ * - Supports multiple blockchain networks
+ * - Automatically connects to previously connected wallets
+ * - Updates Pinia store with current Web3 state
+ * - Provides methods for signing messages and switching networks
+ * - Handles errors for signing and network switching operations
+ */
+
+import {
+  EthereumClient,
+  w3mConnectors,
+  w3mProvider,
+} from "@web3modal/ethereum";
 import { Web3Modal } from "@web3modal/html";
-import { configureChains, createConfig, watchAccount, signMessage, getNetwork, watchNetwork } from "@wagmi/core";
+import {
+  configureChains,
+  createConfig,
+  watchAccount,
+  signMessage,
+  getNetwork,
+  watchNetwork,
+} from "@wagmi/core";
 import {
   arbitrum,
   mainnet,
@@ -57,7 +93,9 @@ export const useWeb3 = () => {
     skaleExorde,
     mantle,
   ];
-  const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
+  const { publicClient } = configureChains(chains, [
+    w3mProvider({ projectId }),
+  ]);
 
   //create wagmi config
   const wagmiConfig = createConfig({
@@ -68,7 +106,9 @@ export const useWeb3 = () => {
 
   // //create ethereum client and web3modal
   const ethereumClient = new EthereumClient(wagmiConfig, chains);
-  const web3modal = computed(() => new Web3Modal({ projectId }, ethereumClient));
+  const web3modal = computed(
+    () => new Web3Modal({ projectId }, ethereumClient)
+  );
 
   ////////////////////////////////////
 
