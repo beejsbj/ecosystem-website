@@ -1,4 +1,26 @@
 <script setup>
+/**
+ * GithubGist Component
+ *
+ * A component for embedding and displaying GitHub Gists within the application.
+ *
+ * @component
+ *
+ * @example
+ * <GithubGist gistId="1234567890abcdef" file="example.js" />
+ *
+ * @props
+ * @prop {String} gistUrl - Full URL of the Gist (optional)
+ * @prop {String} gistId - ID of the Gist (optional if gistUrl is provided)
+ * @prop {String} file - Specific file name within the Gist to display (optional)
+ *
+ * @features
+ * - Fetches and displays GitHub Gists
+ * - Supports displaying specific files within a Gist
+ * - Handles loading states and errors
+ * - Responsive design with GitHub's styling
+ */
+
 import jsonp from "jsonp";
 const props = defineProps(["gistUrl", "gistId", "file"]);
 

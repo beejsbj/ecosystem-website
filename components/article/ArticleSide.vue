@@ -1,4 +1,25 @@
 <script setup>
+/**
+ * ArticleSide Component
+ *
+ * A sidebar component displaying the table of contents (TOC) for an article.
+ *
+ * @component
+ *
+ * @example
+ * <ArticleSide :toc="tableOfContents" :title="articleTitle" />
+ *
+ * @props
+ * @prop {Object} toc - Table of contents object containing links
+ * @prop {String} title - Title of the article
+ *
+ * @features
+ * - Displays a list of links to article sections
+ * - Includes the article title as the first link
+ * - Sticky positioning on larger screens for easy navigation
+ * - Responsive design adapting to different screen sizes
+ */
+
 const props = defineProps(["toc", "title"]);
 </script>
 

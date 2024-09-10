@@ -1,4 +1,27 @@
 <script setup>
+/**
+ * ProxyStep Component
+ *
+ * A form step component for capturing and displaying proxy information related to a dApp.
+ *
+ * @component
+ *
+ * @example
+ * <ProxyStep :dappForm="dappFormObject" :feedNameOptions="feedOptions" />
+ *
+ * @props
+ * @prop {Object} dappForm - Reactive object to store form data
+ * @prop {Array} feedNameOptions - Array of available feed name options
+ *
+ * @features
+ * - Captures proxy address, chain, and feed name
+ * - Fetches and validates proxy information from an API
+ * - Displays added proxies in a table format
+ * - Uses FormKit components for form inputs
+ * - Implements autocomplete for chain and feed name selection
+ *
+ */
+
 import { useEcosystemStore } from "@/stores/ecosystem";
 
 const ecosystem = useEcosystemStore();

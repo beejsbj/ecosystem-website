@@ -1,4 +1,16 @@
 <script setup>
+/**
+ * GithubDecoration Component
+ *
+ * A component for displaying a curved background decoration.
+ *
+ * @component
+ *
+ * @example
+ * <GithubDecoration Component />
+ *
+ */
+
 useGsap((gsap) => {
   setTimeout(() => {
     gsap.from(".github-graphic", {

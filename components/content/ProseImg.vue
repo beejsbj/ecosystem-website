@@ -1,4 +1,28 @@
 <script setup lang="ts">
+/**
+ * ProseImg Component
+ *
+ * A component for displaying images with lightbox functionality in prose content.
+ *
+ * @component
+ *
+ * @example
+ * <ProseImg src="/path/to/image.jpg" alt="Description" width="500" height="300" />
+ *
+ * @props
+ * @prop {String} src - The source URL of the image (default: "")
+ * @prop {String} alt - Alternative text for the image (default: "")
+ * @prop {String|Number} width - Width of the image (optional)
+ * @prop {String|Number} height - Height of the image (optional)
+ *
+ * @features
+ * - Displays images with optional width and height
+ * - Implements lightbox functionality for image viewing
+ * - Handles base URL adjustments for internal images
+ * - Uses NuxtImg for optimized image loading
+ * - Responsive design with centered layout on larger screens
+ */
+
 import { withTrailingSlash, withLeadingSlash, joinURL } from "ufo";
 import { useRuntimeConfig, computed } from "#imports";
 import VueEasyLightbox from "vue-easy-lightbox";

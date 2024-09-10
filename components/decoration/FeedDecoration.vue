@@ -1,4 +1,16 @@
 <script setup>
+/**
+ * FeedDecoration Component
+ *
+ * A component for displaying a curved background decoration.
+ *
+ * @component
+ *
+ * @example
+ * <FeedDecoration Component />
+ *
+ */
+
 function animateIntro(gsap) {
   //   const pageLoad = gsap.timeline();
   const curvesPath = document.querySelectorAll(".feed-decoration path");

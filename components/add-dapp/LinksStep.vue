@@ -1,4 +1,26 @@
 <script setup>
+/**
+ * LinksStep Component
+ *
+ * A form step component for capturing various links and social media profiles related to a dApp.
+ *
+ * @component
+ *
+ * @example
+ * <LinksStep :dappForm="dappFormObject" />
+ *
+ * @props
+ * @prop {Object} dappForm - Reactive object to store form data
+ *
+ * @features
+ * - Captures company website URL
+ * - Collects social media profile URLs for various platforms:
+ *   Twitter, Discord, GitHub, Reddit, Telegram, Facebook, YouTube, and Blog
+ * - Uses FormKit components for form inputs
+ * - Displays social media icons alongside each input field
+ *
+ */
+
 const props = defineProps(["dappForm"]);
 
 props.dappForm.links = props.dappForm.links ?? {};

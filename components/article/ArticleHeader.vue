@@ -1,4 +1,26 @@
 <script setup>
+/**
+ * ArticleHeader Component
+ *
+ * A component for displaying the header of an article, including title, subtitle, author information, and metadata.
+ *
+ * @component
+ *
+ * @example
+ * <ArticleHeader :article="articleObject" />
+ *
+ * @props
+ * @prop {Object} article - Article data object containing title, subtitle, author, creation date, and category
+ *
+ * @features
+ * - Displays article title and subtitle
+ * - Shows author name and image (fallback to default icon if no image)
+ * - Presents publication date in a formatted string
+ * - Displays article category
+ * - Responsive design for different screen sizes
+ *
+ */
+
 const props = defineProps(["article"]);
 
 const datePublished = computed(() => {

@@ -1,3 +1,22 @@
+<script setup>
+/**
+ * ProseBlockquote Component
+ *
+ * A styled blockquote component for use in prose or rich text content.
+ *
+ * @component
+ *
+ * @example
+ * <ProseBlockquote>
+ *   <p>This is a quoted text.</p>
+ * </ProseBlockquote>
+ *
+ * @slots
+ * default - Content to be displayed within the blockquote
+ *
+ */
+</script>
+
 <template>
   <blockquote>
     <slot />

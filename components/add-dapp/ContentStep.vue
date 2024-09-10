@@ -1,4 +1,24 @@
 <script setup>
+/**
+ * ContentStep Component
+ *
+ * A form step component for capturing basic information about a dApp.
+ *
+ * @component
+ *
+ * @example
+ * <ContentStep :dappForm="dappFormObject" />
+ *
+ * @props
+ * @prop {Object} dappForm - Reactive object to store form data
+ *
+ * @features
+ * - Captures dApp name, logo, slogan, and description
+ * - Implements file upload for dApp logo with size and type validation
+ * - Provides character limits and help text for input fields
+ * - Uses FormKit components for form inputs
+ */
+
 const props = defineProps(["dappForm"]);
 props.dappForm.date = new Date().toISOString().slice(0, 10);
 

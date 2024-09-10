@@ -1,4 +1,29 @@
 <script setup>
+/**
+ * ArticleCard Component
+ * 
+ * A versatile card component for displaying article information with various layout options.
+ *
+ * @component
+ *
+ * @example
+ * <ArticleCard :article="articleObject" />
+ *
+ * @props
+ * @prop {Object} article - Article data object containing title, author, cover image, and slug
+ *
+ * @features
+ * - Displays article cover image, title, and author name
+ * - Provides a link to the full article
+ * - Supports multiple layout styles: card, slide, text, and big-card
+ * - Implements GSAP animations for entrance effects
+ * - Responsive design adapting to different screen sizes
+ *
+ * @animations
+ * - Entrance animation using GSAP, fading in and moving up
+ *
+ */
+
 const props = defineProps({
   article: {
     type: Object,

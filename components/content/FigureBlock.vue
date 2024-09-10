@@ -1,4 +1,21 @@
 <script setup>
+/**
+ * FigureBlock Component
+ *
+ * A component for displaying images with optional captions and lightbox functionality.
+ *
+ * @component
+ *
+ * @example
+ * <FigureBlock image="/path/to/image.jpg" alt="Description" caption="Image caption" />
+ *
+ * @props
+ * @prop {String} image - URL of the image to display
+ * @prop {String} alt - Alternative text for the image
+ * @prop {String} caption - Optional caption text for the image
+ *
+ */
+
 import VueEasyLightbox from "vue-easy-lightbox";
 
 const props = defineProps(["image", "alt", "caption"]);

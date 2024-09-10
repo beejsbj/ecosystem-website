@@ -1,4 +1,16 @@
 <script setup>
+/**
+ * CurvesDecoration Component
+ *
+ * A component for displaying a curved background decoration.
+ *
+ * @component
+ *
+ * @example
+ * <CurvesDecoration3 />
+ * 
+ */
+
 function animateIntro(gsap) {
   //   const pageLoad = gsap.timeline();
   const curvesPath = document.querySelectorAll(".curves-decoration-3 path");

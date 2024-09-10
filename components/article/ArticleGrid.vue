@@ -1,4 +1,38 @@
 <script setup>
+/**
+ * ArticleGrid Component
+ * 
+ * A dynamic grid component for displaying a collection of articles with various layout options.
+ *
+ * @component
+ *
+ * @example
+ * <ArticleGrid layout="0" cardCount="4" isRecentSort />
+ *
+ * @props
+ * @prop {String|Number} layout - Index of the layout to use from predefined layouts
+ * @prop {String|Number} cardCount - Maximum number of cards to display
+ * @prop {Boolean} isRecentSort - Sort articles by most recent
+ * @prop {Boolean} isPopularSort - Sort articles by popularity
+ * @prop {Boolean} isTrendingSort - Sort articles by trending status
+ * @prop {Boolean} isFeaturedSort - Sort articles by featured status
+ *
+ * @features
+ * - Displays articles in a responsive grid layout
+ * - Supports multiple predefined layout options
+ * - Implements various sorting options for articles
+ * - Lazy loading of additional articles
+ * - Skeleton loading state for better UX
+ * - Responsive design adapting to different screen sizes
+ *
+ * @computed
+ * - sorted: Applies the selected sorting method to the article list
+ *
+ * @notes
+ * - The component dynamically adjusts card types based on layout and device type
+ * - Implements "Show More" functionality for pagination
+ */
+
 import { useBlogStore } from "~/stores/blog";
 const props = defineProps([
   "layout",

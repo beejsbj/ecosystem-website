@@ -1,4 +1,16 @@
 <script setup>
+/**
+ * CurvesDecoration Component
+ *
+ * A component for displaying a curved background decoration.
+ *
+ * @component
+ *
+ * @example
+ * <CurvesDecoration2 />
+ *
+ */
+
 useGsap((gsap) => {
   //   animate Curves Waves
   const timeline = gsap.timeline({

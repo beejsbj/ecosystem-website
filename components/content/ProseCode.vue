@@ -1,4 +1,24 @@
 <script setup lang="ts">
+/**
+ * ProseCode Component
+ *
+ * A component for displaying code blocks with syntax highlighting and copy functionality.
+ *
+ * @component
+ *
+ * @example
+ * <ProseCode code="console.log('Hello, World!');" language="javascript">
+ *   <!-- Highlighted code content -->
+ * </ProseCode>
+ *
+ * @props
+ * @prop {String} code - The code to be displayed and copied (default: "")
+ * @prop {String|null} language - The programming language of the code (default: null)
+ * @prop {String|null} filename - The filename associated with the code (unused in current implementation)
+ * @prop {Array<number>} highlights - Array of line numbers to highlight (unused in current implementation)
+ *
+ */
+
 import { useClipboard } from "@vueuse/core";
 
 const props = withDefaults(

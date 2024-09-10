@@ -1,4 +1,40 @@
 <script setup>
+/**
+ * AddDappForm Component
+ * 
+ * A multi-step form component for adding a new dApp to the API3 ecosystem.
+ *
+ * @component
+ *
+ * @example
+ * <AddDappForm />
+ *
+ * @features
+ * - Multi-step form with progress indicator
+ * - Wallet connection and verification
+ * - Image upload for logo, cover, and screenshots
+ * - Dynamic step for data feed proxies
+ * - Form data persistence using local storage
+ * - Success and error handling with notifications
+ *
+ * @dependencies
+ * - @vueuse/core for storage management
+ * - @formkit/vue and @formkit/core for form handling
+ * - useSiwe, useHttpCalls, useWeb3Store, useInterfaceStore (custom composables/stores)
+ * - Various step components (ContentStep, ImageStep, TagStep, ProxyStep, LinksStep)
+ *
+ * @state
+ * - dappForm: Reactive object storing form data
+ * - loading: Boolean indicating form submission state
+ * - submitSuccess: Boolean indicating successful submission
+ * - feedNameOptions: Array of available feed names for data feeds
+ *
+ * @methods
+ * - submitHandler: Handles form submission, including wallet verification and data processing
+ */
+
+
+
 import { useStorage } from "@vueuse/core";
 import { setErrors, FormKitMessages } from "@formkit/vue";
 import { reset } from "@formkit/core";

@@ -1,4 +1,27 @@
 <script setup>
+/**
+ * TagStep Component
+ *
+ * A form step component for capturing categorization and metadata about a dApp.
+ *
+ * @component
+ *
+ * @example
+ * <TagStep :dappForm="dappFormObject" />
+ *
+ * @props
+ * @prop {Object} dappForm - Reactive object to store form data
+ *
+ * @features
+ * - Captures dApp categories using a tag list
+ * - Selects supported blockchain networks with custom chain icons
+ * - Chooses the type of service the dApp uses
+ * - Selects the release year of the dApp
+ * - Uses FormKit components for form inputs
+ * - Implements popover and custom templates for dropdown options
+ *
+ */
+
 import { useEcosystemStore } from "~/stores/ecosystem";
 
 const ecosystem = useEcosystemStore();

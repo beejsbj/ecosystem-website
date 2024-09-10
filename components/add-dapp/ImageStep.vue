@@ -1,4 +1,38 @@
 <script setup>
+/**
+ * ImageStep Component
+ *
+ * A form step component for capturing images and URLs related to a dApp.
+ *
+ * @component
+ *
+ * @example
+ * <ImageStep :dappForm="dappFormObject" />
+ *
+ * @props
+ * @prop {Object} dappForm - Reactive object to store form data
+ *
+ * @features
+ * - Captures dApp URL, documentation URL, and explorer URL
+ * - Implements file upload for dApp cover image with size and ratio validation
+ * - Allows multiple screenshot uploads with size validation
+ * - Uses FormKit components for form inputs
+ *
+ * @methods
+ * - fileSize: Custom validation function for file size (max 6MB)
+ * - imageRatio: Custom validation function for cover image aspect ratio (16:6)
+ *
+ * @validations
+ * - URL fields: Required and valid URL format
+ * - Cover image: Required, file size limit, and aspect ratio check
+ * - Screenshots: File size limit for each image
+ *
+ * @notes
+ * - Cover image must have a 16:6 aspect ratio (with some tolerance)
+ * - All image uploads accept jpg, jpeg, png, and webp formats
+ * - Provides helpful instructions for users regarding file types, sizes, and dimensions
+ */
+
 const props = defineProps(["dappForm"]);
 props.dappForm.links = props.dappForm.links ?? {};
 
