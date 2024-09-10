@@ -62,10 +62,6 @@ useSeoMeta({
       <!-- <ComponentGuide /> -->
     </SectionColumn>
 
-    <SectionColumn id="decoration-guide">
-      <!-- <DecorationGuide /> -->
-    </SectionColumn>
-
     <SectionColumn id="text-guide">
       <TextVoices />
     </SectionColumn>

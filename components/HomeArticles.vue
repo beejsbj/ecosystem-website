@@ -14,7 +14,7 @@
  * - Displays a grid of 4 featured articles using LazyArticleGrid
  * - Includes a "See More" link to the full articles page
  * - Responsive design with centered text elements
- *
+ */
 </script>
 
 <template>
