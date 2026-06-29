@@ -34,71 +34,9 @@ const message = ref("");
 
 async function handleUpdateProxy(event) {
   event.preventDefault();
-  message.value = "";
+  message.value =
+    "Proxy lookup is disabled in this frontend showcase. The form is preserved for display only.";
   loading.value = false;
-
-  if (!props.dappForm?.proxyAddress) {
-    message.value = "Please add valid proxy address!";
-    return;
-  }
-
-  if (!props.dappForm?.proxyChain) {
-    message.value = "Please select proxy chain!";
-    return;
-  }
-
-  if (!props.dappForm?.feedName) {
-    message.value = "Please select feed name!";
-    return;
-  }
-
-  loading.value = true;
-  try {
-    const { data } = await useFetch("/api/projects/project/proxy", {
-      query: {
-        proxyAddress: props.dappForm?.proxyAddress,
-        chainId: parseInt(props.dappForm?.proxyChain),
-        feedName: props.dappForm?.feedName,
-      },
-    });
-    const info = data.value;
-
-    if (!info) {
-      message.value =
-        "Failed to fetch proxy info! Make sure proxy address is active";
-      return;
-    }
-
-    const finalProxyEntry = {
-      proxyAddress: props.dappForm?.proxyAddress,
-      isOEV: info?.isOev,
-      chainId: props.dappForm?.proxyChain,
-      proxyType: info?.type,
-      datafeedId: info?.dataFeedId,
-      feedName: props.dappForm?.feedName,
-      dapiNameHash: info?.dapiNameHash,
-      api3ServerV1: info?.api3ServerV1,
-      oevBeneficiary: info?.oevBeneficiary,
-    };
-
-    const index = props.dappForm?.proxies?.findIndex(
-      (el) => el?.proxyAddress === finalProxyEntry.proxyAddress
-    );
-
-    if (index >= 0) {
-      message.value = "Proxy already added!";
-      return;
-    }
-
-    props.dappForm?.proxies?.push(finalProxyEntry);
-    props.dappForm.proxyChain = null;
-    props.dappForm.proxyAddress = "";
-  } catch (error) {
-    console.log("error ", error);
-    message.value = "Unable fetch proxy info! Incorrect input";
-  } finally {
-    loading.value = false;
-  }
 }
 </script>
 
@@ -166,7 +104,7 @@ async function handleUpdateProxy(event) {
                 alt="plus icon"
               />
             </picture>
-            <span class="whisper-voice"> Fetch Proxy </span>
+            <span class="whisper-voice"> Preview Proxy </span>
           </button>
         </div>
 

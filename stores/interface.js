@@ -171,7 +171,6 @@ export const useInterfaceStore = defineStore("interface", function () {
   //init /////////////////////////////
   onMounted(() => {
     updateViewportSize();
-    //  disableDevTools();
     window.addEventListener("resize", updateViewportSize);
   });
 

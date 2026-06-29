@@ -50,6 +50,7 @@
  
 const {} = useWeb3Store();
 const route = useRoute();
+const config = useRuntimeConfig();
 
 //default metadata
 const meta = {
@@ -117,7 +118,10 @@ useSeoMeta({
 });
 
 onMounted(() => {
-  const {} = useWeb3();
+  if (!config.public.showcaseMode) {
+    const {} = useWeb3();
+  }
+
   fetch("/version.json").then((serverPromise) =>
     serverPromise.json().then((response) => {
       const latestVersion = response.version;

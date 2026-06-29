@@ -69,6 +69,20 @@ export const useWeb3 = () => {
   const config = useRuntimeConfig();
   const projectId = config.public.walletConnectProjectId;
 
+  if (config.public.showcaseMode || !projectId) {
+    web3Store.func.openModal = async () => null;
+    web3Store.func.sign = async () => null;
+    web3Store.func.switchChain = async () => null;
+
+    return {
+      account: computed(() => null),
+      isConnected: computed(() => false),
+      chainId: computed(() => null),
+      sign: web3Store.func.sign,
+      switchChain: web3Store.func.switchChain,
+    };
+  }
+
   //configure chains
   const chains = [
     arbitrum,
