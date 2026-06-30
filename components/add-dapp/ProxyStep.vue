@@ -18,7 +18,7 @@
  * - Fetches and validates proxy information from an API
  * - Displays added proxies in a table format
  * - Uses FormKit components for form inputs
- * - Implements autocomplete for chain and feed name selection
+ * - Uses standard selects for chain and feed name selection in showcase mode
  *
  */
 
@@ -34,9 +34,53 @@ const message = ref("");
 
 async function handleUpdateProxy(event) {
   event.preventDefault();
-  message.value =
-    "Proxy lookup is disabled in this frontend showcase. The form is preserved for display only.";
+  message.value = "";
   loading.value = false;
+
+  if (!props.dappForm?.proxyAddress) {
+    message.value = "Please add a demo proxy address.";
+    return;
+  }
+
+  if (!props.dappForm?.proxyChain) {
+    message.value = "Please select a proxy chain.";
+    return;
+  }
+
+  if (!props.dappForm?.feedName) {
+    message.value = "Please select a feed name.";
+    return;
+  }
+
+  const finalProxyEntry = {
+    proxyAddress: props.dappForm.proxyAddress,
+    isOEV: true,
+    chainId: props.dappForm.proxyChain,
+    proxyType: "dapi",
+    feedName: props.dappForm.feedName,
+    dapiNameHash:
+      "0x9e6138f8f57d7b493a8364edb0a0ac92399dfd890eecb9121050836a1749ba42",
+    api3ServerV1: "0x0000000000000000000000000000000000000001",
+    oevBeneficiary: "0x0000000000000000000000000000000000000002",
+    oev: {
+      enabled: true,
+      beneficiary: "0x0000000000000000000000000000000000000002",
+    },
+  };
+
+  const index = props.dappForm?.proxies?.findIndex(
+    (el) => el?.proxyAddress === finalProxyEntry.proxyAddress
+  );
+
+  if (index >= 0) {
+    message.value = "Demo proxy already added.";
+    return;
+  }
+
+  props.dappForm?.proxies?.push(finalProxyEntry);
+  props.dappForm.proxyChain = null;
+  props.dappForm.proxyAddress = "";
+  message.value = "Demo proxy added.";
 }
 </script>
 
@@ -64,32 +108,21 @@ async function handleUpdateProxy(event) {
 
       <form-field>
         <FormKit
-          type="autocomplete"
+          type="select"
           :label="`Proxy chain`"
           :id="`proxy-chain`"
           :options="ecosystem.chainOptions"
           v-model="dappForm.proxyChain"
-          popover
-        >
-          <template #option="{ option }">
-            <div class="icon-option">
-              <ChainIcon :id="option.value" />
-              <span>
-                {{ option.label }}
-              </span>
-            </div>
-          </template>
-        </FormKit>
+        />
       </form-field>
 
       <form-field class="feed-option">
         <FormKit
-          type="autocomplete"
+          type="select"
           :label="`Proxy feed name`"
           :id="`feed-name`"
           :options="props?.feedNameOptions"
           v-model="dappForm.feedName"
-          popover
         />
       </form-field>
 
@@ -104,7 +137,7 @@ async function handleUpdateProxy(event) {
                 alt="plus icon"
               />
             </picture>
-            <span class="whisper-voice"> Preview Proxy </span>
+            <span class="whisper-voice"> Fetch Proxy </span>
           </button>
         </div>
 

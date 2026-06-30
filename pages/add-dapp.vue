@@ -17,33 +17,13 @@ useSeoMeta({
   <ContentsWrapper>
     <PageTitle heading="Join the Ecosystem" innerClass="add-dapp-title">
       <p>
-        This frontend showcase keeps the ecosystem listing experience visible
-        while live submissions are paused.
+        Complete the preserved submission flow in demo mode. Wallet signing,
+        image uploads, proxy lookup, and review submission stay local to this
+        frontend showcase.
       </p>
     </PageTitle>
     <SectionColumn>
-      <text-content class="showcase-notice">
-        <h2 class="attention-voice">Submissions are disabled in showcase mode</h2>
-        <p>
-          The original workflow connected a wallet, verified a SIWE signature,
-          uploaded images, checked proxy data, and opened a registry PR. Those
-          backend services have been turned off so this site can run without
-          private environment variables.
-        </p>
-        <p>
-          Browse the live frontend catalogue instead, or use this page as the
-          preserved entry point for a future submission flow.
-        </p>
-        <NuxtLink class="button" to="/ecosystem">Explore ecosystem</NuxtLink>
-      </text-content>
+      <LazyAddDappForm />
     </SectionColumn>
   </ContentsWrapper>
 </template>
-
-<style scoped>
-.showcase-notice {
-  max-width: 720px;
-  margin-inline: auto;
-  padding-block: var(--space-xl);
-}
-</style>

@@ -8,75 +8,149 @@ definePageMeta({
   alias: ["/watchtower", "/oev-watchtower"],
 });
 
-// Import the OEV store and initialize it
-const oev = useOEVStore();
-const ui = useInterfaceStore();
+const { data: overview } = await useFetch("/api/oev", {
+  default: () => [],
+});
 
-// Fetch the OEV data from the server
-const { data: overview, error } = await useFetch("/api/oev");
+const protocols = computed(() =>
+  (overview.value || []).filter((protocol) => protocol.slug !== "total")
+);
 
-// Set the fetched OEV data to the OEV store
-oev.setProtocols(overview.value);
+const total = computed(() =>
+  (overview.value || []).find((protocol) => protocol.slug === "total")
+);
+
+const formatUsd = (value = 0) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(value);
 </script>
 
 <template>
   <ContentsWrapper>
-    <!-- Page Title component with heading and notice voice -->
+    <SectionColumn class="oev-showcase">
+      <text-content>
+        <h1 class="loud-voice">OEV Watchtower</h1>
+        <p class="notice-voice">
+          Deterministic showcase data for exploring how protocols can reason
+          about OEV capture without live indexing jobs, MongoDB, or service
+          webhooks.
+        </p>
+      </text-content>
 
-    <OEVHero />
+      <ul class="summary-list" v-if="total">
+        <li>
+          <span class="whisper-voice">Liquidated collateral</span>
+          <strong class="attention-voice">
+            {{ formatUsd(total.totalLiquidated) }}
+          </strong>
+        </li>
+        <li>
+          <span class="whisper-voice">OEV opportunity</span>
+          <strong class="attention-voice">
+            {{ formatUsd(total.totalOevLostUSD) }}
+          </strong>
+        </li>
+        <li>
+          <span class="whisper-voice">Builder share</span>
+          <strong class="attention-voice">
+            {{ formatUsd(total.totalSentToBuilderUSD) }}
+          </strong>
+        </li>
+      </ul>
 
-    <OEVFormChartSection />
-
-    <ClientOnly>
-      <LazyOEVProtocolChart />
-    </ClientOnly>
-    <LazyOEVExplainerCarosel />
-
-    <OEVGithubLinkSection />
+      <div class="protocol-grid">
+        <article
+          v-for="protocol in protocols"
+          :key="protocol.slug"
+          class="protocol-card"
+        >
+          <div>
+            <p class="whisper-voice">{{ getChainName(protocol.chainId) }}</p>
+            <h2 class="solid-voice">{{ protocol.name }}</h2>
+          </div>
+          <dl>
+            <div>
+              <dt>Liquidated</dt>
+              <dd>{{ formatUsd(protocol.totalLiquidated) }}</dd>
+            </div>
+            <div>
+              <dt>OEV opportunity</dt>
+              <dd>{{ formatUsd(protocol.totalOevLostUSD) }}</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </SectionColumn>
   </ContentsWrapper>
 </template>
 
-<style scoped>
-:deep(inner-column) {
-  @media (min-width: 768px) {
-    padding: var(--space-2xl) var(--space-l);
+<style scoped lang="scss">
+.oev-showcase {
+  :deep(inner-column) {
+    display: grid;
+    gap: var(--space-xl);
   }
 }
 
-:deep(.attention-voice:not(h1)) {
-  @media (max-width: 768px) {
-    --font-size: var(--step-1);
+.summary-list,
+.protocol-grid {
+  display: grid;
+  gap: var(--space-s);
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+
+  @media (min-width: 760px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li {
+    border: 1px solid var(--gray-dark);
+    border-radius: var(--corners);
+    background: var(--gray-darkest);
+    padding: var(--space-m);
+    display: grid;
+    gap: var(--space-xs);
   }
 }
 
-:deep(.firm-voice) {
-  @media (max-width: 768px) {
-    font-size: calc((var(--step-1) + var(--step-0)) / 2);
+.protocol-grid {
+  @media (min-width: 760px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-:deep(.legend-icon) {
-  --direction: 150deg;
+.protocol-card {
+  border: 1px solid var(--gray-dark);
+  border-radius: var(--corners);
+  background: color-mix(in srgb, var(--gray-darkest), transparent 15%);
+  padding: var(--space-m);
+  display: grid;
+  gap: var(--space-m);
 
-  aspect-ratio: 1/1;
-  width: 18px;
-  flex-shrink: 0;
+  dl {
+    display: grid;
+    gap: var(--space-xs);
+    margin: 0;
+  }
 
-  border-radius: 1px;
-  border: 1px solid;
+  div {
+    display: grid;
+    gap: var(--space-3xs);
+  }
 
-  background: linear-gradient(var(--direction), var(--color), transparent);
+  dt {
+    color: var(--gray);
+    font-size: var(--step--1);
+  }
 
-  border-image: linear-gradient(
-      var(--direction),
-      color-mix(in hsl, var(--color), white 35%),
-      color-mix(in hsl, var(--color), black 70%)
-    )
-    1;
-}
-
-:deep(fieldset.formkit-fieldset) {
-  display: flex;
-  align-items: center;
+  dd {
+    margin: 0;
+  }
 }
 </style>

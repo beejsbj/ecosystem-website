@@ -8,6 +8,17 @@ https://ecosystem.api3.org/
 
 https://staging.d1ecxl0h41jkn0.amplifyapp.com/
 
+## Frontend showcase mode
+
+This branch runs as a frontend-only showcase. No private `.env`, MongoDB, AWS/S3, Brevo, GitHub app, or SIWE backend secrets are required for local review.
+
+```bash
+COREPACK_ENABLE_AUTO_PIN=0 yarn install --frozen-lockfile --ignore-engines
+COREPACK_ENABLE_AUTO_PIN=0 yarn dev
+```
+
+The add-dapp flow uses a demo wallet and no-op submission response. Articles and OEV data are served from local showcase fixtures.
+
 ## Setup with docker
 
 ### Prepare docker image

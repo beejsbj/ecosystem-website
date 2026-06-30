@@ -105,24 +105,23 @@ const autoAnimate = {
 };
 
 //plugins
-const plugins = [
+const basePlugins = [
   createMultiStepPlugin(),
-  createAutoHeightTextareaPlugin,
+  createAutoHeightTextareaPlugin(),
   createAutoAnimatePlugin(autoAnimate.config, autoAnimate.targets),
   addAsteriskPlugin,
   addPrefixIconPlugin,
   addSuffixHelpTooltipPlugin,
-  //  proPlugin,
 ];
 
 //config
 export default defineFormKitConfig(() => {
   const config = useRuntimeConfig();
+  const plugins = [...basePlugins];
 
-  // pro
-
-  const proPlugin = createProPlugin(config.public.formkitProKey, inputs);
-  plugins.push(proPlugin);
+  if (!config.public.showcaseMode && config.public.formkitProKey) {
+    plugins.push(createProPlugin(config.public.formkitProKey, inputs));
+  }
 
   return {
     plugins,
@@ -176,6 +175,10 @@ function addSuffixHelpTooltipPlugin(node) {
 
     mouseLeave?.(e);
   };
+
+  if (!node.props.definition?.schema) {
+    return;
+  }
 
   const schemaFn = node.props.definition.schema;
   node.props.definition.schema = (sectionsSchema = {}) => {
@@ -238,6 +241,10 @@ function addAsteriskPlugin(node) {
     return;
 
   node.on("created", () => {
+    if (!node.props.definition?.schema) {
+      return;
+    }
+
     const legendOrLabel = legends.includes(
       `${node.props.type}${node.props.options ? "_multi" : ""}`
     )

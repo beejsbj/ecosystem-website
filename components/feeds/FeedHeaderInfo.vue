@@ -3,7 +3,7 @@
  * FeedHeaderInfo Component
  *
  * This component displays key information about a feed in a header section.
- * It includes a chain selector dropdown and shows additional feed details.
+ * It includes a chain selector and shows additional feed details.
  *
  * @vue-component
  *
@@ -13,7 +13,7 @@
  * <FeedHeaderInfo :proxy="currentProxy" />
  *
  * @features
- * - Displays a dropdown for selecting the blockchain for the current feed
+ * - Displays a select for choosing the blockchain for the current feed
  * - Shows feed type and data feed ID when available
  * - Updates the URL when a new chain is selected
  * - Uses skeleton loaders for better UX during data fetching
@@ -80,23 +80,12 @@ function handleChainChange(chain) {
         <ClientOnly>
           <FormKit
             id="chain-select"
-            type="dropdown"
+            type="select"
             v-model="props.proxy.chainId"
             :options="currentFeedChains"
             @input="handleChainChange"
             placeholder="Select Chain"
-            popover
-            selection-removable
-          >
-            <template #option="{ option }">
-              <div class="icon-option">
-                <ChainIcon :id="option.value" />
-                <span class="">
-                  {{ option.label }}
-                </span>
-              </div>
-            </template>
-          </FormKit>
+          />
         </ClientOnly>
         <p class="whisper-voice" v-if="proxy.type">
           Type:&nbsp;<span>{{ proxy.type.toUpperCase() }}</span>

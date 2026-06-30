@@ -239,10 +239,14 @@ describe("Add Dapp Form", () => {
     const fetchProxyBtn = component.find("div.add-button");
     expect(fetchProxyBtn.exists()).toBe(loading ? false : true);
 
+    dappForm.proxyAddress = "0x1234567890AbcdEF1234567890aBcdef12345678";
+    dappForm.proxyChain = 1;
+    dappForm.feedName = "ETH/USD";
+
     await component.find("div.add-button button").trigger("click");
-    expect(component.html()).toContain(
-      "Proxy lookup is disabled in this frontend showcase"
-    );
+    expect(component.html()).toContain("Demo proxy added.");
+    expect(dappForm.proxies).toHaveLength(1);
+    expect(dappForm.proxies[0].proxyType).toBe("dapi");
   });
 
   it("Should reject and throw correct error if proxy fields are invalid", async () => {

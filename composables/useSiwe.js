@@ -36,9 +36,25 @@
 
 export const useSiwe = () => {
   async function verifyWallet() {
+    const web3Store = useWeb3Store();
+
     return {
-      success: false,
-      message: "Wallet verification is disabled in this frontend showcase.",
+      success: true,
+      data: {
+        signature: "0xshowcase_signature",
+        address:
+          web3Store.state.account ??
+          "0x1234567890AbcdEF1234567890aBcdef12345678",
+        message: JSON.stringify({
+          domain: "showcase.local",
+          statement: "Demo SIWE verification for the API3 ecosystem showcase",
+          uri: "http://localhost",
+          version: "1",
+          chainId: web3Store.state.chainId ?? 1,
+          nonce: "showcase-nonce",
+        }),
+        nonce: "showcase-nonce",
+      },
     };
   }
 

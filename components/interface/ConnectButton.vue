@@ -23,6 +23,7 @@
  */
 
 const web3Store = useWeb3Store();
+const config = useRuntimeConfig();
 
 async function buttonHandle() {
   await web3Store.func.openModal();
@@ -33,9 +34,11 @@ async function buttonHandle() {
   <button class="button" @click.prevent="buttonHandle">
     <Transition name="fade" mode="out-in">
       <span class="" v-if="!web3Store?.state?.isConnected">
-        Connect Wallet
+        {{ config.public.showcaseMode ? "Use Demo Wallet" : "Connect Wallet" }}
       </span>
-      <span v-else class=""> Connected </span>
+      <span v-else class="">
+        {{ config.public.showcaseMode ? "Demo Wallet Connected" : "Connected" }}
+      </span>
     </Transition>
   </button>
 </template>

@@ -20,9 +20,13 @@
  */
 
 const props = defineProps(["dappForm"]);
+const config = useRuntimeConfig();
 props.dappForm.date = new Date().toISOString().slice(0, 10);
 
 const yearOptions = ref([]);
+const logoValidation = computed(() =>
+  config.public.showcaseMode ? "fileSize" : "required|fileSize"
+);
 
 const fileSize = function (node) {
   if (!node.value) return true;
@@ -81,7 +85,7 @@ onMounted(() => {
         no-files-icon="fileImage"
         fileName="logo"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
-        validation="required|fileSize"
+        :validation="logoValidation"
         validation-label="Logo"
         :validation-rules="{ fileSize }"
         :validation-messages="{

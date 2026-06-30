@@ -46,10 +46,9 @@ import dapis from "@api3/dapi-management/dist/data/dapis.json";
 export const useHttpCalls = () => {
   const submitProject = async (dappForm, images, verificationPayload) => {
     return {
-      success: false,
-      messages: [
-        "Project submissions are disabled in this frontend showcase.",
-      ],
+      success: true,
+      message: "Demo project submitted for showcase review",
+      data: "/ecosystem",
     };
   };
 
