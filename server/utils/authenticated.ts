@@ -11,12 +11,26 @@ export const authenticated = (
 ) =>
   defineEventHandler(async (event: any) => {
     try {
+      const config = useRuntimeConfig();
+
+      if (config.public.showcaseMode) {
+        event.context.auth = {
+          user: {
+            id: "showcase-user",
+            address: "0x1234567890AbcdEF1234567890aBcdef12345678",
+            role,
+          },
+        };
+
+        const response = await handler(event);
+
+        return { response };
+      }
+
       const { signature, message, address, nonce, apikey } =
         event.node.req.headers;
 
       if (role === ROLE.SERVICE_WEBHOOK) {
-        const config = useRuntimeConfig();
-
         if (config.serviceApiKey !== apikey) {
           event.node.res.statusCode = 401;
           return {

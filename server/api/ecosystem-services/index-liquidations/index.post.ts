@@ -7,6 +7,13 @@ export default authenticated(
     defineEventHandler(async (event) => {
       const cacheKey = `oev-data-indexing`;
       try {
+        const config = useRuntimeConfig();
+
+        if (config.public.showcaseMode) {
+          event.node.res.statusCode = 200;
+          return { message: "Demo liquidation indexing skipped in showcase mode" };
+        }
+
         let cachedData: any = queryCache.get(cacheKey);
 
         if (cachedData !== undefined) {

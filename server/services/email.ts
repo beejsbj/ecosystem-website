@@ -1,7 +1,15 @@
 import SibApiV3Sdk from "@getbrevo/brevo";
-const config = useRuntimeConfig();
 
 export const sendEmail = async (payload: any) => {
+  const config = useRuntimeConfig();
+
+  if (config.public.showcaseMode) {
+    console.log("email skipped: frontend showcase mode");
+    return {
+      messageId: "showcase-email-message",
+    };
+  }
+
   let apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
   if (!config.brevoMailApi || !config.emailReceiver || !config.emailSender) {

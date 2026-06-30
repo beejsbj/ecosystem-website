@@ -15,6 +15,7 @@ This branch runs as a frontend-only showcase. No private `.env`, MongoDB, AWS/S3
 ```bash
 COREPACK_ENABLE_AUTO_PIN=0 yarn install --frozen-lockfile --ignore-engines
 COREPACK_ENABLE_AUTO_PIN=0 yarn dev
+COREPACK_ENABLE_AUTO_PIN=0 yarn build
 ```
 
 The add-dapp flow uses a demo wallet and no-op submission response. Articles and OEV data are served from local showcase fixtures.

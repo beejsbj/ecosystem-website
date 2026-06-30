@@ -2,7 +2,8 @@ import { generateNonce } from "siwe";
 
 export default defineEventHandler(async (event) => {
   try {
-    const nonce = generateNonce();
+    const config = useRuntimeConfig();
+    const nonce = config.public.showcaseMode ? "showcase-nonce" : generateNonce();
 
     event.context.nonce = nonce;
 

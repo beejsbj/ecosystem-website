@@ -4,6 +4,7 @@ import { isNumber } from "~/server/services/helper";
 
 export default defineEventHandler(async (event) => {
   try {
+    const config = useRuntimeConfig();
     const { proxyAddress, feedName, chainId }: any = getQuery(event);
 
     const errors = [];
@@ -30,6 +31,25 @@ export default defineEventHandler(async (event) => {
       return {
         code: "REQ_FAILED",
         message: errors,
+      };
+    }
+
+    if (config.public.showcaseMode) {
+      event.node.res.statusCode = 200;
+      return {
+        proxyAddress,
+        isOEV: true,
+        chainId: Number(chainId),
+        proxyType: "dapi",
+        feedName,
+        dapiNameHash:
+          "0x9e6138f8f57d7b493a8364edb0a0ac92399dfd890eecb9121050836a1749ba42",
+        api3ServerV1: "0x0000000000000000000000000000000000000001",
+        oevBeneficiary: "0x0000000000000000000000000000000000000002",
+        oev: {
+          enabled: true,
+          beneficiary: "0x0000000000000000000000000000000000000002",
+        },
       };
     }
 
