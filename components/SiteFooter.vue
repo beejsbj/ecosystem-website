@@ -30,37 +30,37 @@
 const socials = ref([
   {
     name: "Twitter",
-    link: "https://twitter.com/api3dao",
+    link: "https://burooj.dev",
     icon: "Twitter",
   },
   {
     name: "Discord",
-    link: "https://discord.com/invite/qnRrcfnm5W",
+    link: "https://burooj.dev",
     icon: "Discord",
   },
   {
     name: "Reddit",
-    link: "https://www.reddit.com/r/API3/",
+    link: "https://burooj.dev",
     icon: "Reddit",
   },
   {
     name: "Telegram",
-    link: "https://t.me/API3DAO",
+    link: "https://burooj.dev",
     icon: "Telegram",
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/company/api3",
+    link: "https://burooj.dev",
     icon: "Linkedin",
   },
   {
     name: "Youtube",
-    link: "https://www.youtube.com/@API3DAO",
+    link: "https://burooj.dev",
     icon: "YouTube",
   },
   {
     name: "Github",
-    link: "https://github.com/api3dao",
+    link: "https://burooj.dev",
     icon: "Github",
   },
 ]);
