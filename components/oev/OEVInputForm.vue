@@ -41,7 +41,7 @@ const form = ref({}); // Reference to the form element
 // Function to handle the button click event
 function buttonHandle(event) {
   const tvl = event.tvl
-    ? event.tvl.split(",").join("").replace("$", "")
+    ? String(event.tvl).split(",").join("").replace("$", "")
     : 5000000;
   const incentive = event.incentive ? event.incentive : 5;
 
@@ -67,7 +67,6 @@ function buttonHandle(event) {
 }
 
 function adjustIncentiveValue(value) {
-  console.log(value);
   if (value < 1) {
     form.value.incentive = 1;
   } else if (value > 100) {
@@ -108,20 +107,15 @@ function adjustIncentiveValue(value) {
       </form-field>
       <form-field>
         <FormKit
-          type="currency"
+          type="text"
           number
-          currency="USD"
-          decimals="0"
           label="What is the total value locked of your protocol?"
           name="tvl"
-          placeholder="5,000,000"
+          placeholder="$5,000,000"
           help="Optimal results are achieved with larger numerical values."
           id="tvl-input"
           v-model="form.tvl"
-          step="100000"
-          min="0"
           validation-label="TVL"
-          validation="numeric"
         />
       </form-field>
     </FormKit>

@@ -101,43 +101,43 @@ const options = computed(() => {
 const apiString = computed(() => {
   return `/api/oev/chart?protocolId=${selectedDataset.value}&&period=${selectedPeriod.value}`;
 });
-const { data: rawData } = await useFetch(apiString);
-
-console.log(rawData);
+const { data: rawData } = await useFetch(apiString, {
+  default: () => [],
+});
 
 // data manipulation
 const parsed = computed(() => {
-  const protocol = oev.getProtocolBySlug(selectedDataset.value);
+  const rows = rawData.value || [];
 
-  const dataLiquidated = rawData.value.map((dataPoint) => {
+  const dataLiquidated = rows.map((dataPoint) => {
     return {
       x: new Date(dataPoint[0]),
       y: dataPoint[1],
     };
   });
 
-  const dataSentToBuilder = rawData.value.map((dataPoint) => {
+  const dataSentToBuilder = rows.map((dataPoint) => {
     return {
       x: new Date(dataPoint[0]),
       y: dataPoint[2],
     };
   });
 
-  const dataProfit = rawData.value.map((dataPoint) => {
+  const dataProfit = rows.map((dataPoint) => {
     return {
       x: new Date(dataPoint[0]),
       y: dataPoint[3],
     };
   });
 
-  const dataIncentive = rawData.value.map((dataPoint) => {
+  const dataIncentive = rows.map((dataPoint) => {
     return {
       x: new Date(dataPoint[0]),
       y: dataPoint[4],
     };
   });
 
-  const dataOevLost = rawData.value.map((dataPoint) => {
+  const dataOevLost = rows.map((dataPoint) => {
     return {
       x: new Date(dataPoint[0]),
       y: dataPoint[5],
@@ -185,12 +185,16 @@ const legendCheckboxes = ref([0, 1]);
 
 function toggleDataset(index) {
   const chart = Chart.getChart("line-chart");
+  if (!chart) return;
+
   chart.setDatasetVisibility(index, !chart.isDatasetVisible(index));
   chart.update();
 }
 
 onMounted(() => {
   const chart = Chart.getChart("line-chart");
+  if (!chart) return;
+
   const items = chart.options.plugins.legend.labels.generateLabels(chart);
 
   const options = items.map((item, index) => {
