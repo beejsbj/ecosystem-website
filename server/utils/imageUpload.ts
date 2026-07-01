@@ -5,45 +5,56 @@ import multerS3 from "multer-s3";
 import { S3Client } from "@aws-sdk/client-s3";
 import { UPLOAD_TYPE } from "../types/index";
 
-const config = useRuntimeConfig();
+function createUploadMiddleware() {
+  const config = useRuntimeConfig();
+  const s3 = new S3Client({
+    region: "us-east-2",
+    credentials: {
+      accessKeyId: config.awsAccessKeyId,
+      secretAccessKey: config.awsSecretAccessKey,
+    },
+  });
+  const awsStorage = multerS3({
+    s3,
+    bucket: config.rootBucket,
+    contentType: multerS3.AUTO_CONTENT_TYPE,
+    key: function (request, file, cb) {
+      const fullPath = Date.now() + "_" + file.originalname;
+      cb(null, fullPath);
+    },
+  });
 
-let s3 = new S3Client({
-  region: "us-east-2",
-  credentials: {
-    accessKeyId: config.awsAccessKeyId,
-    secretAccessKey: config.awsSecretAccessKey,
-  },
-});
-const awsStorage = multerS3({
-  s3: s3,
-  bucket: config.rootBucket,
-  contentType: multerS3.AUTO_CONTENT_TYPE,
-  key: function (request, file, cb) {
-    const fullPath = Date.now() + "_" + file.originalname;
-    cb(null, fullPath);
-  },
-});
-
-const upload = multer({
-  storage: awsStorage,
-  limits: {
-    fileSize: parseInt(config.imageUploadSizeLimit),
-  },
-  fileFilter(req, file, cb) {
-    if (
-      !file?.originalname?.match(/\.(jpeg|JPEG|png|PNG|webp|WEBP|jpg|JPG)$/)
-    ) {
-      return cb(new Error("Please upload image file only"));
-    }
-    cb(null, true);
-  },
-});
+  return multer({
+    storage: awsStorage,
+    limits: {
+      fileSize: parseInt(config.imageUploadSizeLimit),
+    },
+    fileFilter(req, file, cb) {
+      if (
+        !file?.originalname?.match(/\.(jpeg|JPEG|png|PNG|webp|WEBP|jpg|JPG)$/)
+      ) {
+        return cb(new Error("Please upload image file only"));
+      }
+      cb(null, true);
+    },
+  });
+}
 
 export const imageUploadHandler = (
   handler: EventHandler,
   uploadType: string = UPLOAD_TYPE.project
 ) =>
   defineEventHandler(async (event) => {
+    const config = useRuntimeConfig();
+
+    if (config.public.showcaseMode) {
+      const response = await handler(event);
+
+      return { response };
+    }
+
+    const upload = createUploadMiddleware();
+
     try {
       if (uploadType === UPLOAD_TYPE.project) {
         await callNodeListener(

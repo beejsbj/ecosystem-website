@@ -30,14 +30,13 @@
 import { getChainName } from "@/utils/getChainName";
 
 interface Props {
-  id: string;
+  id: string | number;
 }
 
-const { $chainLogo } = useNuxtApp();
+const nuxtApp = useNuxtApp();
 
 const props = defineProps<Props>();
 
-const ecosystem = useEcosystemStore();
 const isTestnet = ref(false);
 const isFound = ref(true);
 
@@ -53,7 +52,9 @@ const chain = computed((): string => {
 });
 
 const imgSrc = computed((): string => {
-  return $chainLogo(props.id);
+  if (typeof nuxtApp.$chainLogo !== "function") return "";
+
+  return nuxtApp.$chainLogo(String(props.id));
 });
 
 const onError = (): void => {
@@ -73,7 +74,7 @@ const onError = (): void => {
       :src="imgSrc"
       :alt="chain"
       @error="onError"
-      :class="{ 'not-found': !isFound }"
+      :class="{ 'not-found': !isFound || !imgSrc }"
     />
   </picture>
 </template>

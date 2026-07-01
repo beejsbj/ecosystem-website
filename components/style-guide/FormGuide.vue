@@ -55,11 +55,6 @@ const inputs = ref([
   },
 
   {
-    label: "Toggle",
-    type: "toggle",
-  },
-
-  {
     label: "Checkbox",
     type: "checkbox",
     options: options.value,
@@ -76,33 +71,9 @@ const inputs = ref([
     options: options.value,
   },
 
-  //   pro
-  {
-    label: "Autocomplete",
-    type: "autocomplete",
-    options: options.value,
-  },
-  {
-    label: "Dropdown",
-    type: "dropdown",
-    options: options.value,
-  },
-  {
-    label: "Taglist",
-    type: "taglist",
-    options: options.value,
-    selectIcon: "down",
-  },
   {
     label: "Submit",
     type: "submit",
-  },
-
-  {
-    label: "Repeater",
-    type: "repeater",
-    options: options.value,
-    isRepeater: true,
   },
 ]);
 </script>
@@ -199,7 +170,6 @@ const inputs = ref([
               validation="email"
               placeholder="Add email address..."
             />
-            <FormKit type="toggle" name="toggle" label="Airplane mode" />
             <FormKit type="submit" name="submit" label="Submit" />
           </FormKit>
         </li>

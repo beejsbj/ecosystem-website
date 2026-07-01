@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import type { Nuxt, NuxtApp, NuxtPlugin } from "nuxt/schema";
 
 export default defineNuxtConfig({
@@ -17,9 +16,6 @@ export default defineNuxtConfig({
     "/articles": {
       ssr: false,
       prerender: false,
-    },
-    "/style-guide": {
-      ssr: false,
     },
   },
 
@@ -138,6 +134,7 @@ export default defineNuxtConfig({
     "nuxt-multi-cache",
     "@nuxt/test-utils/module",
   ],
+
   multiCache: {
     route: {
       enabled: true,
@@ -163,24 +160,15 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    plugins: ["~/server/index.ts"],
     serverAssets: [
       {
         baseName: "",
         dir: "assets",
       },
     ],
-    preset: "aws-amplify",
-    awsAmplify: {
-      imageSettings: {
-        dangerouslyAllowSVG: true,
-      },
-    },
   },
+
   hooks: {
-    close: async (go: Nuxt) => {
-      await mongoose.disconnect();
-    },
     "app:resolve": (app: NuxtApp) => {
       if (!process.env.VITEST) {
         return;
@@ -191,35 +179,14 @@ export default defineNuxtConfig({
       );
     },
   },
+
   runtimeConfig: {
-    mongodbUri: process.env.NUXT_MONGODB_URI,
-    mongodbUriDev: process.env.NUXT_MONGODB_URI_DEV,
-    serviceApiKey: process.env.NUXT_SERVICE_API_KEY,
-    awsAccessKeyId: process.env.NUXT_AWS_ACCESS_KEY_ID,
-    awsSecretAccessKey: process.env.NUXT_AWS_SECRET_ACCESS_KEY,
-    rootBucket: process.env.NUXT_ROOT_BUCKET,
-    imageUploadSizeLimit: process.env.NUXT_IMAGE_UPLOAD_SIZE_LIMIT,
-    githubWebhookSecret: process.env.NUXT_GITHUB_WEBHOOK_SECRET,
-    nodeEnv: process.env.NUXT_NODE_ENV,
-    dappRegistryProd: process.env.NUXT_DAPP_REGISTRY_PROD,
-    dappRegistryDev: process.env.NUXT_DAPP_REGISTRY_DEV,
-    gitAppPrivateKey: process.env.NUXT_GIT_APP_PRIVATE_KEY,
-    gitAppPrivateKeyDev: process.env.NUXT_GIT_APP_PRIVATE_KEY_DEV,
-    gitAppId: process.env.NUXT_GIT_APP_ID,
-    gitAppIdDev: process.env.NUXT_GIT_APP_ID_DEV,
-    gitAppInstallationId: process.env.NUXT_GIT_APP_INSTALLATION_ID,
-    gitAppInstallationIdDev: process.env.NUXT_GIT_APP_INSTALLATION_ID_DEV,
-    gitAppClientId: process.env.NUXT_GIT_APP_CLIENT_ID,
-    gitAppClientIdDev: process.env.NUXT_GIT_APP_CLIENT_ID_DEV,
-    gitAppClientSecret: process.env.NUXT_GIT_APP_CLIENT_SECRET,
-    gitAppClientSecretDev: process.env.NUXT_GIT_APP_CLIENT_SECRET_DEV,
-    brevoMailApi: process.env.NUXT_BREVO_MAIL_API,
-    emailReceiver: process.env.NUXT_EMAIL_RECIEVER,
-    emailSender: process.env.NUXT_EMAIL_SENDER,
     public: {
       formkitProKey: process.env.NUXT_FORMKIT_PRO_KEY,
-      walletConnectProjectId: process.env.NUXT_PUBLIC_WALLET_CONNECT_PROJECT_ID, //this might not work #fixme
       nodeEnv: process.env.NUXT_NODE_ENV,
+      showcaseMode: true,
     },
   },
+
+  compatibilityDate: "2025-02-27",
 });

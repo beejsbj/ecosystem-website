@@ -13,6 +13,7 @@ export default authenticated(
     checkConnection(
       defineEventHandler(async (event: any) => {
         try {
+          const config = useRuntimeConfig();
           const {
             name,
             tagline,
@@ -24,6 +25,16 @@ export default authenticated(
             proxies,
             year,
           } = await (event.node?.req?.body || readBody(event));
+
+          if (config.public.showcaseMode) {
+            event.node.res.statusCode = 201;
+            return {
+              code: "OK",
+              message: "Demo project submitted for showcase review",
+              data: "/ecosystem",
+              success: true,
+            };
+          }
 
           const errors = [];
 

@@ -5,6 +5,12 @@ import { connectDB } from "../services/helper";
 export const checkConnection = (handler: EventHandler) =>
   defineEventHandler(async (event: any) => {
     try {
+      const config = useRuntimeConfig();
+
+      if (config.public.showcaseMode) {
+        return await handler(event);
+      }
+
       if (mongoose.connection.readyState !== 1) {
         console.log("connection state ", mongoose.connection.readyState);
         console.log("reconnecting db... ");

@@ -90,19 +90,17 @@ function computeStats(projects: ProjectType[]): Stats {
   return { chains, categories, productTypes, years, feeds: feedStats };
 }
 
-export default checkConnection(
-  defineEventHandler(async (event) => {
-    try {
-      const stats = computeStats(PROJECTS);
-      event.node.res.statusCode = 200;
-      return stats;
-    } catch (err) {
-      console.log("get stats error ", err);
-      event.node.res.statusCode = 500;
-      return {
-        code: "ERROR",
-        message: "Something went wrong.",
-      };
-    }
-  })
-);
+export default defineEventHandler(async (event) => {
+  try {
+    const stats = computeStats(PROJECTS);
+    event.node.res.statusCode = 200;
+    return stats;
+  } catch (err) {
+    console.log("get stats error ", err);
+    event.node.res.statusCode = 500;
+    return {
+      code: "ERROR",
+      message: "Something went wrong.",
+    };
+  }
+});

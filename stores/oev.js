@@ -60,7 +60,7 @@ export const useOEVStore = defineStore("oev", function () {
   const userSelectedProtocols = ref({
     "dApp-1": "morphoAaveV2-1",
     "dApp-2": "venusBsc-56",
-    "dApp-3": "morphoComp-1",
+    "dApp-3": "aaveV2-1",
     "dApp-4": "compoundV3Base-8453",
   });
 
@@ -96,11 +96,11 @@ export const useOEVStore = defineStore("oev", function () {
   function setProtocols(raw) {
     if (!raw) return;
 
-    const sorted = raw.sort((a, b) => {
+    const sorted = [...raw].sort((a, b) => {
       return a.totalLiquidated - b.totalLiquidated;
     });
 
-    const parsed = raw?.map((protocol, i) => {
+    const parsed = sorted?.map((protocol) => {
       return {
         ...protocol,
       };
@@ -122,7 +122,9 @@ export const useOEVStore = defineStore("oev", function () {
       trueHide: true,
       hide: true,
     };
-    addProtocol(userProtocol);
+    if (!protocols.value.some((protocol) => protocol.slug === userProtocol.slug)) {
+      addProtocol(userProtocol);
+    }
   }
 
   // Helper functions

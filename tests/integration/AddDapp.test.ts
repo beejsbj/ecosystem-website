@@ -8,9 +8,6 @@ import TagStep from "~/components/add-dapp/TagStep.vue";
 import { useEcosystemStore } from "~/stores/ecosystem";
 import ProxyStep from "~/components/add-dapp/ProxyStep.vue";
 import { validateProjectSchema } from "~/server/services/helper";
-import { isValidHash } from "../helpers";
-import { fetchProxyInformation } from "~/server/services/fetchProxyInfo";
-import { isAddress } from "viem";
 
 describe("Add Dapp Form", () => {
   it("renders ContentStep correctly and initializes form", async () => {
@@ -241,43 +238,15 @@ describe("Add Dapp Form", () => {
     console.log({ loading });
     const fetchProxyBtn = component.find("div.add-button");
     expect(fetchProxyBtn.exists()).toBe(loading ? false : true);
-  });
 
-  it("ProxyForm fetch correct proxy information type dapi and oev: true", async () => {
-    const proxyAddress = "0x4B4Eb1B421e3d21E0dCf61b041da5D99363Ba8a5";
-    const proxyChain = 42161;
-    const feedName = "DAI/USD";
+    dappForm.proxyAddress = "0x1234567890AbcdEF1234567890aBcdef12345678";
+    dappForm.proxyChain = 1;
+    dappForm.feedName = "ETH/USD";
 
-    const info = await fetchProxyInformation(
-      proxyAddress,
-      proxyChain,
-      feedName
-    );
-
-    expect(info.isOev).toEqual(true);
-    expect(info.type).toEqual("dapi");
-    expect(isAddress(info.api3ServerV1)).toEqual(true);
-    expect(isAddress(info.oevBeneficiary)).toEqual(true);
-
-    expect(isValidHash(info.dapiNameHash)).toEqual(true);
-  });
-  it("ProxyForm fetch correct proxy information type dapi and oev: false", async () => {
-    const proxyAddress = "0x009E9B1eec955E9Fe7FE64f80aE868e661cb4729";
-    const proxyChain = 5000;
-    const feedName = "ETH/USD";
-
-    const info = await fetchProxyInformation(
-      proxyAddress,
-      proxyChain,
-      feedName
-    );
-
-    expect(info.isOev).toEqual(false);
-    expect(info.type).toEqual("dapi");
-    expect(isAddress(info.api3ServerV1)).toEqual(true);
-    expect(isAddress(info.oevBeneficiary)).toEqual(false);
-
-    expect(isValidHash(info.dapiNameHash)).toEqual(true);
+    await component.find("div.add-button button").trigger("click");
+    expect(component.html()).toContain("Demo proxy added.");
+    expect(dappForm.proxies).toHaveLength(1);
+    expect(dappForm.proxies[0].proxyType).toBe("dapi");
   });
 
   it("Should reject and throw correct error if proxy fields are invalid", async () => {

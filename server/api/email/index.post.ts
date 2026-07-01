@@ -56,6 +56,15 @@ export default defineEventHandler(async (event: any) => {
       };
     }
 
+    if (config.public.showcaseMode) {
+      event.node.res.statusCode = 201;
+      return {
+        code: "OK",
+        message: "Demo referral request saved for showcase review",
+        success: true,
+      };
+    }
+
     const alreadySent = await Referral.find({ email: email }).countDocuments();
 
     if (alreadySent > 0) {

@@ -7,6 +7,13 @@ export default authenticated(
     defineEventHandler(async (event) => {
       const cacheKey = `stats-syncing`;
       try {
+        const config = useRuntimeConfig();
+
+        if (config.public.showcaseMode) {
+          event.node.res.statusCode = 200;
+          return { message: "Demo stats sync skipped in showcase mode" };
+        }
+
         let cachedData: any = queryCache.get(cacheKey);
 
         if (cachedData !== undefined) {

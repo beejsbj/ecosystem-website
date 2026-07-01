@@ -5,13 +5,16 @@ import type { ProjectType } from "../types";
 import type { Status } from "./helper";
 import axios from "axios";
 
-const config = useRuntimeConfig();
-
-function parsePrivateKey() {
+function parsePrivateKey(config: ReturnType<typeof useRuntimeConfig>) {
   const key: any =
     config.nodeEnv === "production"
       ? config.gitAppPrivateKey
       : config.gitAppPrivateKeyDev;
+
+  if (!key) {
+    throw new Error("GitHub app private key is not configured.");
+  }
+
   const parsedKey =
     "-----BEGIN RSA PRIVATE KEY-----" +
     "\n" +
@@ -22,38 +25,39 @@ function parsePrivateKey() {
   return parsedKey;
 }
 
-const octokitDev = new Octokit({
-  authStrategy: createAppAuth,
-  auth: {
-    appId: config.gitAppIdDev,
-    privateKey: parsePrivateKey(),
-    installationId: config.gitAppInstallationIdDev,
-    clientId: config.gitAppClientIdDev,
-    clientSecret: config.gitAppClientSecretDev,
-  },
-});
-
-const octoKitProd = new Octokit({
-  authStrategy: createAppAuth,
-  auth: {
-    appId: config.gitAppId,
-    privateKey: parsePrivateKey(),
-    installationId: config.gitAppInstallationId,
-    clientId: config.gitAppClientId,
-    clientSecret: config.gitAppClientSecret,
-  },
-});
-
-const repoOwner = config.nodeEnv === "production" ? "api3dao" : "AamirAlam";
 const repo = "dapp-registry";
 
+function createGithubClient(config: ReturnType<typeof useRuntimeConfig>) {
+  const isProduction = config.nodeEnv === "production";
+
+  return new Octokit({
+    authStrategy: createAppAuth,
+    auth: {
+      appId: isProduction ? config.gitAppId : config.gitAppIdDev,
+      privateKey: parsePrivateKey(config),
+      installationId: isProduction
+        ? config.gitAppInstallationId
+        : config.gitAppInstallationIdDev,
+      clientId: isProduction ? config.gitAppClientId : config.gitAppClientIdDev,
+      clientSecret: isProduction
+        ? config.gitAppClientSecret
+        : config.gitAppClientSecretDev,
+    },
+  });
+}
+
+function getRepoOwner(config: ReturnType<typeof useRuntimeConfig>) {
+  return config.nodeEnv === "production" ? "api3dao" : "AamirAlam";
+}
+
 export async function createPR(projectData: ProjectType): Promise<Status> {
+  const config = useRuntimeConfig();
   const title = projectData.name?.split(" ")?.join("-");
   const branch = `${title}-${Date.now()}`;
   const base = "main";
   const projectJsonPath = `projects/${title}.json`;
-
-  const octokit = config.nodeEnv === "production" ? octoKitProd : octokitDev;
+  const octokit = createGithubClient(config);
+  const repoOwner = getRepoOwner(config);
 
   let branchCreated = false;
   try {
@@ -163,6 +167,8 @@ export async function isProjectExists(
   projectData: ProjectType
 ): Promise<Boolean> {
   try {
+    const config = useRuntimeConfig();
+    const repoOwner = getRepoOwner(config);
     const fileListEndpoint = `https://api.github.com/repos/${repoOwner}/${repo}/contents/projects`;
 
     const projectList = [];

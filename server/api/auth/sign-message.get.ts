@@ -2,6 +2,13 @@ import { SiweMessage } from "siwe";
 
 export default defineEventHandler(async (event) => {
   try {
+    const config = useRuntimeConfig();
+
+    if (config.public.showcaseMode) {
+      event.node.res.statusCode = 200;
+      return "Demo SIWE verification for the API3 ecosystem showcase";
+    }
+
     const queryMessage = getQuery(event);
 
     const message = new SiweMessage(queryMessage);

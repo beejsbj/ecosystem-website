@@ -17,8 +17,9 @@ useSeoMeta({
   <ContentsWrapper>
     <PageTitle heading="Join the Ecosystem" innerClass="add-dapp-title">
       <p>
-        Join the API3 ecosystem. Easily list your dApp or service and join our
-        thriving community
+        Complete the preserved submission flow in demo mode. Wallet signing,
+        image uploads, proxy lookup, and review submission stay local to this
+        frontend showcase.
       </p>
     </PageTitle>
     <SectionColumn>

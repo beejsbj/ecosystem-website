@@ -34,7 +34,11 @@
  */
 
 const props = defineProps(["dappForm"]);
+const config = useRuntimeConfig();
 props.dappForm.links = props.dappForm.links ?? {};
+const coverValidation = computed(() =>
+  config.public.showcaseMode ? "fileSize|imageRatio" : "required|fileSize|imageRatio"
+);
 
 const fileSize = function (node) {
   if (!node.value) return true;
@@ -146,7 +150,7 @@ const imageRatio = async function (node) {
         no-files-icon="fileImage"
         fileName="cover"
         accept=".jpg, .JPG, .jpeg, .JPEG, .png, .PNG, .webp, .WEBP"
-        validation="required|fileSize|imageRatio"
+        :validation="coverValidation"
         validation-label="Cover image"
         :validation-rules="{ fileSize, imageRatio }"
         :validation-messages="{

@@ -196,6 +196,11 @@ export interface Status {
 export const connectDB = async () => {
   const config = useRuntimeConfig();
 
+  if (config.public.showcaseMode) {
+    console.log("db connection skipped: frontend showcase mode");
+    return;
+  }
+
   if (mongoose.connection.readyState === 1) {
     console.log(`db already connected: on ${config.nodeEnv}`);
     return;

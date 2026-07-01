@@ -43,6 +43,7 @@ const { verifyWallet } = useSiwe();
 const { submitProject, fetchFeedNames } = useHttpCalls();
 const web3Store = useWeb3Store();
 const ui = useInterfaceStore();
+const config = useRuntimeConfig();
 
 const dappForm = useStorage("dapp-form", {});
 
@@ -63,10 +64,45 @@ const successData = ref({ message: "", pr_url: "" });
 const submitSuccess = ref(false);
 const feedNameOptions = ref([]);
 
+function seedShowcaseForm() {
+  if (!config.public.showcaseMode || dappForm.value?.name) {
+    return;
+  }
+
+  Object.assign(dappForm.value, {
+    name: "Showcase dApp",
+    tagline: "A demo listing for the frontend showcase",
+    description:
+      "This prefilled project demonstrates the preserved add-dapp flow without uploading images, signing a real wallet message, or submitting to backend services.",
+    date: new Date().toISOString().slice(0, 10),
+    categories: ["defi"],
+    chains: [1],
+    productType: "datafeed",
+    year: new Date().getFullYear(),
+    proxyAddress: "0x1234567890AbcdEF1234567890aBcdef12345678",
+    proxyChain: 1,
+    feedName: "ETH/USD",
+    proxies: [],
+    links: {
+      dapp: "https://api3.org",
+      docs: "https://docs.api3.org",
+      explorer: "https://etherscan.io",
+      website: "https://api3.org",
+      socials: {
+        twitter: "https://twitter.com/API3DAO",
+        github: "https://github.com/api3dao",
+      },
+    },
+  });
+}
+
 const submitHandler = async (event) => {
   if (!web3Store.state?.isConnected) {
     await web3Store.func.openModal();
-    return;
+
+    if (!web3Store.state?.isConnected) {
+      return;
+    }
   }
 
   setErrors("add-form", []);
@@ -110,18 +146,22 @@ const submitHandler = async (event) => {
 
     notify.success(successData.value.message);
 
-     notify(
-       `<a class='external-link' href='${successData.value.pr_url}' target='_blank'> Visit the PR</a>`,
-       {
-         autoClose: false,
-         dangerouslyHTMLString: true,
-       }
-     );
+    if (successData.value.pr_url) {
+      notify(
+        `<a class='external-link' href='${successData.value.pr_url}' target='_blank'> View demo catalogue</a>`,
+        {
+          autoClose: false,
+          dangerouslyHTMLString: true,
+        }
+      );
+    }
 
-    setTimeout(() => {
-      reset("add-form", {});
-      navigateTo("/");
-    }, 2000);
+    if (!config.public.showcaseMode) {
+      setTimeout(() => {
+        reset("add-form", {});
+        navigateTo("/");
+      }, 2000);
+    }
   } else {
     successData.value.message = "";
 
@@ -136,6 +176,9 @@ onMounted(async () => {
     top: 0,
     left: 0,
   });
+
+  seedShowcaseForm();
+
   const names = await fetchFeedNames();
 
   feedNameOptions.value = names;
@@ -208,11 +251,11 @@ onMounted(async () => {
           <div class="messages">
             <FormKitMessages :node="formRef?.node" v-auto-animate />
 
-            <!-- <text-content v-if="submitSuccess">
+            <text-content v-if="submitSuccess">
               <p class="success-indicator">
                 {{ successData.message }}
               </p>
-            </text-content> -->
+            </text-content>
           </div>
         </template>
       </FormKit>

@@ -3,6 +3,7 @@ import { Subscriber } from "../../models/Subscriber";
 
 export default defineEventHandler(async (event: any) => {
   try {
+    const config = useRuntimeConfig();
     const { email } = await (event.node?.req?.body || readBody(event));
 
     if (!isValidEmail(email)) {
@@ -10,6 +11,15 @@ export default defineEventHandler(async (event: any) => {
       return {
         code: "INVALID_ID",
         message: "Invalid email address!",
+      };
+    }
+
+    if (config.public.showcaseMode) {
+      event.node.res.statusCode = 201;
+      return {
+        code: "OK",
+        message: "Demo newsletter signup saved for showcase review.",
+        success: true,
       };
     }
 

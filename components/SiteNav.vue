@@ -12,7 +12,7 @@
  *
  * @features
  * - Displays main navigation links (Ecosystem, OEV, Articles)
- * - Includes a Discord icon link
+ * - Includes a visible Style Guide link
  * - Supports both desktop and mobile (panel) layouts
  * - Highlights new sections with a 'new' class
  *
@@ -20,10 +20,6 @@
  * - links: Array of navigation link objects (name, to, class)
  *
  */
-
-const config = useRuntimeConfig();
-
-const isDev = config.public.nodeEnv === "development";
 
 const links = [
   { name: "Ecosystem", to: "/ecosystem" },
@@ -41,19 +37,14 @@ const links = [
     </template>
 
     <div class="actions">
-      <NuxtLink to="https://discord.com/invite/qnRrcfnm5W" class="icon">
-        <DynamicIcon icon="Discord-stroke" />
+      <NuxtLink to="/style-guide" class="text style-guide-link">
+        <span>Style Guide</span>
       </NuxtLink>
     </div>
   </nav>
 </template>
 
 <style lang="scss" scoped>
-.icon :deep(picture) {
-  max-width: 24px;
-  border: unset;
-}
-
 :deep(.button) {
   padding: var(--space-2xs) var(--space-l);
 
@@ -68,6 +59,27 @@ nav:not(.panel-menu) {
   a {
     color: var(--ink);
     white-space: nowrap;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .style-guide-link {
+    position: relative;
+    font-weight: 700;
+    padding-inline: var(--space-3xs);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: var(--space-3xs);
+      right: var(--space-3xs);
+      bottom: -0.28em;
+      height: 3px;
+      background: var(--gradient-color);
+    }
   }
 
   .button {
@@ -94,6 +106,21 @@ nav.panel-menu {
 
   a.icon {
     padding: unset;
+  }
+
+  .actions {
+    justify-self: start;
+  }
+
+  .style-guide-link {
+    justify-self: start;
+    font-weight: 700;
+    color: var(--ink);
+
+    span {
+      border-bottom: 3px solid var(--green);
+      padding-bottom: 0.15em;
+    }
   }
 }
 </style>

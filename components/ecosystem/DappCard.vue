@@ -71,10 +71,17 @@ function filterBy(event) {
     <text-content>
       <picture class="logo">
         <NuxtImg
+          v-if="dapp.images.logo"
           loading="lazy"
           :src="dapp?.images?.logo"
-          src="/images/square.jpg"
+          @error="$event.target.src = '/images/square.jpg'"
           :alt="`Logo of ${dapp?.name}`"
+        />
+        <NuxtImg
+          v-else
+          loading="lazy"
+          src="/images/square.jpg"
+          :alt="`Default logo for ${dapp?.name}`"
         />
       </picture>
       <h2

@@ -48,8 +48,9 @@
 
 
  
-const {} = useWeb3Store();
+const web3Store = useWeb3Store();
 const route = useRoute();
+const config = useRuntimeConfig();
 
 //default metadata
 const meta = {
@@ -117,7 +118,20 @@ useSeoMeta({
 });
 
 onMounted(() => {
-  const {} = useWeb3();
+  if (config.public.showcaseMode) {
+    web3Store.func.openModal = async () => {
+      web3Store.state.account = "0x1234567890AbcdEF1234567890aBcdef12345678";
+      web3Store.state.chainId = 1;
+      web3Store.state.isConnected = true;
+    };
+    web3Store.func.sign = async () => "0xshowcase_signature";
+    web3Store.func.switchChain = async (chainId) => {
+      web3Store.state.chainId = chainId;
+    };
+  } else {
+    const {} = useWeb3();
+  }
+
   fetch("/version.json").then((serverPromise) =>
     serverPromise.json().then((response) => {
       const latestVersion = response.version;
